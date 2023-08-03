@@ -1,21 +1,15 @@
 name: 'Upstream Sync'
 
 on:
+  schedule:
+    - cron: 
+  workflow_dispatch:  
 
-  workflow_dispatch:  # click the button on Github repo!
-      # inputs:
-      #   UPSTREAM_BRANCH:
-      #     description: "Upstream Branch"
-      #     required: true
-      #   DOWNSTREAM_BRANCH:
-      #     description: "Downstream Branch"
-      #     required: true
 
 jobs:
     sync_latest_from_upstream:
       runs-on: ubuntu-latest
-      name: Sync latest commits from upstream repo
-  
+      name: Sync latest commits from upstream repo  
       steps:
       - name: Checkout target repo
         uses: actions/checkout@v2
@@ -23,20 +17,20 @@ jobs:
           ref: main
           token: ${{ secrets.GH_TOKEN }}
           persist-credentials: false
-      - name: repo-sync
+      - name: repo-sync-develop
         uses: repo-sync/github-sync@v2
         with:
             source_repo: "https://${{ secrets.GH_TOKEN }}@github.com//YoYoGames/GameMaker-Manual.git"
             source_branch: "develop"
             destination_branch: "develop"
             github_token: ${{ secrets.GH_TOKEN }}
-      # - name: Sync and merge upstream repository with your current repository
-      #   uses: dabreadman/sync-upstream-repo@v1.0.0.b
-      #   with:
-      #       # URL of gitHub public upstream repo
-      #       upstream_repo: "https://github.com/YoYoGames/GameMaker-Manual.git"
-      #       # Branch to merge from upstream (defaults to downstream branch)
-      #       upstream_branch: ${{ inputs.UPSTREAM_BRANCH }}
-      #       # Branch to merge into downstream
-      #       downstream_branch: ${{ inputs.DOWNSTREAM_BRANCH }}
-      #       # GitHub Bot token
+            sync_tags: "true"
+      - name: repo-sync-lts-2022-r1
+        uses: repo-sync/github-sync@v2
+        with:
+            source_repo: "https://${{ secrets.GH_TOKEN }}@github.com//YoYoGames/GameMaker-Manual.git"
+            source_branch: "lts-2022-r1"
+            destination_branch: "lts-2022-r1"
+            github_token: ${{ secrets.GH_TOKEN }}
+            sync_tags: "true"            
+
