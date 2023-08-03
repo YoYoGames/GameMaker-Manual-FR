@@ -38,5 +38,16 @@ jobs:
       #       # Branch to merge into downstream
       #       downstream_branch: ${{ inputs.DOWNSTREAM_BRANCH }}
       #       # GitHub Bot token
-      #       token: ${{ secrets.GH_TOKEN }}                  
-      - run: ${{ github.workspace }}/sync.sh YoYoGames/GameMaker-Manual-FR YoYoGames/GameMaker-Manual develop
+       repo-sync:
+          runs-on: ubuntu-latest
+          steps:
+          - uses: actions/checkout@v2
+            with:
+              persist-credentials: false
+          - name: repo-sync
+            uses: repo-sync/github-sync@v2
+            with:
+              source_repo: "https://github.com/YoYoGames/GameMaker-Manual.git"
+              source_branch: "develop"
+              destination_branch: "develop"
+              github_token: ${{ secrets.GH_TOKEN }}
