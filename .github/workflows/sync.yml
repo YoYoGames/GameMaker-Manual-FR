@@ -33,4 +33,3 @@ jobs:
             destination_branch: "lts-2022-r1"
             github_token: ${{ secrets.GH_TOKEN }}
             sync_tags: "true"            
-
