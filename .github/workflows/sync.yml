@@ -27,7 +27,7 @@ jobs:
       - name: repo-sync
         uses: repo-sync/github-sync@v2
         with:
-            source_repo: "https://github.com/YoYoGames/GameMaker-Manual.git"
+            source_repo: "https://${{ secrets.GH_TOKEN }}@github.com//YoYoGames/GameMaker-Manual.git"
             source_branch: "develop"
             destination_branch: "develop"
             github_token: ${{ secrets.GH_TOKEN }}
