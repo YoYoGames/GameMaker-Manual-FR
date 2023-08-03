@@ -23,7 +23,6 @@ jobs:
           ref: main
           token: ${{ secrets.GH_TOKEN }}
           persist-credentials: false
-          path: Manual
       - name: repo-sync
         uses: repo-sync/github-sync@v2
         with:
