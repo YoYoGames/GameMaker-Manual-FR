@@ -18,16 +18,19 @@ jobs:
   
       steps:
       - name: Checkout target repo
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
         with:
           ref: main
           token: ${{ secrets.GH_TOKEN }}
+          persist-credentials: false
           path: Manual
-      - run: |
-            git config user.name ksuchitra532 
-            git config user.email ksuchitra532@gmail.com
-            git config --local user.password ${{ secrets.GH_TOKEN }} 
-            git config --global --add safe.directory ${{ github.workspace }}     
+      - name: repo-sync
+        uses: repo-sync/github-sync@v2
+        with:
+            source_repo: "https://github.com/YoYoGames/GameMaker-Manual.git"
+            source_branch: "develop"
+            destination_branch: "develop"
+            github_token: ${{ secrets.GH_TOKEN }}
       # - name: Sync and merge upstream repository with your current repository
       #   uses: dabreadman/sync-upstream-repo@v1.0.0.b
       #   with:
@@ -38,16 +41,3 @@ jobs:
       #       # Branch to merge into downstream
       #       downstream_branch: ${{ inputs.DOWNSTREAM_BRANCH }}
       #       # GitHub Bot token
-       repo-sync:
-          runs-on: ubuntu-latest
-          steps:
-          - uses: actions/checkout@v2
-            with:
-              persist-credentials: false
-          - name: repo-sync
-            uses: repo-sync/github-sync@v2
-            with:
-              source_repo: "https://github.com/YoYoGames/GameMaker-Manual.git"
-              source_branch: "develop"
-              destination_branch: "develop"
-              github_token: ${{ secrets.GH_TOKEN }}
