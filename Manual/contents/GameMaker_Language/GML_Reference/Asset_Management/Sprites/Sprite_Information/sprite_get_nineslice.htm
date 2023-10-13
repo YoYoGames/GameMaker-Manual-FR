@@ -6,7 +6,7 @@
   <title>sprite_get_nineslice</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet Matharoo" />
   <meta name="topic-comment" content="Page explaining the function sprite_get_nineslice" />
   <meta name="rh-index-keywords" content="sprite_get_nineslice" />
@@ -16,29 +16,29 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_get_nineslice</h1>
-  <p>This function returns the <a href="../Nine_Slice_Struct.htm">Nine Slice struct</a> for a sprite, containing all its Nine Slice properties as set in the <a href="../../../../../The_Asset_Editors/Sprites.htm" title="The Sprite Editor">Sprite Editor</a> or using <a href="../Sprite_Manipulation/sprite_set_nineslice.htm" title="sprite_set_ninceslice">sprite_set_nineslice()</a>. The contents of this struct are detailed on <a href="../Nine_Slice_Struct.htm" title="The Nine Slice Struct">this page</a>.</p>
-  <p>If the supplied sprite does not have a Nine Slice struct assigned to it, a new struct with default Nine Slice properties will be created for the sprite and returned.</p>
-  <p>Changing any values in this struct <strong>will </strong>modify the Nine Slice properties of the original sprite, affecting any future draw calls made with that sprite.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction renvoie la <a href="../Nine_Slice_Struct.htm">structure Nine Slice</a> d'un <span class="notranslate">sprite</span>, contenant toutes les propriétés Nine Slice définies dans l'<a href="../../../../../The_Asset_Editors/Sprites.htm" title="The Sprite Editor">éditeur de sprites</a> ou à l'aide de <a href="../Sprite_Manipulation/sprite_set_nineslice.htm" title="sprite_set_ninceslice">sprite_set_nineslice()</a>. Le contenu de cette <span class="notranslate">struct</span> est détaillé sur <a href="../Nine_Slice_Struct.htm" title="The Nine Slice Struct">cette page</a>.</p>
+  <p>Si le site <span class="notranslate">sprite</span> fourni n'a pas de Nine Slice <span class="notranslate">struct</span> qui lui est attribué, un nouveau <span class="notranslate">struct</span> avec des propriétés Nine Slice par défaut sera créé pour le <span class="notranslate">sprite</span> et renvoyé.</p>
+  <p>La modification des valeurs de ce site <span class="notranslate">struct</span> <strong>aura pour effet de </strong>modifier les propriétés des neuf tranches du site original <span class="notranslate">sprite</span>, ce qui aura une incidence sur tous les futurs appels de tirage effectués avec ce site <span class="notranslate">sprite</span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">sprite_get_nineslice(ind);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>ind</td><td><span data-keyref="Type_Asset_Sprite"></span></td>
-        <td>The index of the sprite from which the Nine Slice struct will be retrieved</td>
+        <td><span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The index of the sprite from which the Nine Slice struct will be retrieved</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Struct_NineSlice">Nine Slice Struct</span> (or -1 if the sprite doesn&#39;t exist)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var _box_nineslice = <strong>sprite_get_nineslice</strong>(spr_box_0);<br />
     <br />
     _box_nineslice.enabled = true;<br />
@@ -47,17 +47,17 @@
     _box_nineslice.top = 10;<br />
     _box_nineslice.bottom = 10;
   </p>
-  <p>The code above retrieves the Nine Slice struct from a sprite, enables Nine Slicing for it and sets the guide offsets.</p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus récupère le site <span class="notranslate">struct</span> à partir d'un site <span class="notranslate">sprite</span>, active le découpage en neuf tranches pour ce site et définit les décalages des guides.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sprite_Manipulation/Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_get_tpe.htm">sprite_get_tpe</a></div>
+        <div style="float:left">Retour : <a href="../Sprite_Manipulation/Sprite_Manipulation.htm">Manipulation des sprites</a></div>
+        <div style="float:right">Suivant : <a href="sprite_get_tpe.htm"><span class="notranslate">sprite_get_tpe</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_get_nineslice

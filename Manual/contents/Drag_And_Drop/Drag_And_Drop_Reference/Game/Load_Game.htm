@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Load Game</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Chargement du jeu</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Load Game action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Load Game" />
@@ -14,39 +14,40 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Load Game Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/i_Game_Load_Game.png" style="cursor: nwse-resize;" /> <span data-field="title" data-format="default">Load Game</span> <span data-conref="../../../assets/snippets/Tag_deprecated.hts"> </span></h1>
-  <p>This action will load a game that has previously been saved using the <a data-xref="{title}" href="Save_Game.htm">Save Game</a> action.</p>
-  <p>You give the filename of the file to load (as a string, and including the extension) and the game will be loaded and continue running from the saved point. Note that this is not designed as a universal save/load system, and trying to load a game saved from a previous run of the project may give errors (especially if you have used things like <a href="../Data_Structures/Data_Structure_Actions.htm">Data Structures</a> or <a href="../Particles/Particle_Actions.htm">Particles</a>), and as such you should only try and load games that have been saved in the progress of a single game play-through (for things like checkpoints). Also note that the file will <i>not</i> be loaded until the end of the current event or script, so any actions after the load action is called will still be performed.</p>
-  <div data-conref="../../../assets/snippets/Note_Load_Save_Game_Legacy.hts"> </div>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Load Game Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/a_Game_Load_Game.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Chargement du jeu</h1>
+  <p>Cette action chargera un jeu qui a été précédemment sauvegardé en utilisant l'action <a href="Save_Game.htm">Save Game</a>. Vous donnez le nom du fichier à charger (sous forme de chaîne de caractères, y compris l'extension) et le jeu sera chargé et continuera à s'exécuter
+    à partir du point sauvegardé. Notez que ce système n'est pas conçu comme un système universel de sauvegarde/chargement, et qu'essayer de charger un jeu sauvegardé lors d'une précédente exécution du projet peut donner lieu à des erreurs (en particulier si vous avez utilisé des éléments comme les <a href="../Data_Structures/Data_Structure_Actions.htm">structures de données</a> ou les <a href="../Particles/Particle_Actions.htm">particules</a>), et en tant que tel, vous ne devriez essayer de charger que les jeux qui ont été sauvegardés au cours d'une seule partie (pour des choses comme les points de contrôle). Notez également que le fichier <i>ne sera pas</i> chargé avant la fin de l'événement ou du script en cours, de sorte que toutes les actions après l'appel de l'action de chargement seront toujours exécutées. Pour une approche plus complète du chargement des données de jeu sauvegardées, consultez la section <a href="../Files/File_Actions.htm">Actions sur les fichiers</a>.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Load Game Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/i_Game_Load_Game.png" style="cursor: nwse-resize;" /></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Timeline</td>
-        <td>The timeline resource to assign to an instance</td>
+        <td><span class="notranslate">Timeline</span></td>
+        <td>La ressource temporelle à affecter à une instance</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><span><img alt="Load Game Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Game/e_Game_Load_Game.png" /></span>The above action block code will check a global variable and if it is less than or equal to 0 it will load a previously saved game.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><span><img></span>Le code du bloc d'action ci-dessus va vérifier une variable globale et si elle est inférieure ou égale à
+    0, il chargera un jeu précédemment sauvegardé.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Game_Actions.htm">Game Actions</a></div>
-        <div style="float:right">Next: <a href="Restart_Game.htm">Restart Game</a></div>
+        <div style="float:left">Retour : <a href="Game_Actions.htm">Actions de jeu</a></div>
+        <div style="float:right">Suivant : <a href="Restart_Game.htm">Redémarrer le jeu</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Load Game

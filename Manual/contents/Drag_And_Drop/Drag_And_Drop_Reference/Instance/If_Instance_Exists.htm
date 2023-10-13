@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>If Instance Exists</title>
+  <title>Si l'instance existe</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the If Instance Exists action" />
   <meta name="rh-index-keywords" content="GML Visual Action - If Instance Exists" />
@@ -14,45 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="If Instance Exists Icon" class="icon" height="31" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Exists.png" width="31" /> If Instance Exists</h1>
-  <p>This action can be used to check if an instance of a specific object exists in the game room, or if a specific instance itself exists. You give the object from the asset explorer, and if any instance exists in the room then the action will return <span class="inline">true</span>    otherwise it will return <span class="inline">false</span>. Note that you can use a variable here with the unique ID for specific instance (for example as returned by the action <a href="Create_Object_Instance.htm">Create Object Instance</a>) or even the instance ID
-    value as returned by the room editor when you added the instance.</p>
-  <p>If you flag the &quot;Not&quot; argument, then the action will check to see if <i>no</i> instance exists and if none are found it will return <span class="inline">true</span> and if even one exists it will return <span class="inline">false</span>.</p>
-  <p>Note that to add actions into the &quot;if&quot; block, they should be dropped to the side of the action, as shown in the image below:</p>
+  <h1><img> Si l'instance existe</h1>
+  <p>Cette action peut être utilisée pour vérifier si une instance d'un objet spécifique existe dans la salle de jeu, ou si une instance spécifique elle-même existe. Vous donnez l'objet à partir de l'explorateur de ressources, et si une instance existe dans la salle, l'action retournera <span class="inline">true</span> sinon elle retournera <span class="inline">false</span>. Notez que vous pouvez utiliser une variable ici avec l'ID unique d'une instance spécifique (par exemple tel que retourné par l'action <a href="Create_Object_Instance.htm">Create Object Instance</a>) ou même l'ID d'instance
+    tel que retourné par l'éditeur de salle lorsque vous avez ajouté l'instance.</p>
+  <p>Si vous cochez l'argument &quot;Not&quot;, l'action vérifiera qu'<i>aucune</i> instance <i>n'</i> existe et si aucune n'est trouvée, elle renverra <span class="inline">true</span> et si même une existe, elle renverra <span class="inline">false</span>.</p>
+  <p>Notez que pour ajouter des actions dans le bloc &quot;if&quot;, elles doivent être déposées sur le côté de l'action, comme le montre l'image ci-dessous :</p>
+  <p><img alt="If Instance Exists Icon" class="icon" height="31" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Exists.png" width="31" /></p>
+  <p>Ces actions seront maintenant exécutées si la valeur de &quot;if&quot; est <span class="inline">true</span>, tandis que toute action déposée ailleurs sera exécutée après le bloc &quot;if&quot;.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
   <p><img alt="Instance Exists drop example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Exists_Drop.png" /></p>
-  <p>These actions will now be run if the &quot;if&quot; evaluates to <span class="inline">true</span>, while any actions dropped elsewhere will be performed after the &quot;if&quot; block.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Instance Exists Action" class="center" height="124" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Exists.png" width="260" /></p>
-  <h4>Arguments:</h4>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Object</td>
-        <td>The name of the object to check for an instance of (or an instance ID).</td>
+        <td><span class="notranslate">Object</span></td>
+        <td>Le nom de l'objet dont il faut rechercher une instance (ou un ID d'instance).</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Instance Exists Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/e_Instance_Exists.png" />The above action block code checks for a collision and returns the unique ID value of the instance
-    that is being collided with. This value is stored in a temporary variable and then checked to see if the value corresponds to an instance that is currently within the room (if no collision is found then the variable will hold the keyword &quot;<span class="inline">noone</span>&quot;),
-    and if it does, then a variable is set in the instance being collided with.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus vérifie la présence d'une collision et renvoie la valeur d'identification unique de l'instance
+    qui entre en collision. Cette valeur est stockée dans une variable temporaire puis vérifiée pour voir si la valeur correspond à une instance qui se trouve actuellement dans la pièce (si aucune collision n'est trouvée, la variable contiendra le mot clé &quot;<span class="inline">noone</span>&quot;),
+    et si c'est le cas, une variable est définie dans l'instance avec laquelle la collision a lieu.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Actions_Library.htm">Instance Actions</a></div>
-        <div style="float:right">Next: <a href="Call_Parent_Event.htm">Call Parent Event</a></div>
+        <div style="float:left">Retour : <a href="Instance_Actions_Library.htm">Actions de l'instance</a></div>
+        <div style="float:right">Suivant : <a href="Call_Parent_Event.htm">Appeler l'événement des parents</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - If Instance Exists

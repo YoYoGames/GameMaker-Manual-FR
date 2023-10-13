@@ -6,7 +6,7 @@
   <title>audio_sound_set_track_position</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function audio_sound_set_track_position" />
   <meta name="rh-index-keywords" content="audio_sound_set_track_position" />
@@ -14,55 +14,55 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">audio_sound_set_track_position</span></h1>
-  <p>This function will set the position (in seconds) for the given sound ID or asset.</p>
-  <p>The supplied &quot;index&quot; can either be a single instance of a sound (as returned from <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a>) or a sound asset (e.g. one added via the Asset Browser). The behaviour of this function will differ depending on the kind of index you have specified:</p>
+  <h1>audio_sound_set_track_position</h1>
+  <p>Cette fonction permet de définir la position (en secondes) pour l'ID sonore ou le poste donné.</p>
+  <p>L'&quot;index&quot; fourni peut être soit une instance unique d'un son (tel que retourné à partir de <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a>) ou un actif sonore (par exemple, un actif ajouté via le navigateur d'actifs). Le comportement de cette fonction sera différent selon le type d'index que vous avez spécifié :</p>
   <ul class="colour">
-    <li>If it&#39;s a unique sound ID that you use, which is already playing, then its position will immediately change to the given time.</li>
-    <li>If it&#39;s a sound asset, then all further plays of the given sound asset will start at the new time.</li>
+    <li>S'il s'agit d'un ID de son unique que vous utilisez, qui est déjà en train de jouer, alors sa position sera immédiatement modifiée au moment donné.</li>
+    <li>S'il s'agit d'un élément sonore, toutes les lectures ultérieures de cet élément sonore commenceront à la nouvelle heure.</li>
   </ul>
-  <p>This function will only change the track position for the currently playing sound, or its next play (in case of a sound asset being supplied). If the sound is played with looping enabled, subsequent plays will always start from the beginning (0.0 seconds), <em>not</em> from the track position defined using this function. For example, starting a sound loop at 5.7 seconds will play the first sound from that point, however after that it will continue to repeat the whole track, from the beginning to the end.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">audio_sound_set_track_position</span>(index, time);</p>
+  <p>Cette fonction modifie uniquement la position de la piste pour le son en cours de lecture, ou pour sa prochaine lecture (si un actif sonore est fourni). Si le son est lu avec le bouclage activé, les lectures suivantes commenceront toujours à partir du début (0,0 seconde), <em>et non</em> à partir de la position de la piste définie à l'aide de cette fonction. Par exemple, si vous démarrez une boucle sonore à 5,7 secondes, le premier son sera lu à partir de ce point, mais après cela, il continuera à répéter la piste entière, du début à la fin.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">audio_sound_set_track_position(index, time);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Asset_Sound"><a href="../../../../../The_Asset_Editors/Sounds.htm" target="_blank">Sound Asset</a></span> or <span data-keyref="Type_ID_Sound_Instance"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_play_sound.htm" target="_blank">Sound Instance ID</a></span></td>
-        <td>The index of the sound to change.</td>
+        <td><span class="notranslate">index</span></td>
+        <td> <span data-keyref="Type_ID_Sound_Instance">ID de l'</span><span data-keyref="Type_Asset_Sound">actif sonore</span> ou de l'<span data-keyref="Type_ID_Sound_Instance">instance sonore</span></td>
+        <td><span class="notranslate">The index of the sound to change.</span></td>
       </tr>
       <tr>
-        <td>time</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The time (in seconds) to set the start point to. Values beyond the end of the sound are clamped to its length.</td>
+        <td><span class="notranslate">time</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The time (in seconds) to set the start point to. Values longer than the length of the given sound are ignored.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var snd = audio_play_sound(snd_MainTrack, 0, false);<br />
-    <span data-field="title" data-format="default">audio_sound_set_track_position</span>(snd, 32);
-  </p>
-  <p>The above code plays a sound and then uses the returned ID value to set the start position for the sound to 32 seconds.</p>
-  <p> </p>
-  <p> </p>
+    audio_sound_set_track_position(snd, 32);</p>
+  <p>Le code ci-dessus joue un son et utilise ensuite la valeur ID retournée pour définir la position de départ du son à 32 secondes.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Audio.htm">Audio</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="audio_sound_get_track_position.htm">audio_sound_get_track_position</a></div>
+        <div style="float:left">Retour : <a href="Audio.htm">Audio</a></div>
+        <div style="float:right">Suivant : <a href="audio_sound_get_track_position.htm"><span class="notranslate">audio_sound_get_track_position</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 audio_sound_set_track_position

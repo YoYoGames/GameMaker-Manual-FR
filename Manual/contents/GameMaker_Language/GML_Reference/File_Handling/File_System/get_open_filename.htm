@@ -6,7 +6,7 @@
   <title>get_open_filename</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for get_open_filename" />
   <meta name="rh-index-keywords" content="get_open_filename" />
@@ -15,51 +15,51 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>get_open_filename</h1>
-  <p>This function opens a dialogue and asks the player for a filename to open with the given filter. The filter has the form &quot;<i>name1|mask1|name2|mask2|...</i>&quot;, where the mask may contain the different options with a semicolon between them and you can also use a &quot;*&quot; to mean any string. For example: &quot;<i>bitmaps|*.bmp;*.wmf</i>&quot;, would ask the user to select the name of a bitmap file from the system, but only those that have the two specified extensions (<span class="inline">bmp</span> and <span class="inline">png</span>). this function does <b>not</b> open the file itself! It only returns a string with the full name and path of the file. If the user presses &quot;<b>Cancel</b>&quot; an empty string &quot;&quot; is returned.</p>
-  <p>An important thing to note when using this function is that it grants you certain permissions for that file, for the duration of your game. So, once you get the file path from the user, you can access it again and again without having to ask. However, since this function is for reading a file, the permissions granted are <i>only for reading</i> and saving will not be permitted by the OS. Should you need to read and write to the file, you can get permission using the function <a href="get_save_filename.htm"><span class="inline">get_save_filename()</span></a>.</p>
-  <p class="note"><b>NOTE</b>: This function is only valid on the Windows and macOS targets.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction ouvre un dialogue et demande au joueur un nom de fichier à ouvrir avec le filtre donné. Le filtre a la forme &quot;<i>nom1|mask1|nom2|mask2|.</i>.. &quot;, où le masque peut contenir les différentes options avec un point-virgule entre elles et vous pouvez également utiliser un &quot;*&quot; pour signifier n'importe quelle chaîne. Par exemple : &quot;<i>bitmaps|*.bmp;*.wmf</i>&quot;, demanderait à l'utilisateur de sélectionner le nom d'un fichier bitmap du système, mais seulement ceux qui ont les deux extensions spécifiées (<span class="inline">bmp</span> et <span class="inline">png</span>). Cette fonction <b>n'</b> ouvre <b>pas</b> le fichier lui-même ! Elle renvoie seulement une chaîne avec le nom complet et le chemin d'accès du fichier. Si l'utilisateur appuie sur &quot;<b>Annuler</b>&quot;, une chaîne vide &quot;&quot; est retournée.</p>
+  <p>Une chose importante à noter lorsque vous utilisez cette fonction est qu'elle vous accorde certaines permissions pour ce fichier, pour la durée de votre jeu. Ainsi, une fois que vous avez obtenu le chemin d'accès au fichier de la part de l'utilisateur, vous pouvez l'envoyer à <span class="notranslate">access</span> encore et encore sans avoir à le demander. Cependant, comme cette fonction sert à lire un fichier, les autorisations accordées <i>ne concernent que la lecture</i> et l'enregistrement ne sera pas autorisé par le système d'exploitation. Si vous avez besoin de lire et d'écrire dans le fichier, vous pouvez obtenir la permission en utilisant la fonction <a href="get_save_filename.htm"><span class="inline">get_save_filename()</span></a>.</p>
+  <p class="note"><b>NOTE</b>: Cette fonction n'est valable que sur les cibles <span class="notranslate">Windows</span> et <span class="notranslate">macOS</span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">get_open_filename(filter, fname);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>filter</td><td><span data-keyref="Type_String"></span></td>
-        <td>The file type filter and/or name.</td>
+        <td><span class="notranslate">filter</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The file type filter and/or name.</span></td>
      </tr>
       <tr>
-        <td>fname</td><td><span data-keyref="Type_String"></span></td>
-        <td>The suggested filename to use.</td>
+        <td><span class="notranslate">fname</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The suggested filename to use.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_String"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var file;<br />
     file = get_open_filename(&quot;text file|*.txt&quot;, &quot;&quot;);<br />
     if file != &quot;&quot;<br />
     {<br />
         file_text_open_read(file);<br />
     }</p>
-  <p>The above code will ask the user to select a text file for opening and then check the returned file name and path, and if it exists will open the file for reading.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus demandera à l'utilisateur de sélectionner un fichier texte à ouvrir, puis vérifiera le nom et le chemin du fichier renvoyé et, s'il existe, ouvrira le fichier pour le lire.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="File_System.htm">File System</a></div>
-        <div style="float:right">Next: <a href="get_open_filename_ext.htm">get_open_filename_ext</a></div>
+        <div style="float:left">Retour : <a href="File_System.htm">Système de fichiers</a></div>
+        <div style="float:right">Suivant : <a href="get_open_filename_ext.htm"><span class="notranslate">get_open_filename_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 get_open_filename

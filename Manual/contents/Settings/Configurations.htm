@@ -6,7 +6,7 @@
   <title>Configurations</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains how to use Configurations" />
   <meta name="rh-index-keywords" content="Configurations" />
@@ -14,36 +14,36 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Configurations</span></h1>
-  <p>Due to the demands of cross platform development and the need for one product to be available and customised for different clients or devices or platforms, <span data-keyref="GameMaker Name">GameMaker</span> includes <strong>configurations</strong> to make things simpler. Using this system, you can quickly switch between different splash screens, icons and included files and test or export only those that are relevant to the target platform or client at any time, all from the same base code.</p>
-  <p>To be able to deal with the different demands from clients and platforms you can use the <strong>Configuration Editor</strong> which is accessible from the <strong>Extras </strong>menu on the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a>:</p>
-  <p><img alt="Open The Configuration Editor" class="center" src="../assets/Images/Settings/Configs_Open_Editor.png" />All games made in <span data-keyref="GameMaker Name">GameMaker</span> start with a &quot;Default&quot; configuration, which is listed in the editor when you first open it:</p>
-  <p><img alt="The Configuration Editor" class="center" src="../assets/Images/Settings/Configs.png" />To set up your configurations it is recommended that you first prepare this &quot;Default&quot; config by incorporating all the configurable assets for the project into it. To do this, simply go through the following list of options and set them to what is required by default:</p>
+  <h1>Configurations</h1>
+  <p>En raison des exigences du développement multiplateforme et de la nécessité pour un produit d'être disponible et personnalisé pour différents clients, appareils ou plateformes, <span data-keyref="GameMaker Name">GameMaker</span> inclut des <strong>configurations</strong> pour simplifier les choses. Grâce à ce système, vous pouvez rapidement passer d'un écran d'accueil à l'autre, d'une icône à l'autre et d'un fichier inclus à l'autre, et ne tester ou exporter à tout moment que ceux qui sont pertinents pour la plateforme ou le client cible, le tout à partir du même code de base.</p>
+  <p>Pour pouvoir faire face aux différentes demandes des clients et des plateformes, vous pouvez utiliser l'<strong>éditeur de configuration</strong> qui est accessible à partir du menu <strong>Extras </strong>du <a href="../Introduction/The_Asset_Browser.htm">navigateur de ressources</a>:</p>
+  <p><img>Tous les jeux créés dans <span data-keyref="GameMaker Name">GameMaker</span> commencent avec une configuration &quot;par défaut&quot;, qui est répertoriée dans l'éditeur lorsque vous l'ouvrez pour la première fois :</p>
+  <p><img>Pour mettre en place vos configurations, il est recommandé de préparer d'abord cette configuration &quot;par défaut&quot; en y incorporant tous les actifs configurables du projet. Pour ce faire, il suffit de parcourir la liste d'options suivante et de les définir en fonction de ce qui est requis par défaut :</p>
   <ul class="colour">
-    <li><a href="../The_Asset_Editors/Extensions.htm">Extension Options</a>: Set the various &quot;Copy to...&quot; fields to the required platforms for the configuration. Any &quot;Proxy&quot; files created here will have their &quot;Target&quot; platform linked to the configuration too.</li>
-    <li><a href="../The_Asset_Editors/Sprites.htm">Sprite Editor</a>: Set the texture group that you want the sprites to be added to.</li>
-    <li><a href="../The_Asset_Editors/Tile_Sets.htm">Tileset Editor</a>: Set the texture group that you want the tilesets to be added to.</li>
-    <li><a href="../The_Asset_Editors/Fonts.htm">Font Editor</a>: Set the texture group that you want the fonts to be added to.</li>
-    <li><a href="Texture_Groups.htm">Texture Group Manager</a>: Here you can set any of the properties on a per-configuration bases, including the parent group that a texture group belongs to.</li>
-    <li><a href="Audio_Groups.htm">Audio Group Manager</a>: The sounds that are assigned to the different audio groups is configurable here..</li>
-    <li><a href="Included_Files.htm">Included Files</a>: Set the &quot;Copy to...&quot; field to the required platforms for the configuration.</li>
+    <li><a href="../The_Asset_Editors/Extensions.htm">Options d'extension</a>: Définissez les différents champs &quot;Copier vers...&quot; sur les plateformes requises pour la configuration. Tous les fichiers &quot;Proxy&quot; créés ici auront leur plate-forme &quot;cible&quot; liée à la configuration également.</li>
+    <li><a href="../The_Asset_Editors/Sprites.htm">Éditeur de sprites</a>: Définissez le groupe de texture dans lequel vous souhaitez que le site <span class="notranslate">sprites</span> soit ajouté.</li>
+    <li><a href="../The_Asset_Editors/Tile_Sets.htm">Éditeur de jeux de tuiles</a>: Définissez le groupe de texture dans lequel vous souhaitez que les jeux de tuiles soient ajoutés.</li>
+    <li><a href="../The_Asset_Editors/Fonts.htm">Éditeur de polices</a>: Définissez le groupe de texture dans lequel vous souhaitez que les polices soient ajoutées.</li>
+    <li><a href="Texture_Groups.htm">Gestionnaire des groupes de textures</a>: Ici, vous pouvez définir toutes les propriétés sur une base par configuration, y compris le groupe parent auquel un groupe de texture appartient.</li>
+    <li><a href="Audio_Groups.htm">Gestionnaire des groupes audio</a>: Les sons qui sont assignés aux différents groupes audio sont confiables ici...</li>
+    <li><a href="Included_Files.htm">Fichiers inclus</a>: Définissez le champ &quot;Copier vers...&quot; sur les plateformes requises pour la configuration.</li>
   </ul>
-  <p>Once you have set up the default configuration, you can then add a new one to the Configuration Editor by right clicking <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> on the configurations folder and selecting <strong>Add Config</strong>, or by clicking the &quot;<em>Create</em>&quot; button at the bottom of the window. The new configuration will be shown as a &quot;child&quot; of the default config - all user defined configurations are children of the default - and you can give it an appropriate name.</p>
-  <p>To edit the config, you must either double click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on it or use the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> menu option &quot;<em>Set Config</em>&quot;, which will select the configuration in the editor and once that has been done, you can go ahead and customise it. This is done by simply going through the options listed above and changing them to the desired settings for the newly created configuration. <span data-keyref="GameMaker Name">GameMaker</span> will store these values automatically for the config, and you can change between configs at any time by simply using the RMB <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> menu option or double clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" />.</p>
-  <p>Further configurations can be added as either children of the default configuration, or children of the user defined configurations that you&#39;ve created, depending on which configuration has been highlighted in the editor when you created it. In the example image below, you can see we have three custom configs defined, two of which are children of the default config, and another that is the child of a user defined config:</p>
-  <p><img alt="Child Configurations In The Configuration Editor" class="center" src="../assets/Images/Settings/Configs_Children.png" />It is worth noting that you can use any given configuration with any given target platform when compiling or testing your projects. This is done by selecting the config you require from within the <strong>Config</strong> section of the <strong>Target Manager</strong>:</p>
-  <p><img alt="Configurations In The Target Manager" class="center" src="../assets/Images/Settings/Configs_TargetManager.png" />You can also open the Configuration Editor at any time from the Target Manager by clicking the menu button at the top right (as highlighted in the image above).</p>
-  <p>Once you have set a configuration to be used in this way, any time you compile to a target, either for testing or to create a final asset package, the chosen configuration will be used. For more information on the Targets Window, please see the section on <a href="../Introduction/Compiling.htm">Compiling</a>.</p>
-  <p> </p>
-  <p> </p>
+  <p>Une fois que vous avez défini la configuration par défaut, vous pouvez en ajouter une nouvelle dans l'éditeur de configuration en cliquant avec le bouton droit de la souris <img> sur le dossier des configurations et en sélectionnant <strong>Ajouter une configuration</strong>, ou en cliquant sur le bouton &quot;<em>Créer</em>&quot; au bas de la fenêtre. La nouvelle configuration sera affichée comme un &quot;enfant&quot; de la configuration par défaut - toutes les configurations définies par l'utilisateur sont des enfants de la configuration par défaut - et vous pouvez lui donner un nom approprié.</p>
+  <p>Pour modifier la configuration, vous devez soit double-cliquer sur <img>, soit utiliser l'option de menu &quot;<em>Set Config</em>&quot; du bouton droit de la souris <img>, qui sélectionnera la configuration dans l'éditeur. Pour ce faire, il suffit de passer en revue les options énumérées ci-dessus et de les modifier en fonction des paramètres souhaités pour la configuration nouvellement créée. <span data-keyref="GameMaker Name">GameMaker</span> enregistrera automatiquement ces valeurs pour la configuration, et vous pourrez passer d'une configuration à l'autre à tout moment en utilisant simplement l'option de menu RMB <img> ou en double cliquant sur <img>.</p>
+  <p>D'autres configurations peuvent être ajoutées comme enfants de la configuration par défaut ou comme enfants des configurations définies par l'utilisateur que vous avez créées, en fonction de la configuration qui a été mise en évidence dans l'éditeur lorsque vous l'avez créée. Dans l'image d'exemple ci-dessous, vous pouvez voir que nous avons trois configurations personnalisées définies, dont deux sont des enfants de la configuration par défaut, et une autre qui est l'enfant d'une configuration définie par l'utilisateur :</p>
+  <p><img>Il convient de noter que vous pouvez utiliser n'importe quelle configuration donnée avec n'importe quelle plate-forme cible donnée lors de la compilation ou du test de vos projets. Pour ce faire, sélectionnez la configuration dont vous avez besoin dans la section <strong>Config</strong> du <strong>Target Manager</strong>:</p>
+  <p><img>Vous pouvez également ouvrir l'éditeur de configuration à tout moment à partir du Target Manager en cliquant sur le bouton de menu en haut à droite (comme indiqué dans l'image ci-dessus).</p>
+  <p>Une fois que vous avez défini une configuration à utiliser de cette manière, chaque fois que vous compilez vers une cible, que ce soit pour tester ou pour créer un package de ressources final, la configuration choisie sera utilisée. Pour plus d'informations sur la fenêtre des cibles, veuillez consulter la section sur la <a href="../Introduction/Compiling.htm">compilation</a>.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Game_Settings.htm">Game Settings</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="../Additional_Information/Error_Reporting.htm">Error Reporting</a></div>
+        <div style="float:left">Retour : <a href="Game_Settings.htm">Paramètres de jeu</a></div>
+        <div style="float:right">Suivant : <a data-xref="{title}" href="Runner_Details/Runner_Details.htm">Détails sur le coureur</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Conifgurations

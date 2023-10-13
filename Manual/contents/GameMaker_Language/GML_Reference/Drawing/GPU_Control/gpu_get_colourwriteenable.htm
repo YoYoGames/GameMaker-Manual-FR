@@ -6,7 +6,7 @@
   <title>gpu_get_colourwriteenable</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_get_colourwriteenable" />
   <meta name="rh-index-keywords" content="gpu_get_colorwriteenable,gpu_get_colourwriteenable" />
@@ -16,36 +16,36 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_get_colourwriteenable</h1>
-  <p>This function can be used to retrieve the current colour write-enable values. The function returns a 4 element 1D array with the following elements in it which will be either <span class="inline">true</span> (enabled) or <span class="inline">false</span> (disabled). By default all colour writing is set to <span class="inline">true</span>:</p>
+  <p>Cette fonction peut être utilisée pour récupérer les valeurs actuelles d'activation d'écriture des couleurs. La fonction renvoie un tableau 1D à 4 éléments contenant les éléments suivants qui seront soit <span class="inline">true</span> (activé) soit <span class="inline">false</span> (désactivé). Par défaut, l'écriture de toutes les couleurs est réglée sur <span class="inline">true</span>:</p>
   <ul class="colour">
-    <li>[0] = Red channel enabled/disabled</li>
-    <li>[1] = Green channel enabled/disabled</li>
-    <li>[2] = Blue channel enabled/disabled</li>
-    <li>[3] = Alpha channel enabled/disabled</li>
+    <li>[0] = Canal rouge activé/désactivé</li>
+    <li>[1] = Canal vert activé/désactivé</li>
+    <li>[2] = Canal bleu activé/désactivé</li>
+    <li>[3] = Canal alpha activé/désactivé</li>
   </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">gpu_get_colorwriteenable();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Array"></span> (4 elements only; see above for details)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var cw = gpu_get_colorwriteenable();<br />
     cw[3] = false;<br />
     gpu_set_colorwriteenable(cw);</p>
-  <p>The above code gets the current colour write values and then sets the alpha component to <span class="inline">false</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus récupère les valeurs d'écriture de la couleur actuelle et définit ensuite la composante alpha à <span class="inline">false</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_get_alphatestenable.htm">gpu_get_alphatestenable</a></div>
+        <div style="float:left">Retour : <a href="GPU_Control.htm">Contrôle du GPU</a></div>
+        <div style="float:right">Suivant : <a href="gpu_get_alphatestenable.htm"><span class="notranslate">gpu_get_alphatestenable</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_colourwriteenable

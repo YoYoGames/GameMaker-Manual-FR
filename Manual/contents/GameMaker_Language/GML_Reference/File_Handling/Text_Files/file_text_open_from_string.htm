@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>file_text_open_from_string</title>
-  <meta name="generator" content="Adobe RoboHelp 2020"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Reference page for file_text_open_from_string"/>
-  <meta name="rh-index-keywords" content="file_text_open_from_string"/>
-  <meta name="search-keywords" content="file_text_open_from_string"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>fichier_texte_ouvert_à_partir_de_chaîne</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for file_text_open_from_string" />
+  <meta name="rh-index-keywords" content="file_text_open_from_string" />
+  <meta name="search-keywords" content="file_text_open_from_string" />
   <meta name="is_pure" content="true" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>file_text_open_from_string</h1>
-  <p>This function will create a text file from a string and open it for reading, returning the file &quot;handle&quot; that should be used in all further file function calls to read from this file. Note that this file is temporary and <i>read only</i>, and as such it will be removed from memory the moment it is closed.</p>
-  <p class="note"><b>NOTE</b>: You can only have a maximum of 32 files open at any one time. You should also <b>always</b> close files when finished as this writes the information and frees the memory associated with the file.</p>
-  <p class="note"><b></b><b>WARNING!</b> This function may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on the <a href="../../../../Additional_Information/The_File_System.htm">File System</a> for more information.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>fichier_texte_ouvert_à_partir_de_chaîne</h1>
+  <p>Cette fonction créera un fichier texte à partir d'une chaîne de caractères et l'ouvrira pour la lecture, en retournant le &quot;handle&quot; du fichier qui devra être utilisé dans tous les appels ultérieurs de la fonction fichier pour lire depuis ce fichier. Notez que ce fichier est temporaire et <i>en lecture seule</i>, et qu'en tant que tel, il sera supprimé de la mémoire dès qu'il sera fermé.</p>
+  <p class="note"><b>REMARQUE</b>: Vous ne pouvez avoir qu'un maximum de 32 fichiers ouverts à la fois. Vous devez également <b>toujours</b> fermer les fichiers lorsque vous avez terminé, car cela permet d'écrire les informations et de libérer la mémoire associée au fichier.</p>
+  <p class="note"><b></b><b>AVERTISSEMENT !</b> Cette fonction peut ne pas fonctionner comme vous l'attendez, car <span data-keyref="GameMaker Name">GameMaker</span> est en sandbox ! Veuillez consulter la section sur le <a href="../../../../Additional_Information/The_File_System.htm">système de fichiers</a> pour plus d'informations.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">file_text_open_from_string(string);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>string</td><td><span data-keyref="Type_String"></span></td>
-        <td>The string to create the file from.</td>
+        <td><span class="notranslate">string</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The string to create the file from.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_ID_File_Text">File ID</span> or -1</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">file = file_text_open_from_string(reset_str);</p>
-  <p>The above code takes the string stored in the variable &quot;reset_str&quot; and uses it to create a read-only text file. The &quot;handle&quot; for this file is then stored in the variable &quot;file&quot; for all further file functions to use.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus prend la chaîne stockée dans la variable &quot;reset_str&quot; et l'utilise pour créer un fichier texte en lecture seule. Le &quot;handle&quot; de ce fichier est ensuite stocké dans la variable &quot;file&quot; pour que toutes les autres fonctions de fichier puissent l'utiliser.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Text_Files.htm">Text Files</a></div>
-        <div style="float:right">Next: <a href="file_text_read_real.htm">file_text_read_real</a></div>
+        <div style="float:left">Retour : <a href="Text_Files.htm">Fichiers texte</a></div>
+        <div style="float:right">Suivant : <a href="file_text_read_real.htm"><span class="notranslate">file_text_read_real</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 file_text_open_from_string

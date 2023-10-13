@@ -2,15 +2,15 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>random_get_seed</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Reference page for random_get_seed"/>
-  <meta name="rh-index-keywords" content="random_get_seed"/>
-  <meta name="search-keywords" content="random_get_seed"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for random_get_seed" />
+  <meta name="rh-index-keywords" content="random_get_seed" />
+  <meta name="search-keywords" content="random_get_seed" />
   <meta name="is_pure" content="true" />
 </head>
 
@@ -21,30 +21,30 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>random_get_seed</h1>
-  <p>To generate a random number <span data-keyref="GameMaker Name">GameMaker</span> starts with a random <i>seed</i> number. With this function you can retrieve that seed, which can then be stored to reproduce a specific series of random events. For example, say you have a procedurally
-    generated game, but want the player to be able to go back to previously discovered areas. Well, at the start of each area, you can store the random seed with this function and so every time you need to go back there, you can use <a href="random_set_seed.htm"><span class="inline">random_set_seed()</span></a>    to set the seed to what it was previously and so force <span data-keyref="GameMaker Name">GameMaker</span> to reproduce the same set of &quot;random&quot; functions that it used previously.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Pour générer un nombre aléatoire, <span data-keyref="GameMaker Name">GameMaker</span> commence par un nombre de <i>départ</i> aléatoire. Avec cette fonction, vous pouvez récupérer cette graine, qui peut ensuite être stockée pour reproduire une série spécifique d'événements aléatoires. Par exemple, disons que vous avez un jeu généré de façon
+    mais que vous voulez que le joueur puisse retourner dans des zones précédemment découvertes. Au début de chaque zone, vous pouvez stocker la graine aléatoire avec cette fonction et ainsi, chaque fois que vous devez y retourner, vous pouvez utiliser la fonction <a href="random_set_seed.htm"><span class="inline">random_set_seed()</span></a>    pour remettre la graine à ce qu'elle était auparavant et ainsi forcer <span data-keyref="GameMaker Name">GameMaker</span> à reproduire le même ensemble de fonctions &quot;aléatoires&quot; qu'il utilisait précédemment.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">random_get_seed();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">ini_open(&quot;Save.ini&quot;)<br/> ini_write_real(&quot;Levels&quot;, string(level), random_get_seed());<br/> ini_close();
   </p>
-  <p>The above code will get the random seed and store it in an ini file.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus va obtenir la graine aléatoire et la stocker dans un fichier ini.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Number_Functions.htm">Number Functions</a></div>
-        <div style="float:right">Next: <a href="randomise.htm">randomise</a></div>
+        <div style="float:left">Retour : <a href="Number_Functions.htm">Fonctions des chiffres</a></div>
+        <div style="float:right">Suivant : <a href="randomise.htm"><span class="notranslate">randomise</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 random_get_seed

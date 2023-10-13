@@ -6,7 +6,7 @@
   <title>animcurve_get_channel</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function animcurve_get_channel" />
   <meta name="rh-index-keywords" content="animcurve_get_channel" />
@@ -16,8 +16,7 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>animcurve_get_channel</h1>
-  <p>This function returns the <a href="../../../GML_Overview/Structs.htm">struct</a> containing the channel data for the channel specified in an animation curve asset or struct (as returned by <span class="inline3_func"><a data-xref="{title}" href="animcurve_get.htm">animcurve_get</a></span>).</p>
-  <p>You supply the animation curve ID or struct as well as the channel name or index, and the function will return a struct with the following format:</p>
+  <p>Cette fonction renvoie la <a href="../../../GML_Overview/Structs.htm">structure</a> contenant les données de canal pour le canal spécifié dans un actif de courbe d'animation. Vous fournissez l'ID de la courbe d'animation ou <span class="notranslate">struct</span> ainsi que le nom ou l'index du canal, et la fonction renvoie un <span class="notranslate">struct</span> avec le format suivant :</p>
   <table>
     <colgroup>
       <col />
@@ -26,111 +25,100 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Variable Name</th>
-        <th>Data Type</th>
+        <th>Nom de la variable</th>
+        <th>Type de données</th>
         <th>Description</th>
       </tr>
       <tr>
         <td><span class="inline">name</span></td>
-        <td style=""><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td style="">This is the name of the channel.</td>
+        <td style="">chaîne de caractères</td>
+        <td style="">Il s'agit du nom du canal.</td>
       </tr>
       <tr>
         <td><span class="inline">type</span></td>
-        <td style=""><span data-keyref="Type_Constant_AnimCurve_Interp_Type"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_channel_new.htm" target="_blank">Animation Curve Interpolation Type Constant</a></span></td>
-        <td style="">This will be one of the constants <span class="inline"><b>animcurvetype_linear</b></span> for linear interpolation between points, <span class="inline"><b>animcurvetype_catmullrom</b></span> for &quot;smooth&quot; interpolation between the points using catmull-rom interpolation, or <span class="inline">animcurvetype_bezier</span> for Bezier interpolation.</td>
+        <td style=""><span data-keyref="Type_Constant_AnimCurve_Interp_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_channel_new.htm">Type d'interpolation de la courbe d'animation Constant</a></span></td>
+        <td style="">Il s'agira de l'une des constantes suivantes : <span class="inline"><b>animcurvetype_linear</b></span> pour une interpolation linéaire entre les points, <span class="inline"><b>animcurvetype_catmullrom</b></span> pour une interpolation &quot;lisse&quot; entre les points à l'aide de l'interpolation catmull-rom, ou <span class="inline">animcurvetype_bezier</span> pour une interpolation de Bézier.</td>
       </tr>
       <tr>
         <td><span class="inline">iterations</span></td>
-        <td style=""><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td style="">If the channel is using catmull-rom (&quot;smooth&quot;) interpolation this holds how many points have been generated for each segment of the curve (note that these extra points are internal to the function and only used for the runtime calculations). If the channel is using linear interpolation, this value will still exist but can be ignored as it has no bearing on how the curve is interpolated.</td>
+        <td style="">entier</td>
+        <td style="">Si le canal utilise l'interpolation catmull-rom (&quot;lisse&quot;), cette valeur indique combien de points ont été générés pour chaque segment de la courbe (notez que ces points supplémentaires sont internes à la fonction et uniquement utilisés pour les calculs de <span class="notranslate">runtime</span> ). Si le canal utilise l'interpolation linéaire, cette valeur existera toujours mais peut être ignorée car elle n'a aucun rapport avec la façon dont la courbe est interpolée.</td>
       </tr>
       <tr>
         <td><span class="inline">points</span></td>
-        <td style=""><span data-keyref="Type_Array"><a href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span> pointer</td>
-        <td style="">This is an array, where each item in the array is a point struct.</td>
+        <td style="">pointeur de tableau</td>
+        <td style="">Il s'agit d'un tableau, où chaque élément du tableau est un point <span class="notranslate">struct</span>.</td>
       </tr>
     </tbody>
   </table>
-  <p>The first required argument is the Animation Curve as it was defined in the Asset Browser, or the struct pointer as returned by the function <a href="animcurve_create.htm"><span class="inline">animcurve_create()</span></a>.</p>
-  <p>The second required argument is a string that refers to the channel as it was defined in the Animation Curve asset, or you can supply an index value, which is from 0 to <i>n</i>, where <i>n</i> is the last channel in the curve asset (eg: if an animation curve has 4 channels, they will be indexed from 0 to 3).</p>
-  <p>Note that passing an index value will require less processing than passing in a channel name. If the function fails (ie: no channel exists with the given name or index) then you will get an error.</p>
-  <h3>&#39;points&#39; Array</h3>
-  <p>The <span class="inline2">points</span> member of the returned struct contains an array, which contains all of the channel&#39;s points as structs.</p>
-  <p>One point struct has the following variables:</p>
+  <p><br>
+    L'ID de la courbe d'animation est le nom de la courbe d'animation telle qu'elle a été définie dans l'Asset Browser, ou le pointeur <span class="notranslate">struct</span> tel que renvoyé par la fonction <a href="animcurve_create.htm"><span class="inline">animcurve_create()</span></a>. Le nom du canal est une chaîne qui fait référence au canal tel qu'il a été défini dans l'actif de la courbe d'animation, ou vous pouvez fournir une valeur d'index, comprise entre 0 et <i>n</i>, où <i>n</i> est le dernier canal de l'actif de la courbe (par exemple, si une courbe d'animation comporte 4 canaux, ils seront indexés de 0 à 3). Notez que le passage d'une valeur d'index nécessitera moins de traitement que le passage d'un nom de canal. Si la fonction échoue (c'est-à-dire si aucun canal n'existe avec le nom ou l'index donné), vous obtiendrez une erreur.</p>
+  <p>Les points d'un canal unique sont stockés sous la forme <span class="notranslate">structs</span> dans un <a href="../../../GML_Overview/Arrays.htm">tableau</a>, où chaque élément du tableau est un point unique <span class="notranslate">struct</span>. Le point <span class="notranslate">struct</span> a les variables suivantes :</p>
   <table>
     <tbody>
       <tr>
-        <th>Variable Name</th>
-        <th>Data Type</th>
+        <th>Nom de la variable</th>
+        <th>Type de données</th>
         <th>Description</th>
       </tr>
       <tr>
         <td><span class="inline">posx</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The position in time (normalised from 0 to 1) of the point.</td>
+        <td>réel</td>
+        <td>La position dans le temps (normalisée de 0 à 1) du point.</td>
       </tr>
       <tr>
         <td><span class="inline">value</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The value of the point.</td>
+        <td>réel</td>
+        <td>La valeur du point.</td>
       </tr>
     </tbody>
   </table>
-  <p>The <span class="inline2">points</span> member only allows you to get and set the array variable. You cannot run <a data-xref="{text}" href="../../Variable_Functions/Variable_Functions.htm#h"> </a> on the <span class="inline2">points</span> array to modify it.</p>
-  <p>To modify the <span class="inline2">points</span> array, store it in a variable, which will create a copy. Then modify that copy with the array functions, and apply that copy back to the <span class="inline2">points</span> member in the struct.</p>
-  <p class="code">var _points_copy = channel_struct.points;<br />
-    <br />
-    array_delete(_points_copy, 0, 1);<br />
-    <br />
-    channel_struct.points = _points_copy;
-  </p>
-  <p> </p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">animcurve_get_channel(curve_struct_or_id, channel_name_or_index);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>curve_struct_or_id</td>
-        <td><span data-keyref="Type_Struct_AnimCurve"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get.htm" target="_blank">Animation Curve Struct</a></span> or <span data-keyref="Type_Asset_Animation_Curve"><a href="../../../../../The_Asset_Editors/Animation_Curves.htm" target="_blank">Animation Curve Asset</a></span></td>
-        <td>The ID or struct pointer of the animation curve to target</td>
+        <td><span class="notranslate">curve_struct_or_id</span></td>
+        <td><span data-keyref="Type_Struct_AnimCurve"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get.htm">Structure de la courbe d'animation</a></span></td>
+        <td><span class="notranslate">The ID or struct pointer of the animation curve to target</span></td>
       </tr>
       <tr>
-        <td>channel_name_or_index</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> or <span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The channel name (a string) or the channel index (an integer).</td>
+        <td><span class="notranslate">channel_name_or_index</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span> ou <span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Réel</a></span></td>
+        <td><span class="notranslate">The channel name (a string) or the channel index (an integer).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Struct_AnimCurve_Channel"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get_channel.htm" target="_blank">Animation Curve Channel Struct</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Struct_AnimCurve_Channel"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get_channel.htm">Animation Curve Channel Struct</a></span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var _channeldata = animcurve_get_channel(ac_ButtonTween, 0);<br />
     var _points = _channeldata.points;<br />
     for (var i = 0; i &lt; array_length(_points); ++i;)<br />
     {<br />
         _points[i].value += 1;<br />
     }</p>
-  <p>The above code retrieves the channel struct for channel 0 in the curve asset &quot;ac_ButtonTween&quot;, then loops through the points on the channel curve and adds one to their value.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus récupère le canal <span class="notranslate">struct</span> pour le canal 0 dans la courbe de l'actif &quot;ac_ButtonTween&quot;, puis boucle sur les points de la courbe du canal et ajoute un à leur valeur.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Animation_Curves.htm">Animation Curves</a></div>
-        <div style="float:right">Next: <a href="animcurve_channel_evaluate.htm">animcurve_channel_evaluate</a></div>
+        <div style="float:left">Retour : <a href="Animation_Curves.htm">Courbes d'animation</a></div>
+        <div style="float:right">Suivant : <a href="animcurve_channel_evaluate.htm"><span class="notranslate">animcurve_channel_evaluate</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 animcurve_get_channel

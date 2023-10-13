@@ -6,7 +6,7 @@
   <title>xboxlive_stats_get_social_leaderboard</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_stats_get_social_leaderboard" />
   <meta name="rh-index-keywords" content="xboxlive_stats_get_social_leaderboard, achievement_stat_event" />
@@ -15,79 +15,79 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_stats_get_social_leaderboard</h1>
-  <p>This function can be used to retrieve a social leaderboard of ranks for a given statistic. You supply the user ID (as returned, for example, by the function <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>), the stat string (as defined when you created it using the xboxlive_stats_set_stat_* functions), and then you specify a number of details about what leaderboard information you want to retrieve. Note that you can only retrieve a social leaderboard for int or real stats, but not for string stats, and that if you flag the &quot;favourites_only&quot; argument as true, then the results will only contain data for those friends that are marked by the user as &quot;favourites&quot;.</p>
-  <p class="note"><b>IMPORTANT!</b> Stats used in social leaderboards do <b>not</b> need to be registered as &quot;Featured Stats&quot; in the XDP/Windows Dev Center..</p>
-  <p>The function will generate a callback which will trigger a <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a>. This event will have the special DS map <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> which should then be parsed for the following keys:</p>
+  <p>Cette fonction peut être utilisée pour récupérer un classement social des rangs pour une statistique donnée. Vous fournissez l'ID utilisateur (tel que renvoyé, par exemple, par la fonction <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>), la chaîne de caractères de la statistique (telle que définie lorsque vous l'avez créée à l'aide des fonctions xboxlive_stats_set_stat_*), puis vous spécifiez un certain nombre de détails sur les informations du classement que vous souhaitez récupérer. Notez que vous ne pouvez récupérer un classement social que pour <span class="notranslate">int</span> ou les statistiques réelles, mais pas pour les statistiques de chaîne, et que si vous indiquez l'argument &quot;favourites_only&quot; comme vrai, alors les résultats ne contiendront que les données pour les amis qui sont marqués par l'utilisateur comme &quot;favoris&quot;.</p>
+  <p class="note"><b>IMPORTANT !</b> Les statistiques utilisées dans les classements sociaux <b>n'ont pas</b> besoin d'être enregistrées comme &quot;Featured Stats&quot; dans le XDP/Windows Dev Center .</p>
+  <p>La fonction générera un callback qui déclenchera un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">événement social asynchrone</a>. Cet événement aura la carte spéciale DS <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> qui devra ensuite être analysée pour les clés suivantes :</p>
   <ul class="colour">
-    <li>&quot;<b>id</b>&quot; - Will hold the constant <span class="inline">achievement_stat_event</span></li>
-    <li>&quot;<b>event</b>&quot; - Will hold the string &quot;<i>GetLeaderboardComplete</i>&quot;</li>
-    <li>&quot;<b>userid</b>&quot; - The user ID associated with the request</li>
-    <li>&quot;<b>error</b>&quot; - 0 if successful, some other value if there has been an error. The following is the most common error returned:
+    <li>&quot;<b>id</b>&quot; - Tiendra la constante <span class="inline">achievement_stat_event</span></li>
+    <li>&quot;<b>événement</b>&quot; - Contient la chaîne de caractères &quot;<i>GetLeaderboardComplete</i>&quot;.</li>
+    <li>&quot;<b>userid</b>&quot; - L'ID utilisateur associé à la demande</li>
+    <li>&quot;<b>error</b>&quot; - 0 en cas de succès, une autre valeur s'il y a eu une erreur. Les erreurs les plus courantes sont les suivantes :
       <ul>
-        <li>-2145844848: Bad request (the stat is not a valid leaderboard type, ie: a string)</li>
+        <li>-2145844848 : Mauvaise requête (la statistique n'est pas un type de classement valide, c'est-à-dire une chaîne).</li>
       </ul>
     </li>
-    <li>&quot;<b>errormessage</b>&quot; - A string with an error message, if any is available</li>
-    <li>&quot;<b>display_name</b>&quot; - The unique ID for the leaderboard as defined on the provider dashboard.</li>
-    <li>&quot;<b>numentries</b>&quot; - The number of entries in the leaderboard that you have received.</li>
+    <li>&quot;<b>errormessage</b>&quot; - Une chaîne contenant un message d'erreur, s'il en existe un.</li>
+    <li>&quot;<b>display_name</b>&quot; - L'identifiant unique du leaderboard tel que défini sur le tableau de bord du fournisseur.</li>
+    <li>&quot;<b>numentries</b>&quot; - Le nombre d'entrées dans le classement que vous avez reçues.</li>
   </ul>
-  <p>The rest of the DS map will also contain the leaderboard data with the following format (where &quot;N&quot; is the position in the leaderboard data, from 0 to &quot;numentries&quot;):</p>
+  <p>Le reste de la carte DS contiendra également les données du classement au format suivant (où &quot;N&quot; est la position dans les données du classement, de 0 à &quot;numentries&quot;) :</p>
   <ul class="colour">
-    <li>&quot;<b>Player<i>N</i></b>&quot; - The name of the player, where &quot;N&quot; is an integer value corresponding to their position within the leaderboard entries list.</li>
-    <li>&quot;<b>Playerid<i>N</i></b>&quot; - The unique user id of the player, &quot;N&quot;.</li>
-    <li>&quot;<b>Rank<i>N</i></b>&quot; - The rank of the player &quot;N&quot; within the leaderboard.</li>
-    <li>&quot;<b>Score<i>N</i></b>&quot; - The score of the player &quot;N&quot;.</li>
+    <li>&quot;<b>PlayerN</b>&quot; - Le nom du joueur, où &quot;N&quot; est une valeur entière correspondant à sa position dans la liste des entrées du classement.</li>
+    <li>&quot;<b>PlayeridN</b>&quot; - L'identifiant unique du joueur, &quot;N&quot;.</li>
+    <li>&quot;<b>RankN</b>&quot; - Le rang du joueur &quot;N&quot; dans le classement.</li>
+    <li>&quot;<b>ScoreN</b>&quot; - Le score du joueur &quot;N&quot;.</li>
   </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">xboxlive_stats_get_social_leaderboard(user_id, stat, num_entries, start_rank, start_at_user, favourites_only);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>user_id</td>
-        <td><span data-keyref="Type_ID_Xbox_User">Xbox User ID</span></td>
-        <td>The user ID of the user to get the leaderboard for</td>
+        <td><span class="notranslate">user_id</span></td>
+        <td><span data-keyref="Type_ID_Xbox_User">ID utilisateur Xbox</span></td>
+        <td><span class="notranslate">The user ID of the user to get the leaderboard for</span></td>
       </tr>
       <tr>
-        <td>stat</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The stat (as string) to create the global leaderboard from</td>
+        <td><span class="notranslate">stat</span></td>
+        <td><span data-keyref="Type_String">Chaîne de caractères</span></td>
+        <td><span class="notranslate">The stat (as string) to create the global leaderboard from</span></td>
       </tr>
       <tr>
-        <td>num_entries</td>
+        <td><span class="notranslate">num_entries</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The number of entries from the global leaderboard to retrieve</td>
+        <td><span class="notranslate">The number of entries from the global leaderboard to retrieve</span></td>
       </tr>
       <tr>
-        <td>start_rank</td>
+        <td><span class="notranslate">start_rank</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The rank in the leaderboard to start from (use 0 if the &quot;start_at_user&quot; argument is set to <span class="inline">true</span>)</td>
+        <td><span class="notranslate">The rank in the leaderboard to start from (use 0 if the &quot;start_at_user&quot; argument is set to <span class="inline">true</span>)</td>
       </tr>
       <tr>
-        <td>start_at_user</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Set to <span class="inline">true</span> to start at the user ID rank, <span class="inline">false</span> otherwise (set to <span class="inline">false</span> if the &quot;start_rank&quot; argument is anything other than 0)</td>
+        <td><span class="notranslate">start_at_user</span></td>
+        <td><span data-keyref="Type_Bool">Booléen</span></td>
+        <td><span class="notranslate">Set to <span class="inline">true</span> pour commencer au rang de l'ID de l'utilisateur, <span class="inline">false</span> sinon (fixé à <span class="inline">false</span> si l'argument &quot;start_rank&quot; est autre que 0)</td>
       </tr>
       <tr>
-        <td>favourites_only</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Set to <span class="inline">true</span> to show only friends that are marked as &quot;favourites&quot; or <span class="inline">false</span> otherwise</td>
+        <td><span class="notranslate">favourites_only</span></td>
+        <td><span data-keyref="Type_Bool">Booléen</span></td>
+        <td><span class="notranslate">Set to <span class="inline">true</span> pour afficher uniquement les amis qui sont marqués comme &quot;favoris&quot; ou <span class="inline">false</span> autrement</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p>The following is an extended example of how this function can be used. To start with you&#39;d call it in some event like <b>Room Start</b> or <b>Create</b>:</p>
+  <p> </p>
+  <h4>Exemple étendu :</h4>
+  <p>Voici un exemple détaillé de la façon dont cette fonction peut être utilisée. Pour commencer, vous l'appelez dans un événement comme <b>Room Start</b> ou <b>Create</b>:</p>
   <p class="code">xboxlive_stats_get_social_leaderboard(user_id, &quot;GlobalTime&quot;, 20, 1, false, false);</p>
-  <p>The above code would be called to get a list of all global leaderboard positions for the game, and will generate a Social Asynchronous Event call back which we would deal with in the following way:</p>
+  <p>Le code ci-dessus sera appelé pour obtenir une liste de toutes les positions du classement mondial pour le jeu, et générera un appel à l'événement social asynchrone que nous traiterons de la manière suivante :</p>
   <p class="code">if (async_load[? &quot;id&quot;] == achievement_stat_event)<br />
     {<br />
         if (async_load[? &quot;event&quot;] == &quot;GetLeaderboardComplete&quot;)<br />
@@ -102,18 +102,18 @@
             }<br />
         }<br />
     }</p>
-  <p>The above code checks the returned DS map in the Social Asynchronous Event and if its &quot;id&quot; matches the constant being checked, it then checks to see if the event has been triggered by returned leaderboard data before looping through the map and storing all the different values in a number of global arrays.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifie la carte DS retournée dans l'événement social asynchrone et si son &quot;id&quot; correspond à la constante vérifiée, il vérifie ensuite si l'événement a été déclenché par des données de classement retournées avant de parcourir la carte en boucle et de stocker toutes les différentes valeurs dans un certain nombre de tableaux globaux.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="xboxlive_achievement_show_achievements.htm">xboxlive_achievement_show_achievements</a></div>
+        <div style="float:left">Retour : <a href="Stats_And_Leaderboards.htm">Stats et classements</a></div>
+        <div style="float:right">Suivant : <a data-xref="{title}" href="xboxlive_achievement_show_achievements.htm">xboxlive_achievement_show_achievements</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_get_social_leaderboard

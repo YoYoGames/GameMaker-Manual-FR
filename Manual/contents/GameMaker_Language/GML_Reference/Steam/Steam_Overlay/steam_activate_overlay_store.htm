@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_activate_overlay_store</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_activate_overlay_store" />
+  <meta name="rh-index-keywords" content="steam_activate_overlay_store" />
+  <meta name="search-keywords" content="steam_activate_overlay_store" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_activate_overlay_store</h1>
+  <p>Cette fonction vous permet d'ouvrir la superposition <span class="notranslate">Steam</span> sur la page de la boutique d'un jeu afin que les utilisateurs puissent acheter ou télécharger des DLC (par exemple). Vous devez fournir l'App ID unique du jeu ou du DLC que vous obtiendrez du tableau de bord <span class="notranslate">Steam</span> lorsque vous le configurerez.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_activate_overlay_store(app_id);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">app_id</span></td>
+        <td>L'identifiant unique de l'application pour votre jeu.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if keyboard_check_pressed(vk_f1)<br />
+    {<br />
+        steam_activate_overlay_store(global.DLC_id);<br />
+    }</p>
+  <p>Le code ci-dessus recherche la touche F1 sur le clavier et si c'est le cas, la superposition <span class="notranslate">Steam</span> sera ouverte sur la page pour le contenu du jeu en utilisant l'identifiant de l'application stocké dans la variable globale.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_Overlay.htm">Superposition de la vapeur</a></div>
+        <div style="float:right">Suivant : <a href="steam_activate_overlay_user.htm"><span class="notranslate">steam_activate_overlay_user</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_activate_overlay_store
+-->
+  <!-- TAGS
+steam_activate_overlay_store
+-->
+</body>
+</html>

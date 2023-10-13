@@ -6,7 +6,7 @@
   <title>instance_activate_object</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function instance_activate_object" />
   <meta name="rh-index-keywords" content="instance_activate_object" />
@@ -16,44 +16,44 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>instance_activate_object</h1>
-  <p>With this function you can activate a single instance or all instances of a specific object from all those that have been deactivated previously. Note that if you have deactivated an instance or object that has been flagged as <b>Persistent</b>, then
-    you will need to reactivate it again with this function before changing room, otherwise it will <i>not</i> be carried over and will be discarded instead. Note too that activation is not instantaneous, and an instance that has been activated in this
-    way will not be considered to be active until the end of the event in which the function was called.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction vous permet d'activer une seule instance ou toutes les instances d'un objet spécifique parmi toutes celles qui ont été désactivées précédemment. Notez que si vous avez désactivé une instance ou un objet qui a été marqué comme <b>Persistant</b>, vous devrez le réactiver à nouveau avec cette fonction avant de changer de salle.
+    vous devrez le réactiver à nouveau avec cette fonction avant de changer de salle, sinon il <i>ne</i> sera <i>pas</i> reporté et sera rejeté. Notez également que l'activation n'est pas instantanée, et qu'une instance qui a été activée de cette manière ne sera pas considérée comme active.
+    ne sera pas considérée comme active avant la fin de l'événement dans lequel la fonction a été appelée.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">instance_activate_object(obj);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>obj</td><td><span data-keyref="Type_Asset_Object"></span></td>
-        <td>The object or instance to activate (the keyword <b>all</b> can also be used).</td>
+        <td><span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td>
+        <td><span class="notranslate">The object or instance to activate (the keyword <b>all</b> can also be used).</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">instance_activate_all();<br/> var _vx = camera_get_view_x(view_camera[0]);<br/> var _vy = camera_get_view_y(view_camera[0]);<br/> var _vw = camera_get_view_width(view_camera[0]);<br/> var _vh = camera_get_view_height(view_camera[0]);<br/> instance_deactivate_region(_vx
     - 64, _vy - 64, _vw + 128, _vh + 128, false, false);<br/> instance_activate_object(obj_Lights);
   </p>
-  <p>The above code activates all instances within the room and then deactivates those that are outside of the limits of the current camera view, except for the object &quot;obj_Lights&quot; which are re-activated again at the end.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus active toutes les instances situées dans la pièce, puis désactive celles qui se trouvent en dehors des limites de la vue actuelle de la caméra, à l'exception de l'objet &quot;obj_Lights&quot; qui est réactivé à la fin.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Deactivating_Instances.htm">Deactivating Instances</a></div>
-        <div style="float:right">Next: <a href="instance_activate_region.htm">instance_activate_region</a></div>
+        <div style="float:left">Retour : <a href="Deactivating_Instances.htm">Désactiver les instances</a></div>
+        <div style="float:right">Suivant : <a href="instance_activate_region.htm"><span class="notranslate">instance_activate_region</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 instance_activate_object

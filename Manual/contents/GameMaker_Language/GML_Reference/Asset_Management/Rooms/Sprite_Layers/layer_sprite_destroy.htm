@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_sprite_destroy</title>
+  <title>couche_sprite_destruction</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_sprite_destroy" />
   <meta name="rh-index-keywords" content="layer_sprite_destroy" />
@@ -14,45 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_sprite_destroy</h1>
-  <p>This function will destroy the given sprite element. You supply the sprite ID (which you get when you create the sprite using <a href="layer_sprite_create.htm"><span class="inline">layer_sprite_create()</span></a> or when you use the layer ID along with <a href="layer_sprite_get_id.htm"><span class="inline">layer_get_sprite_id()</span></a>) and this will remove it. Note that this does <i>not</i> remove the layer, only the sprite from it, and if the sprite is one that has been added in the room editor, then the next time you leave the room and then return, the sprite will be recreated again. However if the room is persistent, the sprite will be removed unless room persistence is switched off again.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>couche_sprite_destruction</h1>
+  <p>Cette fonction va détruire l'élément <span class="notranslate">sprite</span> donné. Vous fournissez l'ID de <span class="notranslate">sprite</span> (que vous obtenez lorsque vous créez <span class="notranslate">sprite</span> à l'aide de <a href="layer_sprite_create.htm"><span class="inline">layer_sprite_create()</span></a> ou lorsque vous utilisez l'ID de la couche avec <a href="layer_sprite_get_id.htm"><span class="inline">layer_get_sprite_id()</span></a>) et cette fonction le supprimera. Notez que cela <i>ne</i> supprime <i>pas</i> la couche, mais seulement le <span class="notranslate">sprite</span>. Si le <span class="notranslate">sprite</span> a été ajouté dans l'éditeur de pièce, le <span class="notranslate">sprite</span> sera recréé la prochaine fois que vous quitterez la pièce et y reviendrez. Cependant, si la pièce est persistante, le <span class="notranslate">sprite</span> sera supprimé, à moins que la persistance de la pièce ne soit à nouveau désactivée.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">layer_sprite_destroy(sprite_element_id)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>sprite_element_id</td><td><span data-keyref="Type_ID_Element_Sprite"></span></td>
-        <td>The unique ID value of the sprite to be destroyed</td>
+        <td><span class="notranslate">sprite_element_id</span></td><td><span data-keyref="Type_ID_Element_Sprite"></span></td>
+        <td><span class="notranslate">The unique ID value of the sprite to be destroyed</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var lay_id = layer_get_id(&quot;Asset_Trees&quot;);<br />
     if layer_sprite_exists(lay_id, global.Asset_spr_trees)<br />
     {<br />
         layer_sprite_destroy(lay_id);<br />
     }</p>
-  <p>The above code checks the layer &quot;Asset_Trees&quot; to see if the given sprite element exists and if it does, then it is destroyed (but not the layer).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifie la couche &quot;Asset_Trees&quot; pour voir si l'élément donné <span class="notranslate">sprite</span> existe et si c'est le cas, alors il est détruit (mais pas la couche).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Layers.htm">Sprite Layers</a></div>
-        <div style="float:right">Next: <a href="layer_sprite_change.htm">layer_sprite_change</a></div>
+        <div style="float:left">Retour : <a href="Sprite_Layers.htm">Couches de sprites</a></div>
+        <div style="float:right">Suivant : <a href="layer_sprite_change.htm"><span class="notranslate">layer_sprite_change</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sprite_destroy

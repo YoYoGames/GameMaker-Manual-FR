@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Type Tables</title>
+  <title>Tableaux de type</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that shows the type tables for different arithmetic operations" />
   <meta name="rh-index-keywords" content="Type Tables" />
@@ -14,675 +14,674 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Type Tables</h1>
-  <p>This page shows the all the different results that you may get when performing arithmetic operations on the different <a href="../GameMaker_Language/GML_Overview/Data_Types.htm">data types</a> in GML.</p>
-  <p>The tables all follow the same format, with the rows (left) showing the <em>left hand</em> side of an arithmetical operation, and the columns (right) showing the <em>right hand</em> side, eg:</p>
-  <p class="code">&lt;result&gt; = &lt;LHS or row&gt; + &lt;RHS or column&gt;</p>
-  <p class="note"><span data-conref="../assets/snippets/Tag_important.hts"> </span> Prior to GameMaker 2022.9, these tables were inverted -- the columns showed LHS and rows showed RHS. This was counter-intuitive and was changed to be the opposite.</p>
+  <h1>Tableaux de type</h1>
+  <p>Cette page présente les différents résultats que vous pouvez obtenir en utilisant l'arithmétique sur les différents <a href="../GameMaker_Language/GML_Overview/Data_Types.htm">types de données</a> disponibles. Les tableaux suivent tous le même format, avec les colonnes montrant le côté <em>gauche</em> d'une opération arithmétique, et les lignes montrant le côté <em>droit</em>, par ex :</p>
+  <p class="code">&lt;LHS&gt; + &lt;RHS&gt; = &lt;result&gt;</p>
+  <p> </p>
   <table>
     <tbody>
       <tr>
         <td style="color: #FFFFFF"><span class="inline">Add (+)</span></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
-        <td align="LEFT" height="17" width="86">Real</td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86">String</td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020;">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">String</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">String</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td>Chaîne de caractères</td>
+        <td>Chaîne de caractères</td>
+        <td>Chaîne de caractères</td>
+        <td>Chaîne de caractères</td>
+        <td>Chaîne de caractères</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">String</td>
-        <td align="LEFT">Int32</td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int32</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">String</td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int64</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <table>
     <tbody>
       <tr>
         <td style="color: #FFFFFF"><span class="inline">Subtract (-)</span></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
-        <td align="LEFT" height="17" width="86">Real</td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Int32</td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int32</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int64</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <table>
     <tbody>
       <tr>
         <td style="color: #FFFFFF"><span class="inline">Multiply (*)</span></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
-        <td align="LEFT" height="17" width="86">Real</td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86">String</td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td>Chaîne de caractères</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Chaîne de caractères</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">String</td>
-        <td align="LEFT">Int32</td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int32</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int64</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <table>
     <tbody>
       <tr>
         <td style="color: #FFFFFF"><span class="inline">Divide (/)</span></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
-        <td align="LEFT" height="17" width="86">Real</td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Int32</td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int32</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int64</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <table>
     <tbody>
       <tr>
         <td style="color: #FFFFFF"><span class="inline">Divide (div)</span></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
-        <td align="LEFT" height="17" width="86">Real</td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td style="">Real</td>
+        <td style="">Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style="">Real</td>
+        <td style="">Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Int32</td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style="">Real</td>
+        <td style="">Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int32</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style="">Real</td>
+        <td style="">Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int64</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td style=""><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <table>
     <tbody>
       <tr>
         <td style="color: #FFFFFF"><span class="inline">Mod (%)</span></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
         <td style="background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
-        <td align="LEFT" height="17" width="86">Real</td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86">Real</td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
-        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Chaîne de caractères</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Int32</td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int32</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT">Int64</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td>Real</td>
+        <td>Real</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td>Int64</td>
+        <td>Int64</td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
-        <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
+        <td><span style="color:#202020">Erreur </span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h2 id="h">Equality Table</h2>
-  <p>There are a few special constants that may or may not be equal to themselves, as shown in the following table:</p>
+  <p> </p>
+  <h2 id="h">Tableau d'égalité</h2>
+  <p>Il existe quelques constantes spéciales qui peuvent ou non être égales à elles-mêmes, comme le montre le tableau suivant :</p>
   <table>
     <tbody>
       <tr>
         <td style="color: #FFFFFF"><span class="inline">Equality (==)</span></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>NaN</strong></td>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>infinity</strong></td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>NaN</strong></td>
-        <td><strong>false</strong></td>
-        <td>false</td>
-        <td>false</td>
+        <td><strong>faux</strong></td>
+        <td>faux</td>
+        <td>faux</td>
       </tr>
       <tr>
-        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
-        <td>false</td>
-        <td><strong>true</strong></td>
-        <td>false</td>
+        <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>indéfini</strong></td>
+        <td>faux</td>
+        <td><strong>vrai</strong></td>
+        <td>faux</td>
       </tr>
       <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>infinity</strong></td>
-        <td>false</td>
-        <td>false</td>
-        <td><strong>true</strong></td>
+        <td>faux</td>
+        <td>faux</td>
+        <td><strong>vrai</strong></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Additional_Information.htm">Additional Information</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Whitespace_Characters.htm">White-space Characters</a></div>
+        <div style="float:left">Retour : <a href="Additional_Information.htm">Informations complémentaires</a></div>
+        <div style="float:right">Suivant : <a href="Vectors.htm">Vecteurs</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Type Tables

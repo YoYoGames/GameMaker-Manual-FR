@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_add_instance</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>couche_add_instance</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_add_instance" />
   <meta name="rh-index-keywords" content="layer_add_instance" />
@@ -15,52 +15,52 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_add_instance</h1>
-  <p>This function can be used to move a given instance from the layer it is currently on to another layer. You supply the layer ID (which you get when you create the layer using <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) or the layer name (as a string - this will have a performance impact) and the instance ID of the instance to move between layers. For example, say your player is on a layer that is at a lower depth than another layer and you want it to appear behind the layers between the two. You can use this function to switch the player from the foreground layer to the background layer and make it appear behind the other layers being drawn.</p>
-  <p class="note"><b><span class="note">NOTE</span></b> This function cannot be used to add a new instance to a layer. You <b>must</b> have created the instance previously and stored its ID to a variable.</p>
-  <p class="note"><strong><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span></strong> This function is only valid within the scope of the current room and cannot be used when the scope has been changes using the function <span class="inline"><a href="layer_set_target_room.htm" style="font-size: 14px">layer_set_target_room()</a></span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>couche_add_instance</h1>
+  <p>Cette fonction peut être utilisée pour déplacer une instance donnée de la couche sur laquelle elle se trouve actuellement vers une autre couche. Vous fournissez l'ID de la couche (que vous obtenez lorsque vous créez la couche à l'aide de la fonction <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) ou le nom de la couche (sous forme de chaîne - cela aura un impact sur les performances) et l'ID de l'instance à déplacer entre les couches. Par exemple, disons que votre lecteur se trouve sur un calque qui est à une profondeur inférieure à celle d'un autre calque et que vous voulez qu'il apparaisse derrière les calques entre les deux. Vous pouvez utiliser cette fonction pour faire passer le lecteur du calque de premier plan au calque d'arrière-plan et le faire apparaître derrière les autres calques dessinés.</p>
+  <p class="note"><b><span class="note">NOTE</span></b> Cette fonction ne peut pas être utilisée pour ajouter une nouvelle instance à une couche. Vous <b>devez</b> avoir créé l'instance auparavant et enregistré son ID dans une variable.</p>
+  <p class="note"><strong>REMARQUE</strong>: Cette fonction n'est valable que dans le cadre de la pièce actuelle et ne peut être utilisée lorsque le cadre a été modifié à l'aide de la fonction <span class="inline"><a href="layer_set_target_room.htm" style="font-size: 14px">layer_set_target_room()</a></span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">layer_add_instance(layer_id, instance_id)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>layer_id</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> or <span data-keyref="Type_ID_Layer"><a href="GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_get_id.htm" target="_blank">Layer ID</a></span></td>
-        <td>The unique ID value of the instance layer to target (or the layer name as a string)</td>
+        <td><span class="notranslate">layer_id</span></td>
+        <td><span data-keyref="Type_String">Chaîne</span> ou <span data-keyref="Type_ID_Layer">ID de couche</span></td>
+        <td><span class="notranslate">The unique ID value of the instance layer to target (or the layer name as a string)</span></td>
       </tr>
       <tr>
-        <td>instance_id</td>
-        <td><span data-keyref="Type_ID_Instance"><a href="GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">Instance ID</a></span></td>
-        <td>The unique instance ID value of the instance to move over to the target layer</td>
+        <td><span class="notranslate">instance_id</span></td>
+        <td><span data-keyref="Type_ID_Instance">ID de l'instance</span></td>
+        <td><span class="notranslate">The unique instance ID value of the instance to move over to the target layer</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var near = instance_nearest(x, y, obj_Tree);<br />
     var layer_id = layer_get_id(&quot;Instances Front&quot;);<br />
     layer_add_instance(layer_id, near);</p>
-  <p>The above code will first get the index of the nearest instance to the given x/y position and store it in a local variable. It then gets the unique instance layer ID for the layer named &quot;Instances Front&quot;, and moves the found instance onto that layer.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus va d'abord obtenir l'index de l'instance la plus proche de la position x/y donnée et le stocker dans une variable locale. Il obtient ensuite l'ID de couche d'instance unique pour la couche nommée &quot;Instances Front&quot;, et déplace l'instance trouvée sur cette couche.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="General_Layer_Functions.htm">General Layer Functions</a></div>
-        <div style="float:right">Next: <a href="layer_has_instance.htm">layer_has_instance</a></div>
+        <div style="float:left">Retour : <a href="General_Layer_Functions.htm">Fonctions générales des couches</a></div>
+        <div style="float:right">Suivant : <a href="layer_has_instance.htm"><span class="notranslate">layer_has_instance</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_add_instance

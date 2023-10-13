@@ -6,7 +6,7 @@
   <title>font_add_sprite</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function font_add_sprite" />
   <meta name="rh-index-keywords" content="font_add_sprite" />
@@ -15,62 +15,62 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>font_add_sprite</h1>
-  <p>With this function you can use a <a href="../../../../The_Asset_Editors/Sprite_Properties/Sprite_Strips.htm">sprite strip</a> to create a new font asset, where each sub-image would be an individual symbol or letter. The index is the UTF8 map number for the first character to use and the ranges to use are the same as you would for a normal font, starting with &quot;!&quot; but remember that you should only include what you need and that you should be using the <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a> function to get the correct UTF8 value for the starting letter. The created sprite font will then have the sub-images set to an individual glyph from the font, where the &quot;first&quot; glyph will have the image_index of 0. You can define &quot;space&quot; as being any character you want, for example a single line the size that you want the space to be, and all spaces in text will be rendered at that width (but the image chosen will <i>never</i> be rendered), or if you don&#39;t supply a sprite for space then the width of the widest character in the sprite font will be used instead.</p>
-  <p>You can also set the spacing for the font to be proportional (<span class="inline">true</span>) or not (<span class="inline">false</span>), where a proportional font is spaced based on the actual width of the letters (so the letter &quot;i&quot; takes less room than the letter &quot;w&quot;, for example) while a non-proportional font will be spaced based on the sub-image width, like a monospaced font. Finally, you can define the space to leave between each letter when writing, and this can be any integer value, with 0 being no space (the letters will &quot;touch&quot; if proportional).</p>
-  <p>The function returns an <i>index</i> value that should be stored in a variable as this will be needed in all further codes that refer to this font, or it will return -1 if the function fails for any reason.</p>
-  <p>It is also worth noting that there cannot be any <i>spaces</i> in the character map, so that if you, for example, use &#39;.&#39; and &#39;0&#39; but not &#39;/&#39;, you need to either include &#39;/&#39; anyway or leave a blank sub-image between the two used characters.</p>
-  <p>The sprite itself can be a sprite asset from the Asset Browser or one loaded from a file using <span class="inline">sprite_add</span> first to get the index of the loaded sprite (which is then used in the function). It&#39;s important to note that for the font alignment functions (like <a href="../../Drawing/Text/draw_set_halign.htm"><span class="inline">draw_set_halign()</span></a>) to work as expected when using a sprite font, the sprite should have its origin set to the <i>top left corner</i>. If you use other values then you will need to take the origin offset into consideration when drawing text using the font.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>When you load a font into <span data-keyref="GameMaker Name">GameMaker</span> you must remember to remove it again (with <span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span>) when no longer needed, otherwise there is risk of a memory leak which will slow down and eventually crash your game.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Avec cette fonction, vous pouvez utiliser une &quot;bande de sprites&quot; pour créer une nouvelle ressource de police, où chaque sous-image serait un symbole ou une lettre individuelle. L'index est le numéro de carte UTF8 du premier caractère à utiliser et les plages à utiliser sont les mêmes que pour une police normale, en commençant par &quot; !&quot;, mais n'oubliez pas que vous ne devez inclure que ce dont vous avez besoin et que vous devez utiliser la fonction <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a> pour obtenir la valeur UTF8 correcte pour la lettre de départ. La police <span class="notranslate">sprite</span> créée aura alors les sous-images définies à un glyphe individuel de la police, où le &quot;premier&quot; glyphe aura l'image_index de 0. Vous pouvez définir &quot;espace&quot; comme étant n'importe quel caractère que vous voulez, par exemple une ligne unique de la taille que vous voulez que l'espace soit, et tous les espaces dans le texte seront rendus à cette largeur (mais l'image choisie <i>ne sera jamais</i> rendue), ou si vous ne fournissez pas un <span class="notranslate">sprite</span> pour l'espace alors la largeur du caractère le plus large dans la police <span class="notranslate">sprite</span> sera utilisée à la place.</p>
+  <p>Vous pouvez également définir l'espacement de la police pour qu'elle soit proportionnelle (<span class="inline">true</span>) ou non (<span class="inline">false</span>). Une police proportionnelle est espacée en fonction de la largeur réelle des lettres (la lettre &quot;i&quot; prend moins de place que la lettre &quot;w&quot;, par exemple), tandis qu'une police non proportionnelle sera espacée en fonction de la largeur de la sous-image, comme une police monospace. Enfin, vous pouvez définir l'espace à laisser entre chaque lettre lors de l'écriture. Il peut s'agir d'une valeur entière, 0 correspondant à l'absence d'espace (les lettres se &quot;toucheront&quot; si elles sont proportionnelles).</p>
+  <p>La fonction renvoie une valeur d'<i>index</i> qui doit être stockée dans une variable car elle sera nécessaire dans tous les codes ultérieurs faisant référence à cette police, ou elle renvoie -1 si la fonction échoue pour une raison quelconque.</p>
+  <p>Il convient également de noter qu'il ne peut y avoir d'<i>espace</i> dans la carte de caractères, de sorte que si, par exemple, vous utilisez '.' et '0' mais pas '/', vous devez soit inclure '/' de toute façon, soit laisser un sous-image vide entre les deux caractères utilisés.</p>
+  <p>Le site <span class="notranslate">sprite</span> lui-même peut être un actif <span class="notranslate">sprite</span> provenant du navigateur d'actifs ou un actif chargé à partir d'un fichier en utilisant d'abord <span class="inline">sprite_add</span> pour obtenir l'index de l'actif chargé <span class="notranslate">sprite</span> (qui est ensuite utilisé dans la fonction). Il est important de noter que, pour que les fonctions d'alignement des polices (telles que <a href="../../Drawing/Text/draw_set_halign.htm"><span class="inline">draw_set_halign()</span></a>) fonctionnent comme prévu lorsqu'elles utilisent une police <span class="notranslate">sprite</span>, l'origine de <span class="notranslate">sprite</span> doit être réglée sur le <i>coin supérieur gauche</i>. Si vous utilisez d'autres valeurs, vous devrez prendre en compte le décalage de l'origine lorsque vous dessinerez du texte avec la police.</p>
+  <p class="note"><b><span class="note">NOTE</span> </b>Lorsque vous chargez une police dans <span data-keyref="GameMaker Name">GameMaker</span>, vous devez penser à la supprimer (avec la touche <span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span>) lorsqu'elle n'est plus nécessaire, sinon il y a un risque de fuite de mémoire qui ralentira et finira par faire planter votre jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">font_add_sprite(spr, first, prop, sep);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>spr</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="../../../../../The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The sprite to add a font based on.</td>
+        <td><span class="notranslate">spr</span></td>
+        <td><span data-keyref="Type_Asset_Sprite">Sprite Asset</span></td>
+        <td><span class="notranslate">The sprite to add a font based on.</span></td>
       </tr>
       <tr>
-        <td>first</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The index of the first available character.</td>
+        <td><span class="notranslate">first</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The index of the first available character.</span></td>
       </tr>
       <tr>
-        <td>prop</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Set as proportional font or not.</td>
+        <td><span class="notranslate">prop</span></td>
+        <td><span data-keyref="Type_Bool">Booléen</span></td>
+        <td><span class="notranslate">Set as proportional font or not.</span></td>
       </tr>
       <tr>
-        <td>sep</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The space to leave between each letter.</td>
+        <td><span class="notranslate">sep</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The space to leave between each letter.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Asset_Font"><a href="../../../../../The_Asset_Editors/Fonts.htm" target="_blank">Font Asset</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Asset_Font">Font Asset</span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">global.Font = font_add_sprite(spr_HUD_Font, ord(&quot;!&quot;), true, 2);</p>
-  <p>The above code will create a new font asset from a sprite asset and store the index of the new font in the variable &quot;global.Font&quot; for later use.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus crée une nouvelle ressource de police à partir d'une ressource <span class="notranslate">sprite</span> et stocke l'index de la nouvelle police dans la variable &quot;global.Font&quot; pour une utilisation ultérieure.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Fonts.htm">Fonts</a></div>
-        <div style="float:right">Next: <a href="font_add_sprite_ext.htm">font_add_sprite_ext</a></div>
+        <div style="float:left">Retour : <a href="Fonts.htm">Polices de caractères</a></div>
+        <div style="float:right">Suivant : <a href="font_add_sprite_ext.htm"><span class="notranslate">font_add_sprite_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 font_add_sprite

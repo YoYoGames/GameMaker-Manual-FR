@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title> steam_set_achievement</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_set_achievement" />
+  <meta name="rh-index-keywords" content="steam_set_achievement" />
+  <meta name="search-keywords" content="steam_set_achievement" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_set_achievement</h1>
+  <p>Cette fonction permet d'indiquer à l'API <span class="notranslate">Steam</span> d'attribuer (&quot; définir &quot;) un succès au joueur. Ces réalisations doivent avoir été définies sur la page des comptes du panneau de configuration Steamworks pour votre jeu et la chaîne transmise à la fonction doit correspondre à celle utilisée comme <b>nom d'API</b> sur le panneau de configuration. La superposition de jeu <span class="notranslate">Steam</span> affichera un panneau de notification à l'utilisateur l'informant de la réalisation qu'il a reçue, sauf si la réalisation a déjà été attribuée, auquel cas rien ne se passera.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_set_achievement(ach_name);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">ach_name</span></td>
+        <td>Le nom de la réalisation à définir (chaîne de caractères).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if hp &lt;= 0<br />
+    {<br />
+        global.Deaths += 1;<br />
+        if global.Deaths == 10<br />
+        {<br />
+            if !steam_get_achievement(&quot;ach_Player_Dies_Ten_Times&quot;) steam_set_achievement(&quot;ach_Player_Dies_Ten_Times&quot;);<br />
+        }<br />
+    }</p>
+  <p>Le code ci-dessus récompensera le joueur d'un succès si la variable globale &quot;Deaths&quot; est égale à 10 et si le succès n'a pas déjà été attribué.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Dos : <a href="Steam_Achievements.htm">Réalisations et statistiques</a></div>
+        <div style="float:right">Suivant : <a href="steam_get_achievement.htm"><span class="notranslate">steam_get_achievement</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_set_achievement
+-->
+  <!-- TAGS
+steam_set_achievement
+-->
+</body>
+</html>

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Animation Curve Editor</title>
+  <title>Courbes d'animation</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing how the animation curve editor works" />
   <meta name="rh-index-keywords" content="Animation Curve Editor" />
@@ -14,76 +13,78 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">The Animation Curve Editor</span></h1>
-  <p><img alt="The Animation Curve Editor" class="center" height="576" src="../assets/Images/Asset_Editors/Editor_Animation_Curves.png" width="1302" />An animation curve is an asset that contains one or more curves that represent how a value changes over time, and can use <a class="glossterm" data-glossterm="linear interpolation" href="#">linear interpolation</a>, <a class="glossterm" data-glossterm="smooth interpolation" href="#">smooth interpolation</a> or <a class="glossterm" data-glossterm="bezier interpolation" href="#">bezier interpolation</a> to go between different points in the curve. The values you set on the vertical axis can be between any two values (between -1 and 1 by default) and the duration along the horizontal axis is <em>always </em>normalised from 0 to 1, making it easy to target different time ranges using multipliers in your game code or stretch them to fit a track in the <a href="Sequence_Properties/Using_Animation_Curves.htm">Sequences Editor</a>.</p>
-  <p>Animation curves are comprised of &quot;channels&quot; and each channel can have its own curve settings, which permits you to - for example - describe a spatial position with two channels for the x/y location, or a colour gradient with 4 channels to represent a colour format. Animation curve assets can be used when working with Sequences and can also be accessed using code, making them a powerful tool when creating your games.</p>
-  <p>When you first create an animation curve asset the editor window will open and present you with the following sections:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Curve Name</a></p>
+  <h1>L'éditeur de courbes d'animation</h1>
+  <p><img>Une courbe d'animation est un actif qui contient une ou plusieurs courbes représentant l'évolution d'une valeur dans le temps. Elle peut utiliser l'<a class="glossterm" data-glossterm="interpolation linéaire" href="#">interpolation linéaire</a>, <a class="glossterm" data-glossterm="interpolation lisse" href="#">l</a> '<a class="glossterm" data-glossterm="interpolation lisse" href="#">interpolation lisse</a> ou l'<a class="glossterm" data-glossterm="interpolation de bézier" href="#">interpolation en bézier</a> pour passer d'un point à l'autre de la courbe. Les valeurs que vous définissez sur l'axe vertical peuvent être comprises entre deux valeurs quelconques (entre -1 et 1 par défaut) et la durée sur l'axe horizontal est <em>toujours </em>normalisée de 0 à 1, ce qui facilite les opérations suivantes
+    de cibler différentes plages de temps à l'aide de multiplicateurs dans votre code de jeu ou de les étirer pour les adapter à une piste dans l'<a href="Sequence_Properties/Using_Animation_Curves.htm">éditeur de séquences</a>.</p>
+  <p>Les courbes d'animation sont composées de &quot;canaux&quot; et chaque canal peut avoir ses propres paramètres de courbe, ce qui vous permet, par exemple, de décrire une position spatiale avec deux canaux pour l'emplacement x/y, ou un gradient de couleur avec 4 canaux pour représenter un format de couleur.
+    pour représenter un format de couleur. Les actifs de courbe d'animation peuvent être utilisés lorsque vous travaillez avec des séquences et peuvent également être accédés à l'aide de code, ce qui en fait un outil puissant lors de la création de vos jeux.</p>
+  <p>Lorsque vous créez pour la première fois un actif de courbe d'animation, la fenêtre de l'éditeur s'ouvre et vous présente les sections suivantes :</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Nom de la courbe</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">Here you can give your animation curve a unique name (<span data-keyref="Asset name restriction">alphanumeric characters and the &quot;_&quot; underscore symbol only</span>). This name is what will be used to refer to the curve and all its channels
-      when accessing it through code or in a sequence.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Ici, vous pouvez donner à votre courbe d'animation un nom unique<span data-keyref="Asset name restriction">(uniquement des caractères alphanumériques et le symbole de soulignement &quot;_&quot;</span>). Ce nom est celui qui sera utilisé pour faire référence à la courbe et à tous ses canaux
+      lorsqu'on y accède par le code ou dans une séquence.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">Curve Library</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">Bibliothèque des courbes</a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">The <img class="icon" height="20" src="../assets/Images/Icons/Animation_Curve_Library_Button.png" style="cursor: nwse-resize;" width="13" /> button opens the <strong><span data-keyref="Animation_Curve_Presets_Library">Animation Curve Library</span></strong> window,
-      which allows you to change the Curve Type of the Animation Curve, and apply a preset to the selected channel.</p>
-    <p class="dropspot"><img class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Library.png" />See the section on <a href="Animation_Curve_Properties/Animation_Curve_Library.htm" title="Animation Curve Library">Animation Curve Library</a> for information
-      on Curve Types and Presets. Note that opening the window through the <img class="icon" height="20" src="../assets/Images/Icons/Animation_Curve_Library_Button.png" style="cursor: nwse-resize;" width="13" /> button will have the <strong>&quot;Overwrite&quot;</strong> Apply Mode selected by default.</p>
+    <p class="dropspot">Le bouton <img> ouvre la <strong><span data-keyref="Animation_Curve_Presets_Library">Bibliothèque des courbes d'animation</span></strong> fenêtre,
+      qui vous permet de modifier le type de courbe de la courbe d'animation et d'appliquer un préréglage au canal sélectionné.</p>
+    <p class="dropspot"><img>Pour plus d'informations sur les types de courbes et les préréglages, voir la section sur la <a href="Animation_Curve_Properties/Animation_Curve_Library.htm" title="Animation Curve Library">bibliothèque de courbes d'animation</a>.
+      sur les types de courbes et les préréglages. Notez que si vous ouvrez la fenêtre à l'aide du bouton <img>, le mode d'application <strong>&quot;Écraser</strong> &quot; sera sélectionné par défaut.</p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Channel List</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Liste des chaînes</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">The channel list is where you can add and name the different channels that will comprise your animation curve asset. By default when you first create an animation curve, a channel will have been added for you and you can add further channels by clicking
-      on the <img class="icon" src="../assets/Images/Icons/Animation_Curves_New_Channel.png" /> button to the left of the curve name. Each channel must have a unique name (using <span data-keyref="Asset name restriction">alphanumeric characters and the &quot;_&quot; underscore symbol only</span>),
-      and you can also set the colour for the channel by double clicking <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on the colour swatch to the left, which will open the colour picker to let you choose a new colour.
-      To rename the channel, you can do a slow double click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> and rename, and you can also use the right mouse button <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> to open a menu where you can choose to rename, change the colour or delete the channel.</p>
-    <p class="dropspot">Channels can be expanded by clicking on the arrow beside the name to show each of the points on the channel curve, and these points can be edited manually by clicking the current value and typing in the new value.</p>
-    <p class="dropspot"><img alt="Expanded Channel List" class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_ExpandList.png" />You can toggle the channel visibility by clicking on the &quot;eye&quot; icon <img alt="Eye Icon" class="icon" src="../assets/Images/Icons/Icon_ToggleVisibility.png" />, or delete the channel by clicking the &quot;bin&quot; icon <img alt="Delete Channel Icon" class="icon" src="../assets/Images/Icons/Icon_DeleteChannel.png" />.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">La liste des canaux vous permet d'ajouter et de nommer les différents canaux qui composeront votre courbe d'animation. Par défaut, lorsque vous créez une courbe d'animation pour la première fois, un canal a été ajouté pour vous.
+      sur le bouton <img> à gauche du nom de la courbe. Chaque canal doit avoir un nom unique (utilisant <span data-keyref="Asset name restriction">uniquement des caractères alphanumériques et le symbole de soulignement &quot;_&quot;</span>),
+      et vous pouvez également définir la couleur du canal en double-cliquant sur <img> sur le nuancier de couleurs à gauche, ce qui ouvrira le sélecteur de couleurs pour vous permettre de choisir une nouvelle couleur.
+      Pour renommer le canal, vous pouvez faire un double clic lent <img> et renommer, et vous pouvez également utiliser le bouton droit de la souris <img> pour ouvrir un menu où vous pouvez choisir de renommer, changer la couleur ou supprimer le canal.</p>
+    <p class="dropspot">Les canaux peuvent être développés en cliquant sur la flèche située à côté du nom pour afficher chacun des points de la courbe du canal, et ces points peuvent être modifiés manuellement en cliquant sur la valeur actuelle et en saisissant la nouvelle valeur.</p>
+    <p class="dropspot"><img>Vous pouvez changer la visibilité du canal en cliquant sur l'icône &quot;œil&quot; <img>, ou supprimer le canal en cliquant sur l'icône &quot;poubelle&quot; <img>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Channel Range</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Gamme de canaux</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">The Channel Range button is used for setting the visual vertical range for the Channel Editor. By default this will be set from -1 to 1, but clicking this button will open the following window:</p>
-    <p class="dropspot"><img alt="Animation Curve Editor Channel Range" class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Range.png" />Changing these values will change the way the data is represented in the Channel Editor section, permitting you
-      to have higher/lower values along the channel curve than just -1 to 1. Note that this is purely visual and does not clamp the values for the channel.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Le bouton Channel Range est utilisé pour définir la plage verticale visuelle de l'éditeur de canaux. Par défaut, elle est réglée de -1 à 1, mais en cliquant sur ce bouton, la fenêtre suivante s'ouvre :</p>
+    <p class="dropspot"><img>La modification de ces valeurs changera la façon dont les données sont représentées dans la section Channel Editor, ce qui vous permet
+      d'avoir des valeurs supérieures/inférieures le long de la courbe du canal, plutôt que de se contenter de -1 à 1. Notez qu'il s'agit d'une modification purement visuelle qui n'affecte pas les valeurs du canal.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Channel Editor</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Rédacteur de la chaîne</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">The Channel Editor shows a visual representation of the different channels used in the animation curve. By default, all channels will be shown here, but you can only edit the channel currently selected from the Channel List, which will be highlighted
-      in the editor. You can change the position of any of the points along the channel curve by clicking <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on them and dragging them around within the editor, but note that the
-      first and last point can only be changed along the vertical axis and their horizontal value will always be 0 and 1 respectively.</p>
-    <p class="dropspot">You can add points directly to the channel curve by moving the mouse close to the main channel line and then clicking <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> when the cursor changes to the &quot;<strong>Add Point</strong>&quot;
-      tool, and you can then edit these points by clicking <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> and dragging or by changing their values in the expanded channel options in the Channel List:</p>
-    <p class="dropspot"><img class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Channel_Editor.gif" />You can edit multiple points at once by clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and dragging within the editor to select all the points you want to edit or by using <img alt="CTRL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> to add points to the selection individually. Releasing the mouse button and then clicking again on any of the points in the selection
-      and dragging will move them all together:</p>
-    <p class="dropspot"><img class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Channel_Editor_Moving.gif" />You can <img class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> right-click anywhere in the Channel Editor to open the <a href="Animation_Curve_Properties/Animation_Curve_Library.htm">Animation Curve Library</a> window (only when the selected Curve Type is <strong>Bezier</strong>). Applying a preset in this way will affect the whole channel. To modify only a part of the channel, you can <img class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> right-click on an individual line to apply a preset to it, or select multiple lines by clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and dragging, then <img class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> right-click on the selection to apply a preset to the selected lines.</p>
-    <p class="dropspot"><img class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Channel_Editor_Presets.gif" />Note that opening the <strong>Animation Curve Library</strong> window through the Channel Editor will have the <strong>&quot;Between&quot;</strong> Apply Mode selected by default.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">L'éditeur de canaux offre une représentation visuelle des différents canaux utilisés dans la courbe d'animation. Par défaut, tous les canaux sont affichés ici, mais vous ne pouvez modifier que le canal actuellement sélectionné dans la liste des canaux, qui sera mis en surbrillance dans l'éditeur.
+      dans l'éditeur. Vous pouvez modifier la position de n'importe quel point le long de la courbe du canal en cliquant sur <img> et en les faisant glisser dans l'éditeur.
+      premier et le dernier point ne peuvent être modifiés que le long de l'axe vertical et leur valeur horizontale sera toujours de 0 et 1 respectivement.</p>
+    <p class="dropspot">Vous pouvez ajouter des points directement à la courbe de canal en déplaçant la souris près de la ligne principale du canal, puis en cliquant sur <img> lorsque le curseur passe à l'outil &quot;<strong>Add Point</strong>&quot;<strong>(Ajouter un point</strong>).
+      Vous pouvez ensuite modifier ces points en cliquant sur <img> et en les faisant glisser ou en changeant leurs valeurs dans les options de canal étendues de la liste des canaux :</p>
+    <p class="dropspot"><img>Vous pouvez modifier plusieurs points à la fois en cliquant sur <img> et en faisant glisser la souris dans l'éditeur pour sélectionner tous les points que vous voulez modifier ou en utilisant <img> / <img> + <img> pour ajouter des points à la sélection individuellement. Si vous relâchez le bouton de la souris, puis cliquez à nouveau sur l'un des points de la sélection et que vous le faites glisser, vous les déplacerez tous ensemble.
+      et en les faisant glisser, vous les déplacerez tous ensemble :</p>
+    <p class="dropspot"><img>Vous pouvez <img> cliquer avec le bouton droit de la souris n'importe où dans l'éditeur de canal pour ouvrir la fenêtre <a href="Animation_Curve_Properties/Animation_Curve_Library.htm">Bibliothèque de courbes d'animation</a> (uniquement lorsque le type de courbe sélectionné est <strong>Bézier</strong>). L'application d'un préréglage de cette manière affectera l'ensemble du canal. Pour modifier uniquement une partie du canal, vous pouvez <img> cliquer avec le bouton droit de la souris sur une ligne individuelle pour lui appliquer un préréglage, ou sélectionner plusieurs lignes en cliquant sur <img> et en les faisant glisser, puis <img> cliquer avec le bouton droit de la souris sur la sélection pour appliquer un préréglage aux lignes sélectionnées.</p>
+    <p class="dropspot"><img>Notez que si vous ouvrez la fenêtre de la <strong>bibliothèque de courbes d'animation</strong> via l'éditeur de canaux, le mode d'application <strong>&quot;Entre</strong> &quot; sera sélectionné par défaut.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Zoom Controls</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Contrôles du zoom</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">The zoom controls permit you to expand <img alt="Zoom Out Icon" class="icon" src="../assets/Images/Icons/Icon_ZoomOut.png" /> or contract <img alt="Zoom In Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_ZoomIn.png" width="24" /> the
-      vertical scale of the channel curves in the Channel Editor. You can also click the &quot;Center Fit&quot; button <img alt="Center Fit Icon" class="icon" src="../assets/Images/Icons/Icon_CenterFit.png" /> to have the Channel Editor view adjust it&#39;s
-      scale to fit all the points on the channel curve within the editor, centered around the mid range of the values:</p>
-    <p class="dropspot"><img alt="Using the Zoom controls" class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves_Zoom.gif" /></p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Les commandes de zoom vous permettent d'étendre <img> ou de contracter <img> l'échelle verticale des courbes de canaux dans l'éditeur de canaux.
+      l'échelle verticale des courbes de canaux dans l'éditeur de canaux. Vous pouvez également cliquer sur le bouton &quot;Center Fit&quot; <img> pour que la vue de l'éditeur de canal ajuste son échelle afin de s'adapter à tous les points de la courbe de canal dans l'éditeur.
+      Vous pouvez également cliquer sur le bouton "Center Fit"  pour que la vue de l'éditeur de canal ajuste son échelle afin de s'adapter à tous les points de la courbe de canal dans l'éditeur, centrée autour de la gamme moyenne des valeurs :</p>
+    <p class="dropspot"><img alt="The Animation Curve Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Animation_Curves.png"/></p>
+    <p class="dropspot"> </p>
   </div>
-  <p> </p>
-  <p>For information on the different <a class="glossterm" data-glossterm="Runtime" href="#">Runtime</a> functions that can be used along with animation curves, please see the following section of the manual:</p>
+  <p> </p>
+  <p>Pour plus d'informations sur les différentes fonctions du <a class="glossterm" data-glossterm="Temps d'exécution" href="#">Runtime</a> qui peuvent être utilisées avec les courbes d'animation, veuillez consulter la section suivante du manuel :</p>
   <ul class="colour">
-    <li><a href="../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/Animation_Curves.htm">Animation Curve Functions</a></li>
+    <li><a href="../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/Animation_Curves.htm">Fonctions des courbes d'animation</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a href="Animation_Curve_Properties/Animation_Curve_Library.htm">Animation Curve Library</a></div>
+        <div style="float:left">Retour : <a href="The_Asset_Editors.htm">Les éditeurs d'actifs</a></div>
+        <div style="float:right">Suivant : <a href="Animation_Curve_Properties/Animation_Curve_Library.htm">Bibliothèque de courbes d'animation</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Animation Curve Editor
@@ -92,5 +93,5 @@ Animation Curves
   <!-- TAGS
 animation_curve_editor
 -->
-</body>
-</html>
+
+</body></html>

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_text_colour</title>
+  <title>dessiner_texte_couleur</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for draw_text_colour" />
   <meta name="rh-index-keywords" content="draw_text_colour,draw_text_color" />
@@ -15,73 +15,73 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_text_colour</h1>
-  <p>This function will draw text in a similar way to <a href="draw_text.htm"><span class="inline">draw_text</span><span class="inline">()</span><span class="inline"></span></a> only now you can choose the colours to use for colouring the text as well as the alpha value, and these new values will be used instead
-    of the base drawing colour and alpha.</p>
-  <p class="note"><b>NOTE</b>: Gradient blending is not available for the HTML5 target unless WebGL is enabled, although you can still set the blending colours and it will blend the font with the first given colour. However all blending in this way creates a duplicate
-    font which is then stored in the cache and used when required, which is far from optimal and if you use multiple colour changes it will slow down your games performance. You can set the font cache size to try and limit this should it be necessary
-    using the function <a href="../../Asset_Management/Fonts/font_set_cache_size.htm"><span class="inline">font_set_cache_size()</span></a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>dessiner_texte_couleur</h1>
+  <p>Cette fonction permet de dessiner du texte de manière similaire à la fonction <a href="draw_text.htm"><span class="inline">draw_text</span><span class="inline">()</span><span class="inline"></span></a> mais vous pouvez maintenant choisir les couleurs à utiliser pour colorer le texte ainsi que la valeur alpha, et ces nouvelles valeurs seront utilisées à la place de la couleur de dessin de base et de l'alpha.
+    de la couleur et de l'alpha du dessin de base.</p>
+  <p class="note"><b>REMARQUE</b>: le mélange par gradient n'est pas disponible pour la cible HTML5, sauf si WebGL est activé, mais vous pouvez toujours définir les couleurs de mélange et la police sera mélangée avec la première couleur donnée. Cependant, tous les mélanges de cette manière créent une police dupliquée qui est ensuite stockée dans la base de données des polices.
+    qui est ensuite stockée dans le site <span class="notranslate">cache</span> et utilisée au besoin, ce qui est loin d'être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de votre jeu. Vous pouvez définir la taille de la police <span class="notranslate">cache</span> pour tenter de limiter ce phénomène, si cela s'avère nécessaire
+    en utilisant la fonction <a href="../../Asset_Management/Fonts/font_set_cache_size.htm"><span class="inline">font_set_cache_size()</span></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">draw_text_colour(x, y, string, c1, c2, c3, c4, alpha);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>x</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of the drawn string.</td>
+        <td><span class="notranslate">x</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate of the drawn string.</span></td>
      </tr>
       <tr>
-        <td>y</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of the drawn string.</td>
+        <td><span class="notranslate">y</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate of the drawn string.</span></td>
      </tr>
       <tr>
-        <td>string</td><td><span data-keyref="Type_String"></span></td>
-        <td>The string to draw.</td>
+        <td><span class="notranslate">string</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The string to draw.</span></td>
      </tr>
       <tr>
-        <td>c1</td><td><span data-keyref="Type_Constant_Colour"></span></td>
-        <td>The colour for the top left of the drawn text.</td>
+        <td><span class="notranslate">c1</span></td><td><span data-keyref="Type_Constant_Colour"></span></td>
+        <td><span class="notranslate">The colour for the top left of the drawn text.</span></td>
      </tr>
       <tr>
-        <td>c2</td><td><span data-keyref="Type_Constant_Colour"></span></td>
-        <td>The colour for the top right of the drawn text.</td>
+        <td><span class="notranslate">c2</span></td><td><span data-keyref="Type_Constant_Colour"></span></td>
+        <td><span class="notranslate">The colour for the top right of the drawn text.</span></td>
      </tr>
       <tr>
-        <td>c3</td><td><span data-keyref="Type_Constant_Colour"></span></td>
-        <td>The colour for the bottom right of the drawn text.</td>
+        <td><span class="notranslate">c3</span></td><td><span data-keyref="Type_Constant_Colour"></span></td>
+        <td><span class="notranslate">The colour for the bottom right of the drawn text.</span></td>
      </tr>
       <tr>
-        <td>c4</td><td><span data-keyref="Type_Constant_Colour"></span></td>
-        <td>The colour for the bottom left of the drawn text.</td>
+        <td><span class="notranslate">c4</span></td><td><span data-keyref="Type_Constant_Colour"></span></td>
+        <td><span class="notranslate">The colour for the bottom left of the drawn text.</span></td>
      </tr>
       <tr>
-        <td>alpha</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The alpha for the text.</td>
+        <td><span class="notranslate">alpha</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The alpha for the text.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">draw_set_colour(c_white);<br/> draw_text(100, 100, &quot;Health&quot;);<br/> draw_text_colour(100, 200, string(health), c_lime, c_lime, c_green, c_green, 1);</p>
-  <p>The above code will draw two sections of text on the same line, with the first text being drawn white (as that is the base drawing colour) and the second text being drawn with a lime green to normal green gradient.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus permet de dessiner deux sections de texte sur la même ligne, le premier texte étant dessiné en blanc (puisqu'il s'agit de la couleur de base du dessin) et le second texte étant dessiné avec un dégradé de vert citron à vert normal.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Text.htm">Text</a></div>
-        <div style="float:right">Next: <a href="draw_text_transformed.htm">draw_text_transformed</a></div>
+        <div style="float:left">Retour : <a href="Text.htm">Texte</a></div>
+        <div style="float:right">Suivant : <a href="draw_text_transformed.htm"><span class="notranslate">draw_text_transformed</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_text_colour

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Command Line Parameters</title>
+  <title>Paramètres de la ligne de commande</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains how to use Command Line Parameters when running your game" />
   <meta name="rh-index-keywords" content="Command Line Parameters" />
@@ -14,69 +14,69 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Command Line Parameters</h1>
-  <p>When creating games it is important that you play test the executable file to make sure that the final compile is correct and has no unforeseen errors or differences. However creating an executable means that, since you have no access to the debug console nor to the compiler window, it can be difficult to pin down and debug any problems that you may find. However there is a fix for this, and that is to use <strong>command line parameters</strong> to set certain properties when the executable version of the game is run, in turn permitting you to create output log files and test other special situations.</p>
-  <p class="note"><span class="note"><strong>NOTE</strong></span> This is available on the standard <strong>Windows </strong>target module <strong>only</strong>.</p>
-  <p>To get this working you must first create a Windows executable of your game and have it installed on your test machine. Once you have that done, you need to create a <em>Shortcut </em>to the game on the desktop. This is where we will add in the parameters to be passed to the <span class="inline">*.exe</span> (to create a shortcut, right click <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> the game executable and then select <em>Send to</em> &gt; <em>Desktop (create shortcut)</em>) .</p>
-  <p>Once you have made your shortcut you can then use any of the following parameters in the target path:</p>
-  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-noaudio</span>: This switches off all audio in your game.</p>
-  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-inawindow</span>: Forces the game to start in a window, even when set to run in fullscreen mode.</p>
-  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-output &lt;<em>filename</em>&gt;</span>: Sends console output to the filename, including any debug messages that you have in your code base.</p>
-  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-debugoutput &lt;<em>filename</em>&gt;</span>: Sends console output to the filename, excluding any custom debug messages, but including extra information from the runner for bug reporting.</p>
-  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-software</span>: Will force the game to use Software Vertex Processing instead of hardware for rendering the game graphics. This is especially useful for those PCs that are using an on-board Intel GFX chipset or show display issues on older machines.</p>
-  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-intel</span>: This will switch on a fix for bad Intel drivers, no matter what GPU is being used. This work around for those bad drivers will slow things down, giving a noticeable performance hit for your game, so if you do not need the fix do not use it.</p>
-  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-vanillaGFX</span>: Using this switches off any check for driver manufacturer, and can be very useful for testing your game &quot;as is&quot;.</p>
-  <p>It&#39;s worth noting that the <span class="inline">&lt;<em>filename</em>&gt;</span> in <span class="inline">-output</span> and <span class="inline">-debugoutput</span> can be the same one if desired, as the file is opened and closed on each write.</p>
-  <p>You should now go to where you created the shortcut to the game executable, and then right click on it and select Properties.</p>
-  <p><img alt="Command Line Shortcut" class="center" src="../assets/Images/Settings/CommandLine_Shortcut.png" />This will open a window similar to the one above. Here you can add into the <strong>Target</strong> path your command line. Simply scroll along to the end of the given path, add a space, and then the parameter string. So, for example, to create a debug file output you would have something like:</p>
+  <h1>Paramètres de la ligne de commande</h1>
+  <p>Lorsque vous créez des jeux, il est important que vous testiez le fichier exécutable pour vous assurer que la compilation finale est correcte et ne présente pas d'erreurs ou de différences imprévues. Cependant, la création d'un exécutable signifie que, puisque vous n'avez pas accès à la console de débogage ni à la fenêtre du compilateur ( <span class="notranslate">access</span> ), il peut être difficile d'identifier et de déboguer tout problème que vous pourriez trouver. Il existe cependant une solution à ce problème, qui consiste à utiliser des <strong>paramètres de ligne de commande</strong> pour définir certaines propriétés lorsque la version exécutable du jeu est exécutée, ce qui vous permet de créer des fichiers journaux de sortie et de tester d'autres situations spéciales.</p>
+  <p class="note"><span class="note"><strong>NOTE</strong></span> Cette fonction <strong>n'</strong>est disponible <strong>que</strong> sur le module cible <strong>Windows </strong>standard.</p>
+  <p>Pour que cela fonctionne, vous devez d'abord créer un exécutable <span class="notranslate">Windows</span> de votre jeu et l'installer sur votre machine de test. Une fois cela fait, vous devez créer un <em>raccourci </em>vers le jeu sur le bureau. C'est là que nous ajouterons les paramètres à transmettre à <span class="inline">*.exe</span> (pour créer un raccourci, cliquez avec le bouton droit de la souris sur <img> l'exécutable du jeu, puis sélectionnez <em>Send to</em> &gt; <em>Desktop (create shortcut)</em>).</p>
+  <p>Une fois que vous avez créé votre raccourci, vous pouvez utiliser l'un des paramètres suivants dans le chemin cible :</p>
+  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-noaudio</span>: Cette option permet de désactiver tout le son de votre jeu.</p>
+  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-inawindow</span>: Force le jeu à démarrer dans une fenêtre, même s'il est configuré pour fonctionner en mode plein écran.</p>
+  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-output &lt;<em>filename</em>&gt;</span>: Envoie la sortie de la console au nom de fichier, y compris tous les messages de débogage que vous avez dans votre base de code.</p>
+  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-debugoutput &lt;<em>filename</em>&gt;</span>: Envoie la sortie de la console vers le nom de fichier, en excluant tout message de débogage personnalisé, mais en incluant des informations supplémentaires provenant de <span class="notranslate">runner</span> pour le signalement des bogues.</p>
+  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-software</span>: Force le jeu à utiliser le traitement logiciel des sommets au lieu du matériel pour le rendu des graphiques du jeu. Ceci est particulièrement utile pour les PC qui utilisent un chipset Intel GFX intégré ou qui présentent des problèmes d'affichage sur des machines plus anciennes.</p>
+  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-intel</span>: Ceci activera un correctif pour les mauvais pilotes Intel, quel que soit le GPU utilisé. Cette solution pour ces mauvais pilotes ralentira les choses, donnant une baisse de performance notable pour votre jeu, donc si vous n'avez pas besoin de la solution, ne l'utilisez pas.</p>
+  <p style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 3em"><span class="inline">-vanillaGFX</span>: L'utilisation de cette option désactive toute vérification du fabricant du pilote, et peut être très utile pour tester votre jeu &quot;tel quel&quot;.</p>
+  <p>Il est intéressant de noter que le <span class="inline">&lt;<em>filename</em>&gt;</span> de <span class="inline">-output</span> et <span class="inline">-debugoutput</span> peut être le même si on le souhaite, car le fichier est ouvert et fermé à chaque écriture.</p>
+  <p>Vous devez maintenant aller à l'endroit où vous avez créé le raccourci vers l'exécutable du jeu, puis faire un clic droit dessus et sélectionner Propriétés.</p>
+  <p><img>Cela ouvrira une fenêtre similaire à celle ci-dessus. Ici, vous pouvez ajouter votre ligne de commande dans le chemin <strong>cible</strong>. Faites simplement défiler jusqu'à la fin du chemin donné, ajoutez un espace, puis la chaîne de paramètres. Ainsi, par exemple, pour créer une sortie de fichier de débogage, vous auriez quelque chose comme :</p>
   <p class="code">D:\Users\Me\GameMaker\CustomLoadBar-Default-1.0.0.0\CustomLoadBar.exe -debugoutput debug.txt</p>
-  <p>This will now create a file called &quot;<span class="inline">debug.txt</span>&quot; in the same location as the executable (not the shortcut location, but where the game is installed) with debug and compiler information from your finished game. Click on &quot;OK&quot; and then use the shortcut to run your game to have it use these parameters and help with your debugging.</p>
-  <p>For further information on how to debug your game, please see the section of the manual on <a href="../Introduction/Debugging.htm">Debugging</a>.</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">A/B Testing Using The Command Line</a></p>
+  <p>Cela va créer un fichier appelé &quot;<span class="inline">debug.txt</span>&quot; au même endroit que l'exécutable (pas à l'endroit du raccourci, mais à l'endroit où le jeu est installé) avec les informations de débogage et de compilation de votre jeu fini. Cliquez sur &quot;OK&quot; et utilisez ensuite le raccourci pour lancer votre jeu afin qu'il utilise ces paramètres et vous aide avec votre <span class="notranslate">debugging</span>.</p>
+  <p>Pour plus d'informations sur la façon de déboguer votre jeu, veuillez consulter la section du manuel consacrée au <a href="../Introduction/Debugging.htm">débogage</a>.</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Tests A/B en utilisant la ligne de commande</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">The YoYo runner also benefits from a special command line parameter:</p>
-    <p class="dropspot" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 5em"><span class="inline">-game &lt;<em>filename</em>&gt;</span>: loads the given game file
-      <br />
+    <p class="dropspot">Le site <span class="notranslate">YoYo</span> <span class="notranslate">runner</span> bénéficie également d'un paramètre de ligne de commande spécial :</p>
+    <p class="dropspot" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 5em"><span class="inline">-game &lt;<em>filename</em>&gt;</span>: charge le fichier de jeu donné
+      <br>
     </p>
-    <p class="dropspot">Why would you use this? Well, normally you wouldn&#39;t, but if you wish to have more than one version of your game running at a time it can be done using this, making A/B comparative tests far easier. With this method you could focus test with someone else or, as the designer, get a better feel for things by doing side-by-side tests.</p>
-    <p class="dropspot">To set this up, you will need to know a couple of things beforehand. To start with you will need the path to the Runner itself. This can be found in the <strong>Program Data</strong> folder of your Windows OS (this may be hidden by default so you will need to change the viewing properties to see it), with a typical format like this:
-      <br />
-      <br />
+    <p class="dropspot">Pourquoi l'utiliser ? Normalement, vous ne l'utiliseriez pas, mais si vous souhaitez faire tourner plus d'une version de votre jeu à la fois, vous pouvez le faire en utilisant cette méthode, ce qui rend les tests comparatifs A/B beaucoup plus faciles. Avec cette méthode, vous pouvez faire des tests ciblés avec quelqu'un d'autre ou, en tant que concepteur, avoir une meilleure idée des choses en faisant des tests côte à côte.</p>
+    <p class="dropspot">Pour le mettre en place, vous devez connaître quelques éléments au préalable. Pour commencer, vous aurez besoin du chemin d'accès au site <span class="notranslate">Runner</span> lui-même. Il se trouve dans le dossier <strong>Program Data</strong> de votre système d'exploitation <span class="notranslate">Windows</span> (il peut être caché par défaut, vous devrez donc modifier les propriétés d'affichage pour le voir), avec un format typique comme celui-ci :
+      <br>
+      <br>
     </p>
     <p class="code">C:\ProgramData\GameMaker\Cache\runtimes\&lt;runtime_version&gt;\windows\Runner.exe
       <br />
     </p>
-    <p class="dropspot">Note that the runtime_version folder will depend on the runtimes you have installed currently. You will also need the path to the <span class="inline">&lt;<em>yourgame</em>&gt;.win</span> file, as this is what we are going to point the runner to. The easiest way to find this is to go to the <strong>Temp </strong>folder (typically located at <span class="inline">%localappdata%\Temp\GameMakerStudio\&lt;game_name&gt;\</span>) and just search for <span class="inline">*.win</span>, as that will show you all those available and you can simply pick that which you need to get the full path from.</p>
-    <p class="dropspot">Now, we could create a shortcut to the runner like we did for the executable, and then change the parameters as necessary, but that means having to open and edit it between tests, which defeats the purpose of our using this functionality for side-by-side testing. Instead we are going to create a couple of tiny &quot;batch&quot; files to handle this.</p>
-    <p class="dropspot">To do this, first create a new text document on your desktop and open it in Notepad (or any other text editor). Add the following:
-      <br />
-      <br />
+    <p class="dropspot">Notez que le dossier runtime_version dépendra du <span class="notranslate">runtimes</span> que vous avez installé actuellement. Vous aurez également besoin du chemin d'accès au fichier <span class="inline">&lt;<em>yourgame</em>&gt;.win</span>, car c'est vers ce fichier que nous allons diriger <span class="notranslate">runner</span>. Le moyen le plus simple de le trouver est d'aller dans le dossier <strong>Temp </strong>(généralement situé à <span class="inline">%localappdata%\Temp\GameMakerStudio\&lt;game_name&gt;\</span>) et de rechercher <span class="inline">*.win</span>, car cela vous montrera tous les fichiers disponibles et vous pourrez simplement choisir celui dont vous avez besoin pour obtenir le chemin complet.</p>
+    <p class="dropspot">Maintenant, nous pourrions créer un raccourci vers le site <span class="notranslate">runner</span> comme nous l'avons fait pour l'exécutable, puis modifier les paramètres si nécessaire, mais cela signifie qu'il faut l'ouvrir et le modifier entre les tests, ce qui va à l'encontre de l'objectif de notre utilisation de cette fonctionnalité pour les tests côte à côte. Au lieu de cela, nous allons créer un couple de petits fichiers &quot;batch&quot; pour gérer cela.</p>
+    <p class="dropspot">Pour ce faire, créez d'abord un nouveau document texte sur votre bureau et ouvrez-le dans le Bloc-notes (ou tout autre éditeur de texte). Ajoutez ce qui suit :
+      <br>
+      <br>
     </p>
     <p class="code">START C:\ProgramData\GameMaker\Cache\runtimes\&lt;runtime_version&gt;\windows\Runner.exe -game &lt;LOCAL TEMP PATH&gt;\&lt;GAMENAME&gt;.win
       <br />
     </p>
-    <p class="dropspot">You need to to set the temp path to point to your game <span class="inline">*.win</span> file, and then save this as &quot;<span class="inline">GM_Test_1.bat</span>&quot; to your desktop (be aware that Notepad will save automatically as a <span class="inline">*.txt</span> file unless you choose &quot;all files&quot; from the save dialogue options). An example of how your final command should look would be:
-      <br />
+    <p class="dropspot">Vous devez définir le chemin temporaire pour qu'il pointe vers le fichier <span class="inline">*.win</span> de votre jeu, puis l'enregistrer sous le nom de &quot;<span class="inline">GM_Test_1.bat</span>&quot; sur votre bureau (sachez que Notepad enregistrera automatiquement le fichier <span class="inline">*.txt</span> à moins que vous ne choisissiez &quot; tous les fichiers &quot; dans les options de la boîte de dialogue d'enregistrement). Voici un exemple de ce à quoi devrait ressembler votre commande finale :
+      <br>
     </p>
     <p class="code">START C:\ProgramData\GameMaker\Cache\runtimes\runtime-9.9.1.199\windows\Runner.exe -game D:\Users\Mark\AppData\Local\Temp\GameMaker\AlphaDog_Reboot\AlphaDog_Reboot.win
       <br />
     </p>
-    <p class="dropspot">Now, create another text file and add the same line, only this time you point it to the path for the second version of the game that you want to do side-by-side testing with, and you would save this as &quot;<span class="inline">GM_Test_2.bat</span>&quot;. You can double click <img alt="LMB Icon" class="icon" height="24" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> either of them to bring up the different versions of your game, and having them as batch files means that you can easily open them again to edit them and change the game being tested.</p>
+    <p class="dropspot">Maintenant, créez un autre fichier texte et ajoutez la même ligne, mais cette fois-ci, indiquez le chemin d'accès à la deuxième version du jeu avec laquelle vous souhaitez effectuer des tests côte à côte, et enregistrez ce fichier sous le nom &quot;<span class="inline">GM_Test_2.bat</span>&quot;. Vous pouvez double-cliquer sur <img> l'un ou l'autre pour faire apparaître les différentes versions de votre jeu, et le fait de les avoir en tant que fichiers batch signifie que vous pouvez facilement les ouvrir à nouveau pour les modifier et changer le jeu testé.</p>
     <p class="dropspot">
       <br />
     </p>
     <p class="dropspot"></p>
   </div>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Runner_Details/Runner_Details.htm">Runner &amp; Compiler</a></div>
-        <div style="float:right">Next: <a href="YoYo_Compiler.htm">YoYo Compiler</a></div>
+        <div style="float:left">Retour : <a data-xref="{title}" href="Runner_Details/Runner_Details.htm">Runner &amp; Compiler</a></div>
+        <div style="float:right">Suivant : <a href="YoYo_Compiler.htm">Compilateur YoYo</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Command Line Pararmeters

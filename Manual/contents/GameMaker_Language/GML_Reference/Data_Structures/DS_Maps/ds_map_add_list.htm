@@ -6,7 +6,7 @@
   <title>ds_map_add_list</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for ds_map_add_list" />
   <meta name="rh-index-keywords" content="ds_map_add_list" />
@@ -15,39 +15,39 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ds_map_add_list</h1>
-  <p>With this function you can assign a (previously created) <a href="../DS_Lists/DS_Lists.htm">DS list</a> to a key within the given DS map. This function is designed for creating JSON compatible maps which you would then encode using <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a> and should only be used in conjunction with that functionality. If a DS map has a list added in this way, destroying the parent map will also destroy the contained lists and free their memory, and calling <a href="ds_map_clear.htm"><span class="inline">ds_map_clear()</span></a> on the parent map will also destroy and clean up any flagged lists.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction permet d'attribuer une <a href="../DS_Lists/DS_Lists.htm">liste de DS</a> (préalablement créée) à une clé dans la carte de DS donnée. Cette fonction est conçue pour créer des cartes compatibles JSON que vous encoderez ensuite à l'aide de la fonction <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a> et ne doit être utilisée qu'en conjonction avec cette fonctionnalité. Si une liste a été ajoutée à une carte DS de cette manière, la destruction de la carte parente détruira également les listes contenues et libérera leur mémoire. <a href="ds_map_clear.htm"><span class="inline">ds_map_clear()</span></a> sur la carte parent détruira et nettoiera également toutes les listes marquées.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">ds_map_add_list(id, key, value)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>id</td>
-        <td><span data-keyref="Type_ID_DS_Map">DS Map ID</span></td>
-        <td>The id of the map to use.</td>
+        <td><span class="notranslate">id</span></td>
+        <td><span data-keyref="Type_ID_DS_Map">ID de la carte DS</span></td>
+        <td><span class="notranslate">The id of the map to use.</span></td>
       </tr>
       <tr>
-        <td>key</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The key for the added list.</td>
+        <td><span class="notranslate">key</span></td>
+        <td><span data-keyref="Type_String">Chaîne de caractères</span></td>
+        <td><span class="notranslate">The key for the added list.</span></td>
       </tr>
       <tr>
-        <td>value</td>
-        <td><span data-keyref="Type_ID_DS_List">DS List ID</span></td>
-        <td>The id of the list to add.</td>
+        <td><span class="notranslate">value</span></td>
+        <td><span data-keyref="Type_ID_DS_List">ID de la liste DS</span></td>
+        <td><span class="notranslate">The id of the list to add.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var j_list = ds_list_create();<br />
     ds_list_add(j_list, health);<br />
     ds_list_add(j_list, lives);<br />
@@ -56,18 +56,18 @@
     ds_map_add_list(j_map, &quot;list&quot;, j_list);<br />
     var j = json_encode(j_map);<br />
     ds_map_destroy(j_map);</p>
-  <p>The above code will create a list and populate it with the various values of global variables. This list is then &quot;nested&quot; within a DS map, and the map is then encoded into a JSON string, before the map is destroyed, removing it, and any lists it contains, from memory.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus va créer une liste et la remplir avec les différentes valeurs des variables globales. Cette liste est ensuite &quot;imbriquée&quot; dans une carte DS, et la carte est ensuite encodée en une chaîne JSON, avant que la carte ne soit détruite, la supprimant de la mémoire, ainsi que toutes les listes qu'elle contient.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="DS_Maps.htm">DS Maps</a></div>
-        <div style="float:right">Next: <a href="ds_map_add_map.htm">ds_map_add_map</a></div>
+        <div style="float:left">Retour : <a href="DS_Maps.htm">Cartes DS</a></div>
+        <div style="float:right">Suivant : <a href="ds_map_add_map.htm"><span class="notranslate">ds_map_add_map</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ds_map_add_list

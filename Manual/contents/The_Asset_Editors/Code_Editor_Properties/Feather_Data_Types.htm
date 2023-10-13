@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Feather Data Types</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Types de données de plumes</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Page listing all Feather data types along with their JSDoc usages" />
   <meta name="rh-index-keywords" content="Code Editor - JSDoc Comments,JSDoc" />
@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Feather Data Types</h1>
-  <p><a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a> uses data types to provide smart syntax-checking when writing code, ensuring you don&#39;t use the wrong data type for a variable or function parameter.</p>
-  <p>It also allows you to specify the data types for the parameters and return values of your own <a href="../../GameMaker_Language/GML_Overview/Script_Functions.htm">script functions</a>, using <a href="JSDoc_Script_Comments.htm">JSDoc comments</a>.</p>
-  <p>The <span class="inline">@param</span> and <span class="inline">@return</span> JSDoc tags allow you specify any one of the following types:</p>
-  <p class="note"><span class="note">NOTE</span> JSDoc types are case-insensitive, meaning <span class="inline2">Id.DsList</span> and <span class="inline2">id.dslist</span> are the same.</p>
+  <h1>Types de données de plumes</h1>
+  <p><a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a> utilise les types de données pour fournir un contrôle syntaxique intelligent lors de l'écriture du code, garantissant que vous n'utilisez pas le mauvais type de données pour une variable ou un paramètre de fonction.</p>
+  <p>Il vous permet également de spécifier les types de données pour les paramètres et les valeurs de retour de vos propres <a href="../../GameMaker_Language/GML_Overview/Script_Functions.htm">fonctions de script</a>, en utilisant les <a href="JSDoc_Script_Comments.htm">commentaires JSDoc</a>.</p>
+  <p>Les balises JSDoc <span class="inline">@param</span> et <span class="inline">@return</span> vous permettent de spécifier l'un des types suivants :</p>
+  <p class="note"><span class="note">NOTE</span> Les types JSDoc sont insensibles à la casse, ce qui signifie que <span class="inline2">Id.DsList</span> et <span class="inline2">id.dslist</span> sont identiques.</p>
   <table>
     <colgroup>
       <col />
@@ -27,110 +27,110 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Base Types</th>
-        <th>Specifier Examples<em>*</em></th>
+        <th>Types de base</th>
+        <th>Exemples de spécification*</th>
         <th>Description</th>
       </tr>
       <tr>
         <td><strong>Real</strong></td>
         <td><em>N/A</em></td>
-        <td>A real number</td>
+        <td>Un nombre réel</td>
       </tr>
       <tr>
         <td><strong>Bool</strong></td>
         <td><em>N/A</em></td>
-        <td>A boolean</td>
+        <td>Un booléen</td>
       </tr>
       <tr>
-        <td><strong>String</strong></td>
+        <td><strong>Chaîne de caractères</strong></td>
         <td><em>N/A</em></td>
-        <td>A string</td>
+        <td>Une chaîne</td>
       </tr>
       <tr>
         <td><strong>Array</strong></td>
-        <td><em>Default</em> - <span data-keyref="Type_Array"><a href="GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span><br />
+        <td><em>Par défaut</em> - <span data-keyref="Type_Array"><a href="../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Matrice</a></span><br>
           ...</td>
-        <td>An array, may include specifiers</td>
+        <td>Un tableau, pouvant inclure des spécificateurs</td>
       </tr>
       <tr>
-        <td><strong>Pointer</strong></td>
-        <td><em>Default</em> - <span data-keyref="Type_Pointer"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Pointer</a></span><br />
+        <td><strong>Pointeur</strong></td>
+        <td><em>Par défaut</em> - <span data-keyref="Type_Pointer"><a href="../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Pointeur</a></span><br>
           ...</td>
-        <td>A pointer, may include specifiers</td>
+        <td>Un pointeur, peut inclure des spécificateurs</td>
       </tr>
       <tr>
-        <td><strong>Function</strong></td>
-        <td><em>Default</em> - <span data-keyref="Type_Function"><a href="GameMaker_Language/GML_Overview/Script_Functions.htm" target="_blank">Function</a></span><br />
+        <td><strong>Fonction</strong></td>
+        <td><em>Par défaut</em> - <span data-keyref="Type_Function"><a href="../../../GameMaker_Language/GML_Overview/Script_Functions.htm" target="_blank">Fonction</a></span><br>
           ...</td>
-        <td>A function, may include specifiers</td>
+        <td>Une fonction, peut inclure des spécificateurs</td>
       </tr>
       <tr>
-        <td><strong>Struct</strong></td>
-        <td><em>Default</em> - <span data-keyref="Type_Struct"><a href="GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span><br />
+        <td><strong>Structure</strong></td>
+        <td><em>Par défaut</em> - <span data-keyref="Type_Struct"><a href="../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Structure</a></span><br>
           ...</td>
-        <td>A struct, may include specifiers</td>
+        <td>A <span class="notranslate">struct</span>, peut inclure des spécificateurs</td>
       </tr>
       <tr>
         <td><strong>Id</strong></td>
-        <td>.Instance - <span data-keyref="Type_ID_Instance"><a href="GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">Instance ID</a></span><br />
-          .DsList - <span data-keyref="Type_ID_DS_List"><a href="GameMaker_Language/GML_Reference/Data_Structures/DS_Lists/ds_list_create.htm" target="_blank">DS List ID</a></span><br />
-          .DsMap - <span data-keyref="Type_ID_DS_Map"><a href="GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/ds_map_create.htm" target="_blank">DS Map ID</a></span><br />
-          .DsGrid - <span data-keyref="Type_ID_DS_Grid"><a href="GameMaker_Language/GML_Reference/Data_Structures/DS_Grids/ds_grid_create.htm" target="_blank">DS Grid ID</a></span><br />
-          .DsStack - <span data-keyref="Type_ID_DS_Stack"><a href="GameMaker_Language/GML_Reference/Data_Structures/DS_Stacks/ds_stack_create.htm" target="_blank">DS Stack ID</a></span><br />
-          .DsPriority - <span data-keyref="Type_ID_DS_Priority"><a href="GameMaker_Language/GML_Reference/Data_Structures/DS_Priority_Queues/ds_priority_create.htm" target="_blank">DS Priority ID</a></span><br />
-          .DsQueue - <span data-keyref="Type_ID_DS_Queue"><a href="GameMaker_Language/GML_Reference/Data_Structures/DS_Queues/ds_queue_create.htm" target="_blank">DS Queue ID</a></span><em><br />
+        <td>.Instance - <span data-keyref="Type_ID_Instance"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">ID de l'instance</a></span><br>
+          .DsList - <span data-keyref="Type_ID_DS_List"><a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Lists/ds_list_create.htm" target="_blank">ID de la liste DS</a></span><br>
+          .DsMap - <span data-keyref="Type_ID_DS_Map"><a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/ds_map_create.htm" target="_blank">DS Map ID</a></span><br>
+          .DsGrid - <span data-keyref="Type_ID_DS_Grid"><a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Grids/ds_grid_create.htm" target="_blank">DS Grid ID</a></span><br>
+          .DsStack - <span data-keyref="Type_ID_DS_Stack"><a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Stacks/ds_stack_create.htm" target="_blank">DS Stack ID</a></span><br>
+          .DsPriority - <span data-keyref="Type_ID_DS_Priority"><a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Priority_Queues/ds_priority_create.htm" target="_blank">DS Priority ID</a></span><br>
+          .DsQueue - <span data-keyref="Type_ID_DS_Queue"><a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Queues/ds_queue_create.htm" target="_blank">DS Queue ID</a></span><em><br>
             ...</em></td>
-        <td>An ID, requires specifiers</td>
+        <td>Un ID, nécessite des spécificateurs</td>
       </tr>
       <tr>
-        <td><strong>Asset</strong></td>
-        <td>.GMAnimCurve - <span data-keyref="Type_Asset_Animation_Curve"><a href="The_Asset_Editors/Animation_Curves.htm" target="_blank">Animation Curve Asset</a></span><br />
-          .GMObject - <span data-keyref="Type_Asset_Object"><a href="The_Asset_Editors/Objects.htm" target="_blank">Object Asset</a></span><br />
-          .GMAudioGroup - <span data-keyref="Type_ID_Audio_Group"><a href="GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/Audio_Groups.htm" target="_blank">Audio Group ID</a></span><br />
-          .GMFont - <span data-keyref="Type_Asset_Font"><a href="The_Asset_Editors/Fonts.htm" target="_blank">Font Asset</a></span><br />
-          .GMPath - <span data-keyref="Type_Asset_Path"><a href="The_Asset_Editors/Paths.htm" target="_blank">Path Asset</a></span><br />
-          .GMScript - <span data-keyref="Type_Asset_Script"><a href="The_Asset_Editors/Scripts.htm" target="_blank">Script Asset</a></span><br />
-          .GMShader - <span data-keyref="Type_Asset_Shader"><a href="The_Asset_Editors/Shaders.htm" target="_blank">Shader Asset</a></span><br />
-          .GMSound - <span data-keyref="Type_Asset_Sound"><a href="The_Asset_Editors/Sounds.htm" target="_blank">Sound Asset</a></span><br />
-          .GMTimeline - <span data-keyref="Type_Asset_Timeline"><a href="The_Asset_Editors/Timelines.htm" target="_blank">Timeline Asset</a></span><br />
-          .GMRoom - <span data-keyref="Type_Asset_Room"><a href="The_Asset_Editors/Rooms.htm" target="_blank">Room Asset</a></span> <br />
-          .GMSequence - <span data-keyref="Type_Asset_Sequence"><a href="The_Asset_Editors/Sequences.htm" target="_blank">Sequence Asset</a></span><br />
-          .GMSprite - <span data-keyref="Type_Asset_Sprite"><a href="The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span><br />
-          .GMTileSet - <span data-keyref="Type_Asset_Tile_Set"><a href="The_Asset_Editors/Tile_Sets.htm" target="_blank">Tile Set Asset</a></span><em><br />
+        <td><strong>Actif</strong></td>
+        <td>GMAnimCurve <span data-keyref="Type_Asset_Animation_Curve"><a href="../../../The_Asset_Editors/Animation_Curves.htm" target="_blank">Courbe d'animation Asset</a></span><br>
+          .GMObject <span data-keyref="Type_Asset_Object"><a href="../../../The_Asset_Editors/Objects.htm" target="_blank">Objet Asset</a></span><br>
+          .GMAudioGroup <span data-keyref="Type_ID_Audio_Group"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/Audio_Groups.htm" target="_blank">ID de groupe audio</a></span><br>
+          .GMFont - <span data-keyref="Type_Asset_Font"><a href="../../../The_Asset_Editors/Fonts.htm" target="_blank">Font Asset</a></span><br>
+          .GMPath - <span data-keyref="Type_Asset_Path"><a href="../../../The_Asset_Editors/Paths.htm" target="_blank">Path Asset</a></span><br>
+          .GMScript - <span data-keyref="Type_Asset_Script"><a href="../../../The_Asset_Editors/Scripts.htm" target="_blank">Actif de script</a></span><br>
+          .GMShader - <span data-keyref="Type_Asset_Shader"><a href="../../../The_Asset_Editors/Shaders.htm" target="_blank">Shader Asset</a></span><br>
+          .GMSound - <span data-keyref="Type_Asset_Sound"><a href="../../../The_Asset_Editors/Sounds.htm" target="_blank">Actif sonore</a></span><br>
+          .GMTimeline - <span data-keyref="Type_Asset_Timeline"><a href="../../../The_Asset_Editors/Timelines.htm" target="_blank">Asset de ligne de temps</a></span><br>
+          .GMRoom - <span data-keyref="Type_Asset_Room"><a href="../../../The_Asset_Editors/Rooms.htm" target="_blank">Asset de salle</a></span> <br>
+          .GMSequence - <span data-keyref="Type_Asset_Sequence"><a href="../../../The_Asset_Editors/Sequences.htm" target="_blank">Séquence</a></span><br>
+          .GMSprite - <span data-keyref="Type_Asset_Sprite"><a href="../../../The_Asset_Editors/Sprites.htm" target="_blank">Asset Sprite</a></span><br>
+          .GMTileSet - <span data-keyref="Type_Asset_Tile_Set"><a href="../../../The_Asset_Editors/Tile_Sets.htm" target="_blank">Asset Tile Set</a></span><em><br>
             ...</em></td>
-        <td>An asset, requires specifiers</td>
+        <td>Un atout, nécessite des spécificateurs</td>
       </tr>
       <tr>
         <td><strong>Constant</strong></td>
-        <td>.Colour - <span data-keyref="Type_Constant_Colour"><a href="GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm" target="_blank">Colour</a></span><br />
-          .HAlign - <span data-keyref="Type_Constant_Draw_HAlign"><a href="GameMaker_Language/GML_Reference/Drawing/Text/draw_set_halign.htm" target="_blank">Horizontal Alignment Constant</a></span><br />
-          .VAlign - <span data-keyref="Type_Constant_Draw_VAlign"><a href="GameMaker_Language/GML_Reference/Drawing/Text/draw_set_valign.htm" target="_blank">Vertical Alignment Constant</a></span><br />
-          .Cursor - <span data-keyref="Type_Constant_Cursor"><a href="GameMaker_Language/GML_Reference/Cameras_And_Display/The_Game_Window/window_get_cursor.htm" target="_blank">Cursor Constant</a></span><br />
-          .EventType - <span data-keyref="Type_Constant_Event_Type"><a href="GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm" target="_blank">Event Type Constant</a></span><br />
-          .EventNumber - <span data-keyref="Type_Constant_Event_Number"><a href="GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm" target="_blank">Event Number Constant</a></span><br />
-          .PrimitiveType - <span data-keyref="Type_Constant_Draw_Primitive_Type"><a href="GameMaker_Language/GML_Reference/Drawing/Primitives/draw_primitive_begin.htm" target="_blank">Primitive Type Constant</a></span><br />
+        <td>.Colour - <span data-keyref="Type_Constant_Colour"><a href="../../../GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm" target="_blank">Couleur</a></span><br>
+          .HAlign - <span data-keyref="Type_Constant_Draw_HAlign"><a href="../../../GameMaker_Language/GML_Reference/Drawing/Text/draw_set_halign.htm" target="_blank">Constante d'alignement horizontal</a></span><br>
+          .VAlign - <span data-keyref="Type_Constant_Draw_VAlign"><a href="../../../GameMaker_Language/GML_Reference/Drawing/Text/draw_set_valign.htm" target="_blank">Constante d'alignement vertical</a></span><br>
+          .Cursor - <span data-keyref="Type_Constant_Cursor"><a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/The_Game_Window/window_get_cursor.htm" target="_blank">Constante curseur</a></span><br>
+          EventType <span data-keyref="Type_Constant_Event_Type"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm" target="_blank">Type d'événement Constante</a></span><br>
+          .EventNumber - <span data-keyref="Type_Constant_Event_Number"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm" target="_blank">Numéro d'événement Constant</a></span><br>
+          .PrimitiveType <span data-keyref="Type_Constant_Draw_Primitive_Type"><a href="../../../GameMaker_Language/GML_Reference/Drawing/Primitives/draw_primitive_begin.htm" target="_blank">Type de primitive Constante</a></span><br>
           ...</td>
-        <td>A constant, requires specifiers</td>
+        <td>Une constante, nécessite des spécificateurs</td>
       </tr>
       <tr>
-        <td><strong>Any</strong></td>
+        <td><strong>Tout</strong></td>
         <td><em>N/A</em></td>
-        <td>Any data type</td>
+        <td>Tout type de données</td>
       </tr>
     </tbody>
   </table>
-  <p class="note"><span class="note">NOTE</span> <em>*</em> The <strong>Specifier Examples</strong> column lists some example specifiers, but not all of them. For example, there may be more possible types under the <span class="inline2">Id</span>, <span class="inline2">Asset</span>, and <span class="inline2">Constant</span> groups, which are not listed here.</p>
-  <p>You may see an <span class="inline2">Any<strong>*</strong></span> type in the IDE when using Feather, which indicates that the type of the identifier (which may be a variable, parameter, return value, etc.) can&#39;t be discerned by Feather at the moment. When more code is added for that identifier, it may be able to assume a specific type.</p>
-  <h3>Specifiers</h3>
-  <p>A specifier is added after the base data type using a dot <span class="inline2">.</span>, to specify the exact type of data in that group.</p>
-  <p>Types such as <span class="inline2">Id.DsList</span>, <span class="inline2">Asset.GMObject</span>, and <span class="inline2">Constant.Color</span> use specifiers.</p>
-  <h3>Collection Types</h3>
-  <p>Types such as <span class="inline2">Array</span> and <span class="inline2">Id.DsList</span>, which are data structures that contain multiple values, are able to specify a single data type for all of their contents.</p>
-  <p>This is done using Collection Types, which are appended to the type using angle brackets <span class="inline2">&lt;&gt;</span>.</p>
-  <p>For example, an array containing strings would be <span class="inline2">Array&lt;String&gt;</span>, and a DS List, containing an Array, containing Reals, would be <span class="inline2">Id.DsList&lt;Array&lt;Real&gt;&gt;</span>.</p>
-  <h2>Type Validation</h2>
-  <p>The table below shows what happens if you pass a value of a certain type (rows) into a parameter requiring a data type (column).</p>
-  <p>For example, specifying <span class="inline2">undefined</span> (first row) for a parameter requiring a string (second column) results in an error.</p>
+  <p class="note"><span class="note">REMARQUE</span> <em>*</em> La colonne <strong>Exemples de spécification</strong> contient des exemples de spécification, mais pas tous. Par exemple, il peut y avoir d'autres types possibles dans les groupes <span class="inline2">Id</span>, <span class="inline2">Asset</span> et <span class="inline2">Constant</span>, qui ne sont pas répertoriés ici.</p>
+  <p>Vous pouvez voir un type <span class="inline2">Any*</span> dans le site <span class="notranslate">IDE</span> lorsque vous utilisez Feather, ce qui indique que le type de l'identifiant (qui peut être une variable, un paramètre, une valeur de retour, etc.) ne peut pas être discerné par Feather pour le moment. ) ne peut pas être discerné par Feather pour le moment. Lorsque davantage de code est ajouté pour cet identifiant, il peut être en mesure de prendre un type spécifique.</p>
+  <h3>Cahier des charges</h3>
+  <p>Un spécificateur est ajouté après le type de données de base à l'aide d'un point <span class="inline2">.</span> pour spécifier le type exact de données dans ce groupe.</p>
+  <p>Des types tels que <span class="inline2">Id.DsList</span>, <span class="inline2">Asset.GMObject</span> et <span class="inline2">Constant.Color</span> utilisent des spécificateurs.</p>
+  <h3>Types de collections</h3>
+  <p>Les types tels que <span class="inline2">Array</span> et <span class="inline2">Id.DsList</span>, qui sont des structures de données contenant plusieurs valeurs, peuvent spécifier un seul type de données pour l'ensemble de leur contenu.</p>
+  <p>Pour ce faire, on utilise des types de collection, qui sont ajoutés au type à l'aide de crochets <span class="inline2">&lt;&gt;.</span></p>
+  <p>Par exemple, un tableau contenant des chaînes de caractères serait <span class="inline2">Array&lt;String&gt;</span>, et une liste DS, contenant un tableau, contenant des réels, serait <span class="inline2">Id.DsList&lt;Array&lt;Real&gt;&gt;.</span></p>
+  <h2>Validation du type</h2>
+  <p>Le tableau ci-dessous montre ce qui se passe si vous passez une valeur d'un certain type (lignes) dans un paramètre nécessitant un type de données (colonne).</p>
+  <p>Par exemple, le fait de spécifier <span class="inline2">undefined</span> (première ligne) pour un paramètre nécessitant une chaîne de caractères (deuxième colonne) entraîne une erreur.</p>
   <table>
     <colgroup>
       <col style="width: 124px;" />
@@ -145,122 +145,122 @@
     </colgroup>
     <tbody>
       <tr>
-        <th> </th>
-        <th>Undefined</th>
-        <th>String</th>
+        <th> </th>
+        <th>Indéfini</th>
+        <th>Chaîne de caractères</th>
         <th>Real</th>
         <th>Bool</th>
         <th>Array</th>
-        <th>Pointer</th>
-        <th>Function</th>
-        <th>Struct</th>
+        <th>Pointeur</th>
+        <th>Fonction</th>
+        <th>Structure</th>
       </tr>
       <tr>
-        <th>Undefined</th>
-        <td>Allowed</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
+        <th>Indéfini</th>
+        <td><span class="notranslate">Allowed</span></td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
       </tr>
       <tr>
-        <th>String</th>
-        <td style="background-color: #452F2F">Error</td>
-        <td>Allowed</td>
-        <td>Allowed</td>
-        <td>Allowed</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #605B32">Warning</td>
-        <td style="background-color: #605B32">Warning</td>
+        <th>Chaîne de caractères</th>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td><span class="notranslate">Allowed</span></td>
+        <td>Autorisé</td>
+        <td><span class="notranslate">Allowed</span></td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #605B32">Avertissement</td>
+        <td style="background-color: #605B32">Avertissement</td>
       </tr>
       <tr>
         <th>Real</th>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #605B32">Warning</td>
-        <td>Allowed</td>
-        <td>Allowed</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #605B32">Avertissement</td>
+        <td><span class="notranslate">Allowed</span></td>
+        <td>Autorisé</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
       </tr>
       <tr>
         <th>Bool</th>
-        <td style="background-color: #605B32">Warning</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td>Allowed</td>
-        <td>Allowed</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #605B32">Warning</td>
-        <td style="background-color: #605B32">Warning</td>
-        <td style="background-color: #605B32">Warning</td>
+        <td style="background-color: #605B32">Avertissement</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td><span class="notranslate">Allowed</span></td>
+        <td>Autorisé</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #605B32">Avertissement</td>
+        <td style="background-color: #605B32">Avertissement</td>
+        <td style="background-color: #605B32">Avertissement</td>
       </tr>
       <tr>
         <th>Array</th>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td>Allowed</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td><span class="notranslate">Allowed</span></td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
       </tr>
       <tr>
-        <th>Pointer</th>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td>Allowed</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
+        <th>Pointeur</th>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td><span class="notranslate">Allowed</span></td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
       </tr>
       <tr>
-        <th>Function</th>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td>Allowed</td>
-        <td style="background-color: #452F2F">Error</td>
+        <th>Fonction</th>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td><span class="notranslate">Allowed</span></td>
+        <td style="background-color: #452F2F">Erreur</td>
       </tr>
       <tr>
-        <th>Struct</th>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td style="background-color: #452F2F">Error</td>
-        <td>Allowed</td>
+        <th>Structure</th>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td style="background-color: #452F2F">Erreur</td>
+        <td><span class="notranslate">Allowed</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="seealso" data-type="seealso" style="">
-    <p class="seealso-caption" data-close-text="" data-expanded="true" data-open-text="See Also" data-type="seealso-caption" style="">See Also (placeholder)</p>
+    <p class="seealso-caption" data-close-text="" data-expanded="true" data-open-text="See Also" data-type="seealso-caption" style="">Voir aussi (placeholder)</p>
     <ol class="seealso-list" data-keywords="" data-type="seealso-list" style="">
-      <li><a class="seealso-list-item" href="#">Topic List</a></li>
+      <li><a class="seealso-list-item" href="#">Liste des sujets</a></li>
     </ol>
   </div>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Scripts.htm">The Script Editor</a></div>
-        <div style="float:right">Next: <a href="Feather_Directives.htm">Feather Directives</a></div>
+        <div style="float:left">Retour : <a href="../Scripts.htm">L'éditeur de script</a></div>
+        <div style="float:right">Suivant : <a href="Code_Snippets.htm">Extraits de code</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 JSDoc Script Comments

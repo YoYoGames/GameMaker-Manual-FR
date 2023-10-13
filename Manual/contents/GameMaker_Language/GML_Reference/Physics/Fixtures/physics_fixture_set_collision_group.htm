@@ -6,7 +6,7 @@
   <title>physics_fixture_set_collision_group</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_fixture_set_collision_group" />
   <meta name="rh-index-keywords" content="physics_fixture_set_collision_group" />
@@ -15,48 +15,48 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">physics_fixture_set_collision_group</span></h1>
-  <p>Once you have created your fixture you can define it as being part of a collision group. This means that you can tell instances with that fixture to <i>always</i> collide or <i>never</i> collide with other instance that have fixtures bound to them with the same collision group. The values that can be assigned are based on positive or negative numbers, with 0 being the default value (meaning that the instance with this fixture setting is ignored unless a collision event is created for it). Here is an image to help explain:</p>
-  <p><img alt="Collision groups example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_fixture_set_collision_group_image.png" />As you can see, setting collision groups can be very useful to create complex physical bodies that interact with the physical world around them, but not with each other. However, it should be noted that due to the complexity of calculating collisions based on groups like this, it is recommend that you try to keep the number of groups in use in any one room to an absolute minimum.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> The values for the collision group can range from -32,768 to 32,767 (both <strong>inclusive</strong>).</p>
-  <h4>Syntax:</h4>
+  <p>Une fois que vous avez créé votre dispositif, vous pouvez le définir comme faisant partie d'un groupe de collision. Cela signifie que vous pouvez dire aux instances avec ce fixture de <i>toujours</i> entrer en collision ou de <i>ne jamais</i> entrer en collision avec d'autres instances qui ont des fixtures liées à elles avec le même groupe de collision. Les valeurs qui peuvent être attribuées sont basées sur des nombres positifs ou négatifs, 0 étant la valeur par défaut (ce qui signifie que l'instance avec ce paramètre de fixation est ignorée, sauf si un événement de collision est créé pour elle). Voici une image pour vous aider à comprendre :</p>
+  <p><img>Comme vous pouvez le constater, la définition de groupes de collision peut être très utile pour créer des corps physiques complexes qui interagissent avec le monde physique qui les entoure, mais pas entre eux. Toutefois, il convient de noter qu'en raison de la complexité du calcul des collisions sur la base de groupes de ce type, il est recommandé d'essayer de limiter au maximum le nombre de groupes utilisés dans une même pièce.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> Les valeurs du groupe de collision peuvent aller de -32 768 à 32 767 (les deux <strong>inclus)</strong>.</p>
+  <h4>Syntaxe :</h4>
   <p class="code"><span data-field="title" data-format="default">physics_fixture_set_collision_group</span>(fixture, group);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>fixture</td>
-        <td><span data-keyref="Type_ID_PhyFixture"><a href="../../../../../GameMaker_Language/GML_Reference/Physics/Fixtures/physics_fixture_create.htm" target="_blank">Physics Fixture ID</a></span></td>
-        <td>The fixture that is to be bound</td>
+        <td><span class="notranslate">fixture</span></td>
+        <td><span data-keyref="Type_ID_PhyFixture"><a href="../../../../../GameMaker_Language/GML_Reference/Physics/Fixtures/physics_fixture_create.htm" target="_blank">ID du dispositif de physique</a></span></td>
+        <td><span class="notranslate">The fixture that is to be bound</span></td>
       </tr>
       <tr>
-        <td>group</td>
+        <td><span class="notranslate">group</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The group that this fixture is assigned to (either a positive value, 0, or a negative value)</td>
+        <td><span class="notranslate">The group that this fixture is assigned to (either a positive value, 0, or a negative value)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code"><span data-field="title" data-format="default">physics_fixture_set_collision_group</span>(fix_Wheel, -1);</p>
-  <p>The code above will set the fixture indexed in the variable &quot;fix_Wheel&quot; to be part of the group &quot;-1&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus fera en sorte que le dispositif indexé dans la variable &quot;fix_Wheel&quot; fasse partie du groupe &quot;-1&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Fixtures.htm">Fixtures</a></div>
-        <div style="float:right">Next: <a href="physics_fixture_delete.htm">physics_fixture_delete</a></div>
+        <div style="float:left">Retour : <a href="Fixtures.htm">Fixtures</a></div>
+        <div style="float:right">Suivant : <a href="physics_fixture_delete.htm"><span class="notranslate">physics_fixture_delete</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_fixture_set_collision_group

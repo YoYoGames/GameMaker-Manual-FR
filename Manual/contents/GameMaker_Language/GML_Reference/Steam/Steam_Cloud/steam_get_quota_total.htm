@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_get_quota_total</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_get_quota_total" />
+  <meta name="rh-index-keywords" content="steam_get_quota_total" />
+  <meta name="search-keywords" content="steam_get_quota_total" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_get_quota_total</h1>
+  <p>Lorsque vous utilisez le cloud <span class="notranslate">Steam</span> pour stocker et synchroniser des fichiers, vous devez définir le <i>quota</i> d'espace dont votre jeu aura besoin. Ce quota est appliqué à chaque jeu dans le nuage, par utilisateur et par jeu. Ainsi, par exemple, si le quota pour le jeu X est de 1 mégaoctet, chaque compte <span class="notranslate">Steam</span> qui possède le jeu X peut stocker, au maximum, 1 mégaoctet de données associées à ce jeu dans le nuage. Les données stockées par le jeu X n'affecteront pas les autres jeux compatibles avec le cloud que possède l'utilisateur (par exemple, le jeu Y). Le quota par défaut des nouveaux jeux Steamworks est d'un gigaoctet, mais vous pouvez le modifier à partir du panneau de configuration Steamworks de votre jeu.</p>
+  <p class="note"><b>NOTE</b>: Une fois le quota épuisé <b>, l'</b>écriture de fichiers <b>échouera</b>. Si vous pensez qu'il est possible que le quota soit épuisé pour l'utilisateur de votre jeu, vous devez créer un code pour le gérer, car en ne faisant rien, vous laissez les utilisateurs dans une situation où ils sont incapables de réparer les choses et cela conduira à une mauvaise expérience de votre jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_get_quota_total();</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if steam_is_cloud_enabled_for_app()<br />
+    {<br />
+        quota = steam_get_quota_total();<br />
+    }</p>
+  <p>Le code ci-dessus vérifie si le nuage <span class="notranslate">steam</span> est activé pour le jeu et si c'est le cas, il obtient la taille du quota de stockage et la stocke dans une variable.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_Cloud.htm">Nuage de vapeur</a></div>
+        <div style="float:right">Suivant : <a href="steam_get_quota_free.htm"><span class="notranslate">steam_get_quota_free</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_get_quota_total
+-->
+  <!-- TAGS
+steam_get_quota_total
+-->
+</body>
+</html>

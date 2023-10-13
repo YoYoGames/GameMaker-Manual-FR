@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Stacked Sprites</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Dessiner des sprites empilés</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Draw Stacked Sprites action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Draw Stacked Sprites" />
@@ -14,55 +14,59 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Draw Stacked Sprites Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Stacked_Sprites.png" /> Draw Stacked Sprites</h1>
-  <p>This action will draw a sprite a given number of sprites one after another at a given position within the room. You give the sprite to draw and the stack order, which can be either <b>Row</b> (horizontally, left to right), or <b>column</b> (vertically, top to bottom), as well as the number of sprites to draw and the position. The position can be an absolute position within the room, or one relative to the position of the instance doing the drawing, and the spacing between images will be based on the width or height of the sprite. Note that this simply draws a static image - the initial single image (frame 0) of the given sprite - and any further frames will be ignored, as will any transforms that have been added through changing the <a href="../Instance/Set_Instance_Variable.htm">instance variables</a> (like <span class="inline2"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_xscale.htm">image_xscale</a></span> or <span class="inline2"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_blend.htm">image_blend</a></span>).<b></b></p>
-  <div data-conref="../../../assets/snippets/Note_Action_Only_For_Draw_Events.hts"> </div>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Draw Stacked Sprites Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Stacked_Sprites.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Dessiner des sprites empilés</h1>
+  <p>Cette action va dessiner un <span class="notranslate">sprite</span> un nombre donné de <span class="notranslate">sprites</span> l'un après l'autre à une position donnée dans la pièce. Vous donnez le <span class="notranslate">sprite</span> à dessiner et l'ordre de la pile, qui peut être soit <b>en ligne</b> (horizontalement, de gauche à droite), soit en <b>colonne</b> (verticalement,
+    de haut en bas), ainsi que le nombre de <span class="notranslate">sprites</span> à dessiner et la position. La position peut être une position absolue dans la salle, ou relative à la position de l'instance effectuant le dessin, et l'espacement entre les images sera basé sur
+    la largeur ou la hauteur de <span class="notranslate">sprite</span>. Notez que cela dessine simplement une image statique - l'image unique initiale (frame 0) de <span class="notranslate">sprite</span> - et que toutes les autres images seront ignorées, tout comme les transformations ajoutées en modifiant les <a href="../Instance/Set_Instance_Variable.htm">variables d'instance</a> (comme <span class="inline">image_xscale</span> ou <span class="inline">image_blend</span>).</p>
+  <p class="note"><b></b><b>REMARQUE</b>: Cette action est uniquement destinée à être utilisée dans les différents <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">événements de tirage au sort</a>, et ne tirera rien si elle est utilisée ailleurs.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Draw Stacked Sprites Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Stacked_Sprites.png" /></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Sprite</td>
-        <td>The sprite to draw</td>
+        <td><span class="notranslate">Sprite</span></td>
+        <td>Le site <span class="notranslate">sprite</span> à dessiner</td>
       </tr>
       <tr>
-        <td>Stack Order</td>
-        <td>The order to draw in (either Row or Column)</td>
+        <td><span class="notranslate">Stack Order</span></td>
+        <td>L'ordre dans lequel il faut dessiner (soit en ligne, soit en colonne).</td>
       </tr>
       <tr>
-        <td>Number</td>
-        <td>The number of sprites to draw</td>
+        <td><span class="notranslate">Number</span></td>
+        <td>Le nombre de <span class="notranslate">sprites</span> à dessiner</td>
       </tr>
       <tr>
-        <td>x</td>
-        <td>The x position to draw at</td>
+        <td><span class="notranslate">x</span></td>
+        <td>La position x à dessiner</td>
       </tr>
       <tr>
-        <td>y</td>
-        <td>The y position to draw at</td>
+        <td><span class="notranslate">y</span></td>
+        <td>La position y à dessiner</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Draw Stacked Sprites Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Stacked_Sprites.png" />The above action block code gets the number of instances of the object &quot;obj_Player&quot; and then uses this to draw a number of marker sprites to the screen.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus obtient le nombre d'instances de l'objet &quot;obj_Player&quot;.
+    et l'utilise ensuite pour dessiner un certain nombre de marqueurs <span class="notranslate">sprites</span> à l'écran.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Rectangle.htm">Draw Rectangle</a></div>
+        <div style="float:left">Retour : <a href="Drawing_Actions.htm">Actions de dessin</a></div>
+        <div style="float:right">Suivant : <a href="Draw_Rectangle.htm">Dessiner un rectangle</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Draw Stacked Sprites

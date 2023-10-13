@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Réalisations et classements</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference section for all the Achievements And Leaderboard functions" />
+  <meta name="rh-index-keywords" content="" />
+  <meta name="search-keywords" content="Achievements And Leaderboards" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Réalisations et classements</h1>
+  <p>Les jeux destinés aux appareils qui utilisent <span class="notranslate">iOS</span> ou <span class="notranslate">Android</span> peuvent également se connecter à l'une des deux API de classement et d'accomplissement. Pour <span class="notranslate">iOS</span>, vous disposez de <b>iTunes Connect</b>, et pour <span class="notranslate">Android</span>, vous pouvez utiliser <b>Google Play</b>.
+    les deux utilisent les fonctions trouvées sur cette page. Ces fonctions permettent à votre jeu d'envoyer des informations sur les scores et les réalisations aux classements que vous avez configurés dans le compte de développeur pour le jeu que vous créez.
+    Il s'agit d'un excellent moyen d'impliquer les joueurs dans l'aspect social du jeu, car ils peuvent alors voir les résultats obtenus par d'autres personnes ayant joué à votre jeu et essayer de les améliorer.</p>
+  <p>Lorsque vous utilisez ces fonctions, vous devez noter qu'elles <i>ne</i> suivent <i>pas</i> les réalisations et les scores automatiquement pour vous. Elles n'affichent que les données que vous leur envoyez à partir de votre jeu, vous devez donc coder vos propres réalisations et votre propre système de score pour suivre le statut des individus dans le jeu, puis utiliser ces fonctions pour ajouter les données.
+    Vous devez donc coder votre propre système de réussite et de score pour suivre l'état des individus dans le jeu, puis utiliser ces fonctions pour ajouter les données au réseau choisi (vous <i>pouvez</i> toutefois demander des informations sur la progression des réalisations à l'aide de la fonction     <a href="achievement_load_progress.htm"><tt>achievement_load_progress()</tt></a> ).</p>
+  <p>Certaines de ces fonctions déclencheront un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">événement social asynchrone</a>(callback), qui contiendra une <tt>carte DS Map</tt> de données relatives à la fonction qui l'a déclenchée.
+    à la fonction qui l'a déclenché. Ces fonctions qui déclenchent l'événement détaillent également les paires clé/valeur de la carte qui sont renvoyées par le callback, mais un <b>événement social de</b> callback peut également être déclenché par votre jeu en recevant
+    notifications externes concernant des défis, etc... </p>
+  <p class="note"><b>REMARQUE</b>: pour que ces fonctions fonctionnent avec <span class="notranslate">iOS</span>, vous devez avoir un compte Game Center valide et un <b>identifiant d'application</b> <span class="notranslate">iOS</span> pour votre jeu.</p>
+  <p class="note"><b>REMARQUE</b>: pour que ces fonctions fonctionnent avec <span class="notranslate">Android</span>, vous devez soumettre votre jeu à Google Play, configurer les sections nécessaires et activer l'API dans les <a href="../../../../Settings/Game_Options/Android.htm">options de jeu Android</a> pour votre jeu.
+    votre jeu.</p>
+  <p>Les fonctions énumérées ci-dessous sont les fonctions de base utilisées pour intégrer votre jeu à la plateforme de jeux sociaux cible choisie :</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="achievement_login_status.htm"><span class="notranslate">achievement_login_status</span></a></li>
+    <li><a href="achievement_login.htm"><span class="notranslate">achievement_login</span></a></li>
+    <li><a href="achievement_logout.htm"><span class="notranslate">achievement_logout</span></a></li>
+    <li><a href="achievement_available.htm"><span class="notranslate">achievement_available</span></a></li>
+    <li><a href="achievement_post.htm"><span class="notranslate">achievement_post</span></a></li>
+    <li><a href="achievement_post_score.htm"><span class="notranslate">achievement_post_score</span></a></li>
+    <li><a href="achievement_increment.htm"><span class="notranslate">achievement_increment</span></a></li>
+    <li><a href="achievement_show_achievements.htm"><span class="notranslate">achievement_show_achievements</span></a></li>
+    <li><a href="achievement_show_leaderboards.htm"><span class="notranslate">achievement_show_leaderboards</span></a></li>
+    <li><a href="achievement_show_challenge_notifications.htm"><span class="notranslate">achievement_show_challenge_notifications</span></a></li>
+    <li><a href="achievement_get_challenges.htm"><span class="notranslate">achievement_get_challenges</span></a></li>
+    <li><a href="achievement_get_pic.htm"><span class="notranslate">achievement_get_pic</span></a></li>
+    <li><a href="achievement_load_friends.htm"><span class="notranslate">achievement_load_friends</span></a></li>
+    <li><a href="achievement_load_leaderboard.htm"><span class="notranslate">achievement_load_leaderboard</span></a></li>
+    <li><a href="achievement_load_progress.htm"><span class="notranslate">achievement_load_progress</span></a></li>
+    <li><a href="achievement_send_challenge.htm"><span class="notranslate">achievement_send_challenge</span></a></li>
+    <li><a href="achievement_reset.htm"><span class="notranslate">achievement_reset</span></a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Asynchronous_Functions.htm">Fonctions asynchrones</a></div>
+        <div style="float:right">Suivant : <a href="../HTTP/HTTP.htm">HTTP</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Achievements And Leaderboards
+-->
+  <!-- TAGS
+achievement_leaderboard_functions
+-->
+</body>
+</html>

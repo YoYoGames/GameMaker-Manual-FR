@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sequence_exists</title>
+  <title>séquence_existe</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining function sequence_exists" />
   <meta name="rh-index-keywords" content="sequence_exists" />
@@ -15,46 +15,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sequence_exists</h1>
-  <p>With this function you can check to see if a sequence object exists or not. You supply either the sequence object struct (as returned by the function <a href="sequence_create.htm"><span class="inline">sequence_create()</span></a> or <a href="sequence_get.htm"><span class="inline">sequence_get()</span></a>) or the sequence ID (as returned by the function <a href="../Rooms/Sequence_Layers/layer_sequence_get_sequence.htm"><span class="inline">layer_sequence_get_sequence()</span></a> or from the sequence instance struct property <span class="inline">sequence</span>, or the index from the asset browser) and the function will return <span class="inline">true</span> if the sequence object exists or <span class="inline">false</span> if it does not.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>séquence_existe</h1>
+  <p>Avec cette fonction, vous pouvez vérifier si un objet séquence existe ou non. Vous fournissez soit l'objet de séquence <span class="notranslate">struct</span> (tel que retourné par la fonction <a href="sequence_create.htm"><span class="inline">sequence_create()</span></a> ou <a href="sequence_get.htm"><span class="inline">sequence_get()</span></a>) ou l'ID de la séquence (tel que renvoyé par la fonction <a href="../Rooms/Sequence_Layers/layer_sequence_get_sequence.htm"><span class="inline">layer_sequence_get_sequence()</span></a> ou de la propriété <span class="inline">sequence</span> de l'instance de séquence <span class="notranslate">struct</span>, ou de l'index du navigateur d'actifs) et la fonction renverra <span class="inline">true</span> si l'objet de séquence existe ou <span class="inline">false</span> s'il n'existe pas.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">sequence_exists(sequence_struct_or_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>sequence_struct_or_id</td>
-        <td><span data-keyref="Type_Asset_Sequence">Sequence Asset</span> or <span data-keyref="Type_Struct_Sequence_Object">Sequence Object Struct</span></td>
-        <td>The sequence to check for, can be the asset reference itself or its Sequence object struct.</td>
+        <td><span class="notranslate">sequence_struct_or_id</span></td>
+        <td><span data-keyref="Type_Asset_Sequence">Séquence Asset</span> ou <span data-keyref="Type_Struct_Sequence_Object">Séquence Object Struct</span></td>
+        <td><span class="notranslate">The sequence to check for, can be the asset reference itself or its Sequence object struct.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if sequence_exists(my_seq)<br />
     {<br />
         sequence_destroy(my_seq);<br />
     }</p>
-  <p>The above code checks to see if the given sequence object exists and if it does it is destroyed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifie si l'objet séquence donné existe et si c'est le cas, il est détruit.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="sequence_create.htm">sequence_create</a></div>
+        <div style="float:left">Retour : <a href="Sequences.htm">Séquences</a></div>
+        <div style="float:right">Suivant : <a href="sequence_create.htm"><span class="notranslate">sequence_create</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sequence_exists

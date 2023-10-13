@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_sequence_headpos</title>
+  <title>couche_séquence_headpos</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_sequence_headpos" />
   <meta name="rh-index-keywords" content="layer_sequence_headpos" />
@@ -14,41 +14,41 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_sequence_headpos</h1>
-  <p>With this function you can set the <a class="glossterm" data-glossterm="playhead" href="#">playhead</a> position of a sequence element to a specific frame. You supply the sequence element ID as returned by <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> or by one of the <a href="../General_Layer_Functions/General_Layer_Functions.htm">layer element functions</a> along with the new position to set. Note that the position is in <i>frames</i> and if you set a value greater than the total number of frames (or less than 0) then the actual final playhead position will depend on the type of sequence playback that has been selected, following these rules:</p>
+  <h1>couche_séquence_headpos</h1>
+  <p>Cette fonction permet de définir la position de la <a class="glossterm" data-glossterm="tête de lecture" href="#">tête de lecture</a> d'un élément de séquence sur une image spécifique. Vous fournissez l'ID de l'élément de séquence tel que renvoyé par <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> ou par l'une des <a href="../General_Layer_Functions/General_Layer_Functions.htm">fonctions de l'élément de couche</a>, ainsi que la nouvelle position à définir. Notez que la position est exprimée en <i>images</i> et que si vous définissez une valeur supérieure au nombre total d'images (ou inférieure à 0), la position finale réelle de la tête de lecture dépendra du type de lecture de la séquence qui a été sélectionné, conformément aux règles suivantes :</p>
   <ul class="colour">
-    <li><strong>No looping</strong>: The playhead will clamp to the end of the loop (or the beginning if the value given is negative)</li>
-    <li><strong>Looping</strong>: The playhead will wrap back to the beginning of the sequence plus the extra frames, eg: if you set the playhead on a 30 frame sequence to a position of frame 45, the actual playhead position will end up being 15. If you give a negative value, then the sequence playhead will wrap in the reverse direction.</li>
-    <li><strong>Ping-pong looping</strong>: The playhead will advance to the end and then go back the extra number of frames that are over the total frame length, reversing the direction of playback, eg: If the sequence is 30 frames and you set the playhead to 40, the final playhead position will be 20 and the direction will be reversed (going down to 0). Note that you should <i>never</i> give a negative value for ping-pong playback of a sequence, as it may have undefined results.</li>
+    <li><strong>Pas de bouclage</strong>: La tête de lecture se fixe à la fin de la boucle (ou au début si la valeur donnée est négative).</li>
+    <li><strong>Bouclage</strong>: La tête de lecture reviendra au début de la séquence plus les images supplémentaires. Par exemple, si vous réglez la tête de lecture d'une séquence de 30 images à la position de l'image 45, la position réelle de la tête de lecture sera de 15. Si vous donnez une valeur négative, la tête de lecture de la séquence se déplacera dans le sens inverse.</li>
+    <li><strong>Bouclage ping-pong</strong>: La tête de lecture avance jusqu'à la fin puis revient en arrière du nombre d'images supplémentaires qui dépassent la longueur totale de l'image, en inversant le sens de lecture, par exemple : Si la séquence compte 30 images et que vous réglez la tête de lecture sur 40, la position finale de la tête de lecture sera de 20 et le sens de lecture sera inversé (descendant jusqu'à 0). Notez que vous <i>ne</i> devez <i>jamais</i> donner une valeur négative pour la lecture ping-pong d'une séquence, car cela peut avoir des résultats indéfinis.</li>
   </ul>
-  <p>Setting the head position in this way will not stop playback and the sequence will simply continue from the new playhead position unless it is paused.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Le fait de régler la position de la tête de cette manière n'arrêtera pas la lecture et la séquence continuera simplement à partir de la nouvelle position de la tête de lecture, sauf si elle est mise en pause.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">layer_sequence_headpos(sequence_element_id, position)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>sequence_element_id</td>
-        <td><span data-keyref="Type_ID_Element_Sequence">Sequence Element ID</span></td>
-        <td>The unique ID value of the sequence element to target</td>
+        <td><span class="notranslate">sequence_element_id</span></td>
+        <td><span data-keyref="Type_ID_Element_Sequence">ID de l'élément de séquence</span></td>
+        <td><span class="notranslate">The unique ID value of the sequence element to target</span></td>
       </tr>
       <tr>
-        <td>position</td>
+        <td><span class="notranslate">position</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The position within the sequence (in frames) to set the playhead position to (can be a decimal value)</td>
+        <td><span class="notranslate">The position within the sequence (in frames) to set the playhead position to (can be a decimal value)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var a = layer_get_all_elements(layer);<br />
     for (var i = 0; i &lt; array_length(a); i++;)<br />
     {<br />
@@ -57,18 +57,18 @@
             layer_sequence_headpos(a[i], 0)<br />
         }<br />
     }</p>
-  <p>The above code gets the IDs for all the elements assigned to the layer of the instance running the code. The code then checks to see if any of the returned elements are sequence assets and if they then their playhead position is set to 0.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus récupère les ID de tous les éléments affectés à la couche de l'instance qui exécute le code. Le code vérifie ensuite si l'un des éléments renvoyés est une ressource de séquence et, si c'est le cas, la position du lecteur est fixée à 0.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sequence_Layers.htm">Sequence Layers</a></div>
-        <div style="float:right">Next: <a href="layer_sequence_headdir.htm">layer_sequence_headdir</a></div>
+        <div style="float:left">Retour : <a href="Sequence_Layers.htm">Couches de séquences</a></div>
+        <div style="float:right">Suivant : <a href="layer_sequence_headdir.htm"><span class="notranslate">layer_sequence_headdir</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sequence_headpos

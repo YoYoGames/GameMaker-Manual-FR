@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>affichage des tableaux de bord des réalisations</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_show_leaderboards" />
+  <meta name="rh-index-keywords" content="achievement_show_leaderboards" />
+  <meta name="search-keywords" content="achievement_show_leaderboards" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>affichage des tableaux de bord des réalisations</h1>
+  <p>Cette fonction ouvre la page des classements pour la plate-forme choisie. Veuillez noter qu'il s'agit d'une <i>fonction asynchrone</i>, c'est-à-dire que votre jeu continuera à fonctionner en arrière-plan pendant que la page des classements s'affiche. En tant que tel, vous devez être
+    Vous devez donc faire attention à l'endroit où vous utilisez cette fonction et vous assurer de mettre le jeu en pause ou de ne l'autoriser à s'afficher que dans les zones de votre jeu où elle n'interfère pas avec le déroulement du jeu.</p>
+  <p> </p>
+  <h4><b>Syntaxe :</b></h4>
+  <p class="code">achievement_show_leaderboards()</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if achievement_available()<br/>     {
+    <br/>     global.Pause = true;<br/>     instance_create_layer(0, 0, &quot;Controllers&quot;, obj_Pause);<br/>     achievement_show_leaderboards();
+    <br/>     }
+  </p>
+  <p>Le code ci-dessus vérifie si le service de classement et de réussite choisi est disponible et, si c'est le cas, il définit une variable globale et crée une instance de contrôleur &quot;pause&quot; avant d'appeler la fonction pour afficher les classements à l'écran.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Achievements_And_Leaderboards.htm">Réalisations et classements</a></div>
+        <div style="float:right">Suivant : <a href="achievement_show_challenge_notifications.htm"><span class="notranslate">achievement_show_challenge_notifications</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_show_leaderboards
+-->
+  <!-- TAGS
+achievement_show_leaderboards
+-->
+</body>
+</html>

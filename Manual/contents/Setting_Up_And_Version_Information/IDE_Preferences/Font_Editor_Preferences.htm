@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Font Editor Preferences</title>
-  <meta name="generator" content="Adobe RoboHelp 2020"/>
-  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="The Font Editor Preferences"/>
-  <meta name="rh-index-keywords" content="Prefs - Fonts"/>
-  <meta name="search-keywords" content="Font Prefs,Font Editor Preferences"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Préférences de l'éditeur de polices</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+  <script src="../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="The Font Editor Preferences" />
+  <meta name="rh-index-keywords" content="Prefs - Fonts" />
+  <meta name="search-keywords" content="Font Prefs,Font Editor Preferences" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Font Editor Preferences</h1>
-  <p><img alt="Font Editor Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/FontEditor_Prefs.png" style="cursor: nesw-resize;"/>The <strong>Font Editor Preferences</strong> are used to define how the <a href="../../The_Asset_Editors/Fonts.htm">Font Editor</a> behaves.
-    The different options available are listed below along with a description of what each one does.</p>
+  <h1>Préférences de l'éditeur de polices</h1>
+  <p><img>Les <strong>préférences de l'éditeur de polices</strong> sont utilisées pour définir le comportement de l'<a href="../../The_Asset_Editors/Fonts.htm">éditeur de polices</a>.
+    Les différentes options disponibles sont listées ci-dessous avec une description de ce que fait chacune d'entre elles.</p>
   <ul class="colour">
-    <li><strong>Update Fonts imported from <span data-keyref="GameMaker Name">GameMaker</span> 1 projects</strong>: When this is checked, <span data-keyref="GameMaker Name">GameMaker</span> will attempt to update fonts and regenerate their texture. This will happen only if:
+    <li><strong>Mettre à jour les polices importées de projets <span data-keyref="GameMaker Name">GameMaker</span></strong> 1 : Lorsque cette case est cochée, <span data-keyref="GameMaker Name">GameMaker</span> tentera de mettre à jour les polices et de régénérer leur texture. Cela ne se produira que si :
       <ul class="Disc">
-        <li>This preference is enabled</li>
-        <li>The font is available on the machine</li>
-        <li><span data-keyref="GameMaker Name">GameMaker</span> can locate a matching face in the font family (this is the most likely cause of inconsistency on import)</li>
+        <li>Cette préférence est activée</li>
+        <li>La police est disponible sur la machine</li>
+        <li><span data-keyref="GameMaker Name">GameMaker</span> peut localiser une face correspondante dans la famille de polices (c'est la cause la plus probable d'incohérence à l'importation).</li>
       </ul>
-      Note that it will also happen if the <span data-keyref="GameMaker Name">GameMaker</span> 1 font does not have a <a class="glossterm" data-glossterm="Cache" href="#">cached</a> font texture. If a legacy font cannot be updated, then <span data-keyref="GameMaker Name">GameMaker</span> will default to using the cached
-      font texture, and the Font Editor will no longer permit you to edit the font, showing an option to backup and update to another:<br/>
-      <br/>
-      <img alt="Font Editor Backup And Upgrade" class="center" src="../../assets/Images/Setup_And_Version/Preferences/FontEditor_Backup.png"/>Clicking this will enable you to edit the font, either adding the missing font or setting another one, and the
-      backed up font is stored in the font asset folder, as <span class="inline">&lt;font name&gt;.yy.gms1</span> and <span class="inline">&lt;font name&gt;.png.gms1</span>. To restore these files, manually delete the <span class="inline">&lt;font name&gt;.yy</span>      files and replace them with these by removing the <span class="inline">.gms1</span> extension from the filenames. <em> <strong>Important!</strong></em> All assets store their names in the <span class="inline">.yy</span> file, so you must edit these
-      and put the right name of the resource in the <span class="inline">&lt;name&gt;</span> field as well (if different).</li>
-    <li><strong>Automatic choice for failed content regeneration dialog</strong>: When you go to regenerate a font asset texture, you are shown a warning. Setting this option to &quot;OK&quot; will mean that the font is regenerated without the warning being
-      shown.</li>
-    <li><strong>Automatic choice for failed font regeneration dialog</strong>: When regeneration of a font asset texture fails, you are shown a warning. Setting this option to &quot;OK&quot; will skip showing the message.</li>
-    <li><strong>Automatic choice for upgrading imported legacy fonts</strong>: When you import a legacy project, you may get a warning about legacy fonts and the offer to upgrade. Setting this option to &quot;OK&quot; will okay the update automatically without
-      showing this message.</li>
+      Notez que cela se produira également si la police <span data-keyref="GameMaker Name">GameMaker</span> 1 ne dispose pas d'une texture de police <a class="glossterm" data-glossterm="Cache" href="#">mise en cache</a>. Si une police héritée ne peut pas être mise à jour, <span data-keyref="GameMaker Name">GameMaker</span> utilisera par défaut la texture de la police mise en cache.
+      et l'éditeur de police ne vous permettra plus d'éditer la police, affichant une option de sauvegarde et de mise à jour vers une autre :<br>
+      <br>
+      <img>En cliquant sur cette option, vous pourrez modifier la police, soit en ajoutant la police manquante, soit en en définissant une autre.
+      police sauvegardée est stockée dans le dossier des actifs de la police, comme <span class="inline">&lt;font name&gt;.yy.gms1</span> et <span class="inline">&lt;font name&gt;.png.gms1</span>. Pour restaurer ces fichiers, supprimez manuellement les fichiers <span class="inline">&lt;font name&gt;.yy</span> et remplacez-les par ceux-ci en retirant l'extension <span class="inline">.gms1</span> des noms de fichiers. <em> <strong>Important !</strong></em> Toutes les ressources stockent leurs noms dans le fichier <span class="inline">.yy</span>, vous devez donc les modifier et mettre le bon nom de la ressource.
+      et mettre le bon nom de la ressource dans le champ <span class="inline">&lt;name&gt;</span> également (si différent).</li>
+    <li><strong>Choix automatique pour la boîte de dialogue de régénération du contenu ayant échoué</strong>: Lorsque vous voulez régénérer une texture de police, un avertissement s'affiche. Si vous réglez cette option sur &quot;OK&quot;, la police sera régénérée sans que l'avertissement soit affiché.
+      l'avertissement.</li>
+    <li><strong>Choix automatique de la boîte de dialogue en cas d'échec de la régénération des polices</strong>: Lorsque la régénération d'une texture de police échoue, un message d'avertissement s'affiche. Si vous réglez cette option sur &quot;OK&quot;, le message ne sera pas affiché.</li>
+    <li><strong>Choix automatique de la mise à niveau des polices héritées importées</strong>: Lorsque vous importez un projet patrimonial, vous pouvez recevoir un avertissement concernant les polices patrimoniales et l'offre de mise à niveau. Si vous réglez cette option sur &quot;OK&quot;, la mise à jour se fera automatiquement sans afficher ce message.
+      sans afficher ce message.</li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../IDE_Preferences.htm">IDE Preferences</a></div>
-        <div style="float:right">Next: <a href="Room_Editor_Preferences.htm">Room Editor Preferences</a></div>
+        <div style="float:left">Retour : <a href="../IDE_Preferences.htm">Préférences de l'IDE</a></div>
+        <div style="float:right">Suivant : <a href="Room_Editor_Preferences.htm">Préférences de l'éditeur de pièce</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Preferences - Font Editor

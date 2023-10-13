@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Seek Buffer</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Tampon de recherche</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Seek Buffer action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Seek Buffer" />
@@ -14,42 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Seek Buffer Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Seek_Buffer.png" width="32" /> Seek Buffer</h1>
-  <p>This action can be used to move (seek) to a position within a buffer. You supply the unique buffer ID value as returned by the action <a href="Create_Buffer.htm">Create Buffer</a> and then the offset value in bytes to move to. The offset value will be applied from the <i>start</i> of the buffer, so calling this function will move the read/write position to the start of the buffer then move the number of bytes given along and position the new read/write position there. However, if you flag the offset as relative, it will move the read/write position forward (or backwards if the offset is a negative value) from the current position.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Seek Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_Seek_Buffer.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Tampon de recherche</h1>
+  <p>Cette action peut être utilisée pour se déplacer (rechercher) vers une position à l'intérieur d'un <span class="notranslate">buffer</span>. Vous fournissez la valeur d'identification unique de <span class="notranslate">buffer</span> telle que retournée par l'action <a href="Create_Buffer.htm">Create Buffer</a> et ensuite la valeur de décalage en octets vers laquelle vous souhaitez vous déplacer. La valeur de décalage sera
+    La valeur de décalage sera appliquée à partir du <i>début</i> du <span class="notranslate">buffer</span>, donc l'appel de cette fonction déplacera la position de lecture/écriture au début du <span class="notranslate">buffer</span> puis déplacera le nombre d'octets donné et positionnera la nouvelle position de lecture/écriture à cet endroit. Cependant, si vous marquez
+    le décalage comme relatif, la position de lecture/écriture sera déplacée vers l'avant (ou vers l'arrière si le décalage est une valeur négative) à partir de la position actuelle.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Seek Buffer Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Seek_Buffer.png" width="32" /></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Buffer</td>
-        <td>The buffer index (stored in a variable)</td>
+        <td><span class="notranslate">Buffer</span></td>
+        <td>L'indice <span class="notranslate">buffer</span> (stocké dans une variable)</td>
       </tr>
       <tr>
-        <td>offset</td>
-        <td>The offset (in bytes) relative to the current seek position</td>
+        <td><span class="notranslate">offset</span></td>
+        <td>Le décalage (en octets) par rapport à la position de recherche actuelle.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Seek Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_Seek_Buffer.png" />The above action block code gets the size of the buffer and then uses that value to set the read/write position to the end of the currently stored data.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus obtient la taille du site <span class="notranslate">buffer</span> et utilise ensuite cette valeur pour définir la position de lecture/écriture à la fin des données actuellement stockées.
+    à la fin des données actuellement stockées.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffer_Actions.htm">Buffer Actions</a></div>
-        <div style="float:right">Next: <a href="Get_Buffer_Size.htm">Get Buffer Size</a></div>
+        <div style="float:left">Retour : <a href="Buffer_Actions.htm">Actions tampon</a></div>
+        <div style="float:right">Suivant : <a href="Get_Buffer_Size.htm">Obtenir la taille de <span class="notranslate">Buffer</span> </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Seek Buffer

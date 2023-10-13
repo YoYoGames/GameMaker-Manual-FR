@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The File System</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Le système de fichiers</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains how the GMS file system works for compiled games" />
   <meta name="rh-index-keywords" content="The File System" />
@@ -14,54 +14,68 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">The File System</span></h1>
-  <p>When using the <a href="../GameMaker_Language/GML_Reference/File_Handling/File_Handling.htm">file system functions</a> or <a href="../Settings/Included_Files.htm">included files</a> with <span data-keyref="GameMaker Name">GameMaker</span> it is vitally important to know exactly how the file system works and what things are going on behind the scenes. To that end, this section is designed to explain and clarify exactly <em>how</em> things are stored, <em>where</em> they are stored and what possible limits or workarounds there may be to this system.</p>
-  <p>The first and most important thing to note about the file functions is that they are limited - in general and by default - to the <strong>sandbox</strong>. What this means is that <span data-keyref="GameMaker Name">GameMaker</span> <strong>cannot save or load files from anywhere that is not part of the game bundle or the local storage for the device</strong> without <em>explicit </em>input from the user, and even then this input is limited to only Windows, macOS and Ubuntu (Linux) target platforms.</p>
-  <p class="note"><span data-conref="../assets/snippets/Tag_important.hts"> </span> It is possible to turn off the sandboxing, however, on the Desktop targets (Windows, macOS, and Ubuntu (Linux)) by checking the <strong>Disable file system sandbox</strong> option in the <a href="../Settings/Game_Options.htm">Game Options</a> for the target platform. You do this at your own risk, and while this will open up file saving and loading and permit you to access files anywhere on the given system, it may still be limited by the OS permissions, and you will not be able to write to the <a href="../GameMaker_Language/GML_Reference/File_Handling/File_Directories/program_directory.htm"><span style="font-size:1px;"><span class="inline" style="font-size: 14px">program_directory</span></span></a> folder.</p>
-  <p>To understand the sandbox first of all you need to understand that there are two distinct areas for files:</p>
+  <h1>Le système de fichiers</h1>
+  <p>Lorsque vous utilisez les <a href="../GameMaker_Language/GML_Reference/File_Handling/File_Handling.htm">fonctions du système de fichiers</a> ou les <a href="../Settings/Included_Files.htm">fichiers inclus dans</a> <span data-keyref="GameMaker Name">GameMaker</span>, il est essentiel de savoir exactement comment fonctionne le système de fichiers et ce qui se passe en coulisses.
+    le système de fichiers fonctionne et ce qui se passe en coulisse. A cette fin, cette section est conçue pour expliquer et clarifier la <em>façon dont</em> les choses sont stockées, <em>où</em> elles sont stockées et quelles sont les limites ou les solutions de contournement possibles de ce système.
+    ce système.</p>
+  <p>La première et la plus importante chose à noter à propos des fonctions de fichiers est qu'elles sont limitées - en général et par défaut - au <strong>bac à sable</strong>. Cela signifie que <span data-keyref="GameMaker Name">GameMaker</span> <strong>ne peut pas sauvegarder ou charger des fichiers à partir d'un endroit qui ne fait pas partie du paquet de jeu ou du stockage local de l'appareil</strong> sans l'intervention <em>explicite </em>de l'utilisateur, et même dans ce cas, cette intervention est limitée aux plateformes cibles <span class="notranslate">Windows</span>, <span class="notranslate">macOS</span> et <span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>).</p>
+  <p class="note"><strong>IMPORTANT !</strong> Il est toutefois possible de désactiver le sandboxing sur les cibles du bureau (<span class="notranslate">Windows</span>, <span class="notranslate">macOS</span>, et <span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>)) en cochant l'option <strong>Disable file system sandboxing</strong> dans les <a href="../Settings/Game_Options.htm">Game Options de</a> la plate-forme cible. Vous le faites à vos risques et périls, et bien que cela ouvre l'enregistrement et le chargement de fichiers et vous permette de <span class="notranslate">access</span> fichiers n'importe où sur le système donné, il peut encore être limité par les permissions du système d'exploitation, et vous ne pourrez pas écrire
+    dans le <a href="../GameMaker_Language/GML_Reference/File_Handling/File_Directories/program_directory.htm"><span style="font-size:1px;"><span class="inline" style="font-size: 14px">répertoire des programmes</span></span></a> dossier.</p>
+  <p>Pour comprendre le site <span class="notranslate">sandbox</span>, vous devez tout d'abord comprendre qu'il existe deux zones distinctes pour les fichiers :</p>
   <ul class="colour">
-    <li><strong>The File Bundle</strong> - this is where all the files that are packaged with the executable game are stored, including the files that you have added to the <strong>Included Files</strong> asset list from the <span data-keyref="GameMaker Name">GameMaker</span> IDE (which are the external files that you want packaged with the game).</li>
-    <li><strong>The Save Area</strong> - this is an area of device storage that can be safely written to by the game and the game is guaranteed that this is a writable area.</li>
+    <li><strong>Le lot de fichiers</strong>: il s'agit de l'endroit où sont stockés tous les fichiers emballés avec le jeu exécutable, y compris les fichiers que vous avez ajoutés à la liste d'actifs <strong>Fichiers inclus dans</strong> <span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> (il s'agit des fichiers externes que vous souhaitez emballer avec le jeu).
+      sont les fichiers externes que vous souhaitez inclure dans le jeu).</li>
+    <li><strong>La zone de sauvegarde</strong> - il s'agit d'une zone de stockage du dispositif dans laquelle le jeu peut écrire en toute sécurité et le jeu a la garantie qu'il s'agit d'une zone accessible en écriture.</li>
   </ul>
-  <p>The following diagram may help you to visualise this better:</p>
+  <p>Le schéma suivant peut vous aider à mieux visualiser cela :</p>
   <p><img alt="File System Save Areas" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Files_SaveAreas.png" /></p>
-  <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> You can never write to the File Bundle (program) directory.</p>
-  <p>When your game is sandboxed, the two target areas - the bundle directory and the local storage area - are available on each target platform, but on each one they will work slightly differently. However <span data-keyref="GameMaker Name">GameMaker</span> has abstracted out the main essence of what can and can&#39;t be done, making it easier to re-target games to multiple environments.</p>
-  <p>To start with, you should understand what is meant when we talk of the <a href="../GameMaker_Language/GML_Reference/File_Handling/File_Directories/working_directory.htm"><span class="inline">working_directory</span></a>. This is a synonym for the two possible save locations (as illustrated by the diagram above) and when you use that directory it will do one of two things depending on whether you are reading or writing, and whether the file you are reading from has been changed or not:</p>
+  <p class="note"><strong>REMARQUE</strong>: Vous ne pouvez jamais écrire dans le répertoire du groupe de fichiers (programme).</p>
+  <p>Lorsque votre jeu est mis en sandbox, les deux zones cibles - le répertoire bundle et la zone de stockage locale - sont disponibles sur chaque plate-forme cible, mais sur chacune d'elles, elles fonctionneront légèrement différemment. Cependant, <span data-keyref="GameMaker Name">GameMaker</span> a fait abstraction de l'essentiel de ce qui peut et ne peut pas être fait.
+    l'essence de ce qui peut et ne peut pas être fait, ce qui facilite le reciblage des jeux sur plusieurs environnements.</p>
+  <p>Pour commencer, il faut comprendre ce que l'on entend quand on parle de la <a href="../GameMaker_Language/GML_Reference/File_Handling/File_Directories/working_directory.htm"><span class="inline">working_directory</span></a>. Il s'agit d'un synonyme pour les deux
+    emplacements de sauvegarde possibles (comme illustré par le diagramme ci-dessus) et lorsque vous utilisez ce répertoire, il fera l'une des deux choses suivantes, selon que vous êtes en train de lire ou d'écrire, et selon que le fichier que vous lisez a été modifié ou non :</p>
   <ul class="colour">
-    <li><strong>Reading Operations</strong> - working_directory will first check the save area to see if the file being accessed is there, and if it is uses that. However if the file does not exists in the save area, it then checks the file bundle area and uses that (if the file being looked for is an included file with your game).</li>
-    <li><strong>Writing Operations</strong> - This can only happen in the save area.</li>
+    <li><strong>Opérations de lecture</strong> - working_directory vérifie d'abord la zone de sauvegarde pour voir si le fichier auquel on accède s'y trouve, et si c'est le cas, il l'utilise. Cependant, si le fichier n'existe pas dans la zone de sauvegarde, il vérifie alors la zone de regroupement des fichiers et l'utilise (si le fichier recherché est un fichier inclus dans votre jeu).
+      et l'utilise (si le fichier recherché est un fichier inclus dans votre jeu).</li>
+    <li><strong>Opérations d'écriture</strong> - Cela ne peut se produire que dans la zone de sauvegarde.</li>
   </ul>
-  <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> in general <span data-keyref="GameMaker Name">GameMaker</span> will handle all this for you and you <strong>rarely </strong>need to use the <span class="inline" style="font-size: 14px">working_directory</span> built in variable.</p>
-  <p>Using these two simple rules we can now see how the following functions work (these are examples to help you to visualise the process for the different functions available):</p>
+  <p class="note"><strong>REMARQUE</strong>: en général, <span data-keyref="GameMaker Name">GameMaker</span> se charge de tout cela pour vous et vous avez <strong>rarement </strong>besoin d'utiliser la variable intégrée <span class="inline" style="font-size: 14px">working_directory</span>.</p>
+  <p>En utilisant ces deux règles simples, nous pouvons maintenant voir comment fonctionnent les fonctions suivantes (il s'agit d'exemples pour vous aider à visualiser le processus pour les différentes fonctions disponibles) :</p>
   <ul class="colour">
-    <li><a href="../GameMaker_Language/GML_Reference/File_Handling/File_Directories/directory_create.htm"><span class="inline">directory_create()</span></a> (and the other directory functions) will only work in the <strong>save </strong>area.</li>
-    <li>the <a href="../GameMaker_Language/GML_Reference/File_Handling/File_System/File_System.htm">file system functions</a> will return information on files from <em>both </em>the <strong>bundle </strong>and the <strong>save </strong>area, but will only <em>write </em>to the <strong>save </strong>area.</li>
-    <li>the functions for writing text, binary or <span class="inline">INI</span> files will create a new file in the save area if one does not already exist, copying over any information from the original files included with the game bundle should they exist. Note that the original files will still remain in the read-only part of the save directory, but they won&#39;t be referenced as long as a version exists in the read/write section of the save area.</li>
+    <li><a href="../GameMaker_Language/GML_Reference/File_Handling/File_Directories/directory_create.htm"><span class="inline">directory_create()</span></a> (et les autres fonctions du répertoire) ne fonctionneront que dans la zone de <strong>sauvegarde </strong>.</li>
+    <li>les <a href="../GameMaker_Language/GML_Reference/File_Handling/File_System/File_System.htm">fonctions du système de fichiers</a> renverront des informations sur les fichiers <em>à </em>partir du <strong>paquet </strong>et de la zone de <strong>sauvegarde </strong>, mais n'écriront que dans la zone de sauvegarde.
+      mais n'<em>écriront </em>que dans la zone de <strong>sauvegarde </strong>.</li>
+    <li>les fonctions d'écriture de fichiers texte, binaires ou <span class="inline">INI</span> créeront un nouveau fichier dans la zone de sauvegarde s'il n'en existe pas déjà un, en copiant toutes les informations des fichiers originaux inclus dans le paquet de jeu s'ils existent.
+      Notez que les fichiers originaux resteront dans la partie en lecture seule du répertoire de sauvegarde, mais ils ne seront pas référencés tant qu'une version existe dans la section en lecture/écriture de la zone de sauvegarde.</li>
   </ul>
-  <p>On the <strong>Windows</strong>, <strong>macOS </strong>and <strong>Ubuntu</strong> (Linux) platforms there are two ways to save and load files from outside of the sandbox and that is either using the functions <a href="../GameMaker_Language/GML_Reference/File_Handling/File_System/get_open_filename.htm"><span class="inline">get_open_filename()</span></a> and <a href="../GameMaker_Language/GML_Reference/File_Handling/File_System/get_save_filename.htm"><span class="inline">get_save_filename()</span></a> (both of these functions will require that the user select an area for loading and saving and the return string can then be used in the rest of the file functions to bypass the sandbox - see the function descriptions in the language section of the manual for more details). The other way is to disable the sandbox altogether from the <a href="../Settings/Game_Options.htm">Game Options</a> for the target platform (only available for Desktop targets, as discussed further up this page).</p>
-  <p>On HTML5 it is also possible to load files from outside the sandbox from a server, however this should only be done using the function <a href="../GameMaker_Language/GML_Reference/Buffers/buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a> as loading synchronously has been deprecated on most browsers and will eventually be obsoleted. This means that files being loaded in this way should be saved as binary files - for example, you can save an <span class="inline">*.ini</span> as a string (see <a href="../GameMaker_Language/GML_Reference/File_Handling/Ini_Files/Ini_Files.htm"><span class="inline">ini_close()</span></a> for details) and then write that into a buffer which can then be saved and loaded using the async functions. Note that if you are loading images using <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_add.htm"><span class="inline">sprite_add()</span></a> then these are already dealt with asynchronously.</p>
-  <p>You should also know that each target platform has its own save area where files and directories can be written to and read from. Below is a list of those areas for each target when sandboxed:</p>
+  <p>Sur les plates-formes <strong>Windows</strong>, <strong>macOS </strong>et <strong>Ubuntu</strong> (<span class="notranslate">Linux</span>), il existe deux façons d'enregistrer et de charger des fichiers à partir de l'extérieur de <span class="notranslate">sandbox</span>, soit en utilisant les fonctions <a href="../GameMaker_Language/GML_Reference/File_Handling/File_System/get_open_filename.htm"><span class="inline">get_open_filename()</span></a> et
+    <a href="../GameMaker_Language/GML_Reference/File_Handling/File_System/get_save_filename.htm"><span class="inline">get_save_filename()</span></a> (ces deux fonctions requièrent que l'utilisateur sélectionne une zone pour le chargement et la sauvegarde et la chaîne de retour
+    peut alors être utilisée dans le reste des fonctions de fichier pour contourner le <span class="notranslate">sandbox</span> - voir les descriptions des fonctions dans la section langage du manuel pour plus de détails). L'autre solution consiste à désactiver complètement le site <span class="notranslate">sandbox</span> à partir des <a href="../Settings/Game_Options.htm">options de jeu</a> de la plate-forme cible (disponible uniquement pour les cibles de bureau, comme indiqué plus haut sur cette page).</p>
+  <p>En HTML5, il est également possible de charger des fichiers de l'extérieur de <span class="notranslate">sandbox</span> à partir d'un serveur, mais cela ne doit être fait qu'en utilisant la fonction <a href="../GameMaker_Language/GML_Reference/Buffers/buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a> comme
+    Le chargement synchrone a été déprécié sur la plupart des navigateurs et sera éventuellement obsolète. Cela signifie que les fichiers chargés de cette manière doivent être enregistrés en tant que fichiers binaires - par exemple, vous pouvez enregistrer un <span class="inline">*.ini</span> en tant que chaîne de caractères
+    (voir <a href="../GameMaker_Language/GML_Reference/File_Handling/Ini_Files/Ini_Files.htm"><span class="inline">ini_close()</span></a> pour plus de détails), puis l'écrire dans un fichier <span class="notranslate">buffer</span> qui peut ensuite être enregistré et chargé à l'aide des fonctions asynchrones. Notez
+    que si vous chargez des images en utilisant <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_add.htm"><span class="inline">sprite_add()</span></a> celles-ci sont déjà traitées de manière asynchrone.</p>
+  <p>Vous devez également savoir que chaque plate-forme cible possède sa propre zone de sauvegarde dans laquelle les fichiers et les répertoires peuvent être écrits et lus. Vous trouverez ci-dessous une liste de ces zones pour chaque cible lorsqu'elle est en sandbox :</p>
   <ul class="colour">
-    <li><strong>Windows</strong>: Windows has all files in the <span class="inline">%localappdata%\&lt;Game Name&gt;</span> directory (on Windows 7 this is the <span class="inline">/Users/&lt;User Name&gt;/AppData/Local/&lt;Game Name&gt;</span> directory).</li>
-    <li><strong>HTML5</strong>,<strong> GX.games</strong>: Everything is done through the local storage.</li>
-    <li><strong>macOS</strong>: Storage will depend on whether the application is sandboxed or not (following Apple&#39;s rules, with the path usually being <span class="inline">~/Library/Application Support/&lt;Game Name&gt;</span>).</li>
-    <li><strong>Ubuntu (Linux)</strong>: Files are stored in the <span class="inline">Home/.config/gamename</span> where &quot;Home&quot; is the users home directory - <span class="inline">/home/&lt;username&gt;</span></li>
-    <li><strong>iOS</strong> / <strong>tvOS</strong>: Storage is the standard location (as viewed through iTunes).</li>
-    <li><strong>Android</strong>: Files are in the standard location (which is invisible unless the device is rooted) <span class="inline">/data/&lt;package name&gt;</span>.</li>
+    <li><strong>Windows et <span class="notranslate">Windows</span> </strong><strong>UWP</strong>: Windows a tous les fichiers dans le répertoire <span class="inline">%localappdata%\&lt;Game Name&gt;</span> (sur <span class="notranslate">Windows 7</span> c'est le répertoire <span class="inline">/Users/&lt;User Name&gt;/AppData/Local/&lt;Game Name&gt;</span> ).</li>
+    <li><strong>HTML5</strong>: Tout se fait par le biais du stockage local.</li>
+    <li><strong>macOS</strong>: le stockage dépendra du fait que l'application soit sandboxée ou non (selon les règles d'Apple, le chemin étant généralement <span class="inline">~/Library/Application Support/&lt;Game Name&gt;</span>).</li>
+    <li><strong>Ubuntu (<span class="notranslate">Linux</span>)</strong>: Les fichiers sont stockés sur le site <span class="inline">Home/.config/gamename</span> où &quot;Home&quot; est le répertoire personnel de l'utilisateur. <span class="inline">/home/&lt;username&gt;</span></li>
+    <li><strong>iOS</strong> / <strong>tvOS</strong>: le stockage est l'emplacement standard (tel qu'il est affiché par iTunes).</li>
+    <li><strong>Android</strong>: Les fichiers sont dans l'emplacement standard (qui est invisible sauf si l'appareil est rooté) <span class="inline">/data/&lt;package name&gt;</span>.</li>
   </ul>
-  <p>It is worth noting that the HTML5 target module has a limit on local storage (which can be between 1MB and 5MB depending on the browser) meaning that you will not be permitted to save large sprites, screenshots etc...</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Il convient de noter que le module cible HTML5 a une limite de stockage local (qui peut se situer entre 1 et 5 Mo selon le navigateur), ce qui signifie que vous ne serez pas autorisé à sauvegarder des fichiers volumineux ( <span class="notranslate">sprites</span>, captures d'écran, etc.).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Additional_Information.htm">Additional Information</a></div>
-        <div style="float:right">Next: <a href="Bitwise_Operators.htm">Bitwise Operators And Binary</a></div>
+        <div style="float:left">Retour : <a href="Additional_Information.htm">Informations complémentaires</a></div>
+        <div style="float:right">Suivant : <a href="Bitwise_Operators.htm">Opérateurs binaires et binaires</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 The File System

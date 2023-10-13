@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>collision_circle</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>cercle de collision</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that gives an overview of the funtion collision_circle" />
   <meta name="rh-index-keywords" content="collision_circle" />
@@ -15,77 +15,75 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>collision_circle</h1>
-  <p><span class="inline">collision_circle</span> creates a circular zone of the radius given by the user around the points <span class="inline2">x1, y1</span> and then checks that zone for a collision with <b>any</b> instance of the object / instance / tile map specified by the argument &quot;obj&quot;.</p>
-  <p>This check can be either precise or not, but for precise collisions to be enabled, the object or instance that you are checking for <i>must</i> also have precise collisions enabled for their sprite. If not, the default check is based on bounding boxes. The following image illustrates how this works:</p>
-  <p><img alt="Collision circle example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/collision_circle_illustration.png" />Here, the instance in the middle is using a collision circle to check for ball objects. Now, the blue ones do <i>not</i> have a precise bounding box and as you can see, even if the sprite is not actually touching the circle, the collision can still happen (even if you set the precise option in the function to true) as the bounding box of that sprite over-laps the circular area defined by collision_circle. On the other hand, the green balls will only be considered in collision if the actual sprite over-laps with the defined circle. Remember, for precise collisions to be considered <i>both</i> the object sprite and the collision function must have precise marked as on.</p>
-  <p><span data-conref="../../../../assets/snippets/Collision_instance_return_desc.hts"> </span></p>
-  <div data-conref="../../../../assets/snippets/Collisions_function_accepted_arguments.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>cercle de collision</h1>
+  <p><span class="inline">Collision_circle</span> crée une zone circulaire de rayon donné par l'utilisateur autour des points x1,y1, puis vérifie que cette zone n'entre pas en collision avec <b>une</b> instance de l'objet spécifié par l'argument &quot;obj&quot;. Cette vérification peut être précise ou non, mais pour que les collisions précises soient activées, l'objet ou l'instance que vous vérifiez <i>doit</i> également avoir des collisions précises activées pour leur <span class="notranslate">sprite</span>. Sinon, la vérification par défaut est basée sur les boîtes englobantes. L'image suivante illustre ce fonctionnement :</p>
+  <p><img>Ici, l'instance du milieu utilise un cercle de collision pour vérifier les objets de type balle. Les balles bleues <i>n'ont pas</i> de boîte de délimitation précise et comme vous pouvez le voir, même si le <span class="notranslate">sprite</span> ne touche pas réellement le cercle, la collision peut toujours se produire (même si vous avez défini l'option précise de la fonction sur true) car la boîte de délimitation de ce <span class="notranslate">sprite</span> dépasse la zone circulaire définie par collision_circle. D'autre part, les boules vertes ne seront considérées comme étant en collision que si la zone de délimitation de <span class="notranslate">sprite</span> dépasse le cercle défini. N'oubliez pas que pour que les collisions précises soient prises en compte, l'objet <span class="notranslate">sprite</span> et la fonction de collision doivent <i>tous deux</i> avoir la précision activée. Il convient également de noter que la valeur de retour de la fonction peut être l'identifiant de <i>n'importe laquelle</i> des instances considérées comme étant en collision.</p>
+  <p>Notez qu'au lieu d'un indice d'objet, vous pouvez fournir une instance <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> pour rechercher une instance spécifique, ou les <a href="../../../GML_Overview/Instance_Keywords.htm">mots-clés d'instance</a> <span class="inline">all</span>, ou <span class="inline">other</span> (en fonction de l'événement et de la portée actuelle du code).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">collision_circle(x1, y1, rad, obj, prec, notme);</p>
-  <p> </p>
+  <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>x1</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of the center of the circle to check.</td>
+        <td><span class="notranslate">x1</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The x coordinate of the center of the circle to check.</span></td>
       </tr>
       <tr>
-        <td>y1</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of the center of the circle to check.</td>
+        <td><span class="notranslate">y1</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The y coordinate of the center of the circle to check.</span></td>
       </tr>
       <tr>
-        <td>rad</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The radius (distance in pixels from its center to its edge).</td>
+        <td><span class="notranslate">rad</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The radius (distance in pixels from its center to its edge).</span></td>
       </tr>
       <tr>
-        <td>obj</td>
-        <td><span data-keyref="Collision_obj_type"><span data-keyref="Type_Asset_Object"><a href="../../../../../The_Asset_Editors/Objects.htm" target="_blank">Object Asset</a></span> or <span data-keyref="Type_ID_Instance"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">Object Instance</a></span> or <span data-keyref="Type_ID_Element_Tilemap"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/layer_tilemap_get_id.htm" target="_blank">Tile Map Element ID</a></span> or <span data-keyref="Type_Array"><a href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span></span></td>
-        <td><span data-keyref="Collision_obj_description">An object, instance, tile map ID, keywords all/other, or array containing these items</span></td>
+        <td><span class="notranslate">obj</span></td>
+        <td> <span data-keyref="Type_ID_Instance">ID de l'</span><span data-keyref="Type_Asset_Object">actif</span> ou de l'<span data-keyref="Type_ID_Instance">instance de</span>l'<span data-keyref="Type_Asset_Object">objet</span> </td>
+        <td><span class="notranslate">The object to check for instance collisions.</span></td>
       </tr>
       <tr>
-        <td>prec</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether the check is based on pixel-perfect collisions (true = slow) or its bounding box in general (false = fast).</td>
+        <td><span class="notranslate">prec</span></td>
+        <td><span data-keyref="Type_Bool">Booléen</span></td>
+        <td><span class="notranslate">Whether the check is based on pixel-perfect collisions (true = slow) or its bounding box in general (false = fast).</span></td>
       </tr>
       <tr>
-        <td>notme</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether the calling instance, if relevant, should be excluded (<span class="inline">true</span>) or not (<span class="inline">false</span>).</td>
+        <td><span class="notranslate">notme</span></td>
+        <td><span data-keyref="Type_Bool">Booléen</span></td>
+        <td><span class="notranslate">Whether the calling instance, if relevant, should be excluded (<span class="inline">true</span>) ou non (<span class="inline">false</span>).</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Instance"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">Object Instance</a></span> or <span data-keyref="Type_ID_Element_Tilemap"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/layer_tilemap_get_id.htm" target="_blank">Tile Map Element ID</a></span> or <span data-keyref="Type_ID_noone"><a href="../../../../../GameMaker_Language/GML_Overview/Instance_Keywords.htm" target="_blank">noone</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if collision_circle(x, y, 20, obj_Cursor, false, true) != noone<br />
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_ID_Instance">Instance ID</span> or <span data-keyref="Type_ID_noone">noone</span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if collision_circle(x, y, 20, obj_Cursor, false, true)<br />
     {<br />
         image_index = 1;<br />
     }<br />
     else image_index = 0;</p>
-  <p>The code above will check a circular are with a 20pixel radius for a collision with &quot;obj_Cursor&quot; and if there is one it will set the image_index of the object running the code to 1, but if there is not it will set the image_index of the object to 0.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifiera une zone circulaire avec un rayon de 20 pixels pour une collision avec &quot;obj_Cursor&quot; et s'il y en a une, il mettra l'image_index de l'objet exécutant le code à 1, mais s'il n'y en a pas, il mettra l'image_index de l'objet à 0.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Collisions.htm">Collisions</a></div>
-        <div style="float:right">Next: <a href="collision_circle_list.htm">collision_circle_list</a></div>
+        <div style="float:left">Retour : <a href="Collisions.htm">Collisions</a></div>
+        <div style="float:right">Suivant : <a href="collision_circle_list.htm"><span class="notranslate">collision_circle_list</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 collision_circle

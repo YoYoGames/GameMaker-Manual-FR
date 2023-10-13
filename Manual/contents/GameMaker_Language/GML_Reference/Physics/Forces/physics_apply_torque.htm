@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physics_apply_torque</title>
+  <title>physique_appliquer_torque</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_apply_torque" />
   <meta name="rh-index-keywords" content="physics_apply_torque" />
@@ -14,45 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_apply_torque</h1>
-  <p>When we talk about torque, we are generally talking about the tendency of a force or impulse to rotate an instance about its centre of mass, but in <span data-keyref="GameMaker Name">GameMaker</span> you can also apply torque independently to an instance, causing it to rotate in a given direction. How much torque you apply to get the desired rotation all depends on the size and density of the fixture you assign to your instance, as both these properties go towards defining its mass, which defines its inertia, which affects torque! The general rule of thumb is that if an instance has a lot of inertia, you will need a lot of torque to get it to start rotating. It should also be noted that other factors like gravity and collisions can also affect the torque of an instance. Here is an image to help explain:</p>
-  <p><img alt="Appply physics torque illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_apply_torque_image.png" />As you can see, the amount of torque you need to rotate the object depends on the underlying mass and inertia that it gives. This is all calculated for you by <span data-keyref="GameMaker Name">GameMaker</span> based on the size and density of the fixture that is assigned to the instance when it is created. Also note that for anti-clockwise rotation, the value should be negative.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>physique_appliquer_torque</h1>
+  <p>Lorsque nous parlons de couple, nous parlons généralement de la tendance d'une force ou d'une impulsion à faire tourner une instance autour de son centre de masse, mais dans <span data-keyref="GameMaker Name">GameMaker</span>, vous pouvez également appliquer un couple indépendamment à une instance, la faisant tourner dans une direction donnée. La quantité de couple que vous appliquez pour obtenir la rotation désirée dépend de la taille et de la densité de la fixation que vous assignez à votre instance, car ces deux propriétés contribuent à définir sa masse, qui définit son inertie, qui affecte le couple ! La règle générale est que si une instance a beaucoup d'inertie, vous aurez besoin de beaucoup de couple pour qu'elle commence à tourner. Il faut également noter que d'autres facteurs comme la gravité et les collisions peuvent également affecter le couple d'une instance. Voici une image pour vous aider à comprendre :</p>
+  <p><img>Comme vous pouvez le constater, la quantité de couple dont vous avez besoin pour faire tourner l'objet dépend de la masse sous-jacente et de l'inertie qu'il donne. Tout ceci est calculé pour vous par <span data-keyref="GameMaker Name">GameMaker</span> en fonction de la taille et de la densité du dispositif de fixation qui est assigné à l'instance lors de sa création. Notez également que pour une rotation dans le sens inverse des aiguilles d'une montre, la valeur doit être négative.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">physics_apply_torque(torque)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>torque</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The torque (in Newton metres) to be applied</td>
+        <td><span class="notranslate">torque</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The torque (in Newton metres) to be applied</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if keyboard_check(vk_left)<br />
     {<br />
         physics_apply_torque(-100);<br />
     }</p>
-  <p>The code above will rotate the instance to the anti-clockwise (to the left) with a torque of 100Nm when the left arrow key is pressed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus fera tourner l'instance dans le sens inverse des aiguilles d'une montre (vers la gauche) avec un couple de 100 Nm lorsque la touche fléchée gauche est enfoncée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Forces.htm">Forces</a></div>
-        <div style="float:right">Next: physics_apply_angular_impulse</div>
+        <div style="float:left">Retour : <a href="Forces.htm">Forces</a></div>
+        <div style="float:right">Suivant : physics_apply_angular_impulse</div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_apply_torque

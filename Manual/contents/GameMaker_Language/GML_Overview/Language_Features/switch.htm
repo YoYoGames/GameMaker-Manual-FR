@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>switch</title>
+  <title>commutateur</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the switch function" />
   <meta name="rh-index-keywords" content="switch,case" />
@@ -14,9 +14,9 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>switch</h1>
-  <p>In a number of situations you want to let your instances perform different actions depending on a particular value. You can do this using a number of consecutive <a href="If_Else_and_Conditional_Operators.htm"><span class="inline">if / else</span></a> statements, but when the possible choices gets above two or three it is usually easier to use the <span class="inline">switch</span> statement.</p>
-  <p>A <span class="inline">switch</span> statement has the following syntax:</p>
+  <h1>commutateur</h1>
+  <p>Dans un certain nombre de situations, vous souhaitez que vos instances effectuent différentes actions en fonction d'une valeur particulière. Vous pouvez le faire en utilisant un certain nombre d'instructions consécutives <a href="If_Else_and_Conditional_Operators.htm"><span class="inline">if / else</span></a> mais lorsque le nombre de choix possibles dépasse deux ou trois, il est généralement plus facile d'utiliser l'instruction <span class="inline">switch</span>.</p>
+  <p>Une déclaration <span class="inline">switch</span> a la syntaxe suivante :</p>
   <p class="code">switch (&lt;expression&gt;)<br />
     {<br />
         case &lt;constant1&gt;:<br />
@@ -33,15 +33,15 @@
             &lt;code&gt;;<br />
     }
   </p>
-  <p>This works as follows:</p>
+  <p>Cela fonctionne comme suit :</p>
   <ul class="colour">
-    <li>First the <a class="glossterm" data-glossterm="expression" href="#">expression</a> is executed.</li>
-    <li>Next, its result is compared with the different constants after each of the <span class="inline">case</span> <a class="glossterm" data-glossterm="statement" href="#">statement</a><span class="glossextra">s</span>. When we say &quot;constant&quot; what we mean is that the value in the case cannot be a variable expression and must be a fixed value of any <a href="../Data_Types.htm">data type</a>, like <span class="inline2">&quot;fight&quot;</span> or <span class="inline2">3</span> or the keyword <span class="inline2"><span class="inline"><a href="../Instance_Keywords.htm">noone</a></span></span>. </li>
-    <li>The execution begins from the first <span class="inline">case</span> statement with the matching value, <i>until a <a href="break.htm">break</a> statement is encountered</i>.</li>
-    <li>If no <span class="inline">case</span> statement has the matching value, then the <span class="inline">default</span> statement will be executed. It is not required to have a <span class="inline">default</span> statement, and if none is supplied then no action will be taken when there are no matching cases. The <span class="inline">default</span> statement can be placed anywhere in a switch block, however it&#39;s traditionally placed at the bottom, after all the cases.</li>
+    <li>L'<a class="glossterm" data-glossterm="expression" href="#">expression</a> est d'abord exécutée.</li>
+    <li>Ensuite, son résultat est comparé aux différentes constantes après chacune des<span class="glossextra">déclarations de</span> <span class="inline">case</span>. Lorsque nous disons &quot;constante&quot;, ce que nous voulons dire, c'est que la valeur dans le cas ne peut pas être une expression variable et doit être une valeur fixe de n'importe quel <a href="../Data_Types.htm">type de données</a>, comme <span class="inline2">&quot;combat&quot;</span> ou <span class="inline2">3</span> ou le mot clé <span class="inline2"><span class="inline"><a href="../Instance_Keywords.htm">noone</a></span></span>. </li>
+    <li>L'exécution commence à partir de la première déclaration <span class="inline">case</span> avec la valeur correspondante, <i>jusqu'à ce qu'une déclaration <a href="break.htm"><span class="notranslate">break</span></a> soit rencontrée</i>.</li>
+    <li>Si aucune instruction <span class="inline">case</span> n'a la valeur correspondante, alors l'instruction <span class="inline">default</span> sera exécutée. Il n'est pas nécessaire d'avoir une instruction <span class="inline">default</span>, et si aucune n'est fournie, aucune action ne sera entreprise s'il n'y a pas de cas correspondant. L'instruction <span class="inline">default</span> peut être placée n'importe où dans un bloc de commutation, mais elle est traditionnellement placée en bas, après tous les cas.</li>
   </ul>
-  <p class="note"><span class="note">NOTE</span> The switch statement will continue to execute code within a <span class="inline">case</span>, until a <span class="inline">break</span> is encountered. If you do not use <span class="inline">break</span>s at the end of your cases, it will cause the switch to &quot;leak&quot; to the next <span class="inline">case</span>, and even to a <span class="inline">default</span> section, if there are no <span class="inline">break</span>s in the way. This can cause unintended behaviour as the execution of one <span class="inline">case</span> can result in multiple <span class="inline">case</span>s being executed, so ensure to use <span class="inline">break</span> where appropriate.</p>
-  <p>A simple example of using a switch statement would be something like this:</p>
+  <p class="note"><span class="note">REMARQUE</span> L'instruction switch continuera à exécuter du code dans une section <span class="inline">case</span>, jusqu'à ce que vous rencontriez une section <span class="inline">break</span>. Si vous n'utilisez pas <span class="inline">break</span>s à la fin de vos cas, le commutateur &quot;fuira&quot; vers la prochaine <span class="inline">case</span>, et même vers une section <span class="inline">default</span>, s'il n'y a pas de <span class="inline">break</span>s dans le chemin. Cela peut provoquer un comportement involontaire, car l'exécution d'un <span class="inline">case</span> peut entraîner l'exécution de plusieurs <span class="inline">case</span>s. Veillez donc à utiliser <span class="inline">break</span> le cas échéant.</p>
+  <p>Un exemple simple d'utilisation d'une instruction de commutation serait quelque chose comme ceci :</p>
   <p class="code">switch (player_lives)<br />
     {<br />
         case 3:<br />
@@ -61,7 +61,7 @@
         break;<br />
     }
   </p>
-  <p>Note that multiple <span class="inline">case</span> statements can be used to execute the same statement, as the <span class="inline">break</span> is not always required for each and every <span class="inline">case</span>. If there is no <span class="inline">break</span> statement for a particular <span class="inline">case</span>, the execution simply continues with the code for the next case, e.g.:</p>
+  <p>Notez que plusieurs instructions <span class="inline">case</span> peuvent être utilisées pour exécuter la même instruction, car l'instruction <span class="inline">break</span> n'est pas toujours nécessaire pour chaque <span class="inline">case</span>. S'il n'y a pas d'instruction <span class="inline">break</span> pour un <span class="inline">case</span> particulier, l'exécution continue simplement avec le code pour le cas suivant, par ex :</p>
   <p class="code">switch (keyboard_key)<br />
     {<br />
         case vk_left:<br />
@@ -85,19 +85,19 @@
         break;<br />
     }
   </p>
-  <p>The above code uses <span class="inline">switch</span> to check for a keyboard event and then compares that to each <span class="inline">case</span> listed. If it meets any of the required values then the corresponding code is executed. Note how the <span class="inline">switch</span> can check multiple <span class="inline">cases</span> and execute code until the next <span class="inline">break</span>, to permit various keys to be used to get the same result.</p>
-  <p>Each <span class="inline">case</span> can have its own code, so you can set up a sort of &quot;inheritance&quot; system where a case executes its own code and then the code for the next case as well.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus utilise <span class="inline">switch</span> pour vérifier la présence d'un événement clavier et le compare ensuite à chaque <span class="inline">case</span> listé. S'il correspond à l'une des valeurs requises, le code correspondant est exécuté. Notez comment <span class="inline">switch</span> peut vérifier plusieurs <span class="inline">cases</span> et exécuter le code jusqu'au prochain <span class="inline">break</span>, afin de permettre l'utilisation de plusieurs touches pour obtenir le même résultat.</p>
+  <p>Chaque <span class="inline">case</span> peut avoir son propre code, de sorte que vous pouvez mettre en place une sorte de système &quot;d'héritage&quot; où un cas exécute son propre code et ensuite le code du cas suivant également.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="break.htm">break</a></div>
+        <div style="float:left">Retour : <a href="../Language_Features.htm">Caractéristiques de la langue</a></div>
+        <div style="float:right">Suivant : <a href="break.htm"><span class="notranslate">break</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 switch

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_is_cloud_enabled_for_account</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_is_cloud_enabled_for_account" />
+  <meta name="rh-index-keywords" content="steam_is_cloud_enabled_for_account" />
+  <meta name="search-keywords" content="steam_is_cloud_enabled_for_account" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_is_cloud_enabled_for_account</h1>
+  <p>Avec cette fonction, vous pouvez vérifier que le service <span class="notranslate">Steam</span> Cloud est activé par l'utilisateur dans les paramètres de son client <span class="notranslate">Steam</span>. Elle renvoie <tt>true</tt> si c'est le cas et <tt>false</tt> sinon. Notez que cela ne signifie pas automatiquement que vous pouvez stocker des données dans le nuage, car le service doit également être activé pour votre jeu (vous pouvez le vérifier à l'aide de la fonction <a href="steam_is_cloud_enabled_for_app.htm"><tt>steam_is_cloud_enabled_for_app()</tt></a>). Si le nuage <span class="notranslate">Steam</span> est activé pour votre jeu, mais que l'utilisateur l'a désactivé localement, vous pouvez toujours utiliser les fonctions du nuage pour stocker et récupérer des données à partir d'une copie locale de tous les fichiers, mais ils ne seront pas téléchargés vers le nuage à la fin du jeu, ni synchronisés au début du jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_is_cloud_enabled_for_account();</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if steam_is_cloud_enabled_for_account<br />
+    {<br />
+        steam_file_share(&quot;Save.txt&quot;);<br />
+    }</p>
+  <p>Le code ci-dessus vérifie si l'utilisateur a activé le cloud <span class="notranslate">Steam</span> et s'il renvoie la réponse <tt>vraie</tt>, il synchronisera alors le fichier donné.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_Cloud.htm">Nuage de vapeur</a></div>
+        <div style="float:right">Suivant : <a href="steam_get_quota_total.htm"><span class="notranslate">steam_get_quota_total</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_is_cloud_enabled_for_account
+-->
+  <!-- TAGS
+steam_is_cloud_enabled_for_account
+-->
+</body>
+</html>

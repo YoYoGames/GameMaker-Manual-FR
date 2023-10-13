@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>window_center</title>
-  <meta name="generator" content="Adobe RoboHelp 2022"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Reference page for window_center"/>
-  <meta name="rh-index-keywords" content="window_center"/>
-  <meta name="search-keywords" content="window_center"/>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>fenêtre_centre</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for window_center" />
+  <meta name="rh-index-keywords" content="window_center" />
+  <meta name="search-keywords" content="window_center" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>window_center</h1>
-  <p>With this function you can center the game window in the display when the target module is Windows, Ubuntu (Linux) or macOS, or you can center it in the browser if the target module is HTML5. This function has no effect on any other device.</p>
-  <p class="note"><span class="note"><b>NOTE</b></span> If you have resized the game window in the current step (for example, by switching from full screen to windowed or using <span class="inline"><a href="window_set_size.htm">window_set_size()</a></span>), and wish to center the new window, this function should be called at least one step later (for example, by using an <a href="../../Asset_Management/Instances/Instance_Variables/alarm.htm">alarm</a>) otherwise it will not work correctly.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>fenêtre_centre</h1>
+  <p>Cette fonction permet de centrer la fenêtre de jeu dans l'écran lorsque le module cible est <span class="notranslate">Windows</span>, <span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>) ou <span class="notranslate">macOS</span>, ou de la centrer dans le navigateur si le module cible est HTML5. Cette fonction n'a aucun effet sur les autres appareils.</p>
+  <p class="note"><span class="note"><b>NOTE</b></span> Si vous avez redimensionné la fenêtre de jeu au cours de l'étape actuelle (par exemple, en passant du plein écran au fenêtré ou en utilisant <span class="inline"><a href="window_set_size.htm">window_set_size()</a></span>), et que vous souhaitez centrer la nouvelle fenêtre, cette fonction doit être appelée au moins une étape plus tard (par exemple, en utilisant une fonction <a href="../../Asset_Management/Instances/Instance_Variables/alarm.htm"><span class="notranslate">alarm</span></a>), sinon elle ne fonctionnera pas correctement.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">window_center();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if !window_get_fullscreen()<br/>
-    {<br/>
-        window_center();<br/>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if !window_get_fullscreen()<br />
+    {<br />
+        window_center();<br />
     }</p>
-  <p>The above code will center the game window within the display if it is not in full screen mode.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus permet de centrer la fenêtre du jeu dans l'écran si celui-ci n'est pas en mode plein écran.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../The_Game_Window/The_Game_Window.htm">The Game Window</a></div>
-        <div style="float:right">Next: <a href="../The_Game_Window/window_handle.htm">window_handle</a></div>
+        <div style="float:left">Retour : <a href="../The_Game_Window/The_Game_Window.htm">La fenêtre de jeu</a></div>
+        <div style="float:right">Suivant : <a href="../The_Game_Window/window_handle.htm"><span class="notranslate">window_handle</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 window_center
@@ -47,5 +48,5 @@ window_center
   <!-- TAGS
 window_center
 -->
-
-</body></html>
+</body>
+</html>

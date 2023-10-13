@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Play Audio</title>
+  <title>Lecture audio</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Play Audio action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Play Audio" />
@@ -14,63 +14,63 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Play Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Play_Audio.png" /> <span data-field="title" data-format="default">Play Audio</span></h1>
-  <p>This action will set the given sound playing. You select the sound from the Asset Explorer and then set whether you would like the sound to be looped or not (a looped sound will play again and again between its loop start and end points until stopped) by setting the &quot;Loop&quot; flag.</p>
-  <p>Additionally you can set the gain, the offset (the track position to start playing from) and the pitch to play the sound with.</p>
-  <p>The final value for gain and pitch for the sound being played is the product of the values for gain and pitch set for the sound asset. The offset value is the value provided in the &quot;Offset&quot; field <strong>or</strong> the offset value of the sound <strong>asset</strong> being played when the field is left empty (see Example 2).</p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Play Audio Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/a_Audio_Play_Audio.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> <span data-field="title" data-format="default">Lecture audio</span></h1>
+  <p>Cette action permet de lancer la lecture du son donné. Vous sélectionnez le son dans l'Explorateur d'actifs, puis vous indiquez si vous souhaitez que le son soit lu en boucle ou non (un son en boucle sera lu encore et encore jusqu'à ce qu'il soit arrêté) en définissant l'indicateur &quot;Loop&quot;.</p>
+  <p>En outre, vous pouvez régler le gain, le décalage (la position de la piste à partir de laquelle la lecture doit commencer) et la hauteur du son à jouer.</p>
+  <p>La valeur finale du gain et de la hauteur du son joué est le produit des valeurs de gain et de hauteur définies pour l'objet sonore. La valeur de décalage est la valeur fournie dans le champ &quot;Offset&quot; <strong>ou</strong> la valeur de décalage de la <strong>ressource</strong> sonore jouée lorsque le champ est laissé vide (voir l'exemple 2).</p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Play Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Play_Audio.png" /></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Sound</td>
-        <td>The sound asset to play</td>
+        <td><span class="notranslate">Sound</span></td>
+        <td>L'actif sonore à jouer</td>
       </tr>
       <tr>
-        <td>Loop</td>
-        <td>Whether to loop the sound or not (off by default)</td>
+        <td><span class="notranslate">Loop</span></td>
+        <td>Si le son doit être mis en boucle ou non (désactivé par défaut)</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to store the return value</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>La variable cible pour stocker la valeur de retour</td>
       </tr>
       <tr>
-        <td>Gain</td>
-        <td>Value for the gain multiplier (default 1). The gain multiplier set here is multiplied with the sound asset&#39;s gain multiplier</td>
+        <td><span class="notranslate">Gain</span></td>
+        <td>Valeur du multiplicateur de gain (1 par défaut). Le multiplicateur de gain défini ici est multiplié par le multiplicateur de gain de l'objet sonore.</td>
       </tr>
       <tr>
-        <td>Offset</td>
-        <td>The time (in seconds) to set the start point to (default 0). Values beyond the end of the sound are clamped to its length.<br />
-          The sound asset&#39;s offset (track position) is used when this field if left blank.</td>
+        <td><span class="notranslate">Offset</span></td>
+        <td>Le temps (en secondes) pour définir le point de départ (par défaut 0). Les valeurs plus longues que la longueur du son donné sont ignorées.<br>
+          Le décalage de la ressource sonore (position de la piste) est utilisé lorsque ce champ est laissé vide.</td>
       </tr>
       <tr>
-        <td>Pitch</td>
-        <td>The pitch multiplier (default 1). The gain multiplier set here is multiplied with the sound asset&#39;s gain multiplier</td>
+        <td><span class="notranslate">Pitch</span></td>
+        <td>Le multiplicateur de gain (1 par défaut). Le multiplicateur de gain défini ici est multiplié par le multiplicateur de gain de l'actif sonore.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example 1:</h4>
-  <p><img alt="Play Audio Example" class="center" height="1087" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/e_Audio_Play_Audio.png" width="698" />The above action block code checks for a mouse button press and if one is detected it then checks a global variable to see if it is not <span class="inline">true</span>. If it is not <span class="inline">true</span>, then a sound is played (and looped) and the global variable set to <span class="inline">true</span>, otherwise the sound is stopped and the global variable is set to <span class="inline">false</span>.<br />
-    The sound is played with default settings: a gain and pitch multiplier of 1 and an offset of 0 (the default offset of the sound asset).</p>
-  <h4>Example 2:</h4>
-  <p><img align="" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/e_Audio_Play_Audio_2.png" />The above action block code first sets the track position of sound asset &quot;snd_MusicBoss&quot; to 20 seconds. It then checks if the instance variable &quot;skip_intro&quot; is set to <span class="inline">true</span>. If it is, it starts playing &quot;snd_MusicBoss&quot; at 20 seconds, the value for track position set earlier (this is because the &quot;Offset&quot; field is left blank so the <strong>asset</strong> offset is used). The first 20 seconds of the audio are skipped.<br />
-    If the instance variable &quot;skip_intro&quot; is set to <span class="inline">false</span>, it also starts playing &quot;snd_MusicBoss&quot; but, because the &quot;Offset&quot; has been set to 0, the sound will start playing from the start. The track position of 20 seconds as defined earlier for the sound <strong>asset</strong> is ignored.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple 1 :</h4>
+  <p><img>Le code du bloc d'action ci-dessus vérifie si un bouton de la souris a été enfoncé et, si c'est le cas, il vérifie ensuite une variable globale pour voir si elle n'est pas <span class="inline">true</span>. Si ce n'est pas <span class="inline">true</span>, un son est joué (et mis en boucle) et la variable globale prend la valeur <span class="inline">true</span>, sinon le son est arrêté et la variable globale prend la valeur <span class="inline">false</span>.<br>
+    Le son est joué avec les paramètres par défaut : un gain et un multiplicateur de hauteur de 1 et un décalage de 0 (le décalage par défaut de l'actif sonore).</p>
+  <h4>Exemple 2 :</h4>
+  <p><img>Le code du bloc d'action ci-dessus définit d'abord la position de la piste de la ressource sonore &quot;snd_MusicBoss&quot; à 20 secondes. Il vérifie ensuite si la variable d'instance &quot;skip_intro&quot; est définie sur <span class="inline">true</span>. Si c'est le cas, il commence la lecture de &quot;snd_MusicBoss&quot; à 20 secondes, la valeur de la position de la piste définie précédemment (car le champ &quot;Offset&quot; est laissé vide et le décalage de l'<strong>actif</strong> est utilisé). Les 20 premières secondes de l'audio sont sautées.<br>
+    Si la variable d'instance &quot;skip_intro&quot; est définie sur <span class="inline">false</span>, la lecture de &quot;snd_MusicBoss&quot; commence également, mais comme le champ &quot;Offset&quot; a été défini sur 0, la lecture du son commencera dès le début. La position de la piste de 20 secondes définie précédemment pour la <strong>ressource</strong> sonore est ignorée.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Audio_Actions.htm">Audio Actions</a></div>
-        <div style="float:right">Next: <a href="Stop_Audio.htm">Stop Audio</a></div>
+        <div style="float:left">Retour : <a href="Audio_Actions.htm">Actions audio</a></div>
+        <div style="float:right">Suivant : <a href="Stop_Audio.htm">Arrêter l'audio</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Play Audio

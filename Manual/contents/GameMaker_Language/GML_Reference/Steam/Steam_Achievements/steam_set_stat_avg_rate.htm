@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_set_stat_avg_rate</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_set_stat_avg_rate" />
+  <meta name="rh-index-keywords" content="steam_set_stat_avg_rate" />
+  <meta name="search-keywords" content="steam_set_stat_avg_rate" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_set_stat_avg_rate</h1>
+  <p>Cette fonction vous permet de définir un type de statistique moyenne avec un effet de &quot;fenêtre coulissante&quot; sur la moyenne. La valeur &quot;session_count&quot; est la valeur actuelle dont vous souhaitez faire la moyenne, tandis que la valeur &quot;session_length&quot; est la durée de jeu depuis le dernier appel à la fonction.
+    de temps de jeu depuis le dernier appel à la fonction. Veuillez consulter l'<b>exemple étendu</b> ci-dessous pour plus de détails sur la façon dont cette fonction peut être utilisée.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_set_stat_avg_rate(stat_name, session_count, session_length);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">stat_name</span></td>
+        <td>Le nom de la statistique à définir (une chaîne de caractères).</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">session_count</span></td>
+        <td>La valeur dont on veut obtenir la moyenne (un nombre réel)</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">session_length</span></td>
+        <td>Le temps qui a été pris depuis la dernière fois que la stat a été définie (un nombre réel).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple étendu :</h4>
+  <p>Comme la fonction stat moyenne peut être complexe à comprendre, nous allons illustrer son utilisation avec l'exemple suivant. Considérons le cas où vous souhaitez suivre une statistique moyenne, telle que &quot;Points gagnés par heure&quot;. Une approche possible serait
+    serait d'avoir deux statistiques : une statistique <i>entière</i>, &quot;TotalPoints&quot;, et une statistique <i>flottante</i> &quot;TotalPlayTimeHours&quot;, puis de diviser le total des points par le temps total pour obtenir la valeur &quot;Points par heure&quot;.</p>
+  <p>Cependant, une fois que le joueur a accumulé une quantité significative de temps de jeu, la moyenne calculée évoluera extrêmement lentement, et plus l'utilisateur joue au jeu, moins cette moyenne sera réactive. Si l'utilisateur a passé 100 heures à jouer au jeu
+    Si l'utilisateur a passé 100 heures à jouer au jeu, la moyenne calculée sera &quot;décalée&quot; d'environ 50 heures, et s'il augmente ses compétences, il ne verra pas l'augmentation des &quot;points par heure&quot; qu'il attend. Pour contourner ce problème, nous pouvons utiliser une &quot;fenêtre glissante&quot;.
+    pour ne calculer les &quot;points par heure&quot; que pour les 10 dernières heures de jeu.</p>
+  <p>Ainsi, pour utiliser cette fonction, nous devrions créer une stat <span class="notranslate">Steam</span> (dans le panneau de contrôle du jeu sur l'atelier) appelée &quot;AvgPointsPerHour&quot; et définir sa propriété <b>Window</b> à 10. Maintenant, dans votre jeu, vous devriez ajouter quelques variables globales
+    dans une instance au début du jeu :</p>
+  <p class="code">global.Points = 0;<br/> global.Time = 0;</p>
+  <p>Vous auriez alors un objet contrôleur pour compter la variable globale &quot;Temps&quot; dans une alarme (par exemple) chaque seconde, tandis que votre jeu affecterait la variable globale &quot;Points&quot;. À intervalles réguliers pendant le jeu (encore une fois,
+    dans un objet contrôleur, peut-être dans une alarme, ou à intervalles réguliers en interrogeant la valeur &quot;Temps&quot;), vous définissez la statistique comme suit :</p>
+  <p class="code">steam_set_stat_avg_rate(&quot;AvgPointsPerHour&quot;, global.Points, (global.Time / 3600));<br/> global.Points = 0;<br/> global.Time = 0;</p>
+  <p>Notez que nous divisons le temps par 3600 puisque nous voulons obtenir le temps en <i>heures</i> et non en secondes, puis nous réinitialisons la variable globale &quot;Points&quot; et la variable globale &quot;Temps&quot; à 0 afin que la prochaine fois que la fonction est appelée, nous obtenions une nouvelle moyenne pour la statistique.
+    nous obtiendrons une nouvelle moyenne pour la statistique. Maintenant, ce que <span class="notranslate">Steam</span> va faire est de prendre cette valeur que vous avez envoyée et de créer une valeur moyenne sur le temps qui a été défini pour notre &quot;fenêtre&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Dos : <a href="Steam_Achievements.htm">Réalisations et statistiques</a></div>
+        <div style="float:right">Suivant : <a href="steam_get_stat_int.htm"><span class="notranslate">steam_get_stat_int</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_set_avg_rate
+-->
+  <!-- TAGS
+steam_set_avg_rate
+-->
+</body>
+</html>

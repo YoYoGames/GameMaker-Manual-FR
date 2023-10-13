@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physics_particle_set_gravity_scale</title>
+  <title>physic_particule_set_gravité_échelle</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_particle_set_gravity_scale" />
   <meta name="rh-index-keywords" content="physics_particle_set_gravity_scale" />
@@ -14,47 +14,47 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_set_gravity_scale</h1>
-  <p>With this function you can set the gravity scale factor for particles in the physics simulation. The function is designed to help prevent instability in the physics simulation, especially when using very small particles which may behave unpredictably
-    (i.e. break conservation of momentum) in scenarios such as explosions. Slowing these particles down by reducing gravity scale can stabilize their behaviour. This function is <i>global</i> in scope, in that it will change the gravity scale not just
-    for new particles created after the change, but also for those already present in the simulation.</p>
-  <p class="note"><b>NOTE</b>: Adjusting the number of update iterations per step (using the function <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_update_iterations.htm"><span class="inline">physics_world_update_iterations()</span></a></span>    can also affect the effect of gravity on particles. Larger iteration sizes confer greater resistance to gravity.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>physic_particule_set_gravité_échelle</h1>
+  <p>Cette fonction vous permet de définir le facteur d'échelle de gravité pour les particules dans la simulation physique. La fonction est conçue pour aider à prévenir l'instabilité dans la simulation physique, en particulier lors de l'utilisation de très petites particules qui peuvent se comporter de manière imprévisible (c'est-à-dire briser la conservation de la quantité de mouvement) dans des scénarios tels que les explosions.
+    (c'est-à-dire briser la conservation de la quantité de mouvement) dans des scénarios tels que les explosions. Le ralentissement de ces particules en réduisant l'échelle de gravité peut stabiliser leur comportement. Cette fonction a une portée <i>globale</i>, en ce sens qu'elle modifiera l'échelle de gravité non seulement
+    pour les nouvelles particules créées après le changement, mais aussi pour celles déjà présentes dans la simulation.</p>
+  <p class="note"><b>NOTE</b>: L'ajustement du nombre d'itérations de mise à jour par étape (en utilisant la fonction <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_update_iterations.htm"><span class="inline">physics_world_update_iterations()</span></a></span>    peut également affecter l'effet de la gravité sur les particules. Des tailles d'itération plus grandes confèrent une plus grande résistance à la gravité.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">physics_particle_set_gravity_scale(scale)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>scale</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The scaling factor to be applied to gravity for all particles.</td>
+        <td><span class="notranslate">scale</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The scaling factor to be applied to gravity for all particles.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">physics_particle_set_radius(15);<br/> physics_particle_set_density(0.5);
     <br/> physics_particle_set_damping(1);
     <br/> physics_particle_set_gravity_scale(1);
   </p>
-  <p>The above code will set the base properties for all particles in the simulation.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus définira les propriétés de base pour toutes les particules de la simulation.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
-        <div style="float:right">Next: <a href="physics_particle_get_max_count.htm">physics_particle_get_max_count</a></div>
+        <div style="float:left">Retour : <a href="Soft_Body_Particles.htm">Particules molles du corps</a></div>
+        <div style="float:right">Suivant : <a href="physics_particle_get_max_count.htm"><span class="notranslate">physics_particle_get_max_count</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_set_gravity_scale

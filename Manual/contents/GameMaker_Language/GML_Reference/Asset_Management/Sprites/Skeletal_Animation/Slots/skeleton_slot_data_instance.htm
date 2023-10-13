@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>skeleton_slot_data_instance</title>
+  <title>données_instance_slot_squelette</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function skeleton_slot_data_instance" />
   <meta name="rh-index-keywords" content="skeleton_slot_data_instance" />
@@ -15,36 +15,36 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>skeleton_slot_data_instance</h1>
-  <p>With this function you can populate a (pre-created) <a href="../../../../Data_Structures/DS_Lists/DS_Lists.htm">DS list</a> with data for each of the available attachment slots for the Spine sprite associated with the current instance (including any attachment modifications). This data is returned in the forum of a <a href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a> which contains the following key/value pairs:</p>
+  <h1>données_instance_slot_squelette</h1>
+  <p>Cette fonction vous permet de remplir une <a href="../../../../Data_Structures/DS_Lists/DS_Lists.htm">liste de DS</a> (pré-créée) avec des données pour chacun des emplacements d'attachement disponibles pour le site <span class="notranslate">Spine</span> <span class="notranslate">sprite</span> associé à l'instance actuelle (y compris toute modification d'attachement). Ces données sont retournées dans le forum d'une <a href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> qui contient les paires clé/valeur suivantes :</p>
   <ul class="colour">
-    <li><b>&quot;name&quot;:</b> The name of the slot.</li>
-    <li><b>&quot;bone&quot;:</b> The name of the bone.</li>
-    <li><b>&quot;attachment&quot;:</b> The name of the attachment if one is used or &quot;(none)&quot; if there isn&#39;t one assigned.</li>
+    <li><b>&quot;name&quot; :</b> Le nom de l'emplacement.</li>
+    <li><b>&quot;bone&quot; :</b> Le nom de l'os.</li>
+    <li><b>&quot;attachment&quot; :</b> Le nom de la pièce jointe s'il y en a une ou &quot;(none)&quot; s'il n'y en a pas.</li>
   </ul>
-  <p>The values for each key will be strings and can then be used in the other skeleton attachment functions for these types of sprite. Note that the <span class="inline">DS Map</span> created are <i>not</i> destroyed so you will need to loop through the DS list and destroy each of the created maps yourself.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Les valeurs de chaque clé seront des chaînes de caractères et pourront ensuite être utilisées dans les autres fonctions de rattachement du squelette pour ces types de <span class="notranslate">sprite</span>. Notez que les <span class="inline">DS Map</span> créés <i>ne</i> sont <i>pas</i> détruits, vous devrez donc parcourir en boucle la liste DS et détruire vous-même chacune des cartes créées.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">skeleton_slot_data_instance(list);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>list</td>
-        <td><span data-keyref="Type_ID_DS_List">DS List ID</span></td>
-        <td>The ID of the DS list to populate with the DS maps.</td>
+        <td><span class="notranslate">list</span></td>
+        <td><span data-keyref="Type_ID_DS_List">ID de la liste DS</span></td>
+        <td><span class="notranslate">The ID of the DS list to populate with the DS maps.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var list = ds_list_create();<br />
     var open = true;<br />
     slot_name = &quot;&quot;;<br />
@@ -66,18 +66,18 @@
     <br />
     ds_list_destroy(list);
   </p>
-  <p>The above code creates a DS list and then populates it with the slot data for the instance sprite. This data is then parsed to extract the individual DS maps with the slot data. This is then checked to see if there is an empty slot, and if so the variable &quot;slot_name&quot; is assigned the empty slot name before the DS map is destroyed. Finally we destroy the DS list as it is no longer required.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus crée une liste de DS et la remplit ensuite avec les données de slot pour l'instance <span class="notranslate">sprite</span>. Ces données sont ensuite analysées pour extraire les cartes DS individuelles avec les données de slot. On vérifie ensuite s'il existe un slot vide et, si c'est le cas, on attribue à la variable &quot;slot_name&quot; le nom du slot vide avant de détruire la carte DS. Enfin, nous détruisons la liste des DS car elle n'est plus nécessaire.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Slots.htm">Slots</a></div>
-        <div style="float:right">Next: <a href="skeleton_find_slot.htm">skeleton_find_slot</a></div>
+        <div style="float:left">Retour : <a href="Slots.htm">Slots</a></div>
+        <div style="float:right">Suivant : <a href="skeleton_find_slot.htm"><span class="notranslate">skeleton_find_slot</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_slot_data_instance

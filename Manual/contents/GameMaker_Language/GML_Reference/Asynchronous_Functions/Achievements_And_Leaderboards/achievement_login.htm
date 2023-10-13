@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>achievement_login</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_login" />
+  <meta name="rh-index-keywords" content="achievement_login,achievement_our_info" />
+  <meta name="search-keywords" content="achievement_login,achievement_our_info" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>achievement_login</h1>
+  <p>Cette fonction connecte l'utilisateur au service approprié de classement et de réalisation. Si le service <i>n'</i> est <i>pas</i> disponible, l'utilisateur est connecté à un centre de jeu &quot;prétendu&quot; et toutes les réalisations et tous les scores sont stockés sur l'appareil de sorte que lorsque le service réel est disponible, ces détails peuvent être téléchargés.
+    le service réel est disponible, ces détails peuvent être téléchargés. La fonction déclenchera un callback <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> qui contient la <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>    map remplie avec les paires clé/valeur pertinentes. La clé <i>id</i> de cette <tt>carte DS</tt> est utilisée pour identifier le rappel correct (il peut y avoir plus d'une fonction de déclenchement pour un événement asynchrone donné), et sera associée à la <b>constante</b> <tt>achievement_our_info</tt> ainsi qu'à un certain nombre d'autres paires clé/valeur pour chaque défi. Le contenu exact de la carte est présenté ci-dessous :</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - Pour cette fonction, il s'agit de <tt>achievement_our_info</tt>.</li>
+    <li>&quot;<b>name</b>&quot; - Le nom de l'utilisateur qui est actuellement connecté.</li>
+    <li>&quot;<b>playerid</b>&quot; - L'identifiant unique du joueur pour l'utilisateur qui est actuellement connecté.</li>
+  </ul>
+  <p> </p>
+  <h4><b>Syntaxe :</b></h4>
+  <p class="code">achievement_login()</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple étendu :</h4>
+  <p>Le code suivant sera probablement appelé au début de votre jeu, ou à partir d'un objet bouton spécial que vous aurez placé dans une pièce, et demandera au joueur de se connecter à son compte Google Game Services ou Apple Game center :</p>
+  <p class="code">achievement_login();</p>
+  <p>Cela enverra une demande d'informations sur le joueur actuel et générera un callback asynchrone avec la carte spéciale <tt>async_load</tt> DS map contenant les données suivantes :</p>
+  <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br/> if ident == achievement_our_info<br/>     {
+    <br/>     var name = ds_map_find_value(async_load, &quot;name&quot; );<br/>     var playerid = ds_map_find_value(async_load, &quot;playerid&quot; );<br/>     global.OurName = name;<br/>     global.OurId = playerid;<br/>     if os_type == os_android<br/>            {
+    <br/>         achievement_load_leaderboard(&quot;CgkIs9_51u0PEAIQBw&quot;, 1, 100, achievement_filter_friends_only);<br/>         }
+    <br/>     else
+    <br/>         {
+    <br/>         achievement_load_leaderboard(&quot;leaderboard1id&quot;, 1, 100, achievement_filter_friends_only);<br/>         }
+    <br/>     achievement_get_challenges();
+    <br/>     achievement_load_friends();
+    <br/>     achievement_load_progress();
+    <br/>     }
+  </p>
+  <p>Le code ci-dessus vérifie la <tt>carte DS</tt> retournée dans l'<b>événement social asynchrone</b> et si son &quot;id&quot; correspond à la constante vérifiée, il parcourt la carte en boucle en stockant toutes les différentes valeurs dans des variables avant d'appeler le reste des fonctions pour préparer les classements, les défis et les listes d'amis.
+    des fonctions pour préparer les classements, les défis et les listes d'amis.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Achievements_And_Leaderboards.htm">Réalisations et classements</a></div>
+        <div style="float:right">Suivant : <a href="achievement_logout.htm"><span class="notranslate">achievement_logout</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_login
+achievement_our_info
+-->
+  <!-- TAGS
+achievement_login
+-->
+</body>
+</html>

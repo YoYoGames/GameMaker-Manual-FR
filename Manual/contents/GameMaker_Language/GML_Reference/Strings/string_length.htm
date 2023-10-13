@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>string_length</title>
+  <title>longueur_chaîne</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for string_length" />
   <meta name="rh-index-keywords" content="string_length" />
@@ -15,46 +15,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">string_length</span></h1>
-  <p>This function returns the number of characters comprising a given string. It can be useful for things like working out when to limit a custom text entry&#39;s character length (e.g.: capping a player&#39;s name to 10 characters). Remember that this is different to <a href="string_width.htm"><span class="inline">string_width()</span></a> in that it measures the number of <i>characters</i> in the string, not its width as drawn on the screen in pixels.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>longueur_chaîne</h1>
+  <p>Cette fonction renvoie le nombre de caractères composant une chaîne de caractères donnée. Elle peut être utile pour déterminer quand limiter la longueur des caractères d'une entrée de texte personnalisée (par exemple, limiter le nom d'un joueur à 10 caractères). N'oubliez pas que ce paramètre est différent de <a href="string_width.htm"><span class="inline">string_width()</span></a> en ce sens qu'elle mesure le nombre de <i>caractères</i> de la chaîne, et non sa largeur en pixels telle qu'elle est affichée à l'écran.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">string_length(string);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>string</td>
-        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The string to measure the number of characters of.</td>
+        <td><span class="notranslate">string</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Chaîne de caractères</a></span></td>
+        <td><span class="notranslate">The string to measure the number of characters of.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if (string_length(name) &gt; 10)<br />
     {<br />
         name = string_copy(name, 1, 10);<br />
     }</p>
-  <p>This will check if the string of name is greater than ten characters and if it is, it will copy and use the first ten characters only.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Cette opération vérifiera si la chaîne de caractères du nom est supérieure à dix et si c'est le cas, elle copiera et utilisera uniquement les dix premiers caractères.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Strings.htm">Strings</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="string_pos.htm">string_pos</a></div>
+        <div style="float:left">Retour : <a href="Strings.htm">Cordes</a></div>
+        <div style="float:right">Suivant : <a href="string_letters.htm"><span class="notranslate">string_letters</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 string_length

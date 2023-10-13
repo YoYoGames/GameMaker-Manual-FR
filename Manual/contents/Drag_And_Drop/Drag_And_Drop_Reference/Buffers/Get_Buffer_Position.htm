@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Get Buffer Position</title>
+  <title>Obtenir la position de la mémoire tampon</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Get Buffer Position action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Get Buffer Position" />
@@ -14,48 +14,48 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Get Buffer Position Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Get_Buffer_Position.png" /> Get Buffer Position</h1>
-  <p>This action can be used to retrieve the current position for reading/writing to the buffer. When you create a buffer, the read/write position is set at 0 bytes, and as you add data to the buffer this position will move along sequentially, meaning that
-    you can use this action to get the number of bytes into the buffer that it is set to at any time. You supply the unique buffer ID value as returned by the action <a href="Create_Buffer.htm">Create Buffer</a> and then give a target variable to return
-    the position value to. The target variable can be flagged as being a temporary local variable, in which case it will be created for you and removed from memory again at the end of the current action script or event.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Get Buffer Position Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_Get_Buffer_Position.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Obtenir la position de <span class="notranslate">Buffer</span> </h1>
+  <p>Cette action peut être utilisée pour récupérer la position actuelle de lecture/écriture sur <span class="notranslate">buffer</span>. Lorsque vous créez un <span class="notranslate">buffer</span>, la position de lecture/écriture est fixée à 0 octet, et au fur et à mesure que vous ajoutez des données sur <span class="notranslate">buffer</span>, cette position se déplace séquentiellement, ce qui signifie que
+    vous pouvez utiliser cette action pour obtenir le nombre d'octets dans le <span class="notranslate">buffer</span> qu'il est défini à tout moment. Vous fournissez la valeur d'identification unique de <span class="notranslate">buffer</span> telle qu'elle est renvoyée par l'action <a href="Create_Buffer.htm">Créer un tampon</a>, puis vous donnez une variable cible à laquelle renvoyer la valeur de position.
+    la valeur de la position. La variable cible peut être marquée comme étant une variable locale temporaire, auquel cas elle sera créée pour vous et supprimée de la mémoire à la fin du script ou de l'événement de l'action en cours.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Get Buffer Position Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Get_Buffer_Position.png" /></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Buffer</td>
-        <td>The buffer index (stored in a variable)</td>
+        <td><span class="notranslate">Buffer</span></td>
+        <td>L'indice <span class="notranslate">buffer</span> (stocké dans une variable)</td>
       </tr>
       <tr>
-        <td>Position</td>
-        <td>The read/write position (in bytes) within the buffer</td>
+        <td><span class="notranslate">Position</span></td>
+        <td>La position de lecture/écriture (en octets) dans la mémoire tampon.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Get Buffer Position Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_Get_Buffer_Position.png" />The above action block code gets the read/write position for the given buffer
-    and if it is not 0 (ie: at the start of the buffer) it is set to the start of the buffer.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus obtient la position de lecture/écriture pour le tampon donné
+    et s'il n'est pas égal à 0 (c'est-à-dire au début de <span class="notranslate">buffer</span>), il est placé au début de <span class="notranslate">buffer</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffer_Actions.htm">Buffer Actions</a></div>
-        <div style="float:right">Next: <a href="If_Buffer_Exists.htm">If Buffer Exists</a></div>
+        <div style="float:left">Retour : <a href="Buffer_Actions.htm">Actions tampon</a></div>
+        <div style="float:right">Suivant : <a href="If_Buffer_Exists.htm">Si <span class="notranslate">Buffer</span> existe</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
-Action - Get Buffer Position
+Action - Get <span class="notranslate">Buffer</span> Position
 -->
   <!-- TAGS
 action_buffer_get_position

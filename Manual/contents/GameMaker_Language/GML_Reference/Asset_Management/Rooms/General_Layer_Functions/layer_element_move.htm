@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_element_move</title>
+  <title>couche_élément_mouvement</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_element_move" />
   <meta name="rh-index-keywords" content="layer_element_move" />
@@ -14,35 +14,35 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_element_move</h1>
-  <p>You can use this function to move an element from one layer to another. You give the <b>element ID</b>, as returned by the function used to create the element or the room editor or the function <a href="layer_get_all_elements.htm"><span class="inline">layer_get_all_elements()</span></a>, and then you give the layer ID (which you get when you create the layer using <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) or the layer name (as a string - this will have a performance impact).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>couche_élément_mouvement</h1>
+  <p>Vous pouvez utiliser cette fonction pour déplacer un élément d'une couche à une autre. Vous donnez l'<b>ID de l'élément</b>, tel que renvoyé par la fonction utilisée pour créer l'élément ou l'éditeur de pièce ou la fonction <a href="layer_get_all_elements.htm"><span class="inline">layer_get_all_elements()</span></a>et ensuite vous donnez l'ID de la couche (que vous obtenez lorsque vous créez la couche en utilisant la fonction <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) ou le nom du calque (sous forme de chaîne de caractères - cela aura un impact sur les performances).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">layer_element_move(element_id, layer_id)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>element_id</td>
-        <td><span data-keyref="Type_ID_Layer_Element">Layer Element ID</span></td>
-        <td>The unique ID value of the element to move</td>
+        <td><span class="notranslate">element_id</span></td>
+        <td><span data-keyref="Type_ID_Layer_Element">ID de l'élément de couche</span></td>
+        <td><span class="notranslate">The unique ID value of the element to move</span></td>
       </tr>
       <tr>
-        <td>layer_id</td>
-        <td><span data-keyref="Type_String">String</span> or <span data-keyref="Type_ID_Layer">Layer ID</span></td>
-        <td>The unique ID value of the layer to move the element to (or the layer name as a string)</td>
+        <td><span class="notranslate">layer_id</span></td>
+        <td><span data-keyref="Type_String">Chaîne</span> ou <span data-keyref="Type_ID_Layer">ID de couche</span></td>
+        <td><span class="notranslate">The unique ID value of the layer to move the element to (or the layer name as a string)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var a = layer_get_all_elements(layer);<br />
     asset_layer = layer_create(-100);<br />
     for (var i = 0; i Alt; array_length(a); i++;)<br />
@@ -52,18 +52,18 @@
             layer_element_move(a[i], asset_layer)<br />
         }<br />
     }</p>
-  <p>The above code gets the elements on the layer that the instance running the code is assigned to, then checks them to see if they are sprite assets, and if they are then they are moved to the layer with the ID stored in the variable &quot;asset_layer&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus récupère les éléments sur la couche à laquelle l'instance qui exécute le code est assignée, puis vérifie s'il s'agit de ressources <span class="notranslate">sprite</span>. Si c'est le cas, elles sont déplacées vers la couche dont l'ID est stocké dans la variable &quot;asset_layer&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="General_Layer_Functions.htm">General Layer Functions</a></div>
-        <div style="float:right">Next: <a href="layer_set_visible.htm">layer_set_visible</a></div>
+        <div style="float:left">Retour : <a href="General_Layer_Functions.htm">Fonctions générales des couches</a></div>
+        <div style="float:right">Suivant : <a href="layer_set_visible.htm"><span class="notranslate">layer_set_visible</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_element_move

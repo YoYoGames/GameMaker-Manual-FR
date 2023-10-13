@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sprite_save</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>sauvegarde du sprite</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function sprite_save" />
   <meta name="rh-index-keywords" content="sprite_save" />
@@ -14,41 +14,41 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_save</h1>
-  <p>This function can be used to save any sub-image of a sprite to disc, giving it the specified filename. The sprite must have been <a href="sprite_add.htm">added</a> at runtime (you cannot save sprites added through the IDE) and the file must be saved with a <span class="inline">*.png</span> extension.</p>
-  <div data-conref="../../../../../assets/snippets/Note_File_Handling_Limitations.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>sauvegarde du sprite</h1>
+  <p>Cette fonction peut être utilisée pour sauvegarder sur disque toute sous-image d'un <span class="notranslate">sprite</span> en lui donnant le nom de fichier spécifié. Le site <span class="notranslate">sprite</span> doit avoir été <a href="sprite_add.htm">ajouté</a> à <span class="notranslate">runtime</span> (vous ne pouvez pas sauvegarder <span class="notranslate">sprites</span> ajouté par le biais de <span class="notranslate">IDE</span>) et le fichier doit être sauvegardé avec une extension <span class="inline">*.png</span>.</p>
+  <p class="note"><b>REMARQUE</b>: Selon la plate-forme cible choisie, vous êtes limité quant à l'endroit où vous pouvez enregistrer et charger des fichiers. Voir <a href="../../../../../Additional_Information/The_File_System.htm">Manipulation des fichiers</a> pour plus d'informations.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">sprite_save(ind, subimg, fname);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>ind</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The index of the sprite to save.</td>
+        <td><span class="notranslate">ind</span></td>
+        <td><span data-keyref="Type_Asset_Sprite">Sprite Asset</span></td>
+        <td><span class="notranslate">The index of the sprite to save.</span></td>
       </tr>
       <tr>
-        <td>subimg</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The sub-image of the sprite to save.</td>
+        <td><span class="notranslate">subimg</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The sub-image of the sprite to save.</span></td>
       </tr>
       <tr>
-        <td>fname</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The filename for the saved sprite.</td>
+        <td><span class="notranslate">fname</span></td>
+        <td><span data-keyref="Type_String">Chaîne de caractères</span></td>
+        <td><span class="notranslate">The filename for the saved sprite.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns</h4>
+  <p> </p>
+  <h4>Renvoie à</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var surf, spr_custom;<br />
     surf = surface_create(32, 32);<br />
     surface_set_target(surf);<br />
@@ -61,18 +61,18 @@
     surface_free(surf);<br />
     sprite_save(spr_custom, 0, &quot;Player_Custom_Sprite.png&quot;);<br />
     sprite_delete(spr_Custom);</p>
-  <p>The above code creates a surface and stores its index in the local variable &quot;surf&quot;. It then targets that surface, clears it and draws several sprites on top of each other. It creates a new sprite from the composite image drawn on the surface and assigns its index to the local variable &quot;spr_Custom&quot; before freeing up the memory used by the surface. Finally, the resulting sprite is saved to a file and then removed from memory too.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus crée une surface et stocke son index dans la variable locale &quot;surf&quot;. Il cible ensuite cette surface, la vide et dessine plusieurs <span class="notranslate">sprites</span> les uns sur les autres. Il crée un nouveau <span class="notranslate">sprite</span> à partir de l'image composite dessinée sur la surface et affecte son index à la variable locale &quot;spr_Custom&quot; avant de libérer la mémoire utilisée par la surface. Enfin, le <span class="notranslate">sprite</span> résultant est sauvegardé dans un fichier, puis supprimé de la mémoire également.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_save_strip.htm">sprite_save_strip</a></div>
+        <div style="float:left">Retour : <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div>
+        <div style="float:right">Suivant : <a href="sprite_save_strip.htm"><span class="notranslate">sprite_save_strip</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_save

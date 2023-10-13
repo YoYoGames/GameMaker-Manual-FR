@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>file_find_next</title>
+  <title>fichier_trouver_suivant</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for file_find_next" />
   <meta name="rh-index-keywords" content="file_find_next" />
@@ -14,18 +14,18 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>file_find_next</h1>
-  <p>This function returns the name of the next file that satisfies the previously given mask and the attributes (defined by <a href="file_find_first.htm"><span class="inline">file_find_first()</span></a>). If no such file exists, the empty string is returned.</p>
-  <p class="note"><b></b>WARNING This function may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on the <a href="../../../../Additional_Information/The_File_System.htm">File System</a> for more information.</p>
-  <p class="note">NOTE This function works on all the C++ target platforms (Windows, Mac, iOS, Android), BUT the filter flags only work on Windows.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>fichier_trouver_suivant</h1>
+  <p>Cette fonction renvoie le nom du prochain fichier qui satisfait au masque précédemment donné et aux attributs (définis par <a href="file_find_first.htm"><span class="inline">file_find_first()</span></a>). Si un tel fichier n'existe pas, la chaîne vide est retournée.</p>
+  <p class="note"><b></b>AVERTISSEMENT Il se peut que cette fonction ne fonctionne pas comme vous l'attendez, car <span data-keyref="GameMaker Name">GameMaker</span> est protégé par un bac à sable ! Veuillez consulter la section sur le <a href="../../../../Additional_Information/The_File_System.htm">système de fichiers</a> pour plus d'informations.</p>
+  <p class="note">NOTE Cette fonction fonctionne sur toutes les plateformes cibles C++ (<span class="notranslate">Windows</span>, Mac, <span class="notranslate">iOS</span>, <span class="notranslate">Android</span>), MAIS le filtre <span class="notranslate">flags</span> ne fonctionne que sur <span class="notranslate">Windows</span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">file_find_next();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_String"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if directory_exists(&quot;\User Content&quot;)<br />
     {<br />
         fileA = file_find_first(&quot;/User Content/*.doc&quot;, fa_readonly);<br />
@@ -33,8 +33,8 @@
         fileC = file_find_next();<br />
         file_find_close();<br />
     }</p>
-  <p>This code checks if the specified directory exists and if it does, goes there and returns the first &quot;read only&quot; <span class="inline">.doc</span> file found. It then looks for two more files and closes the file finder.</p>
-  <p>You can look for any number of files using a <a href="../../../GML_Overview/Language_Features/while.htm">while</a> loop:</p>
+  <p>Ce code vérifie si le répertoire spécifié existe et si c'est le cas, il s'y rend et renvoie le premier fichier &quot;en lecture seule&quot; <span class="inline">.doc</span> trouvé. Il recherche ensuite deux autres fichiers et ferme l'outil de recherche de fichiers.</p>
+  <p>Vous pouvez rechercher un nombre quelconque de fichiers en utilisant une <a href="../../../GML_Overview/Language_Features/while.htm"><span class="notranslate">while</span></a> boucle :</p>
   <p class="code">var files = [];<br />
     var file_name = file_find_first(&quot;/User Content/*.doc&quot;, fa_readonly);<br />
     <br />
@@ -47,18 +47,18 @@
     <br />
     file_find_close();
   </p>
-  <p>The above code creates an empty array to store all the file names that were found, and starts looking for read only <span class="inline">.doc</span> files. If that file name is not an empty string, it pushes it into the <span class="inline">files</span> array, and then attempts to find the next file. The loop will keep repeating until an empty string is found (meaning there are no more matching files), which is when it ends the loop and closes the file finder at the end.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus crée un tableau vide pour stocker tous les noms de fichiers qui ont été trouvés, et commence à chercher les fichiers en lecture seule <span class="inline">.doc</span>. Si ce nom de fichier n'est pas une chaîne vide, il le place dans le tableau <span class="inline">files</span>, puis tente de trouver le fichier suivant. La boucle se répète jusqu'à ce qu'une chaîne vide soit trouvée (ce qui signifie qu'il n'y a plus de fichiers correspondants), ce qui met fin à la boucle et ferme le chercheur de fichiers à la fin.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="File_System.htm">File System</a></div>
-        <div style="float:right">Next: <a href="file_find_close.htm">file_find_close</a></div>
+        <div style="float:left">Retour : <a href="File_System.htm">Système de fichiers</a></div>
+        <div style="float:right">Suivant : <a href="file_find_close.htm"><span class="notranslate">file_find_close</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 file_find_next

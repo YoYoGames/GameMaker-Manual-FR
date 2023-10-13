@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physics_world_create</title>
+  <title>physique_monde_créer</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference pagefor physics_world_create" />
   <meta name="rh-index-keywords" content="physics_world_create" />
@@ -15,46 +15,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_world_create</h1>
-  <p>Even if you have defined the physics for your objects, without a world to place them in they will default to the traditional <span data-keyref="GameMaker Name">GameMaker</span> collision system, so you need this function to create the physics system for the specified room either
-    in an object event, or the creation code of the room itself (it can also be defined without using code in the room editor). This function will associate a physics &quot;world&quot; with the room and all instances created in the room will behave using
-    the physics that has been defined for them and the world itself.</p>
-  <p><img alt="Physics world illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_world_create_image.png" />You&#39;ll notice that we have an argument that defines a ratio between pixel size and metres.
-    This is because the physics functions work using real-world measurements and thus we must translate pixel coordinates and pixel sizes into these real-world measurements using a &quot;pixel to metre scale&quot;. You&#39;ll want to adjust the <i>pixeltometrescale</i>    setting until the average pixel size of the objects you are using translates roughly into simulated physics objects of an appropriate size, and above you can see that we have set it to 32 pixels being the equivalent of 1 metre. It should be noted
-    that the physics system will work with larger and smaller ratios, but that the best performance is when the real world measurements of your objects are no less than 0.1 metres and no more than 50 metres.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>physique_monde_créer</h1>
+  <p>Même si vous avez défini la physique de vos objets, sans un monde dans lequel les placer, ils utiliseront par défaut le système de collision traditionnel de <span data-keyref="GameMaker Name">GameMaker</span>, vous avez donc besoin de cette fonction pour créer le système physique de la pièce spécifiée soit
+    dans un événement d'objet, ou dans le code de création de la pièce elle-même (il peut aussi être défini sans utiliser de code dans l'éditeur de pièce). Cette fonction associera un &quot;monde&quot; physique à la room et toutes les instances créées dans la room se comporteront en utilisant la physique qui a été définie pour la room.
+    la physique qui a été définie pour elles et le monde lui-même.</p>
+  <p><img>Vous remarquerez que nous avons un argument qui définit un rapport entre la taille des pixels et les mètres.
+    En effet, les fonctions physiques utilisent des mesures du monde réel et nous devons donc traduire les coordonnées et la taille des pixels dans ces mesures du monde réel en utilisant une &quot;échelle pixel-mètre&quot;. Vous voudrez ajuster le paramètre <i>pixeltometrescale</i> jusqu'à ce que la taille moyenne des pixels des objets que vous utilisez se traduise approximativement en objets physiques simulés d'une taille appropriée. Ci-dessus, vous pouvez voir que nous l'avons réglé sur 32 pixels, soit l'équivalent d'un mètre. Il convient de noter que
+    que le système physique fonctionnera avec des rapports plus grands ou plus petits, mais que les meilleures performances sont obtenues lorsque les mesures réelles de vos objets ne sont pas inférieures à 0,1 mètre et ne dépassent pas 50 mètres.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">physics_world_create(pixeltometrescale);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>pixeltometrescale</td><td><span data-keyref="Type_Real"></span></td>
-        <td>defines the ratio of pixels on screen to metres in the real world. A ratio of 32:1 will be specified as 1/32 (or 0.03125).</td>
+        <td><span class="notranslate">pixeltometrescale</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">defines the ratio of pixels on screen to metres in the real world. A ratio of 32:1 will be specified as 1/32 (or 0.03125).</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">physics_world_create(1/32);</p>
-  <p>The above code will create a physics world in the current room with a scale ratio of 32 pixels being the equivalent of 1 metre.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus va créer un monde physique dans la pièce actuelle avec un rapport d'échelle de 32 pixels, soit l'équivalent d'un mètre.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="The_Physics_World.htm">The Physics World</a></div>
-        <div style="float:right">Next: <a href="physics_world_gravity.htm">physics_world_gravity</a></div>
+        <div style="float:left">Retour : <a href="The_Physics_World.htm">Le monde de la physique</a></div>
+        <div style="float:right">Suivant : <a href="physics_world_gravity.htm"><span class="notranslate">physics_world_gravity</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_world_create

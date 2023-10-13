@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Value</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Valeur du tirage au sort</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Draw Value action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Draw Value" />
@@ -14,51 +14,55 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Draw Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Value.png" /> Draw Value</h1>
-  <p>With this action you can draw a string caption and/or a variable or value to the screen. The caption argument is a string that you wish to add preceding the value, and can be left blank if required but if you wish to include text it should be wrapped in quotes, and the value can be a variable, a fixed value, or another string - in which case it should be enclosed in quotes too - but it cannot be left blank. You then give the position where the string should be drawn, either as an absolute position or as a position relative to the instance drawing the text. Note that how the text will look when drawn will depend on the font used, the colour used, and the alignment. All these things can be changed before drawing, as shown in the example below.</p>
-  <div data-conref="../../../assets/snippets/Note_Action_Only_For_Draw_Events.hts"> </div>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Draw Value Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Value.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Valeur du tirage au sort</h1>
+  <p>Avec cette action, vous pouvez dessiner une légende de chaîne et/ou une variable ou une valeur à l'écran. L'argument de la légende est une chaîne que vous souhaitez ajouter avant la valeur, et peut être laissé vide si nécessaire, mais si vous souhaitez inclure du texte, il doit être entouré de guillemets.
+    entre guillemets, et la valeur peut être une variable, une valeur fixe ou une autre chaîne - dans ce cas, elle doit également être placée entre guillemets - mais elle ne peut pas être laissée vide. Vous indiquez ensuite la position où la chaîne de caractères doit être dessinée, soit en tant que position absolue
+    ou une position relative à l'instance qui dessine le texte. Notez que l'aspect du texte une fois dessiné dépendra de la police utilisée, de la couleur utilisée et de l'alignement. Tous ces éléments peuvent être modifiés avant le dessin, comme le montre l'exemple ci-dessous.</p>
+  <p class="note"><b>REMARQUE</b>: Cette action est uniquement destinée à être utilisée dans les différents <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">événements de tirage au sort</a>, et ne tirera rien si elle est utilisée ailleurs.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Draw Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Value.png" /></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Caption</td>
-        <td>The caption to draw (a string), can be left blank</td>
+        <td><span class="notranslate">Caption</span></td>
+        <td>La légende à dessiner (une chaîne de caractères), peut être laissée vide.</td>
       </tr>
       <tr>
-        <td>Value</td>
-        <td>The value to draw (real, variable or string)</td>
+        <td><span class="notranslate">Value</span></td>
+        <td>La valeur à dessiner (réel, variable ou chaîne)</td>
       </tr>
       <tr>
-        <td>x</td>
-        <td>The x position to draw at</td>
+        <td><span class="notranslate">x</span></td>
+        <td>La position x à dessiner</td>
       </tr>
       <tr>
-        <td>y</td>
-        <td>The y position to draw at</td>
+        <td><span class="notranslate">y</span></td>
+        <td>La position y à dessiner</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Draw Value Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Value.png" />The above action block code sets a font, the font colour and then aligns the text to draw from the center before actually drawing the &quot;<span class="inline">level_num</span>&quot; value along with the caption &quot;Level: &quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus définit une police, la couleur de la police et aligne ensuite le texte pour qu'il soit dessiné à partir du centre avant de dessiner réellement la valeur "  " avec la légende " Niveau : ".
+    avant d'afficher la valeur &quot;<span class="inline">level_num</span>&quot; et la légende &quot; Niveau : &quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Transformed_Value.htm">Draw Transformed Value</a></div>
+        <div style="float:left">Retour : <a href="Drawing_Actions.htm">Actions de dessin</a></div>
+        <div style="float:right">Suivant : <a href="Draw_Transformed_Value.htm">Dessiner une valeur transformée</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Draw Value

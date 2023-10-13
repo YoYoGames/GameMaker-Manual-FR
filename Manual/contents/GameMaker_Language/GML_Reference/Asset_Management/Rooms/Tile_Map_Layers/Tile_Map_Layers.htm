@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Tile Map Layers</title>
+  <title>Les couches de la carte Tile</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the different functions and variables associated with Tile Map Layers" />
   <meta name="rh-index-keywords" content="" />
@@ -14,72 +14,72 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Tile Map Layers</h1>
-  <p>The <span data-keyref="GameMaker Name">GameMaker</span> <a href="../../../../../The_Asset_Editors/Rooms.htm">Room Editor</a> permits you to add tiles into any given room using <i>layers</i>. As the name implies, a tile map layer is simply a collection of tile set tiles that are all considered to be at the same depth within the room, and by stacking layers you can make some things draw over or under others. You can also control certain aspects of layers from code, adding or removing things, or changing certain properties of the layer or what it contains at run time. Note that in the room editor you are limited to one tile map per layer (the <a href="../../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm"><i>Tile Layer</i></a>), but when working with them in code, you can have multiple tile maps assigned to a single layer, with each map having its own unique ID and properties, so:</p>
+  <h1>Les couches de la carte Tile</h1>
+  <p>L'<a href="../../../../../The_Asset_Editors/Rooms.htm">éditeur de pièces de</a> <span data-keyref="GameMaker Name">GameMaker</span> vous permet d'ajouter des tuiles dans une pièce donnée en utilisant des <i>calques</i>. Comme son nom l'indique, un calque de carte de tuiles est simplement une collection de tuiles de jeu qui sont toutes considérées comme étant à la même profondeur dans la pièce. En empilant les calques, vous pouvez faire en sorte que certains éléments soient dessinés au-dessus ou en dessous d'autres. Vous pouvez également contrôler certains aspects des couches à partir du code, en ajoutant ou en supprimant des éléments, ou en modifiant certaines propriétés de la couche ou de ce qu'elle contient au moment de l'exécution. Notez que dans l'éditeur de salle, vous êtes limité à une carte de tuiles par couche (l'icône <a href="../../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm"><i>Calque de tuile</i></a>), mais lorsque vous travaillez avec eux dans le code, vous pouvez avoir plusieurs cartes de tuiles affectées à une seule couche, avec chaque carte ayant son propre ID unique et ses propriétés, comme suit :</p>
   <ul class="colour">
-    <li>The <i>tile set</i> is the resource that you use to create tile layers and tile maps</li>
-    <li>The <i>tile layer</i> is what you create in the Room Editor to add tile sets to</li>
-    <li>The <i>tile map</i> is what you call the collection of tiles that are added to a layer, either in the room editor or through code, as a single element on that layer</li>
+    <li>Le <i>jeu de tuiles</i> est la ressource que vous utilisez pour créer des couches de tuiles et des cartes de tuiles.</li>
+    <li>La <i>couche de carreaux</i> est celle que vous créez dans l'éditeur de pièce pour ajouter des ensembles de carreaux à la pièce.</li>
+    <li>La <i>carte des tuiles</i> est ce que vous appelez la collection de tuiles qui sont ajoutées à une couche, soit dans l'éditeur de pièces, soit par le biais du code, comme un élément unique sur cette couche.</li>
   </ul>
-  <p>Below is a list of all the functions that can be used for editing <b>tile map layers</b>:</p>
+  <p>Vous trouverez ci-dessous une liste de toutes les fonctions qui peuvent être utilisées pour modifier les <b>couches de la carte des tuiles</b>:</p>
   <ul class="colour">
-    <li><a href="layer_tilemap_get_id.htm">layer_tilemap_get_id</a></li>
-    <li><a href="layer_tilemap_exists.htm">layer_tilemap_exists</a></li>
-    <li><a href="layer_tilemap_create.htm">layer_tilemap_create</a></li>
-    <li><a href="layer_tilemap_destroy.htm">layer_tilemap_destroy</a></li>
-    <li><a href="tilemap_tileset.htm">tilemap_tileset</a></li>
-    <li><a href="tilemap_clear.htm">tilemap_clear</a></li>
-    <li><a href="tilemap_x.htm">tilemap_x</a></li>
-    <li><a href="tilemap_y.htm">tilemap_y</a></li>
-    <li><a href="tilemap_set.htm">tilemap_set</a></li>
-    <li><a href="tilemap_set_at_pixel.htm">tilemap_set_at_pixel</a></li>
-    <li><a href="tilemap_set_mask.htm">tilemap_set_mask</a></li>
-    <li><a href="tilemap_set_global_mask.htm">tilemap_set_global_mask</a></li>
-    <li><a href="tilemap_set_width.htm">tilemap_set_width</a></li>
-    <li><a href="tilemap_set_height.htm">tilemap_set_height</a></li>
-    <li><a href="tilemap_get_mask.htm">tilemap_get_mask</a></li>
-    <li><a href="tilemap_get_global_mask.htm">tilemap_get_global_mask</a></li>
-    <li><a href="tilemap_get_tileset.htm">tilemap_get_tileset</a></li>
-    <li><a href="tilemap_get_frame.htm">tilemap_get_frame</a></li>
-    <li><a href="tilemap_get_tile_width.htm">tilemap_get_tile_width</a></li>
-    <li><a href="tilemap_get_tile_height.htm">tilemap_get_tile_height</a></li>
-    <li><a href="tilemap_get_width.htm">tilemap_get_width</a></li>
-    <li><a href="tilemap_get_height.htm">tilemap_get_height</a></li>
-    <li><a href="tilemap_get_x.htm">tilemap_get_x</a></li>
-    <li><a href="tilemap_get_y.htm">tilemap_get_y</a></li>
-    <li><a href="tilemap_get.htm">tilemap_get</a></li>
-    <li><a href="tilemap_get_at_pixel.htm">tilemap_get_at_pixel</a></li>
-    <li><a href="tilemap_get_cell_x_at_pixel.htm">tilemap_get_cell_x_at_pixel</a></li>
-    <li><a href="tilemap_get_cell_y_at_pixel.htm">tilemap_get_cell_y_at_pixel</a></li>
-    <li><a href="../../../Drawing/Sprites_And_Tiles/draw_tilemap.htm">draw_tilemap</a></li>
+    <li><a href="layer_tilemap_get_id.htm"><span class="notranslate">layer_tilemap_get_id</span></a></li>
+    <li><a href="layer_tilemap_exists.htm"><span class="notranslate">layer_tilemap_exists</span></a></li>
+    <li><a href="layer_tilemap_create.htm"><span class="notranslate">layer_tilemap_create</span></a></li>
+    <li><a href="layer_tilemap_destroy.htm"><span class="notranslate">layer_tilemap_destroy</span></a></li>
+    <li><a href="tilemap_tileset.htm"><span class="notranslate">tilemap_tileset</span></a></li>
+    <li><a href="tilemap_clear.htm"><span class="notranslate">tilemap_clear</span></a></li>
+    <li><a href="tilemap_x.htm"><span class="notranslate">tilemap_x</span></a></li>
+    <li><a href="tilemap_y.htm"><span class="notranslate">tilemap_y</span></a></li>
+    <li><a href="tilemap_set.htm"><span class="notranslate">tilemap_set</span></a></li>
+    <li><a href="tilemap_set_at_pixel.htm"><span class="notranslate">tilemap_set_at_pixel</span></a></li>
+    <li><a href="tilemap_set_mask.htm"><span class="notranslate">tilemap_set_mask</span></a></li>
+    <li><a href="tilemap_set_global_mask.htm"><span class="notranslate">tilemap_set_global_mask</span></a></li>
+    <li><a href="tilemap_set_width.htm"><span class="notranslate">tilemap_set_width</span></a></li>
+    <li><a href="tilemap_set_height.htm"><span class="notranslate">tilemap_set_height</span></a></li>
+    <li><a href="tilemap_get_mask.htm"><span class="notranslate">tilemap_get_mask</span></a></li>
+    <li><a href="tilemap_get_global_mask.htm"><span class="notranslate">tilemap_get_global_mask</span></a></li>
+    <li><a href="tilemap_get_tileset.htm"><span class="notranslate">tilemap_get_tileset</span></a></li>
+    <li><a href="tilemap_get_frame.htm"><span class="notranslate">tilemap_get_frame</span></a></li>
+    <li><a href="tilemap_get_tile_width.htm"><span class="notranslate">tilemap_get_tile_width</span></a></li>
+    <li><a href="tilemap_get_tile_height.htm"><span class="notranslate">tilemap_get_tile_height</span></a></li>
+    <li><a href="tilemap_get_width.htm"><span class="notranslate">tilemap_get_width</span></a></li>
+    <li><a href="tilemap_get_height.htm"><span class="notranslate">tilemap_get_height</span></a></li>
+    <li><a href="tilemap_get_x.htm"><span class="notranslate">tilemap_get_x</span></a></li>
+    <li><a href="tilemap_get_y.htm"><span class="notranslate">tilemap_get_y</span></a></li>
+    <li><a href="tilemap_get.htm"><span class="notranslate">tilemap_get</span></a></li>
+    <li><a href="tilemap_get_at_pixel.htm"><span class="notranslate">tilemap_get_at_pixel</span></a></li>
+    <li><a href="tilemap_get_cell_x_at_pixel.htm"><span class="notranslate">tilemap_get_cell_x_at_pixel</span></a></li>
+    <li><a href="tilemap_get_cell_y_at_pixel.htm"><span class="notranslate">tilemap_get_cell_y_at_pixel</span></a></li>
+    <li><a href="../../../Drawing/Sprites_And_Tiles/draw_tilemap.htm"><span class="notranslate">draw_tilemap</span></a></li>
   </ul>
-  <p> </p>
-  <p>Apart from the functions listed above to set tile maps, you also have a number of functions that can be used to manipulate the data of individual tiles. A &quot;blob&quot; of tile data is made up of the tile index plus a few extra bits to show whether the tile has been rotated, flipped or mirrored. You also have the possibility of adding your own bit-mask to the tile data, although this is for advanced users only as you will be masking off bits that are reserved for the tile index - essentially there are 19 bits reserved for your tile indices, but if you only use 8 of them, then you have eleven bits left over that can be used to create a custom mask. This mask can then be used and checked in code to create custom tile collisions or whatever. However, you would normally not need to create your own tile data blobs, and would instead use the function <a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a> to get the tile data, then you would manipulate it using the functions below, and then you would set it again using <a href="tilemap_set.htm"><span class="inline">tilemap_set()</span></a>.</p>
-  <p>Below is a list of all the functions that can be used for editing individual <b>tiles</b>:</p>
+  <p> </p>
+  <p>Outre les fonctions énumérées ci-dessus pour définir les cartes de tuiles, vous disposez également d'un certain nombre de fonctions qui peuvent être utilisées pour manipuler les données des tuiles individuelles. Un &quot;blob&quot; de données de tuiles est composé de l'index de la tuile plus quelques bits supplémentaires pour indiquer si la tuile a été tournée, retournée ou mise en miroir. Vous avez également la possibilité d'ajouter votre propre masque de bits aux données des tuiles, bien que cela soit réservé aux utilisateurs avancés, car vous masquerez les bits réservés à l'index des tuiles - il y a essentiellement 19 bits réservés à vos index de tuiles, mais si vous n'en utilisez que 8, il vous reste 11 bits qui peuvent être utilisés pour créer un masque personnalisé. Ce masque peut ensuite être utilisé et vérifié dans le code pour créer des collisions de tuiles personnalisées ou autre. Cependant, vous n'aurez normalement pas besoin de créer vos propres blobs de données de tuiles, et vous utiliserez plutôt la fonction <a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a> pour obtenir les données des tuiles, puis vous les manipulerez à l'aide des fonctions ci-dessous, et enfin vous les redéfinirez à l'aide de la fonction <a href="tilemap_set.htm"><span class="inline">tilemap_set()</span></a>.</p>
+  <p>Vous trouverez ci-dessous une liste de toutes les fonctions qui peuvent être utilisées pour modifier des <b>tuiles</b> individuelles :</p>
   <ul class="colour">
-    <li><a href="tile_get_empty.htm">tile_get_empty</a></li>
-    <li><a href="tile_get_index.htm">tile_get_index</a></li>
-    <li><a href="tile_get_flip.htm">tile_get_flip</a></li>
-    <li><a href="tile_get_mirror.htm">tile_get_mirror</a></li>
-    <li><a href="tile_get_rotate.htm">tile_get_rotate</a></li>
-    <li><a href="tile_set_empty.htm">tile_set_empty</a></li>
-    <li><a href="tile_set_index.htm">tile_set_index</a></li>
-    <li><a href="tile_set_flip.htm">tile_set_flip</a></li>
-    <li><a href="tile_set_mirror.htm">tile_set_mirror</a></li>
-    <li><a href="tile_set_rotate.htm">tile_set_rotate</a></li>
-    <li><a href="../../../Drawing/Sprites_And_Tiles/draw_tile.htm">draw_tile</a></li>
+    <li><a href="tile_get_empty.htm"><span class="notranslate">tile_get_empty</span></a></li>
+    <li><a href="tile_get_index.htm"><span class="notranslate">tile_get_index</span></a></li>
+    <li><a href="tile_get_flip.htm"><span class="notranslate">tile_get_flip</span></a></li>
+    <li><a href="tile_get_mirror.htm"><span class="notranslate">tile_get_mirror</span></a></li>
+    <li><a href="tile_get_rotate.htm"><span class="notranslate">tile_get_rotate</span></a></li>
+    <li><a href="tile_set_empty.htm"><span class="notranslate">tile_set_empty</span></a></li>
+    <li><a href="tile_set_index.htm"><span class="notranslate">tile_set_index</span></a></li>
+    <li><a href="tile_set_flip.htm"><span class="notranslate">tile_set_flip</span></a></li>
+    <li><a href="tile_set_mirror.htm"><span class="notranslate">tile_set_mirror</span></a></li>
+    <li><a href="tile_set_rotate.htm"><span class="notranslate">tile_set_rotate</span></a></li>
+    <li><a href="../../../Drawing/Sprites_And_Tiles/draw_tile.htm"><span class="notranslate">draw_tile</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Rooms.htm">Rooms</a></div>
-        <div style="float:right">Next: <a href="../Background_Layers/Background_Layers.htm">Background Layers</a></div>
+        <div style="float:left">Retour : <a href="../Rooms.htm">Pièces</a></div>
+        <div style="float:right">Suivant : <a href="../Background_Layers/Background_Layers.htm">Calques d'arrière-plan</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Tile Map Layers

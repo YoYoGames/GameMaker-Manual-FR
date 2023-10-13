@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>audio_emitter_free</title>
+  <title>audio_émetteur_libre</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function audio_emitter_free" />
   <meta name="rh-index-keywords" content="audio_emitter_free" />
@@ -14,47 +14,47 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_emitter_free</h1>
-  <p>With this function you can remove the given emitter from memory. This should always be done whenever the emitter is not going to be used further in the room or the game, ie: in the <a href="../../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Destroy Event</a> of the instance or in the <a href="../../../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Room End Event</a>, otherwise you may end up with a memory leak that will slow down and eventually crash your game.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>audio_émetteur_libre</h1>
+  <p>Avec cette fonction, vous pouvez supprimer l'emitter donné de la mémoire. Cette opération doit toujours être effectuée lorsque l'émetteur n'est plus utilisé dans la pièce ou dans le jeu, c'est-à-dire dans l'<a href="../../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">événement Destroy</a> de l'instance ou dans l'<a href="../../../../../The_Asset_Editors/Object_Properties/Other_Events.htm">événement Room End</a>, sinon vous risquez de vous retrouver avec une fuite de mémoire qui ralentira et fera planter votre jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">audio_emitter_free(emitter);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>emitter</td>
-        <td><span data-keyref="Type_ID_Audio_Emitter">Audio Emitter ID</span></td>
-        <td>The index of the emitter to free.</td>
+        <td><span class="notranslate">emitter</span></td>
+        <td><span data-keyref="Type_ID_Audio_Emitter">ID de l'émetteur audio</span></td>
+        <td><span class="notranslate">The index of the emitter to free.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if lives = 0<br />
     {<br />
         audio_emitter_free(s_emit);<br />
         room_goto(rm_Menu);<br />
     }</p>
-  <p>The above code checks the value of the global variable &quot;lives&quot; and if it returns 0, it will destroy the emitter indexed in the variable &quot;s_emit&quot; and then go to the room indexed in the variable &quot;rm_Menu&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifie la valeur de la variable globale &quot;lives&quot; et s'il retourne 0, il détruira l'emitter indexé dans la variable &quot;s_emit&quot; et ira ensuite dans la salle indexée dans la variable &quot;rm_Menu&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Audio_Emitters.htm">Audio Emitters</a></div>
-        <div style="float:right">Next: <a href="audio_play_sound_on.htm">audio_play_sound_on</a></div>
+        <div style="float:left">Retour : <a href="Audio_Emitters.htm">Émetteurs audio</a></div>
+        <div style="float:right">Suivant : <a href="audio_play_sound_on.htm"><span class="notranslate">audio_play_sound_on</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 audio_emitter_free

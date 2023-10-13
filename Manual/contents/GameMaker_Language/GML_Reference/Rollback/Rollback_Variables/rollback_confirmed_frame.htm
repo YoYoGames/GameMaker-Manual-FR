@@ -4,10 +4,10 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>rollback_confirmed_frame</title>
+  <title>cadre_confirmé de retour en arrière</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="condition-tags" content="Export:Beta" />
@@ -15,18 +15,18 @@
   <meta name="search-keywords" content="rollback_confirmed_frame" />
 </head>
 <body>
-  <h1>rollback_confirmed_frame</h1>
-  <p>This global variable stores the last frame number where inputs for all players were synchronised and confirmed.</p>
-  <p>You can compare this to <span class="inline"><a data-xref="{title}" href="rollback_current_frame.htm">rollback_current_frame</a></span> to check if the current frame has confirmed inputs for all players.</p>
-  <p>You can also use the function <span class="inline"><a href="../Rollback_Functions/rollback_sync_on_frame.htm">rollback_sync_on_frame()</a></span> to check if the current frame is synchronised.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>cadre_confirmé de retour en arrière</h1>
+  <p>Cette variable globale stocke le dernier numéro de trame où les entrées de tous les joueurs ont été synchronisées et confirmées.</p>
+  <p>Vous pouvez comparer cela à <span class="inline"><a data-xref="{title}" href="rollback_current_frame.htm">rollback_current_frame</a></span> pour vérifier si la trame actuelle a des entrées confirmées pour tous les joueurs.</p>
+  <p>Vous pouvez également utiliser la fonction <span class="inline"><a href="../Rollback_Functions/rollback_sync_on_frame.htm">rollback_sync_on_frame()</a></span> pour vérifier si la trame actuelle est synchronisée.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">rollback_confirmed_frame</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var _is_frame_confirmed = (rollback_current_frame == rollback_confirmed_frame);<br />
     <br />
     if (_is_frame_confirmed)<br />
@@ -34,19 +34,19 @@
         evaluate_game_over();<br />
     }
   </p>
-  <p>This code checks if the current frame has confirmed inputs from all players, by checking if the <a href="rollback_current_frame.htm">current frame value</a> is equal to the <strong>confirmed frame value</strong>.</p>
-  <p>If that is true, it runs a function to check if the game over condition has been satisfied, so it can end the game.</p>
-  <p>This is done to avoid a prediction-based state ending the game, and waits for a fully synchronised frame before attempting to check game over conditions.</p>
-  <p> </p>
-  <p> </p>
+  <p>Ce code vérifie si le cadre actuel a des entrées confirmées de tous les joueurs, en vérifiant si la <a href="rollback_current_frame.htm">valeur du cadre actuel</a> est égale à la <strong>valeur du cadre confirmé</strong>.</p>
+  <p>Si c'est le cas, il exécute une fonction pour vérifier si la condition de fin de partie a été satisfaite, afin de pouvoir mettre fin à la partie.</p>
+  <p>Ceci est fait pour éviter un état de fin de jeu basé sur la prédiction, et attend une trame entièrement synchronisée avant de tenter de vérifier les conditions de fin de jeu.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Variables.htm">Rollback Variables</a></div>
-        <div>Next: <a data-xref="{title}" href="rollback_current_frame.htm">rollback_current_frame</a></div>
+        <div>Retour : <a data-xref="{title}" href="Rollback_Variables.htm">Variables de retour en arrière</a></div>
+        <div>Suivant : <a data-xref="{title}" href="rollback_current_frame.htm">rollback_current_frame</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_confirmed_frame

@@ -6,7 +6,7 @@
   <title>json_decode</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for json_decode" />
   <meta name="rh-index-keywords" content="json_decode" />
@@ -16,44 +16,44 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>json_decode</h1>
-  <h3><strong>IMPORTANT!</strong> This function - while still valid - has been superseded by the function <span class="inline"><a href="json_parse.htm">json_parse()</a></span>, and we recommend that you only use this function for legacy support.</h3>
-  <p>JSON (JavaScript Object Notation) is a lightweight data-interchange format which is easy for to read and write, for both people and machines. It is built on two basic structures:</p>
+  <h3><strong>IMPORTANT !</strong> Cette fonction - bien qu'elle soit toujours valide - a été remplacée par la fonction <span class="inline"><a href="json_parse.htm">json_parse()</a></span>, et nous vous recommandons de ne l'utiliser que pour le support historique.</h3>
+  <p>JSON (JavaScript Object Notation) est un format d'échange de données léger, facile à lire et à écrire, tant pour les personnes que pour les machines. Il repose sur deux structures de base :</p>
   <ul class="colour">
-    <li>A collection of name/value pairs, called a <a href="../../Data_Structures/DS_Maps/DS_Maps.htm"><span class="inline">DS Map</span></a> in <span data-keyref="GameMaker Name">GameMaker</span> but also known as a &quot;dictionary&quot; or &quot;object&quot;.</li>
-    <li>An ordered list of values, called a <a href="../../Data_Structures/DS_Lists/DS_Lists.htm"><span class="inline">DS List</span></a> in <span data-keyref="GameMaker Name">GameMaker</span> but this can also be called an &quot;array&quot; or &quot;sequence&quot;.</li>
+    <li>Une collection de paires nom/valeur, appelée un <a href="../../Data_Structures/DS_Maps/DS_Maps.htm"><span class="inline">DS Map</span></a> dans <span data-keyref="GameMaker Name">GameMaker</span> mais également appelé &quot;dictionnaire&quot; ou &quot;objet&quot;.</li>
+    <li>Une liste ordonnée de valeurs, appelée <a href="../../Data_Structures/DS_Lists/DS_Lists.htm"><span class="inline">DS List</span></a> dans <span data-keyref="GameMaker Name">GameMaker</span>, mais on peut aussi l'appeler un &quot;tableau&quot; ou une &quot;séquence&quot;.</li>
   </ul>
-  <p>With this function, you can decode a piece of JSON and convert it into a <span class="inline">DS Map</span>, ready for use in <span data-keyref="GameMaker Name">GameMaker</span>. If the JSON to be decoded requires a hierarchy of lists and maps within the central DS map, these are decoded too and also created for you, using the following rules (note that these rules apply to the top-level structure only):</p>
+  <p>Cette fonction vous permet de décoder un morceau de JSON et de le convertir en <span class="inline">DS Map</span>, prêt à être utilisé dans <span data-keyref="GameMaker Name">GameMaker</span>. Si le JSON à décoder nécessite une hiérarchie de listes et de cartes au sein de la carte DS centrale, celles-ci sont également décodées et créées pour vous, selon les règles suivantes (notez que ces règles ne s'appliquent qu'à la structure de niveau supérieur) :</p>
   <ul class="colour">
-    <li><strong><i>JSON is a single value</i></strong> - returns a DS map with a single entry &quot;default&quot; that is the value</li>
-    <li><strong><i>JSON is an array of objects or values</i></strong> - returns a DS map with a single entry &quot;default&quot; that is a DS list of the objects or values</li>
-    <li><strong><i>JSON is an object</i></strong> - returns a DS map that has the object entries in it</li>
+    <li><strong><i>JSON est une valeur unique</i></strong> - renvoie une carte DS avec une seule entrée &quot;default&quot; qui est la valeur.</li>
+    <li><strong><i>JSON est un tableau d'objets ou de valeurs</i></strong> - renvoie une carte DS avec une seule entrée &quot;default&quot; qui est une liste DS des objets ou des valeurs.</li>
+    <li><strong><i>JSON est un objet</i></strong> - renvoie une carte DS contenant les entrées de l'objet.</li>
   </ul>
-  <p class="note"><b>NOTE</b>: When decoding JSON arrays, there is a map with the key &quot;default&quot; ONLY when an array is the top level structure, and ONLY for that top-level array. Internal lists decode directly to DS map without being enclosed in a DS map.</p>
-  <p class="note"><strong>NOTE</strong>: If you wrote GameMaker arrays into the top level, or as the contents of a DS map or DS list, these will be decoded as DS lists, <strong>not</strong> arrays.</p>
-  <p>Normally you would know what keys the JSON decodes to, but if not then you can use the <a href="../../Data_Structures/DS_Maps/ds_map_size.htm"><span class="inline">ds_map_size()</span></a>, <a href="../../Data_Structures/DS_Maps/ds_map_find_first.htm"><span class="inline">ds_map_find_first()</span></a> and <a href="../../Data_Structures/DS_Maps/ds_map_find_next.htm"><span class="inline">ds_map_find_next()</span></a> functions to parse the map and get the necessary information.</p>
-  <p class="note"><b>NOTE</b>: <span data-keyref="GameMaker Name">GameMaker</span> creates the necessary DS maps and lists from the JSON, and for cleaning up you only need to delete the <b>top level</b> map or list and <span data-keyref="GameMaker Name">GameMaker</span> will automatically delete from memory all the maps and lists underneath.</p>
-  <p class="note"><strong>NOTE</strong>: This function allows you to load JSON files with a maximum nesting limit of 128.</p>
-  <p class="note"><b>IMPORTANT</b>: You cannot have 64bit numbers in your JSON, as they will not work correctly due them not being handled by the JSON format.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p class="note"><b>NOTE</b>: Lors du décodage des tableaux JSON, il existe une map avec la clé &quot;default&quot; UNIQUEMENT lorsqu'un tableau est la structure de premier niveau, et UNIQUEMENT pour ce tableau de premier niveau. Les listes internes sont décodées directement dans la carte DS sans être incluses dans une carte DS.</p>
+  <p class="note"><strong>REMARQUE</strong>: si vous avez écrit des tableaux <span class="notranslate">GameMaker</span> dans le niveau supérieur, ou comme contenu d'une carte DS ou d'une liste DS, ceux-ci seront décodés comme des listes DS, et <strong>non</strong> des tableaux.</p>
+  <p>Normalement, vous devriez savoir à quelles clés le JSON est décodé, mais si ce n'est pas le cas, vous pouvez utiliser l'attribut <a href="../../Data_Structures/DS_Maps/ds_map_size.htm"><span class="inline">ds_map_size()</span></a>, <a href="../../Data_Structures/DS_Maps/ds_map_find_first.htm"><span class="inline">ds_map_find_first()</span></a> et <a href="../../Data_Structures/DS_Maps/ds_map_find_next.htm"><span class="inline">ds_map_find_next()</span></a> pour analyser la carte et obtenir les informations nécessaires.</p>
+  <p class="note"><b>NOTE</b>: <span data-keyref="GameMaker Name">GameMaker</span> crée les cartes et listes DS nécessaires à partir du JSON, et pour le nettoyage, il suffit de supprimer la carte ou la liste de <b>niveau supérieur</b> et <span data-keyref="GameMaker Name">GameMaker</span> effacera automatiquement de sa mémoire toutes les cartes et listes situées en dessous.</p>
+  <p class="note"><strong>REMARQUE</strong>: Cette fonction vous permet de charger des fichiers JSON avec une limite d'imbrication maximale de 128.</p>
+  <p class="note"><b>IMPORTANT</b>: Vous ne pouvez pas avoir de chiffres 64 bits dans votre JSON, car ils ne fonctionneront pas correctement car ils ne sont pas gérés par le format JSON.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">json_decode(string)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>string</td><td><span data-keyref="Type_String"></span></td>
-        <td>The JSON format string that you are passing to the function for decoding</td>
+        <td><span class="notranslate">string</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The JSON format string that you are passing to the function for decoding</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_ID_DS_Map">DS Map ID</span> or -1 (if it fails)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var resultMap = json_decode(requestResult);<br />
     var list = ds_map_find_value(resultMap, &quot;default&quot;);<br />
     var size = ds_list_size(list);<br />
@@ -68,18 +68,18 @@
         }<br />
     }<br />
     ds_map_destroy(resultMap);</p>
-  <p>The above code will decode a JSON string and parse it to generate a global array.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus décode une chaîne JSON et l'analyse pour générer un tableau global.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Encoding_And_Hashing.htm">File Encoding</a></div>
-        <div style="float:right">Next: <a href="json_stringify.htm">json_stringify</a></div>
+        <div style="float:left">Retour : <a href="Encoding_And_Hashing.htm">Codage des fichiers</a></div>
+        <div style="float:right">Suivant : <a href="json_stringify.htm"><span class="notranslate">json_stringify</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 json_decode

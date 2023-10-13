@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Create Particle System</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Créer un système de particules</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Create Particle System action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Create Particle System" />
@@ -14,52 +14,55 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Create Particle System Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_System.png" /> Create Particle System</h1>
-  <p>This action will initialise the particle system ready for you to create and use particle types and emitters with it. You give the layer name as a string - for example &quot;Particle Layer&quot; (which must exist in the room editor) - and then flag the system as being <b>Persistent</b> or not. If the system is flagged as Persistent then it will stay active across all rooms after it has been created, and it will be assigned a managed layer if the initial layer does not exist in subsequent rooms. If persistence is <i>not</i> flagged, then the system will be automatically destroyed at the end of the room it was created in as will any emitters associated with the system. If you wish to manually remove the system from memory, you need to use the action <a href="Destroy_Particle_System.htm">Destroy Particle System</a>.</p>
-  <p>You also need to supply a target variable that will hold the unique particle system ID value. This ID value is what will be used in other functions to set properties of the system or to tell <span data-keyref="GameMaker Name">GameMaker</span> what system to use when creating particles. You can choose to flag this variable as being a temporary local variable, but that will mean that it is discarded at the end of the action script or event, meaning that the system will still exist but leave you without any means to access it, so care must be taken when using this (in general systems will never need to be stored in a temporary local variable, but for certain things, like drawing particles to a surface, it may be required).</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> A persistent particle system, once created, remains resident in the system memory for the duration of the game, and so if you need to recreate it at any point (for example, if you call the <a href="../Game/Restart_Game.htm">Restart Game</a> action), then you <b>must destroy the current system first</b> otherwise you get a memory leak. A memory leak happens when a resource is added to memory and then &quot;de-referenced&quot;, meaning that <span data-keyref="GameMaker Name">GameMaker</span> has no way to interact with that resource any more. This leads to the memory being clogged by inaccessible resources which in turn can cause issues with your game. To destroy a persistent particle system when no longer required use the action <a href="Destroy_Particle_System.htm">Destroy Particle System</a>.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Create Particle System Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Create_Particle_System.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Créer un système de particules</h1>
+  <p>Cette action va initialiser le système de particules pour que vous puissiez créer et utiliser des types de particules et des émetteurs avec lui. Vous donnez le nom de la couche sous forme de chaîne - par exemple &quot;Particle Layer&quot; (qui doit exister dans l'éditeur de pièce) - puis vous marquez le système de particules comme étant persistant ou non.
+    système comme étant <b>Persistant</b> ou non. Si le système est marqué comme Persistant, il restera actif dans toutes les pièces après sa création, et une couche gérée lui sera attribuée si la couche initiale n'existe pas dans les pièces suivantes.
+    Si la persistance <i>n'</i> est <i>pas</i> marquée, le système sera automatiquement détruit à la fin de la pièce dans laquelle il a été créé, tout comme les émetteurs associés au système. Si vous souhaitez supprimer manuellement le système de la mémoire, vous devez utiliser
+    l'action <a href="Destroy_Particle_System.htm">Destroy Particle System</a>.</p>
+  <p>Vous devez également fournir une variable cible qui contiendra la valeur d'identification unique du système de particules. Cette valeur d'identification sera utilisée dans d'autres fonctions pour définir les propriétés du système ou pour indiquer à <span data-keyref="GameMaker Name">GameMaker</span> quel système utiliser lors de la création de particules.
+    Vous pouvez choisir de marquer cette variable comme étant une variable locale temporaire, mais cela signifie qu'elle sera supprimée à la fin du script d'action ou de l'événement, ce qui veut dire que le système existera toujours mais vous laissera sans aucun moyen de l'envoyer à <span class="notranslate">access</span>. Il faut donc faire attention lorsque l'on utilise cette variable (dans le cas d'un script d'action ou d'un événement).
+    (en général, les systèmes n'auront jamais besoin d'être stockés dans une variable locale temporaire, mais pour certaines choses, comme dessiner des particules sur une surface, cela peut être nécessaire).</p>
+  <p class="note"><b>REMARQUE</b>: une fois créé, un système de particules persistant reste résident dans la mémoire du système pendant toute la durée du jeu. Par conséquent, si vous devez le recréer à un moment donné (par exemple, si vous appelez l'action <a href="../Game/Restart_Game.htm">Redémarrer le jeu</a> ), vous <b>devez d'abord détruire le système actuel</b>, sinon vous obtiendrez une fuite de mémoire. Une fuite de mémoire se produit lorsqu'une ressource est ajoutée à la mémoire puis &quot;déréférencée&quot;, ce qui signifie que <span data-keyref="GameMaker Name">GameMaker</span> n'a plus aucun moyen d'interagir avec cette ressource.
+    cette ressource. Cela conduit à l'encombrement de la mémoire par des ressources inaccessibles qui, à leur tour, peuvent causer des problèmes dans votre jeu. Pour détruire un système de particules persistant lorsqu'il n'est plus nécessaire, utilisez l'action <a href="Destroy_Particle_System.htm">Détruire le système de particules</a>.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Create Particle System Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_System.png" /></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Layer</td>
-        <td>The layer where the particles in this system will be drawn</td>
+        <td><span class="notranslate">Layer</span></td>
+        <td>La couche où seront dessinées les particules de ce système.</td>
       </tr>
       <tr>
-        <td>Persistent</td>
-        <td>Whether the particle system should stay active after the current room has ended</td>
+        <td><span class="notranslate">Persistent</span></td>
+        <td>Si le système de particules doit rester actif après la fin de la pièce actuelle.</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to hold the unique ID value of the created system</td>
-      </tr>
-      <tr>
-        <td>System</td>
-        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"> </span> The <span data-keyref="Type_Asset_ParticleSystem"><a href="../../../../The_Asset_Editors/Particle_Systems.htm" target="_blank">Particle System Asset</a></span> to create</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>La variable cible qui contient la valeur d'identification unique du système créé.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Create Particle System Example" class="center" height="266" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_System.png" width="332" />The above action block creates a global variable, then creates a new particle system and assigns its unique ID value to the global variable. The created particle system is marked as persistent, so it will stay active even after the current room has ended.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le bloc d'action ci-dessus crée une variable globale,
+    puis crée un nouveau système de particules et attribue sa valeur d'identification unique à la variable globale. Le système de particules créé est marqué comme persistant, il restera donc actif même après la fin de la pièce actuelle.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Destroy_Particle_System.htm">Destroy Particle System</a></div>
+        <div style="float:left">Retour : <a href="Particle_Actions.htm">Actions des particules</a></div>
+        <div style="float:right">Suivant : <a href="Destroy_Particle_System.htm">Système de particules de destruction</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create Particle System

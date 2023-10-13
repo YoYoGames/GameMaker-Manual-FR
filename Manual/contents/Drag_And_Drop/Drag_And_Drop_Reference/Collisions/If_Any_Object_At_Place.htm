@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>If Any Object At Place</title>
+  <title>Si un objet quelconque se trouve à cet endroit</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the If Any Object At Place action" />
   <meta name="rh-index-keywords" content="GML Visual Action - If Any Object At Place" />
@@ -14,48 +14,48 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="If Any Object At Place Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/i_Collision_Any.png" /> If Any Object At Place</h1>
-  <p>This action is used to check and see if there is an instance of <i>any</i> object placed at a position based on the collision mask of the calling instance. You give the position, which can be an absolute position or a position relative to the instance,
-    and the action will return <span class="inline">true</span> if there is a collision or <span class="inline">false</span> if there is not. You can also check the &quot;Not&quot; flag to check if there is <i>not</i> a collision at the given position, and the action will then return <span class="inline">true</span>    if no collisions are found and <span class="inline">false</span> otherwise. Collisions are calculated based on the collision mask of the calling instance overlapping the collision mask of any instance at the position (as if it was being &quot;placed&quot; at the position).</p>
-  <p class="note"><b>IMPORTANT!</b> Collisions will only register for those instances that have a valid collision mask, ie: they have a sprite assigned to the <span class="inline">sprite_index</span>, or a sprite assigned to the <span class="inline">mask_index</span>. If <b>either</b> of the instances in
-    the collision have no collision mask then the collision will not be detected, regardless of what the instance is drawing at the time.</p>
-  <p>Note that to add actions into an &quot;<span class="inline">if</span>&quot; block, they should be dropped to the <i>side</i> of the action, as shown in the image below:</p>
+  <h1><img> Si un objet quelconque se trouve à cet endroit</h1>
+  <p>Cette action est utilisée pour vérifier et voir s'il existe une instance d'un objet <i>quelconque</i> placée à une position basée sur le masque de collision de l'instance appelante. Vous donnez la position, qui peut être une position absolue ou une position relative à l'instance,
+    et l'action retournera <span class="inline">true</span> s'il y a une collision ou <span class="inline">false</span> s'il n'y en a pas. Vous pouvez également cocher le drapeau &quot;Not&quot; pour vérifier s'il <i>n'y a pas</i> de collision à la position donnée, et l'action retournera alors <span class="inline">true</span> si aucune collision n'est trouvée et <span class="inline">false</span> sinon. Les collisions sont calculées sur la base du masque de collision de l'instance appelante qui chevauche le masque de collision de toute instance à la position (comme si elle était &quot;placée&quot; à la position).</p>
+  <p class="note"><b>IMPORTANT !</b> Les collisions ne seront enregistrées que pour les instances qui ont un masque de collision valide, c'est-à-dire qu'elles ont un <span class="notranslate">sprite</span> assigné au <span class="inline">sprite_index</span> ou un <span class="notranslate">sprite</span> assigné au <span class="inline">mask_index</span>. Si l'<b>une ou l'autre des</b> instances dans la collision n'a pas de masque de collision, alors la collision ne sera pas détectée, peu importe ce que l'instance dessine à ce moment-là.
+    n'a pas de masque de collision, la collision ne sera pas détectée, quel que soit le dessin de l'instance à ce moment-là.</p>
+  <p>Notez que pour ajouter des actions dans un bloc &quot;<span class="inline">if</span>&quot;, elles doivent être déposées sur le <i>côté</i> de l'action, comme le montre l'image ci-dessous :</p>
+  <p><img alt="If Any Object At Place Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/i_Collision_Any.png" /></p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
   <p><img alt="If Any Object At Place drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/If_Collision_Any.png" /></p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="If Any Object At Place Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/a_Collision_Any.png" /></p>
-  <h4>Arguments:</h4>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>x</td>
-        <td>The x position to check</td>
+        <td><span class="notranslate">x</span></td>
+        <td>La position x à vérifier</td>
       </tr>
       <tr>
-        <td>y</td>
-        <td>The y position to check</td>
+        <td><span class="notranslate">y</span></td>
+        <td>La position y à vérifier</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="If Any Object At Place Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/e_Collision_Any.png" />The above action block code checks for a collision at the position where the instance
-    is placed and if one is found it blends the instance with red, otherwise it leaves the blending as normal (white).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus vérifie qu'il n'y a pas de collision à l'endroit où l'instance est placée.
+    et s'il en trouve une, il mélange l'instance avec du rouge, sinon il laisse le mélange normal (blanc).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Collision_Actions.htm">Collision Actions</a></div>
-        <div style="float:right">Next: <a href="If_Object_At_Place.htm">If Object At Place</a></div>
+        <div style="float:left">Retour : <a href="Collision_Actions.htm">Actions de collision</a></div>
+        <div style="float:right">Suivant : <a href="If_Object_At_Place.htm">Si l'objet est à l'endroit</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - If Any Object At Place

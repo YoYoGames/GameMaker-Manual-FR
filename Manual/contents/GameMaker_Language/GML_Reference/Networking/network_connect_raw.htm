@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>network_connect_raw</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>réseau_connexion_raw</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for network_connect_raw" />
   <meta name="rh-index-keywords" content="network_connect_raw" />
@@ -14,59 +14,55 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">network_connect_raw</span></h1>
-  <p>This function sends a request to connect to a server.</p>
-  <p>It takes the <i>socket id</i> to connect through (see <span class="inline3_func"><a data-xref="{title}" href="network_create_socket.htm">network_create_socket</a></span>) and requires you to give the IP address to connect to (a string, can be IPv4 or IPv6) as well as the port to connect through. If the connection fails a value of less than 0 will be returned.</p>
-  <p>The difference between this function and <span class="inline3_func"><a data-xref="{title}" href="network_connect.htm">network_connect</a></span> is that this function can connect to any server and does nothing to the raw data, so you have to implement the protocols yourself at the server end.</p>
-  <p>Note that by default the function is synchronous, so your game may appear to &quot;hang&quot; as the connection is made. You can set a timeout value for connection, or alternatively make the creation asynchronous, using the function <span class="inline3_func"><a data-xref="{title}" href="network_set_config.htm">network_set_config</a></span>, or alternatively use the function <span class="inline3_func"><a data-xref="{title}" href="network_connect_raw_async.htm">network_connect_raw_async</a></span> instead.</p>
-  <p class="note"><span class="note">NOTE</span> You cannot use this function on HTML5. For WebSockets, use the <a href="network_connect_raw_async.htm">Async function</a>.</p>
-  <div data-conref="../../../assets/snippets/Note_Networking_TCP_like.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>réseau_connexion_raw</h1>
+  <p>Avec cette fonction, vous pouvez envoyer une requête pour vous connecter à un serveur. La fonction prend l'<i>identifiant du socket</i> à utiliser pour la connexion (voir <a href="network_create_socket.htm"><span class="inline">network_create_socket()</span></a>) et vous demande de fournir l'adresse IP à laquelle se connecter (une chaîne) ainsi que le port à utiliser pour la connexion. Si la connexion échoue, une valeur inférieure à 0 sera renvoyée. La différence entre cette fonction et <a href="network_connect.htm"><span class="inline">network_connect()</span></a> est que cette fonction peut se connecter à n'importe quel serveur et ne fait rien aux données brutes, ce qui signifie que vous devez implémenter les protocoles vous-même du côté du serveur. Notez que, par défaut, la fonction est synchrone, ce qui signifie que votre jeu peut sembler se &quot;bloquer&quot; lorsque la connexion est établie. Vous pouvez définir une valeur de timeout pour la connexion, ou alternativement rendre la création asynchrone, en utilisant la fonction <a href="network_set_config.htm"><span class="inline">network_set_config()</span></a>ou encore utiliser la fonction <a href="network_connect_raw_async.htm"><span class="inline">network_connect_async_raw()</span></a> à la place.</p>
+  <p class="note"><span class="note">NOTE</span> Vous ne pouvez pas utiliser cette fonction sur HTML5. Pour les WebSockets, utilisez la <a href="network_connect_raw_async.htm">fonction Async</a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">network_connect_raw(socket, url, port);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>socket</td>
-        <td><span data-keyref="Type_ID_Network_Socket"><a href="GameMaker_Language/GML_Reference/Networking/network_create_socket.htm" target="_blank">Network Socket ID</a></span></td>
-        <td>The id of the socket to use.</td>
+        <td><span class="notranslate">socket</span></td>
+        <td><span data-keyref="Type_ID_Network_Socket"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Networking/network_create_socket.htm">ID de la prise réseau</a></span></td>
+        <td><span class="notranslate">The id of the socket to use.</span></td>
       </tr>
       <tr>
-        <td>url</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The URL or IP to connect to (a string).</td>
+        <td><span class="notranslate">url</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Chaîne de caractères</a></span></td>
+        <td><span class="notranslate">The URL or IP to connect to (a string).</span></td>
       </tr>
       <tr>
-        <td>port</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The port to connect to.</td>
+        <td><span class="notranslate">port</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span class="notranslate">The port to connect to.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> or <span data-keyref="Type_ID_Network_Socket"><a href="GameMaker_Language/GML_Reference/Networking/network_create_socket.htm" target="_blank">Network Socket ID</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span> or <span data-keyref="Type_ID_Network_Socket"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Networking/network_create_socket.htm">Network Socket ID</a></span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">client = network_create_socket(network_socket_tcp);<br />
     network_connect_raw(client, &quot;www.macsweeneygames.com&quot;, 6510);</p>
-  <p>The above code will create a new TCP socket then attempt to create a &quot;raw&quot; connection through that to the given URL on port 6510.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus créera un nouveau socket TCP puis tentera de créer une connexion &quot;brute&quot; à travers celui-ci vers l'URL donnée sur le port 6510.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Networking.htm">Networking</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="network_connect_raw_async.htm">network_connect_raw_async</a></div>
+        <div style="float:left">Retour : <a href="Networking.htm">Mise en réseau</a></div>
+        <div style="float:right">Suivant : <a href="network_connect_raw_async.htm">network_connect_async_raw</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 network_connect_raw

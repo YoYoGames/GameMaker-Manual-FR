@@ -6,7 +6,7 @@
   <title>surface_get_width</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for surface_get_width" />
   <meta name="rh-index-keywords" content="surface_get_width" />
@@ -16,41 +16,41 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>surface_get_width</h1>
-  <p>This function simply returns the width, in pixels, of the indexed surface. It should be noted that if you call this to check the <span class="inline">application_surface</span> immediately after having changed its size using <a href="surface_resize.htm"><span class="inline">surface_resize()</span></a>    it will not return the new value as the change needs a step or two to be fully processed. After waiting a step it should return the new size correctly.</p>
-  <p class="note"><b></b><b>NOTE</b>: When working with surfaces there is the possibility that they can cease to exist at any time due to them being stored in texture memory. You should <b>ALWAYS</b> check that a surface exists using <span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span>    before referencing them directly.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction renvoie simplement la largeur, en pixels, de la surface indexée. Il convient de noter que si vous l'appelez pour vérifier le site <span class="inline">application_surface</span> immédiatement après avoir modifié sa taille à l'aide de la fonction <a href="surface_resize.htm"><span class="inline">surface_resize()</span></a>    elle ne renverra pas la nouvelle valeur car la modification nécessite une étape ou deux pour être entièrement traitée. Après avoir attendu une étape, il devrait retourner la nouvelle taille correctement.</p>
+  <p class="note"><b></b><b>REMARQUE</b>: Lorsque vous travaillez avec des surfaces, il est possible qu'elles cessent d'exister à tout moment, car elles sont stockées dans la mémoire des textures. Vous devez <b>TOUJOURS</b> vérifier qu'une surface existe en utilisant <span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span>    avant d'y faire référence directement.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">surface_get_width(surface_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>surface_id</td><td><span data-keyref="Type_ID_Surface"></span></td>
-        <td>The ID of the surface to get the width of.</td>
+        <td><span class="notranslate">surface_id</span></td><td><span data-keyref="Type_ID_Surface"></span></td>
+        <td><span class="notranslate">The ID of the surface to get the width of.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">sw = surface_get_width(surf);</p>
-  <p>The above code will store the width of the surface indexed in the variable &quot;surf&quot; in the variable &quot;sw&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus va stocker la largeur de la surface indexée dans la variable &quot;surf&quot; dans la variable &quot;sw&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Surfaces.htm">Surfaces</a></div>
-        <div style="float:right">Next: <a href="surface_get_texture.htm">surface_get_texture</a></div>
+        <div style="float:left">Retour : <a href="Surfaces.htm">Surfaces</a></div>
+        <div style="float:right">Suivant : <a href="surface_get_texture.htm"><span class="notranslate">surface_get_texture</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 surface_get_width

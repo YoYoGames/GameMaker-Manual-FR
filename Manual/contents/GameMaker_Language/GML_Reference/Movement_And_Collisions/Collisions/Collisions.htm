@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Collisions</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for Collision functions and variables" />
   <meta name="rh-index-keywords" content="" />
@@ -15,114 +15,73 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Collisions</h1>
-  <p>When planning motions or deciding on certain actions, it is often important to see whether there are collisions with other objects at certain places within the game world, and often choosing the right collision function for the job is the most important task of all. <span data-keyref="GameMaker Name">GameMaker</span> has a number of built-in functions to help you deal with collisions correctly and in accordance with the needs of your project.</p>
-  <h2>How To Check Collisions</h2>
-  <h3>Collisions With Objects</h3>
-  <p>The simplest way to check for collisions against objects is to use <span class="inline3_func"><a data-xref="{title}" href="place_meeting.htm">place_meeting</a></span>.</p>
-  <p class="code_heading">Step Event</p>
-  <p class="code">if (!place_meeting(x + 4, y, obj_rock))<br />
-    {<br />
-        x += 4;<br />
-    }</p>
-  <p>This checks for collisions against instances of <span class="inline2">obj_rock</span> only. If there is no rock at <span class="inline2">x + 4</span>, it changes the X position to move the instance there.</p>
-  <h3>Collisions With Multiple Objects</h3>
-  <p>You can check for collisions against multiple objects, in two ways:</p>
+  <p>Lorsque vous planifiez des mouvements ou décidez de certaines actions, il est souvent important de voir s'il y a des collisions avec d'autres objets à certains endroits dans le monde du jeu, et souvent, choisir la bonne collision pour le travail est la tâche la plus importante de toutes. <span data-keyref="GameMaker Name">GameMaker</span> dispose d'un certain nombre de fonctions intégrées pour vous aider à gérer les collisions correctement et en fonction des besoins de votre projet.</p>
+  <p class="note"><span class="note"><b>NOTE</b></span> Les fonctions de collision utilisaient des valeurs entières dans les versions antérieures de <span class="notranslate">GameMaker</span>, mais elles utilisent désormais des valeurs à virgule flottante, ce qui signifie que les fonctions de collision n'arrondissent plus les arguments non entiers. Pour plus d'informations, veuillez lire <a data-xref="{title}" href="Collision_Compatibility_Mode.htm">Mode de compatibilité des fonctions de collision</a>.</p>
+  <h2><label for="one">Vérification simple des collisions</label></h2>
+  <p>Les fonctions suivantes traitent des différentes manières dont vous pouvez faire en sorte qu'une instance vérifie les collisions avec une autre instance :</p>
   <ul class="colour">
-    <li>Assign a <a href="../../../../The_Asset_Editors/Object_Properties/Parent_Objects.htm">parent</a> to those objects, and check against that single parent</li>
-    <li>Or, pass an <a href="../../../GML_Overview/Arrays.htm">array</a> containing the objects you want to check against</li>
+    <li><a href="place_empty.htm"><span class="notranslate">place_empty</span></a></li>
+    <li><a href="place_free.htm"><span class="notranslate">place_free</span></a></li>
+    <li><a href="place_meeting.htm"><span class="notranslate">place_meeting</span></a></li>
+    <li><a href="position_empty.htm"><span class="notranslate">position_empty</span></a></li>
+    <li><a href="position_meeting.htm"><span class="notranslate">position_meeting</span></a></li>
+    <li><a href="position_change.htm"><span class="notranslate">position_change</span></a></li>
+    <li><a href="position_destroy.htm"><span class="notranslate">position_destroy</span></a></li>
+    <li><a href="../../Asset_Management/Instances/instance_place.htm"><span class="notranslate">instance_place</span></a></li>
+    <li><a href="../../Asset_Management/Instances/instance_place_list.htm"><span class="notranslate">instance_place_list</span></a></li>
+    <li><a href="../../Asset_Management/Instances/instance_position.htm"><span class="notranslate">instance_position</span></a></li>
+    <li><a href="../../Asset_Management/Instances/instance_position_list.htm"><span class="notranslate">instance_position_list</span></a></li>
   </ul>
-  <p>Using the second method of passing an array, your code would look like this:</p>
-  <p class="code">if (!place_meeting(x + 4, y, [obj_rock, obj_bush]))<br />
-    {<br />
-        x += 4;<br />
-    }</p>
-  <p>This checks for collisions against instances of <span class="inline2">obj_rock</span> and <span class="inline2">obj_bush</span> in the same function call.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_tip.hts"> </span> It is recommended to use the parenting method for multiple collision checks, as you can use the same parent in multiple function calls, without having to keep track of an array.</p>
-  <p>The <span class="inline3_func"><a data-xref="{title}" href="place_meeting.htm">place_meeting</a></span> function only returns <span class="inline2">true</span> or <span class="inline2">false</span>. If you need to access the instance that was found in collision, use <span class="inline3_func"><a data-xref="{title}" href="../../Asset_Management/Instances/instance_place.htm">instance_place</a></span>, which returns an instance handle.</p>
-  <h3>Collisions With Tile Maps</h3>
-  <p>In addition to objects, you can also pass a <span data-keyref="Type_ID_Element_Tilemap"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/layer_tilemap_get_id.htm" target="_blank">Tile Map Element ID</a></span> to a collision function. This will check for collisions with that Tile Map.</p>
-  <p>Use <span class="inline3_func"><a data-xref="{title}" href="../../Asset_Management/Rooms/Tile_Map_Layers/layer_tilemap_get_id.htm">layer_tilemap_get_id</a></span> to get the Tile Map ID for a layer, and then pass that ID into a collision function.</p>
-  <p class="code_heading">Create Event</p>
-  <p class="code">tilemap = layer_tilemap_get_id(&quot;TileLayer&quot;);</p>
-  <p class="code_heading">Step Event</p>
-  <p class="code">if (!place_meeting(x + 4, y, tilemap))<br />
-    {<br />
-        x += 4;<br />
-    }</p>
-  <p>You can combine objects and Tile Maps when passing an array to a collision function.</p>
-  <p>Keep in mind:</p>
+  <p> </p>
+  <h2>Contrôle avancé des collisions</h2>
+  <p>Les routines suivantes peuvent être utilisées pour cela (ainsi que d'autres fonctions détaillées dans les sections relatives aux <b>déplacements</b> et aux <b>instances</b>). Ces fonctions de collision fonctionnent toutes légèrement différemment mais elles conservent trois arguments communs que nous allons expliquer ici :</p>
   <ul class="colour">
-    <li>Collisions against Tile Maps are checked using the collision mask of the sprite used for the Tile Set, which can be modified in <a data-xref="{title}" href="../../../../The_Asset_Editors/Sprites.htm">The Sprite Editor</a>.</li>
-    <li>A function like <span class="inline3_func"><a data-xref="{title}" href="../../Asset_Management/Instances/instance_place.htm">instance_place</a></span> or <span class="inline3_func"><a data-xref="{title}" href="collision_circle.htm">collision_circle</a></span> (and other equivalents) may return 0 if a collision was found with a Tile Map having the ID 0. This means you should not use the return value as a boolean condition. Instead, check whether the return value is not <span class="inline2">noone</span>, meaning a collision was found.</li>
-    <li>&quot;<strong>Disable Source Sprite Export</strong>&quot; needs to be unchecked in your Tile Set&#39;s <a href="../../../../The_Asset_Editors/Tile_Sets.htm">editor</a> for tile collisions to work.</li>
+    <li><b>obj</b>: C'est ici que nous spécifions l'objet avec lequel la fonction doit vérifier la présence d'une collision. Il peut s'agir d'un identifiant d'instance, d'un type d'objet ou du mot-clé spécial GM <b>all</b>. Il convient également de noter que si le type d'objet choisi est le <b>parent</b> désigné d'autres objets, alors tous les <i>enfants</i> de cet objet seront également inclus dans cette vérification.<b></b></li>
+    <li><b>prec</b>: Ce paramètre peut être soit <span class="inline">true</span> soit <span class="inline">false</span> et concerne la précision de la vérification des collisions. S'il est défini sur <span class="inline">true</span>, des collisions précises seront calculées (mais seulement si l'objet à contrôler a marqué &quot;précis&quot; pour sa détection de collision dans ses propriétés de masque), ce qui est une tâche légèrement plus complexe pour le CPU et doit donc être utilisé avec prudence. Si vous choisissez <span class="inline">false</span>, les collisions seront calculées sur la base de la boîte englobante de l'objet à contrôler.<b></b></li>
+    <li><b>notme</b>: Vous pouvez avoir besoin de vérifier les collisions avec un objet qui a le même index que l'objet qui exécute le code, donc pour empêcher le code de trouver une collision avec lui-même, vous pouvez définir cette valeur à <span class="inline">true</span>. Si vous recherchez spécifiquement l'instance de l'objet qui exécute le code, ou si ce n'est pas important, vous pouvez laisser cette valeur à <span class="inline">false</span>.</li>
   </ul>
-  <h2>Bounding Boxes</h2>
-  <p>Some instances will use a rectangular bounding box for checking collisions (unless a different mask shape is selected).</p>
-  <p>These bounding boxes use an inclusive system, i.e. they include the bottom-most and right-most edges. This means that the bounding box for a 16x16 collision mask is generated from <span class="inline2">(0.0, 0.0)</span> to <span class="inline2">(16.0, 16.0)</span> (relative).</p>
-  <p>For two instances to be in collision, their bounding boxes have to overlap. At a pixel level, an overlap is counted when the centre of that pixel is covered.</p>
-  <p>For example, if you&#39;re a rectangle trying to collide with a bounding box covering the area from <span class="inline2">(0.0, 0.0)</span> to <span class="inline2">(16.0, 16.0)</span>, the edge of your mask has to touch the area between  <span class="inline2">(0.5, 0.5)</span> and <span class="inline2">(15.5, 15.5)</span> for a collision to be counted.</p>
-  <h2><label for="one">Simple Collision Checking</label></h2>
-  <p>The following functions deal with the various ways in which you can have an instance check for collisions with another instance:</p>
+  <p>Les fonctions de base renverront soit l'ID d'une instance en collision, soit le mot-clé spécial <span class="inline">noone</span> lorsqu'il n'y a pas de collision, tandis que les fonctions de <i>liste</i> renverront le nombre d'instances en collision et rempliront une liste DS préétablie avec leurs ID. Notez que s'il y a plusieurs collisions avec les zones définies par ces fonctions et les instances de l'objet donné, <i>un</i> seul ID d'instance est renvoyé, et il peut s'agir de <i>n'importe laquelle des instances de la collision</i>.</p>
+  <p>Les fonctions suivantes permettent de traiter les collisions avancées.</p>
   <ul class="colour">
-    <li><a href="place_empty.htm">place_empty</a></li>
-    <li><a href="place_free.htm">place_free</a></li>
-    <li><a href="place_meeting.htm">place_meeting</a></li>
-    <li><a href="position_empty.htm">position_empty</a></li>
-    <li><a href="position_meeting.htm">position_meeting</a></li>
-    <li><a href="position_change.htm">position_change</a></li>
-    <li><a href="position_destroy.htm">position_destroy</a></li>
-    <li><a href="../../Asset_Management/Instances/instance_place.htm">instance_place</a></li>
-    <li><a href="../../Asset_Management/Instances/instance_place_list.htm">instance_place_list</a></li>
-    <li><a href="../../Asset_Management/Instances/instance_position.htm">instance_position</a></li>
-    <li><a href="../../Asset_Management/Instances/instance_position_list.htm">instance_position_list</a></li>
+    <li><a href="collision_circle.htm"><span class="notranslate">collision_circle</span></a></li>
+    <li><a href="collision_circle_list.htm"><span class="notranslate">collision_circle_list</span></a></li>
+    <li><a href="collision_ellipse.htm"><span class="notranslate">collision_ellipse</span></a></li>
+    <li><a href="collision_ellipse_list.htm"><span class="notranslate">collision_ellipse_list</span></a></li>
+    <li><a href="collision_line.htm"><span class="notranslate">collision_line</span></a></li>
+    <li><a href="collision_line_list.htm"><span class="notranslate">collision_line_list</span></a></li>
+    <li><a href="collision_point.htm"><span class="notranslate">collision_point</span></a></li>
+    <li><a href="collision_point_list.htm"><span class="notranslate">collision_point_list</span></a></li>
+    <li><a href="collision_rectangle.htm"><span class="notranslate">collision_rectangle</span></a></li>
+    <li><a href="collision_rectangle_list.htm"><span class="notranslate">collision_rectangle_list</span></a></li>
   </ul>
-  <h2>Advanced Collision Checking</h2>
-  <p>The following functions can be used for this (as well as other functions detailed in the sections relating to <a href="../Movement/Movement.htm"><b>Moving Around</b></a> and <a href="../../Asset_Management/Instances/Instances.htm"><b>Instances</b></a>). These collision functions all work slightly differently but they maintain three common arguments which we will explain here:</p>
+  <p> </p>
+  <h2>Contrôle des collisions sans masque</h2>
+  <p>Toutes les fonctions ci-dessus sont liées aux <i>instances de</i> contrôle de collision, et en tant que telles, elles s'appuient sur le masque de collision qui est défini pour l'instance. Cependant, il y a de nombreux moments où vous avez besoin de vérifier les &quot;collisions&quot; avec un point ou une zone, surtout lorsque votre instance n'a pas de <span class="notranslate">sprite</span> assigné, ou lorsque vous travaillez avec la souris etc... C'est pourquoi <span data-keyref="GameMaker Name">GameMaker</span> fournit également les fonctions suivantes pour vous aider dans ces situations :</p>
   <ul class="colour">
-    <li><b>obj</b>: This is where we specify the object that the function has to check for a collision with. It can be an instance id, an object type, or the special GM keyword <b>all</b>. It is also worth noting that if the object type chosen is the designated <b>parent</b> of other objects, then all <i>children</i> of that object will be included in this check too.<b></b></li>
-    <li><b>prec</b>: This can be either <span class="inline">true</span> or <span class="inline">false</span> and relates to the precision of the collision checking. If set to <span class="inline">true</span>, then precise collisions are to be calculated (but only if the object being checked for has &quot;precise&quot; marked for its collision detection in its mask properties) which is a slightly more complex task for the CPU and so should be used with caution. If <span class="inline">false</span> then collisions will be calculated based on the bounding box of the object to be checked for.<b></b></li>
-    <li><b>notme</b>: You may need to check for collisions with an object that has the same index as the object that runs the code, so to prevent the code finding a collision with itself, you can set this to <span class="inline">true</span>. If you are specifically looking for the instance of the object running the code, or it&#39;s not important, it can be left as <span class="inline">false</span>.</li>
+    <li><a href="point_in_rectangle.htm"><span class="notranslate">point_in_rectangle</span></a></li>
+    <li><a href="point_in_triangle.htm"><span class="notranslate">point_in_triangle</span></a></li>
+    <li><a href="point_in_circle.htm"><span class="notranslate">point_in_circle</span></a></li>
+    <li><a href="rectangle_in_rectangle.htm"><span class="notranslate">rectangle_in_rectangle</span></a></li>
+    <li><a href="rectangle_in_triangle.htm"><span class="notranslate">rectangle_in_triangle</span></a></li>
+    <li><a href="rectangle_in_circle.htm"><span class="notranslate">rectangle_in_circle</span></a></li>
   </ul>
-  <p>The basic functions will return either the ID of an instance found to be colliding, or the special keyword <span class="inline">noone</span> when there is no collision, while the <i>list</i> functions will return the number of instances that are in collision and populate a pre-made DS list with their IDs. Note that if there are multiple collisions with the areas defined by these functions and instances of the given object, only <i>one</i> instance ID is returned, and it can be <i>any one of the instances in the collision</i>.</p>
-  <p>The following functions exist that deal with advanced collisions.</p>
+  <p> </p>
+  <h2>Physique Collisions</h2>
+  <p>Lorsque vous utilisez la physique intégrée, le fonctionnement des fonctions de collision ci-dessus n'est pas garanti pour les instances dotées de la physique. Cela est principalement dû au fait que ces instances n'utilisent plus la majorité des variables régulières intégrées (au lieu de cela, les instances activées par la physique ont leur <a href="../../Physics/Physics_Variables/Physics_Variables.htm">propre ensemble de variables</a>) et qu'elles n'utilisent pas non plus le masque de collision ou la boîte englobante, car elles utilisent des <a href="../../Physics/Fixtures/Fixtures.htm">fixtures à</a> la place. Cependant, il existe une fonction spéciale pour tester les collisions avec la physique activée qui vérifie le chevauchement des fixtures :</p>
   <ul class="colour">
-    <li><a href="collision_circle.htm">collision_circle</a></li>
-    <li><a href="collision_circle_list.htm">collision_circle_list</a></li>
-    <li><a href="collision_ellipse.htm">collision_ellipse</a></li>
-    <li><a href="collision_ellipse_list.htm">collision_ellipse_list</a></li>
-    <li><a href="collision_line.htm">collision_line</a></li>
-    <li><a href="collision_line_list.htm">collision_line_list</a></li>
-    <li><a href="collision_point.htm">collision_point</a></li>
-    <li><a href="collision_point_list.htm">collision_point_list</a></li>
-    <li><a href="collision_rectangle.htm">collision_rectangle</a></li>
-    <li><a href="collision_rectangle_list.htm">collision_rectangle_list</a></li>
+    <li><a href="../../Physics/physics_test_overlap.htm"><span class="notranslate">physics_test_overlap</span></a></li>
   </ul>
-  <h2>Collision Checking Without A Mask</h2>
-  <p>All of the above functions are related to collision checking <i>instances</i>, and as such rely on the collision mask that is defined for the instance. However, there are many moments when you require to check for &quot;collisions&quot; with a point or an area, especially when your instance does not have a sprite assigned, or when you are working with the mouse etc... Therefore <span data-keyref="GameMaker Name">GameMaker</span> also provides the following functions to help you in these situations:</p>
-  <ul class="colour">
-    <li><a href="point_in_rectangle.htm">point_in_rectangle</a></li>
-    <li><a href="point_in_triangle.htm">point_in_triangle</a></li>
-    <li><a href="point_in_circle.htm">point_in_circle</a></li>
-    <li><a href="rectangle_in_rectangle.htm">rectangle_in_rectangle</a></li>
-    <li><a href="rectangle_in_triangle.htm">rectangle_in_triangle</a></li>
-    <li><a href="rectangle_in_circle.htm">rectangle_in_circle</a></li>
-  </ul>
-  <h2>Physics Collisions</h2>
-  <p>When using the built-in physics, the above collision functions are not guaranteed to work for physics enabled instances. This is mainly due to the fact that these instances no longer use the majority of the regular built in variables (instead, physics enabled instances have their <a href="../../Physics/Physics_Variables/Physics_Variables.htm">own set of variables</a>) and neither do they use the collision mask or bounding box, as they use <a href="../../Physics/Fixtures/Fixtures.htm">fixtures</a> instead. However there is a special function for testing collisions with physics enabled that checks for overlapping fixtures:</p>
-  <ul class="colour">
-    <li><a href="../../Physics/physics_test_overlap.htm">physics_test_overlap</a></li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Movement_And_Collisions.htm">Movement And Collisions</a></div>
-        <div style="float:right">Next: <a href="../Movement/Movement.htm">Movement</a></div>
+        <div style="float:left">Le dos : <a href="../Movement_And_Collisions.htm">Mouvement et collisions</a></div>
+        <div style="float:right">Suivant : <a href="../Movement/Movement.htm">Mouvement</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Collision Functions

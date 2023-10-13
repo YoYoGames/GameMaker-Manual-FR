@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>display_set_sleep_margin</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for display_set_sleep_margin" />
   <meta name="rh-index-keywords" content="display_set_sleep_margin" />
@@ -15,12 +15,12 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>display_set_sleep_margin</h1>
-  <p>This function can be used to set the sleep margin value used for the render timing of your game, and requires a millisecond value. The default values are as follows:</p>
+  <p>Cette fonction peut être utilisée pour définir la valeur de la marge de sommeil utilisée pour le timing de rendu de votre jeu, et nécessite une valeur en millisecondes. Les valeurs par défaut sont les suivantes :</p>
   <table>
     <tbody>
       <tr>
-        <th>Platform</th>
-        <th>Milliseconds</th>
+        <th>Plate-forme</th>
+        <th>Millisecondes</th>
       </tr>
       <tr>
         <td>Windows</td>
@@ -47,6 +47,10 @@
         <td>4</td>
       </tr>
       <tr>
+        <td>Windows UWP</td>
+        <td>10</td>
+      </tr>
+      <tr>
         <td>Xbox</td>
         <td>10</td>
       </tr>
@@ -60,30 +64,30 @@
       </tr>
     </tbody>
   </table>
-  <p>Note that even if the timing method is set to use vsync timing, the sleep margin will have some effect over the rendering of the game, and so you should take care when setting this value. For more information on display timing, please see <a href="display_set_timing_method.htm"><span class="inline">display_set_timing_method()</span></a>.</p>
-  <p class="note"><strong><span data-conref="../../../assets/snippets/Tag_note.hts"> </span></strong> In addition to the Sleep Margin, you can further control your performance and power consumption on Windows by adjusting the <a href="../OS_And_Compiler/scheduler_resolution_set.htm">thread scheduler&#39;s resolution</a> at runtime.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Notez que même si la méthode de synchronisation est définie pour utiliser la synchronisation vsync, la marge de sommeil aura un certain effet sur le rendu du jeu, et vous devez donc faire attention lorsque vous définissez cette valeur. Pour plus d'informations sur la synchronisation de l'affichage, veuillez consulter <a href="display_set_timing_method.htm"><span class="inline">display_set_timing_method()</span></a>.</p>
+  <p class="note"><strong>REMARQUE</strong>: En plus de la marge de veille, vous pouvez contrôler davantage vos performances et votre consommation d'énergie sur <span class="notranslate">Windows</span> en ajustant la <a href="../OS_And_Compiler/scheduler_resolution_set.htm">résolution du planificateur de threads</a> sur <span class="notranslate">runtime</span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">display_set_sleep_margin(milliseconds);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>milliseconds</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The number of milliseconds for the sleep margin</td>
+        <td><span class="notranslate">milliseconds</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The number of milliseconds for the sleep margin</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if display_get_timing_method() != tm_sleep<br />
     {<br />
         display_set_timing_method(tm_sleep);<br />
@@ -92,18 +96,18 @@
             display_set_sleep_margin(20);<br />
         }<br />
     }</p>
-  <p>The above code will check the timing method and then if it&#39;s not set to <span class="inline">tm_sleep</span> it will be set to that and the sleep margin set to 20.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifiera la méthode de synchronisation et si elle n'est pas définie sur <span class="inline">tm_sleep</span>, elle sera définie sur cette méthode et la marge de sommeil sera définie sur 20.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_Display.htm">Cameras And Display</a></div>
-        <div style="float:right">Next: <a href="screen_save.htm">screen_save</a></div>
+        <div style="float:left">Retour : <a href="Cameras_And_Display.htm">Appareils photo et écran</a></div>
+        <div style="float:right">Suivant : <a href="screen_save.htm"><span class="notranslate">screen_save</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 display_set_sleep_margin

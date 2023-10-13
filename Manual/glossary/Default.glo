@@ -3,327 +3,314 @@
 <glossgroup id="Default">          
 <title>Glossary Definitions</title>        
 <glossentry id="Default_absolute">
-<glossterm>absolute</glossterm>
-<glossdef>An absolute value is one where the sign of the value is ignored, essentially converting all values into positive ones or zero. So - for example - an absolute value for -10 would be 10.</glossdef></glossentry>
+<glossterm>absolu</glossterm>
+<glossdef>Une valeur absolue est une valeur pour laquelle le signe de la valeur est ignoré, ce qui revient à convertir toutes les valeurs en valeurs positives ou en zéro. Ainsi, par exemple, une valeur absolue pour -10 serait 10.</glossdef></glossentry>
 <glossentry id="Default_algorithm">
-<glossterm>algorithm</glossterm>
-<glossdef>An algorithm is basically a set of instructions or rules designed to solve a definite problem. The problem can be simple like adding two numbers or a complex one, such as converting a video file from one format to another or compressing audio into a smaller file size..</glossdef></glossentry>
+<glossterm>algorithme</glossterm>
+<glossdef>Un algorithme est essentiellement un ensemble d'instructions ou de règles conçues pour résoudre un problème précis. Le problème peut être simple, comme l'addition de deux nombres, ou complexe, comme la conversion d'un fichier vidéo d'un format à un autre ou la compression d'un fichier audio dans un format plus petit...</glossdef></glossentry>
 <glossentry id="Default_anti-aliasing">
-<glossterm>anti-aliasing</glossterm>
-<glossdef>This is a technique used to smooth otherwise jagged lines or textures by blending the color of an edge with the color of the pixels around it. The result should be a more pleasing and realistic appearance, depending on the intensity of the effect.</glossdef></glossentry>
+<glossterm>anti-crénelage</glossterm>
+<glossdef>Il s'agit d'une technique utilisée pour adoucir des lignes ou des textures autrement déchiquetées en mélangeant la couleur d'un bord avec la couleur des pixels qui l'entourent. Le résultat devrait être un aspect plus agréable et plus réaliste, selon l'intensité de l'effet.</glossdef></glossentry>
 <glossentry id="Default_API">
 <glossterm>API</glossterm>
-<glossdef>The acronym &#39;API&#39; stands for Application Programming Interface, and this refers to sets of rules, routines, and protocols used to build software applications. APIs help in communication with third party programs or services, which can be used to build different software. Companies such as Facebook and Twitter actively use APIs to help developers gain easier access to their services, and in GameMaker Studio 2 you&#39;ll see the API scronym used when talking about extensions - for example, the Google Play Services API or the Amazon Game On API.</glossdef></glossentry>
+<glossdef>L'acronyme "API" signifie "Application Programming Interface" (interface de programmation d'applications) et fait référence à des ensembles de règles, de routines et de protocoles utilisés pour créer des applications logicielles. Les API facilitent la communication avec des programmes ou des services tiers, qui peuvent être utilisés pour créer différents logiciels. Des sociétés telles que Facebook et Twitter utilisent activement les API pour aider les développeurs à accéder plus facilement à leurs services, et dans GameMaker Studio 2, vous verrez le sigle API utilisé pour parler des extensions, par exemple l'API des services Google Play ou l'API Amazon Game On.</glossdef></glossentry>
 <glossentry id="Default_application_surface">
-<glossterm>application surface</glossterm>
-<glossdef>The application surface is a special built-in surface that GameMaker Studio 2 will draw everything to in the Draw Events of a game (a surface is essentially an area of memory reserved for graphics). This surface is then drawn to the display buffer at the end of each game frame, displaying its contents to the player.</glossdef></glossentry>
+<glossterm>surface de pose</glossterm>
+<glossdef>La surface d'application est une surface intégrée spéciale sur laquelle GameMaker Studio 2 dessine tout dans les événements de dessin d'un jeu (une surface est essentiellement une zone de mémoire réservée aux graphiques). Cette surface est ensuite dessinée dans le tampon d'affichage à la fin de chaque image du jeu, affichant son contenu au joueur.</glossdef></glossentry>
 <glossentry id="Default_architectures">
 <glossterm>architectures</glossterm>
-<glossdef>The architecture of a processor chip (CPU) is a description of its basic components and of its basic operations. Each processor family has its own architecture, like ARM or x64.
-</glossdef></glossentry>
+<glossdef>L'architecture d'une puce de processeur (CPU) est une description de ses composants de base et de ses opérations fondamentales. Chaque famille de processeurs possède sa propre architecture, comme ARM ou x64.</glossdef></glossentry>
 <glossentry id="Default_ARGB">
 <glossterm>ARGB</glossterm>
-<glossdef>This is an anacronym for Alpha, Red, Green, Blue, and is used to refer to the colour components specified as a hexadecimal value, eg: #FF53E270, where each set of two digits represents a single component. Breaking down the ARGB example above gives us the following component values: Alpha(FF), Red(53), Green(E2) and Blue(70). </glossdef></glossentry>
+<glossdef>Il s'agit d'un anacronyme pour Alpha, Red, Green, Blue, et est utilisé pour se référer aux composants de la couleur spécifiés comme une valeur hexadécimale, par exemple : #FF53E270, où chaque ensemble de deux chiffres représente une seule composante. En décomposant l'exemple ARGB ci-dessus, nous obtenons les valeurs des composants suivants : Alpha(FF), Rouge(53), Vert(E2) et Bleu(70).</glossdef></glossentry>
 <glossentry id="Default_argument">
 <glossterm>argument</glossterm>
-<glossdef>An argument (also known as a parameter) is a value that is passed into a function. For example, the GameMaker Language function &#39;sqr(num)&#39; is a function that will give you the square of a number that you provide as the argument, eg: &#39;a = sqr(4);&#39; Here the argument is 4, and the function will return 16, which is stored in the variable &#39;a&#39;.</glossdef></glossentry>
+<glossdef>Un argument (également connu sous le nom de paramètre) est une valeur qui est transmise à une fonction. Par exemple, la fonction 'sqr(num)' du langage GameMaker est une fonction qui vous donne le carré d'un nombre que vous fournissez comme argument, par exemple : 'a = sqr(4);' Ici, l'argument est 4, et la fonction renvoie 16, qui est stocké dans la variable 'a'.</glossdef></glossentry>
 <glossentry id="Default_asset_key">
-<glossterm>asset key</glossterm>
-<glossdef>A position on the timeline in the dope sheet where an asset has been placed. An asset key can be made to last multiple frames.</glossdef></glossentry>
+<glossterm>Clé de répartition des actifs</glossterm>
+<glossdef>Une position sur la timeline dans la feuille de calcul où un actif a été placé. Une clé d'asset peut durer plusieurs images.</glossdef></glossentry>
 <glossentry id="Default_Asset_Track">
-<glossterm>asset track</glossterm>
-<glossdef>A track in the sequences track panel that holds a single asset, either a sprite, a sound, an instance, or a sequence.</glossdef></glossentry>
+<glossterm>suivi des actifs</glossterm>
+<glossdef>Une piste dans le panneau des pistes de séquences qui contient un seul élément, soit un sprite, un son, une instance ou une séquence.</glossdef></glossentry>
 <glossentry id="Default_assignment">
-<glossterm>assignment</glossterm>
-<glossdef>An assignment is simply the term used when we set (assign) a value to a variable.</glossdef></glossentry>
+<glossterm>affectation</glossterm>
+<glossdef>Une affectation est simplement le terme utilisé lorsque nous définissons (assignons) une valeur à une variable.</glossdef></glossentry>
 <glossentry id="Default_backend">
 <glossterm>backend</glossterm>
-<glossdef>The backend is the part of a program that is performed in the background and is opaque to the user, usually without the need for any user interaction. For example, the server side of things when doing network programming over the internet, or the data processing that goes on behind the scenes in an RPG game. This is essentially the oppositre of the frontend.</glossdef></glossentry>
+<glossdef>Le backend est la partie d'un programme qui est exécutée en arrière-plan et qui est opaque pour l'utilisateur, généralement sans qu'aucune interaction avec l'utilisateur ne soit nécessaire. Par exemple, le côté serveur des choses lorsqu'on fait de la programmation de réseau sur Internet, ou le traitement des données qui se passe dans les coulisses d'un jeu RPG. C'est essentiellement l'opposé du front-end.</glossdef></glossentry>
 <glossentry id="Default_bezier_interpolation">
-<glossterm>bezier interpolation</glossterm>
-<glossdef>Bezier interpolation involves estimating a new value by connecting two adjacent known values with a mathematically generated spline curve which can be edited using &quot;handles&quot; attached to each point. You can then get the interpolated value by checking any point along the line.</glossdef></glossentry>
+<glossterm>interpolation de bézier</glossterm>
+<glossdef>L'interpolation de Bézier consiste à estimer une nouvelle valeur en reliant deux valeurs adjacentes connues à l'aide d'une courbe spline générée mathématiquement, qui peut être modifiée à l'aide de "poignées" attachées à chaque point. Vous pouvez ensuite obtenir la valeur interpolée en vérifiant n'importe quel point le long de la ligne.</glossdef></glossentry>
 <glossentry id="Default_bit">
 <glossterm>bit</glossterm>
-<glossdef>A single data value that can either be 1 or 0 (true or false). Bits are combined in blocks of 8 to create a byte.</glossdef></glossentry>
+<glossdef>Une valeur de données unique qui peut être 1 ou 0 (vrai ou faux). Les bits sont combinés en blocs de 8 pour créer un octet.</glossdef></glossentry>
 <glossentry id="Default_bit_depth">
-<glossterm>bit depth</glossterm>
-<glossdef>The bit depth refers to the number of bits in each sample of an audio file. Lower bit depth gives poorer quality sound but much smaller file size. Lower bit depths are usually used for small sound effects and patforms where memory may be an issue (like HTML5).</glossdef></glossentry>
+<glossterm>profondeur de bits</glossterm>
+<glossdef>La profondeur de bits fait référence au nombre de bits dans chaque échantillon d'un fichier audio. Une profondeur de bit plus faible donne un son de moins bonne qualité mais une taille de fichier beaucoup plus petite. Les profondeurs de bit inférieures sont généralement utilisées pour les petits effets sonores et les formes où la mémoire peut être un problème (comme HTML5).</glossdef></glossentry>
 <glossentry id="Default_bit_rate">
-<glossterm>bit rate</glossterm>
-<glossdef>Bit rate is measured in Kilobits-per-sec(kbps or k) and is the number of bits encoded per second or the number of bits transmitted or received per second. The higher the bit rate and sampling rate, the higher the audio quality but the more processing power and bandwidth it needs. Lower bit rates create a smaller file size and use less processing and bandwidth, but with a drop in audio quality. For good quality music usually a bit rate of 64–128kbps (96kbps+ recommended) is preferred.</glossdef></glossentry>
+<glossterm>débit binaire</glossterm>
+<glossdef>Le débit binaire est mesuré en kilobits par seconde (kbps ou k) et correspond au nombre de bits codés par seconde ou au nombre de bits transmis ou reçus par seconde. Plus le débit binaire et la fréquence d'échantillonnage sont élevés, plus la qualité audio est élevée, mais plus la puissance de traitement et la bande passante nécessaires sont importantes. Des débits binaires plus faibles permettent de réduire la taille du fichier et d'utiliser moins de puissance de traitement et de bande passante, mais avec une baisse de la qualité audio. Pour une musique de bonne qualité, un débit binaire de 64 à 128 kbps (96 kbps recommandé) est généralement préférable.</glossdef></glossentry>
 <glossentry id="Default_bitmap">
 <glossterm>bitmap</glossterm>
-<glossdef>A bitmap is the term used to describe any static image that is comprised of coloured pixels that are stored as bits (unlike vector images which are stored using mathematical algorithms). PNG, JPG and BMP are example of bitmap images, while SWF would be an example of a vector image.</glossdef></glossentry>
+<glossdef>Un bitmap est le terme utilisé pour décrire toute image statique composée de pixels colorés qui sont stockés sous forme de bits (contrairement aux images vectorielles qui sont stockées à l'aide d'algorithmes mathématiques). PNG, JPG et BMP sont des exemples d'images bitmap, tandis que SWF serait un exemple d'image vectorielle.</glossdef></glossentry>
 <glossentry id="Default_boolean">
 <glossterm>boolean</glossterm>
-<glossdef>A boolean is a type of variable that can return true or false based on its value, and can be used in conditions and expressions. The constants &#39;false&#39; or &#39;true&#39; can be applied to a boolean, which are the equivalent of the real values 0 and 1.</glossdef></glossentry>
+<glossdef>Un booléen est un type de variable qui peut renvoyer vrai ou faux en fonction de sa valeur, et peut être utilisé dans des conditions et des expressions. Les constantes "false" ou "true" peuvent être appliquées à un booléen, qui sont l'équivalent des valeurs réelles 0 et 1.</glossdef></glossentry>
 <glossentry id="Default_bounding_box">
-<glossterm>bounding box</glossterm>
-<glossdef>For sprites, the bounding-box is the name given to the edges of the area that collisions will initially be detected in, and it doesn&#39;t have to be the same size as the sprite it&#39;s being applied to. For sequences, the bounding box is the outer edge of the total space that one or more assets occupy in the canvas.</glossdef></glossentry>
+<glossterm>boîte de délimitation</glossterm>
+<glossdef>Pour les sprites, le bounding-box est le nom donné aux bords de la zone dans laquelle les collisions seront initialement détectées, et il ne doit pas nécessairement avoir la même taille que le sprite auquel il est appliqué. Pour les séquences, le bounding box est le bord extérieur de l'espace total qu'un ou plusieurs actifs occupent dans le canevas.</glossdef></glossentry>
 <glossentry id="Default_build_tools">
-<glossterm>build tools</glossterm>
-<glossdef>Build tools are external applications that GameMaker Studio 2 requires to generate executable packages for the different target platforms.</glossdef></glossentry>
+<glossterm>outils de construction</glossterm>
+<glossdef>Les outils de construction sont des applications externes dont GameMaker Studio 2 a besoin pour générer des paquets exécutables pour les différentes plates-formes cibles.</glossdef></glossentry>
 <glossentry id="Default_byte">
-<glossterm>byte</glossterm>
-<glossdef>A byte is a unit of data that is eight binary digits long, and each of the digits that comprise a byte are called bits, ie: a byte is 8 bits, and a bit can be a 1 or a 0.</glossdef></glossentry>
+<glossterm>octet</glossterm>
+<glossdef>Un octet est une unité de données de huit chiffres binaires, et chacun des chiffres qui composent un octet est appelé bit, c'est-à-dire qu'un octet est constitué de 8 bits, et qu'un bit peut être un 1 ou un 0.</glossdef></glossentry>
 <glossentry id="Default_Cache">
-<glossterm>cache</glossterm>
-<glossdef>The cache is a collection of files that are generated by GameMaker once and then stored and re-used over multiple runs of a project. Note that this cache can sometimes become &#39;stale&#39;, meaning it must be cleared to force GameMaker to rebuild it from scratch, ensuring that no stale files corrupt your final game exectable.</glossdef></glossentry>
+<glossterm>Cache</glossterm>
+<glossdef>Le cache est une collection de fichiers qui sont générés par GameMaker une fois, puis stockés et réutilisés au cours de plusieurs exécutions d'un projet. Notez que ce cache peut parfois devenir "périmé", ce qui signifie qu'il doit être effacé pour forcer GameMaker à le reconstruire à partir de zéro, afin de s'assurer qu'aucun fichier périmé ne corrompt votre jeu final exectable.</glossdef></glossentry>
 <glossentry id="Default_callback">
-<glossterm>callback</glossterm>
-<glossdef>A callback is simply a function that runs and then triggers another function (or code block) when it has finished doing whatever it was assigned to do. For example, the funtion sprite_add() will trigger a callback in the asynchronous Image Loaded event when the sprite has been loaded.</glossdef></glossentry>
+<glossterm>rappel</glossterm>
+<glossdef>Une callback est tout simplement une fonction qui s'exécute et déclenche une autre fonction (ou un bloc de code) lorsqu'elle a fini de faire ce qu'elle devait faire. Par exemple, la fonction sprite_add() déclenchera un callback dans l'événement asynchrone Image Loaded lorsque le sprite aura été chargé.</glossdef></glossentry>
 <glossentry id="Default_catmull-rom_interpolation">
-<glossterm>catmull-rom interpolation</glossterm>
-<glossdef>This is a type of non-linear interpolation based on mathematical splines. It is used to estimate a new value by connecting two adjacent known values using &#39;smooth&#39; curves (splines), and a new value can be derived from any point along the line.</glossdef></glossentry>
+<glossterm>interpolation catmull-rom</glossterm>
+<glossdef>Il s'agit d'un type d'interpolation non linéaire basé sur des splines mathématiques. Elle est utilisée pour estimer une nouvelle valeur en reliant deux valeurs connues adjacentes à l'aide de courbes "lisses" (splines), et une nouvelle valeur peut être dérivée de n'importe quel point le long de la ligne.</glossdef></glossentry>
 <glossentry id="Default_Compiling">
-<glossterm>Compiling</glossterm>
-<glossdef>Compiling is when GameMaker takes your code and collects it together in such a way as to create an executable package that will run on a device as a game.</glossdef></glossentry>
+<glossterm>Compiler</glossterm>
+<glossdef>La compilation est le moment où GameMaker prend votre code et le rassemble de manière à créer un paquet exécutable qui fonctionnera sur un appareil comme un jeu.</glossdef></glossentry>
 <glossentry id="Default_compression">
 <glossterm>compression</glossterm>
-<glossdef>Compression is the use of mathematical algorithms to reduce the size of a file. This is used in particular for audio and image files, where formats like JPG (image) and MP3 (audio) are compressed formats. Compression usually results is much smaller file sizes, but with some data loss which may or may not be noticable depending on the type and strength of the compression used. Uncompressed formats would be BMP (image) or WAV (audio), which have larger file sizes, but no data loss.</glossdef></glossentry>
+<glossdef>La compression est l'utilisation d'algorithmes mathématiques pour réduire la taille d'un fichier. Elle est utilisée en particulier pour les fichiers audio et image, où des formats comme JPG (image) et MP3 (audio) sont des formats compressés. La compression permet généralement d'obtenir des fichiers de taille beaucoup plus réduite, mais avec une certaine perte de données qui peut ou non être perceptible en fonction du type et de la force de la compression utilisée. Les formats non compressés sont le BMP (image) ou le WAV (audio), dont les fichiers sont plus volumineux, mais sans perte de données.</glossdef></glossentry>
 <glossentry id="Default_conditional">
-<glossterm>conditional</glossterm>
-<glossdef>Conditionals, conditional statements, and conditional expressions are features of general programming language, and they help the code make a choice whrere the result is either true or false. These can perform different actions depending on the need of the programmer, and multiple conditionals can be combined into a single condition, as long as the final value of the condition is either true or false. Examples of conditional statements are &#39;if&#39; and &#39;while&#39;.</glossdef></glossentry>
+<glossterm>conditionnel</glossterm>
+<glossdef>Les conditionnelles, les instructions conditionnelles et les expressions conditionnelles sont des caractéristiques du langage de programmation général. Elles aident le code à faire un choix dont le résultat est soit vrai, soit faux. Elles peuvent effectuer différentes actions en fonction des besoins du programmeur, et plusieurs conditionnelles peuvent être combinées en une seule condition, tant que la valeur finale de la condition est vraie ou fausse. Les exemples d'instructions conditionnelles sont "if" et "while".</glossdef></glossentry>
 <glossentry id="Default_constants">
 <glossterm>constant</glossterm>
-<glossdef>A constant is a term used to describe a named value that does not change throughout the execution of the program. GameMaker Studio 2 has a number of built-in constants - for example os_windows - but you can also create your own constant values for use in your projects (called Macros) and extensions.</glossdef></glossentry>
+<glossdef>Une constante est un terme utilisé pour décrire une valeur nommée qui ne change pas au cours de l'exécution du programme. GameMaker Studio 2 dispose d'un certain nombre de constantes intégrées - par exemple os_windows - mais vous pouvez également créer vos propres valeurs constantes à utiliser dans vos projets (appelées Macros) et vos extensions.</glossdef></glossentry>
 <glossentry id="Default_CPU_overhead">
-<glossterm>CPU overhead</glossterm>
-<glossdef>CPU overhead measures the amount of work a computer&#39;s central processing unit can perform and the percentage of that capacity that&#39;s used by individual computing tasks.</glossdef></glossentry>
+<glossterm>Surcharge du CPU</glossterm>
+<glossdef>La surcharge du processeur mesure la quantité de travail que l'unité centrale de traitement d'un ordinateur peut effectuer et le pourcentage de cette capacité qui est utilisé par les tâches informatiques individuelles.</glossdef></glossentry>
 <glossentry id="Default_deadzone">
-<glossterm>deadzone</glossterm>
-<glossdef>The deadzone is the distance you have to move an analog stick before the game recognizes it&#39;s being moved. A low deadzone will make any slight movement of the analog stick move your player or aim or whatever. A high deadzone value means that the analog stick needs a much greater movement before the game will detect it and move whatever is being controlled.</glossdef></glossentry>
+<glossterm>zone morte</glossterm>
+<glossdef>La zone morte est la distance à laquelle vous devez déplacer un stick analogique avant que le jeu ne reconnaisse qu'il a été déplacé. Si la zone morte est faible, le moindre mouvement du stick analogique fera bouger votre joueur, votre cible ou autre. Une valeur de zone morte élevée signifie que le stick analogique doit être déplacé beaucoup plus loin avant que le jeu ne le détecte et ne déplace l'objet contrôlé.</glossdef></glossentry>
 <glossentry id="Default_back-buffer">
-<glossterm>display buffer</glossterm>
-<glossdef>The display buffer is the &#39;canvas&#39; where everything is finally drawn. Some events target this directly (like the Pre Draw event), while others will first draw to the application surface and then draw that to the display buffer.</glossdef></glossentry>
-<glossentry id="Default_DNS">
-<glossterm>DNS</glossterm>
-<glossdef>Domain Name System - This system associates domain names (e.g. gamemaker.io) to other info, such as IP addresses. DNS records are returned from a DNS lookup.</glossdef></glossentry>
+<glossterm>tampon d'affichage</glossterm>
+<glossdef>Le tampon d'affichage est le "canevas" où tout est finalement dessiné. Certains événements le ciblent directement (comme l'événement Pre Draw), tandis que d'autres dessinent d'abord sur la surface de l'application, puis sur le tampon d'affichage.</glossdef></glossentry>
 <glossentry id="Default_Dope_Sheet">
-<glossterm>Dope Sheet</glossterm>
-<glossdef>The Dope Sheet is the visual representation of the sequence timeline, and where you can add, remove and edit the different asset keys and parameter keys that affect how the different tracks in the sequence will behave over time.</glossdef></glossentry>
-<glossentry id="Default_downsampling">
-<glossterm>downsampling</glossterm>
-<glossdef>Downsampling is the process of reducing samples in audio and, more generally, in signals. For audio it means that samples are thrown away and less samples remain, leading to a loss of information. The sample frequency of the audio is lowered as well as the quality of the audio. This change distorts the audio.</glossdef></glossentry>
+<glossterm>Feuille de dope</glossterm>
+<glossdef>Le Dope Sheet est la représentation visuelle de la timeline de la séquence, et l'endroit où vous pouvez ajouter, supprimer et modifier les différentes clés d'actifs et de paramètres qui affectent le comportement des différentes pistes de la séquence dans le temps.</glossdef></glossentry>
 <glossentry id="Default_encoding">
-<glossterm>encoding</glossterm>
-<glossdef>Encoding transforms data into another format using a scheme that is publicly available so that it can easily be reversed. This is not the same as encryption, as it does not require a key to decode it. Encoding is generally used to either change the data into a format for eaiser use by a different system (like sending data to a server), or for making data unreadable to the human eye.</glossdef></glossentry>
+<glossterm>codage</glossterm>
+<glossdef>Le codage transforme les données en un autre format à l'aide d'un schéma accessible au public, de sorte qu'il peut facilement être inversé. Ce n'est pas la même chose que le cryptage, car il ne nécessite pas de clé pour le décodage. Le codage est généralement utilisé pour modifier les données dans un format plus facile à utiliser par un autre système (comme l'envoi de données à un serveur) ou pour rendre les données illisibles à l'œil humain.</glossdef></glossentry>
 <glossentry id="Default_EULA">
-<glossterm>EULA</glossterm>
-<glossdef>The End User Licence Agreement (EULA) is a legal document that outlines the licence for a product that you are getting.</glossdef></glossentry>
+<glossterm>CLUF</glossterm>
+<glossdef>Le contrat de licence de l'utilisateur final (CLUF) est un document juridique qui décrit la licence d'un produit que vous obtenez.</glossdef></glossentry>
 <glossentry id="Default_exception">
 <glossterm>exception</glossterm>
-<glossdef>A special, unexpected and anomalous condition encountered during the execution of a program is known as an exception. It can also be termed as an error or a condition which alters the way of the program or the microprocessor to a different path. An example of an exception can be the case when a program tries to access a variable, but the variable does not exist. Exceptions must be handled and eradicated in the program code to avoid any fatal error, a process called debugging.</glossdef></glossentry>
+<glossdef>Une condition spéciale, inattendue et anormale rencontrée pendant l'exécution d'un programme est connue sous le nom d'exception. Elle peut également être qualifiée d'erreur ou de condition qui modifie le chemin du programme ou du microprocesseur vers un chemin différent. Un exemple d'exception peut être le cas où un programme tente d'accéder à une variable, mais que celle-ci n'existe pas. Les exceptions doivent être traitées et éradiquées dans le code du programme pour éviter toute erreur fatale, un processus appelé débogage.</glossdef></glossentry>
 <glossentry id="Default_executable_package">
-<glossterm>executable package</glossterm>
-<glossdef>A package of files that are used to execute a program. In GameMaker Studio this can be a single file - like an installer for windows - or multiple files - like the HTML5 output.</glossdef></glossentry>
+<glossterm>paquet exécutable</glossterm>
+<glossdef>Un ensemble de fichiers qui sont utilisés pour exécuter un programme. Dans GameMaker Studio, il peut s'agir d'un fichier unique - comme un programme d'installation pour Windows - ou de plusieurs fichiers - comme la sortie HTML5.</glossdef></glossentry>
 <glossentry id="Default_expression">
 <glossterm>expression</glossterm>
-<glossdef>An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.</glossdef></glossentry>
+<glossdef>Une expression est une combinaison d'une ou plusieurs constantes, variables, opérateurs et/ou fonctions qui sont interprétés selon des règles particulières de précédence et d'association pour renvoyer une autre valeur. Une expression simple serait (5 5), qui renvoie 10.</glossdef></glossentry>
 <glossentry id="Default_falsy">
 <glossterm>falsy</glossterm>
-<glossdef>A value that is considered &quot;false&quot; when used as a boolean, for example in an if() condition.</glossdef></glossentry>
+<glossdef>Une valeur qui est considérée comme "fausse" lorsqu'elle est utilisée comme un booléen, par exemple dans une condition if().</glossdef></glossentry>
 <glossentry id="Default_floating_point">
-<glossterm>floating point</glossterm>
-<glossdef>Floating point numbers are numbers that contain decimal points. For example, the numbers 5.5, 0.001, and -2,345.6789 are floating point numbers. Numbers that do not have decimal places are called integers (e.g. 2, 56, 1400).</glossdef></glossentry>
+<glossterm>virgule flottante</glossterm>
+<glossdef>Les nombres à virgule flottante sont des nombres qui contiennent des points décimaux. Par exemple, les nombres 5,5, 0,001 et -2 345,6789 sont des nombres à virgule flottante. Les nombres qui n'ont pas de décimales sont appelés nombres entiers (par exemple 2, 56, 1400).</glossdef></glossentry>
 <glossentry id="Default_font">
-<glossterm>font</glossterm>
-<glossdef>A font is a collection of graphical glyphs used to represent text in a language. Fonts can be different weights, sizes, and styles and are used to display any written content in a project.</glossdef></glossentry>
+<glossterm>police</glossterm>
+<glossdef>Une police est un ensemble de glyphes graphiques utilisés pour représenter du texte dans une langue. Les polices peuvent avoir des poids, des tailles et des styles différents et sont utilisées pour afficher tout contenu écrit dans un projet.</glossdef></glossentry>
 <glossentry id="Default_framework">
-<glossterm>framework</glossterm>
-<glossdef>A framework is a base foundation of code that may be altered and/or built upon by the user. A framework might include different software libraries, APIs, compilers and much more. In simpler terms, a framework provides a favorable environment for a certain type and level of programming for a project. In GameMaker Studio 2 you can, for example, create your own framework projects (via Local Asset Packages) that contain scripts and objects for general controls, stat management, networking, or anything else you commonly use in your projects, and then import these into new projects right at the beginning to give you the basic grounding to conntinue without having to reprogram these systems every time.</glossdef></glossentry>
+<glossterm>cadre</glossterm>
+<glossdef>Un framework est une base de code qui peut être modifiée et/ou développée par l'utilisateur. Un framework peut inclure différentes bibliothèques logicielles, des API, des compilateurs et bien plus encore. En termes plus simples, un framework fournit un environnement favorable à un certain type et niveau de programmation pour un projet. Dans GameMaker Studio 2, vous pouvez, par exemple, créer vos propres projets de framework (via les Local Asset Packages) qui contiennent des scripts et des objets pour les contrôles généraux, la gestion des statuts, la mise en réseau ou tout ce que vous utilisez couramment dans vos projets, puis les importer dans de nouveaux projets dès le début pour vous donner les bases nécessaires pour continuer sans avoir à reprogrammer ces systèmes à chaque fois.</glossdef></glossentry>
 <glossentry id="Default_frontend">
-<glossterm>frontend</glossterm>
-<glossdef>The frontend is the part of a program that is &#39;front facing&#39;, ie: the part that the end user interacts with. For example, in GameMaker Studio 2 the interface where you do the programming and add assets, etc... is the frontend of the program, as it is where you interact with the program and input values and files and other things. This is essentially the oppositre of the backend.</glossdef></glossentry>
+<glossterm>front-end</glossterm>
+<glossdef>Le frontal est la partie d'un programme qui est "frontale", c'est-à-dire la partie avec laquelle l'utilisateur final interagit. Par exemple, dans GameMaker Studio 2, l'interface où vous effectuez la programmation et ajoutez des ressources, etc... est le front-end du programme, car c'est là que vous interagissez avec le programme et entrez des valeurs, des fichiers et d'autres choses. C'est essentiellement l'opposé du backend.</glossdef></glossentry>
 <glossentry id="Default_GameMaker:_Studio 1.4">
-<glossterm>GameMaker: Studio 1.4</glossterm>
-<glossdef>A previous version of the GameMaker software (often called Legacy GameMaker) that is no longer available nor supported. </glossdef></glossentry>
+<glossterm>GameMaker : Studio 1.4</glossterm>
+<glossdef>Une version antérieure du logiciel GameMaker (souvent appelée Legacy GameMaker) qui n'est plus disponible ni prise en charge.</glossdef></glossentry>
 <glossentry id="Default_garbage_collector">
-<glossterm>garbage collector</glossterm>
-<glossdef>The garbage collector is an automated tool that is part of the game code and is used to remove certain things (like arrays and structs) from memory when they are no longer referenced in your code, without the need for you to explicitly remove them.</glossdef></glossentry>
+<glossterm>éboueur</glossterm>
+<glossdef>Le ramasseur de déchets est un outil automatisé qui fait partie du code du jeu et qui est utilisé pour supprimer certains éléments (comme les tableaux et les structures) de la mémoire lorsqu'ils ne sont plus référencés dans votre code, sans que vous ayez besoin de les supprimer explicitement.</glossdef></glossentry>
 <glossentry id="Default_gizmos">
-<glossterm>gizmos</glossterm>
-<glossdef>Gizmo are directly manipulable, self contained, visual screen idioms - essentially anything that is visual and can be interacted with or manpulated by the user to generate an effect or a specific result. </glossdef></glossentry>
-<glossentry id="Default_glyph">
-<glossterm>glyph</glossterm>
-<glossdef>A glyph is a particular visual appearance of a character. It is the appearance of a character using a given font.</glossdef></glossentry>
+<glossterm>bidules</glossterm>
+<glossdef>Les gadgets sont des idiomes d'écran visuels, autonomes et directement manipulables - essentiellement tout ce qui est visuel et avec lequel l'utilisateur peut interagir ou qu'il peut manipuler pour générer un effet ou un résultat spécifique.</glossdef></glossentry>
 <glossentry id="Default_GUI">
 <glossterm>GUI</glossterm>
-<glossdef>Short for &#39;Graphical User Interface&#39;, which is a user interface that includes graphical elements, such as windows, icons and buttons. In GameMaker you have a specific set of object events (Draw GUI Events) that can draw to this layer specifically designed for things like score, lives, inventories, etc...</glossdef></glossentry>
+<glossdef>Abréviation de "Graphical User Interface", il s'agit d'une interface utilisateur qui comprend des éléments graphiques, tels que des fenêtres, des icônes et des boutons. Dans GameMaker, vous disposez d'un ensemble spécifique d'événements d'objets (Draw GUI Events) qui peuvent dessiner sur cette couche spécialement conçue pour des choses comme le score, les vies, les inventaires, etc...</glossdef></glossentry>
 <glossentry id="Default_hard-code">
-<glossterm>hard-coded</glossterm>
-<glossdef>In computer programming, the term hard-coded is used to describe code that is considered fixed and not likely to change. Hardcoded features are built into hardware or software in such a way that they cannot be modified later on. For example, if you are making a game and &#39;hard-code&#39; the player health to 10, then you would be using the value 10 throughout the game code rather than using a variable.</glossdef></glossentry>
+<glossterm>codé en dur</glossterm>
+<glossdef>En programmation informatique, le terme "codé en dur" est utilisé pour décrire un code considéré comme fixe et non susceptible d'être modifié. Les caractéristiques codées en dur sont intégrées au matériel ou au logiciel de telle sorte qu'elles ne peuvent être modifiées ultérieurement. Par exemple, si vous créez un jeu et que la santé du joueur est codée en dur sur 10, vous utiliserez la valeur 10 dans tout le code du jeu plutôt qu'une variable.</glossdef></glossentry>
 <glossentry id="Default_hashing">
-<glossterm>hashing</glossterm>
-<glossdef>Hashing is the method of creating a string or value that relates to a single source - usually a file - and ONLY that source. For example., in GameMaker you can generate a hash for a save file, then, before accessing it later, generate another hash for it and check the original hash and the new hash to determine if the file has been tampered with.</glossdef></glossentry>
+<glossterm>hachage</glossterm>
+<glossdef>Le hachage est la méthode qui consiste à créer une chaîne ou une valeur qui se rapporte à une source unique - généralement un fichier - et UNIQUEMENT à cette source. Par exemple, dans GameMaker, vous pouvez générer un hachage pour un fichier de sauvegarde, puis, avant d'y accéder plus tard, générer un autre hachage pour ce fichier et vérifier le hachage original et le nouveau hachage pour déterminer si le fichier a été altéré.</glossdef></glossentry>
 <glossentry id="Default_HVS">
 <glossterm>HSV</glossterm>
-<glossdef>This stands for Hue, Saturation and Value and is a way of expressing a colour usually using values from 0 to 255. The hue is the colour hue value, the saturation is amount of the colour to be used, and the value is the brightness of the colour. </glossdef></glossentry>
+<glossdef>Il s'agit de la teinte, de la saturation et de la valeur. C'est une façon d'exprimer une couleur en utilisant généralement des valeurs comprises entre 0 et 255. La teinte est la valeur de la couleur, la saturation est la quantité de la couleur à utiliser et la valeur est la luminosité de la couleur.</glossdef></glossentry>
 <glossentry id="Default_HUD">
 <glossterm>HUD</glossterm>
-<glossdef>In games, the HUD stands for the Heads-Up Display. This is the method by which information is visually relayed to the player as part of a game&#39;s user interface, so things like the health bar, status icons, score, etc... all form part of the HUD, and normally HUD elements do not require user interaction.</glossdef></glossentry>
+<glossdef>Dans les jeux, le HUD est l'acronyme de Heads-Up Display (affichage tête haute). Il s'agit de la méthode par laquelle les informations sont visuellement relayées au joueur dans le cadre de l'interface utilisateur d'un jeu. Ainsi, des éléments comme la barre de santé, les icônes d'état, le score, etc. font tous partie du HUD et, normalement, les éléments du HUD ne nécessitent pas d'interaction avec l'utilisateur.</glossdef></glossentry>
 <glossentry id="Default_IDE">
 <glossterm>IDE</glossterm>
-<glossdef>The IDE, or Integrated Development Environment, is a software application that provides comprehensive facilities to computer programmers for software development. In this case, the entire frontend of GameMaker Studio 2 is considered the IDE, and includes sections to create graphics, add sounds, and add code to make your games.</glossdef></glossentry>
+<glossdef>L'IDE, ou environnement de développement intégré, est une application logicielle qui fournit aux programmeurs informatiques des outils complets pour le développement de logiciels. Dans le cas présent, l'ensemble du frontal de GameMaker Studio 2 est considéré comme l'IDE et comprend des sections permettant de créer des graphiques, d'ajouter des sons et d'ajouter du code pour créer vos jeux.</glossdef></glossentry>
 <glossentry id="Default_iteration">
-<glossterm>iteration</glossterm>
-<glossdef>An iteration is a single pass through a set of operations in your project code. One form of iteration in computer programming is via loops. A loop will repeat a certain segment of code until a condition is met and it can proceed further. Each time the computer runs a loop, it is known as an iteration. In simple terms, iteration is the process of repeating a particular snippet of code over and over again to perform a certain action.</glossdef></glossentry>
+<glossterm>itération</glossterm>
+<glossdef>Une itération est un passage unique par un ensemble d'opérations dans le code de votre projet. Les boucles constituent une forme d'itération en programmation informatique. Une boucle répète un certain segment de code jusqu'à ce qu'une condition soit remplie et qu'elle puisse continuer. Chaque fois que l'ordinateur exécute une boucle, il s'agit d'une itération. En termes simples, l'itération est le processus de répétition d'un bout de code particulier, encore et encore, pour effectuer une certaine action.</glossdef></glossentry>
 <glossentry id="Default_JSON">
 <glossterm>JSON</glossterm>
-<glossdef>JSON stands for JavaScript Object Notatio, and is a lightweight format for storing data. JSON is often used when data is sent from a server to a web page and is considered &#39;self-describing&#39; and easy to understand and follow when viewed.</glossdef></glossentry>
+<glossdef>JSON est l'abréviation de JavaScript Object Notatio, et est un format léger pour le stockage des données. JSON est souvent utilisé lorsque des données sont envoyées d'un serveur à une page Web. Il est considéré comme "autodescriptif" et facile à comprendre et à suivre lorsqu'il est affiché.</glossdef></glossentry>
 <glossentry id="Default_keyframe">
-<glossterm>keyframe</glossterm>
-<glossdef>A keyframe (also called a parameter key) is a point on the timeline in the dope sheet where a change in a parameter value is defined.</glossdef></glossentry>
+<glossterm>image clé</glossterm>
+<glossdef>Une image-clé (également appelée clé de paramètre) est un point sur la ligne de temps dans la feuille de dope où une modification de la valeur d'un paramètre est définie.</glossdef></glossentry>
 <glossentry id="Default_keyword">
-<glossterm>keyword</glossterm>
-<glossdef>Keywords are special words that are reserved by a programming language or a program as they have a special meaning. These keywords are reserved to perform certain tasks, and they can be either commands or parameters. Each programming language has a set of reserved keywords (also known as reserved names) which cannot be used as variable names, and the GameMaker Language is no exception, where words like return, while, if and break are all reserved kewords used in the programming language.</glossdef></glossentry>
+<glossterm>mot-clé</glossterm>
+<glossdef>Les mots-clés sont des mots spéciaux qui sont réservés par un langage de programmation ou un programme car ils ont une signification particulière. Ces mots-clés sont réservés pour effectuer certaines tâches, et ils peuvent être des commandes ou des paramètres. Chaque langage de programmation dispose d'un ensemble de mots-clés réservés (également appelés noms réservés) qui ne peuvent pas être utilisés comme noms de variables. Le langage GameMaker ne fait pas exception à la règle, puisque des mots comme return, while, if et break sont tous des mots-clés réservés utilisés dans le langage de programmation.</glossdef></glossentry>
 <glossentry id="Default_linear_interpolation">
-<glossterm>linear interpolation</glossterm>
-<glossdef>Linear interpolation involves estimating a new value by connecting two adjacent known values with a straight line. You can then get the interpolated value by checking any point along the line. In graphics, linear interpolation refers to a basic method of smoothing pixel edges.</glossdef></glossentry>
+<glossterm>interpolation linéaire</glossterm>
+<glossdef>L'interpolation linéaire consiste à estimer une nouvelle valeur en reliant deux valeurs adjacentes connues par une ligne droite. Vous pouvez ensuite obtenir la valeur interpolée en vérifiant n'importe quel point de la ligne. En graphisme, l'interpolation linéaire désigne une méthode de base pour lisser les bords des pixels.</glossdef></glossentry>
 <glossentry id="Default_literal">
-<glossterm>literal</glossterm>
-<glossdef>An explicit value written in code, e.g. when you write &quot;A TEXT STRING&quot; you are using a string literal, as opposed to returning a string through a variable or function. Similarly, [0, 1, 2] is an array literal.</glossdef></glossentry>
+<glossterm>littéral</glossterm>
+<glossdef>Une valeur explicite écrite dans le code, par exemple, lorsque vous écrivez "UNE CHAÎNE DE TEXTE", vous utilisez un littéral de chaîne de caractères, par opposition au renvoi d'une chaîne de caractères par une variable ou une fonction. De même, [0, 1, 2] est un littéral de tableau.</glossdef></glossentry>
 <glossentry id="Default_machine_code">
-<glossterm>machine code</glossterm>
-<glossdef>Machine code is code that is directly executed by a CPU without the need for interpretation by an interpreter. It is the lowest level of code and contains the instructions that the processor executes.
-It is specific to a processor architecture. As a consequence, it is optimized. It can also be generated from source code in a higher level programming language by a compiler.
-In GameMaker the YoYo Compiler can be used to generate an executable containing optimized machine code for a variety of platforms.</glossdef></glossentry>
+<glossterm>code machine</glossterm>
+<glossdef>Le code machine est un code qui est directement exécuté par un processeur sans avoir besoin d'être interprété par un interpréteur. Il s'agit du plus bas niveau de code et contient les instructions que le processeur exécute. Il est spécifique à une architecture de processeur. Par conséquent, il est optimisé. Il peut également être généré à partir du code source d'un langage de programmation de plus haut niveau par un compilateur. Dans GameMaker, le compilateur YoYo peut être utilisé pour générer un exécutable contenant du code machine optimisé pour une variété de plateformes.</glossdef></glossentry>
 <glossentry id="Default_method">
-<glossterm>method</glossterm>
-<glossdef>In GameMaker, a method is the name given to a user-defined function that has been bound to an instance, so that the instance variable is the name of the funtion and what you use to call it.</glossdef></glossentry>
-<glossentry id="Default_multicast">
-<glossterm>multicast</glossterm>
-<glossdef>Multicast is network communication where multiple receivers are addressed instead of a single receiver in a single transmission.</glossdef></glossentry>
+<glossterm>méthode</glossterm>
+<glossdef>Dans GameMaker, une méthode est le nom donné à une fonction définie par l'utilisateur qui a été liée à une instance, de sorte que la variable d'instance est le nom de la fonction et ce que vous utilisez pour l'appeler.</glossdef></glossentry>
 <glossentry id="Default_operand">
-<glossterm>operand</glossterm>
-<glossdef>An operand is a term used to denote the values which can be manipulated using different operators. In the expression A + B + C, A, B and C are the operands.</glossdef></glossentry>
+<glossterm>opérande</glossterm>
+<glossdef>Un opérande est un terme utilisé pour désigner les valeurs qui peuvent être manipulées à l'aide de différents opérateurs. Dans l'expression A B C, A, B et C sont les opérandes.</glossdef></glossentry>
 <glossentry id="Default_operator">
-<glossterm>operator</glossterm>
-<glossdef>An operator is a term used to denote something which can manipulate different operands. In the expression A + B - C, + and - are the operators. Examples of different operators are + (addition), - (subtrtaction), = (equals), != (not equal) and &gt;= (greater than or equal to), but there are many more.</glossdef></glossentry>
+<glossterm>opérateur</glossterm>
+<glossdef>Un opérateur est un terme utilisé pour désigner quelque chose qui peut manipuler différents opérandes. Dans l'expression A B - C, et - sont les opérateurs. Des exemples de différents opérateurs sont (addition), - (sous-trtaction), = (égal), != (non égal) et >= (supérieur ou égal à), mais il en existe bien d'autres.</glossdef></glossentry>
 <glossentry id="Default_parameter_key">
-<glossterm>parameter key</glossterm>
-<glossdef>A parameter key (also called a keyframe) is a point on the timeline in the dope sheet where a change in a parameter value is defined.</glossdef></glossentry>
+<glossterm>touche de paramètre</glossterm>
+<glossdef>Une clé de paramètre (également appelée image-clé) est un point sur la ligne de temps dans la feuille de calcul où un changement de la valeur d'un paramètre est défini.</glossdef></glossentry>
 <glossentry id="Default_parameter_tracks">
-<glossterm>parameter tracks</glossterm>
-<glossdef>A track that has been assigned to an asset track in the track panel and that changes a single parameter for the asset track it&#39;s linked to, like the position, or the image index.</glossdef></glossentry>
+<glossterm>pistes de paramètres</glossterm>
+<glossdef>Une piste qui a été assignée à une piste d'actif dans le panneau des pistes et qui modifie un seul paramètre pour la piste d'actif à laquelle elle est liée, comme la position ou l'index de l'image.</glossdef></glossentry>
 <glossentry id="Default_physics">
-<glossterm>physics</glossterm>
-<glossdef>In GameMaker, when we talk about an object, instance or room using &#39;physics&#39; we mean it is using the built-in physics simulation functions, based on the Box2D physics library.</glossdef></glossentry>
+<glossterm>physique</glossterm>
+<glossdef>Dans GameMaker, lorsqu'on parle d'un objet, d'une instance ou d'une pièce utilisant la "physique", cela signifie qu'il utilise les fonctions de simulation physique intégrées, basées sur la bibliothèque physique Box2D.</glossdef></glossentry>
 <glossentry id="Default_playhead">
-<glossterm>playhead</glossterm>
-<glossdef>The current &#39;play&#39; position within the timeline in the Sequences dope sheet or the Sprite editor frame view. In sequences (and sprites), this will move as the animation is previewed, and you can place it on specific frames to see and edit the keys and keyframes at that position.</glossdef></glossentry>
+<glossterm>tête de lecture</glossterm>
+<glossdef>La position actuelle de "lecture" sur la ligne de temps dans la feuille de calcul des séquences ou la vue des images de l'éditeur de sprites. Dans les séquences (et les sprites), cette position se déplace au fur et à mesure de la prévisualisation de l'animation, et vous pouvez la placer sur des images spécifiques pour voir et modifier les clés et les images clés à cette position.</glossdef></glossentry>
 <glossentry id="Default_port_number">
-<glossterm>port number</glossterm>
-<glossdef>A port number is a way to identify a specific process to which an Internet or other network message is to be forwarded when it arrives at a server.</glossdef></glossentry>
+<glossterm>numéro de port</glossterm>
+<glossdef>Un numéro de port est un moyen d'identifier un processus spécifique vers lequel un message Internet ou autre réseau doit être acheminé lorsqu'il arrive sur un serveur.</glossdef></glossentry>
 <glossentry id="Default_PURE">
-<glossterm>pure</glossterm>
-<glossdef>A pure function has no effect on the game, and does not create or change anything. It only returns a value. Given the same set of arguments, it always returns the same value.</glossdef></glossentry>
+<glossterm>pur</glossterm>
+<glossdef>Une fonction pure n'a aucun effet sur le jeu, et ne crée ni ne modifie rien. Elle renvoie uniquement une valeur. Pour un même ensemble d'arguments, elle renvoie toujours la même valeur.</glossdef></glossentry>
 <glossentry id="Default_Remote_Workers">
-<glossterm>Remote Workers</glossterm>
-<glossdef>A Remote Worker is a special program that GameMaker Studio 2 will use on certain platforms to create your game executables without actually running the GameMaker Studio 2 IDE on that platform</glossdef></glossentry>
+<glossterm>Travailleurs à distance</glossterm>
+<glossdef>Un Remote Worker est un programme spécial que GameMaker Studio 2 utilise sur certaines plates-formes pour créer les exécutables de vos jeux sans avoir à exécuter l'IDE GameMaker Studio 2 sur cette plate-forme.</glossdef></glossentry>
 <glossentry id="Default_render">
-<glossterm>rendered</glossterm>
-<glossdef>When something is rendered in GameMaker Studio 2, it generally means that it has simply been &#39;drawn to the display buffer&#39; or &#39;drawn to a surface&#39;.  Rendering can also refer to the process of turning some kind of vector source (like a font) into a bitmap image,.</glossdef></glossentry>
+<glossterm>rendu</glossterm>
+<glossdef>Lorsque quelque chose est rendu dans GameMaker Studio 2, cela signifie généralement qu'il a simplement été "dessiné dans la mémoire tampon de l'écran" ou "dessiné sur une surface".  Le rendu peut également faire référence au processus de transformation d'un type de source vectorielle (comme une police) en une image bitmap.</glossdef></glossentry>
 <glossentry id="Default_RSS">
 <glossterm>RSS</glossterm>
-<glossdef>Short for &#39;Rich Site Summary&#39;, and is a standardized system for the distribution of content from an online publisher to Internet users.</glossdef></glossentry>
+<glossdef>Abréviation de "Rich Site Summary", il s'agit d'un système normalisé de distribution du contenu d'un éditeur en ligne aux utilisateurs d'Internet.</glossdef></glossentry>
 <glossentry id="Default_Runtime">
-<glossterm>Runtime</glossterm>
-<glossdef>The runtime in GameMaker is the collection of compiler assets that is required by the program to create a final executable package for a given target platform. These are installed seperately from the IDE, and can be changed and updated at any time.</glossdef></glossentry>
+<glossterm>Temps d'exécution</glossterm>
+<glossdef>Le moteur d'exécution de GameMaker Studio 2 est la collection d'actifs de compilation dont le programme a besoin pour créer un package exécutable final pour une plate-forme cible donnée. Ces éléments sont installés séparément de l'IDE et peuvent être modifiés et mis à jour à tout moment.</glossdef></glossentry>
 <glossentry id="Default_sample_rate">
-<glossterm>sample rate</glossterm>
-<glossdef>Sample rate is the number of samples of audio carried per second, measured in Hz or kHz (one kHz being 1000 Hz). The higher the sample rate, the more a sound will approximate the original analog waveform, but the larger the file size will be. In general sound effects are fine with a lower sample rate than music.</glossdef></glossentry>
+<glossterm>taux d'échantillonnage</glossterm>
+<glossdef>La fréquence d'échantillonnage est le nombre d'échantillons audio transportés par seconde, mesuré en Hz ou en kHz (un kHz correspondant à 1000 Hz). Plus la fréquence d'échantillonnage est élevée, plus le son se rapproche de la forme d'onde analogique originale, mais plus la taille du fichier est importante. En général, les effets sonores s'accommodent d'une fréquence d'échantillonnage plus faible que la musique.</glossdef></glossentry>
 <glossentry id="Default_SCM">
 <glossterm>SCM</glossterm>
-<glossdef>SCM stands for Source Control Management, which is a program (or suite of programs) responsible for maintining versions of the source code for a project. SCM permits you to store a running history of code changes, as well as review and undo any changes made to the source code, among other things.</glossdef></glossentry>
+<glossdef>SCM est l'abréviation de Source Control Management (gestion du contrôle des sources). Il s'agit d'un programme (ou d'une suite de programmes) chargé de maintenir les versions du code source d'un projet. SCM vous permet de stocker un historique des modifications du code, ainsi que de revoir et d'annuler toute modification apportée au code source, entre autres choses.</glossdef></glossentry>
 <glossentry id="Default_SDK">
 <glossterm>SDK</glossterm>
-<glossdef>SDK stands for &#39;Software Development Kit&#39;. This usually refers to a collection of software and/or packages used for developing applications for a specific device or operating system.</glossdef></glossentry>
+<glossdef>SDK signifie "kit de développement logiciel". Il s'agit généralement d'une collection de logiciels et/ou de paquets utilisés pour développer des applications pour un appareil ou un système d'exploitation spécifique.</glossdef></glossentry>
 <glossentry id="Default_server">
-<glossterm>server</glossterm>
-<glossdef>In computing, a server is a computer program or a device that provides functionality for other programs or devices, called &#39;clients&#39;.
-</glossdef></glossentry>
+<glossterm>serveur</glossterm>
+<glossdef>En informatique, un serveur est un programme informatique ou un dispositif qui fournit des fonctionnalités à d'autres programmes ou dispositifs, appelés "clients".</glossdef></glossentry>
 <glossentry id="Default_shader">
 <glossterm>shaders</glossterm>
-<glossdef>A shader is a collection of small programs that run directly on the GPU to create graphics and graphical effects. These are very fast to run and free up the CPU to do other things.</glossdef></glossentry>
+<glossdef>Un shader est une collection de petits programmes qui s'exécutent directement sur le GPU pour créer des graphiques et des effets graphiques. Ces programmes sont très rapides à exécuter et libèrent le CPU pour d'autres tâches.</glossdef></glossentry>
 <glossentry id="Default_smooth_interpolation">
-<glossterm>smooth interpolation</glossterm>
-<glossdef>Smooth interpolation involves estimating a new value by connecting two adjacent known values with a mathematically generated spline curve . You can then get the interpolated value by checking any point along the line.</glossdef></glossentry>
+<glossterm>interpolation lisse</glossterm>
+<glossdef>L'interpolation lisse consiste à estimer une nouvelle valeur en reliant deux valeurs connues adjacentes par une courbe spline générée mathématiquement . Vous pouvez ensuite obtenir la valeur interpolée en vérifiant n'importe quel point le long de la ligne.</glossdef></glossentry>
 <glossentry id="Default_source_code">
-<glossterm>source code</glossterm>
-<glossdef>Source code is the fundamental component of a computer program that is required for the program to run.</glossdef></glossentry>
+<glossterm>code source</glossterm>
+<glossdef>Le code source est le composant fondamental d'un programme informatique qui est nécessaire pour que le programme fonctionne.</glossdef></glossentry>
 <glossentry id="Default_spline">
-<glossterm>spline</glossterm>
-<glossdef>A spline is basically a smooth curve used to join points. Mathematically speaking it is deifned as a sufficiently smooth polynomial function that is piecewise-defined, and possesses a high degree of smoothness at the places where the polynomial pieces connect.</glossdef></glossentry>
+<glossterm>cannelure</glossterm>
+<glossdef>Une spline est essentiellement une courbe lisse utilisée pour joindre des points. D'un point de vue mathématique, il s'agit d'une fonction polynomiale suffisamment lisse qui est définie par morceaux et qui possède un haut degré de régularité aux endroits où les morceaux du polynôme se connectent.</glossdef></glossentry>
 <glossentry id="Default_sprites">
 <glossterm>sprites</glossterm>
-<glossdef>A sprite is a bitmap graphic that is designed to be part of a larger scene. It can either be a static image or an animated graphic.</glossdef></glossentry>
+<glossdef>Un sprite est un graphique bitmap conçu pour faire partie d'une scène plus vaste. Il peut s'agir d'une image statique ou d'un graphique animé.</glossdef></glossentry>
 <glossentry id="Default_statement">
-<glossterm>statement</glossterm>
-<glossdef>In programming, a statement is a single line of code written legally in a programming language that expresses an action to be carried out. A statement might have internal components of its own, including expressions, operators and functions. An example of a statement is A = B + 5. A GameMaker Studio 2 program is nothing but a sequence of one or more statements that together perform a task (like move the player). </glossdef></glossentry>
+<glossterm>déclaration</glossterm>
+<glossdef>En programmation, une instruction est une seule ligne de code écrite légalement dans un langage de programmation qui exprime une action à exécuter. Une instruction peut avoir ses propres composants internes, notamment des expressions, des opérateurs et des fonctions. Un exemple d'instruction est A = B 5. Un programme GameMaker Studio 2 n'est rien d'autre qu'une séquence d'une ou plusieurs instructions qui, ensemble, exécutent une tâche (comme déplacer le joueur).</glossdef></glossentry>
 <glossentry id="Default_swatches">
-<glossterm>swatches</glossterm>
-<glossdef>A swatch is simply a small square sample of a colour or a material used to illustrate how it will look.</glossdef></glossentry>
+<glossterm>Echantillons</glossterm>
+<glossdef>Un échantillon est simplement un petit échantillon carré d'une couleur ou d'un matériau utilisé pour illustrer son aspect.</glossdef></glossentry>
 <glossentry id="Default_syntax">
-<glossterm>syntax</glossterm>
-<glossdef>Similar to human languages, programming languages have their own set of rules on how statements can be conveyed, and this set of rules is known as the syntax. While a number of programming languages share many features, functions, and capabilities, they generally differ in syntax. Without the proper use of syntax, one cannot write an executable program, and wrong syntax will lead to errors when compiling.</glossdef></glossentry>
+<glossterm>syntaxe</glossterm>
+<glossdef>À l'instar des langues humaines, les langages de programmation possèdent leur propre ensemble de règles sur la façon dont les déclarations peuvent être transmises, et cet ensemble de règles est connu sous le nom de syntaxe. Si un certain nombre de langages de programmation partagent de nombreuses caractéristiques, fonctions et capacités, ils diffèrent généralement par leur syntaxe. Sans une utilisation correcte de la syntaxe, il est impossible d'écrire un programme exécutable, et une syntaxe incorrecte entraînera des erreurs lors de la compilation.</glossdef></glossentry>
 <glossentry id="Default_texel">
 <glossterm>texel</glossterm>
-<glossdef>Texel (or texture element) is the fundamental unit of texture space, much like a pixel is the fundamental element of picture space. Textures are represented by arrays of Texels, just as pictures are represented by arrays of pixels. When texturing a 3D surface (a process known as texture mapping) the renderer maps texels to appropriate pixels in the output picture.</glossdef></glossentry>
+<glossdef>Le texel (ou élément de texture) est l'unité fondamentale de l'espace de texture, tout comme le pixel est l'élément fondamental de l'espace d'image. Les textures sont représentées par des tableaux de texels, tout comme les images sont représentées par des tableaux de pixels. Lors de la texturation d'une surface 3D (un processus connu sous le nom de mappage de texture), le moteur de rendu mappe les texels aux pixels appropriés dans l'image de sortie.</glossdef></glossentry>
 <glossentry id="Default_texture_atlas">
-<glossterm>texture atlas</glossterm>
-<glossdef>Another name for a texture page, which is simply a collection of images required by one or more sprites in your game, organised in an optimal way to use as little texture memory as possible.</glossdef></glossentry>
+<glossterm>atlas des textures</glossterm>
+<glossdef>Un autre nom pour une page de texture, qui est simplement une collection d'images requises par un ou plusieurs sprites dans votre jeu, organisée de manière optimale pour utiliser le moins de mémoire de texture possible.</glossdef></glossentry>
 <glossentry id="Default_texture_page">
-<glossterm>texture page</glossterm>
-<glossdef>A texture page (also called a texture atlas) is a collection of images (sprites, tilesets, font characters, etc...) that are grouped together in an optimal way so that they take up the least amount of texture memory when your game is run.</glossdef></glossentry>
+<glossterm>page de texture</glossterm>
+<glossdef>Une page de texture (également appelée atlas de texture) est une collection d'images (sprites, tilesets, caractères de police, etc...) qui sont regroupées de manière optimale afin d'occuper le moins de mémoire de texture possible lorsque votre jeu est exécuté.</glossdef></glossentry>
 <glossentry id="Default_tile_map">
-<glossterm>tile map</glossterm>
-<glossdef>The tile map is the name given to a collection of tiles taken from a tile set and used to create levels in a game.</glossdef></glossentry>
+<glossterm>carte des tuiles</glossterm>
+<glossdef>La carte de tuiles est le nom donné à une collection de tuiles prises dans un jeu de tuiles et utilisées pour créer des niveaux dans un jeu.</glossdef></glossentry>
 <glossentry id="Default_tile-sets">
-<glossterm>tile sets</glossterm>
-<glossdef>A tile set is a collection of square or rectangular graphical assets laid out on a grid as a single image. Each item in the grid can then be placed multiple times in a room to create a larger scene called the &#39;tile map&#39;.</glossdef></glossentry>
+<glossterm>jeux de carreaux</glossterm>
+<glossdef>Un jeu de tuiles est une collection de ressources graphiques carrées ou rectangulaires disposées sur une grille comme une seule image. Chaque élément de la grille peut ensuite être placé plusieurs fois dans une pièce pour créer une scène plus grande appelée "carte de tuiles".</glossdef></glossentry>
 <glossentry id="Default_timeline">
-<glossterm>timelines</glossterm>
-<glossdef>A timeline in GameMaker Studio 2 is a linear collection of events that will be run in consecutive order. Each event can be given code or actions to perform a task and when the timeline is run, these tasks will be performed as each event in the tmeline is reached.</glossdef></glossentry>
+<glossterm>chronologie</glossterm>
+<glossdef>Dans GameMaker Studio 2, une timeline est une collection linéaire d'événements qui seront exécutés dans un ordre consécutif. Chaque événement peut recevoir un code ou des actions pour effectuer une tâche et, lorsque la timeline est exécutée, ces tâches sont exécutées lorsque chaque événement de la timeline est atteint.</glossdef></glossentry>
 <glossentry id="Default_Track_Panel">
-<glossterm>Track Panel</glossterm>
-<glossdef>The area of the sequence editor that shows you all the different tracks in a sequence - asset tracks, parameter tracks, track groups and clip mask groups.</glossdef></glossentry>
+<glossterm>Panneau de suivi</glossterm>
+<glossdef>La zone de l'éditeur de séquence qui vous montre toutes les différentes pistes d'une séquence - pistes d'actifs, pistes de paramètres, groupes de pistes et groupes de masques de clips.</glossdef></glossentry>
 <glossentry id="Default_truth_table">
-<glossterm>truth table</glossterm>
-<glossdef>A truth table is a mathematical table used in logic - specifically in connection with boolean algebra and boolean functions - which sets out the functional values of logical expressions on each of their functional arguments, that is, for each combination of values taken by their logical variables.</glossdef></glossentry>
+<glossterm>table de vérité</glossterm>
+<glossdef>Une table de vérité est une table mathématique utilisée en logique - spécifiquement en relation avec l'algèbre booléenne et les fonctions booléennes - qui présente les valeurs fonctionnelles des expressions logiques pour chacun de leurs arguments fonctionnels, c'est-à-dire pour chaque combinaison de valeurs prises par leurs variables logiques.</glossdef></glossentry>
 <glossentry id="Default_truthy">
-<glossterm>truthy</glossterm>
-<glossdef>A value that is considered &quot;true&quot; when used as a boolean, for example in an if() condition.</glossdef></glossentry>
+<glossterm>véridique</glossterm>
+<glossdef>Une valeur qui est considérée comme "vraie" lorsqu'elle est utilisée comme un booléen, par exemple dans une condition if().</glossdef></glossentry>
 <glossentry id="Default_typo">
-<glossterm>typo</glossterm>
-<glossdef>Typographic error.</glossdef></glossentry>
+<glossterm>faute de frappe</glossterm>
+<glossdef>Erreur typographique.</glossdef></glossentry>
 <glossentry id="Default_URL">
 <glossterm>URL</glossterm>
-<glossdef>Short for &#39;Universal Resource Locator&#39;, and is basically the address of something on the internet.</glossdef></glossentry>
+<glossdef>Abréviation de "Universal Resource Locator", il s'agit en fait de l'adresse d'un élément sur l'internet.</glossdef></glossentry>
 <glossentry id="Default_v-sync">
 <glossterm>v-sync</glossterm>
-<glossdef>V-sync or vertical synchronisation is used to synchronise your game update speed to the refresh rate of the monitor. This can reduce screen tearing - which is when your screen displays portions of multiple frames in one go - but can also cause performance issues or problems on monitors with high refresh-rates.</glossdef></glossentry>
+<glossdef>La V-sync ou synchronisation verticale est utilisée pour synchroniser la vitesse de mise à jour de votre jeu avec la fréquence de rafraîchissement du moniteur. Cela permet de réduire le déchirement de l'écran - qui se produit lorsque votre écran affiche des portions de plusieurs images en une seule fois - mais peut également entraîner des problèmes de performance ou des problèmes sur les moniteurs à taux de rafraîchissement élevé.</glossdef></glossentry>
 <glossentry id="Default_variable">
 <glossterm>variable</glossterm>
-<glossdef>A variable is a named value within a program which can be modified, stored and displayed whenever required. For example, if we have an integer variable with a name XYZ and it stores a value 10, we can then do things like A = XYZ + 10, which will set the value of the variable A to 20, since XYZ is 10 and we are adding 10 to it. You can also change variable values using operators, so doing XYZ = XYZ + 100 would modify the value of our XYZ variable to be equal to 110. Variables can also be used to store identifiers and references to different assets.</glossdef></glossentry>
+<glossdef>Une variable est une valeur nommée dans un programme qui peut être modifiée, stockée et affichée à tout moment. Par exemple, si nous avons une variable entière nommée XYZ et qu'elle stocke une valeur 10, nous pouvons alors faire des choses comme A = XYZ 10, ce qui donnera à la variable A une valeur de 20, puisque XYZ vaut 10 et que nous lui ajoutons 10. Vous pouvez également modifier les valeurs des variables à l'aide d'opérateurs. Ainsi, en faisant XYZ = XYZ 100, la valeur de notre variable XYZ sera égale à 110. Les variables peuvent également être utilisées pour stocker des identifiants et des références à différents actifs.</glossdef></glossentry>
 <glossentry id="Default_vector">
-<glossterm>vector</glossterm>
-<glossdef>A vector is a mathematical construct that has a size, called the magnitude, and a direction. In GameMaker, a vector is usually used to show the distance and direction something moved in. A vector can also be used to define images and certain image formats like SWF use vector maths to define the images they contain.</glossdef></glossentry>
+<glossterm>vecteur</glossterm>
+<glossdef>Un vecteur est une construction mathématique qui possède une taille, appelée magnitude, et une direction. Dans GameMaker, un vecteur est généralement utilisé pour indiquer la distance et la direction du déplacement d'un objet. Un vecteur peut également être utilisé pour définir des images et certains formats d'image comme SWF utilisent les mathématiques vectorielles pour définir les images qu'ils contiennent.</glossdef></glossentry>
 <glossentry id="Default_Version_Number">
-<glossterm>Version Number</glossterm>
-<glossdef>A version number is a unique set of numbers assigned to a specific release of a software program, game or asset, normally with the format MAJOR.MINOR.MAINTENANCE, eg: v2.3.56. Typically, as updates and entirely new editions of a game or asset are released, the version number will increase.</glossdef></glossentry>
+<glossterm>Numéro de version</glossterm>
+<glossdef>Un numéro de version est un ensemble unique de numéros attribués à une version spécifique d'un logiciel, d'un jeu ou d'une ressource, normalement sous le format MAJOR.MINOR.MAINTENANCE, par exemple : v2.3.56. Généralement, au fur et à mesure que des mises à jour et des éditions entièrement nouvelles d'un jeu ou d'une ressource sont publiées, le numéro de version augmente.</glossdef></glossentry>
 <glossentry id="Default_vertex">
 <glossterm>vertex</glossterm>
-<glossdef>A vertex is the name given to a single point of a polygon that contains various characteristics that define it&#39;s position, its colour and its texture. In computer graphics, this usually means a corner of a triangle that is used to create a primitive, and a combination of such primitives is what makes the graphics on the screen.</glossdef></glossentry>
+<glossdef>Un sommet est le nom donné à un point unique d'un polygone qui contient diverses caractéristiques définissant sa position, sa couleur et sa texture. Dans le domaine de l'infographie, il s'agit généralement d'un coin d'un triangle utilisé pour créer une primitive, et c'est la combinaison de ces primitives qui permet de créer les graphiques à l'écran.</glossdef></glossentry>
 <glossentry id="Default_virtual_machine">
-<glossterm>Virtual Machine (VM)</glossterm>
-<glossdef>In GameMaker, the The VM (Virtual Machine) is a compiling method that uses a generic runner for each platform and then uses that to interpret the code for your game.</glossdef></glossentry>
+<glossterm>Machine virtuelle (VM)</glossterm>
+<glossdef>Dans GameMaker, la VM (Virtual Machine) est une méthode de compilation qui utilise un runner générique pour chaque plateforme et s'en sert ensuite pour interpréter le code de votre jeu.</glossdef></glossentry>
 <glossentry id="Default_VRAM">
 <glossterm>VRAM</glossterm>
-<glossdef>VRAM is the amount of memory available for video, ie: the memory space that can store textures and images.</glossdef></glossentry>
+<glossdef>La VRAM est la quantité de mémoire disponible pour la vidéo, c'est-à-dire l'espace mémoire qui peut stocker les textures et les images.</glossdef></glossentry>
 <glossentry id="Default_weak_reference">
-<glossterm>weak reference</glossterm>
-<glossdef>A weak reference is a reference that does not protect the referenced object from collection by a garbage collector, and so can be used to check if a struct is still &quot;alive&quot; (referenced) or not somewhere in the game.</glossdef></glossentry>
+<glossterm>faible référence</glossterm>
+<glossdef>Une référence faible est une référence qui ne protège pas l'objet référencé de la collecte par un ramasseur de déchets, et peut donc être utilisée pour vérifier si une structure est toujours "vivante" (référencée) ou non quelque part dans le jeu.</glossdef></glossentry>
 <glossentry id="Default_YoYo_Compiler">
-<glossterm>YoYo Compiler (YYC)</glossterm>
-<glossdef>This is a special compiler for creating executable packages that use native code instead of interepreted code and a runner (wich is what the GameMaker VM compile uses). Compiled code is faster to run, but takes more time to compile the executable.</glossdef></glossentry></glossgroup>
+<glossterm>Compilateur YoYo (YYC)</glossterm>
+<glossdef>Il s'agit d'un compilateur spécial pour créer des paquets exécutables qui utilisent du code natif au lieu d'un code interprété et d'un runner (ce qu'utilise la compilation de GameMaker VM). Le code compilé est plus rapide à exécuter, mais prend plus de temps pour compiler l'exécutable.</glossdef></glossentry>
+<glossentry id="Default_multicast">
+<glossterm>multidiffusion</glossterm>
+<glossdef>La multidiffusion est une communication réseau où plusieurs récepteurs sont adressés au lieu d'un seul dans une seule transmission.</glossdef></glossentry></glossgroup>

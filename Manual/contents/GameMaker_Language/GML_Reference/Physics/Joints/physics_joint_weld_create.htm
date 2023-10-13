@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physics_joint_weld_create</title>
+  <title>physique_joint_soudure_créer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_joint_weld_create" />
   <meta name="rh-index-keywords" content="physics_joint_weld_create" />
@@ -15,68 +15,68 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_weld_create</h1>
-  <p>The weld joint is designed to attach two fixtures together in a strong, yet flexible bond. The weld joint will permit flexing between the two joined fixtures but without the stretching associated with, for example, a distance joint, and will always try to &quot;spring&quot; back to the reference angle when put under any stress or load. You define the point in the room where the joint should be created, as well as the angle that you wish the joint to try and maintain at all times, as shown in the image below:</p>
-  <p><img alt="Weld joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/weld_joint_image.png" />As you can see, the anchor points are specified as room coordinates so care must be taken when defining them, especially if the instances are being created at the same time as the joints rather than being placed in the room through the room editor. You should also realise that the joints are created independently of the size of the sprite of the instances or the fixtures they have attached. So, if you create a weld joint somewhere other than the origin of the instance, it is still valid and will constrain the two instances relative to the position at which it was created.</p>
-  <p>Since the weld joint is flexible and will bend and flex when under any stress, you can set the oscillation frequency (in Hz) as well as the damping ratio for the joint to get different effects - you may need to play with these values to fine tune them and it is recommended that you start off with smaller values and increment them until you get the effect that you desire.</p>
-  <p>If you set the &quot;col&quot; value to <span class="inline">true</span> then the two instances can interact and collide with each other but <i>only</i> if they have collision events, however if it is set to <span class="inline">false</span>, they will not collide no matter what.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>physique_joint_soudure_créer</h1>
+  <p>Le joint de soudure est conçu pour attacher deux fixations ensemble dans une liaison solide, mais flexible. Le joint de soudure permet la flexion entre les deux appareils joints, mais sans l'étirement associé, par exemple, à un joint à distance, et tente toujours de revenir à l'angle de référence lorsqu'il est soumis à une contrainte ou à une charge. Vous définissez le point de la pièce où le joint doit être créé, ainsi que l'angle que vous souhaitez que le joint essaie de maintenir à tout moment, comme le montre l'image ci-dessous :</p>
+  <p><img>Comme vous pouvez le constater, les points d'ancrage sont spécifiés en tant que coordonnées de la pièce. Il faut donc les définir avec précaution, surtout si les instances sont créées en même temps que les joints plutôt que d'être placées dans la pièce via l'éditeur de pièce. Vous devez également savoir que les joints sont créés indépendamment de la taille de l'adresse <span class="notranslate">sprite</span> des instances ou des dispositifs qu'elles ont attachés. Ainsi, si vous créez un joint de soudure ailleurs qu'à l'origine de l'instance, il est toujours valide et contraindra les deux instances par rapport à la position à laquelle il a été créé.</p>
+  <p>Étant donné que le joint de soudure est flexible et qu'il se plie et fléchit lorsqu'il est soumis à une contrainte, vous pouvez définir la fréquence d'oscillation (en Hz) ainsi que le taux d'amortissement pour le joint afin d'obtenir différents effets - vous devrez peut-être jouer avec ces valeurs pour les affiner et il est recommandé de commencer par de petites valeurs et de les augmenter jusqu'à ce que vous obteniez l'effet que vous souhaitez.</p>
+  <p>Si vous définissez la valeur &quot;col&quot; sur <span class="inline">true</span>, les deux instances peuvent interagir et entrer en collision l'une avec l'autre, mais <i>seulement</i> si elles ont des événements de collision. En revanche, si vous définissez la valeur &quot;col&quot; sur <span class="inline">false</span>, elles n'entreront pas en collision, quoi qu'il arrive.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">physics_joint_weld_create(inst1, inst2, anchor_x, anchor_y, ref_angle, freq_hz, damping_ratio, col)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>inst1</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The first instance to connect with the joint</td>
+        <td><span class="notranslate">inst1</span></td>
+        <td><span data-keyref="Type_ID_Instance">ID de l'instance</span></td>
+        <td><span class="notranslate">The first instance to connect with the joint</span></td>
       </tr>
       <tr>
-        <td>inst2</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The second instance to connect with the joint</td>
+        <td><span class="notranslate">inst2</span></td>
+        <td><span data-keyref="Type_ID_Instance">ID de l'instance</span></td>
+        <td><span class="notranslate">The second instance to connect with the joint</span></td>
       </tr>
       <tr>
-        <td>anchor_x</td>
+        <td><span class="notranslate">anchor_x</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x coordinate for the joint, within the game world</td>
+        <td><span class="notranslate">The x coordinate for the joint, within the game world</span></td>
       </tr>
       <tr>
-        <td>anchor_y</td>
+        <td><span class="notranslate">anchor_y</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y coordinate for the joint, within the game world</td>
+        <td><span class="notranslate">The y coordinate for the joint, within the game world</span></td>
       </tr>
       <tr>
-        <td>ref_angle</td>
+        <td><span class="notranslate">ref_angle</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The joint angle to maintain</td>
+        <td><span class="notranslate">The joint angle to maintain</span></td>
       </tr>
       <tr>
-        <td>freq_hz</td>
+        <td><span class="notranslate">freq_hz</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>This is the oscillation frequency for the joint, in hertz</td>
+        <td><span class="notranslate">This is the oscillation frequency for the joint, in hertz</span></td>
       </tr>
       <tr>
-        <td>damping_ratio</td>
+        <td><span class="notranslate">damping_ratio</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>This damping ratio for the joint</td>
+        <td><span class="notranslate">This damping ratio for the joint</span></td>
       </tr>
       <tr>
-        <td>col</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the two instances can collide (true) or not (false)</td>
+        <td><span class="notranslate">col</span></td>
+        <td><span data-keyref="Type_Bool">Booléen</span></td>
+        <td><span class="notranslate">Whether the two instances can collide (true) or not (false)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var i, fix, o_id, p_id;<br />
     p_id = noone;<br />
     o_id = noone;<br />
@@ -93,18 +93,18 @@
         p_id = o_id;<br />
     }<br />
     physics-fixture_delete(fix);</p>
-  <p>The above code will create a fixture, then use a loop to create a number of instances, binding the fixture to each new instance and then joining them all together using a weld joint. Finally the fixture is deleted from memory.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus crée un dispositif, puis utilise une boucle pour créer un certain nombre d'instances, en liant le dispositif à chaque nouvelle instance, puis en les réunissant toutes à l'aide d'un joint soudé. Enfin, le dispositif est supprimé de la mémoire.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
-        <div style="float:right">Next: <a href="physics_joint_friction_create.htm">physics_joint_friction_create</a></div>
+        <div style="float:left">Dos : <a href="Joints.htm">Articulations</a></div>
+        <div style="float:right">Suivant : <a href="physics_joint_friction_create.htm"><span class="notranslate">physics_joint_friction_create</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_weld_create

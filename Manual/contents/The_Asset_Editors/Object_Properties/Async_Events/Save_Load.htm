@@ -1,46 +1,51 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Save / Load</title>
+  <title>Sauvegarder / Charger</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing the Save / Load async event." />
   <meta name="rh-index-keywords" content="Objects - Async Save / Load Event" />
   <meta name="search-keywords" content="Save,Load,Save / Load,ev_async_save_load" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Save / Load</h1>
-  <p><img alt="Save / Load Event" class="center" src="../../../assets/Images/Asset_Editors/Async_SaveLoad.png" />This event will be triggered by the <a class="glossterm" data-glossterm="callback" href="#">callback</a> from certain functions related to loading and saving buffers to files, as well as when loading or unloading audio from memory. The event itself will contain the built in <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> DS map which will be populated by the keys required for the specific function. These are listed in the sections below.</p>
-  <p>This event is also triggered for the <span class="inline3_func"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Reference/File_Handling/Encoding_And_Hashing/zip_unzip_async.htm">zip_unzip_async</a></span> and <span class="inline3_func"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Reference/File_Handling/Encoding_And_Hashing/zip_save.htm">zip_save</a></span> functions.</p>
-  <h2>Buffers</h2>
-  <p>When you use the functions <a href="../../../GameMaker_Language/GML_Reference/Buffers/buffer_save_async.htm"><span class="inline">buffer_save_async()</span></a> or <a href="../../../GameMaker_Language/GML_Reference/Buffers/buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a> an asynchronous event will be triggered when the data transfer has been completed. This event will populate the <span class="inline">async_load </span>map with the following key/value pairs</p>
+  <h1>Sauvegarder / Charger</h1>
+  <p><img>Cet événement sera déclenché par le <a class="glossterm" data-glossterm="rappel" href="#">callback</a> de certaines fonctions relatives au chargement
+    et à l'enregistrement de <span class="notranslate">buffers</span> dans des fichiers, ainsi qu'au chargement ou au déchargement de l'audio de la mémoire. L'événement lui-même contient la carte DS intégrée <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>    DS map qui sera remplie par les clés requises pour la fonction spécifique. Celles-ci sont listées dans les sections ci-dessous.</p>
+  <p> </p>
+  <h2>Tampons</h2>
+  <p>Lorsque vous utilisez les fonctions <a href="../../../GameMaker_Language/GML_Reference/Buffers/buffer_save_async.htm"><span class="inline">buffer_save_async()</span></a> ou <a href="../../../GameMaker_Language/GML_Reference/Buffers/buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a> un événement asynchrone
+    événement asynchrone sera déclenché lorsque le transfert de données sera terminé. Cet événement remplira la carte <span class="inline">async_load </span>avec les paires clé/valeur suivantes</p>
   <ul class="colour">
-    <li>&quot;<span class="inline">id</span>&quot;: the ID of the async function as returned by the function used.</li>
-    <li>&quot;<span class="inline">status</span>&quot;: will return true if the data was saved/loaded correctly, and false otherwise.</li>
+    <li>&quot;<span class="inline">id</span>&quot; : l'ID de la fonction asynchrone telle que retournée par la fonction utilisée.</li>
+    <li>&quot;<span class="inline">status</span>&quot; : retournera vrai si les données ont été sauvegardées/chargées correctement, et faux sinon.</li>
   </ul>
-  <p>This permits you to poll the saving/loading progress and display a message or change rooms etc... when the process is complete.</p>
-  <h2>Audio Groups</h2>
-  <p>When working with <a href="../../../Settings/Audio_Groups.htm">Audio Groups</a>, you can load them an unload them from memory using the functions <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/audio_group_load.htm"><span class="inline">audio_group_load()</span></a> and <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/audio_group_unload.htm"><span class="inline">audio_group_unload()</span></a>. When using the load function, it will trigger this event when the full set of audio files set for the group has been loaded into memory and will populate the map with the following key/value pairs:</p>
+  <p>Cela vous permet d'interroger la progression de la sauvegarde/du chargement et d'afficher un message ou de changer de salle, etc... lorsque le processus est terminé.</p>
+  <p> </p>
+  <h2>Groupes audio</h2>
+  <p>Lorsque vous travaillez avec des <a href="../../../Settings/Audio_Groups.htm">groupes audio</a>, vous pouvez les charger et les décharger de la mémoire en utilisant les fonctions <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/audio_group_load.htm"><span class="inline">audio_group_load()</span></a> et
+    <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/audio_group_unload.htm"><span class="inline">audio_group_unload()</span></a>. Lorsque vous utilisez la fonction de chargement, cet événement est déclenché lorsque l'ensemble des fichiers audio du groupe a été chargé en mémoire.
+    pour le groupe a été chargé en mémoire et remplit la carte avec les paires clé/valeur suivantes :</p>
   <ul class="colour">
-    <li>&quot;<span class="inline">type</span>&quot;: this tells us the type of event being called and will be &quot;audiogroup_load&quot; for loading audio.</li>
-    <li>&quot;<span class="inline">group_id</span>&quot;: will return the ID of the audio group that has been loaded (as defined in the <a href="../../../Settings/Audio_Groups.htm">Audio Group Editor</a>).</li>
+    <li>&quot;<span class="inline">type</span>: cela nous indique le type d'événement appelé et sera &quot;audiogroup_load&quot; pour le chargement de l'audio.</li>
+    <li>&quot;<span class="inline">group_id</span>&quot; : renvoie l'ID du groupe audio qui a été chargé (tel que défini dans l'<a href="../../../Settings/Audio_Groups.htm">éditeur de groupe audio</a>).</li>
   </ul>
-  <p>When all audio has been loaded for a group, this event will trigger and it can then be used to change rooms, or play a music track etc...</p>
-  <p> </p>
-  <p> </p>
+  <p>Lorsque tous les fichiers audio ont été chargés pour un groupe, cet événement se déclenche et il peut alors être utilisé pour changer de pièce, ou jouer un morceau de musique, etc...</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Async_Events.htm">Async Events</a></div>
-        <div style="float:right">Next: <a href="Social.htm">Social</a></div>
+        <div style="float:left">Retour : <a href="../Async_Events.htm">Événements asynchrones</a></div>
+        <div style="float:right">Suivant : <a href="Social.htm">Social</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Asynchronous Save / Load Event
@@ -49,5 +54,5 @@ ev_async_save_load
   <!-- TAGS
 ev_async_save_load
 -->
-</body>
-</html>
+
+</body></html>

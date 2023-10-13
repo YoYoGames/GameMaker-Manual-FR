@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_get_persona_name</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_get_persona_name" />
+  <meta name="rh-index-keywords" content="steam_get_persona_name" />
+  <meta name="search-keywords" content="steam_get_persona_name" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_get_persona_name</h1>
+  <p>Vous pouvez utiliser cette fonction pour retourner le nom d'utilisateur de l'utilisateur actuellement connecté au client <span class="notranslate">Steam</span>. Il s'agit du nom d'écran visible et <i>non</i> de l'<b>identifiant</b> unique <b>de l'utilisateur</b> (qui peut être trouvé en utilisant la fonction <a href="steam_get_user_steam_id.htm"><tt>steam_get_user_steam_id()</tt></a>).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_get_persona_name();</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">String</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if steam_initialised()<br />
+    {<br />
+        global.p_name = steam_get_persona_name();<br />
+    }</p>
+  <p>Le code ci-dessus définira une variable globale pour le nom d'écran de l'utilisateur actuel si l'API client <span class="notranslate">Steam</span> est correctement initialisée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_API.htm">Général <span class="notranslate">Steam</span> API</a></div>
+        <div style="float:right">Suivant : <a href="steam_get_user_persona_name.htm"><span class="notranslate">steam_get_user_persona_name</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_get_persona_name
+-->
+  <!-- TAGS
+steam_get_persona_name
+-->
+</body>
+</html>

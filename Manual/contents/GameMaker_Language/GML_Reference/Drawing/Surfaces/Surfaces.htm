@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Surfaces</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for the Surface functions and variables" />
   <meta name="rh-index-keywords" content="" />
@@ -14,18 +14,18 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Surfaces</span></h1>
-  <p>In the normal draw events, <span data-keyref="GameMaker Name">GameMaker</span> doesn&#39;t actually draw directly to the screen, but rather draws to a <b>surface</b> called the <i>application surface</i>. This surface is basically a blank &quot;canvas&quot; that can then later be manipulated before being drawn to the screen when needed, and in most cases <span data-keyref="GameMaker Name">GameMaker</span> handles this for you (although you can also manipulate it yourself in code for shaders, scaling and many other things - further details are given below).</p>
-  <p>However, apart from this application surface, you can also create your own surfaces and use them to create stunning or subtle special effects in your game. For example, you can use surfaces to &quot;catch&quot; instances, which can then be destroyed, and in this way you can create a decal effect where the sprite for the instance is displayed on the surface as if it still existed, permitting graphical effects like debris, blood, etc... without any real processing overhead. Another thing you can do with surfaces is use them as textures to be manipulated, or to create sprites &quot;on the fly&quot;, or to create complex overlays. in fact, the uses for surfaces are endless!</p>
-  <p>Normal surfaces are quite easy to use, but there are a few basic rules to be followed when you use them:</p>
+  <h1>Surfaces</h1>
+  <p>Dans les événements de dessin normaux, <span data-keyref="GameMaker Name">GameMaker</span> ne dessine pas directement à l'écran, mais plutôt sur une <b>surface</b> appelée <i>surface d'application</i>. Cette surface est en fait un &quot;canevas&quot; vierge qui peut ensuite être manipulé avant d'être affiché à l'écran si nécessaire. Dans la plupart des cas, <span data-keyref="GameMaker Name">GameMaker</span> s'en charge pour vous (bien que vous puissiez également le manipuler vous-même dans le code pour <span class="notranslate">shaders</span>, la mise à l'échelle et bien d'autres choses encore - de plus amples détails sont donnés ci-dessous).</p>
+  <p>Cependant, en dehors de cette surface d'application, vous pouvez également créer vos propres surfaces et les utiliser pour créer des effets spéciaux étonnants ou subtils dans votre jeu. Par exemple, vous pouvez utiliser des surfaces pour &quot;attraper&quot; des instances, qui peuvent ensuite être détruites, et de cette façon vous pouvez créer un effet de décalque où le <span class="notranslate">sprite</span> de l'instance est affiché sur la surface comme si elle existait toujours, permettant des effets graphiques comme des débris, du sang, etc... sans aucune surcharge réelle de traitement. Une autre chose que vous pouvez faire avec les surfaces est de les utiliser comme des textures à manipuler, ou pour créer <span class="notranslate">sprites</span> &quot;à la volée&quot;, ou pour créer des superpositions complexes. en fait, les utilisations des surfaces sont infinies !</p>
+  <p>Les surfaces normales sont assez faciles à utiliser, mais il y a quelques règles de base à respecter lorsque vous les utilisez :</p>
   <ul class="colour">
-    <li>First, you should realise that surfaces (<i>except</i> the application surface) are &quot;volatile&quot;. This means that if the device or window loses focus or is minimised (good examples are when you ALT +Tab to different window and back again on Windows, or on an Android device when the app loses focus due to a call) then the surface <strong>may be destroyed</strong>. This is because it is stored <em>only</em> in the texture memory (<a class="glossterm" data-glossterm="VRAM" href="#">VRAM</a>) and may be overwritten when the target platform needs that memory for something else which means that you should <i><b>always</b></i> have some type of fail-safe code in place, usually with the <a href="surface_exists.htm"><span class="inline">surface_exists()</span></a> function.</li>
+    <li>Tout d'abord, vous devez savoir que les surfaces<i>(à l'exception de</i> la surface de l'application) sont &quot;volatiles&quot;. Cela signifie que si le périphérique ou la fenêtre perd le focus ou est minimisé (de bons exemples sont lorsque vous ALT +Tab vers une autre fenêtre et retour sous Windows, ou sur un périphérique <span class="notranslate">Android</span> lorsque l'application perd le focus à cause d'un appel), la surface <strong>peut être détruite</strong>. En effet, elle est stockée <em>uniquement</em> dans la mémoire de texture<a class="glossterm" data-glossterm="VRAM" href="#">(VRAM</a>) et peut être écrasée lorsque la plate-forme cible a besoin de cette mémoire pour autre chose, ce qui signifie que vous devez <i><b>toujours</b></i> avoir un code de sécurité en place, généralement avec la fonction <a href="surface_exists.htm"><span class="inline">surface_exists()</span></a> fonction.</li>
   </ul>
-  <p class="note" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 4em"><span class="note">NOTE</span><strong> </strong>This doesn&#39;t appear to happen with sprites or other visual assets (but actually does!) as they are also stored in regular memory (RAM) and when they are removed from texture memory (VRAM) they immediately get restored from regular memory when the game regains focus.</p>
+  <p class="note" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 4em"><span class="note">NOTE</span><strong> </strong>Cela ne semble pas se produire avec <span class="notranslate">sprites</span> ou d'autres ressources visuelles (mais c'est en fait le cas !) car elles sont également stockées dans la mémoire ordinaire (RAM) et lorsqu'elles sont retirées de la mémoire de texture (VRAM), elles sont immédiatement restaurées à partir de la mémoire ordinaire lorsque le jeu reprend le focus.</p>
   <ul class="colour">
-    <li>Second, you should note that surfaces can require large quantities of VRAM to be used, and so you should attempt to keep them as small as possible. Normally you would try and keep them no larger than the size of the view or display window.</li>
-    <li>Third, you should <b>only create surfaces in the draw event</b>. If you create a surface in the Create Event of an instance, you could potentially get the <i>same</i> index as the <span class="inline">application_surface</span>. This can then cause lots of problems and confusion as you think you are using your own surface, but you are actually using the current render target. You should also always try to limit <i>drawing</i> to a surface in the draw event too, since due to the optimised way in which <span data-keyref="GameMaker Name">GameMaker</span> draws to the screen, it is recommended that you keep all draw functions <i>within the draw event</i> - this includes clearing a surface when it is first created, etc... Drawing to a surface outside of the draw event is possible and may even be necessary for some effects, but it&#39;s not how it <em>should</em> be done.</li>
-    <li>Fourth, when drawing to a surface manually, the surface is <i>always</i> at the position of (0,0). This means that you may need to convert <em>absolute</em> coordinates into <em>relative</em> coordinates for the surface. For example, if you have a camera-sized surface and wish to draw something that is currently visible in the camera to that surface, you should subtract the camera view x and y coordinates from the actual x and y coordinates to get a relative position to the surface (0,0) position. So, the code would look something like this:</li>
+    <li>Deuxièmement, vous devez noter que les surfaces peuvent nécessiter l'utilisation de grandes quantités de VRAM, et vous devez donc essayer de les garder aussi petites que possible. Normalement, vous devriez essayer de faire en sorte qu'elles ne soient pas plus grandes que la taille de la vue ou de la fenêtre d'affichage.</li>
+    <li>Troisièmement, vous <b>ne</b> devez <b>créer des surfaces que dans l'événement draw</b>. Si vous créez une surface dans l'événement Create d'une instance, vous pouvez potentiellement obtenir le <i>même</i> index que le site <span class="inline">application_surface</span>. Cela peut alors causer beaucoup de problèmes et de confusion car vous pensez utiliser votre propre surface, alors que vous utilisez en fait la cible de rendu actuelle. Vous devriez également toujours essayer de limiter le <i>dessin d'</i> une surface dans l'événement draw, car en raison de la manière optimisée dont <span data-keyref="GameMaker Name">GameMaker</span> dessine à l'écran, il est recommandé de garder toutes les fonctions de dessin <i>dans l'événement draw</i> - cela inclut l'effacement d'une surface lors de sa première création, etc... Dessiner sur une surface en dehors de l'événement draw est possible et peut même être nécessaire pour certains effets, mais ce n'est pas la façon dont il <em>faut</em> procéder.</li>
+    <li>Quatrièmement, lorsque vous dessinez manuellement sur une surface, celle-ci est <i>toujours</i> à la position (0,0). Cela signifie que vous devrez peut-être convertir des coordonnées <em>absolues</em> en coordonnées <em>relatives</em> pour la surface. Par exemple, si vous avez une surface de la taille d'une caméra et que vous souhaitez dessiner sur cette surface quelque chose qui est actuellement visible dans la caméra, vous devez soustraire les coordonnées x et y de la vue de la caméra des coordonnées x et y réelles pour obtenir une position relative par rapport à la position (0,0) de la surface. Ainsi, le code ressemblerait à quelque chose comme ceci :</li>
   </ul>
   <p class="code">if view_current = 0<br />
     {<br />
@@ -43,110 +43,108 @@
         draw_surface(surf, 0, 0);<br />
     }</p>
   <ul class="colour">
-    <li>Finally, it is worth noting that drawing to a surface will take into consideration the colour <em>and</em> the alpha component of each pixel, both from the surface itself and also from what is being drawn to it. This may lead to some rather unintuitive results (for example, drawing a sprite with 0.5 alpha to a surface with 0 alpha will give a final alpha of 0.25). The reasons for this are explained on the following page, and we recommend that you read it before working with surfaces: <a href="../../../../Additional_Information/Guide_To_Using_Blendmodes.htm">Guide To Using Blendmodes</a></li>
+    <li>Enfin, il convient de noter que le dessin sur une surface prend en compte la couleur <em>et</em> la composante alpha de chaque pixel, à la fois de la surface elle-même et de ce qui est dessiné sur elle. Cela peut conduire à des résultats peu intuitifs (par exemple, dessiner un <span class="notranslate">sprite</span> avec 0,5 alpha sur une surface avec 0 alpha donnera un alpha final de 0,25). Les raisons de ce phénomène sont expliquées à la page suivante, et nous vous recommandons de la lire avant de travailler avec des surfaces : <a href="../../../../Additional_Information/Guide_To_Using_Blendmodes.htm">Guide d'utilisation des Blendmodes</a></li>
   </ul>
-  <p class="note"><span class="note">NOTE</span> This is not true of the <a href="application_surface.htm">application surface</a>, only user-created surfaces.</p>
-  <p>The basic use of a surface would be as follows:</p>
+  <p class="note"><span class="note">NOTE</span> Ceci n'est pas vrai pour la <a href="application_surface.htm">surface de l'application</a>, mais uniquement pour les surfaces créées par l'utilisateur.</p>
+  <p>L'utilisation de base d'une surface serait la suivante :</p>
   <ul class="colour">
-    <li>You first create a surface and assign its index to a variable.</li>
-    <li>You would then set the drawing target to the surface rather than the display.</li>
-    <li>Next, you would draw the things you wish as well as perform any other manipulations.</li>
-    <li>Once you are done you reset the drawing target so that all further drawing happens on the screen again.</li>
-    <li>Finally, you would draw the surface (or use it in a shader, or whatever is required).</li>
+    <li>Il faut d'abord créer une surface et affecter son indice à une variable.</li>
+    <li>Vous devez alors définir la cible du dessin sur la surface plutôt que sur l'écran.</li>
+    <li>Ensuite, vous dessinez les éléments que vous souhaitez et vous effectuez d'autres manipulations.</li>
+    <li>Une fois que vous avez terminé, vous réinitialisez la cible de dessin afin que tout nouveau dessin se fasse à nouveau sur l'écran.</li>
+    <li>Enfin, vous devez dessiner la surface (ou l'utiliser dans un <span class="notranslate">shader</span>, ou tout ce qui est nécessaire).</li>
   </ul>
-  <p>One thing to note is that should you require drawing the whole display to a surface (including tiles, backgrounds etc...) you can simply access the application surface itself (see below for further details) or you could assign a surface to a view port using the variable <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><span class="inline">view_surface_id[0..7]</span></a> as with this, all that is visible in that view port will be drawn to the corresponding surface.</p>
-  <p>The following functions exist to deal with surfaces (these functions are specific for creating and manipulating surfaces, but to actually draw them to the screen you should be using the specific draw functions that can be found below):</p>
+  <p>Une chose à noter est que si vous avez besoin de dessiner l'ensemble de l'affichage sur une surface (y compris les tuiles, les arrière-plans etc...) vous pouvez simplement <span class="notranslate">access</span> la surface de l'application elle-même (voir ci-dessous pour plus de détails) ou vous pouvez assigner une surface à un port de vue en utilisant la variable <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><span class="inline">view_surface_id[0..7]</span></a> comme dans ce cas, tout ce qui est visible dans ce port de vue sera dessiné sur la surface correspondante.</p>
+  <p>Les fonctions suivantes existent pour traiter les surfaces (ces fonctions sont spécifiques à la création et à la manipulation des surfaces, mais pour les dessiner à l'écran, vous devez utiliser les fonctions de dessin spécifiques que vous trouverez ci-dessous) :</p>
   <ul class="colour">
-    <li><a href="surface_exists.htm">surface_exists</a></li>
-    <li><a href="surface_create.htm">surface_create</a></li>
-    <li><a href="surface_create_ext.htm">surface_create_ext</a></li>
-    <li><a href="surface_resize.htm">surface_resize</a></li>
-    <li><a href="surface_set_target.htm">surface_set_target</a></li>
-    <li><a href="surface_set_target_ext.htm">surface_set_target_ext</a></li>
-    <li><a href="surface_get_target.htm">surface_get_target</a></li>
-    <li><a href="surface_get_target_ext.htm">surface_get_target_ext</a></li>
-    <li><a href="surface_reset_target.htm">surface_reset_target</a></li>
-    <li><a href="surface_copy.htm">surface_copy</a></li>
-    <li><a href="surface_copy_part.htm">surface_copy_part</a></li>
-    <li><a href="surface_depth_disable.htm">surface_depth_disable</a></li>
-    <li><a href="surface_get_height.htm">surface_get_height</a></li>
-    <li><a href="surface_get_width.htm">surface_get_width</a></li>
-    <li><a href="surface_get_texture.htm">surface_get_texture</a></li>
-    <li><a href="surface_get_depth_disable.htm">surface_get_depth_disable</a></li>
-    <li><a href="surface_getpixel.htm">surface_getpixel</a></li>
-    <li><a href="surface_getpixel_ext.htm">surface_getpixel_ext</a></li>
-    <li><a data-xref="{title}" href="surface_get_format.htm">surface_get_format</a></li>
-    <li><a data-xref="{title}" href="surface_format_is_supported.htm">surface_format_is_supported</a></li>
-    <li><a href="surface_free.htm">surface_free</a></li>
-    <li><a href="surface_save.htm">surface_save</a></li>
-    <li><a href="surface_save_part.htm">surface_save_part</a></li>
+    <li><a href="surface_exists.htm"><span class="notranslate">surface_exists</span></a></li>
+    <li><a href="surface_create.htm"><span class="notranslate">surface_create</span></a></li>
+    <li><a href="surface_create_ext.htm"><span class="notranslate">surface_create_ext</span></a></li>
+    <li><a href="surface_resize.htm"><span class="notranslate">surface_resize</span></a></li>
+    <li><a href="surface_set_target.htm"><span class="notranslate">surface_set_target</span></a></li>
+    <li><a href="surface_set_target_ext.htm"><span class="notranslate">surface_set_target_ext</span></a></li>
+    <li><a href="surface_get_target.htm"><span class="notranslate">surface_get_target</span></a></li>
+    <li><a href="surface_get_target_ext.htm"><span class="notranslate">surface_get_target_ext</span></a></li>
+    <li><a href="surface_reset_target.htm"><span class="notranslate">surface_reset_target</span></a></li>
+    <li><a href="surface_copy.htm"><span class="notranslate">surface_copy</span></a></li>
+    <li><a href="surface_copy_part.htm"><span class="notranslate">surface_copy_part</span></a></li>
+    <li><a href="surface_depth_disable.htm"><span class="notranslate">surface_depth_disable</span></a></li>
+    <li><a href="surface_get_height.htm"><span class="notranslate">surface_get_height</span></a></li>
+    <li><a href="surface_get_width.htm"><span class="notranslate">surface_get_width</span></a></li>
+    <li><a href="surface_get_texture.htm"><span class="notranslate">surface_get_texture</span></a></li>
+    <li><a href="surface_get_depth_disable.htm"><span class="notranslate">surface_get_depth_disable</span></a></li>
+    <li><a href="surface_getpixel.htm"><span class="notranslate">surface_getpixel</span></a></li>
+    <li><a href="surface_getpixel_ext.htm"><span class="notranslate">surface_getpixel_ext</span></a></li>
+    <li><a href="surface_free.htm"><span class="notranslate">surface_free</span></a></li>
+    <li><a href="surface_save.htm"><span class="notranslate">surface_save</span></a></li>
+    <li><a href="surface_save_part.htm"><span class="notranslate">surface_save_part</span></a></li>
   </ul>
-  <p> </p>
-  <p>The following functions exist for drawing surfaces:</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>When working with surfaces there is the possibility that they can cease to exist at any time due to them being stored in texture memory. You should <b>ALWAYS</b> check that a surface exists using <span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span> before referencing them directly.</p>
+  <p> </p>
+  <p>Les fonctions suivantes permettent de dessiner des surfaces :</p>
+  <p class="note"><b><span class="note">NOTE</span> </b>Lorsque vous travaillez avec des surfaces, il est possible qu'elles cessent d'exister à tout moment, car elles sont stockées dans la mémoire des textures. Vous devez <b>TOUJOURS</b> vérifier qu'une surface existe en utilisant <span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span> avant d'y faire référence directement.</p>
   <ul class="colour">
-    <li><a href="draw_surface.htm">draw_surface</a></li>
-    <li><a href="draw_surface_ext.htm">draw_surface_ext</a></li>
-    <li><a href="draw_surface_part.htm">draw_surface_part</a></li>
-    <li><a href="draw_surface_part_ext.htm">draw_surface_part_ext</a></li>
-    <li><a href="draw_surface_stretched.htm">draw_surface_stretched</a></li>
-    <li><a href="draw_surface_stretched_ext.htm">draw_surface_stretched_ext</a></li>
-    <li><a href="draw_surface_tiled.htm">draw_surface_tiled</a></li>
-    <li><a href="draw_surface_tiled_ext.htm">draw_surface_tiled_ext</a></li>
-    <li><a href="draw_surface_general.htm">draw_surface_general</a></li>
+    <li><a href="draw_surface.htm"><span class="notranslate">draw_surface</span></a></li>
+    <li><a href="draw_surface_ext.htm"><span class="notranslate">draw_surface_ext</span></a></li>
+    <li><a href="draw_surface_part.htm"><span class="notranslate">draw_surface_part</span></a></li>
+    <li><a href="draw_surface_part_ext.htm"><span class="notranslate">draw_surface_part_ext</span></a></li>
+    <li><a href="draw_surface_stretched.htm"><span class="notranslate">draw_surface_stretched</span></a></li>
+    <li><a href="draw_surface_stretched_ext.htm"><span class="notranslate">draw_surface_stretched_ext</span></a></li>
+    <li><a href="draw_surface_tiled.htm"><span class="notranslate">draw_surface_tiled</span></a></li>
+    <li><a href="draw_surface_tiled_ext.htm"><span class="notranslate">draw_surface_tiled_ext</span></a></li>
+    <li><a href="draw_surface_general.htm"><span class="notranslate">draw_surface_general</span></a></li>
   </ul>
-  <p> </p>
-  <p>Finally, you have two functions for storing and retrieving surfaces in <a href="../../Buffers/Buffers.htm">Buffers</a>:</p>
+  <p> </p>
+  <p>Enfin, vous disposez de deux fonctions pour stocker et récupérer des surfaces dans les <a href="../../Buffers/Buffers.htm">tampons</a>:</p>
   <ul class="colour">
-    <li><a href="../../Buffers/buffer_get_surface.htm">buffer_get_surface</a></li>
-    <li><a href="../../Buffers/buffer_set_surface.htm">buffer_set_surface</a></li>
+    <li><a href="../../Buffers/buffer_get_surface.htm"><span class="notranslate">buffer_get_surface</span></a></li>
+    <li><a href="../../Buffers/buffer_set_surface.htm"><span class="notranslate">buffer_set_surface</span></a></li>
   </ul>
-  <p> </p>
-  <p>As mentioned above, <span data-keyref="GameMaker Name">GameMaker</span> doesn&#39;t actually render most things to the screen directly, but instead it renders them to the <b>application surface</b>. This is essentially a surface - just like any that you can make yourself using the surface functions - and as such it can be manipulated, drawn to, sent to shaders, etc. Basically, anything that you would normally do with a surface you created can also be applied to the application surface.</p>
-  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> </b>The only thing you <b>cannot</b> do with the application surface is free it. It always exists, although the index value to access it may change.</p>
-  <p>When you run your game, this surface is created the first time that the <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">draw event</a> is called in each new room that you enter, which means that nothing is drawn until that point. However, you can still get the application surface position and resize it in the <b>Create Event</b> or any other event without getting any errors and the values used will be relevant to the surface when it is created. The actual sequence of events for the creation and drawing of the application surface is as follows:</p>
+  <p> </p>
+  <p>Comme nous l'avons mentionné plus haut, <span data-keyref="GameMaker Name">GameMaker</span> ne rend pas directement la plupart des choses à l'écran, mais les rend à la <b>surface de l'application</b>. Il s'agit essentiellement d'une surface - comme toutes celles que vous pouvez créer vous-même à l'aide des fonctions de surface - et en tant que telle, elle peut être manipulée, dessinée, envoyée à <span class="notranslate">shaders</span>, etc... En gros, tout ce que vous feriez normalement avec une surface que vous avez créée peut également être appliqué à la surface d'application.</p>
+  <p class="note"><b>REMARQUE</b>: La seule chose que vous <b>ne pouvez pas</b> faire avec la surface d'application est de la libérer. Elle existe toujours, même si la valeur de l'indice permettant de la consulter sur <span class="notranslate">access</span> peut changer.</p>
+  <p>Lorsque vous exécutez votre jeu, cette surface est créée la première fois que l'<a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">événement draw</a> est appelé dans chaque nouvelle pièce dans laquelle vous entrez, ce qui signifie que rien n'est dessiné jusqu'à ce moment-là. Cependant, vous pouvez toujours obtenir la position de la surface de l'application et la redimensionner dans l'<b>événement Create</b> ou tout autre événement sans obtenir d'erreur et les valeurs utilisées seront pertinentes pour la surface lors de sa création. La séquence réelle des événements pour la création et le dessin de la surface de l'application est la suivante :</p>
   <ul class="colour">
-    <li>Pre-draw event<br />
-               --- &gt; <b>the application surface is created (if it doesn&#39;t exist) and the render target is set</b></li>
-    <li><b></b>For each visible view port, or, if no views ports are active, once
+    <li>Événement avant le tirage au sort<br>
+               --- <b>La surface de l'application est créée (si elle n'existe pas) et la cible de rendu est définie</b>.</li>
+    <li><b></b>Pour chaque port de vue visible ou, si aucun port de vue n'est actif, une seule fois
       <ul class="colour">
-        <li>Draw begin event</li>
-        <li>Draw event</li>
-        <li>Draw end event<br />
-                  --- &gt; <b>the application surface render target is reset here</b></li>
+        <li>Événement de début de tirage</li>
+        <li>Événement de tirage au sort</li>
+        <li>Événement de fin de tirage<br>
+                  --- <b>La cible de rendu de la surface de l'application est réinitialisée ici</b>.</li>
       </ul>
     </li>
-    <li><b></b>Post draw event<br />
-              --- &gt; <b>the application surface is now drawn to the <a class="glossterm" data-glossterm="display buffer" href="#">display buffer</a> by default<br />
-                         </b>(although you can switch this off using <span class="inline"><a href="application_surface_draw_enable.htm">application_surface_draw_enable()</a></span>)</li>
-    <li><b></b>Draw GUI begin event</li>
-    <li>Draw GUI event</li>
-    <li>Draw GUI end event</li>
+    <li><b></b>Événement après le tirage au sort<br>
+              --- la <b>surface de l'application est maintenant dessinée dans le <a class="glossterm" data-glossterm="tampon d'affichage" href="#">tampon d'affichage</a> </b> par défaut. <b><br>
+                         (bien que vous puissiez désactiver cette fonction en utilisant </b> <span class="inline"><a href="application_surface_draw_enable.htm">application_surface_draw_enable()</a></span>)</li>
+    <li><b></b>Événement de début du dessin de l'interface graphique</li>
+    <li>Événement "Draw GUI</li>
+    <li>Événement de fin de dessin de l'interface graphique</li>
   </ul>
-  <p>The use of this surface means that you can easily create incredible transitions using shaders, or take the screen and wrap it around a 3D form, or simply scale a low-res game up to any resolution screen... The possibilities are endless!</p>
-  <p>To access this surface, you need to use the built-in global variable <span class="inline">application_surface</span> which is explained on the following page:</p>
+  <p>L'utilisation de cette surface signifie que vous pouvez facilement créer des transitions incroyables à l'aide de <span class="notranslate">shaders</span>, ou prendre l'écran et l'enrouler autour d'une forme 3D, ou simplement mettre à l'échelle un jeu de faible résolution sur n'importe quel écran de résolution... Les possibilités sont infinies !</p>
+  <p>Pour <span class="notranslate">access</span> cette surface, vous devez utiliser la variable globale intégrée <span class="inline">application_surface</span> qui est expliquée à la page suivante :</p>
   <ul class="colour">
-    <li><a href="application_surface.htm">application_surface</a></li>
+    <li><a href="application_surface.htm"><span class="notranslate">application_surface</span></a></li>
   </ul>
-  <p> </p>
-  <p>You also have a few specialist functions that are designed <em>only </em>for use with the application surface:</p>
+  <p> </p>
+  <p>Vous disposez également de quelques fonctions spécialisées qui sont conçues <em>uniquement </em>pour être utilisées avec la surface d'application :</p>
   <ul class="colour">
-    <li><a href="application_surface_enable.htm">application_surface_enable</a></li>
-    <li><a href="application_surface_is_enabled.htm">application_surface_is_enabled</a></li>
-    <li><a href="application_get_position.htm">application_get_position</a></li>
-    <li><a href="application_surface_draw_enable.htm">application_surface_draw_enable</a></li>
+    <li><a href="application_surface_enable.htm"><span class="notranslate">application_surface_enable</span></a></li>
+    <li><a href="application_surface_is_enabled.htm"><span class="notranslate">application_surface_is_enabled</span></a></li>
+    <li><a href="application_get_position.htm"><span class="notranslate">application_get_position</span></a></li>
+    <li><a href="application_surface_draw_enable.htm"><span class="notranslate">application_surface_draw_enable</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Drawing.htm">Drawing</a></div>
-        <div style="float:right">Next: <a href="../Lighting/Lighting.htm">Lighting</a></div>
+        <div style="float:left">Retour : <a href="../Drawing.htm">Dessin</a></div>
+        <div style="float:right">Suivant : <a href="../Lighting/Lighting.htm">Éclairage</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Surfaces

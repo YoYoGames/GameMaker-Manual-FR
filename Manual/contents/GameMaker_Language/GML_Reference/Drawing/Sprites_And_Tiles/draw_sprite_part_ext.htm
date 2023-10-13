@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_sprite_part_ext</title>
+  <title>dessiner_sprite_part_ext.</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for draw_sprite_part_ext" />
   <meta name="rh-index-keywords" content="draw_sprite_part_ext" />
@@ -15,94 +15,94 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_sprite_part_ext</h1>
-  <p>This function will draw a part of the chosen sprite at the given position following the same rules as per <a href="draw_sprite_part.htm"><span class="inline">draw_sprite_part()</span></a>, only now you can scale the part, blend a colour with it, or change its alpha when
-    drawing it to the screen (the same as when drawing a sprite with <a href="draw_sprite_ext.htm"><span class="inline">draw_sprite_ext()</span></a>). You should note that if the texture page permits automatic cropping then this function may not work as expected, since
-    the extra &quot;empty&quot; space around the sprite will have been removed for creating the texture page. To resolve this issue, you will need to set the texture page settings (in the <a href="../../../../Settings/Texture_Groups.htm">Texture Group Editor</a>)
-    to disable the <b>Automatic Crop</b>.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>When drawing with this function, the sprite <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">x offset</a> and <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y offset</a>    are ignored and the sprite part will be drawn with the top left corner at the specified x / y position in the room.</p>
-  <p class="note"><b>NOTE</b>: This function is only useful for <b>bitmap</b> sprites and will not work with SWF or JSON (Spine) sprites.</p>
-  <p class="note"><b>NOTE</b>: Colour blending is only recommended for the HTML5 target when WebGL is enabled, although you can still set the blending colour if it is not enabled and it will blend the sprite as normal. However all blending in this way creates a duplicate
-    sprite which is then stored in the cache and used when required. This is far from optimal and if you use multiple colour changes it will slow down your games performance unless you activate WebGL. if you do not wish to use WebGL, then you can set
-    the font cache size to try and limit this should it be necessary using the function <a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size_ext.htm"><span class="inline">sprite_set_cache_size()</span></a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>dessiner_sprite_part_ext.</h1>
+  <p>Cette fonction va dessiner une partie du site <span class="notranslate">sprite</span> à la position donnée en suivant les mêmes règles que par <a href="draw_sprite_part.htm"><span class="inline">draw_sprite_part()</span></a>Vous pouvez maintenant mettre la partie à l'échelle, la colorer ou modifier son alpha lorsque vous la dessinez à l'écran.
+    la dessiner à l'écran (comme pour le dessin d'un <span class="notranslate">sprite</span> avec la fonction <a href="draw_sprite_ext.htm"><span class="inline">draw_sprite_ext()</span></a>). Notez que si la page de texture permet un recadrage automatique, cette fonction peut ne pas fonctionner comme prévu, car
+    l'espace &quot;vide&quot; supplémentaire autour de <span class="notranslate">sprite</span> aura été supprimé pour créer la page de texture. Pour résoudre ce problème, vous devrez définir les paramètres de la page de texture (dans l'<a href="../../../../Settings/Texture_Groups.htm">éditeur de groupe de texture</a>)
+    pour désactiver le <b>recadrage automatique</b>.</p>
+  <p class="note"><b><span class="note">NOTE</span> </b>Lorsque vous dessinez avec cette fonction, les <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">décalages x</a> et <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y de</a> <span class="notranslate">sprite</span> sont ignorés et la partie <span class="notranslate">sprite</span> sera dessinée avec le coin supérieur gauche à la position x / y spécifiée dans la pièce.</p>
+  <p class="note"><b>NOTE</b>: Cette fonction n'est utile que pour les <b>bitmaps</b> <span class="notranslate">sprites</span> et ne fonctionne pas avec les SWF ou JSON (<span class="notranslate">Spine</span>) <span class="notranslate">sprites</span>.</p>
+  <p class="note"><b>REMARQUE</b>: le mélange de couleurs n'est recommandé pour la cible HTML5 que lorsque WebGL est activé, bien que vous puissiez toujours définir la couleur de mélange si elle n'est pas activée et le mélange se fera normalement sur <span class="notranslate">sprite</span>. Cependant, tous les mélanges de cette manière créent un doublon
+    <span class="notranslate">sprite</span> qui est ensuite stocké dans le site <span class="notranslate">cache</span> et utilisé si nécessaire. C'est loin d'être optimal et si vous utilisez de multiples changements de couleur, cela ralentira les performances de votre jeu, à moins que vous n'activiez la fonction WebGL.
+    la taille de la police <span class="notranslate">cache</span> pour essayer de limiter ce phénomène, si nécessaire, en utilisant la fonction <a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size_ext.htm"><span class="inline">sprite_set_cache_size()</span></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">draw_sprite_part_ext(sprite, subimg, left, top, width, height, x, y, xscale, yscale, colour, alpha);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>sprite</td><td><span data-keyref="Type_Asset_Sprite"></span></td>
-        <td>The index of the sprite to draw.</td>
+        <td><span class="notranslate">sprite</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The index of the sprite to draw.</span></td>
      </tr>
       <tr>
-        <td>subimg</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The subimg (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</td>
+        <td><span class="notranslate">subimg</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The subimg (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</span></td>
      </tr>
       <tr>
-        <td>left</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x position on the sprite of the top left corner of the area to draw.</td>
+        <td><span class="notranslate">left</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x position on the sprite of the top left corner of the area to draw.</span></td>
      </tr>
       <tr>
-        <td>top</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y position on the sprite of the top left corner of the area to draw.</td>
+        <td><span class="notranslate">top</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y position on the sprite of the top left corner of the area to draw.</span></td>
      </tr>
       <tr>
-        <td>width</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The width of the area to draw.</td>
+        <td><span class="notranslate">width</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The width of the area to draw.</span></td>
      </tr>
       <tr>
-        <td>height</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The height of the area to draw.</td>
+        <td><span class="notranslate">height</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The height of the area to draw.</span></td>
      </tr>
       <tr>
-        <td>x</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of where to draw the sprite.</td>
+        <td><span class="notranslate">x</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate of where to draw the sprite.</span></td>
      </tr>
       <tr>
-        <td>y</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of where to draw the sprite.</td>
+        <td><span class="notranslate">y</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate of where to draw the sprite.</span></td>
      </tr>
       <tr>
-        <td>xscale</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The horizontal scaling of the sprite, as a multiplier: 1 = normal scaling, 0.5 is half etc...</td>
+        <td><span class="notranslate">xscale</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The horizontal scaling of the sprite, as a multiplier: 1 = normal scaling, 0.5 is half etc...</span></td>
      </tr>
       <tr>
-        <td>yscale</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The vertical scaling of the sprite, as a multiplier: 1 = normal scaling, 0.5 is half etc...</td>
+        <td><span class="notranslate">yscale</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The vertical scaling of the sprite, as a multiplier: 1 = normal scaling, 0.5 is half etc...</span></td>
      </tr>
       <tr>
-        <td>colour</td><td><span data-keyref="Type_Constant_Colour"></span></td>
-        <td>The colour with which to blend the sprite. c_white is to display it normally.</td>
+        <td><span class="notranslate">colour</span></td><td><span data-keyref="Type_Constant_Colour"></span></td>
+        <td><span class="notranslate">The colour with which to blend the sprite. c_white is to display it normally.</span></td>
      </tr>
       <tr>
-        <td>alpha</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The alpha of the sprite (from 0 to 1 where 0 is transparent and 1 opaque).</td>
+        <td><span class="notranslate">alpha</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The alpha of the sprite (from 0 to 1 where 0 is transparent and 1 opaque).</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">draw_sprite_part_ext(sprite_index, image_index, 8, 8, sprite_width-16, sprite_height-16, x, y, 2, 0.5, c_black, 1);</p>
-  <p>This will draw the instances assigned sprite (sprite_index) and its current frame of animation (image_index), however it will shave an 8px margin off all four sides of the sprite. It will then be stretched to double its usual width but half its usual
-    height, and although the alpha is still 1, it will be blended with black (turning it into a silhouette).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Cela va dessiner les instances assignées à <span class="notranslate">sprite</span> (sprite_index) et son image d'animation actuelle (image_index), mais en supprimant une marge de 8px sur les quatre côtés de <span class="notranslate">sprite</span>. Il sera ensuite étiré au double de sa largeur habituelle mais à la moitié de sa hauteur habituelle.
+    et, bien que son alpha soit toujours égal à 1, elle sera mélangée à du noir (ce qui la transformera en silhouette).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprites_And_Tiles.htm">Sprites And Tiles</a></div>
-        <div style="float:right">Next: <a href="draw_sprite_stretched.htm">draw_sprite_streteched</a></div>
+        <div style="float:left">Retour : <a href="Sprites_And_Tiles.htm">Sprites et tuiles</a></div>
+        <div style="float:right">Suivant : <a href="draw_sprite_stretched.htm">draw_sprite_streteched</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_sprite_part_ext

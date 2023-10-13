@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>window_has_focus</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>fenêtre_a_focus</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for window_has_focus" />
   <meta name="rh-index-keywords" content="window_has_focus" />
@@ -15,33 +15,33 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>window_has_focus</h1>
-  <p>With this function you can poll the window (or tab) state and if it loses focus the function will return <span class="inline">false</span> otherwise it will return <span class="inline">true</span>. In most cases you can simply use the <a href="../../OS_And_Compiler/os_is_paused.htm"><span class="inline">os_is_paused()</span></a> function to test this, but in some very specific cases (for example games on Chrome Apps) that function will not trigger, in which case you should use this function instead.</p>
-  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span></b> This function is only valid for the HTML5, Windows, and MacOS.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>fenêtre_a_focus</h1>
+  <p>Avec cette fonction, vous pouvez interroger l'état de la fenêtre (ou de l'onglet) et si elle perd le focus, la fonction retournera <span class="inline">false</span>; sinon, elle retournera <span class="inline">true</span>. Dans la plupart des cas, vous pouvez simplement utiliser la fonction <a href="../../OS_And_Compiler/os_is_paused.htm"><span class="inline">os_is_paused()</span></a> pour tester cela, mais dans certains cas très spécifiques (par exemple les jeux sur les Chrome Apps), cette fonction ne se déclenchera pas, auquel cas vous devez utiliser cette fonction à la place.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction n'est valable que pour le HTML5, <span class="notranslate">Windows</span>, et MacOS.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">window_has_focus();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Bool"></span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if !window_has_focus()<br />
     {<br />
         PauseGame();<br />
     }</p>
-  <p>The above code will check to see if the game window is in focus or not, and if the function returns <span class="inline">false</span> a function will be called.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifiera si la fenêtre de jeu est en focus ou non, et si la fonction retourne <span class="inline">false</span> une fonction sera appelée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../The_Game_Window/The_Game_Window.htm">The Game Window</a></div>
-        <div style="float:right">Next: <a href="../The_Game_Window/window_device.htm">window_device</a></div>
+        <div style="float:left">Retour : <a href="../The_Game_Window/The_Game_Window.htm">La fenêtre de jeu</a></div>
+        <div style="float:right">Suivant : <a href="../The_Game_Window/window_device.htm"><span class="notranslate">window_device</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 window_has_focus

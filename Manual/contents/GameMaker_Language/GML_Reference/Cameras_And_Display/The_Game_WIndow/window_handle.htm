@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>window_handle</title>
+  <title>fenêtre_handle</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for window_handle" />
   <meta name="rh-index-keywords" content="window_handle" />
@@ -15,53 +15,53 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>window_handle</h1>
-  <p>With this function you can get the internal Windows id value (the HWND, a <i>pointer</i>). This function is really only useful for extension writers who need the <span class="inline">window handle</span> to call Windows API&#39;s in DLL code (the returned pointer should be cast into a string and then in the C++ just cast it to an HWND). The table below shows the platforms supported along with what they return:</p>
+  <h1>fenêtre_handle</h1>
+  <p>Avec cette fonction, vous pouvez obtenir la valeur de l'identifiant interne de <span class="notranslate">Windows</span> (le HWND, un <i>pointeur</i>). Cette fonction n'est vraiment utile que pour les auteurs d'extensions qui ont besoin de <span class="inline">window handle</span> pour appeler les API de <span class="notranslate">Windows</span> dans le code DLL (le pointeur renvoyé doit être converti en une chaîne de caractères, puis dans le C++, il suffit de le convertir en un HWND). Le tableau ci-dessous montre les plates-formes supportées ainsi que ce qu'elles retournent :</p>
   <table>
     <tbody>
       <tr>
-        <th>Platform</th>
-        <th>Returns</th>
+        <th>Plate-forme</th>
+        <th>Renvoie à</th>
       </tr>
       <tr>
         <td>Windows</td>
-        <td>Window HWND</td>
+        <td>Fenêtre HWND</td>
       </tr>
       <tr>
         <td>macOS</td>
-        <td>NSWindow class</td>
+        <td>Classe NSWindow</td>
       </tr>
       <tr>
-        <td>Ubuntu (Linux)</td>
-        <td>XWindow handle</td>
+        <td>Ubuntu (<span class="notranslate">Linux</span>)</td>
+        <td>Manche de XWindow</td>
       </tr>
       <tr>
         <td>HTML5</td>
-        <td>Canvas ID</td>
+        <td>ID du canevas</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">window_handle();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Pointer">Pointer</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">win_id = windows_handle();</p>
-  <p>The above code will store the game window id in a variable.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus stocke l'identifiant de la fenêtre de jeu dans une variable.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../The_Game_Window/The_Game_Window.htm">The Game Window</a></div>
-        <div style="float:right">Next: <a href="../The_Game_Window/window_get_caption.htm">window_get_caption</a></div>
+        <div style="float:left">Retour : <a href="../The_Game_Window/The_Game_Window.htm">La fenêtre de jeu</a></div>
+        <div style="float:right">Suivant : <a href="../The_Game_Window/window_get_caption.htm"><span class="notranslate">window_get_caption</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 window_handle

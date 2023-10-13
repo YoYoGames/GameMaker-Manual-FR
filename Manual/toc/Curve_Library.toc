@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+  <title>Table of Contents</title>
+  <book navtitle="Animation Curves" href="../contents/The_Asset_Editors/Animation_Curves.htm" format="html" processing-role="normal">
+    <page navtitle="The Animation Curve Library" href="../contents/The_Asset_Editors/Animation_Curve_Properties/Animation_Curve_Library.htm" format="html" processing-role="normal"></page>
+  </book>
+  <page navtitle="Sequences - Using Animation Curves" href="../contents/The_Asset_Editors/Sequence_Properties/Using_Animation_Curves.htm" format="html" processing-role="normal"></page>
+</map>

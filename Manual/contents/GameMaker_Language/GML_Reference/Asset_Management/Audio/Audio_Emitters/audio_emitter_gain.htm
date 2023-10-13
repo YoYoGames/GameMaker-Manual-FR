@@ -6,7 +6,7 @@
   <title>audio_emitter_gain</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function audio_emitter_gain" />
   <meta name="rh-index-keywords" content="audio_emitter_gain" />
@@ -15,36 +15,36 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>audio_emitter_gain</h1>
-  <p>This function sets the maximum gain (volume) for the sound. The perceived volume for a sound can change depending on the <a href="audio_emitter_falloff.htm">fall-off value</a> and the position it has relative to the <i>listener</i>, but by setting the gain with this function, the full volume will never exceed the specified gain value. The image below illustrates how gain affects the volume of the emitter when fall-off is greater than 0:</p>
-  <p><img alt="Audio Gain Diagram" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Gain.png" />This function will change the volume of the sound while it is being played as well all subsequent sounds played through the given emitter. Note that on some platforms you can have a gain of greater than 1, although a value of 1 is considered &quot;full volume&quot; and anything greater may introduce audio clipping or distortion.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>the final volume will also be influenced by the global audio gain that has been set by the function <span style="font-size:1px;"><a href="../audio_master_gain.htm"><span class="inline">audio_master_gain()</span></a></span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction définit le gain (volume) maximal du son. Le volume perçu pour un son peut changer en fonction de la <a href="audio_emitter_falloff.htm">valeur de fall-off</a> et de la position qu'il occupe par rapport à l'<i>auditeur</i>, mais en réglant le gain avec cette fonction, le volume total ne dépassera jamais la valeur de gain spécifiée. L'image ci-dessous illustre comment le gain affecte le volume de l'émetteur lorsque le fall-off est supérieur à 0 :</p>
+  <p><img>Cette fonction modifiera le volume du son pendant qu'il est joué ainsi que tous les sons suivants joués par l'émetteur donné. Notez que sur certaines plates-formes, vous pouvez avoir un gain supérieur à 1, bien qu'une valeur de 1 soit considérée comme &quot;plein volume&quot; et que toute valeur supérieure peut introduire un écrêtage ou une distorsion audio.</p>
+  <p class="note"><b><span class="note">NOTE</span> </b>le volume final sera également influencé par le gain audio global qui a été défini par la fonction <span style="font-size:1px;"><a href="../audio_master_gain.htm"><span class="inline">audio_master_gain()</span></a></span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">audio_emitter_gain(emitter, gain);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>emitter</td>
-        <td><span data-keyref="Type_ID_Audio_Emitter">Audio Emitter ID</span></td>
-        <td>The index of the emitter to change.</td>
+        <td><span class="notranslate">emitter</span></td>
+        <td><span data-keyref="Type_ID_Audio_Emitter">ID de l'émetteur audio</span></td>
+        <td><span class="notranslate">The index of the emitter to change.</span></td>
       </tr>
       <tr>
-        <td>gain</td>
+        <td><span class="notranslate">gain</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The maximum gain (default 1).</td>
+        <td><span class="notranslate">The maximum gain (default 1).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if up<br />
     {<br />
         gain += 0.05;<br />
@@ -58,18 +58,18 @@
     <br />
     audio_emitter_gain(s_emit, gain);
   </p>
-  <p>The above code sets the variable &quot;gain&quot; to different values and then uses that same variable to set the gain of the emitter indexed in the variable &quot;s_emit&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus définit la variable &quot;gain&quot; à différentes valeurs et utilise ensuite cette même variable pour définir le gain de l'émetteur indexé dans la variable &quot;s_emit&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Audio_Emitters.htm">Audio Emitters</a></div>
-        <div style="float:right">Next: <a href="audio_emitter_pitch.htm">audio_emitter_pitch</a></div>
+        <div style="float:left">Retour : <a href="Audio_Emitters.htm">Émetteurs audio</a></div>
+        <div style="float:right">Suivant : <a href="audio_emitter_pitch.htm"><span class="notranslate">audio_emitter_pitch</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 audio_emitter_gain

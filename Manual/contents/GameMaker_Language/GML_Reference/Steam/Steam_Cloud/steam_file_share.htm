@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>partage de fichier vapeur</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_file_share" />
+  <meta name="rh-index-keywords" content="steam_file_share" />
+  <meta name="search-keywords" content="steam_file_share" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>partage de fichier vapeur</h1>
+  <p>Cette fonction vous permet de forcer votre jeu à synchroniser le fichier donné avec le nuage <span class="notranslate">Steam</span>. Cette opération n'est normalement pas nécessaire, car le jeu se synchronise automatiquement à la fin de la session du joueur. Elle n'est pas non plus recommandée par <span class="notranslate">Steam</span>, mais elle peut être utile pour s'assurer que les informations sensibles sont synchronisées immédiatement. La fonction renvoie la valeur 0 si elle échoue pour une raison quelconque et une valeur supérieure à 0 si elle réussit.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_file_share(filename);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">filename</span></td>
+        <td>Le nom du fichier à synchroniser.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if !steam_file_persisted(&quot;Save.txt&quot;)<br />
+    {<br />
+        steam_file_share(&quot;Save.txt&quot;);<br />
+    }</p>
+  <p>Le code ci-dessus vérifiera si un fichier a été stocké dans le nuage <span class="notranslate">Steam</span>, et s'il ne l'a pas été, il le synchronisera.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_Cloud.htm">Nuage de vapeur</a></div>
+        <div style="float:right">Suivant : <a href="steam_file_delete.htm"><span class="notranslate">steam_file_delete</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_file_share
+-->
+  <!-- TAGS
+steam_file_share
+-->
+</body>
+</html>

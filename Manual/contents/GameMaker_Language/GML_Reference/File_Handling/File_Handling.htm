@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>File Handling</title>
+  <title>Traitement des fichiers</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for the File Handling functions" />
   <meta name="rh-index-keywords" content="" />
@@ -14,66 +14,66 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>File Handling</h1>
-  <p>At some point while creating your game it will be necessary to store information externally and be able to retrieve this information. For example, you may wish to store login details, or hi-scores, or maybe the progression of the player through your levels. Whatever the reason, you will need to know how to use the different file functions that are available to you when working with <span data-keyref="GameMaker Name">GameMaker</span>.</p>
-  <p>It is very important to realise that <span data-keyref="GameMaker Name">GameMaker</span> is <b>Sandboxed </b>by default, meaning that there are a number of limits and minor complications when using the file system functions that are available, and it is worth noting too that the file system will work slightly differently depending on the platform you are targeting. For more information this, please see the following section:</p>
+  <h1>Traitement des fichiers</h1>
+  <p>À un moment donné, lors de la création de votre jeu, il sera nécessaire de stocker des informations en externe et de pouvoir les récupérer. Par exemple, vous souhaiterez peut-être stocker des informations de connexion, ou des scores élevés, ou encore la progression du joueur dans vos niveaux. Quelle que soit la raison, vous devrez savoir comment utiliser les différentes fonctions de fichiers qui sont à votre disposition lorsque vous travaillez avec <span data-keyref="GameMaker Name">GameMaker</span>.</p>
+  <p>Il est très important de réaliser que <span data-keyref="GameMaker Name">GameMaker</span> est un <b>Sandbox </b>par défaut, ce qui signifie qu'il y a un certain nombre de limites et de complications mineures lors de l'utilisation des fonctions du système de fichiers qui sont disponibles. Il est également important de noter que le système de fichiers fonctionnera légèrement différemment selon la plate-forme que vous ciblez. Pour plus d'informations à ce sujet, veuillez consulter la section suivante :</p>
   <ul class="colour">
-    <li><a href="../../../Additional_Information/The_File_System.htm">The File System</a></li>
+    <li><a href="../../../Additional_Information/The_File_System.htm">Le système de fichiers</a></li>
   </ul>
-  <p>You can turn off sandboxing on the desktop targets (Windows, macOS and Ubuntu (Linux)) from the Game Options for the chosen platform, meaning that you can then save and load from anywhere, within the limits of the OS permissions.</p>
-  <p>If you have been granted permission by Steam to use their dedicated API with your game, you will find that there is also a new set of file functions available to you. These are explained in the <a href="../Steam/Steam.htm">Steam API</a> section of this manual.</p>
-  <p>Finally, you should also note that there are some distinct differences between certain target platforms which would be taken into account when using the file functions. These are:<b></b></p>
+  <p>Vous pouvez désactiver le sandboxing sur les cibles de bureau (<span class="notranslate">Windows</span>, <span class="notranslate">macOS</span> et <span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>)) à partir des options de jeu de la plate-forme choisie, ce qui signifie que vous pouvez alors sauvegarder et charger à partir de n'importe où, dans les limites des autorisations du système d'exploitation.</p>
+  <p>Si vous avez été autorisé par <span class="notranslate">Steam</span> à utiliser leur API dédiée avec votre jeu, vous découvrirez qu'un nouvel ensemble de fonctions de fichiers est également à votre disposition. Celles-ci sont expliquées dans la section <a href="../Steam/Steam.htm">API Steam</a> de ce manuel.</p>
+  <p>Enfin, vous devez également noter qu'il existe des différences distinctes entre certaines plates-formes cibles qui seront prises en compte lors de l'utilisation des fonctions de fichiers. Ces différences sont les suivantes :<b></b></p>
   <ul class="colour">
-    <li><b>iOS</b>: On iOS, if you are loading an included file from a folder, ie: with a path something like &quot;<span class="inline">Backgrounds/background1.png</span>&quot;, you do NOT need to include the folder as part of the path and simply supplying the file name is sufficient. On all other platforms you must supply the folder(s) as part of the path to the file.<b></b></li>
-    <li><b>macOS and Ubuntu (Linux)</b>: On the macOS and Ubuntu, filenames and paths are case sensitive on these platforms, and so to prevent any potential issues, <span data-keyref="GameMaker Name">GameMaker</span> will automatically make all names/paths use lower case by default.<b></b></li>
-    <li><b>HTML5</b>: On HTML5, saving and loading to and from <b>local storage</b> will work as explained within the different function pages, however if you are loading a file from a server, you <b>must only use the function <a href="../Buffers/buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a></b> as loading synchronously has been deprecated on most browsers and will eventually be obsoleted. Also note that you cannot create or destroy directories in the browser local storage.</li>
+    <li><b>iOS</b>: Sur <span class="notranslate">iOS</span>, si vous chargez un fichier inclus à partir d'un dossier, c'est-à-dire avec un chemin tel que &quot;<span class="inline">Backgrounds/background1.png</span>&quot;, vous n'avez PAS besoin d'inclure le dossier dans le chemin et il suffit de fournir le nom du fichier. Sur toutes les autres plateformes, vous devez fournir le(s) dossier(s) dans le chemin d'accès au fichier.<b></b></li>
+    <li><b>macOS et <span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>)</b>: Sur les sites <span class="notranslate">macOS</span> et <span class="notranslate">Ubuntu</span>, les noms de fichiers et les chemins d'accès sont sensibles à la casse sur ces plateformes. Pour éviter tout problème potentiel, <span data-keyref="GameMaker Name">GameMaker</span> utilisera automatiquement les minuscules par défaut pour tous les noms et chemins d'accès.<b></b></li>
+    <li><b>HTML5</b>: En HTML5, l'enregistrement et le chargement vers et depuis le <b>stockage local</b> fonctionneront comme expliqué dans les différentes pages de fonctions, cependant si vous chargez un fichier depuis un serveur, vous <b>devez uniquement utiliser la fonction <a href="../Buffers/buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a></b> car le chargement synchrone a été déprécié sur la plupart des navigateurs et sera éventuellement obsolète. Notez également que vous ne pouvez pas créer ou détruire des répertoires dans le stockage local du navigateur.</li>
   </ul>
-  <p>Information on the different file functions can be found in the following pages:</p>
+  <p>Vous trouverez des informations sur les différentes fonctions des fichiers dans les pages suivantes :</p>
   <ul class="colour">
-    <li><a href="File_System/File_System.htm">File System</a></li>
-    <li><a href="Ini_Files/Ini_Files.htm">Ini Files</a></li>
-    <li><a href="Text_Files/Text_Files.htm">Text Files</a></li>
-    <li><a href="Binary_Files/Binary_Files.htm">Binary Files</a></li>
-    <li><a href="File_Directories/File_Directories.htm">File Directories</a></li>
+    <li><a href="File_System/File_System.htm">Système de fichiers</a></li>
+    <li><a href="Ini_Files/Ini_Files.htm">Fichiers Ini</a></li>
+    <li><a href="Text_Files/Text_Files.htm">Fichiers texte</a></li>
+    <li><a href="Binary_Files/Binary_Files.htm">Fichiers binaires</a></li>
+    <li><a href="File_Directories/File_Directories.htm">Répertoires de fichiers</a></li>
   </ul>
-  <p> </p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> also includes a number of functions for <a class="glossterm" data-glossterm="encoding" href="#">encoding</a> and <a class="glossterm" data-glossterm="hashing" href="#">hashing</a> files and data, which you can find here:</p>
+  <p> </p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> comprend également un certain nombre de fonctions pour l'<a class="glossterm" data-glossterm="codage" href="#">encodage</a> et le <a class="glossterm" data-glossterm="hachage" href="#">hachage des</a> fichiers et des données, que vous pouvez trouver ici :</p>
   <ul class="colour">
-    <li><a href="Encoding_And_Hashing/Encoding_And_Hashing.htm">Encoding And Hashing</a></li>
+    <li><a href="Encoding_And_Hashing/Encoding_And_Hashing.htm">Codage et hachage</a></li>
   </ul>
-  <p> </p>
-  <p>Also note that there are some basic file functions for saving games available from the following pages (be aware that these functions are designed for beginners to get a basic save system up and running as quickly as possible, but for more complex projects, you should create your own save system using the functions listed in the sections above):</p>
+  <p> </p>
+  <p>Notez également qu'il existe quelques fonctions de base pour sauvegarder des jeux dans les pages suivantes (sachez que ces fonctions sont conçues pour les débutants afin de mettre en place un système de sauvegarde de base le plus rapidement possible, mais que pour des projets plus complexes, vous devriez créer votre propre système de sauvegarde à l'aide des fonctions énumérées dans les sections ci-dessus) :</p>
   <ul class="colour">
-    <li><a href="../General_Game_Control/game_load.htm">game_load</a></li>
-    <li><a href="../General_Game_Control/game_load_buffer.htm">game_load_buffer</a></li>
-    <li><a href="../General_Game_Control/game_save.htm">game_save</a></li>
-    <li><a href="../General_Game_Control/game_save_buffer.htm">game_save_buffer</a></li>
+    <li><a href="../General_Game_Control/game_load.htm"><span class="notranslate">game_load</span></a></li>
+    <li><a href="../General_Game_Control/game_load_buffer.htm"><span class="notranslate">game_load_buffer</span></a></li>
+    <li><a href="../General_Game_Control/game_save.htm"><span class="notranslate">game_save</span></a></li>
+    <li><a href="../General_Game_Control/game_save_buffer.htm"><span class="notranslate">game_save_buffer</span></a></li>
   </ul>
-  <p> </p>
-  <p>Finally you can find more advanced <a href="../Buffers/Buffers.htm">buffer</a> functions that can be used for loading and saving data on the following pages:</p>
+  <p> </p>
+  <p>Enfin, vous trouverez des fonctions de <a href="../Buffers/Buffers.htm">tampon</a> plus avancées pouvant être utilisées pour le chargement et la sauvegarde des données dans les pages suivantes :</p>
   <ul class="colour">
-    <li><a href="../Buffers/buffer_save.htm">buffer_save</a></li>
-    <li><a href="../Buffers/buffer_save_ext.htm">buffer_save_ext</a></li>
-    <li><a href="../Buffers/buffer_save_async.htm">buffer_save_async</a></li>
-    <li><a href="../Buffers/buffer_load.htm">buffer_load</a></li>
-    <li><a href="../Buffers/buffer_load_ext.htm">buffer_load_ext</a></li>
-    <li><a href="../Buffers/buffer_load_async.htm">buffer_load_async</a></li>
-    <li><a href="../Buffers/buffer_load_partial.htm">buffer_load_partial</a></li>
-    <li><a href="../Buffers/buffer_async_group_begin.htm">buffer_async_group_begin</a></li>
-    <li><a href="../Buffers/buffer_async_group_option.htm">buffer_async_group_option</a></li>
-    <li><a href="../Buffers/buffer_async_group_end.htm">buffer_async_group_end</a></li>
+    <li><a href="../Buffers/buffer_save.htm"><span class="notranslate">buffer_save</span></a></li>
+    <li><a href="../Buffers/buffer_save_ext.htm"><span class="notranslate">buffer_save_ext</span></a></li>
+    <li><a href="../Buffers/buffer_save_async.htm"><span class="notranslate">buffer_save_async</span></a></li>
+    <li><a href="../Buffers/buffer_load.htm"><span class="notranslate">buffer_load</span></a></li>
+    <li><a href="../Buffers/buffer_load_ext.htm"><span class="notranslate">buffer_load_ext</span></a></li>
+    <li><a href="../Buffers/buffer_load_async.htm"><span class="notranslate">buffer_load_async</span></a></li>
+    <li><a href="../Buffers/buffer_load_partial.htm"><span class="notranslate">buffer_load_partial</span></a></li>
+    <li><a href="../Buffers/buffer_async_group_begin.htm"><span class="notranslate">buffer_async_group_begin</span></a></li>
+    <li><a href="../Buffers/buffer_async_group_option.htm"><span class="notranslate">buffer_async_group_option</span></a></li>
+    <li><a href="../Buffers/buffer_async_group_end.htm"><span class="notranslate">buffer_async_group_end</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../GML_Reference.htm">GML Reference</a></div>
-        <div style="float:right">Next: <a href="../Buffers/Buffers.htm">Buffers</a></div>
+        <div style="float:left">Retour : <a href="../GML_Reference.htm">Référence GML</a></div>
+        <div style="float:right">Suivant : <a href="../Buffers/Buffers.htm">Tampons</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 File Handling

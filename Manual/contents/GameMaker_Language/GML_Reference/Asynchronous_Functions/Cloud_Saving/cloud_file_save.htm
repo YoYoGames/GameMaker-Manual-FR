@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>cloud_file_save</title>
+  <title>Sauvegarde du fichier dans le nuage</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for cloud_file_save" />
   <meta name="rh-index-keywords" content="cloud_file_save" />
@@ -14,36 +14,33 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>cloud_file_save <a href="Cloud_Saving.htm"><span data-conref="../../../../assets/snippets/Tag_obsolete.hts"> </span></a></h1>
-  <p>This function will commit a file to the chosen cloud service for storage. The function will return a unique <b>id</b> value that should then be used in the appropriate asynchronous event to identify the DS map that is returned as a &quot;call back&quot; from the cloud service. The file should contain <i>all</i> the information that you need to save for your game as you can only store one single &quot;data blob&quot; to the cloud, and running this function again will overwrite any previously stored values (as will using the <a href="cloud_string_save.htm"><span class="inline">cloud_string_save()</span></a> function). The description should be a short string of information that describes the save, eg: &quot;Level2, Stage2&quot;.</p>
-  <p>For further information on the returned asynchronous data, please see the function <a href="cloud_synchronise.htm"><span class="inline">cloud_synchronise()</span></a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>Sauvegarde du fichier dans le nuage</h1>
+  <p>Cette fonction engage un fichier vers le service en nuage choisi pour le stockage. La fonction renvoie une valeur d'<b>identification</b> unique qui doit ensuite être utilisée dans l'événement asynchrone approprié pour identifier la carte DS renvoyée par le service en nuage. Le fichier doit contenir <i>toutes les</i> informations que vous devez sauvegarder pour votre jeu, car vous ne pouvez stocker qu'un seul &quot;blob de données&quot; dans le nuage, et le fait d'exécuter à nouveau cette fonction écrasera toutes les valeurs précédemment stockées (tout comme l'utilisation de la fonction <a href="cloud_string_save.htm"><span class="inline">cloud_string_save()</span></a> ). La description doit être une courte chaîne d'informations décrivant la sauvegarde, par exemple : &quot;Level2, Stage2&quot;.</p>
+  <p>Pour plus d'informations sur les données asynchrones retournées, veuillez consulter la fonction <a href="cloud_synchronise.htm"><span class="inline">cloud_synchronise()</span></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">cloud_file_save(file, description);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
-      </tr>
+     </tr>
       <tr>
-        <td>string</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The file to be uploaded (as a string).</td>
-      </tr>
+        <td><span class="notranslate">string</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The file to be uploaded (as a string).</span></td>
+     </tr>
       <tr>
-        <td>description</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>A brief description of the data being stored.</td>
-      </tr>
+        <td><span class="notranslate">description</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">A brief description of the data being stored.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Async_Event"><a href="../../../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/Asynchronous_Functions.htm" target="_blank">Async Request ID</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var t_str = &quot;&quot;;<br />
     for (var i = 0; i &lt; 10; i++;)<br />
     {<br />
@@ -53,18 +50,18 @@
     file_text_write_string(file, t_str);<br />
     file_text_close(file);<br />
     save_check = cloud_file_save(&quot;Highscores.txt&quot;, &quot;Current Highscores&quot;);</p>
-  <p>The above code creates a string from the values stored in the global array &quot;Highscores&quot; and then writes this string to a file for local storage. The file is then sent to the cloud service for storage.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus crée une chaîne de caractères à partir des valeurs stockées dans le tableau global &quot;Highscores&quot;, puis écrit cette chaîne dans un fichier pour le stockage local. Le fichier est ensuite envoyé au service en nuage pour le stockage.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Cloud_Saving.htm">Cloud Saving</a></div>
-        <div style="float:right">Next: <a href="cloud_synchronise.htm">cloud_synchronise</a></div>
+        <div style="float:left">Retour : <a href="Cloud_Saving.htm">Sauvegarde des nuages</a></div>
+        <div style="float:right">Suivant : <a href="cloud_synchronise.htm"><span class="notranslate">cloud_synchronise</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 cloud_file_save

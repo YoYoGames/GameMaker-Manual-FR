@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>font_replace</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page outlining the function font_replace" />
+  <meta name="rh-index-keywords" content="font_replace" />
+  <meta name="search-keywords" content="" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>font_replace</h1>
+  <p>Cette fonction peut être utilisée pour remplacer une police dans votre jeu à partir des polices qui sont installées sur le système sur lequel il fonctionne. Notez que la police remplacée <em>ne peut pas</em> être une police du navigateur d'actifs et doit être une police ajoutée précédemment à l'aide de la fonction <a href="font_add.htm"><span class="inline">font_add()</span></a>.</p>
+  <p>Lorsque vous remplacez une police de cette manière, vous pouvez définir la taille de la police (en points), ainsi que si la police doit être <b>en gras</b> ou en <i>italique</i>, et vous pouvez également définir la plage de caractères à inclure. Si la fonction échoue, elle échouera silencieusement et la police donnée ne sera pas remplacée.</p>
+  <p>Pour le module cible HTML5, cette fonction <b>ne peut être utilisée que pour remplacer les <i>polices Web</i></b>, et ne fonctionnera que si WebGL <b>n'</b> est <b>pas</b> activé - si WebGL est activé, vous devez utiliser une ressource de police générale (c'est-à-dire utiliser <a href="../../Drawing/Text/draw_set_font.htm"><span class="inline">draw_set_font()</span></a> avec une police du navigateur de ressources) ou des polices bitmap (cf. <a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a>).</p>
+  <p class="note"><span class="optional">IMPORTANT</span> En HTML5, le texte en italique et en gras n'est pris en charge que si la ressource de police ou la police Web elle-même contient ces caractères. Ils ne seront pas synthétisés à partir de la police de base.</p>
+  <p>Le tableau suivant présente les polices standard de tous les navigateurs, qui devraient pouvoir être utilisées sans problème. Toute autre police peut ou non exister sur l'ordinateur ou le périphérique qui exécute votre jeu. L'utilisation de cette fonction doit donc être limitée à ces polices standard :</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Nom de la police Windows</th>
+        <th>Nom de la police Mac</th>
+        <th>Famille de polices</th>
+      </tr>
+      <tr>
+        <td>Arial</td>
+        <td>Arial / Helvetica</td>
+        <td>sans-sérif</td>
+      </tr>
+      <tr>
+        <td>Arial Noir</td>
+        <td>Arial Noir / Gadget</td>
+        <td>sans-sérif</td>
+      </tr>
+      <tr>
+        <td>Comic Sans MS</td>
+        <td>Comic Sans MS</td>
+        <td>cursive</td>
+      </tr>
+      <tr>
+        <td>Courier New</td>
+        <td>Courier New</td>
+        <td>monospaced</td>
+      </tr>
+      <tr>
+        <td>Géorgie</td>
+        <td>Géorgie</td>
+        <td>empattement</td>
+      </tr>
+      <tr>
+        <td>Impact</td>
+        <td>Impact / Charbon de bois</td>
+        <td>sans-sérif</td>
+      </tr>
+      <tr>
+        <td>Console Lucida</td>
+        <td>Monaco</td>
+        <td>monospaced</td>
+      </tr>
+      <tr>
+        <td>Lucida Sans Unicode</td>
+        <td>Lucida Grande</td>
+        <td>sans-sérif</td>
+      </tr>
+      <tr>
+        <td>Palatino Linotype / Book Antiqua</td>
+        <td>Palatino</td>
+        <td>empattement</td>
+      </tr>
+      <tr>
+        <td>Tahoma</td>
+        <td>Genève</td>
+        <td>sans-sérif</td>
+      </tr>
+      <tr>
+        <td>Times New Roman</td>
+        <td>Times New Roman / Times</td>
+        <td>empattement</td>
+      </tr>
+      <tr>
+        <td>Trébuchet MS</td>
+        <td>Trébuchet MS</td>
+        <td>sans-sérif</td>
+      </tr>
+      <tr>
+        <td>Verdana</td>
+        <td>Verdana / Genève</td>
+        <td>sans-sérif</td>
+      </tr>
+      <tr>
+        <td>Géorgie</td>
+        <td>Géorgie</td>
+        <td>empattement</td>
+      </tr>
+      <tr>
+        <td>Symbole</td>
+        <td>Symbole</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>Webdings</td>
+        <td>Webdings</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>Wingdings</td>
+        <td>Zapf Dingbats</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>MS Sans Serif</td>
+        <td>Genève</td>
+        <td>sans-sérif</td>
+      </tr>
+      <tr>
+        <td>MS Serif</td>
+        <td>New York</td>
+        <td>sans-sérif</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Sur toutes les autres cibles (non Web), vous pouvez utiliser cette fonction pour remplacer une police à partir d'un fichier. Le fichier <b>doit être inclus dans le paquet de jeu</b> à l'aide de la fonctionnalité <a href="../../../../Settings/Included_Files.htm">Fichiers inclus</a> de <span data-keyref="GameMaker Name">GameMaker</span>, et doit être un fichier de police au format <span class="inline">*.ttf</span> ou <span class="inline">*.otf</span>, utile pour ajouter des polices non standard comme les polices asiatiques ou arabes.</p>
+  <p class="note"><span class="tip">CONSEIL</span>:<b> </b>Si vous incluez un tel fichier de police dans un jeu, assurez-vous qu'il bénéficie d'une <b>licence appropriée</b> pour sa distribution avec le jeu.</p>
+  <p>Lorsque vous chargez une police à partir d'un fichier de cette manière, la <i>taille</i> de la police est en <b>pixels</b> et les <i>premières</i> et <i>dernières</i> valeurs sont ignorées, ce qui signifie que tous les glyphes de la police seront ajoutés. Les polices ajoutées de cette manière sont assignées à leur propre page de texture, il faut donc faire attention en utilisant cette fonction car elle augmentera le nombre de changements de texture lors du dessin. Il convient également de noter que les polices peuvent apparaître légèrement plus grandes lorsqu'elles sont dessinées, car les glyphes peuvent avoir des parties qui sont dessinées en dehors de la boîte de délimitation définie pour la police. Vous devez également savoir qu'il y a une limitation d'environ 200 glyphes qui peuvent être rendus dans une seule image pour une police particulière.</p>
+  <p class="note"><b><span class="note">NOTE</span> </b>Lorsque vous chargez une police dans <span data-keyref="GameMaker Name">GameMaker</span>, vous devez penser à la supprimer (avec la touche <span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span>) lorsqu'elle n'est plus nécessaire, sinon il y a un risque de fuite de mémoire qui ralentira et finira par faire planter votre jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">font_replace(ind, name, size, bold, italic, first, last);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">ind</span></td>
+        <td><span data-keyref="Type_Asset_Font">Font Asset</span></td>
+        <td><span class="notranslate">The index of the (previously added) font to be replaced.</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">name</span></td>
+        <td><span data-keyref="Type_String">Chaîne de caractères</span></td>
+        <td><span class="notranslate">The name of the font to be used (eg &#39;Arial&#39;), or the file path if the font is an included <span class="inline"></span>*. Fichier<span class="inline">ttf</span> ou <span class="inline">*.otf</span>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">size</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The size of the font - points for Web Fonts, pixels for file fonts.</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">bold</span></td>
+        <td><span data-keyref="Type_Bool">Booléen</span></td>
+        <td><span class="notranslate">Whether the font is bold (true) or not (false).</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">italics</span></td>
+        <td><span data-keyref="Type_Bool">Booléen</span></td>
+        <td><span class="notranslate">Whether the font is italic (true) or not (false).</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">first</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The first character to include (if you&#39;re unsure, go for 32).</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">last</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The last character to include (if you&#39;re unsure, go for 128).</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">font_replace(myfont, &quot;Arial&quot;, 24, true, true, 32, 128);</p>
+  <p>Cela remplacera la police indexée dans la variable &quot;myfont&quot; par une nouvelle police de taille 24pt, utilisant &quot;Arial&quot; et qui est en gras et en italique. La gamme de polices comprend les lettres majuscules et minuscules, les chiffres et toute la ponctuation courante.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Fonts.htm">Polices de caractères</a></div>
+        <div style="float:right">Suivant : <a href="font_replace_sprite.htm"><span class="notranslate">font_replace_sprite</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+font_replace_sprite
+-->
+  <!-- TAGS
+font_replace_sprite
+-->
+</body>
+</html>

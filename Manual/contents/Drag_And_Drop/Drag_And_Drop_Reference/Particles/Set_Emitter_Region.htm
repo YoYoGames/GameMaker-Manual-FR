@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Emitter Region</title>
+  <title>Définir la région de l'émetteur</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Set Emitter Region action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Set Emitter Region" />
@@ -14,76 +14,76 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Emitter Region Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Emitter_Region.png" /> Set Emitter Region</h1>
-  <p>This action is used to set the region and shape of an emitter within a particle system. You supply the particle system ID that the emitter belongs to (as returned by the action <a href="Create_Particle_System.htm">Create Particle System</a>) and then
-    the actual emitter ID (as returned by the action <a href="Create_Particle_Emitter.htm">Create Particle Emitter</a>), and then give a shape for the emitter to take within the given bounding box values. The possible emitter shapes are:</p>
-  <p><img alt="Emitter Shapes Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/Emitter_Shapes.png" />To define your shapes, you give the coordinates for a &quot;bounding box&quot; into which the given
-    shape will be placed (in the case of rectangle, ellipse and diamond shapes) or the first and second coordinates for the start and finish points (in the case of a line). All particles that are burst or streamed from the emitter will be created within
-    the confines of the shape within this bounding box. You can also set the distribution of the particles with the option of:</p>
+  <h1><img> Définir la région de l'émetteur</h1>
+  <p>Cette action est utilisée pour définir la région et la forme d'un émetteur dans un système de particules. Vous fournissez l'ID du système de particules auquel l'émetteur appartient (tel que retourné par l'action <a href="Create_Particle_System.htm">Create Particle System</a>), puis l'ID de l'émetteur réel (tel que retourné par l'action Create Particle Emitter).
+    l'ID de l'émetteur réel (tel que renvoyé par l'action <a href="Create_Particle_Emitter.htm">Create Particle Emitter</a>), puis donnez une forme à l'émetteur dans les valeurs de la boîte englobante données. Les formes possibles de l'émetteur sont :</p>
+  <p><img>Pour définir vos formes, vous donnez les coordonnées d'une &quot;boîte englobante&quot; dans laquelle la forme
+    sera placée (dans le cas des formes de type rectangle, ellipse et losange) ou les premières et deuxièmes coordonnées des points de départ et d'arrivée (dans le cas d'une ligne). Toutes les particules qui sont projetées ou diffusées à partir de l'émetteur seront créées dans les limites de la forme à l'intérieur de celle-ci.
+    les limites de la forme à l'intérieur de cette boîte de délimitation. Vous pouvez également définir la distribution des particules avec l'option :</p>
   <ul class="colour">
-    <li><b>Linear</b>: Particles will be created anywhere at random within the given shape.</li>
-    <li><b>Gaussian</b>: Particles will be created predominantly in the middle of the shape with fewer along the edges.</li>
-    <li><b>Inverse Gaussian</b>: Particles will be created predominantly along the edges of the shape with fewer in the middle.</li>
+    <li><b>Linéaire</b>: Les particules seront créées n'importe où au hasard dans la forme donnée.</li>
+    <li><b>Gaussien</b>: Les particules seront créées principalement au milieu de la forme et moins sur les bords.</li>
+    <li><b>Gaussien inverse</b>: Les particules seront créées principalement le long des bords de la forme et moins au milieu.</li>
   </ul>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Emitter Region Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Emitter_Region.png" /></p>
-  <h4>Arguments:</h4>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Set Emitter Region Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Emitter_Region.png" /></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>System</td>
-        <td>The unique ID of the system the emitter belongs to</td>
+        <td><span class="notranslate">System</span></td>
+        <td>L'identifiant unique du système auquel appartient l'émetteur.</td>
       </tr>
       <tr>
-        <td>Emitter</td>
-        <td>The unique ID of the emitter to set the shape of</td>
+        <td><span class="notranslate">Emitter</span></td>
+        <td>L'identifiant unique de l'émetteur pour définir la forme de l'émetteur.</td>
       </tr>
       <tr>
-        <td>Shape</td>
-        <td>The particle shape that is to be used</td>
+        <td><span class="notranslate">Shape</span></td>
+        <td>La forme de la particule qui doit être utilisée</td>
       </tr>
       <tr>
-        <td>Distribution</td>
-        <td>The distribution of particles within the given shape</td>
+        <td><span class="notranslate">Distribution</span></td>
+        <td>La distribution des particules dans une forme donnée</td>
       </tr>
       <tr>
-        <td>Left</td>
-        <td>The position of the left side of the shape bounding box (in pixels)</td>
+        <td><span class="notranslate">Left</span></td>
+        <td>La position du côté gauche de la boîte de délimitation de la forme (en pixels)</td>
       </tr>
       <tr>
-        <td>Top</td>
-        <td>The position of the top of the shape bounding box (in pixels)</td>
+        <td><span class="notranslate">Top</span></td>
+        <td>La position du haut de la boîte de délimitation de la forme (en pixels)</td>
       </tr>
       <tr>
-        <td>Right</td>
-        <td>The position of the right side of the shape bounding box (in pixels)</td>
+        <td><span class="notranslate">Right</span></td>
+        <td>La position du côté droit de la boîte de délimitation de la forme (en pixels)</td>
       </tr>
       <tr>
-        <td>Bottom</td>
-        <td>The position of the bottom of the shape bounding box (in pixels)</td>
+        <td><span class="notranslate">Bottom</span></td>
+        <td>La position du bas de la boîte de délimitation de la forme (en pixels)</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set Emitter Region Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Emitter.png" />The above action block code will create a particle emitter, set it&#39;s
-    region, and then set it to emit a stream of particles.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus créera un émetteur de particules, définira sa région
+    puis le configurer pour qu'il émette un flux de particules.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Do_Effect.htm">Do Effect</a></div>
+        <div style="float:left">Retour : <a href="Particle_Actions.htm">Actions des particules</a></div>
+        <div style="float:right">Suivant : <a href="Do_Effect.htm">Effet Do</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Emitter Region

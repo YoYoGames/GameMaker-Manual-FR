@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>vertex_format_add_custom</title>
+  <title>format de vertex_add_custom</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for vertex_format_add_custom" />
   <meta name="rh-index-keywords" content="vertex_format_add_custom,vertex_type_float1,vertex_type_float2,vertex_type_float3,vertex_type_float4,vertex_type_colour,vertex_type_ubyte4,vertex_usage_position,vertex_usage_colour,vertex_usage_normal,vertex_usage_textcoord,vertex_usage_blendweight,vertex_usage_blendindices,vertex_usage_depth,vertex_usage_tangent,vertex_usage_binormal,vertex_usage_fog,vertex_usage_sample" />
@@ -14,8 +14,8 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>vertex_format_add_custom</h1>
-  <p>This function permits you to use a custom data type for specific vertex format attributes as part of the new vertex format being created. The available values to use are defined by the data type constant that you choose, listed below:</p>
+  <h1>format de vertex_add_custom</h1>
+  <p>Cette fonction vous permet d'utiliser un type de données personnalisé pour des attributs spécifiques du format des sommets dans le cadre de la création du nouveau format des sommets. Les valeurs disponibles à utiliser sont définies par la constante de type de données que vous choisissez, listée ci-dessous :</p>
   <table>
     <colgroup>
       <col />
@@ -23,40 +23,40 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm" target="_blank">Vertex Data Type Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">Type de données Vertex Constante</a></span></th>
       </tr>
       <tr>
         <th>Constant</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td><span class="inline">vertex_type_float1</span></td>
-        <td>A single floating point value</td>
+        <td><span class="notranslate"><span class="inline">vertex_type_float1</span></td>
+        <td>Une seule valeur à virgule flottante</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_type_float2</span></td>
-        <td>Two floating point values</td>
+        <td><span class="notranslate"><span class="inline">vertex_type_float2</span></td>
+        <td>Deux valeurs à virgule flottante</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_type_float3</span></td>
-        <td>Three floating point values</td>
+        <td><span class="notranslate"><span class="inline">vertex_type_float3</span></td>
+        <td>Trois valeurs à virgule flottante</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_type_float4</span></td>
-        <td>Four floating point values</td>
+        <td><span class="notranslate"><span class="inline">vertex_type_float4</span></td>
+        <td>Quatre valeurs à virgule flottante</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_type_colour</span></td>
-        <td>Four component values (r, g, b, a)</td>
+        <td><span class="notranslate"><span class="inline">vertex_type_colour</span></td>
+        <td>Valeurs de quatre composants (r, g, b, a)</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_type_ubyte4</span></td>
-        <td>Four component unsigned byte values (from 0 to 255)</td>
+        <td><span class="notranslate"><span class="inline">vertex_type_ubyte4</span></td>
+        <td>Valeurs d'octet non signées à quatre composantes (de 0 à 255)</td>
       </tr>
     </tbody>
   </table>
-  <p><br />
-    The use that these constants will be put too also needs to be defined so that the values can be &quot;bound&quot; properly within the shader being created. This is necessary due to the fact that DX and OpenGL have different requirements so if you don&#39;t bind them properly, they won&#39;t come through right in the shader. The available usage constants that you can choose are listed below and those you use will depend on the specifics of the shader being created:</p>
+  <p><br>
+    L'utilisation qui sera faite de ces constantes doit également être définie afin que les valeurs puissent être &quot;liées&quot; correctement dans le site <span class="notranslate">shader</span> en cours de création. Ceci est nécessaire car DX et OpenGL ont des exigences différentes et si vous ne les liez pas correctement, elles n'apparaîtront pas correctement sur le site <span class="notranslate">shader</span>. Les constantes d'utilisation que vous pouvez choisir sont listées ci-dessous et celles que vous utiliserez dépendront des spécificités du site <span class="notranslate">shader</span> en cours de création :</p>
   <table>
     <colgroup>
       <col />
@@ -64,66 +64,66 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Draw_Vertex_Usage"><a href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm" target="_blank">Vertex Usage Type Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Draw_Vertex_Usage"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">Constante de type d'utilisation des sommets</a></span></th>
       </tr>
       <tr>
         <th>Constant</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_position</span></td>
-        <td>position values (x, y, z)</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_position</span></td>
+        <td>valeurs de position (x, y, z)</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_colour</span></td>
-        <td>colour values (r, g, b, a)</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_colour</span></td>
+        <td>valeurs des couleurs (r, g, b, a)</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_normal</span></td>
-        <td>vertex normal values (nx, ny, nz)</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_normal</span></td>
+        <td>valeurs normales des sommets (nx, ny, nz)</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_textcoord</span></td>
-        <td>UV coordinates (u, v)</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_textcoord</span></td>
+        <td>Coordonnées UV (u, v)</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_blendweight</span></td>
-        <td>the blendweight of the input matrix (for skeletal animation, for example)</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_blendweight</span></td>
+        <td>le blendweight de la matrice d'entrée (pour l'animation du squelette, par exemple)</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_blendindices</span></td>
-        <td>the indices of the matrices to use (for skeletal animation, for example)</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_blendindices</span></td>
+        <td>les indices des matrices à utiliser (pour l'animation du squelette, par exemple)</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_depth</span></td>
-        <td>vertex depth buffer value</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_depth</span></td>
+        <td>profondeur des sommets <span class="notranslate">buffer</span> valeur</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_tangent</span></td>
-        <td>tangent values</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_tangent</span></td>
+        <td>valeurs tangentes</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_binormal</span></td>
-        <td>binormal values</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_binormal</span></td>
+        <td>valeurs binormales</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_fog</span></td>
-        <td>fog values</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_fog</span></td>
+        <td>valeurs de brouillard</td>
       </tr>
       <tr>
-        <td><span class="inline">vertex_usage_sample</span></td>
-        <td>sampler index</td>
+        <td><span class="notranslate"><span class="inline">vertex_usage_sample</span></td>
+        <td>index des échantillonneurs</td>
       </tr>
     </tbody>
   </table>
-  <p><br />
-    There are some important things to note when using custom formats like these:</p>
+  <p><br>
+    Il y a quelques points importants à noter lors de l'utilisation de formats personnalisés comme ceux-ci :</p>
   <ul class="colour">
-    <li>The <span class="inline">vertex_format_add_custom()</span> function only supports <span class="inline">vertex_usage_position</span>, <span class="inline">vertex_usage_colour</span>, <span class="inline">vertex_usage_normal</span> and <span class="inline">vertex_usage_textcoord</span> when using GLSL shaders. These will map to the shader attributes <span class="inline">in_Position</span>, <span class="inline">in_Colour[0 - ...]</span>, <span class="inline">in_Normal</span> respectively (anything that is not one of these three attributes - eg: texture coordinates - can be mapped to any attribute you define).</li>
-    <li>In general you should use <span class="inline">vertex_usage_textcoord</span> for all extra parameters where possible, as types like <span class="inline">vertex_usage_blendweight</span> and <span class="inline">vertex_usage_tangent</span> are close to deprecated in most shader languages, and probably won&#39;t convert properly. Instead use <span class="inline">vec</span>, <span class="inline">vec2</span>, <span class="inline">vec3</span> or <span class="inline">vec4</span> types <span class="inline">vertex_usage_textcoord</span> and everything should work fine.</li>
-    <li>GLSL ES does <i>not</i> support integer attributes, so passing in <span class="inline">ivec4</span>&#39;s does not work (this type is usually used when passing in <span class="inline">vertex_usage_blendindices</span>). What you need to do is pass in texture coordinates and then in the shader, convert them to <span class="inline">ivec4</span> like this:</li>
+    <li>La fonction <span class="inline">vertex_format_add_custom()</span> ne prend en charge que <span class="inline">vertex_usage_position</span>, <span class="inline">vertex_usage_colour</span>, <span class="inline">vertex_usage_normal</span> et <span class="inline">vertex_usage_textcoord</span> lorsque vous utilisez GLSL <span class="notranslate">shaders</span>. Ces attributs correspondent respectivement aux attributs <span class="inline">in_Position</span>, <span class="inline">in_Colour[0 - ...]</span>, <span class="inline">in_Normal</span> de <span class="notranslate">shader</span> (tout ce qui n'est pas l'un de ces trois attributs - par exemple, les coordonnées de la texture - peut correspondre à n'importe quel attribut que vous définissez).</li>
+    <li>En général, vous devriez utiliser <span class="inline">vertex_usage_textcoord</span> pour tous les paramètres supplémentaires lorsque cela est possible, car les types <span class="inline">vertex_usage_blendweight</span> et <span class="inline">vertex_usage_tangent</span> sont presque dépréciés dans la plupart des langages <span class="notranslate">shader</span>, et ne seront probablement pas convertis correctement. Utilisez plutôt les types <span class="inline">vec</span>, <span class="inline">vec2</span>, <span class="inline">vec3</span> ou <span class="inline">vec4</span> <span class="inline">vertex_usage_textcoord</span> et tout devrait fonctionner correctement.</li>
+    <li>GLSL ES <i>ne</i> prend <i>pas</i> en charge les attributs entiers, ce qui signifie que le passage par <span class="inline">ivec4</span> ne fonctionne pas (ce type est généralement utilisé pour le passage par <span class="inline">vertex_usage_blendindices</span>). Ce que vous devez faire, c'est passer des coordonnées de texture et ensuite, dans le <span class="notranslate">shader</span>, les convertir en <span class="inline">ivec4</span> comme ceci :</li>
   </ul>
-  <p> </p>
+  <p> </p>
   <p class="code">attribute vec3 in_Position;<br />
     attribute vec4 in_BlendIndices;<br />
     attribute vec4 in_BlendWeights;<br />
@@ -140,52 +140,52 @@
     }
   </p>
   <ul class="colour">
-    <li>Blend weights are usually stored in an array and then accessed using blend indices, but you can see here that instead of defining <span class="inline">in_BlendIndices</span> as an <span class="inline">ivec4</span> attribute, it&#39;s a <span class="inline">vec4</span>, then cast to an <span class="inline">ivec4</span> in the code. This is then used to index the array created using the <span class="inline">gm_Matrix</span> (you can only access an array using an <span class="inline">INT</span> value - not a float).</li>
+    <li>Les poids des mélanges sont généralement stockés dans un tableau auquel on accède ensuite à l'aide d'indices de mélange, mais vous pouvez voir ici qu'au lieu de définir <span class="inline">in_BlendIndices</span> comme un attribut <span class="inline">ivec4</span>, il s'agit d'un <span class="inline">vec4</span>, puis d'un <span class="inline">ivec4</span> dans le code. Cette valeur est ensuite utilisée pour indexer le tableau créé à l'aide de <span class="inline">gm_Matrix</span> (vous pouvez seulement <span class="notranslate">access</span> un tableau en utilisant une valeur <span class="inline">INT</span> - pas un flottant).</li>
     <br />
-    <li> </li>
+     
   </ul>
-  <h4>Syntax:</h4>
+  <h4>Syntaxe :</h4>
   <p class="code">vertex_format_add_custom(type, usage);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>type</td>
-        <td><span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm" target="_blank">Vertex Data Type Constant</a></span></td>
-        <td>The data type that this custom vertex data will hold (see the <b><i>type constants</i></b> listed above).</td>
+        <td><span class="notranslate">type</span></td>
+        <td><span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">Type de données Vertex Constante</a></span></td>
+        <td><span class="notranslate">The data type that this custom vertex data will hold (see the <b><i>type constants</i></b> listed above).</span></td>
       </tr>
       <tr>
-        <td>usage</td>
-        <td><span data-keyref="Type_Constant_Draw_Vertex_Usage"><a href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm" target="_blank">Vertex Usage Type Constant</a></span></td>
-        <td>The use that the data will get(see the <b><i>usage constants</i></b> listed above).</td>
+        <td><span class="notranslate">usage</span></td>
+        <td><span data-keyref="Type_Constant_Draw_Vertex_Usage"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">Constante de type d'utilisation des sommets</a></span></td>
+        <td><span class="notranslate">The use that the data will get(see the <b><i>usage constants</i></b> listed above).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">N/A</a></span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">vertex_format_begin();<br />
-    vertex_format_add_texcoord();<br />
+    vertex_format_add_textcoord();<br />
     vertex_format_add_custom(vertex_type_float3, vertex_usage_position);<br />
     my_format = vertex_format_end();</p>
-  <p>The above code will create a new vertex format with just texture and 3 custom floating point values for position. It is then stores the format id in the variable &quot;my_format&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus va créer un nouveau format de vertex avec seulement la texture et 3 valeurs personnalisées à virgule flottante pour la position. Il stocke ensuite l'identifiant du format dans la variable &quot;my_format&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Primitives_And_Vertex_Formats.htm">Primitives And Vertex Formats</a></div>
-        <div style="float:right">Next: <a href="vertex_format_end.htm">vertex_format_end</a></div>
+        <div style="float:left">Retour : <a href="Primitives_And_Vertex_Formats.htm">Primitives et formats de sommets</a></div>
+        <div style="float:right">Suivant : <a href="vertex_format_end.htm"><span class="notranslate">vertex_format_end</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 vertex_format_add_custom

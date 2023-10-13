@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>file_delete</title>
+  <title>fichier_supprimé</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for file_delete" />
   <meta name="rh-index-keywords" content="file_delete" />
@@ -14,45 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>file_delete</h1>
-  <p>This function will delete the specified file from the system. It should be noted that this function will only delete those files that <span data-keyref="GameMaker Name">GameMaker</span> is able to create and parse: ini files, text files and binary files, or those files made to store game created resources like sprites or surfaces. However, it will <i>not</i> delete any other file. The function will also return <span class="inline">true</span> if the file has successfully been removed, or <span class="inline">false</span> in any other circumstances.</p>
-  <p class="note"><b>WARNING!</b> This function may not work as you expect due to <span data-keyref="GameMaker Name">GameMaker</span> being sandboxed! Please see the section on <a href="../../../../Additional_Information/The_File_System.htm">File System Limits</a> for more information.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>fichier_supprimé</h1>
+  <p>Cette fonction supprime le fichier spécifié du système. Il faut noter que cette fonction ne supprimera que les fichiers que <span data-keyref="GameMaker Name">GameMaker</span> est capable de créer et d'analyser : fichiers ini, fichiers texte et fichiers binaires, ou les fichiers destinés à stocker les ressources créées par le jeu, comme <span class="notranslate">sprites</span> ou les surfaces. En revanche, elle <i>ne</i> supprimera <i>aucun</i> autre fichier. La fonction renvoie également <span class="inline">true</span> si le fichier a été supprimé avec succès, ou <span class="inline">false</span> dans toutes les autres circonstances.</p>
+  <p class="note"><b>AVERTISSEMENT !</b> Cette fonction peut ne pas fonctionner comme vous l'attendez en raison de la présence d'un bac à sable dans <span data-keyref="GameMaker Name">GameMaker</span>! Veuillez consulter la section sur les <a href="../../../../Additional_Information/The_File_System.htm">limites du système de fichiers</a> pour plus d'informations.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">file_delete(fname);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>fname</td><td><span data-keyref="Type_String"></span></td>
-        <td>The name of the file to delete.</td>
+        <td><span class="notranslate">fname</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The name of the file to delete.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if file_exists(&quot;level.txt&quot;)<br />
     {<br />
         file_delete(&quot;level.txt&quot;);<br />
     }</p>
-  <p>This would check for a file and if it exists it is deleted.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Cela permet de vérifier la présence d'un fichier et s'il existe, il est supprimé.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="File_System.htm">File System</a></div>
-        <div style="float:right">Next: <a href="file_rename.htm">file_rename</a></div>
+        <div style="float:left">Retour : <a href="File_System.htm">Système de fichiers</a></div>
+        <div style="float:right">Suivant : <a href="file_rename.htm"><span class="notranslate">file_rename</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 file_delete

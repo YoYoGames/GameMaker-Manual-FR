@@ -6,7 +6,7 @@
   <title>xboxlive_stats_add_user</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_stats_add_user" />
   <meta name="rh-index-keywords" content="xboxlive_stats_add_user,achievement_stat_event" />
@@ -15,52 +15,52 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_stats_add_user</h1>
-  <p>This function can be used to add a given user ID pointer to the statistics manager. This must be done before using any of the other stats functions to automatically sync the game with the XBox Live server and retrieve the latest values. You supply the user ID as returned by (for example) the function <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>, and the function will will return -1 if there was an error or if the user ID is invalid, or any other value if the function was successfully called.</p>
-  <p>The function will generate a callback which will trigger a <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">System Asynchronous Event</a>. This event will have the special DS map <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> which should then be parsed for the following keys:</p>
+  <p>Cette fonction peut être utilisée pour ajouter un pointeur d'ID utilisateur donné au gestionnaire de statistiques. Cela doit être fait avant d'utiliser l'une des autres fonctions de statistiques pour synchroniser automatiquement le jeu avec le serveur XBox Live et récupérer les dernières valeurs. Vous fournissez l'ID utilisateur tel que renvoyé par (par exemple) la fonction <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>et la fonction renverra -1 en cas d'erreur ou si l'ID utilisateur n'est pas valide, ou toute autre valeur si la fonction a été appelée avec succès.</p>
+  <p>La fonction générera un callback qui déclenchera un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">événement asynchrone du système</a>. Cet événement aura la carte spéciale DS <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> qui devra ensuite être analysée pour les clés suivantes :</p>
   <ul>
-    <li>&quot;<b>id</b>&quot; - Will hold the constant <span class="inline">achievement_stat_event</span></li>
-    <li>&quot;<b>eventname</b>&quot; - Will hold the string &quot;<i>LocalUserAdded</i>&quot;</li>
-    <li>&quot;<b>userid</b>&quot; - The user ID associated with the request</li>
-    <li>&quot;<b>error</b>&quot; - 0 if successful, some other value if there has been an error</li>
-    <li>&quot;<b>errormessage</b>&quot; - A string with an error message, if any is available</li>
+    <li>&quot;<b>id</b>&quot; - Tiendra la constante <span class="inline">achievement_stat_event</span></li>
+    <li>&quot;<b>eventname</b>&quot; - Contient la chaîne &quot;<i>LocalUserAdded</i>&quot;.</li>
+    <li>&quot;<b>userid</b>&quot; - L'ID utilisateur associé à la demande</li>
+    <li>&quot;<b>error</b>&quot; - 0 en cas de succès, une autre valeur en cas d'erreur.</li>
+    <li>&quot;<b>errormessage</b>&quot; - Une chaîne contenant un message d'erreur, s'il en existe un.</li>
   </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">xboxlive_stats_add_user(user_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>user_id</td><td><span data-keyref="Type_ID_Xbox_User"></span></td>
-        <td>The user ID (a pointer) to add</td>
+        <td><span class="notranslate">user_id</span></td><td><span data-keyref="Type_ID_Xbox_User"></span></td>
+        <td><span class="notranslate">The user ID (a pointer) to add</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">for(var i = 0; i &lt; xboxlive_get_user_count(); ++i;)<br />
     {<br />
         user_id[i] = xboxlive_get_user(i);<br />
         xboxlive_stats_add_user(user_id[i]);<br />
     }</p>
-  <p>The above code will get the number of user accounts available then loop through them and assign the account ID to an array, as well as register the user with the stats manager.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus obtiendra le nombre de comptes d'utilisateurs disponibles, puis les parcourra en boucle et assignera l'ID du compte à un tableau, ainsi que l'enregistrement de l'utilisateur avec le gestionnaire de statistiques.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a href="xboxlive_stats_remove_user.htm">xboxlive_stats_remove_user</a></div>
+        <div style="float:left">Retour : <a href="Stats_And_Leaderboards.htm">Stats et classements</a></div>
+        <div style="float:right">Suivant : <a href="xboxlive_stats_remove_user.htm"><span class="notranslate">xboxlive_stats_remove_user</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_add_user

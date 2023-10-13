@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Source Examples</title>
+  <title>Exemples de sources</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Page containing extended examples for extensions" />
   <meta name="rh-index-keywords" content="Source Extension Examples" />
@@ -14,50 +14,50 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Source Examples</h1>
-  <p>This page contains examples and information on extension source code for Android and iOS, to help you create your own native extensions for those platforms.</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Android (Base Example)</a></p>
+  <h1>Exemples de sources</h1>
+  <p>Cette page contient des exemples et des informations sur le code source des extensions pour <span class="notranslate">Android</span> et <span class="notranslate">iOS</span>, afin de vous aider à créer vos propres extensions natives pour ces plateformes.</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Android (exemple de base)</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p>Our example extension for Android will contain functions that do the following:</p>
+    <p>Notre exemple d'extension pour <span class="notranslate">Android</span> contient des fonctions qui font ce qui suit :</p>
     <ul class="dropspotlist">
-      <li>Return two numbers added together</li>
-      <li>Return a string consisting of an input string and value</li>
-      <li>Return a string consisting of two input strings</li>
-      <li>Trigger the <a href="../Object_Properties/Async_Events/Social.htm">Async - Social</a> event and fill values in its <span class="inline">async_load</span> map</li>
+      <li>Retourne deux nombres additionnés</li>
+      <li>Retourne une chaîne composée d'une chaîne d'entrée et d'une valeur.</li>
+      <li>Retourne une chaîne composée de deux chaînes d'entrée</li>
+      <li>Déclencher l'événement <a href="../Object_Properties/Async_Events/Social.htm">Async - Social</a> et remplir les valeurs dans sa carte <span class="inline">async_load</span> </li>
     </ul>
-    <p>This extension will make use of a <span class="inline">.java</span> file, the contents of which are given below (click to open):</p>
+    <p>Cette extension fera usage d'un fichier <span class="inline">.java</span> dont le contenu est donné ci-dessous (cliquez pour ouvrir) :</p>
     <p class="note"><a data-height="800" data-rhwidget="HyperlinkPopover" data-width="1000" href="Source_Files/GenericTest.htm">GenericTest.java</a></p>
-    <p>To add such a file to your extension, you need to go under its <a href="Android_Extensions.htm">Android Properties</a> and first enter a class name (for this example, &quot;GenericTest&quot;), then click on &quot;Add Source&quot; and select the <span class="inline">.java</span> file. This will add the selected file to your project directory -- you can right-click on your extension, select &quot;Open in Explorer&quot; and see the source files there.</p>
-    <p>You can now add a new placeholder file to your extension and create functions inside it with the following properties:</p>
+    <p>Pour ajouter un tel fichier à votre extension, vous devez aller sous ses <a href="Android_Extensions.htm">propriétés Android</a> et d'abord entrer un nom de classe (pour cet exemple, &quot;GenericTest&quot;), puis cliquer sur &quot;Add Source&quot; et sélectionner le fichier <span class="inline">.java</span>. Cela ajoutera le fichier sélectionné au répertoire de votre projet - vous pouvez cliquer avec le bouton droit de la souris sur votre extension, sélectionner &quot;Ouvrir dans l'explorateur&quot; et voir les fichiers sources.</p>
+    <p>Vous pouvez maintenant ajouter un nouveau fichier espace réservé à votre extension et y créer des fonctions avec les propriétés suivantes :</p>
     <ul class="dropspotlist">
-      <li><em>function / external name:</em><span><span> </span></span><span class="inline">AddTwoNumbers</span><br />
-        <em>help:</em><span><span> </span></span><span class="inline">AddTwoNumbers(value1, value2)</span><br />
-        <em>arguments:</em><span><span> </span></span><span class="inline">double, </span><span class="inline">double</span><br />
-        <em>return type:</em><span><span> </span></span><span class="inline">double</span>
+      <li><em>fonction / nom externe :</em><span><span> </span></span><span class="inline">AddTwoNumbers</span><br>
+        <em>aide :</em><span><span> </span></span><span class="inline">AddTwoNumbers(value1, value2)</span><br>
+        <em>arguments :</em><span><span> </span></span><span class="inline">double, </span><span class="inline">double</span><br>
+        <em>type de retour :</em><span><span> </span></span><span class="inline">double</span>
       </li>
-      <li><em>function / external name:</em><span> </span><span class="inline">HowManyObjects</span><br />
-        <em>help:</em><span><span> </span></span><span class="inline">HowManyObjects(value1, value2, string)</span><br />
-        <em>arguments:</em><span><span> </span></span><span class="inline">double, </span><span class="inline">double, </span><span class="inline">string</span><br />
-        <em>return type:</em><span><span> </span></span><span class="inline">string</span>
+      <li><em>fonction / nom externe :</em><span> </span><span class="inline">HowManyObjects</span><br>
+        <em>aide :</em><span><span> </span></span><span class="inline">HowManyObjects(value1, value2, string)</span><br>
+        <em>arguments :</em><span><span> </span></span><span class="inline">double, </span><span class="inline">double, </span><span class="inline">string</span><br>
+        <em>type de retour :</em><span><span> </span></span><span class="inline">string</span>
       </li>
-      <li><em>function / external name:</em><span><span> </span></span><span class="inline">BuildAString</span><br />
-        <em>help:</em><span><span> </span></span><span class="inline">BuildAString(string1, string2)</span><br />
-        <em>arguments:</em><span><span> </span></span><span class="inline">string, </span><span class="inline">string</span><br />
-        <em>return type:</em><span><span> </span></span><span class="inline">string</span>
+      <li><em>fonction / nom externe :</em><span><span> </span></span><span class="inline">BuildAString</span><br>
+        <em>aide :</em><span><span> </span></span><span class="inline">BuildAString(string1, string2)</span><br>
+        <em>arguments :</em><span><span> </span></span><span class="inline">string, </span><span class="inline">string</span><br>
+        <em>type de retour :</em><span><span> </span></span><span class="inline">string</span>
       </li>
-      <li><em>function / external name:</em><span><span> </span></span><span class="inline">ReturnAsync</span><br />
-        <em>help:</em><span><span> </span></span><span class="inline">ReturnAsync(value1, value2)</span><br />
-        <em>arguments:</em><span><span> </span></span><span class="inline">double,</span><span> </span><span class="inline">double</span><br />
-        <em>return type:</em><span><span> </span></span><span class="inline">double</span>
+      <li><em>fonction / nom externe :</em><span><span> </span></span><span class="inline">ReturnAsync</span><br>
+        <em>aide :</em><span><span> </span></span><span class="inline">ReturnAsync(value1, value2)</span><br>
+        <em>arguments :</em><span><span> </span></span><span class="inline">double,</span><span> </span><span class="inline">double</span><br>
+        <em>type de retour :</em><span><span> </span></span><span class="inline">double</span>
       </li>
     </ul>
-    <p>Here is an example of the <span class="inline">AddTwoNumbers()</span> function:</p>
-    <p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions_EE1_Function.png" />You can now call these functions from your game code and use them like any other built-in function:</p>
+    <p>Voici un exemple de la fonction <span class="inline">AddTwoNumbers()</span>:</p>
+    <p><img>Vous pouvez maintenant appeler ces fonctions à partir du code de votre jeu et les utiliser comme toute autre fonction intégrée :</p>
     <p class="code">var result1 = string(AddTwoNumbers(irandom(100), 50));<br />
       var result2 = BuildAString(&quot;Hello&quot;, &quot;World&quot;);<br />
       var result3 = HowManyObjects(irandom(1000), irandom(1000), &quot;Targets&quot;);<br />
       ReturnAsync(irandom(1000), irandom(1000));</p>
-    <p>The <span class="inline">ReturnAsync()</span> function will trigger the <a href="../Object_Properties/Async_Events/Social.htm">Async - Social</a> event, so you will need to add that event to your object and read data from its <span class="inline">async_load</span> map (which is filled by the extension&#39;s source code given above).</p>
+    <p>La fonction <span class="inline">ReturnAsync()</span> déclenchera l'événement <a href="../Object_Properties/Async_Events/Social.htm">Async - Social</a>, vous devrez donc ajouter cet événement à votre objet et lire les données de sa carte <span class="inline">async_load</span> (qui est remplie par le code source de l'extension donné ci-dessus).</p>
     <p class="code">var type = async_load[? &quot;type&quot;];<br />
       <br />
       if (type == &quot;finished&quot;)<br />
@@ -66,26 +66,26 @@
           result4 += &quot;value2: &quot; + string(async_load[? &quot;argument1&quot;]);<br />
       }
     </p>
-    <p> </p>
+    <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">iOS (Base Example)</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">iOS (exemple de base)</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p>The example provided for iOS is the same as the Android example given above; only the source files differ, which we&#39;ll cover in this section.</p>
-    <p>iOS extensions make use of an <span class="inline">.h</span> and an <span class="inline">.mm</span> file, and the contents of both are given below (click to open):</p>
-    <p class="note"><a data-height="800" data-rhwidget="HyperlinkPopover" data-width="1000" href="Source_Files/GenericTest-iOS.htm">GenericTest iOS Source Files</a></p>
-    <p>To add these files to your extension, you first need to go under its <a href="iOS_Extensions.htm">iOS Properties</a> and enter a class name (for this example, &quot;GenericTest&quot;). You can then use either the &quot;Enter framework path&quot; option (if the files are present on your macOS machine used for building) or the &quot;Add Source&quot; option (if they are on your development machine); regardless of the option you use, you will need to point them to the directory that contains your <span class="inline">.h</span> and <span class="inline">.mm</span> files.</p>
-    <p>You can add these source files to the same extension that was set up in the previous section for Android, meaning that any functions already defined in that extension will now work on iOS too (given that the <em>External Names</em> of all functions on Android and iOS are the same). If you are creating a new extension, you can simply create the functions in the same way as previously described.</p>
-    <p> </p>
+    <p>L'exemple fourni pour <span class="notranslate">iOS</span> est le même que celui de <span class="notranslate">Android</span> donné ci-dessus ; seuls les fichiers sources diffèrent, ce que nous allons aborder dans cette section.</p>
+    <p>Les extensions iOS utilisent un fichier <span class="inline">.h</span> et un fichier <span class="inline">.mm</span>, dont le contenu est indiqué ci-dessous (cliquez pour ouvrir) :</p>
+    <p class="note"><a data-height="800" data-rhwidget="HyperlinkPopover" data-width="1000" href="Source_Files/GenericTest-iOS.htm">GenericTest <span class="notranslate">iOS</span> Fichiers sources</a></p>
+    <p>Pour ajouter ces fichiers à votre extension, vous devez d'abord aller dans ses <a href="iOS_Extensions.htm">propriétés iOS</a> et entrer un nom de classe (pour cet exemple, &quot;GenericTest&quot;). Vous pouvez ensuite utiliser l'option &quot;Enter framework path&quot; (si les fichiers sont présents sur votre machine <span class="notranslate">macOS</span> utilisée pour la construction) ou l'option &quot;Add Source&quot; (s'ils sont sur votre machine de développement) ; quelle que soit l'option utilisée, vous devrez les faire pointer vers le répertoire qui contient vos fichiers <span class="inline">.h</span> et <span class="inline">.mm</span>.</p>
+    <p>Vous pouvez ajouter ces fichiers sources à la même extension que celle qui a été configurée dans la section précédente pour <span class="notranslate">Android</span>, ce qui signifie que toutes les fonctions déjà définies dans cette extension fonctionneront maintenant aussi sur <span class="notranslate">iOS</span> (étant donné que les <em>noms externes</em> de toutes les fonctions sur <span class="notranslate">Android</span> et <span class="notranslate">iOS</span> sont les mêmes). Si vous créez une nouvelle extension, vous pouvez simplement créer les fonctions de la même manière que celle décrite précédemment.</p>
+    <p> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Android (Callbacks)</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p>You can use the following callback functions in your <span class="inline">.java</span> extension files:</p>
+    <p>Vous pouvez utiliser les fonctions de rappel suivantes dans vos fichiers d'extension <span class="inline">.java</span>:</p>
     <p class="code">public void onStart()<br />public void onRestart()<br />public void onStop()<br />public void onDestroy()<br />public void onPause()<br />public void onResume()<br />public void onActivityResult(int requestCode, int resultCode, Intent data)<br />public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults)<br />public void onNewIntent(android.content.Intent newIntent)<br />public void onWindowFocusChanged(boolean hasFocus)<br />public void onConfigurationChanged(Configuration newConfig)<br /></p>
     <p><br /></p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">iOS (Callbacks)</a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p>You can use the following callback functions in your <span class="inline">.mm</span> extension files:</p>
+    <p>Vous pouvez utiliser les fonctions de rappel suivantes dans vos fichiers d'extension <span class="inline">.mm</span>:</p>
     <p class="code">-(void) Init<br />
       -(void) onLaunch:(NSDictionary*)launchOptions<br />
       -(void) onResume<br />
@@ -105,17 +105,17 @@
       -(void) applicationShouldRequestHealthAuthorization:(UIApplication *)application<br />
       -(void) openURL:(NSURL *)url sourceApplication:(NSString *) sourceApplication annotation:(id)annotation<br />
       -(void) application:(UIApplication *)application userDidAcceptCloudKitShareWithMetadata:(CKShareMetadata *)cloudKitShareMetadata</p>
-    <p> </p>
+    <p> </p>
   </div>
-  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Extensions.htm">The Extension Editor</a></div>
-        <div style="float:right">Next: <a href="Creating_An_Extension.htm">Creating An Extension</a></div>
+        <div style="float:left">Retour : <a href="../Extensions.htm">L'éditeur d'extension</a></div>
+        <div style="float:right">Suivant : <a href="Creating_An_Extension.htm">Création d'une extension</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Android Extensions

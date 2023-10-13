@@ -6,7 +6,7 @@
   <title>surface_resize</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for surface_resize" />
   <meta name="rh-index-keywords" content="surface_resize" />
@@ -15,52 +15,52 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>surface_resize</h1>
-  <p>This function will resize a surface to the given dimensions (in pixels). The &quot;surface_id&quot; is that of a surface you have created previously, or the <a href="application_surface.htm"><span class="inline">application_suface</span></a>, and the function will resize that surface. Note that this will neither crop nor stretch the contents of the surface, but rather it destroys the current surface and recreates it with the same handle (surface_id) with the new dimensions, meaning that it will need to be cleared and drawn to again (unless it is the <span class="inline">application_surface</span> in which case <span data-keyref="GameMaker Name">GameMaker</span> will do this automatically).</p>
-  <p class="note"><b>NOTE</b>: If you are resizing the application surface, these changes will not be registered until the start of the next draw frame, meaning that calling the <span style="font-size:1px;"><a href="surface_get_width.htm"><span class="inline">surface_get_width()</span></a></span> or <span style="font-size:1px;"><a href="surface_get_height.htm"><span class="inline">surface_get_height()</span></a></span> functions in the same event or step will return the previous values.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction va redimensionner une surface aux dimensions données (en pixels). Le &quot;surface_id&quot; est celui d'une surface que vous avez créée précédemment, ou l'icône <a href="application_surface.htm"><span class="inline">application_suface</span></a>et la fonction redimensionnera cette surface. Notez que cette fonction ne va ni recadrer ni étirer le contenu de la surface, mais plutôt détruire la surface actuelle et la recréer avec la même poignée (surface_id) avec les nouvelles dimensions, ce qui signifie qu'elle devra être effacée et dessinée à nouveau (sauf s'il s'agit de <span class="inline">application_surface</span>, auquel cas <span data-keyref="GameMaker Name">GameMaker</span> le fera automatiquement).</p>
+  <p class="note"><b>REMARQUE</b>: Si vous redimensionnez la surface de l'application, ces modifications ne seront pas enregistrées avant le début de la prochaine image de dessin, ce qui signifie que l'appel de la fonction <span style="font-size:1px;"><a href="surface_get_width.htm"><span class="inline">surface_get_width()</span></a></span> ou <span style="font-size:1px;"><a href="surface_get_height.htm"><span class="inline">surface_get_height()</span></a></span> dans le même événement ou la même étape renverra les valeurs précédentes.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">surface_resize(surface_id, w, h);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>surface_id</td><td><span data-keyref="Type_ID_Surface"></span></td>
-        <td>The ID of the surface to change.</td>
+        <td><span class="notranslate">surface_id</span></td><td><span data-keyref="Type_ID_Surface"></span></td>
+        <td><span class="notranslate">The ID of the surface to change.</span></td>
      </tr>
       <tr>
-        <td>w</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The width of the new surface.</td>
+        <td><span class="notranslate">w</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The width of the new surface.</span></td>
      </tr>
       <tr>
-        <td>h</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The height of the new surface.</td>
+        <td><span class="notranslate">h</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The height of the new surface.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if view_wport[0] != surface_get_width(application_surface) || view_hport[0] != surface_get_height(application_surface)<br />
     {<br />
         surface_resize(application_surface, view_wport[0],view_hport[0]);<br />
     }</p>
-  <p>The above code will check the view port size against that of the surface &quot;aplication_surface&quot; and if it is different, the surface is re-sized.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifie la taille du port d'affichage par rapport à celle de la surface &quot;aplication_surface&quot; et si elle est différente, la surface est redimensionnée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Surfaces.htm">Surfaces</a></div>
-        <div style="float:right">Next: <a href="surface_set_target.htm">surface_set_target</a></div>
+        <div style="float:left">Retour : <a href="Surfaces.htm">Surfaces</a></div>
+        <div style="float:right">Suivant : <a href="surface_set_target.htm"><span class="notranslate">surface_set_target</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 surface_resize

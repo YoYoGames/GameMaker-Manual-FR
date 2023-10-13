@@ -6,7 +6,7 @@
   <title>texture_set_stage</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for ​texture_set_stage" />
   <meta name="rh-index-keywords" content="texture_set_stage" />
@@ -15,52 +15,52 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>texture_set_stage</h1>
-  <p>This function will set the given stage &quot;slot&quot; a texture to be used. The number of stage &quot;slots&quot; available will depend on the platform you are compiling to, with a maximum of 8 being available for Windows, Mac and Linux, but on lower end Android devices (for example) this number can be as low as 2. It is also worth noting that the first stage slot (1) is always used automatically by <span data-keyref="GameMaker Name">GameMaker</span>.</p>
-  <p class="note"><b>NOTE</b>: This function will do nothing outside of the context of a running shader! See <a href="../../Asset_Management/Shaders/Shaders.htm">Shaders </a>for more information.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction définit une texture à utiliser pour le &quot;slot&quot; de scène donné. Le nombre de &quot;slots&quot; disponibles dépend de la plate-forme sur laquelle vous compilez, avec un maximum de 8 pour <span class="notranslate">Windows</span>, Mac et <span class="notranslate">Linux</span>, mais sur les appareils bas de gamme <span class="notranslate">Android</span> (par exemple), ce nombre peut être aussi bas que 2. Il est également intéressant de noter que le premier slot (1) est toujours utilisé automatiquement par <span data-keyref="GameMaker Name">GameMaker</span>.</p>
+  <p class="note"><b>NOTE</b>: Cette fonction ne fera rien en dehors du contexte d'un <span class="notranslate">shader</span> en cours d'exécution ! Voir <a href="../../Asset_Management/Shaders/Shaders.htm">Shaders </a>pour plus d'informations.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">texture_set_stage(stage, tex);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>stage</td>
+        <td><span class="notranslate">stage</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The texture &quot;slot&quot; to use.</td>
+        <td><span class="notranslate">The texture &quot;slot&quot; to use.</span></td>
       </tr>
       <tr>
-        <td>tex</td>
-        <td><span data-keyref="Type_Pointer_Texture">Texture Pointer</span></td>
-        <td>The texture to use.</td>
+        <td><span class="notranslate">tex</span></td>
+        <td><span data-keyref="Type_Pointer_Texture">Pointeur de texture</span></td>
+        <td><span class="notranslate">The texture to use.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">glassshader_bgsampler = shader_get_sampler_index(GlassShader, &quot;s_BackgroundSampler&quot;)<br />
     spr = sprite_get_texture(sprite_index, 0);<br />
     shader_set(GlassShader);<br />
     texture_set_stage(glassshader_bgsampler, spr);<br />
     shader_reset();</p>
-  <p>The above code will get the <i>handle</i> for the sampler within the shader indexed as &quot;GlassShader&quot; and then set that shader constant to the given sprite texture.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus récupère l'<i>identifiant de</i> l'échantillonneur dans le fichier <span class="notranslate">shader</span> indexé comme &quot;GlassShader&quot;, puis définit cette constante <span class="notranslate">shader</span> sur la texture <span class="notranslate">sprite</span> donnée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Textures.htm">Textures</a></div>
-        <div style="float:right">Next: <a href="texture_global_scale.htm">texture_global_scale</a></div>
+        <div style="float:left">Retour : <a href="Textures.htm">Textures</a></div>
+        <div style="float:right">Suivant : <a href="texture_global_scale.htm"><span class="notranslate">texture_global_scale</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 texture_set_stage

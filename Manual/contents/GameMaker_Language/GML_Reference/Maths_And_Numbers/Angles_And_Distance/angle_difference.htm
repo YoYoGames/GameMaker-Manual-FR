@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>angle_difference</title>
+  <title>différence d'angle</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <script src="../../../../assets/scripts/canvas_helpers.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for angle_difference" />
@@ -16,40 +16,40 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>angle_difference</h1>
-  <p>This function will return the smallest difference between the two specified angles, where the difference is calculated from the source angle towards the destination angle. The returned value will be between -180 and 180 degrees (where a positive angle is anti-clockwise and a negative angle is clockwise).</p>
-  <p>The relationship between the &quot;source&quot; and &quot;destination&quot; angles is such that the difference that you get by calling <span class="inline2">angle_difference(dest, src)</span>, when added back to the <span class="inline2">src</span> value, gives you the <span class="inline2">dest</span> angle (although the exact numeric values may differ). You can use a similar technique to move the source angle towards the destination angle gradually every step, where you add, say, 10% of the returned difference back to <span class="inline2">src</span> to move it a little bit towards <span class="inline2">dest</span> (this is demonstrated in the example below).</p>
-  <p> </p>
-  <h4><b>Syntax:</b></h4>
+  <h1>différence d'angle</h1>
+  <p>Cette fonction renvoie la plus petite différence entre les deux angles spécifiés, la différence étant calculée à partir de l'angle source vers l'angle de destination. La valeur renvoyée sera comprise entre -180 et 180 degrés (où un angle positif correspond au sens inverse des aiguilles d'une montre et un angle négatif au sens des aiguilles d'une montre).</p>
+  <p>La relation entre les angles &quot;source&quot; et &quot;destination&quot; est telle que la différence que vous obtenez en appelant <span class="inline2">angle_difference(dest, src)</span>, lorsqu'elle est ajoutée à la valeur <span class="inline2">src</span>, vous donne l'angle <span class="inline2">dest</span> (bien que les valeurs numériques exactes puissent différer). Vous pouvez utiliser une technique similaire pour déplacer l'angle source vers l'angle destination progressivement à chaque étape, où vous ajoutez, disons, 10% de la différence retournée à <span class="inline2">src</span> pour le déplacer un peu vers <span class="inline2">dest</span> (ceci est démontré dans l'exemple ci-dessous).</p>
+  <p> </p>
+  <h4><b>Syntaxe :</b></h4>
   <p class="code">angle_difference(dest, src)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>dest</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The destination or target angle</td>
+        <td><span class="notranslate">dest</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The destination or target angle</span></td>
      </tr>
       <tr>
-        <td>src</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The source angle</td>
+        <td><span class="notranslate">src</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The source angle</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var _dir = point_direction(x, y, mouse_x, mouse_y);<br />
     var _diff = angle_difference(_dir, image_angle);<br />
     image_angle += _diff * 0.1;</p>
-  <p>The above code will get the direction from the instance to the mouse cursor, then get the difference between that angle and the current <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_angle.htm"><span class="inline">image_angle</span></a>, using this value to gradually rotate the instance towards the mouse.</p>
+  <p>Le code ci-dessus obtiendra la direction de l'instance vers le curseur de la souris, puis la différence entre cet angle et l'angle actuel. <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_angle.htm"><span class="inline">image_angle</span></a>en utilisant cette valeur pour faire pivoter progressivement l'instance vers la souris.</p>
   <p><img class="invisible" src="../../../../assets/Images/InteractiveExamples/DirectionalSprite.png" /></p>
   <p><canvas class="gml_reference_example" height="128" id="angle_difference_example" width="128"> </canvas></p>
-  <p class="canvas_subtitle">Interactive Example</p>
+  <p class="canvas_subtitle">Exemple interactif</p>
   <script>
     //<![CDATA[
     let elm = document.getElementById("angle_difference_example");
@@ -80,11 +80,11 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Angles_And_Distance.htm">Angles And Distance</a></div>
-        <div style="float:right">Next: <a href="lengthdir_x.htm">lengthdir_x</a></div>
+        <div style="float:left">Retour : <a href="Angles_And_Distance.htm">Angles et distances</a></div>
+        <div style="float:right">Suivant : <a href="lengthdir_x.htm"><span class="notranslate">lengthdir_x</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 angle_difference

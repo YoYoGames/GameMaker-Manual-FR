@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_get_depth</title>
+  <title>couche_get_depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_get_depth" />
   <meta name="rh-index-keywords" content="layer_get_depth" />
@@ -15,49 +15,49 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_get_depth</h1>
-  <p>You can use this function to get the <i>depth</i> value associated with a given layer. You supply the layer ID (which you get when you create the layer using <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) or the layer name (as a string - this will have a performance impact) and the function will return that layers depth as a real number. Note that depth is defined as being higher the &quot;further away&quot; from the camera and lower the &quot;closer&quot; to the camera, so if you have three layers with depths -100, 0, 100, the layers will draw in the order 100, 0, -100, so that the &quot;top&quot; layer (ie, the closest to the camera view and so drawn over everything else) will be the layer with the -100 depth.</p>
-  <p>The following image shows a schematic of how depth works for layers:</p>
-  <p><img alt="Layer depth example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/Layer_Depths.png" />Note that if you supply an invalid layer ID value you will get an error.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>couche_get_depth</h1>
+  <p>Vous pouvez utiliser cette fonction pour obtenir la valeur de <i>profondeur</i> associée à une couche donnée. Vous fournissez l'ID de la couche (que vous obtenez lorsque vous créez la couche à l'aide de la fonction <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) ou le nom du calque (sous forme de chaîne de caractères - cela aura un impact sur les performances) et la fonction renverra la profondeur du calque sous forme de nombre réel. Notez que la profondeur est définie comme étant plus élevée au fur et à mesure que l'on s'éloigne de la caméra et plus faible au fur et à mesure que l'on s'en rapproche. Ainsi, si vous avez trois couches avec des profondeurs de -100, 0, 100, les couches seront dessinées dans l'ordre 100, 0, -100, de sorte que la couche &quot;supérieure&quot; (c'est-à-dire la plus proche de la vue de la caméra et donc dessinée par-dessus tout le reste) sera la couche avec la profondeur -100.</p>
+  <p>L'image suivante montre un schéma du fonctionnement de la profondeur pour les couches :</p>
+  <p><img>Notez que si vous fournissez une valeur d'ID de couche invalide, vous obtiendrez une erreur.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">layer_get_depth(layer_id)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>layer_id</td>
-        <td><span data-keyref="Type_String">String</span> or <span data-keyref="Type_ID_Layer">Layer ID</span></td>
-        <td>The unique ID value of the layer to get the depth of (or the layer name as a string)</td>
+        <td><span class="notranslate">layer_id</span></td>
+        <td><span data-keyref="Type_String">Chaîne</span> ou <span data-keyref="Type_ID_Layer">ID de couche</span></td>
+        <td><span class="notranslate">The unique ID value of the layer to get the depth of (or the layer name as a string)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if layer_get_depth(global.temp_layer) != -100<br />
     {<br />
         layer_destroy(global.temp_layer);<br />
         global.temp_layer = layer_create(-100);<br />
     }</p>
-  <p>The above code checks the depth of a layer ID stored in a global variable and if it is not -100 it destroys the layer and re-creates it at the depth of -100.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifie la profondeur de l'ID d'une couche stockée dans une variable globale et si elle n'est pas -100, il détruit la couche et la recrée à la profondeur de -100.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="General_Layer_Functions.htm">General Layer Functions</a></div>
-        <div style="float:right">Next: <a href="layer_get_id_at_depth.htm">layer_get_id_at_depth</a></div>
+        <div style="float:left">Retour : <a href="General_Layer_Functions.htm">Fonctions générales des couches</a></div>
+        <div style="float:right">Suivant : <a href="layer_get_id_at_depth.htm"><span class="notranslate">layer_get_id_at_depth</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_get_depth

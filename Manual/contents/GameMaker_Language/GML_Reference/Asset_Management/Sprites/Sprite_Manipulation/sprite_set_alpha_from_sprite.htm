@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>sprite_set_alpha_from_sprite</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function sprite_set_alpha_from_sprite" />
   <meta name="rh-index-keywords" content="sprite_set_alpha_from_sprite" />
@@ -15,40 +15,37 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_set_alpha_from_sprite</h1>
-  <p>This function uses the value/saturation of one sprite and multiplies it with the alpha of the target sprite. Ideally the sprite being used to generate the new alpha map should be grey-scale, with the white areas having an equivalent alpha value of 1 (opaque), the black areas being equivalent to alpha 0 (transparent), and the grey areas being an alpha in between 0 and 1. The sprite that you are setting the alpha of <i>cannot be a permanent resource</i>, nor can the sprite you use to set the alpha, as this will give an error. This means that you must create two completely new sprites &quot;on the fly&quot; in some way for the function to work correctly. This can be achieved by using surfaces, or by creating a sprite from the screen (the code example below shows how the effect can be achieved with surfaces).</p>
-  <p class="note"><b><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span></b> This function is only useful for <b>bitmap</b> sprites and will not work with SWF or JSON (Spine) sprites.</p>
-  <p>Below is an image that illustrates how this function works:</p>
+  <p>Cette fonction utilise la valeur/saturation d'un <span class="notranslate">sprite</span> et la multiplie par l'alpha de la cible <span class="notranslate">sprite</span>. Idéalement, le site <span class="notranslate">sprite</span> utilisé pour générer la nouvelle carte alpha doit être en échelle de gris, les zones blanches ayant une valeur alpha équivalente à 1 (opaque), les zones noires étant équivalentes à l'alpha 0 (transparent) et les zones grises ayant un alpha compris entre 0 et 1. Le site <span class="notranslate">sprite</span> dont vous définissez l'alpha <i>ne peut pas être une ressource permanente</i>, pas plus que le site <span class="notranslate">sprite</span> que vous utilisez pour définir l'alpha, car cela entraînerait une erreur. Cela signifie que vous devez créer deux <span class="notranslate">sprites</span> complètement nouveaux &quot;à la volée&quot; d'une manière ou d'une autre pour que la fonction fonctionne correctement. Pour ce faire, vous pouvez utiliser des surfaces ou créer un <span class="notranslate">sprite</span> à partir de l'écran (l'exemple de code ci-dessous montre comment obtenir cet effet avec des surfaces).</p>
+  <p class="note"><b>NOTE</b>: Cette fonction n'est utile que pour les <b>bitmaps</b> <span class="notranslate">sprites</span> et ne fonctionne pas avec les SWF ou JSON (<span class="notranslate">Spine</span>) <span class="notranslate">sprites</span>.</p>
+  <p>Vous trouverez ci-dessous une image qui illustre le fonctionnement de cette fonction :</p>
   <p><img alt="Sprite Set Alpha Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_alpha.png" /></p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">sprite_set_alpha_from_sprite(ind, spr);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
-      </tr>
+     </tr>
       <tr>
-        <td>ind</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The index of the sprite to change the transparency map of.</td>
-      </tr>
+        <td><span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The index of the sprite to change the transparency map of.</span></td>
+     </tr>
       <tr>
-        <td>spr</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The index of the sprite to take the transparency map data from.</td>
-      </tr>
+        <td><span class="notranslate">spr</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The index of the sprite to take the transparency map data from.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p>In this extended example we show how you can create a special effect sprite from two sprite resources. To start with we need to have a controller variable in the <b>Create Event</b> of the instance. This variable is to ensure that the sprite is only created once:</p>
+  <p> </p>
+  <h4>Renvoie à</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>Exemple étendu :</h4>
+  <p>Dans cet exemple étendu, nous montrons comment vous pouvez créer un effet spécial <span class="notranslate">sprite</span> à partir de deux ressources <span class="notranslate">sprite</span>. Pour commencer, nous devons avoir une variable de contrôleur dans l'<b>événement de création de</b> l'instance. Cette variable permet de s'assurer que le site <span class="notranslate">sprite</span> n'est créé qu'une seule fois :</p>
   <p class="code">spr_create = true;</p>
-  <p>Once that is done we need to then go to the <b>Draw Event</b> and add in this code:</p>
+  <p>Une fois que cela est fait, nous devons aller dans l'<b>événement Draw</b> et ajouter ce code :</p>
   <p class="code">if spr_create<br />
     {<br />
         spr_create = false;<br />
@@ -72,20 +69,20 @@
     <br />
     draw_sprite(sprite_index, 0, x, y);
   </p>
-  <p>The above code first checks to see if the control variable is true or not, and if it is, it then runs the code to set the sprite alpha, setting the variable to false to prevent the code from running more than once. In this case, it creates a surface the size of the alpha mask that we wish to use, then draws the sprite that is to have its alpha changed onto the surface and creates a new sprite from it, assigning it as the <span class="inline">sprite_index</span> of the object. The code then clears the surface and draws the alpha map sprite to it and creates another new sprite, storing its index in a local variable. Finally, the new sprite assigned to the object gets its alpha set from this temporary sprite, the surface is freed and the temporary sprite is removed.</p>
-  <p>There is one final thing to do here, and that is remove the sprite that has been created for the object from memory when not in use. This would either be done in the <b>Destroy Event</b> or the <b>Room End Event</b> like this:</p>
+  <p>Le code ci-dessus vérifie d'abord si la variable de contrôle est vraie ou non, et si elle l'est, il exécute alors le code pour définir l'alpha de <span class="notranslate">sprite</span>, en mettant la variable à false pour éviter que le code ne s'exécute plus d'une fois. Dans ce cas, il crée une surface de la taille du masque alpha que nous souhaitons utiliser, puis dessine le <span class="notranslate">sprite</span> dont l'alpha doit être modifié sur la surface et crée un nouveau <span class="notranslate">sprite</span> à partir de celui-ci, en l'assignant comme <span class="inline">sprite_index</span> de l'objet. Le code efface ensuite la surface, dessine la carte alpha <span class="notranslate">sprite</span> sur celle-ci et crée un autre nouveau <span class="notranslate">sprite</span>, en stockant son index dans une variable locale. Enfin, le nouveau <span class="notranslate">sprite</span> affecté à l'objet obtient son jeu d'alpha à partir de ce <span class="notranslate">sprite</span> temporaire, la surface est libérée et le <span class="notranslate">sprite</span> temporaire est supprimé.</p>
+  <p>Il y a une dernière chose à faire ici, c'est de supprimer de la mémoire le site <span class="notranslate">sprite</span> qui a été créé pour l'objet lorsqu'il n'est pas utilisé. Cela peut être fait dans l'<b>événement Destroy</b> ou dans l'<b>événement Room End</b> comme ceci :</p>
   <p class="code">sprite_delete(sprite_index);</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_set_cache_size.htm">sprite_set_cache_size</a></div>
+        <div style="float:left">Retour : <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div>
+        <div style="float:right">Suivant : <a href="sprite_set_cache_size.htm"><span class="notranslate">sprite_set_cache_size</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_set_alpha_from_sprite

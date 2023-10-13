@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Room Inheritance</title>
+  <title>Héritage des salles</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing the inheritance functionality of rooms" />
   <meta name="rh-index-keywords" content="Rooms - Inheritance" />
@@ -14,26 +14,26 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Room Inheritance</span></h1>
-  <p>An important feature of the room editor is <strong>inheritance</strong>. Inheritance means that you can create a &quot;parent&quot; room then from that create a &quot;child&quot; room which will inherit all the parent room&#39;s properties. This child room is essentially a <em>clone </em>of the parent, and everything in it <strong>is linked to the parent room</strong>. This means that if you change the view in the parent, or move a tile, or add instances, it will be reflected in the child room. Not only that, in the child room you can selectively switch off inheritance for specific layers, instances, assets or anything else that is required.</p>
-  <p>A room that has inherited properties will have the inherit buttons lit - as shown by the image below - and you can then use them to toggle inheritance on or off for the given layer or resource, etc...</p>
-  <p><img alt="Room Inherit Buttons" class="center" src="../../assets/Images/Asset_Editors/Editor_Room_Inheritance.png" />This can be a bit difficult to visualise at first, so let&#39;s look at an example: say you have a room with a city and a castle in the middle. The city and castle are drawn using different tile layers and you also have instances and some paths for NPCs to use to walk around. You want to have it so that in the game the castle is destroyed, but everything else in the city looks and behaves the same. You would create the initial room with everything as normal, then you&#39;d create a child room which inherits the parent room layers. In the child room you&#39;d switch <em>off </em>inheritance for the tile layer (or even individual tiles) for the castle area and them move/add/delete tiles to create the destroyed castle look. When a player enters that room, all the instances from the parent room and all the tiles etc... will remain exactly the same, except for those of the destroyed castle.</p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_important.hts"> </span> If you edit any inherited property it will automatically turn off inheritance in the section it belongs to without having to first toggle the inherit button.</p>
-  <p>To create room inheritance, you simply select the room you want to create a child from in the <a href="../../Introduction/The_Asset_Browser.htm">Asset Browser</a> and then right-click <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" />. This will open the room menu and there you can select <strong>Create Child Room </strong>to create a new child room. This will be created in the Asset Browser:</p>
-  <p><img alt="Room Inheritance" class="center" height="353" src="../../assets/Images/Asset_Editors/Editor_RoomInheritance.png" width="412" />To change the room order and/or inheritance you need to use the <a href="../../Settings/The_Room_Manager.htm">Room Manager</a>, which you can open using the menu in the top right of the Asset Browser. Here you can go to the <em>Inheritance </em>tab and then click <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> and drag any room onto any other room to have it become a child of that room (or drag a child room off a parent and break the inheritance).</p>
-  <p><img class="center" height="298" src="../../assets/Images/Asset_Editors/Editor_Room_Inheritance_Manager.png" width="281" />Note that, within a room, inheritance is multi-layered and you can check individual items, groups of items on a single layer, item properties, or whole rooms as inheriting, and you can also inherit from consecutive rooms (so room C inherits from room B, which in turn has inherited from Room A). If you create a base room with nothing in it except the view setup - for example - you can then create all further rooms as being its children and they will all inherit the view properties of the parent room. But you can go a step further and create another base room with the &quot;view&quot; room as its parent which holds the general <a class="glossterm" data-glossterm="GUI" href="#">GUI</a> instance and the controllers required in every game room. Now you can create child rooms from this and they will inherit both the controllers and GUIs from the parent room as well as the view setup from the parent of that room!</p>
-  <p>As you can hopefully see, inheritance is very powerful and you can use it to maintain a much cleaner room structure, speed up the workflow and generally optimise the time you spend making and designing rooms.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <h1>Héritage des salles</h1>
+  <p>L'<strong>héritage</strong> est une fonctionnalité importante de l'éditeur de pièces. L'héritage signifie que vous pouvez créer une pièce &quot;parent&quot; puis, à partir de celle-ci, créer une pièce &quot;enfant&quot; qui héritera de toutes les propriétés de la pièce parent. Cette pièce enfant est essentiellement un <em>clone </em>de la pièce parent, et tout ce qu'elle contient <strong>est lié à la pièce parent</strong>. Cela signifie que si vous modifiez la vue dans la pièce parent, si vous déplacez une tuile ou si vous ajoutez des instances, cela se reflétera dans la pièce enfant. De plus, dans la salle enfant, vous pouvez désactiver l'héritage de manière sélective pour des couches, des instances, des actifs spécifiques ou tout autre élément nécessaire.</p>
+  <p>Une pièce qui a des propriétés héritées aura les boutons d'héritage allumés - comme le montre l'image ci-dessous - et vous pouvez alors les utiliser pour activer ou désactiver l'héritage pour la couche ou la ressource donnée, etc...</p>
+  <p><img>Cela peut être un peu difficile à visualiser au début, alors prenons un exemple : disons que vous avez une pièce avec une ville et un château au milieu. La ville et le château sont dessinés à l'aide de différentes couches de tuiles et vous avez également des instances et des chemins que les PNJ peuvent utiliser pour se déplacer. Vous souhaitez que, dans le jeu, le château soit détruit, mais que tout le reste de la ville ait le même aspect et le même comportement. Vous créez la pièce initiale avec tout ce qui est normal, puis vous créez une pièce enfant qui hérite des couches de la pièce parent. Dans la pièce enfant, vous <em>désactivez l'</em>héritage de la couche de tuiles (ou même des tuiles individuelles) pour la zone du château et vous déplacez/ajoutez/supprimez des tuiles pour créer l'aspect de château détruit. Lorsqu'un joueur entre dans cette pièce, toutes les instances de la pièce parent et toutes les tuiles etc... resteront exactement les mêmes, à l'exception de celles du château détruit.</p>
+  <p class="note"><strong>IMPORTANT !</strong> Si vous modifiez une propriété héritée, elle désactivera automatiquement l'héritage dans la section à laquelle elle appartient sans avoir à activer le bouton d'héritage.</p>
+  <p>Pour créer un héritage de pièce, il suffit de sélectionner la pièce dont vous voulez créer un enfant dans le <a href="../../Introduction/The_Asset_Browser.htm">navigateur d'actifs</a>, puis de cliquer à droite sur <img>. Le menu de la pièce s'ouvre alors et vous pouvez sélectionner <strong>Créer une pièce enfant </strong>pour créer une nouvelle pièce enfant. Celle-ci sera créée dans le navigateur d'actifs :</p>
+  <p><img>Pour modifier l'ordre des pièces et/ou l'héritage, vous devez utiliser le <a href="../../Settings/The_Room_Manager.htm">gestionnaire de pièces</a>, que vous pouvez ouvrir en utilisant le menu en haut à droite du navigateur d'actifs. Dans cet onglet, vous pouvez accéder à l'onglet <em>Héritage </em>, puis cliquer sur <img> et faire glisser n'importe quelle pièce sur n'importe quelle autre pièce pour qu'elle devienne l'enfant de cette pièce (ou faire glisser une pièce enfant à partir d'une pièce parent et rompre l'héritage).</p>
+  <p><img>Notez qu'au sein d'une pièce, l'héritage se fait sur plusieurs niveaux et vous pouvez vérifier que des éléments individuels, des groupes d'éléments sur une seule couche, des propriétés d'éléments ou des pièces entières héritent, et vous pouvez également hériter de pièces consécutives (ainsi, la pièce C hérite de la pièce B, qui à son tour a hérité de la pièce A). Si vous créez une pièce de base qui ne contient rien d'autre que la configuration de la vue - par exemple - vous pouvez ensuite créer toutes les autres pièces comme étant ses enfants et elles hériteront toutes des propriétés de vue de la pièce mère. Mais vous pouvez aller un peu plus loin et créer une autre pièce de base avec la pièce &quot;vue&quot; comme parent, qui contient l'instance générale de l <a class="glossterm" data-glossterm="GUI" href="#">'interface graphique</a> et les contrôleurs requis dans chaque pièce de jeu. Vous pouvez maintenant créer des pièces enfant à partir de cette pièce et elles hériteront à la fois des contrôleurs et des interfaces graphiques de la pièce parent ainsi que de la configuration de la vue du parent de cette pièce !</p>
+  <p>Comme vous pouvez le constater, l'héritage est très puissant et vous pouvez l'utiliser pour maintenir une structure de pièce beaucoup plus propre, accélérer le flux de travail et, de manière générale, optimiser le temps que vous passez à créer et concevoir des pièces.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Rooms.htm">The Room Editor</a></div>
-        <div style="float:right">Next: <a href="Filters_and_Effects.htm">Filters and Effects</a></div>
+        <div style="float:left">Retour : <a href="../Rooms.htm">L'éditeur de pièces</a></div>
+        <div style="float:right">Suivant : <a href="Filters_and_Effects.htm">Filtres et effets</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Room Inheritance

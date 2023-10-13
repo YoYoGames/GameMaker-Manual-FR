@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>achievement_post</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_post" />
+  <meta name="rh-index-keywords" content="achievement_post" />
+  <meta name="search-keywords" content="achievement_post" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>achievement_post</h1>
+  <p>Vous pouvez utiliser cette fonction pour envoyer vos réalisations au service de classement et de réalisation choisi. Sur <span class="notranslate">Android</span>, vous aurez besoin de l'ID de la réalisation sous forme de chaîne (il s'agit de l'ID unique de la réalisation qui a été attribué lorsque vous avez configuré la réalisation),
+    Sur toutes les autres plates-formes, vous devez fournir le nom de la réalisation sous la forme d'une chaîne de caractères, puis indiquer le pourcentage que vous avez atteint pour obtenir la réalisation (0 - aucun, 100 - terminé). La fonction déclenchera un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">événement social asynchrone</a> dans lequel la carte DS renvoyée aura les clés/éléments suivants <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> retournée contiendra les paires clé/valeur suivantes :</p>
+  <ul class="colour">
+    <li>&quot;<b>Type</b>&quot; - Il s'agit du type d'événement qui a été déclenché, qui sera la chaîne &quot;<tt>achievement_post_result</tt>&quot; pour cette fonction.</li>
+    <li>&quot;<b>id</b>&quot; - Il s'agit de l'ID de l'événement, et, pour cette fonction, elle renverra une constante <span class="notranslate">GML</span> <tt>GooglePlayServices_EVENT_ID_POST_ACHIEVEMENT</tt>.</li>
+    <li>&quot;<b>achievement_id</b>&quot; - Il s'agit de l'ID unique de la réalisation qui a été mise à jour.</li>
+    <li>&quot;<b>status</b>&quot; - Ce sera 1 si la réalisation a été mise à jour avec succès, ou 0 si la demande a échoué.</li>
+  </ul>
+  <p> </p>
+  <h4><b>Syntaxe :</b></h4>
+  <p class="code">achievement_post(achievement, percent)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">achievement</span></td>
+        <td>Le nom/ID de la réalisation.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">percent</span></td>
+        <td>Le pourcentage de la réalisation effectuée.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if achievement_available()<br/>     {<br/>     achievement_post(global.Achievement[0], 100);<br/> }
+  </p>
+  <p>Le code ci-dessus vérifie si le service de classement et de réussite choisi est disponible et, si c'est le cas, il affiche une réussite.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Achievements_And_Leaderboards.htm">Réalisations et classements</a></div>
+        <div style="float:right">Suivant : <a href="achievement_post_score.htm"><span class="notranslate">achievement_post_score</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_post
+-->
+  <!-- TAGS
+achievement_post
+-->
+</body>
+</html>

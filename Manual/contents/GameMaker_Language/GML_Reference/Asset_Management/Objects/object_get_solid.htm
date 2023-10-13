@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>object_get_solid</title>
+  <title>objet_get_solid</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function object_get_solid" />
   <meta name="rh-index-keywords" content="object_get_solid" />
@@ -15,44 +15,44 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>object_get_solid</h1>
-  <p>This function will tell you whether the object you are checking has been flagged as &quot;solid&quot; or not. A solid object generates a special collision event when using the traditional collision system (ie: the physics world is off). Please note that this is not an instance function! So, you can have a solid object and a normal instance of the same object and vice-versa. You can set an individual instances solid flag using the <a href="../Instances/Instance_Variables/solid.htm"><span class="inline">solid</span></a> instance variable.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>objet_get_solid</h1>
+  <p>Cette fonction vous indiquera si l'objet que vous vérifiez a été marqué comme &quot;solide&quot; ou non. Un objet solide génère un événement de collision spécial lorsque vous utilisez le système de collision traditionnel (c'est-à-dire que le monde physique est désactivé). Veuillez noter qu'il ne s'agit pas d'une fonction d'instance ! Ainsi, vous pouvez avoir un objet solide et une instance normale du même objet et vice-versa. Vous pouvez définir l'indicateur de solidité d'une instance individuelle en utilisant la variable <a href="../Instances/Instance_Variables/solid.htm"><span class="inline">solid</span></a> d'une instance à l'aide d'une variable d'instance.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">object_get_solid(obj);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>obj</td><td><span data-keyref="Type_Asset_Object"></span></td>
-        <td>The index of the object to check.</td>
+        <td><span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td>
+        <td><span class="notranslate">The index of the object to check.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if (!solid) &amp;&amp; (object_get_solid(object_index))<br />
     {<br />
         solid = true;<br />
     }</p>
-  <p>The above code will check the instance running it to see if it is solid or not as well as check the object index of the instance to see if it is flagged as solid or not. If the instance is <i>not</i> solid yet the object index is flagged as solid, it will set &quot;solid&quot; to true for that instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifiera l'instance en cours d'exécution pour voir si elle est solide ou non, ainsi que l'index de l'objet de l'instance pour voir s'il est marqué comme solide ou non. Si l'instance <i>n'</i> est <i>pas</i> solide mais que l'index de l'objet est marqué comme solide, il mettra &quot;solid&quot; à true pour cette instance.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Objects.htm">Objects</a></div>
-        <div style="float:right">Next: <a href="object_get_sprite.htm">object_get_sprite</a></div>
+        <div style="float:left">Retour : <a href="Objects.htm">Objets</a></div>
+        <div style="float:right">Suivant : <a href="object_get_sprite.htm"><span class="notranslate">object_get_sprite</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 object_get_solid

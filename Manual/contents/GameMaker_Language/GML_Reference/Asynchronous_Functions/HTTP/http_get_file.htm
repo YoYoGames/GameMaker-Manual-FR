@@ -6,7 +6,7 @@
   <title>http_get_file</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for http_get_file" />
   <meta name="rh-index-keywords" content="http_get_file" />
@@ -15,51 +15,51 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>http_get_file</h1>
-  <p>With this function, you can connect to the specified URL in order to retrieve information in the form of a file. As this is an asynchronous function, <span data-keyref="GameMaker Name">GameMaker</span> will not block while waiting for a reply, but will keep on running unless it gets callback information. This information will be in the form of a string and will trigger an <b>Async Event</b> in any instance that has one defined in their object properties.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>You should be aware that due to XSS protection in browsers, requests to and attempts to load resources from across domains are blocked and may appear to return blank results. Please see the part on <a href="HTTP.htm">Cross Domain Issues</a> for further details.</p>
-  <p>This event will generate a &quot;call back&quot; which is picked up by any <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">HTTP Events</a>, in which case it will generate a <a href="../../Data_Structures/DS_Maps/DS_Maps.htm"><span class="inline">DS Map</span></a> (more commonly known as a &quot;dictionary&quot;) that is exclusive to this event and is stored in the special variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>async_load</b></a>. This DS map will contain different values depending on the data being returned, ie: the event will trigger multiple times as each packet of data is received so that you can show a progress bar, for example. The general structure for the DS map will be as follows:</p>
+  <p>Avec cette fonction, vous pouvez vous connecter à l'URL spécifiée afin de récupérer des informations sous la forme d'un fichier. Comme il s'agit d'une fonction asynchrone, <span data-keyref="GameMaker Name">GameMaker</span> ne bloquera pas en attendant une réponse, mais continuera à fonctionner jusqu'à ce qu'il reçoive une information de rappel. Ces informations se présenteront sous la forme d'une chaîne de caractères et déclencheront un <b>événement asynchrone</b> dans toutes les instances qui en ont défini un dans leurs propriétés d'objet.</p>
+  <p class="note"><b><span class="note">NOTE</span> </b>Vous devez savoir qu'en raison de la protection XSS des navigateurs, les demandes et les tentatives de chargement de ressources provenant d'autres domaines sont bloquées et peuvent donner lieu à des résultats vides. Veuillez consulter la partie sur les <a href="HTTP.htm">problèmes inter-domaines</a> pour plus de détails.</p>
+  <p>Cet événement génère un &quot;call back&quot; qui est capté par tout <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">événement HTTP</a>, auquel cas il génère un fichier <a href="../../Data_Structures/DS_Maps/DS_Maps.htm"><span class="inline">DS Map</span></a> (plus communément appelé &quot;dictionnaire&quot;) qui est exclusif à cet événement et est stocké dans la variable spéciale <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>async_load</b></a>. Cette carte DS contiendra différentes valeurs en fonction des données renvoyées, c'est-à-dire que l'événement se déclenchera plusieurs fois à la réception de chaque paquet de données, ce qui vous permettra d'afficher une barre de progression, par exemple. La structure générale de la carte DS sera la suivante :</p>
   <ul class="colour">
-    <li><b>id: </b>The ID which was returned from the command. If you fire off a series of <span class="inline">http_</span> requests then you need to know which one you are getting the reply to, and so you would use this value to compare to the value you stored when you originally sent the request to find the right one.</li>
-    <li><b>status: </b>Returns a value of less than 0 for an error, 0 for complete and 1 for receiving packets (see below for more details).</li>
-    <li><b>result: </b>The data received (string only).</li>
-    <li><b>url: </b>The complete URL you requested.</li>
-    <li><b>http_status: </b>The raw http status code (if available). This returns the standard web status code for most browsers, eg: 304 for &quot;Not Modified&quot; or 204 for &quot;No Content&quot;, etc...</li>
+    <li><b>id : </b>L'ID qui a été renvoyé par la commande. Si vous envoyez une série de requêtes à l'adresse <span class="inline">http_</span>, vous devez savoir à laquelle vous recevez une réponse. Vous pouvez donc utiliser cette valeur pour la comparer à celle que vous avez enregistrée lors de l'envoi initial de la requête afin de trouver la bonne.</li>
+    <li><b>status : </b>Renvoie une valeur inférieure à 0 pour une erreur, 0 pour complet et 1 pour recevoir des paquets (voir ci-dessous pour plus de détails).</li>
+    <li><b>résultat : </b>Les données reçues (chaîne uniquement).</li>
+    <li><b>url : </b>L'URL complète que vous avez demandée.</li>
+    <li><b>http_status : </b>Le code d'état http brut (si disponible). Cela renvoie le code d'état standard pour la plupart des navigateurs, par exemple : 304 pour &quot;Not Modified&quot; ou 204 pour &quot;No Content&quot;, etc...</li>
   </ul>
-  <p>If there are multiple packets being returned to your game, the callback &quot;status&quot; key will return 1, in which case the DS map will have the following additional keys:</p>
+  <p>Si plusieurs paquets sont renvoyés à votre jeu, la clé de rappel &quot;status&quot; renverra 1, auquel cas la carte DS aura les clés supplémentaires suivantes :</p>
   <ul class="colour">
-    <li><b>&quot;contentLength&quot;: </b>This is the size of file that the web server has said you should expect to receive (may be -1 if the server does not return this data).</li>
-    <li><b>&quot;sizeDownloaded&quot;: </b>The size of the data that has already been downloaded.</li>
+    <li><b>&quot;contentLength&quot; : </b>Il s'agit de la taille du fichier que le serveur web a dit que vous deviez vous attendre à recevoir (peut être -1 si le serveur ne renvoie pas ces données).</li>
+    <li><b>&quot;sizeDownloaded&quot; : </b>La taille des données qui ont déjà été téléchargées.</li>
   </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">http_get_file(url, local_target);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>url</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The web address of the server that you wish to get file from</td>
+        <td><span class="notranslate">url</span></td>
+        <td><span data-keyref="Type_String">Chaîne de caractères</span></td>
+        <td><span class="notranslate">The web address of the server that you wish to get file from</span></td>
       </tr>
       <tr>
-        <td>local_target</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The local storage path to save the file to</td>
+        <td><span class="notranslate">local_target</span></td>
+        <td><span data-keyref="Type_String">Chaîne de caractères</span></td>
+        <td><span class="notranslate">The local storage path to save the file to</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p>The <span class="inline">http_get_file()</span> function can be called from any event, and since it is asynchronous the callback can be almost instantaneous or could take several seconds. Calling the function is simple and would look something like this:</p>
+  <p> </p>
+  <h4>Exemple étendu :</h4>
+  <p>La fonction <span class="inline">http_get_file()</span> peut être appelée à partir de n'importe quel événement, et comme elle est asynchrone, le rappel peut être presque instantané ou prendre plusieurs secondes. L'appel de la fonction est simple et ressemble à quelque chose comme ceci :</p>
   <p class="code">file = http_get_file(&quot;http://www.macsweeneygames.com/downloads/upgrade.zip&quot;, &quot;\Downloads\Upgrade.zip&quot;);</p>
-  <p>The above code will request a file from the given URL and set it to be downloaded to the local storage area (as specified in the HTML5 Game Options), in a directory &quot;Downloads&quot; with the given file name (this does not have to be the same as the source file name, but should use the same file extension). The <span class="inline">async_load</span> map index will be stored in the variable &quot;file&quot; so you can check for the correct callback in the Asynchronous Event, and if the save directory does not exist, it will be created. The Asynchronous Event triggered would be the <b>HTTP</b> sub-event, and in that event you would have something like the following:</p>
+  <p>Le code ci-dessus demandera un fichier à partir de l'URL donnée et le configurera pour qu'il soit téléchargé dans la zone de stockage locale (comme spécifié dans les options du jeu HTML5), dans un répertoire &quot;Downloads&quot; avec le nom de fichier donné (il n'est pas nécessaire que ce soit le même que le nom du fichier source, mais il doit utiliser la même extension de fichier). L'index de la carte <span class="inline">async_load</span> sera stocké dans la variable &quot;file&quot; afin que vous puissiez vérifier le callback correct dans l'événement asynchrone, et si le répertoire de sauvegarde n'existe pas, il sera créé. L'événement asynchrone déclenché serait le sous-événement <b>HTTP</b>, et dans cet événement, vous auriez quelque chose comme ce qui suit :</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == file<br />
     {<br />
         var status = ds_map_find_value(async_load, &quot;status&quot;);<br />
@@ -73,18 +73,18 @@
             }<br />
         }<br />
     }</p>
-  <p>The above code will first check the &quot;id&quot; of the ds_map that has been created, then check the status of the callback. If the value is equal to 0 (signalling success) the result from the callback will then be used along with the <a href="../../File_Handling/Encoding_And_Hashing/zip_unzip.htm"><span class="inline">zip_unzip()</span></a> function to unzip the downloaded file to the given directory. If the unzip succeeds a global variable is set to true.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus va d'abord vérifier l'&quot;id&quot; du ds_map qui a été créé, puis vérifier le statut de la callback. Si la valeur est égale à 0 (signalant le succès), le résultat de la callback sera alors utilisé avec la fonction <a href="../../File_Handling/Encoding_And_Hashing/zip_unzip.htm"><span class="inline">zip_unzip()</span></a> pour décompresser le fichier téléchargé dans le répertoire donné. Si le dézippage réussit, une variable globale est définie comme vraie.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="HTTP.htm">HTTP</a></div>
-        <div style="float:right">Next: <a href="http_post_string.htm">http_post_string</a></div>
+        <div style="float:left">Retour : <a href="HTTP.htm">HTTP</a></div>
+        <div style="float:right">Suivant : <a href="http_post_string.htm"><span class="notranslate">http_post_string</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 http_get_file

@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Set Global Variable</title>
-  <meta name="generator" content="Adobe RoboHelp 2020"/>
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Section detailing Set Global Variable"/>
-  <meta name="rh-index-keywords" content="GML Visual Action - Set Global Variable"/>
-  <meta name="search-keywords" content="Set Global Variable"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Définir une variable globale</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <script src="../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Section detailing Set Global Variable" />
+  <meta name="rh-index-keywords" content="GML Visual Action - Set Global Variable" />
+  <meta name="search-keywords" content="Set Global Variable" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Global Variable Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Set_Global.png"/> Set Global Variable</h1>
-  <p>This action is used to either assign a global variable a value (creating it in the process) or for changing the value of an existing global variable. Global variables are variables that &quot;belong&quot; to no specific instance, but rather the whole
-    project, and as such can be accessed and changed by any instance, script or code. For more advanced information on global variables please see <a href="../../../GameMaker_Language/GML_Overview/Variables/Global_Variables.htm">here</a>.</p>
-  <p>You give the name of the global variable and then the value, which can be added <i>relative</i> to the original value if required. If you give a new variable name (ie: a variable that has never been assigned previously in the entire game) then this
-    will create the new global variable and assign it the value you give, while if you give the name of an existing global variable, it will simply change the value to the new one. Note that checking <b>Relative</b> will add the value to the existing
-    global variable value (use a negative number to subtract) and you can also use <a class="glossterm" data-glossterm="expression" href="#">expression</a><span class="glossextra">s</span> and variables created previously as the value.</p>
-  <p>It is worth noting that when we talk about &quot;values&quot;, we don&#39;t just mean numeric values, as a variable can be a string, a pointer, a resource ID or anything else that a function can return or use. In the case of a string, checking <b>Relative</b>    will concatenate the value with whatever the variable previously held, so if your variable was &quot;Hello&quot; and you assign &quot; World&quot; to it using the relative check, the final variable value will be &quot;Hello World&quot;. Care must
-    be taken, however, to ensure that the variable values are both of the same <a href="../../../GameMaker_Language/GML_Overview/Data_Types.htm">data type</a>, as trying to add, for example, an integer and a string, will result in a compiler error.</p>
-  <p>You can also add additional variables in the same action by clicking the plus icon<span> <img src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png"/></span> beside the action, and giving another global variable
-    name and value. For more advanced information on variables please see the section on <a href="../../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">Variables And Variable Scope</a>.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Global Variable Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Set_Global.png"/></p>
-  <h4>Arguments:</h4>
+  <h1><img> Définir une variable globale</h1>
+  <p>Cette action est utilisée soit pour attribuer une valeur à une variable globale (en la créant au passage), soit pour modifier la valeur d'une variable globale existante. Les variables globales sont des variables qui &quot;n'appartiennent&quot; à aucune instance spécifique, mais plutôt à l'ensemble du projet.
+    projet, et en tant que telles peuvent être accédées et modifiées par n'importe quelle instance, script ou code. Pour des informations plus avancées sur les variables globales, veuillez consulter <a href="../../../GameMaker_Language/GML_Overview/Variables/Global_Variables.htm">ici</a>.</p>
+  <p>Vous donnez le nom de la variable globale, puis la valeur, qui peut être ajoutée <i>par rapport à</i> la valeur d'origine si nécessaire. Si vous donnez le nom d'une nouvelle variable (c'est-à-dire une variable qui n'a jamais été assignée auparavant dans tout le jeu), cette fonction créera la nouvelle variable globale et lui attribuera la valeur que vous avez donnée.
+    créera la nouvelle variable globale et lui attribuera la valeur que vous donnez, tandis que si vous donnez le nom d'une variable globale existante, il changera simplement la valeur pour la nouvelle. Notez que si vous cochez la case <b>Relative</b>, la valeur sera ajoutée à la valeur de la variable globale existante (utilisez un nombre négatif).
+    existante (utilisez un nombre négatif pour la soustraire) et vous pouvez également utiliser des<span class="glossextra">expressions</span> et des variables créées précédemment comme valeur.</p>
+  <p>Il convient de noter que lorsque nous parlons de &quot;valeurs&quot;, nous ne parlons pas uniquement de valeurs numériques, car une variable peut être une chaîne de caractères, un pointeur, un ID de ressource ou tout autre élément qu'une fonction peut retourner ou utiliser. Dans le cas d'une chaîne de caractères, la vérification <b>relative</b> concaténera la valeur avec ce que la variable contenait précédemment, donc si votre variable était &quot;Hello&quot; et que vous lui attribuez &quot;World&quot; en utilisant la vérification relative, la valeur finale de la variable sera &quot;Hello World&quot;. Il faut cependant veiller
+    Il faut cependant veiller à ce que les valeurs de la variable soient toutes deux du même <a href="../../../GameMaker_Language/GML_Overview/Data_Types.htm">type de données</a>, car si vous essayez d'ajouter, par exemple, un entier et une chaîne de caractères, une erreur de compilation se produira.</p>
+  <p>Vous pouvez également ajouter des variables supplémentaires dans la même action en cliquant sur l'icône plus<span> <img></span> à côté de l'action, et en donnant une autre variable globale
+    nom et la valeur. Pour des informations plus avancées sur les variables, veuillez consulter la section sur les <a href="../../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">variables et leur portée</a>.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Set Global Variable Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Set_Global.png"/></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Name</td>
-        <td>The name of the new global variable to create, or the name of an existing global variable to change.</td>
+        <td><span class="notranslate">Name</span></td>
+        <td>Le nom de la nouvelle variable globale à créer, ou le nom d'une variable globale existante à modifier.</td>
       </tr>
       <tr>
-        <td>Value</td>
-        <td>The value that the global variable should hold.</td>
+        <td><span class="notranslate">Value</span></td>
+        <td>La valeur que la variable globale doit contenir.</td>
       </tr>
       <tr>
-        <td>Relative</td>
-        <td>Check this to set the value relative to the previous one.</td>
+        <td><span class="notranslate">Relative</span></td>
+        <td>Cochez cette case pour définir la valeur relative à la valeur précédente.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set Global Variable Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Set_Global.png"/>The above action block code checks for a collision between the calling instance and the object
-    &quot;<span class="inline">obj_player</span>&quot;, and if one is found 1 is subtracted from the global variable &quot;<span class="inline">player_hp</span>&quot; and the global variable &quot;<span class="inline">player_score</span>&quot; is set
-    to 0.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus vérifie la présence d'une collision entre l'instance appelante et l'objet
+    &quot;<span class="inline">obj_player</span>&quot;, et s'il en trouve une, 1 est soustrait de la variable globale &quot;<span class="inline">player_hp</span>&quot; et la variable globale &quot;<span class="inline">player_score</span>&quot; est mise à 0.
+    à 0.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Common_Actions_Library.htm">Common Actions</a></div>
-        <div style="float:right">Next: <a href="Get_Global_Variable.htm">Get Global Variable</a></div>
+        <div style="float:left">Retour : <a href="Common_Actions_Library.htm">Actions communes</a></div>
+        <div style="float:right">Suivant : <a href="Get_Global_Variable.htm">Obtenir une variable globale</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Global Variable

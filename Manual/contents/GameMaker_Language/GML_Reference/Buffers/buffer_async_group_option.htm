@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_async_group_option</title>
+  <title>option_groupe_asynchrone_tampon</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_async_group_option" />
   <meta name="rh-index-keywords" content="buffer_async_group_option" />
@@ -14,60 +14,60 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_async_group_option</h1>
-  <p>With this function you can set some platform specific options for the buffer group being saved/loaded. The options available are as follows:</p>
+  <h1>option_groupe_asynchrone_tampon</h1>
+  <p>Cette fonction permet de définir certaines options spécifiques à la plate-forme pour le groupe <span class="notranslate">buffer</span> en cours de sauvegarde/chargement. Les options disponibles sont les suivantes :</p>
   <ul class="colour">
-    <li>&quot;<b>subtitle</b>&quot; or &quot;<b>slottitle</b>&quot; - The value for this option would be a string, which will be shown to the user when managing their save data in the OS. This is only important when saving data, not when loading again.</li>
-    <li>&quot;<b>showdialog</b>&quot; - The value for this option is a boolean <span class="inline">true</span> or <span class="inline">false</span>. If set to <span class="inline">true</span>, when you save <i>or</i> load <span data-keyref="GameMaker Name">GameMaker</span> will show the System UI, otherwise it will do a quicksave/quickload with no UI shown. You normally only need this if you&#39;re supporting multiple save slots to allow the user to pick a slot, but if you just support one slot per user, set this to <span class="inline">false</span>.</li>
-    <li>&quot;<b>savepadindex</b>&quot; - For this option you would specify the <i>pad index</i> of the player who is saving <i>or</i> loading and the system will write data to and read data from this player&#39;s save folder.</li>
-    <li>&quot;<b>saveslotsize</b>&quot; - This option requires that you specify the actual size in bytes you want to save (so you can do a <a href="buffer_seek.htm"><span class="inline">buffer_seek()</span></a> and <a href="buffer_tell.htm"><span class="inline">buffer_tell()</span></a> to get that, for example). Note that it is not obligatory to supply this value as all saves are pre-assigned a minimum space, which usually varies with the target platform.</li>
-    <li>These are some options for PlayStation only. Please refer to <a href="https://help.yoyogames.com/hc/en-us/articles/216756278">this Helpdesk article</a> for information (you&#39;ll need to be logged in with your developer access account).</li>
+    <li>&quot;<b>Subtitle</b>&quot; ou &quot;<b>slottitle</b>&quot; - La valeur de cette option est une chaîne de caractères qui sera affichée à l'utilisateur lorsqu'il gérera ses données de sauvegarde dans l'OS. Ceci n'est important que lors de la sauvegarde des données, pas lors du rechargement.</li>
+    <li>&quot;<b>showdialog</b>&quot; - La valeur de cette option est un booléen <span class="inline">true</span> ou <span class="inline">false</span>. Si elle est réglée sur <span class="inline">true</span>, <span data-keyref="GameMaker Name">GameMaker</span> affichera l'interface utilisateur du système lors de la sauvegarde <i>ou du</i> chargement, sinon il effectuera un quicksave/quickload sans interface utilisateur. Normalement, vous n'avez besoin de cette option que si vous prenez en charge plusieurs emplacements de sauvegarde pour permettre à l'utilisateur de choisir un emplacement, mais si vous ne prenez en charge qu'un seul emplacement par utilisateur, définissez cette option sur <span class="inline">false</span>.</li>
+    <li>&quot;<b>savepadindex</b>&quot; - Pour cette option, vous devez spécifier l'<i>index du pad</i> du joueur qui sauvegarde <i>ou</i> charge et le système écrira et lira des données dans le dossier de sauvegarde de ce joueur.</li>
+    <li>&quot;<b>saveslotsize</b>&quot; - Cette option nécessite que vous spécifiiez la taille réelle en octets que vous souhaitez sauvegarder (afin que vous puissiez faire un <a href="buffer_seek.htm"><span class="inline">buffer_seek()</span></a> et <a href="buffer_tell.htm"><span class="inline">buffer_tell()</span></a> pour l'obtenir, par exemple). Notez qu'il n'est pas obligatoire de fournir cette valeur car toutes les sauvegardes sont pré-assignées à un espace minimum, qui varie généralement avec la plate-forme cible.</li>
+    <li>&quot;<strong>ps_create_backup</strong>&quot; - <em>(PlayStation uniquement)</em> - Définir cette option à <span class="inline">true</span> permet de s'assurer que les données de sauvegarde sont sauvegardées lorsque le répertoire de sauvegarde est démonté (c'est-à-dire lorsque la fonction <span class="inline"><a href="buffer_async_group_end.htm">buffer_async_group_end()</a></span> est appelée). Consultez la documentation de la console pour plus d'informations.</li>
   </ul>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"> </span> This function is only valid for PlayStation, Xbox and Nintendo Switch targets. On all the other targets it will do nothing.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p class="note"><b>IMPORTANT !</b> Cette fonction n'est actuellement valable que pour les modules cibles PSVita, PS4 et <span class="notranslate">XBox One</span>. Sur toutes les autres cibles, elle ne fera rien.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">buffer_async_group_option(option, value);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>option</td>
-        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The option to set.</td>
+        <td><span class="notranslate">option</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Chaîne de caractères</a></span></td>
+        <td><span class="notranslate">The option to set.</span></td>
       </tr>
       <tr>
-        <td>value</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> or <span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The value to set (can be a real or string, depending on the option).</td>
+        <td><span class="notranslate">value</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span> ou <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Chaîne de caractères</a></span></td>
+        <td><span class="notranslate">The value to set (can be a real or string, depending on the option).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">buffer_async_group_begin(&quot;save_folder_name&quot;);<br />
     buffer_async_group_option(&quot;showdialog&quot;, false);<br />
     buffer_async_group_option(&quot;slottitle&quot;, &quot;Catch The Haggis Save&quot;);<br />
     buffer_async_group_option(&quot;subtitle&quot;, &quot;All your haggis are saved here!&quot;);<br />
     save = buffer_save_async(buff, &quot;Player_Save.sav&quot;, 0, 16384);<br />
     buffer_async_group_end();</p>
-  <p>The above code starts a buffer group then sets the group options before it sets 4 files to save asynchronously. The group definition is then ended (at which point saving will begin).</p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus démarre un groupe <span class="notranslate">buffer</span> puis définit les options du groupe avant de définir 4 fichiers à sauvegarder de manière asynchrone. La définition du groupe est ensuite terminée (à ce moment-là, la sauvegarde commence).</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_async_group_end.htm">buffer_async_group_end</a></div>
+        <div style="float:left">Retour : <a href="Buffers.htm">Tampons</a></div>
+        <div style="float:right">Suivant : <a href="buffer_async_group_end.htm"><span class="notranslate">buffer_async_group_end</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_async_group_option

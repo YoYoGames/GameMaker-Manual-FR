@@ -6,7 +6,7 @@
   <title>camera_set_update_script</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for camera_set_update_script" />
   <meta name="rh-index-keywords" content="camera_set_update_script" />
@@ -14,59 +14,60 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">camera_set_update_script</span></h1>
-  <p>This function can be used to set a <a href="../../../GML_Overview/Script_Functions.htm">script function</a> that will be called every game frame that the camera is assigned to a visible and active view port. You give the unique camera ID value (as returned by the different <span class="inline3_func"><a data-xref="{title}" href="camera_create.htm">camera_create</a></span> functions) and the ID of the function to be called. The order in which functions attached to cameras and the actual rendering of the camera view is as follows:</p>
+  <h1>camera_set_update_script</h1>
+  <p>Cette fonction peut être utilisée pour définir une <a href="../../../GML_Overview/Script_Functions.htm">fonction de script</a> qui sera appelée à chaque image de jeu où la caméra est affectée à un port de vue visible et actif. Vous donnez la valeur unique de l'ID de la caméra (telle que renvoyée par les différentes fonctions de <span class="inline">camera_create</span> ) et l'ID de la fonction à appeler. L'ordre dans lequel les fonctions attachées aux caméras et le rendu réel de la vue de la caméra sont les suivants :</p>
   <ul class="colour">
-    <li>The cameras for all visible and active view ports have their <b>update function </b>called</li>
-    <li>Then for each view:
+    <li>Les caméras de tous les ports de vue visibles et actifs ont leur <b>fonction de mise à jour </b>appelée</li>
+    <li>Ensuite, pour chaque vue :
       <ul>
-        <li>The <b>begin function </b> for the camera for that view is called</li>
-        <li>The draw events are executed for that view</li>
-        <li>The <b>end function </b>for the camera is called</li>
+        <li>La <b>fonction de démarrage </b> de la caméra pour cette vue est appelée.</li>
+        <li>Les événements de dessin sont exécutés pour cette vue</li>
+        <li>La <b>fonction de fin de </b>la caméra est appelée</li>
       </ul>
     </li>
-    <li>Move to the next active visible view and repeat...</li>
+    <li>Passez à la vue active visible suivante et répétez...</li>
   </ul>
-  <p>Applying a custom update function to a camera overrides its default update behaviour. For example, if you set your camera to follow an object (say, <span class="inline2">obj_player</span>) when calling <span class="inline3_func"><a data-xref="{title}" href="camera_create_view.htm">camera_create_view</a></span>, or set it so in the Room Properties, it will stop following that object once a custom update script is set.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">camera_set_update_script</span>(camera_id, script);</p>
+  <p>L'application d'une fonction de mise à jour personnalisée à une caméra remplace son comportement de mise à jour par défaut. Par exemple, si vous avez configuré votre caméra pour qu'elle suive un objet (par exemple, <span class="inline2">obj_player</span>) lorsque vous appelez <span class="inline"><a href="camera_create_view.htm">camera_create_view()</a></span>, ou si vous l'avez configuré ainsi dans les propriétés de la pièce, elle cessera de suivre cet objet dès qu'un script de mise à jour personnalisé sera défini.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">camera_set_update_script(camera_id, script)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>camera_id</td>
-        <td><span data-keyref="Type_ID_Camera"><a href="../../../../../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/camera_create.htm" target="_blank">Camera ID</a></span></td>
-        <td>The unique camera ID value returned when you created the camera.</td>
+        <td><span class="notranslate">camera_id</span></td>
+        <td><span data-keyref="Type_ID_Camera">ID de la caméra</span></td>
+        <td><span class="notranslate">The unique camera ID value returned when you created the camera.</span></td>
       </tr>
       <tr>
-        <td>script</td>
-        <td><span data-keyref="Type_Function_Script"><a href="../../../../../GameMaker_Language/GML_Overview/Script_Functions.htm" target="_blank">Script Function</a></span></td>
-        <td>The script function to run each game frame (or -1 for no update script)</td>
+        <td><span class="notranslate">script</span></td>
+        <td><span data-keyref="Type_Function_Script">Fonction de script</span></td>
+        <td><span class="notranslate">The script function to run each game frame</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code"><span data-field="title" data-format="default">camera_set_update_script</span>(view_camera[0], updateCamera);</p>
-  <p>The above code sets the update function for the camera assigned to view port [0].</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">camera_set_update_script(view_camera[0], updateCamera);</p>
+  <p>Le code ci-dessus définit la fonction de mise à jour pour la caméra affectée au port de vue [0].</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Cameras_And_View_Ports.htm">Cameras And View Ports</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="camera_set_begin_script.htm">camera_set_begin_script</a></div>
+        <div style="float:left">Retour : <a href="Cameras_And_View_Ports.htm">Caméras et ports de vue</a></div>
+        <div style="float:right">Suivant : <a href="camera_set_begin_script.htm"><span class="notranslate">camera_set_begin_script</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 camera_set_update_script
