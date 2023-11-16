@@ -6,7 +6,7 @@
   <title>mp_grid_add_cell</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="This page outlines the function mp_grid_add_cell" />
   <meta name="rh-index-keywords" content="mp_grid_add_cell" />
@@ -15,40 +15,40 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>mp_grid_add_cell</h1>
-  <p>With this function we can mark individual cells within the given MP grid as being &quot;forbidden&quot; meaning that the path finding functions will not ever cross them. Now, normally you work in x/y <i>room</i> coordinates, and not in MP grid <i>cell</i> coordinates. So let&#39;s consider the following image which shows how the two can correlate:</p>
-  <p><img alt="Add cell example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/mp_grid_add_cell_image.png" />As you can see the mp_grid is numbered as a series of cells (starting at 0,0 in the upper left corner), and when you place this grid over the room there is a direct correlation between the room coordinates (which also start at 0,0 in the top left) and the cells within the grid. In the image you can see that an instance at the position 260,130 falls on the grid cell 8,4. You can calculate mathematically the exact cell that a position lands on easily by either dividing the number by the grid resolution and then rounding down <i>or</i>, if you are using power of 2 grid resolutions (like 8, 16, 32 etc...) you can use the <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise operators</a>. It should be noted that the bitwise operation is faster and the example below shows both methods.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Avec cette fonction, nous pouvons marquer des cellules individuelles dans la grille MP donnée comme étant &quot;interdites&quot;, ce qui signifie que les fonctions de recherche de chemin ne les traverseront jamais. Normalement, on travaille en coordonnées x/y de <i>la pièce</i>, et non en coordonnées de <i>cellules de</i> la grille MP. Considérons donc l'image suivante qui montre comment les deux peuvent être corrélés :</p>
+  <p><img>Comme vous pouvez le voir, la mp_grid est numérotée comme une série de cellules (commençant à 0,0 dans le coin supérieur gauche), et lorsque vous placez cette grille sur la pièce, il existe une corrélation directe entre les coordonnées de la pièce (qui commencent également à 0,0 dans le coin supérieur gauche) et les cellules de la grille. Dans l'image, vous pouvez voir qu'une instance située à la position 260,130 tombe sur la cellule 8,4 de la grille. Vous pouvez facilement calculer mathématiquement la cellule exacte sur laquelle se trouve une position en divisant le nombre par la résolution de la grille et en arrondissant à l'unité inférieure <i>ou</i>, si vous utilisez des résolutions de grille en puissance de 2 (comme 8, 16, 32, etc.), vous pouvez utiliser les <a href="../../../../Additional_Information/Bitwise_Operators.htm">opérateurs bit à bit</a>. Il convient de noter que l'opération par bit est plus rapide et l'exemple ci-dessous montre les deux méthodes.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">mp_grid_add_cell(id, h, v);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>id</td>
+        <td><span class="notranslate">id</span></td>
         <td><span data-keyref="Type_ID_MP_Grid">MP Grid ID</span></td>
-        <td>Index of the mp_grid that is to be used</td>
+        <td><span class="notranslate">Index of the mp_grid that is to be used</span></td>
       </tr>
       <tr>
-        <td>h</td>
+        <td><span class="notranslate">h</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>Horizontal position of the cell in the grid</td>
+        <td><span class="notranslate">Horizontal position of the cell in the grid</span></td>
       </tr>
       <tr>
-        <td>v</td>
+        <td><span class="notranslate">v</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>Vertical position of the cell in the grid</td>
+        <td><span class="notranslate">Vertical position of the cell in the grid</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">with (obj_Wall)<br />
     {<br />
         mp_grid_add_cell(grid, floor(x / 32), floor(y / 32));<br />
@@ -57,18 +57,18 @@
     {<br />
         mp_grid_add_cell(grid, x&gt;&gt;5, y&gt;&gt;5);<br />
     }</p>
-  <p>The above code will make all &quot;obj_Wall&quot; and all obj_Door add their equivalent cell positions into the mp_grid indexed in the variable &quot;grid&quot;. In the first part of the example, this is done by taking the x/y coordinates of the object and dividing them by the resolution of the grid (using <span class="inline">floor</span> to keep the values as integers), and in the second part (since the grid resolution is a power of 2) it is done by bit-shifting the x,y coordinates 5 places to the right.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus fera en sorte que tous les &quot;obj_Wall&quot; et tous les obj_Door ajoutent leurs positions de cellule équivalentes dans la mp_grid indexée dans la variable &quot;grid&quot;. Dans la première partie de l'exemple, cela est fait en prenant les coordonnées x/y de l'objet et en les divisant par la résolution de la grille (en utilisant <span class="inline">floor</span> pour garder les valeurs sous forme d'entiers), et dans la seconde partie (puisque la résolution de la grille est une puissance de 2), cela est fait en décalant les coordonnées x,y de 5 places vers la droite.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Motion_Planning.htm">Motion Planning</a></div>
-        <div style="float:right">Next: <a href="mp_grid_add_instances.htm">mp_grid_add_instances</a></div>
+        <div style="float:left">Retour : <a href="Motion_Planning.htm">Planification des mouvements</a></div>
+        <div style="float:right">Suivant : <a href="mp_grid_add_instances.htm"><span class="notranslate">mp_grid_add_instances</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 mp_grid_add_cell

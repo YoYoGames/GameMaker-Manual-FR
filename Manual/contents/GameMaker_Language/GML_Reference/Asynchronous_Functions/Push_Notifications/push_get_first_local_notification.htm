@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>push_get_first_local_notification</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for push_get_first_local_notification" />
+  <meta name="rh-index-keywords" content="" />
+  <meta name="search-keywords" content="push_get_first_local_notification" />
+  <meta name="is_pure" content="true" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>push_get_first_local_notification</h1>
+  <p>Cette fonction va remplir une <a href="../../Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> prédéfinie avec une série de paires clé/valeur pour la première notification push locale dans la file d'attente à afficher. Elle renvoie -1 s'il n'y a aucune notification en file d'attente, ou une valeur réelle sinon représentant l'ID de la notification. Cet ID peut ensuite être utilisé pour annuler la notification à l'aide de la fonction <a href="push_cancel_local_notification.htm"><span class="inline">push_cancel_local_notification()</span></a>.</p>
+  <p class="note"><b>REMARQUE</b>: cette fonction est limitée aux modules cibles <b>iOS</b> et <b>Android</b>.</p>
+  <p>La carte DS contiendra les paires clé/valeur suivantes :</p>
+  <ul class="colour">
+    <li>&quot;<b>title</b>&quot; - Le titre de la notification (disponible uniquement sur la plate-forme <i>Android</i>, car <span class="notranslate">iOS</span> ne stocke pas les informations relatives au titre).</li>
+    <li>&quot;<b>message</b>&quot; - Le texte du corps du message</li>
+    <li>&quot;<b>data</b>&quot; - La chaîne du paquet de données</li>
+  </ul>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">push_get_first_local_notification(map);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th><th>Type</th>
+        <th>Description</th>
+     </tr>
+      <tr>
+        <td><span class="notranslate">map</span></td><td><span data-keyref="Type_ID_DS_Map"></span></td>
+        <td><span class="notranslate">The <span class="inline">DS Map</span> ID à utiliser.</td>
+     </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_ID_PushNotif">Push Notification ID</span> or -1</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var map = ds_map_create();<br />
+    var ntf = push_get_first_local_notification(map);<br />
+    while(ntf &gt;= 0)<br />
+    {<br />
+        var data = ds_map_find_value(map, &quot;data&quot;);<br />
+        if data == &quot;Daily_Reward&quot;<br />
+        {<br />
+            push_cancel_local_notification(ntf);<br />
+        }<br />
+        ntf = push_get_next_local_notification(map);<br />
+    }<br />
+    ds_map_destroy(map);</p>
+  <p>Le code ci-dessus crée une <span class="inline">DS Map</span> et demande ensuite les données de la première notification disponible dans la file d'attente. Si une notification existe, la carte est remplie et le code vérifie ensuite la clé &quot;data&quot; pour une chaîne spécifique. Si la chaîne est trouvée, la notification est annulée et passe à la notification suivante jusqu'à ce que toutes les notifications de la file d'attente aient été vérifiées.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Push_Notifications.htm">Notifications push</a></div>
+        <div style="float:right">Suivant : push_get_next_local_notification</div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+push_get_first_local_notification
+-->
+  <!-- TAGS
+push_get_first_local_notification
+-->
+</body>
+</html>

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_sequence_yscale</title>
+  <title>échelle_de_séquence_de_couche</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_sequence_yscale" />
   <meta name="rh-index-keywords" content="layer_sequence_yscale" />
@@ -14,52 +14,52 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_sequence_yscale</h1>
-  <p>With this function you can set the Y scale for the given sequence element. You supply the sequence element ID as returned by <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> or by one of the <a href="../General_Layer_Functions/General_Layer_Functions.htm">layer element functions</a> along with the new scale to set on the Y axis and the sequence will be scaled by this amount. A scale of 1 indicates no scaling (1:1), smaller values will scale down (0.5, for example, will half the width of the sequence), larger values will scale up and negative values will flip the sequence about its origin <i>and</i> scale it unless the value used is exactly -1 (in which case the sequence is just flipped about its origin with no scaling).</p>
-  <p>It is very important to note that applying <em>uneven</em> scaling (eg: scaling the X axis by 3 and the Y axis by 2) to sequence elements that contain any instance which uses <em>rotation</em>, <strong>may cause issues with the instance drawing, collisions, culling, and many other things</strong>. Basically, if your sequence relies on <em>any</em> instance properties then we do not recommend that you combine uneven scaling along with instance rotation.</p>
-  <p>Also note that you shouldn&#39;t change the <span class="inline">image_xscale</span> \ <span class="inline">image_yscale</span> \ <span class="inline">image_angle</span> \ <span class="inline">x</span> \ <span class="inline">y</span> variables for any instances in a sequence that uses this function as they will be overwritten as soon as the sequence updates after calling the function.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>échelle_de_séquence_de_couche</h1>
+  <p>Avec cette fonction, vous pouvez définir l'échelle Y pour l'élément de séquence donné. Vous fournissez l'ID de l'élément de séquence tel que renvoyé par <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> ou par l'une des <a href="../General_Layer_Functions/General_Layer_Functions.htm">fonctions d'élément de couche</a> avec la nouvelle échelle à définir sur l'axe Y et la séquence sera mise à l'échelle par cette quantité. Une échelle de 1 indique qu'il n'y a pas de mise à l'échelle (1:1), des valeurs plus petites réduiront l'échelle (0,5, par exemple, réduira de moitié la largeur de la séquence), des valeurs plus grandes augmenteront l'échelle et des valeurs négatives renverseront la séquence autour de son origine <i>et</i> la mettront à l'échelle, sauf si la valeur utilisée est exactement -1 (dans ce cas, la séquence est simplement renversée autour de son origine sans mise à l'échelle).</p>
+  <p>Il est très important de noter que l'application d'une mise à l'échelle <em>inégale</em> (par exemple : mise à l'échelle de l'axe X par 3 et de l'axe Y par 2) à des éléments de séquence contenant une instance qui utilise la <em>rotation</em>, <strong>peut causer des problèmes avec le dessin de l'instance, les collisions, l'élimination, et bien d'autres choses</strong>. En résumé, si votre séquence repose sur <em>des</em> propriétés d'instance, nous vous déconseillons de combiner une mise à l'échelle inégale avec une rotation d'instance.</p>
+  <p>Notez également que vous ne devez pas modifier les variables <span class="inline">image_xscale</span>; <span class="inline">image_yscale</span>; <span class="inline">image_angle</span>; <span class="inline">x</span>; <span class="inline">y</span> pour toute instance d'une séquence utilisant cette fonction, car elles seront écrasées dès que la séquence sera mise à jour après l'appel de la fonction.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">layer_sequence_yscale(sequence_element_id, xscale)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>sequence_element_id</td><td><span data-keyref="Type_ID_Element_Sequence"></span></td>
-        <td>The unique ID value of the sequence element to target</td>
+        <td><span class="notranslate">sequence_element_id</span></td><td><span data-keyref="Type_ID_Element_Sequence"></span></td>
+        <td><span class="notranslate">The unique ID value of the sequence element to target</span></td>
      </tr>
       <tr>
-        <td>yscale</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The new Y axis scale value to apply to the sequence element</td>
+        <td><span class="notranslate">yscale</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The new Y axis scale value to apply to the sequence element</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if seq_scale &lt; 2<br />
     {<br />
         seq_scale += 0.01;<br />
         layer_sequence_xscale(my_seq, seq_scale);<br />
         layer_sequence_yscale(my_seq, seq_scale);<br />
     }</p>
-  <p>The above code checks the value held in the <span class="inline">seq_scale</span> variable, and if it is less than 2 then it adds to it then uses the value to set the X and Y scale of the sequence element referenced in the variable <span class="inline">my_seq</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifie la valeur contenue dans la variable <span class="inline">seq_scale</span>, et si elle est inférieure à 2, il l'ajoute puis utilise la valeur pour définir l'échelle X et Y de l'élément de séquence référencé dans la variable <span class="inline">my_seq</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sequence_Layers.htm">Sequence Layers</a></div>
-        <div style="float:right">Next: <a href="layer_sequence_get_angle.htm">layer_sequence_get_angle</a></div>
+        <div style="float:left">Retour : <a href="Sequence_Layers.htm">Couches de séquences</a></div>
+        <div style="float:right">Suivant : <a href="layer_sequence_get_angle.htm"><span class="notranslate">layer_sequence_get_angle</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sequence_yscale

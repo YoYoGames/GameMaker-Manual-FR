@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>move_random</title>
+  <title>déplacer_aléatoire</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="This page outlines the function move_random" />
   <meta name="rh-index-keywords" content="move_random" />
@@ -14,51 +14,49 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">move_random</span></h1>
-  <p>With this function you can set the instance to a position anywhere in the room, but aligned to an &quot;invisible&quot; grid. So a value of 32 for the hsnap and vsnap will set the instance to a random position that is aligned to a grid of 32x32 squares. you can set these values to 1 to get a position anywhere in the room.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> This function will snap to the same positions every time the game is run afresh due to the fact that <span data-keyref="GameMaker Name">GameMaker</span> generates the same initial random seed every time to make debugging code a far easier task. To avoid this behaviour use <span class="inline3_func"><a data-xref="{title}" href="../../Maths_And_Numbers/Number_Functions/randomise.htm">randomise</a></span> at the start of your game. This is only true when testing and debugging the game, as the final executable package will not show this behaviour and will be random every play.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">move_random</span>(hsnap, vsnap);</p>
+  <h1>déplacer_aléatoire</h1>
+  <p>Avec cette fonction, vous pouvez placer l'instance à une position quelconque dans la pièce, mais alignée sur une grille &quot;invisible&quot;. Ainsi, une valeur de 32 pour le hsnap et le vsnap placera l'instance à une position aléatoire qui est alignée sur une grille de 32x32 carrés. Vous pouvez mettre ces valeurs à 1 pour obtenir une position n'importe où dans la pièce.</p>
+  <p class="note"><b>REMARQUE</b>: cette fonction se positionnera aux mêmes endroits à chaque fois que le jeu sera relancé, car <span data-keyref="GameMaker Name">GameMaker</span> génère à chaque fois la même graine aléatoire initiale afin de rendre le code de <span class="notranslate">debugging</span> beaucoup plus facile. Pour éviter ce comportement, utilisez <span style="font-size:1px;"><a href="../../Maths_And_Numbers/Number_Functions/randomise.htm"><span class="inline">randomise()</span></a></span> au début de votre jeu. Cela n'est vrai que lorsque vous testez le jeu et que vous l'envoyez à l'adresse <span class="notranslate">debugging</span>, car l'exécutable final ne présentera pas ce comportement et sera aléatoire à chaque partie.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">move_random(hsnap, vsnap);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
-      </tr>
+     </tr>
       <tr>
-        <td>hsnap</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The horizontal snapping (the size in pixels between &#39;cells&#39;).</td>
-      </tr>
+        <td><span class="notranslate">hsnap</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The horizontal snapping (the size in pixels between &#39;cells&#39;).</span></td>
+     </tr>
       <tr>
-        <td>vsnap</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The vertical snapping (the size in pixels between &#39;cells&#39;).</td>
-      </tr>
+        <td><span class="notranslate">vsnap</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The vertical snapping (the size in pixels between &#39;cells&#39;).</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if keyboard_check(vk_space)<br />
     {<br />
-        <span data-field="title" data-format="default">move_random</span>(1, 1);<br />
+        move_random(1, 1);<br />
     }</p>
-  <p>This will move the instance to a random position anywhere in the room when the space key is pressed.</p>
-  <p> </p>
-  <p> </p>
+  <p>Ceci déplacera l'instance à une position aléatoire n'importe où dans la pièce lorsque la touche espace est pressée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Movement.htm">Movement</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="move_snap.htm">move_snap</a></div>
+        <div style="float:left">Retour : <a href="Movement.htm">Mouvement</a></div>
+        <div style="float:right">Suivant : <a href="move_snap.htm"><span class="notranslate">move_snap</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 move_random

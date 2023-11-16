@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_delete</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>tampon_suppression</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_delete" />
   <meta name="rh-index-keywords" content="buffer_delete" />
@@ -14,46 +14,44 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_delete</h1>
-  <p>With this function you can delete a buffer previously have created using the function <a href="buffer_create.htm"><span class="inline">buffer_create()</span></a> from memory, releasing the resources used to create it and removing any data that it may currently contain.</p>
-  <p class="note"><b><span data-conref="../../../assets/snippets/Tag_note.hts"> </span></b> It&#39;s important to always remove any dynamically created resources from memory when you no longer need them to prevent memory leaks.</p>
-  <p class="note"><b><i><span data-conref="../../../assets/snippets/Tag_important.hts"> </span> </i></b>When you create a buffer, the index value used to identify it is an integer value starting at 0. These indices are re-used by GameMaker, so a destroyed buffer index value may be used by a newly created one afterwards, and we recommend that you set any variable that holds a buffer index to -1 after having destroyed the buffer.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>tampon_suppression</h1>
+  <p>Cette fonction permet de supprimer de la mémoire un <span class="notranslate">buffer</span> précédemment créé à l'aide de la fonction <a href="buffer_create.htm"><span class="inline">buffer_create()</span></a> de la mémoire, en libérant les ressources utilisées pour le créer et en supprimant toutes les données qu'il peut contenir actuellement.</p>
+  <p class="note"><b>REMARQUE</b>: il est important de toujours retirer de la mémoire les ressources créées dynamiquement lorsque vous n'en avez plus besoin afin d'éviter les fuites de mémoire.</p>
+  <p class="note"><em><strong>IMPORTANT !</strong></em> Lorsque vous créez un <span class="notranslate">buffer</span>, la valeur d'index utilisée pour l'identifier est une valeur entière commençant à 0. Ces index sont réutilisés par <span class="notranslate">GameMaker</span>, de sorte qu'une valeur d'index détruite de <span class="notranslate">buffer</span> peut être utilisée par une nouvelle valeur créée par la suite,
+    Nous vous recommandons de donner la valeur -1 à toute variable contenant un indice de tampon après avoir détruit le site <span class="notranslate">buffer</span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">buffer_delete(buffer)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
-      </tr>
+     </tr>
       <tr>
-        <td>buffer</td>
-        <td><span data-keyref="Type_ID_Buffer"><a href="GameMaker_Language/GML_Reference/Buffers/buffer_create.htm" target="_blank">Buffer ID</a></span></td>
-        <td>The index of the buffer to delete.</td>
-      </tr>
+        <td><span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
+        <td><span class="notranslate">The index of the buffer to delete.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">buffer_delete(player_buffer);<br />
-    player_buffer = -1;</p>
-  <p>The above code will delete the previously created buffer with the id stored in the variable &quot;player_buffer&quot; and then sets the variable to -1.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">buffer_delete(player_buffer);<br/> player_buffer = -1;</p>
+  <p>Le code ci-dessus supprime le site <span class="notranslate">buffer</span> précédemment créé avec l'identifiant stocké dans la variable &quot;player_buffer&quot; et donne à cette variable la valeur -1.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_read.htm">buffer_read</a></div>
+        <div style="float:left">Retour : <a href="Buffers.htm">Tampons</a></div>
+        <div style="float:right">Suivant : <a href="buffer_read.htm"><span class="notranslate">buffer_read</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_delete

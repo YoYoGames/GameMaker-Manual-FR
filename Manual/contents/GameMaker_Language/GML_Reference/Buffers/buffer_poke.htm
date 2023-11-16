@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_poke</title>
+  <title>tampon_poke</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_poke" />
   <meta name="rh-index-keywords" content="buffer_poke,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
@@ -14,58 +14,58 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_poke</h1>
-  <p>With the <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a> function, you can write data to the given buffer at the current &quot;seek&quot; position, with each piece of data advancing this position by the bytes being written or read. However, it may be necessary for you to change a given piece of data without wanting to change the current seek position, and that&#39;s when you would use this function. You simply supply the function with a buffer index, and then the offset position from the buffer start (in bytes) within that buffer to write to, as well as the data type and the value to be written.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>tampon_poke</h1>
+  <p>Avec la fonction <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a> vous pouvez écrire des données sur le site <span class="notranslate">buffer</span> à la position de recherche actuelle, chaque donnée faisant avancer cette position du nombre d'octets écrits ou lus. Cependant, il peut être nécessaire de modifier un élément de données donné sans vouloir changer la position de recherche actuelle, et c'est dans ce cas que vous utiliserez cette fonction. Il suffit de fournir à la fonction un index <span class="notranslate">buffer</span>, puis la position de décalage par rapport au début de <span class="notranslate">buffer</span> (en octets) à l'intérieur de <span class="notranslate">buffer</span> pour écrire, ainsi que le type de données et la valeur à écrire.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">buffer_poke(buffer, offset, type, value);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>buffer</td>
-        <td><span data-keyref="Type_ID_Buffer">Buffer ID</span></td>
-        <td>The index of the buffer to use.</td>
+        <td><span class="notranslate">buffer</span></td>
+        <td><span data-keyref="Type_ID_Buffer">ID de la mémoire tampon</span></td>
+        <td><span class="notranslate">The index of the buffer to use.</span></td>
       </tr>
       <tr>
-        <td>offset</td>
+        <td><span class="notranslate">offset</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The offset position (in bytes) within the buffer to write the given data to.</td>
+        <td><span class="notranslate">The offset position (in bytes) within the buffer to write the given data to.</span></td>
       </tr>
       <tr>
-        <td>type</td>
-        <td><span data-keyref="Type_Constant_Buffer_Data_Type">Buffer Data Type Constant</span></td>
-        <td>The type of data that is to be written to the buffer (see the list of constants <a href="buffer_write.htm">here</a>).</td>
+        <td><span class="notranslate">type</span></td>
+        <td><span data-keyref="Type_Constant_Buffer_Data_Type">Type de données de la mémoire tampon Constante</span></td>
+        <td><span class="notranslate">The type of data that is to be written to the buffer (see the list of constants <a href="buffer_write.htm">here</a>).</span></td>
       </tr>
       <tr>
-        <td>value</td>
+        <td><span class="notranslate">value</span></td>
         <td><span data-keyref="Type_Any">Variable</span></td>
-        <td>The data to add to the buffer, in accordance with the type specified.</td>
+        <td><span class="notranslate">The data to add to the buffer, in accordance with the type specified.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">buffer_poke(buff, 3, buffer_u8, colour_get_blue(image_blend));</p>
-  <p>The above code will add the blue component value of the colour used for the image blend into the buffer indexed in the variable &quot;buff&quot;, at the third position in the buffer and as an unsigned 8bit value.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus ajoutera la valeur de la composante bleue de la couleur utilisée pour le mélange d'images dans le site <span class="notranslate">buffer</span> indexé dans la variable &quot;buff&quot;, à la troisième position dans le site <span class="notranslate">buffer</span> et en tant que valeur 8bit non signée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_save.htm">buffer_save</a></div>
+        <div style="float:left">Retour : <a href="Buffers.htm">Tampons</a></div>
+        <div style="float:right">Suivant : <a href="buffer_save.htm"><span class="notranslate">buffer_save</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_poke

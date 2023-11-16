@@ -4,10 +4,10 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Script Functions vs. Methods</title>
+  <title>Fonctions de script et méthodes</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../assets/masterpages/Manual_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Page explaining practical differences between Script Functions and Methods." />
@@ -15,23 +15,23 @@
   <meta name="search-keywords" content="calling methods, calling script functions, method performance" />
 </head>
 <body>
-  <h1>Script Functions vs. Methods</h1>
-  <p>This page covers essential information about using script functions vs. methods.</p>
-  <h2>Basic Difference</h2>
-  <p>A <a href="Script_Functions.htm">script function</a> is created with this syntax:</p>
+  <h1>Fonctions de script et méthodes</h1>
+  <p>Cette page présente des informations essentielles sur l'utilisation des fonctions de script par rapport aux méthodes.</p>
+  <h2>Différence de base</h2>
+  <p>Une <a href="Script_Functions.htm">fonction de script</a> est créée avec cette syntaxe :</p>
   <p class="code">function name()<br />
     {<br />
         code;<br />
     }</p>
-  <p>A <a href="Method_Variables.htm">method variable</a> is created with this syntax:</p>
+  <p>Une <a href="Method_Variables.htm">variable de méthode</a> est créée avec cette syntaxe :</p>
   <p class="code">name = function()<br />
     {<br />
         code;<br />
     }</p>
-  <p>You should use the first syntax in scripts, to create global functions that can be called from any scope in your game.</p>
-  <p>You should use the second syntax when creating functions in <a href="Structs.htm">structs/constructors</a> and objects. This syntax creates a variable containing a method.</p>
-  <h2>Direct Calls</h2>
-  <p>You can call both script functions and methods directly by using parentheses <span class="inline2">()</span>,  just like a <a href="Runtime_Functions.htm">runtime function</a>:</p>
+  <p>Vous devriez utiliser la première syntaxe dans les scripts, pour créer des fonctions globales qui peuvent être appelées à partir de n'importe quelle portée dans votre jeu.</p>
+  <p>Vous devez utiliser la deuxième syntaxe pour créer des fonctions dans les <a href="Structs.htm">structs/constructeurs</a> et les objets. Cette syntaxe crée une variable contenant une méthode.</p>
+  <h2>Appels directs</h2>
+  <p>Vous pouvez appeler les fonctions et les méthodes de script directement en utilisant les parenthèses <span class="inline2">()</span>, tout comme une <a href="Runtime_Functions.htm">fonction d'exécution</a>:</p>
   <p class="code">// Create the function<br />
     function reset_x()<br />
     {<br />
@@ -41,9 +41,9 @@
     // Call the function<br />
     reset_x();
   </p>
-  <p>You can also use the function <a href="../GML_Reference/Asset_Management/Scripts/script_execute.htm"><span class="inline">script_execute()</span></a> to run a script function, although it&#39;s now a legacy function and not recommended for use.</p>
-  <h2>Indirect Calls: Methods</h2>
-  <p>You can store a reference to a method, in another variable, to call it later through that different variable:</p>
+  <p>Vous pouvez également utiliser la fonction <a href="../GML_Reference/Asset_Management/Scripts/script_execute.htm"><span class="inline">script_execute()</span></a> pour exécuter une fonction de script, bien qu'il s'agisse d'une ancienne fonction dont l'utilisation n'est pas recommandée.</p>
+  <h2>Appels indirects : Méthodes</h2>
+  <p>Vous pouvez stocker une référence à une méthode, dans une autre variable, pour l'appeler plus tard à travers cette autre variable :</p>
   <p class="code">// Create method<br />
     reset_alpha = function()<br />
     {<br />
@@ -54,11 +54,11 @@
     temp_1 = reset_alpha;<br />
     temp_1();
   </p>
-  <p class="note"><span class="note">NOTE</span> See how the code doesn&#39;t put <span class="inline2">()</span> after <span class="inline2">reset_alpha</span>. That&#39;s because we&#39;re reading the method reference and not calling it.</p>
-  <p>In this example, calling <span class="inline2">temp_1</span> will call <span class="inline2">reset_alpha</span>, as it stores a reference to that <strong>method</strong>.</p>
-  <p>You are completely fine to pass around a method reference in this way. When using script functions though, there is a caveat.</p>
-  <h2>Indirect Calls: Script Functions</h2>
-  <p>You can also store a reference to a script function, in another variable:</p>
+  <p class="note"><span class="note">NOTE</span> Voyez comment le code ne met pas <span class="inline2">()</span> après <span class="inline2">reset_alpha</span>. C'est parce que nous lisons la référence de la méthode et ne l'appelons pas.</p>
+  <p>Dans cet exemple, l'appel de <span class="inline2">temp_1</span> appellera <span class="inline2">reset_alpha</span>, car il stocke une référence à cette <strong>méthode</strong>.</p>
+  <p>Vous pouvez tout à fait transmettre une référence de méthode de cette manière. Cependant, lorsque vous utilisez des fonctions de script, il y a une mise en garde.</p>
+  <h2>Appels indirects : Fonctions de script</h2>
+  <p>Vous pouvez également stocker une référence à une fonction de script, dans une autre variable :</p>
   <p class="code">// Create function<br />
     function reset_x()<br />
     {<br />
@@ -68,30 +68,30 @@
     // Store reference<br />
     temp_1 = reset_x;
   </p>
-  <p>Now, you can call <span class="inline2">temp_1</span> by doing this:</p>
+  <p>Maintenant, vous pouvez appeler <span class="inline2">temp_1</span> en faisant ceci :</p>
   <p class="code">temp_1();</p>
-  <p>However, since this variable refers to a <strong>script function</strong>, it first has to convert it into a <strong>method</strong>, and then call it.</p>
-  <p>This can easily result in increased memory usage, especially if you&#39;re calling it every frame, because the engine now has to create a new method every frame for this call. </p>
-  <p>So, what is the solution?</p>
+  <p>Toutefois, comme cette variable fait référence à une <strong>fonction de script</strong>, il doit d'abord la convertir en <strong>méthode</strong>, puis l'appeler.</p>
+  <p>Cela peut facilement entraîner une augmentation de l'utilisation de la mémoire, surtout si vous l'appelez à chaque image, car le moteur doit maintenant créer une nouvelle méthode à chaque image pour cet appel. </p>
+  <p>Alors, quelle est la solution ?</p>
   <ul class="colour">
-    <li>Use <a href="../GML_Reference/Asset_Management/Scripts/script_execute.htm"><span class="inline">script_execute()</span></a> to call the script function via its reference, which will not create a method.</li>
-    <li>Or, the better solution: convert your script function <a href="../GML_Reference/Variable_Functions/method.htm">into a method</a> when passing its reference.</li>
+    <li>Utilisez <a href="../GML_Reference/Asset_Management/Scripts/script_execute.htm"><span class="inline">script_execute()</span></a> pour appeler la fonction de script via sa référence, ce qui ne créera pas de méthode.</li>
+    <li>Ou, meilleure solution : convertissez votre fonction de script <a href="../GML_Reference/Variable_Functions/method.htm">en méthode</a> lorsque vous lui transmettez sa référence.</li>
   </ul>
-  <p>To implement the second solution, your code would look like this:</p>
+  <p>Pour mettre en œuvre la deuxième solution, votre code ressemblerait à ceci :</p>
   <p class="code">temp_1 = method(undefined, reset_x);</p>
-  <p>This is creating a new method from the <span class="inline2">reset_x</span> script function, using <a href="../GML_Reference/Variable_Functions/method.htm"><span class="inline">method()</span></a>.</p>
-  <p>Calling <span class="inline2">temp_1()</span> now using parentheses will not increase memory usage, as the method is already created for you.</p>
-  <p>Again, this only applies if you&#39;re calling a script function <strong>indirectly</strong>, via a reference stored in a variable. Calling it directly doesn&#39;t cause such problems.</p>
-  <p> </p>
-  <p> </p>
+  <p>Il s'agit de créer une nouvelle méthode à partir de la fonction de script <span class="inline2">reset_x</span>, à l'aide des éléments suivants <a href="../GML_Reference/Variable_Functions/method.htm"><span class="inline">method()</span></a>.</p>
+  <p>Appeler <span class="inline2">temp_1()</span> maintenant en utilisant les parenthèses n'augmentera pas l'utilisation de la mémoire, car la méthode est déjà créée pour vous.</p>
+  <p>Encore une fois, cela ne s'applique que si vous appelez une fonction de script <strong>indirectement</strong>, via une référence stockée dans une variable. L'appeler directement ne pose pas de tels problèmes.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="GML_Overview.htm">GML Code Overview</a></div>
-        <div>Next: <a data-xref="{title}" href="Functions/Static_Variables.htm">Static Variables</a></div>
+        <div>Retour : <a data-xref="{title}" href="GML_Overview.htm">Aperçu du code GML</a></div>
+        <div>Suivant : <a data-xref="{title}" href="Functions/Static_Variables.htm">Variables statiques</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Script Functions vs. Methods

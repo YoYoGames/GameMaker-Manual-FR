@@ -6,7 +6,7 @@
   <title>layer_background_vtiled</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_background_vtiled" />
   <meta name="rh-index-keywords" content="layer_background_vtiled" />
@@ -16,52 +16,52 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>layer_background_vtiled</h1>
-  <p>Using this function you can change whether the given background element on a layer should be tiled vertically or not. You give the background element ID (which you get when you create a background element using <a href="layer_background_create.htm"><span class="inline">layer_background_create()</span></a> or when you use the function <a href="layer_background_get_id.htm"><span class="inline">layer_background_get_id()</span></a>), and then set the tiling value. If set to <span class="inline">true</span> then the element will be displayed tiled vertically down the room, and when set to <span class="inline">false</span>, the element will not be tiled. This function is for 2D projects only, and will not work correctly when a 3D camera projection is used.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>À l'aide de cette fonction, vous pouvez déterminer si l'élément d'arrière-plan d'un calque doit être mis en mosaïque verticalement ou non. Vous donnez l'ID de l'élément d'arrière-plan (que vous obtenez lorsque vous créez un élément d'arrière-plan à l'aide de la fonction <a href="layer_background_create.htm"><span class="inline">layer_background_create()</span></a> ou lorsque vous utilisez la fonction <a href="layer_background_get_id.htm"><span class="inline">layer_background_get_id()</span></a>), puis vous définissez la valeur du tuilage. Si vous définissez la valeur <span class="inline">true</span>, l'élément sera affiché en mosaïque verticale dans la pièce, et si vous définissez la valeur <span class="inline">false</span>, l'élément ne sera pas en mosaïque. Cette fonction est réservée aux projets 2D et ne fonctionnera pas correctement en cas de projection avec une caméra 3D.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">layer_background_vtiled(background_element_id, tiled);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>background_element_id</td>
-        <td><span data-keyref="Type_ID_Element_Background">Background Element ID</span></td>
-        <td>The unique ID value of the background element to change</td>
+        <td><span class="notranslate">background_element_id</span></td>
+        <td><span data-keyref="Type_ID_Element_Background">ID de l'élément de fond</span></td>
+        <td><span class="notranslate">The unique ID value of the background element to change</span></td>
       </tr>
       <tr>
-        <td>tiled</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>The vertical tiling toggle, which can be <span class="inline">true</span> or <span class="inline">false</span></td>
+        <td><span class="notranslate">tiled</span></td>
+        <td><span data-keyref="Type_Bool">Booléen</span></td>
+        <td><span class="notranslate">The vertical tiling toggle, which can be <span class="inline">true</span> ou <span class="inline">false</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var back = layer_background_get_id(layer);<br />
     if !layer_background_get_htiled(back) || !layer_background_get_vtiled(back)<br />
     {<br />
         layer_background_htiled(back, true);<br />
         layer_background_vtiled(back, true);<br />
     }</p>
-  <p>The above code will check the background element assigned to the layer the instance running the code is on and if it is not tiled in either direction it will set it to tile vertically and horizontally.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifiera l'élément d'arrière-plan attribué au calque sur lequel se trouve l'instance qui exécute le code et s'il n'est pas tuilé dans un sens ou dans l'autre, il le mettra en tuile verticalement et horizontalement.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Background_Layers.htm">Background Layers</a></div>
-        <div style="float:right">Next: <a href="layer_background_stretch.htm">layer_background_stretch</a></div>
+        <div style="float:left">Retour : <a href="Background_Layers.htm">Calques d'arrière-plan</a></div>
+        <div style="float:right">Suivant : <a href="layer_background_stretch.htm"><span class="notranslate">layer_background_stretch</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_background_vtiled

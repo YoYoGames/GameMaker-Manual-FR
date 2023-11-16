@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_ugc_set_item_tags</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_ugc_set_item_tags" />
+  <meta name="rh-index-keywords" content="steam_ugc_set_item_tags" />
+  <meta name="search-keywords" content="steam_ugc_set_item_tags" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_ugc_set_item_tags</h1>
+  <p>Cette fonction va définir les balises à utiliser pour l'élément donné. Les balises doivent être ajoutées à un tableau 1D en tant qu'éléments de chaîne et le tableau doit être passé à la fonction. Le handle de mise à jour est la valeur retournée lorsque vous avez appelé la fonction <a href="steam_ugc_start_item_update.htm"><tt>steam_ugc_start_item_update()</tt></a>.
+    La fonction renvoie la valeur <tt>true</tt> si l'accès à l'API s'est déroulé avec succès et <tt>false</tt> en cas de problème.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_ugc_set_item_tags(ugc_update_handle, tags);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">ugc_update_handle</span></td>
+        <td>L'identifiant unique de l'UGC à mettre à jour.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">tags</span></td>
+        <td>Les balises (sous forme de tableau) à utiliser pour l'élément.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var app_id = steam_get_app_id();<br/> var updateHandle = steam_ugc_start_item_update(app_id, global.Publish_ID);<br/> steam_ugc_set_item_title(updateHandle, &quot;My workshop item(3)!&quot;);<br/> steam_ugc_set_item_description( updateHandle, &quot;testing
+    workshop...&quot;);<br/> steam_ugc_set_item_visibility(updateHandle, ugc_visibility_public);<br/> var tagArray;<br/> tagArray[0] = &quot;Test&quot;;<br/> tagArray[1] = &quot;New&quot;;<br/> steam_ugc_set_item_tags(updateHandle, tagArray);<br/> steam_ugc_set_item_preview(updateHandle,
+    &quot;promo.jpg&quot;);<br/> steam_ugc_set_item_content(updateHandle, &quot;WorkshopContent1&quot;);<br/> requestId = steam_ugc_submit_item_update(updateHandle, &quot;Version 1.2&quot;);</p>
+  <p>Le code ci-dessus récupère l'ID du jeu, puis l'utilise avec l'ID du fichier publié précédemment stocké pour générer un identifiant de mise à jour pour l'élément. Ce gestionnaire est ensuite utilisé pour mettre à jour divers éléments d'information avant que la mise à jour ne soit envoyée aux serveurs de l'atelier.
+    des serveurs.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">Suivant : <a href="steam_ugc_set_item_content.htm"><span class="notranslate">steam_ugc_set_item_content</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_set_item_tags
+-->
+  <!-- TAGS
+steam_ugc_set_item_tags
+-->
+</body>
+</html>

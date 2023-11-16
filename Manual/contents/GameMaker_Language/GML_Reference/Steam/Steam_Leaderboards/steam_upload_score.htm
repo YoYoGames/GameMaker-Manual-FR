@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_upload_score</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_upload_score" />
+  <meta name="rh-index-keywords" content="steam_upload_score" />
+  <meta name="search-keywords" content="steam_upload_score" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_upload_score</h1>
+  <p>Cette fonction va envoyer un score au leaderboard donné. Le score à envoyer est un nombre réel, et le nom du leaderboard est une chaîne de caractères qui a été définie lorsque vous avez créé le leaderboard à l'aide de la fonction <a href="steam_create_leaderboard.htm"><tt>steam_create_leaderboard()</tt></a>. Si la fonction échoue, elle renvoie la valeur -1, tandis qu'un message réussi renvoie un ID unique pour le téléchargement et déclenche un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">événement Steam</a> asynchrone. Cet événement créera une <tt>carte DS</tt> dans la variable intégrée <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> avec les paires clé/valeur suivantes :</p>
+  <ul class="colour">
+    <li>&quot;<b>event_type</b>&quot; - Cette clé aura la valeur &quot;<b>leaderboard_upload</b>&quot; lorsqu'elle sera déclenchée par cette fonction.</li>
+    <li>&quot;<b>lb_name</b>&quot; - Cette clé contient le nom du classement qui a été posté sur le site.</li>
+    <li>&quot;<b>success</b>&quot; - sera 1 si le message a réussi, 0 s'il a échoué.</li>
+    <li>&quot;<b>updated</b>&quot; - sera égal à 1 si le score du classement a été mis à jour (c'est-à-dire si le nouveau score est meilleur) ou à 0 sinon.</li>
+    <li>&quot;<b>post_id</b>&quot; - Cette clé doit correspondre à la valeur d'identification renvoyée par l'appel au téléchargement.</li>
+    <li>&quot;<b>Score</b>&quot; - Cette clé contient le score qui a été affiché.</li>
+  </ul>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_upload_score(lb_name, score);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">lb_name</span></td>
+        <td>Le nom du classement vers lequel vous téléchargez les scores (une chaîne).</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">score</span></td>
+        <td>Le score à télécharger (un nombre réel).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple étendu :</h4>
+  <p>Dans cet exemple, nous commençons par télécharger un score, puis nous analysons la carte <tt>async_load</tt> renvoyée en cas de succès. Le code ci-dessous montre un exemple typique de téléchargement :</p>
+  <p class="code">if (hp &lt;= 0)<br />
+        {<br />
+        upload_ID = steam_upload_score(&quot;Game Scores&quot;, score);<br />
+        if (!upload_ID)<br />
+            {<br />
+            alarm[0] = room_speed;<br />
+            }<br />
+        }</p>
+  <p>Notez que nous avons défini une alarme si l'appel échoue. Vous pouvez y ajouter du code supplémentaire pour réessayer le téléchargement ou pour enregistrer le score dans un fichier texte si l'échec persiste, etc... Nous ajoutons maintenant ce qui suit dans l'<b>événement asynchrone Steam</b> pour l'instance contrôlant les scores :</p>
+  <p class="code">var type = ds_map_find_value(async_load, &quot;event_type&quot;);<br />
+    if (type == &quot;leaderboard_upload&quot;)<br />
+    {<br />
+        var lb_ID = ds_map_find_value(async_load, &quot;post_id&quot;);<br />
+        if lb_ID == upload_ID<br />
+        {<br />
+            var lb_name = ds_map_find_value(async_load, &quot;lb_name&quot;);<br />
+            var lb_done = ds_map_find_value(async_load, &quot;success&quot;);<br />
+            var lb_score = ds_map_find_value(async_load, &quot;score&quot;);<br />
+            var lb_updated = ds_map_find_value(async_load, &quot;updated&quot;);<br />
+            show_debug_message(&quot;leaderboard post id:&quot; + string(lb_ID) + &quot; to lb:&quot; + string(lb_name) + &quot; with score:&quot; + string(lb_score) + &quot; updated=&quot; + string(lb_updated));<br />
+            if (lb_done)<br />
+            {<br />
+                show_debug_message(&quot;- Succeeded&quot;);<br />
+            }<br />
+            else<br />
+            {<br />
+                show_debug_message(&quot;- Failed&quot;);<br />
+            }<br />
+        }<br />
+    }</p>
+  <p>Dans l'exemple, nous nous contentons d'afficher les valeurs de retour dans la fenêtre du compilateur en tant que messages de débogage, mais vous pouvez utiliser cet événement pour traiter les informations de la manière que vous souhaitez.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_Leaderboards.htm">Tableaux de classement</a></div>
+        <div style="float:right">Suivant : <a href="steam_upload_score_buffer.htm"><span class="notranslate">steam_upload_score_buffer</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_upload_score
+-->
+  <!-- TAGS
+steam_upload_score
+-->
+</body>
+</html>

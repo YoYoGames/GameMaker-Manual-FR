@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Objects And Instances</title>
+  <title>Objets et instances</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Overview of what objects and instances are and the role they play in making a game." />
   <meta name="rh-index-keywords" content="Quick Start - Objects And Instances" />
@@ -15,76 +15,76 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Objects And Instances</h1>
-  <p>With the assets you have seen so far you can add some nice images and sounds to the game asset browser, but they don&#39;t do anything in the game itself yet! For that we need the most important assets of all in <span data-keyref="GameMaker Name">GameMaker</span>, the <strong>Object </strong>asset. Objects are a special asset that we use to control aspects of a game and to do specific things. Most of the time they have a sprite associated with them so that you can see them in the game rooms, but sometimes they are used as a &quot;behind the scenes&quot; <strong>controller </strong>objects to do things like track stats, or set timings for cut-scenes, etc... Objects can be given behaviours and they can react to certain events as well as to each other, and most of the things you see in a game are based on objects and their interactions with the user and each other.</p>
-  <p>Now, we can&#39;t talk about Objects without talking about <strong>Instances</strong>. In a game made with <span data-keyref="GameMaker Name">GameMaker</span>, the characters, monsters, balls, walls, etc... that you see in the game are actually all considered as being <strong>instances</strong>. An instance is essentially a &quot;copy&quot; of an object that is found in the Asset Browser and then placed in a room (think of objects as <strong>templates </strong>for instances). So when we talk about something affecting or changing an instance, we mean that one particular copy of an object in a room is being affected while all the rest are not, but when we talk about affecting or changing an object we mean that anything we do to it will be reflected in all the instances created from that point on too. So, <strong>the object is the template for the instance, and the instance is what we place in a room to make our game</strong>.</p>
-  <p>To create a new object asset, it&#39;s the same as for every other asset and you simply right click <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> on the Objects asset folder and select <em>Create</em> (or right click anywhere in the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> and select <em>Create Object</em>).</p>
+  <h1>Objets et instances</h1>
+  <p>Avec les actifs que vous avez vus jusqu'à présent, vous pouvez ajouter de belles images et de beaux sons dans le navigateur d'actifs du jeu, mais ils ne font encore rien dans le jeu lui-même ! Pour cela, nous avons besoin de l'actif le plus important de tous dans <span data-keyref="GameMaker Name">GameMaker</span>, l'actif <strong>Objet </strong>. Les objets sont des ressources spéciales que nous utilisons pour contrôler certains aspects d'un jeu et pour faire des choses spécifiques. La plupart du temps, ils sont associés à une adresse <span class="notranslate">sprite</span> afin que vous puissiez les voir dans les salles de jeu, mais parfois, ils sont utilisés comme des objets de <strong>contrôle </strong>&quot;en coulisses&quot; pour faire des choses comme le suivi des statistiques, ou définir le timing des cut-scenes, etc... On peut donner aux objets des comportements et ils peuvent réagir à certains événements ainsi qu'entre eux, et la plupart des choses que vous voyez dans un jeu sont basées sur les objets et leurs interactions avec l'utilisateur et entre eux.</p>
+  <p>On ne peut pas parler d'objets sans parler d'<strong>instances</strong>. Dans un jeu réalisé avec <span data-keyref="GameMaker Name">GameMaker</span>, les personnages, monstres, balles, murs, etc... que vous voyez dans le jeu sont en fait tous considérés comme des <strong>instances</strong>. Une instance est essentiellement une &quot;copie&quot; d'un objet que l'on trouve dans l'Asset Browser et que l'on place dans une pièce (pensez aux objets comme à des <strong>modèles </strong>d'instances). Ainsi, lorsque nous parlons de quelque chose qui affecte ou modifie une instance, nous voulons dire qu'une copie particulière d'un objet dans une salle est affectée alors que toutes les autres ne le sont pas, mais lorsque nous parlons d'affecter ou de modifier un objet, nous voulons dire que tout ce que nous faisons sur lui sera reflété dans toutes les instances créées à partir de ce point également. Ainsi, <strong>l'objet est le modèle de l'instance, et l'instance est ce que nous plaçons dans une salle pour créer notre jeu</strong>.</p>
+  <p>Pour créer un nouvel objet, il suffit de cliquer avec le bouton droit de la souris <img> sur le dossier d'objets et de sélectionner <em>Créer (</em> ou de cliquer avec le bouton droit de la souris n'importe où dans le <a href="../Introduction/The_Asset_Browser.htm">navigateur d'objets</a> et de sélectionner <em>Créer un objet</em>).</p>
+  <p><img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /></p>
+  <p>Il s'agit de la fenêtre de l'<a href="../The_Asset_Editors/Objects.htm">éditeur d'objets</a>, qui affiche les propriétés actuelles de l'objet. La première chose à faire est de nommer l'objet, en utilisant un préfixe comme &quot; <span class="inline">obj_</span>&quot; ou un autre identifiant. En général, pour qu'un objet puisse dessiner quoi que ce soit et enregistrer des collisions avec des instances d'autres objets, il doit se voir attribuer un <span class="notranslate">sprite</span>, qui est ajouté à l'aide du bouton <img>. Cela ouvrira l'<strong>Explorateur d'actifs</strong> où vous pourrez sélectionner le <span class="notranslate">sprite</span> à utiliser (vous pouvez également faire glisser <span class="notranslate">sprites</span> depuis l'Explorateur d'actifs et les déposer dans l'Éditeur d'objets pour les assigner) :</p>
   <p><img alt="The Object Editor" class="center" src="../assets/Images/QS_Guide/QS_ObjectEditor.png" /></p>
-  <p>This is the <a href="../The_Asset_Editors/Objects.htm">Object Editor</a> window and shows the current object properties, and the first thing you should do is name the object, again using a prefix like &quot; <span class="inline">obj_</span>&quot; or some other identifier. In general, for an object to draw anything and register collisions with instances of other objects it needs to have a sprite assigned to it, which is added using the <img alt="Add Sprite Icon " class="icon" height="24" src="../assets/Images/Icons/Icon_AddSound.png" width="31" /> button. This will open the <strong>Asset Explorer</strong> where you can select the sprite to use (you can also drag sprites from the Asset Browser and drop them onto the Object Editor to assign them):</p>
-  <p><img alt="The Asset Explorer" class="center" src="../assets/Images/QS_Guide/QS_AssetExplorer.png" /></p>
-  <p>If you do not have an appropriate sprite yet, you can click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on the <em>New Sprite</em> button <img alt="New Sprite Icon" class="icon" src="../assets/Images/Icons/Icon_NewSprite.png" /> to create a new sprite asset and edit it as you wish, just as if you had created the asset through the standard sprite create options, only now it will automatically be assigned to the object that you had open when you started to create it. Once you select a sprite you can also click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on the <em>Edit Sprite</em> <img alt="Edit Sprite Icon" class="icon" src="../assets/Images/Icons/Icon_EditSprite.png" /> or <em>Edit Image</em> <img alt="Edit Image Icon" class="icon" src="../assets/Images/Icons/Icon_EditImage.png" /> buttons to edit either the images of the sprite itself or the sprite asset. This can be faster than first finding the sprite in the Asset Browser and then indicating you want to edit it.</p>
-  <p>Once you have added or created the sprite, you can change a few other object properties like whether it should be <strong>visible </strong>or not - for example - or what kind of <strong>collision mask</strong> it should have. For simple games you probably don&#39;t need to change anything here and can now go on to add <strong>Events </strong>to the object.</p>
-  <p>Events are discreet moments in the game loop where things are made to happen based on what you have programmed for them. <span data-keyref="GameMaker Name">GameMaker</span> works with cycles of these events - from the moment a room is started to the moment it is finished there is a game loop running where every step a series of events are run, and you can choose to place GML code or GML Visual actions in your instances that respond to these events (a <strong>step </strong>is a moment in game time, governed by the game speed setting - also called a &quot;frame&quot;).</p>
-  <p>To add an event you click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on the Add Event button:</p>
-  <p><img alt="The Object Editor Events" class="center" src="../assets/Images/QS_Guide/QS_ObjectEditor_Events.png" style="cursor: nesw-resize;" /></p>
-  <p>Above you can see all the different <strong>Event Categories</strong>, some of which contain other sub-categories. We won&#39;t go through all the events here, but we will cover the five most important ones briefly:</p>
+  <p>Si vous ne disposez pas encore d'un <span class="notranslate">sprite</span> approprié, vous pouvez cliquer sur <img> sur le bouton <em>New Sprite</em> <img> pour créer un nouvel actif <span class="notranslate">sprite</span> et le modifier comme vous le souhaitez, comme si vous aviez créé l'actif via les options de création standard <span class="notranslate">sprite</span>, sauf que maintenant il sera automatiquement affecté à l'objet que vous aviez ouvert lorsque vous avez commencé à le créer. Une fois que vous avez sélectionné un <span class="notranslate">sprite</span>, vous pouvez également cliquer sur <img> sur les boutons <em>Edit Sprite</em> <img> ou <em>Edit Image</em> <img> pour modifier les images du <span class="notranslate">sprite</span> lui-même ou de l'actif <span class="notranslate">sprite</span>. Cela peut être plus rapide que de trouver d'abord le <span class="notranslate">sprite</span> dans le navigateur d'actifs et d'indiquer ensuite que vous voulez le modifier.</p>
+  <p>Une fois que vous avez ajouté ou créé le site <span class="notranslate">sprite</span>, vous pouvez modifier quelques autres propriétés de l'objet, par exemple s'il doit être <strong>visible </strong>ou non ou quel type de <strong>masque de collision</strong> il doit avoir. Pour les jeux simples, vous n'avez probablement pas besoin de modifier quoi que ce soit ici et vous pouvez maintenant ajouter des <strong>événements </strong>à l'objet.</p>
+  <p>Les événements sont des moments discrets dans la boucle du jeu où les choses se produisent en fonction de ce que vous avez programmé pour elles. <span data-keyref="GameMaker Name">GameMaker</span> fonctionne avec des cycles de ces événements - du moment où une pièce est commencée au moment où elle est terminée, une boucle de jeu est en cours d'exécution où, à chaque étape, une série d'événements est exécutée, et vous pouvez choisir de placer du code <span class="notranslate">GML</span> ou des actions visuelles <span class="notranslate">GML</span> dans vos instances qui répondent à ces événements (une <strong>étape </strong>est un moment du temps de jeu, régi par le paramètre de vitesse du jeu - également appelé &quot;frame&quot;).</p>
+  <p>Pour ajouter un événement, vous cliquez sur <img> sur le bouton Ajouter un événement :</p>
+  <p><img alt="Add Sprite Icon " class="icon" height="24" src="../assets/Images/Icons/Icon_AddSound.png" width="31" /></p>
+  <p>Ci-dessus, vous pouvez voir toutes les différentes <strong>catégories d'événements</strong>, dont certaines contiennent d'autres sous-catégories. Nous n'allons pas passer en revue tous les événements ici, mais nous allons couvrir brièvement les cinq plus importants :</p>
   <table class="icons">
     <tbody>
       <tr>
-        <td class="icons"><img alt="Icon Create Event" src="../assets/Images/Icons/Icon_Event_Create.png" /></td>
-        <td class="icons"><strong>Create Event</strong></td>
-        <td class="text">This event happens when an instance of the object is first created, and is the very first thing that happens within an instance that has been placed in the room through the room editor when a room is entered. This means that this event is the ideal place to initialize variables, start Timelines, set paths etc... and do anything else that generally only needs to be done once or only when an instance first appears in the room.</td>
+        <td class="icons"><img alt="The Asset Explorer" class="center" src="../assets/Images/QS_Guide/QS_AssetExplorer.png" /></td>
+        <td class="icons"><strong>Créer un événement</strong></td>
+        <td class="text">Cet événement se produit lorsqu'une instance de l'objet est créée pour la première fois, et c'est la toute première chose qui se produit dans une instance qui a été placée dans la room via l'éditeur de room lorsqu'on entre dans une room. Cela signifie que cet événement est l'endroit idéal pour initialiser des variables, démarrer des lignes de temps, définir des chemins, etc... et faire tout ce qui ne doit généralement être fait qu'une fois ou seulement lorsqu'une instance apparaît pour la première fois dans la room.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Icon Step Event" src="../assets/Images/Icons/Icon_Event_Step.png" /></td>
-        <td class="icons"><strong>Step Event</strong></td>
-        <td class="text"><span data-keyref="GameMaker Name">GameMaker</span> splits game time into steps with the game speed defining how many of these steps there are supposed to be per second. A step, is basically the loop that runs constantly with all the events being checked and triggered as necessary while the game runs, so as you can imagine, the Step Event is an event that is checked every single step of the game while the instance exists. Note that the Step Event category has three sub-categories to &quot;fine tune&quot; timing within the instance, but in general you will use the main Step Event most.</td>
+        <td class="icons"><img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /></td>
+        <td class="icons"><strong>Evénement d'étape</strong></td>
+        <td class="text"><span data-keyref="GameMaker Name">GameMaker</span> divise le temps de jeu en étapes, la vitesse du jeu définissant le nombre d'étapes par seconde. Une étape, c'est en fait la boucle qui tourne constamment avec tous les événements vérifiés et déclenchés si nécessaire pendant le déroulement du jeu, donc comme vous pouvez l'imaginer, l'événement Step est un événement qui est vérifié à chaque étape du jeu pendant que l'instance existe. Notez que la catégorie Step Event a trois sous-catégories pour &quot;affiner&quot; le timing dans l'instance, mais en général vous utiliserez le Step Event principal le plus souvent.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Icon Collision Event" src="../assets/Images/Icons/Icon_Event_Collision.png" /></td>
-        <td class="icons"><strong>Collision Event</strong></td>
-        <td class="text">Obviously when making a game, it is very important that you know when two (or more) instances of an object have collided, and for that we have the collision event. This is an event that you place in an object and then specify against which other object you should be checking for collisions. Once you have added the event and chosen the object to check for you can add GML code or GML Visual to resolve the collision.</td>
+        <td class="icons"><img alt="New Sprite Icon" class="icon" src="../assets/Images/Icons/Icon_NewSprite.png" /></td>
+        <td class="icons"><strong>Événement de collision</strong></td>
+        <td class="text">Il est évident que lorsque vous créez un jeu, il est très important que vous sachiez quand deux instances (ou plus) d'un objet sont entrées en collision, et pour cela nous avons l'événement de collision. Il s'agit d'un événement que vous placez dans un objet, puis spécifiez l'autre objet avec lequel vous devez vérifier les collisions. Une fois que vous avez ajouté l'événement et choisi l'objet à vérifier, vous pouvez ajouter le code <span class="notranslate">GML</span> ou <span class="notranslate">GML</span> Visual pour résoudre la collision.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Icon Draw Event" src="../assets/Images/Icons/Icon_Event_Draw.png" /></td>
-        <td class="icons"><strong>Draw Event</strong></td>
-        <td class="text">There are multiple different Draw Events within the draw event category, but the one you use most is the one at the top simply called &quot;Draw&quot;. This general draw event will be called, like the step event, every game frame, but it works in two different ways. The first is when you don&#39;t add this event to the object... When there is no <em>specified </em>Draw Event, then <span data-keyref="GameMaker Name">GameMaker</span> will default to drawing the sprite assigned to the object, using any transforms that have been applied elsewhere in the object (like to change its size or alpha blending), so even when no Draw Event is listed in the Events list, it is still being run and will still draw to the screen when an instance is placed in a room. The second way it works is when you add the event itself and include any GML or GML Visual in it. Adding something to the event tells <span data-keyref="GameMaker Name">GameMaker</span> &quot; <em>I want to control what you draw for instances of this object</em>&quot; and it completely over-rides the default draw. This means that you can have an object with a sprite assigned, then set the draw event to draw text and the sprite will not be drawn as you have not told <span data-keyref="GameMaker Name">GameMaker</span> to draw it, although the text will be.</td>
+        <td class="icons"><img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /></td>
+        <td class="icons"><strong>Événement de tirage au sort</strong></td>
+        <td class="text">Il existe plusieurs événements de tirage au sort différents dans la catégorie des événements de tirage au sort, mais celui que vous utilisez le plus est celui qui se trouve en haut et qui est simplement appelé &quot;Tirage au sort&quot;. Cet événement général de dessin sera appelé, comme l'événement step, à chaque image de jeu, mais il fonctionne de deux manières différentes. La première est lorsque vous n'ajoutez pas cet événement à l'objet... Si aucun Draw Event n'est <em>spécifié </em>, <span data-keyref="GameMaker Name">GameMaker</span> dessinera par défaut le <span class="notranslate">sprite</span> assigné à l'objet, en utilisant toutes les transformations qui ont été appliquées ailleurs dans l'objet (comme pour modifier sa taille ou le mélange alpha). Ainsi, même si aucun Draw Event n'est listé dans la liste des événements, il est toujours exécuté et sera toujours dessiné à l'écran lorsqu'une instance sera placée dans une room. La deuxième façon dont cela fonctionne est lorsque vous ajoutez l'événement lui-même et que vous y incluez n'importe quel visuel <span class="notranslate">GML</span> ou <span class="notranslate">GML</span>. En ajoutant quelque chose à l'événement, vous dites à <span data-keyref="GameMaker Name">GameMaker</span> &quot; <em>Je veux contrôler ce que vous dessinez pour les instances de cet objet</em>&quot; et cela remplace complètement le dessin par défaut. Cela signifie que vous pouvez avoir un objet avec un <span class="notranslate">sprite</span> assigné, puis définir l'événement draw pour dessiner du texte et le <span class="notranslate">sprite</span> ne sera pas dessiné car vous n'avez pas demandé à <span data-keyref="GameMaker Name">GameMaker</span> de le dessiner, mais le texte le sera.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Icon Destroy Event" src="../assets/Images/Icons/Icon_Event_Destroy.png" /></td>
-        <td class="icons"><strong>Destroy Event</strong></td>
-        <td class="text">This event is the very last event to be executed when an instance is destroyed. It is often overlooked when adding behaviours to objects, but it can be very useful - for example, for creating explosion or particle effects when an enemy is killed, or for re-spawning a new instance of the object in another part of the room, or even for adding points onto a score.</td>
+        <td class="icons"><img alt="Edit Sprite Icon" class="icon" src="../assets/Images/Icons/Icon_EditSprite.png" /></td>
+        <td class="icons"><strong>Détruire l'événement</strong></td>
+        <td class="text">Cet événement est le tout dernier événement à être exécuté lorsqu'une instance est détruite. Il est souvent négligé lors de l'ajout de comportements aux objets, mais il peut être très utile - par exemple, pour créer des effets d'explosion ou de particules lorsqu'un ennemi est tué, ou pour faire réapparaître une nouvelle instance de l'objet dans une autre partie de la pièce, ou même pour ajouter des points à un score.</td>
       </tr>
     </tbody>
   </table>
   <p>
     <!--</div>-->
   </p>
-  <p>For further information on all the different events, please see <a href="../The_Asset_Editors/Object_Properties/Object_Events.htm">here</a>.</p>
-  <p>You can then click on an event in the list to add it to the object.</p>
+  <p>Pour plus d'informations sur les différents événements, veuillez <a href="../The_Asset_Editors/Object_Properties/Object_Events.htm">cliquer ici</a>.</p>
+  <p>Vous pouvez ensuite cliquer sur un événement de la liste pour l'ajouter à l'objet.</p>
   <div data-conref="../assets/snippets/Visual_Code_Choice.hts"> </div>
-  <p>Adding an event will open either the <span data-keyref="GML_Code">GML Code</span> or <span data-keyref="GML_Visual">GML Visual</span> editor, depending what type of event you are creating. In this window you can now add the code or actions that you wish to be performed each time that event is triggered within the game loop.</p>
-  <p><img alt="Object Editor Chained Windows" class="center" src="../assets/Images/QS_Guide/QS_ObjectEditor_Chain.png" /></p>
-  <p>You can find more information about using GML in your object events from the two pages given below:</p>
+  <p>L'ajout d'un événement ouvre l'éditeur <span data-keyref="GML_Code">GML Code</span> ou <span data-keyref="GML_Visual">GML Visual</span>, selon le type d'événement que vous créez. Dans cette fenêtre, vous pouvez maintenant ajouter le code ou les actions que vous souhaitez exécuter chaque fois que cet événement est déclenché dans la boucle du jeu.</p>
+  <p><img alt="Edit Image Icon" class="icon" src="../assets/Images/Icons/Icon_EditImage.png" /></p>
+  <p>Vous pouvez trouver plus d'informations sur l'utilisation de <span class="notranslate">GML</span> dans vos événements d'objets sur les deux pages indiquées ci-dessous :</p>
   <ul class="colour">
     <li><a data-xref="{title}" href="../Drag_And_Drop/Drag_And_Drop_Index.htm">GML Visual</a></li>
-    <li><a data-xref="{title}" href="../GameMaker_Language/GameMaker_Language_Index.htm">GML Code</a></li>
+    <li><a data-xref="{title}" href="../GameMaker_Language/GameMaker_Language_Index.htm">Code GML</a></li>
   </ul>
-  <p>And you can find a full explanation of all the different parts of the Object Editor here:</p>
+  <p>Vous trouverez une explication complète des différentes parties de l'éditeur d'objets ici :</p>
   <ul class="colour">
-    <li><a href="../The_Asset_Editors/Objects.htm">Editors: The Object Editor</a></li>
+    <li><a href="../The_Asset_Editors/Objects.htm">Éditeurs : L'éditeur d'objets</a></li>
   </ul>
-  <p>The next part of this guide will look at one more resource type, <strong>Sequences</strong>...</p>
-  <p> </p>
-  <p> </p>
+  <p>La prochaine partie de ce guide se penchera sur un autre type de ressource, les <strong>séquences</strong>...</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Sequences.htm">Sequences</a></div>
+        <div style="float:left">Retour : <a href="../Content.htm">Index</a></div>
+        <div style="float:right">Suivant : <a href="Sequences.htm">Séquences</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Objects And Instances

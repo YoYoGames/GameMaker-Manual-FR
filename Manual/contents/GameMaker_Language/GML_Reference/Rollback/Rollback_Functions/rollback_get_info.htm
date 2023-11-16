@@ -7,7 +7,7 @@
   <title>rollback_get_info</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Reference page for rollback_get_info" />
@@ -17,8 +17,8 @@
 </head>
 <body>
   <h1>rollback_get_info</h1>
-  <p>This function returns a struct containing information about a player. This should only be used when managing player instances manually. If you&#39;re using <a href="rollback_define_player.htm"><span class="inline">rollback_define_player()</span></a>, then each player instance will automatically receive this information as <a href="../Rollback_Variables/Rollback_Variables.htm">variables</a>.</p>
-  <p>The function takes the ID of the player as an argument, and returns a struct with the following variables:</p>
+  <p>Cette fonction renvoie un <span class="notranslate">struct</span> contenant des informations sur un joueur. Elle ne doit être utilisée que pour gérer manuellement les instances de joueurs. Si vous utilisez <a href="rollback_define_player.htm"><span class="inline">rollback_define_player()</span></a>alors chaque instance de joueur recevra automatiquement ces informations sous forme de <a href="../Rollback_Variables/Rollback_Variables.htm">variables</a>.</p>
+  <p>La fonction prend l'ID du joueur comme argument, et renvoie un <span class="notranslate">struct</span> avec les variables suivantes :</p>
   <table>
     <tbody>
       <tr>
@@ -28,42 +28,42 @@
       </tr>
       <tr>
         <td><span class="inline">player_avatar_url</span></td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>URL pointing to the player&#39;s avatar image</td>
+        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Chaîne de caractères</a></span></td>
+        <td>URL pointant vers l'image de l'avatar du joueur</td>
       </tr>
       <tr>
         <td><span class="inline">player_avatar_sprite</span></td>
         <td><span data-keyref="Type_Asset_Sprite"><a href="../../../../../The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>Sprite containing the player&#39;s avatar</td>
+        <td>Sprite contenant l'avatar du joueur</td>
       </tr>
       <tr>
         <td><span class="inline">player_name</span></td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The name of the player</td>
+        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Chaîne de caractères</a></span></td>
+        <td>Le nom du joueur</td>
       </tr>
       <tr>
         <td><span class="inline">player_type</span></td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>Tells whether the player is signed-into GX.games or not<br />
-          <br />
-          Will be <span class="inline2">&quot;Guest&quot;</span> for guest users, and <span class="inline2">&quot;User&quot;</span> for signed-in users
+        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Chaîne de caractères</a></span></td>
+        <td>Indique si le joueur est connecté à GX.games ou non.<br>
+          <br>
+          Sera <span class="inline2">&quot;Guest&quot;</span> pour les utilisateurs invités, et <span class="inline2">&quot;User&quot;</span> pour les utilisateurs connectés.
         </td>
       </tr>
       <tr>
         <td><span class="inline">player_user_id</span></td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The ID of the player on GX.games</td>
+        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Chaîne de caractères</a></span></td>
+        <td>L'ID du joueur sur GX.games</td>
       </tr>
       <tr>
         <td><span class="inline">player_prefs</span></td>
-        <td><span data-keyref="Type_Any"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Any</a></span></td>
-        <td>The <a href="rollback_set_player_prefs.htm">preferences</a> set for the player</td>
+        <td><span data-keyref="Type_Any"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Tout</a></span></td>
+        <td>Les <a href="rollback_set_player_prefs.htm">préférences</a> définies pour le lecteur</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">rollback_get_info(player_id);</p>
   <table>
     <colgroup>
@@ -73,31 +73,31 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>player_id</td>
+        <td><span class="notranslate">player_id</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The ID of the player for which information will be returned.</td>
+        <td><span class="notranslate">The ID of the player for which information will be returned.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Struct"><a href="../../../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span></p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Functions.htm">Rollback Functions</a></div>
-        <div>Next: <a data-xref="{title}" href="rollback_get_input.htm">rollback_get_input</a></div>
+        <div>Retour : <a data-xref="{title}" href="Rollback_Functions.htm">Fonctions de retour en arrière</a></div>
+        <div>Suivant : <a data-xref="{title}" href="rollback_get_input.htm">rollback_get_input</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_get_info

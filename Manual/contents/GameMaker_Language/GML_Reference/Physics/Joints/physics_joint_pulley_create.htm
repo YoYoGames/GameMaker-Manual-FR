@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physics_joint_pulley_create</title>
+  <title>physique_joint_poulies_créer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_joint_pulley_create" />
   <meta name="rh-index-keywords" content="physics_joint_pulley_create" />
@@ -15,87 +15,87 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_pulley_create</h1>
-  <p>The pulley joint is used to connect two instances within the physics world in such a way that moving one will directly influence the movement of the other. These joints are first anchored in the world space at two points, each one connected to an instance at its center of mass. This can be changed by setting the local anchor x/y coordinates relative to the origin of the instance, meaning that the actual connection from the instance to the physics world anchor point can be offset somewhere other than its origin. The following image illustrates this:</p>
-  <p><img alt="Pulley joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/pulley_joint_image.png" />If you look at inst2 you can see that its local anchor point has been offset 20 pixels to the &quot;left&quot; of its origin (Remember! The world anchor points are defined using the room coordinates, while the local anchor points are defined relative to the origin of the instance). You can also specify a ratio for the pulley joint, which tells one side or the other to move faster, with a value below 1 making the first instance move faster (E.G. 0.5 will make it move twice as fast) and a value above 1 making the second instance move faster (E.G. 2 will make it move twice as fast).</p>
-  <p>As with all the joints, if you set the &quot;col&quot; value to <span class="inline">true</span> then the two instances can interact and collide with each other but <i>only</i> if they have collision events, however if it is set to <span class="inline">false</span>, they will not collide no matter what.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>physique_joint_poulies_créer</h1>
+  <p>Le joint de poulie est utilisé pour connecter deux instances dans le monde physique de telle sorte que le déplacement de l'une influence directement le mouvement de l'autre. Ces articulations sont d'abord ancrées dans l'espace mondial en deux points, chacun étant connecté à une instance au niveau de son centre de masse. Ceci peut être modifié en réglant les coordonnées x/y de l'ancrage local par rapport à l'origine de l'instance, ce qui signifie que la connexion réelle de l'instance au point d'ancrage du monde physique peut être décalée ailleurs que sur son origine. L'image suivante illustre cela :</p>
+  <p><img>Si vous regardez inst2, vous pouvez voir que son point d'ancrage local a été décalé de 20 pixels vers la &quot;gauche&quot; de son origine (Rappelez-vous ! Les points d'ancrage mondiaux sont définis à l'aide des coordonnées de la pièce, tandis que les points d'ancrage locaux sont définis par rapport à l'origine de l'instance). Vous pouvez également spécifier un ratio pour le joint de la poulie, qui indique à un côté ou à l'autre de se déplacer plus rapidement, une valeur inférieure à 1 faisant bouger la première instance plus vite (par exemple 0.5 la fera bouger deux fois plus vite) et une valeur supérieure à 1 faisant bouger la seconde instance plus vite (par exemple 2 la fera bouger deux fois plus vite).</p>
+  <p>Comme pour toutes les articulations, si vous définissez la valeur &quot;col&quot; sur <span class="inline">true</span>, les deux instances peuvent interagir et entrer en collision l'une avec l'autre, mais <i>seulement</i> si elles ont des événements de collision. Cependant, si elle est définie sur <span class="inline">false</span>, elles n'entreront pas en collision, quoi qu'il arrive.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">physics_joint_pulley_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, l_anchor1_x, l_anchor1_y, l_anchor2_x, l_anchor2_y, ratio, col)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>inst1</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The first instance to connect with the joint</td>
+        <td><span class="notranslate">inst1</span></td>
+        <td><span data-keyref="Type_ID_Instance">ID de l'instance</span></td>
+        <td><span class="notranslate">The first instance to connect with the joint</span></td>
       </tr>
       <tr>
-        <td>inst2</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The second instance to connect with the joint</td>
+        <td><span class="notranslate">inst2</span></td>
+        <td><span data-keyref="Type_ID_Instance">ID de l'instance</span></td>
+        <td><span class="notranslate">The second instance to connect with the joint</span></td>
       </tr>
       <tr>
-        <td>w_anchor1_x</td>
+        <td><span class="notranslate">w_anchor1_x</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x coordinate where the first part of joint is anchored, within the game world</td>
+        <td><span class="notranslate">The x coordinate where the first part of joint is anchored, within the game world</span></td>
       </tr>
       <tr>
-        <td>w_anchor1_y</td>
+        <td><span class="notranslate">w_anchor1_y</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y coordinate where the first part of the joint is anchored, within the game world</td>
+        <td><span class="notranslate">The y coordinate where the first part of the joint is anchored, within the game world</span></td>
       </tr>
       <tr>
-        <td>w_anchor2_x</td>
+        <td><span class="notranslate">w_anchor2_x</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x coordinate where the second part of the joint is anchored, within the game world</td>
+        <td><span class="notranslate">The x coordinate where the second part of the joint is anchored, within the game world</span></td>
       </tr>
       <tr>
-        <td>w_anchor2_y</td>
+        <td><span class="notranslate">w_anchor2_y</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y coordinate where the second part of the joint is anchored, within the game world</td>
+        <td><span class="notranslate">The y coordinate where the second part of the joint is anchored, within the game world</span></td>
       </tr>
       <tr>
-        <td>l_anchor1_x</td>
+        <td><span class="notranslate">l_anchor1_x</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The local x coordinate where joint 1 is anchored to the first instance</td>
+        <td><span class="notranslate">The local x coordinate where joint 1 is anchored to the first instance</span></td>
       </tr>
       <tr>
-        <td>l_anchor1_y</td>
+        <td><span class="notranslate">l_anchor1_y</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The local y coordinate where joint 1 is anchored to the first instance</td>
+        <td><span class="notranslate">The local y coordinate where joint 1 is anchored to the first instance</span></td>
       </tr>
       <tr>
-        <td>l_anchor2_x</td>
+        <td><span class="notranslate">l_anchor2_x</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The local x coordinate where joint 2 is anchored to the second instance</td>
+        <td><span class="notranslate">The local x coordinate where joint 2 is anchored to the second instance</span></td>
       </tr>
       <tr>
-        <td>l_anchor2_y</td>
+        <td><span class="notranslate">l_anchor2_y</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The local y coordinate where joint 2 is anchored to the second instance</td>
+        <td><span class="notranslate">The local y coordinate where joint 2 is anchored to the second instance</span></td>
       </tr>
       <tr>
-        <td>ratio</td>
+        <td><span class="notranslate">ratio</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>Set the velocity ratio between two instances</td>
+        <td><span class="notranslate">Set the velocity ratio between two instances</span></td>
       </tr>
       <tr>
-        <td>col</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the two instances can collide (true) or not (false)</td>
+        <td><span class="notranslate">col</span></td>
+        <td><span data-keyref="Type_Bool">Booléen</span></td>
+        <td><span class="notranslate">Whether the two instances can collide (true) or not (false)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var t_fix, inst1, inst2;<br />
     t_fix = physics_fixture_create();<br />
     physics_fixture_set_circle_shape(t_fix, 20);<br />
@@ -105,18 +105,18 @@
     physics_fixture_bind(t_fix, inst2);<br />
     physics_joint_pulley_create(inst1, inst2, 150, room_height - 140, 300, room_height - 140, 0, 0, 0, 0, 2, 0);<br />
     physics_fixture_delete(t_fix);</p>
-  <p>The above code creates and defines a new fixture, creates two instances of &quot;obj_Block&quot;, and then binds this fixture two them. It then goes on to define a pulley joint between these instance, with no offset for the joints, a ratio of 2:1 (meaning that inst2 will move faster). No collisions occur between the two instances in the pulley.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus crée et définit un nouveau dispositif, crée deux instances de &quot;obj_Block&quot;, puis lie ce dispositif à celles-ci. Il définit ensuite une poulie entre ces instances, sans décalage des articulations, avec un rapport de 2:1 (ce qui signifie que l'instance 2 se déplacera plus rapidement). Aucune collision ne se produit entre les deux instances dans la poulie.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
-        <div style="float:right">Next: <a href="physics_joint_gear_create.htm">physics_joint_gear_create</a></div>
+        <div style="float:left">Dos : <a href="Joints.htm">Articulations</a></div>
+        <div style="float:right">Suivant : <a href="physics_joint_gear_create.htm"><span class="notranslate">physics_joint_gear_create</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_pulley_create

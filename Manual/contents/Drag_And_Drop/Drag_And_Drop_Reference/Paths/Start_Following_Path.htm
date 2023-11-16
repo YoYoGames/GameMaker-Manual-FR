@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Start Following Path</title>
+  <title>Commencer à suivre le chemin</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Start Following Path action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Start Following Path" />
@@ -14,66 +14,66 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Start Following Path Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/i_Paths_Start_Following_Path.png" width="32" /> Start Following Path</h1>
-  <p>This action will start an instance following along a path that has been created in the Asset Browser. You would then use this action to tell your instance which path to follow, what speed to follow the path (measured in pixels per game frame), how to
-    behave when it reaches the end of the path, and whether to follow the absolute or relative path position. When setting the speed you can use negative values to signify that the instance should follow the path in reverse and it&#39;s worth noting that
-    the speed you set here can be modified by the speed modifier set in the path editor for each path point, so if you set the path speed to 2 and in the path one of the points has a speed modifier of 200%, then the actual speed at that point will be
-    4 pixels per game frame.</p>
-  <p>Once you&#39;ve set the initial path speed you can set how the instance should behave when it reaches the end of the path from the following options (note that when an instance reaches the end of a path this will also trigger an <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Other - Path Ended Event</a>):</p>
+  <h1><img> Commencer à suivre le chemin</h1>
+  <p>Cette action démarrera une instance suivant un chemin qui a été créé dans le navigateur d'actifs. Vous utiliserez ensuite cette action pour indiquer à votre instance le chemin à suivre, la vitesse à laquelle elle doit suivre le chemin (mesurée en pixels par image de jeu), comment elle doit se comporter lorsqu'elle atteint la fin du chemin et si elle doit suivre la position absolue ou relative du chemin.
+    comment se comporter lorsqu'elle atteint la fin du chemin, et si elle doit suivre la position absolue ou relative du chemin. Lorsque vous définissez la vitesse, vous pouvez utiliser des valeurs négatives pour signifier que l'instance doit suivre le chemin en sens inverse et il est intéressant de noter que
+    la vitesse que vous définissez ici peut être modifiée par le modificateur de vitesse défini dans l'éditeur de chemin pour chaque point du chemin, ainsi si vous définissez la vitesse du chemin à 2 et que dans le chemin un des points a un modificateur de vitesse de 200%, alors la vitesse réelle à ce point sera de
+    4 pixels par image de jeu.</p>
+  <p>Une fois que vous avez défini la vitesse initiale du chemin, vous pouvez définir comment l'instance doit se comporter lorsqu'elle atteint la fin du chemin à partir des options suivantes (notez que lorsqu'une instance atteint la fin d'un chemin, cela déclenche également un <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">événement Other - Path Ended</a>) :</p>
   <ul class="colour">
-    <li><b>Stop</b>: End the path, stopping the instance on the last path point.</li>
-    <li><b>Restart</b>: Continue the path from the start, jumping to the start position again if the path is not marked as closed in the Path Editor.</li>
-    <li><b>Loop</b>: Continue from the current position to run the path again.</li>
-    <li><b>Reverse</b>: Go backwards along the path again (achieved by reversing the path follow speed), and when it reaches the start of the path, it will reverse again, etc...</li>
+    <li><b>Stop</b>: Termine le chemin, en arrêtant l'instance sur le dernier point du chemin.</li>
+    <li><b>Redémarrer</b>: Continuer le chemin depuis le début, en revenant à la position de départ si le chemin n'est pas marqué comme fermé dans l'éditeur de chemin.</li>
+    <li><b>Boucle</b>: Continuer à partir de la position actuelle pour parcourir à nouveau le chemin.</li>
+    <li><b>Inverser</b>: Revenir en arrière le long du chemin (en inversant la vitesse de suivi du chemin), et lorsqu'il atteindra le début du chemin, il fera à nouveau marche arrière, etc...</li>
   </ul>
-  <p>Finally, you can flag the path as being <i>Absolute </i>or not. By default the instance will start following the path from its current position (the relative position), but if you flag the <em>Absolute</em> checkbox then it will start following the
-    path exactly as you designed and placed it in the Path Editor (the absolute position). The image below illustrates this:</p>
-  <p><img alt="Path Relative Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/path_relative_image.png" />As you can see in the image above, the two instances are following the <i>same</i> path started
-    with this action, but one of the instances is following the <i>absolute</i> path while the other is following the <i>relative</i> path. It should be noted that when <em>Absolute </em>is flagged the instance will &quot;jump&quot; to the start of the
-    path no matter where in the room it is placed.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Path Start Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/a_Paths_Start_Following_Path.png" /></p>
-  <h4>Arguments:</h4>
+  <p>Enfin, vous pouvez indiquer que le chemin est <i>absolu </i>ou non. Par défaut, l'instance commencera à suivre le chemin à partir de sa position actuelle (position relative), mais si vous cochez la case <em>Absolute</em>, elle commencera à suivre le chemin exactement comme vous l'avez conçu et placé dans l'éditeur de chemin (position absolue).
+    chemin exactement comme vous l'avez conçu et placé dans l'éditeur de chemin (la position absolue). L'image ci-dessous illustre cela :</p>
+  <p><img>Comme vous pouvez le voir dans l'image ci-dessus, les deux instances suivent le <i>même</i> chemin commencé
+    avec cette action, mais l'une des instances suit le chemin <i>absolu</i> tandis que l'autre suit le chemin <i>relatif</i>. Il est à noter que lorsque l'option <em>Absolu </em>est activée, l'instance &quot;sautera&quot; au début du chemin, peu importe où elle se trouve dans la pièce.
+    chemin, quel que soit l'endroit de la pièce où elle est placée.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Start Following Path Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/i_Paths_Start_Following_Path.png" width="32" /></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Path</td>
-        <td>The path asset to start following</td>
+        <td><span class="notranslate">Path</span></td>
+        <td>L'actif de chemin à commencer à suivre</td>
       </tr>
       <tr>
-        <td>Speed</td>
-        <td>The speed (in pixels per game frame) to follow the path</td>
+        <td><span class="notranslate">Speed</span></td>
+        <td>La vitesse (en pixels par image de jeu) pour suivre la trajectoire</td>
       </tr>
       <tr>
-        <td>On End</td>
-        <td>The response to reaching the end of the path</td>
+        <td><span class="notranslate">On End</span></td>
+        <td>La réponse à l'arrivée au bout du chemin</td>
       </tr>
       <tr>
-        <td>Absolute</td>
-        <td>Whether to start at absolute or relative position</td>
+        <td><span class="notranslate">Absolute</span></td>
+        <td>Si la position de départ est absolue ou relative</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Path Start Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Paths/e_Paths_Start_Following_Path.png" />The above action block will make the calling instance follow a path (starting at its absolute
-    position and continuing at end) when a key is pressed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le bloc d'action ci-dessus fera en sorte que l'instance appelante suive une trajectoire (commençant à sa position
+    et continue à la fin) lorsqu'une touche est pressée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Path_Actions.htm">Path Actions</a></div>
-        <div style="float:right">Next: <a href="Stop_Following_Path.htm">Stop Following Path</a></div>
+        <div style="float:left">Retour : <a href="Path_Actions.htm">Actions sur les chemins</a></div>
+        <div style="float:right">Suivant : <a href="Stop_Following_Path.htm">Arrêtez de suivre le chemin</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Start Following Path

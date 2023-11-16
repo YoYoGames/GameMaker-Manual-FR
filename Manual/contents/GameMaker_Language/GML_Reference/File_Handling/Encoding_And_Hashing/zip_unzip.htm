@@ -6,7 +6,7 @@
   <title>zip_unzip</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for zip_unzip" />
   <meta name="rh-index-keywords" content="zip_unzip" />
@@ -16,54 +16,49 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>zip_unzip</h1>
-  <p>This function will open a stored zip file and extract its contents to the given directory.</p>
-  <p>If you do not supply a full path to the ZIP directory, then the current drive <i>root</i> will be used, and if you want to place it in a relative path to the game bundle working directory, then you should use the <a href="../File_Directories/working_directory.htm"><span class="inline">working_directory</span></a> variable as part of the path (relative paths using &quot;.&quot; or &quot;..&quot; will not work so should be avoided). Note too that the zip must be either part of the game bundle (i.e.: an <a href="../../../../Settings/Included_Files.htm">Included File</a>) or have been downloaded to the storage area using <a href="../../Asynchronous_Functions/HTTP/http_get_file.htm">http_get_file()</a>.</p>
-  <p>The function will return a value indicating the number of files extracted, or it will return 0 or less if the extraction has failed.</p>
-  <p>This function is synchronous and may cause your game to freeze while it extracts the ZIP. Use <span class="inline3_func"><a data-xref="{title}" href="zip_unzip_async.htm">zip_unzip_async</a></span> for extracting asynchronously.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction ouvrira un fichier zip stocké et extraira son contenu dans le répertoire donné. Notez que si vous ne fournissez pas un chemin complet vers le répertoire ZIP, la <i>racine du</i> lecteur actuel sera utilisée, et si vous voulez le placer dans un chemin relatif au répertoire de travail du bundle du jeu, vous devez utiliser la variable <a href="../File_Directories/working_directory.htm"><span class="inline">working_directory</span></a> comme partie du chemin (les chemins relatifs utilisant &quot;.&quot; ou &quot;..&quot; ne fonctionneront pas comme prévu et doivent être évités). Notez également que le fichier zip doit faire partie du paquet de jeu (c'est-à-dire un <a href="../../../../Settings/Included_Files.htm">fichier inclus</a>) ou avoir été téléchargé dans la zone de stockage à l'aide de <a href="../../Asynchronous_Functions/HTTP/http_get_file.htm">http_get_file()</a>.</p>
+  <p>La fonction renvoie une valeur indiquant le nombre de fichiers extraits, ou elle renvoie 0 ou moins si l'extraction a échoué.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">zip_unzip(zip_file, target_directory)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
-      </tr>
+     </tr>
       <tr>
-        <td>zip_file</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The zip file to open</td>
-      </tr>
+        <td><span class="notranslate">zip_file</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The zip file to open</span></td>
+     </tr>
       <tr>
-        <td>target_directory</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The target directory to extract the files to</td>
-      </tr>
+        <td><span class="notranslate">target_directory</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The target directory to extract the files to</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Real"></span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var num = zip_unzip(&quot;/downloads/level_data.zip&quot;, working_directory + &quot;extracted/&quot;);<br />
     if num &lt;= 0<br />
     {<br />
         show_debug_message(&quot;Extraction Failed!&quot;);<br />
     }</p>
-  <p>The above code will open the zip file stored in the directory &quot;downloads&quot; and extract its contents to the directory &quot;extracted&quot; (creating that directory if it doesn&#39;t already exist) and then check to see that the extraction has been correct, showing a debug message should it fail.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus ouvrira le fichier zip stocké dans le répertoire &quot;downloads&quot; et extraira son contenu dans le répertoire &quot;extracted&quot; (en créant ce répertoire s'il n'existe pas déjà), puis vérifiera que l'extraction a été correcte, en affichant un message de débogage en cas d'échec.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Encoding_And_Hashing.htm">Encoding And Hashing</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="zip_unzip_async.htm">zip_unzip_async</a></div>
+        <div style="float:left">Retour : <a href="Encoding_And_Hashing.htm">Codage des fichiers</a></div>
+        <div style="float:right">Suivant : <a href="load_csv.htm"><span class="notranslate">load_csv</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 zip_unzip

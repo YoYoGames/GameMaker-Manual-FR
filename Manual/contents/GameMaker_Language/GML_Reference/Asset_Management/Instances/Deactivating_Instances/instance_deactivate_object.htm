@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>instance_deactivate_object</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>instance_désactivation_objet</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function instance_deactivate_object" />
   <meta name="rh-index-keywords" content="instance_deactivate_object" />
@@ -15,49 +15,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">instance_deactivate_object</span></h1>
-  <p>With this function you can deactivate a single instance or all instances of a specific object from all those that have been activated previously. Note that if you have deactivated an instance or object that has been flagged as <b>Persistent</b>, then you will need to reactivate it again with the function <span class="inline3_func"><a data-xref="{title}" href="instance_activate_object.htm">instance_activate_object</a></span> before changing room, otherwise it will <i>not</i> be carried over and will be discarded instead. Note too that deactivation is not instantaneous, and an instance that has been deactivated in this way will not be considered to be inactive until the end of the event in which the function was called.</p>
-  <div data-conref="../../../../../assets/snippets/Note_Deactivate_On_Room_Start_Create_Event.hts"> </div>
-  <div data-conref="../../../../../assets/snippets/Note_Warning_Deactivating_Physics_Instances.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">instance_deactivate_object</span>(obj);</p>
+  <h1>instance_désactivation_objet</h1>
+  <p>Cette fonction vous permet de désactiver une seule instance ou toutes les instances d'un objet spécifique parmi toutes celles qui ont été activées précédemment. Notez que si vous avez désactivé une instance ou un objet qui a été marqué comme <b>Persistant</b>, alors vous devrez le réactiver à nouveau avec la fonction.
+    vous devrez le réactiver à nouveau avec la fonction <a href="instance_activate_object.htm"><span class="inline">instance_activate_object()</span></a> avant de changer de salle, sinon il <i>ne</i> sera <i>pas</i> reporté et sera éliminé. Notez également que la désactivation
+    n'est pas instantanée, et une instance qui a été désactivée de cette manière ne sera pas considérée comme inactive avant la fin de l'événement dans lequel la fonction a été appelée.</p>
+  <p class="note"><b>NOTE</b>: Si vous désactivez une instance au démarrage de la room (c'est-à-dire à partir du code de création de la room, ou à partir d'un événement de création d'une instance dans la room), toutes les instances qui sont placées dans la room à partir de l'éditeur de room <b>exécuteront toujours leur événement de création</b> avant d'être désactivées.</p>
+  <p class="note"><b>AVERTISSEMENT</b>: La désactivation des instances dont la physique est activée <b>n'</b> empêchera <b>PAS</b> leurs appareils d'interagir dans la simulation physique. Pour cela, vous devez définir leur <span style="font-size:1px;"><a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline">phy_active</span></a></span> variable
+    à <span class="inline">true</span> ou <span class="inline">false</span> lorsque vous activez/désactivez les instances.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">instance_deactivate_object(obj);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
-      </tr>
+     </tr>
       <tr>
-        <td>obj</td>
-        <td><span data-keyref="Type_Asset_Object"><a href="../../../../../../The_Asset_Editors/Objects.htm" target="_blank">Object Asset</a></span></td>
-        <td>The object or instance to deactivate (the keyword <b>all</b> can also be used).</td>
-      </tr>
+        <td><span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td>
+        <td><span class="notranslate">The object or instance to deactivate (the keyword <b>all</b> can also be used).</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code"><span data-field="title" data-format="default">instance_deactivate_object</span>(obj_Enemy);<br />
-    var _vx = camera_get_view_x(view_camera[0]);<br />
-    var _vy = camera_get_view_y(view_camera[0]);<br />
-    var _vw = camera_get_view_width(view_camera[0]);<br />
-    var _vh = camera_get_view_height(view_camera[0]);<br />
-    instance_activate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128, false);</p>
-  <p>The above code deactivates all instances of the object &quot;obj_Enemy&quot; and then activates a region within the room.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">instance_deactivate_object(obj_Enemy);<br/> var _vx = camera_get_view_x(view_camera[0]);<br/> var _vy = camera_get_view_y(view_camera[0]);<br/> var _vw = camera_get_view_width(view_camera[0]);<br/> var _vh = camera_get_view_height(view_camera[0]);<br/>    instance_activate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128, false);</p>
+  <p>Le code ci-dessus désactive toutes les instances de l'objet &quot;obj_Enemy&quot;, puis active une région dans la pièce.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Deactivating_Instances.htm">Deactivating Instances</a></div>
-        <div style="float:right">Next: <a href="instance_deactivate_region.htm">instance_deactivate_region</a></div>
+        <div style="float:left">Retour : <a href="Deactivating_Instances.htm">Désactiver les instances</a></div>
+        <div style="float:right">Suivant : <a href="instance_deactivate_region.htm"><span class="notranslate">instance_deactivate_region</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 instance_deactivate_object

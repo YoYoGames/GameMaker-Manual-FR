@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>tableau de bord des réalisations</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_load_leaderboard" />
+  <meta name="rh-index-keywords" content="achievement_load_leaderboard,achievement_leaderboard_info,achievement_filter_friends_only,achievement_filter_all_players" />
+  <meta name="search-keywords" content="achievement_load_leaderboard,achievement_leaderboard_info,achievement_filter_friends_only,achievement_filter_all_players" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tableau de bord des réalisations</h1>
+  <p>Cette fonction envoie une requête au serveur pour obtenir des informations sur le classement donné. Le classement doit avoir été créé précédemment dans le tableau de bord des développeurs de votre jeu et l'ID donné est celui que vous devez fournir comme premier argument
+    de la fonction. Elle déclenchera un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">événement social asynchrone de type</a> callback qui contient la carte <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>    map remplie avec les paires clé/valeur pertinentes. La clé <i>id</i> de cette <tt>carte DS</tt> est utilisée pour identifier le bon callback (il peut y avoir plus d'une fonction de déclenchement pour un événement asynchrone donné), et sera associée à la <b>constante</b> <tt>achievement_leaderboard_info</tt> ainsi qu'à un certain nombre d'autres paires clé/valeur pour chaque joueur. Le contenu exact de la carte est présenté ci-dessous :</p>
+  <p class="note"><b>REMARQUE</b>: cette fonction n'est disponible que pour <b>iOS</b>.</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - Pour cette fonction, il s'agit de <tt>achievement_leaderboard_info</tt>.</li>
+    <li>&quot;<b>leaderboardid</b>&quot; - L'ID unique du leaderboard tel que défini dans le tableau de bord du fournisseur.</li>
+    <li>&quot;<b>numentries</b>&quot; - Le nombre d'entrées dans le classement que vous avez reçues.</li>
+    <li>&quot;<b>PlayerN</b>&quot; - Le nom du joueur, où &quot;N&quot; est une valeur entière correspondant à sa position dans la liste des entrées du classement.</li>
+    <li>&quot;<b>PlayeridN</b>&quot; - L'identifiant unique du joueur, &quot;N&quot;.</li>
+    <li>&quot;<b>RankN</b>&quot; - Le rang du joueur &quot;N&quot; dans le classement.</li>
+    <li>&quot;<b>ScoreN</b>&quot; - Le score du joueur &quot;N&quot;.</li>
+  </ul>
+  <p>Vous pouvez spécifier la partie exacte du classement à afficher en indiquant une valeur d'indice minimale et maximale, et demander que les résultats soient filtrés pour ne récupérer que les scores de vos amis ou ceux affichés par tous les joueurs à l'aide des éléments suivants
+   <b>constantes de</b> filtre suivantes :</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">achievement_filter_friends_only </span></td>
+        <td>Obtenez uniquement les scores des amis des joueurs.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">achievement_filter_all_players </span></td>
+        <td>Obtenez tous les scores de tous les joueurs.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <h4><b>Syntaxe :</b></h4>
+  <p class="code">achievement_load_leaderboard(ident, minindex, maxindex, filter)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">ident</span></td>
+        <td>L'identifiant unique du classement tel qu'il apparaît sur le tableau de bord du développeur.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">minindex</span></td>
+        <td>La valeur d'index de départ pour obtenir les données du classement.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">maxindex</span></td>
+        <td>La valeur maximale de l'indice pour obtenir les données du classement.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">filter</span></td>
+        <td>Si vous voulez filtrer les résultats sur ceux qui sont sur votre liste d'amis ou sur tous les joueurs (voir la <b>description</b> ci-dessous).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple étendu :</h4>
+  <p>Le code suivant serait probablement appelé après que le joueur se soit connecté à son compte de jeu à l'aide de la fonction <a href="achievement_login.htm"><tt>achievement_login()</tt></a> pour obtenir une liste de toutes les positions des amis dans le classement du jeu, que ce soit sur Android
+    ou iOS :</p>
+  <p class="code">if os_type == os_ios<br/>     {
+    <br/>     achievement_load_leaderboard(&quot;CgkIs9_51u0PEAIQBw&quot;, 1, 100, achievement_filter_friends_only);<br/>     }
+  </p>
+  <p>Cela enverra une demande d'informations sur le leaderboard donné et générera un callback asynchrone avec la carte spéciale <tt>async_load</tt> DS map contenant les données suivantes :</p>
+  <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br/> if ident == achievement_leaderboard_info<br/>     {
+    <br/>     var lbid = ds_map_find_value(async_load,&quot;leaderboardid&quot;);<br/>     if lbid == &quot;CgkIs9_51u0PEAIQBw&quot; || lbid == &quot;leaderboard1id&quot;<br/>         {
+    <br/>         global.numentries = ds_map_find_value(async_load,&quot;numentries&quot;);<br/>         for(var i = 0; i &lt; numentries; i++;)<br/>             {
+    <br/>             global.playername[i] = ds_map_find_value(async_load, &quot;Player&quot; + string(i));<br/>             global.playerid[i] = ds_map_find_value(async_load, &quot;Playerid&quot; + string(i));<br/>             global.playerrank[i] =
+    ds_map_find_value(async_load, &quot;Rank&quot; + string(i));<br/>             global.playerscore[i] = ds_map_find_value(async_load, &quot;Score&quot; + string(i));<br/>             achievement_get_pic(global.playerid[i]);
+    <br/>             }
+    <br/>         }
+    <br/>     }
+  </p>
+  <p>Le code ci-dessus vérifie la <tt>carte DS</tt> retournée dans l'<b>événement social asynchrone</b> et si son &quot;id&quot; correspond à la constante vérifiée, il vérifie ensuite que le leaderboard envoyé correspond à l'appel de fonction original avant de
+    de boucler la carte et de stocker toutes les différentes valeurs dans un certain nombre de tableaux. Elle demande également une image pour chacune des entrées de la carte (voir <a href="achievement_get_pic.htm"><tt>achievement_get_pic()</tt></a>).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Achievements_And_Leaderboards.htm">Réalisations et classements</a></div>
+        <div style="float:right">Suivant : <a href="achievement_load_progress.htm"><span class="notranslate">achievement_load_progress</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_load_leaderboard
+achievement_leaderboard_info
+achievement_filter_friends_only 
+achievement_filter_all_players 
+-->
+  <!-- TAGS
+achievement_load_leaderboard
+-->
+</body>
+</html>

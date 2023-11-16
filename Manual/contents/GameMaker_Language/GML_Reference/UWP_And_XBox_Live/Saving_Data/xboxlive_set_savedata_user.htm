@@ -6,7 +6,7 @@
   <title>xboxlive_set_savedata_user</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_set_savedata_user" />
   <meta name="rh-index-keywords" content="xboxlive_set_savedata_user" />
@@ -15,45 +15,45 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_set_savedata_user</h1>
-  <p>This function specifies that future file operations which operate in the save game area (i.e. all file writes, and reads from files that aren&#39;t in the bundle area) will be associated with the specified user ID pointer. This can be called as often as necessary to redirect save data to the appropriate user, or you can use the constant <span class="inline">pointer_null</span> to save to the generic machine storage area.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction spécifie que les futures opérations sur les fichiers qui opèrent dans la zone de sauvegarde du jeu (c'est-à-dire toutes les écritures de fichiers, et les lectures de fichiers qui ne sont pas dans la zone de regroupement) seront associées au pointeur d'ID utilisateur spécifié. Cette fonction peut être appelée aussi souvent que nécessaire pour rediriger les données de sauvegarde vers l'utilisateur approprié, ou vous pouvez utiliser la constante <span class="inline">pointer_null</span> pour sauvegarder dans la zone de stockage générique de la machine.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">xboxlive_set_savedata_user(user_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>user_id</td>
-        <td><span data-keyref="Type_ID_Xbox_User">Xbox User ID</span> or <span data-keyref="Type_Pointer_Null">pointer_null</span></td>
-        <td>The user ID (a pointer) to set for saving, or <span class="inline">pointer_null</span></td>
+        <td><span class="notranslate">user_id</span></td>
+        <td><span data-keyref="Type_ID_Xbox_User">ID utilisateur Xbox</span> ou <span data-keyref="Type_Pointer_Null">pointeur_null</span></td>
+        <td><span class="notranslate">The user ID (a pointer) to set for saving, or <span class="inline">pointer_null</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if (xboxlive_get_savedata_user() != user_id[0])<br />
     {<br />
         xboxlive_set_savedata_user(user_id[0]);<br />
     }</p>
-  <p>The above code checks to see if a user is currently assigned as the save target, and if they are not then they are assigned.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifie si un utilisateur est actuellement affecté comme cible de sauvegarde, et s'il ne l'est pas, il est affecté.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Saving_Data.htm">Saving Data</a></div>
-        <div style="float:right">Next: <a href="xboxlive_get_savedata_user.htm">xboxlive_get_savedata_user</a></div>
+        <div style="float:left">Retour : <a href="Saving_Data.htm">Sauvegarde des données</a></div>
+        <div style="float:right">Suivant : <a href="xboxlive_get_savedata_user.htm"><span class="notranslate">xboxlive_get_savedata_user</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_set_savedata_user

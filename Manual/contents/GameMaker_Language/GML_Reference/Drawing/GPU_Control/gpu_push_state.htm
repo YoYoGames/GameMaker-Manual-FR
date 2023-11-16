@@ -6,7 +6,7 @@
   <title>gpu_push_state</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_push_state" />
   <meta name="rh-index-keywords" content="gpu_push_state" />
@@ -15,15 +15,15 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_push_state</h1>
-  <p>With this function you can push the current GPU state onto a stack to be used later. You would generally use this if you want to &quot;save&quot; the current GPU state (things like blend mode, alpha writing, culling, etc... will all be pushed to the stack), then draw something with different settings, and then reset the GPU stack to what it was before (by calling <a href="gpu_pop_state.htm"><span class="inline">gpu_pop_state()</span></a>).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Avec cette fonction, vous pouvez pousser l'état actuel du GPU sur une pile pour l'utiliser plus tard. Vous l'utiliserez généralement si vous souhaitez &quot;sauvegarder&quot; l'état actuel du GPU (des éléments tels que le mode de fusion, l'écriture alpha, le culling, etc... seront tous poussés vers la pile), puis dessiner quelque chose avec des paramètres différents, et ensuite réinitialiser la pile GPU à ce qu'elle était auparavant (en appelant <a href="gpu_pop_state.htm"><span class="inline">gpu_pop_state()</span></a>).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">gpu_push_state();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">gpu_push_state();<br />
     gpu_set_blendmode(bm_add);<br />
     gpu_set_blendenable(false);<br />
@@ -33,18 +33,18 @@
         draw_self();<br />
     }<br />
     gpu_pop_state();</p>
-  <p>The above code will &quot;save&quot; the current GPU state on the stack, then change certain GPU settings and draw a group of instances before resetting the GPU state to what it was previously.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus va &quot;enregistrer&quot; l'état actuel du GPU sur la pile, puis modifier certains paramètres du GPU et dessiner un groupe d'instances avant de réinitialiser l'état du GPU à ce qu'il était auparavant.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_pop_state.htm">gpu_pop_state</a></div>
+        <div style="float:left">Retour : <a href="GPU_Control.htm">Contrôle du GPU</a></div>
+        <div style="float:right">Suivant : <a href="gpu_pop_state.htm"><span class="notranslate">gpu_pop_state</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_push_state

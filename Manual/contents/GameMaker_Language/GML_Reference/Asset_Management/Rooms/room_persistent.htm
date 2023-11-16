@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>room_persistent</title>
+  <title>chambre_persistante</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function room_persistent" />
   <meta name="rh-index-keywords" content="room_persistent" />
@@ -14,33 +14,33 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_persistent</h1>
-  <p>This variable can be used to get and to set the persistent flag for the current room. If set to <span class="inline">true</span> the room is considered persistent, in which case each time you leave the room and come back again the state of the instances within that room will have been maintained. However if it is flagged as <span class="inline">false</span>, each time you return to the room it will be reset to its initial state. You should note that a persistent room uses considerably more memory than a normal room and it is not recommended to have too many of them in your game.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>chambre_persistante</h1>
+  <p>Cette variable peut être utilisée pour obtenir et définir l'indicateur de persistance pour la room actuelle. S'il est défini à <span class="inline">true</span>, le room est considéré comme persistant, ce qui signifie que chaque fois que vous quittez le room et que vous revenez, l'état des instances de ce room aura été maintenu. Cependant, si elle est marquée comme <span class="inline">false</span>, chaque fois que vous revenez dans la room, elle sera réinitialisée à son état initial. Vous devez noter qu'une room persistante utilise beaucoup plus de mémoire qu'une room normale et il n'est pas recommandé d'en avoir trop dans votre jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">room_persistent;</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if lives &lt; 1<br />
     {<br />
         room_persistent = false;<br />
         room_goto(rm_start);<br />
     }</p>
-  <p>The above code checks the variable &quot;lives&quot; and if it is less than 1, it will set the room persistence to <span class="inline">false</span> and then change rooms.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifie la variable &quot;lives&quot; et si elle est inférieure à 1, il définit la persistance de la pièce à <span class="inline">false</span> et change ensuite de pièce.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Rooms.htm">Rooms</a></div>
-        <div style="float:right">Next: <a href="room_get_name.htm">room_get_name</a></div>
+        <div style="float:left">Retour : <a href="Rooms.htm">Pièces</a></div>
+        <div style="float:right">Suivant : <a href="room_get_name.htm"><span class="notranslate">room_get_name</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 room_persistent

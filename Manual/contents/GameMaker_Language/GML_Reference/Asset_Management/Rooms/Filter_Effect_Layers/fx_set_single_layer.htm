@@ -15,56 +15,56 @@
 </head>
 <body>
   <h1>fx_set_single_layer</h1>
-  <p>This function is used to enable or disable &quot;Single Layer&quot; mode for a filter/effect. By default, a filter/effect is applied to the layer that it is <a href="layer_set_fx.htm">assigned to</a> and all layers below that layer, however you can enable Single Layer mode on an FX struct to make sure that it&#39;s only applied to the layer that it is assigned to.</p>
-  <p>You specify an FX struct (as returned from <span class="inline"><a href="fx_create.htm">fx_create()</a></span> or <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>) and a <a class="glossterm" data-glossterm="boolean" href="#">boolean</a> value to enable (<span class="inline">true</span>) or disable (<span class="inline">false</span>) Single Layer mode.</p>
-  <p>The following visual shows a filter being used with Single Layer mode disabled (which is the default behaviour for all FX layers) and the same filter with Single Layer mode enabled:</p>
+  <p>Cette fonction est utilisée pour activer ou désactiver le mode &quot;Single Layer&quot; pour un filtre/effet. Par défaut, un filtre/effet est appliqué au calque auquel il est <a href="layer_set_fx.htm">affecté</a> et à tous les calques inférieurs à ce calque, mais vous pouvez activer le mode Single Layer sur un FX <span class="notranslate">struct</span> pour vous assurer qu'il est uniquement appliqué au calque auquel il est affecté.</p>
+  <p>Vous spécifiez un FX <span class="notranslate">struct</span> (tel que renvoyé par <span class="inline"><a href="fx_create.htm">fx_create()</a></span> ou <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>) et une valeur <a class="glossterm" data-glossterm="boolean" href="#">booléenne</a> pour activer (<span class="inline">true</span>) ou désactiver (<span class="inline">false</span>) le mode monocouche.</p>
+  <p>Le visuel suivant montre un filtre utilisé avec le mode monocouche désactivé (qui est le comportement par défaut pour toutes les couches FX) et le même filtre avec le mode monocouche activé :</p>
   <div class="image_columns">
     <figure><img alt="Fire Jump man is woozy with the universe" class="center_shadow" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/FX_single_layer_off.png" title="Fire Jump man is woozy with the universe" />
-      <figcaption>Single Layer Mode OFF</figcaption>
+      <figcaption>Mode monocouche OFF</figcaption>
     </figure>
     <figure><img alt="Fire Jump man is woozy... alone" class="center_shadow" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/FX_single_layer_on.png" style="cursor: nesw-resize;" title="Fire Jump man is woozy... alone" />
-      <figcaption>Single Layer Mode ON</figcaption>
+      <figcaption>Mode monocouche ON</figcaption>
     </figure>
   </div>
-  <p class="note"><span class="note">NOTE</span> When you enable Single Layer mode for an FX, make sure that you apply it to a layer that is not an <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">FX layer</a>, because an FX layer by itself contains nothing and so no filter/effect will be visible.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p class="note"><span class="note">REMARQUE</span> Lorsque vous activez le mode Single Layer pour un FX, veillez à l'appliquer à un calque qui n'est pas un <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">calque FX</a>, car un calque FX en lui-même ne contient rien et donc aucun filtre/effet ne sera visible.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">fx_set_single_layer(filter_or_effect, enable);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>filter_or_effect</td><td><span data-keyref="Type_Struct_FX"></span></td>
-        <td>The FX struct to modify</td>
+        <td><span class="notranslate">filter_or_effect</span></td><td><span data-keyref="Type_Struct_FX"></span></td>
+        <td><span class="notranslate">The FX struct to modify</span></td>
      </tr>
       <tr>
-        <td>enable</td><td><span data-keyref="Type_Bool"></span></td>
-        <td>A <a class="glossterm" data-glossterm="boolean" href="#">boolean</a> value to enable (<span class="inline">true</span>) or disable (<span class="inline">false</span>) Single Layer Mode</td>
+        <td><span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">A <a class="glossterm" data-glossterm="boolean" href="#">boolean</a> value to enable (<span class="inline">true</span>) ou désactiver (<span class="inline">false</span>) le mode monocouche.</td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">shake_fx = fx_create(&quot;_filter_screenshake&quot;);<br />
     fx_set_single_layer(shake_fx, true);<br />
     layer_set_fx(&quot;ShakeyThings&quot;, shake_fx);</p>
-  <p>The above code creates a new screenshake FX, enables Single Layer mode on it and then applies it to a room layer. This means that the screenshake filter will only be applied to the <span class="inline2">&quot;ShakeyThings&quot;</span> layer.</p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus crée un nouveau screenshake FX, active le mode Single Layer sur celui-ci et l'applique ensuite à un calque de pièce. Cela signifie que le filtre screenshake ne sera appliqué qu'au calque <span class="inline2">&quot;ShakeyThings&quot;</span>.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Filter_Effect_Functions.htm">Filter and Effect Functions</a></div>
-        <div>Next: <a data-xref="{title}" href="layer_set_fx.htm">layer_set_fx</a></div>
+        <div>Retour : <a data-xref="{title}" href="Filter_Effect_Functions.htm">Fonctions de filtre et d'effet</a></div>
+        <div>Suivant : <a data-xref="{title}" href="layer_set_fx.htm">layer_set_fx</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 fx_set_single_layer

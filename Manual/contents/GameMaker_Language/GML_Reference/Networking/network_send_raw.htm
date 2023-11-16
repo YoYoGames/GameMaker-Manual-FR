@@ -3,25 +3,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>network_send_raw</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>réseau_send_raw</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for network_send_raw" />
-  <meta name="rh-index-keywords" content="network_send_raw,network_send_binary,network_send_text" />
-  <meta name="search-keywords" content="network_send_raw,text WebSockets,network_send_binary,network_send_text" />
+  <meta name="rh-index-keywords" content="network_send_raw" />
+  <meta name="search-keywords" content="network_send_raw, text WebSockets" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">network_send_raw</span></h1>
-  <p>This function sends a &quot;raw&quot; data packet through the network.</p>
-  <p>The function takes the <span data-keyref="Type_ID_Network_Socket"><a href="../../../../GameMaker_Language/GML_Reference/Networking/network_create_socket.htm" target="_blank">Network Socket ID</a></span> to connect through and then you must supply the <span data-keyref="Type_ID_Buffer"><a href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm" target="_blank">Buffer ID</a></span> which contains the data to be sent (for more information on buffers see <a href="../Buffers/Buffers.htm">Reference - Buffers</a>) and finally the size (in bytes) of the data packet.</p>
-  <p>The data sent is not formatted by <span data-keyref="GameMaker Name">GameMaker</span> in any way and the receiving devices will get the data as a stream which means you will have to handle it yourself. The function will return the number of bytes of data sent, or a number less than 0 if the send has failed.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_warning.hts"> </span> <span data-conref="../../../assets/snippets/Networking_dont_mix_raw_reg.hts"> </span></p>
-  <div data-conref="../../../assets/snippets/Note_Networking_TCP_like.hts"> </div>
-  <h2>Options Argument</h2>
-  <p>The last argument is optional, and is only used with WebSockets. It allows you to choose between sending binary or text data. Either of these constants can be specified in this argument:</p>
+  <h1>réseau_send_raw</h1>
+  <p>Avec cette fonction, vous pouvez envoyer un paquet de données &quot;brut&quot; à travers le réseau. La fonction prend l'<i>identifiant de la socket</i> pour se connecter, puis vous devez fournir l'<i>identifiant du buffer</i> qui contient les données à envoyer (pour plus d'informations sur <span class="notranslate">buffers</span> voir <a href="../Buffers/Buffers.htm">Référence - Buffers</a>) et enfin la taille (en octets) du paquet de données. Les données envoyées ne sont en aucun cas formatées par <span data-keyref="GameMaker Name">GameMaker</span> et les appareils récepteurs recevront les données sous forme de flux, ce qui signifie que vous devrez les gérer vous-même. La fonction retournera le nombre d'octets de données envoyés, ou un nombre inférieur à 0 si l'envoi a échoué.</p>
+  <h2>Argument des options</h2>
+  <p>Le dernier argument est facultatif, et n'est utilisé qu'avec les WebSockets. Il vous permet de choisir entre l'envoi de données binaires ou textuelles. L'une ou l'autre de ces constantes peut être spécifiée dans cet argument :</p>
   <table>
     <colgroup>
       <col style="width: 519px;" />
@@ -29,7 +25,7 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2" style=""><span data-keyref="Type_Constant_Network_Send_Type"><a href="../../../../GameMaker_Language/GML_Reference/Networking/network_send_raw.htm" target="_blank">Network Send Type Constant</a></span></th>
+        <th colspan="2" style=""><span data-keyref="Type_Constant_Network_Send_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Networking/network_send_raw.htm">Type d'envoi réseau Constant</a></span></th>
       </tr>
       <tr>
         <th style="">Constant</th>
@@ -37,65 +33,66 @@
       </tr>
       <tr>
         <td style=""><span class="inline">network_send_binary</span></td>
-        <td style="">Send a binary message</td>
+        <td style="">Envoyer un message binaire</td>
       </tr>
       <tr>
         <td style=""><span class="inline">network_send_text</span></td>
-        <td style="">Send a text message</td>
+        <td style="">Envoyer un message texte</td>
       </tr>
     </tbody>
   </table>
-  <p>The APIs for some platforms only accept text messages when using WebSockets (e.g. Twitch), so the <span class="inline2">network_send_text</span> constant can be used in such cases. If this argument is not specified, binary data is sent by default.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">network_send_raw</span>(socket, bufferid, size, [options]);</p>
+  <p>Les API de certaines plateformes n'acceptent que les messages texte lors de l'utilisation de WebSockets (par exemple, Twitch), la constante <span class="inline2">network_send_text</span> peut donc être utilisée dans ces cas. Si cet argument n'est pas spécifié, des données binaires sont envoyées par défaut.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">network_send_raw(socket, bufferid, size, [options]);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>socket</td>
-        <td><span data-keyref="Type_ID_Network_Socket"><a href="../../../../GameMaker_Language/GML_Reference/Networking/network_create_socket.htm" target="_blank">Network Socket ID</a></span></td>
-        <td>The id of the socket to use.</td>
+        <td><span class="notranslate">socket</span></td>
+        <td><span data-keyref="Type_ID_Network_Socket"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">ID de la prise réseau</a></span></td>
+        <td><span class="notranslate">The id of the socket to use.</span></td>
       </tr>
       <tr>
-        <td>bufferid</td>
-        <td><span data-keyref="Type_ID_Buffer"><a href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm" target="_blank">Buffer ID</a></span></td>
-        <td>The id of the buffer to get the data from.</td>
+        <td><span class="notranslate">bufferid</span></td>
+        <td><span data-keyref="Type_ID_Buffer"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">ID de la mémoire tampon</a></span></td>
+        <td><span class="notranslate">The id of the buffer to get the data from.</span></td>
       </tr>
       <tr>
-        <td>size</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The size (in bytes) of the data.</td>
+        <td><span class="notranslate">size</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">Real</a></span></td>
+        <td><span class="notranslate">The size (in bytes) of the data.</span></td>
       </tr>
       <tr>
-        <td>options</td>
-        <td><span data-keyref="Type_Constant_Network_Send_Type"><a href="../../../../GameMaker_Language/GML_Reference/Networking/network_send_raw.htm" target="_blank">Network Send Type Constant</a></span></td>
-        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"> </span> Used for WebSockets to choose between text and binary data; if not specified, binary data is sent.</td>
+        <td><span class="notranslate">options</span></td>
+        <td><span data-keyref="Type_Constant_Network_Send_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Networking/network_send_raw.htm">Type d'envoi réseau Constant</a></span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Utilisé pour les WebSockets pour choisir entre les données textuelles et binaires ; si non spécifié, les données binaires sont envoyées.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">Real</a></span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">buff = buffer_load(&quot;player_save.dat&quot;);<br />
     network_send_raw(sock, buff, buffer_get_size(buff));</p>
-  <p>The above information loads a previously saved buffer data into memory and returns the buffer id to be stored in the variable &quot;buff&quot;. This complete buffer is then send as a raw data packet over the network using the socket identified by the variable &quot;sock&quot;.</p>
-  <p> </p>
-  <p> </p>
+  <p>Les informations ci-dessus chargent en mémoire des données précédemment enregistrées sur <span class="notranslate">buffer</span> et renvoient l'identifiant de <span class="notranslate">buffer</span> à stocker dans la variable &quot;buff&quot;. Ce <span class="notranslate">buffer</span> complet est ensuite envoyé comme un paquet de données brutes sur le réseau en utilisant le socket identifié par la variable &quot;sock&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Networking.htm">Networking</a></div>
-        <div style="float:right">Next: <a href="network_send_udp.htm">network_send_udp</a></div>
+        <div style="float:left">Retour : <a href="Networking.htm">Mise en réseau</a></div>
+        <div style="float:right">Suivant : <a href="network_send_udp.htm"><span class="notranslate">network_send_udp</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 network_send_raw

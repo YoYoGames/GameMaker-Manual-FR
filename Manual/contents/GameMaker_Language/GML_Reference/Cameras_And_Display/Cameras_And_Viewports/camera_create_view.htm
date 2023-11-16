@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>camera_create_view</title>
+  <title>caméra_créer_vue</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for camera_create_view" />
   <meta name="rh-index-keywords" content="camera_create_view" />
@@ -15,90 +15,90 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>camera_create_view</h1>
-  <p>This function will create a new camera and then set its view into the room, before return the unique ID value to identify the camera in future function calls. The camera will be created using the values that you set in this function for position, size and other details which correlate to the values you set in the Room Editor (see <a href="../../../../The_Asset_Editors/Rooms.htm">here</a>). Note that this function can take a <i>variable number of arguments</i> with only the x/y position and width/height arguments being obligatory. Any arguments not supplied will use their default arguments.</p>
-  <p>Note that cameras are like all dynamic resources and will occupy memory when created. This means that you need to take care not to create cameras unnecessarily and to destroy those that you don&#39;t need by calling the function <a href="camera_destroy.htm"><span class="inline">camera_destroy()</span></a>. This also means that cameras will persist from room to room if assigned to a <span class="inline">global</span> variable (they will persist when assigned to instance or local variables too, but you can&#39;t access them after changing room, hence the memory leak), so that you can - for example - create a new camera, assign it to a global variable, and then at the start of each room use the <span class="inline">camera_set_*</span> functions to set the properties before assigning it to a view port.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>caméra_créer_vue</h1>
+  <p>Cette fonction va créer une nouvelle caméra, puis définir sa vue dans la pièce, avant de renvoyer la valeur d'identification unique pour identifier la caméra dans les appels de fonction ultérieurs. La caméra sera créée en utilisant les valeurs que vous avez définies dans cette fonction pour la position, la taille et d'autres détails qui correspondent aux valeurs que vous avez définies dans l'éditeur de pièce (voir <a href="../../../../The_Asset_Editors/Rooms.htm">ici</a>). Notez que cette fonction peut prendre un <i>nombre variable d'arguments</i>, seuls les arguments de position x/y et de largeur/hauteur étant obligatoires. Tous les arguments non fournis utiliseront leurs arguments par défaut.</p>
+  <p>Notez que les caméras sont comme toutes les ressources dynamiques et occupent de la mémoire lors de leur création. Cela signifie que vous devez faire attention à ne pas créer inutilement des caméras et à détruire celles dont vous n'avez pas besoin en appelant la fonction <a href="camera_destroy.htm"><span class="inline">camera_destroy()</span></a>. Cela signifie également que les caméras persistent d'une salle à l'autre si elles sont affectées à une variable <span class="inline">global</span> (elles persistent également lorsqu'elles sont affectées à des variables d'instance ou locales, mais vous ne pouvez pas les <span class="notranslate">access</span> après avoir changé de salle, d'où la fuite de mémoire), de sorte que vous pouvez - par exemple - créer une nouvelle caméra, l'affecter à une variable globale, puis au début de chaque salle utiliser les fonctions <span class="inline">camera_set_*</span> pour définir les propriétés avant de l'affecter à un port de vue.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">camera_create_view(room_x, room_y, width, height, [angle, object, x_speed, y_speed, x_border, y_border])</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>room_x</td>
+        <td><span class="notranslate">room_x</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x position (within the room) of the left side of the area the camera view captures.</td>
+        <td><span class="notranslate">The x position (within the room) of the left side of the area the camera view captures.</span></td>
       </tr>
       <tr>
-        <td>room_y</td>
+        <td><span class="notranslate">room_y</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y position (within the room) of the top of the area the camera view captures.</td>
+        <td><span class="notranslate">The y position (within the room) of the top of the area the camera view captures.</span></td>
       </tr>
       <tr>
-        <td>width</td>
+        <td><span class="notranslate">width</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The width of the area the view captures.</td>
+        <td><span class="notranslate">The width of the area the view captures.</span></td>
       </tr>
       <tr>
-        <td>height</td>
+        <td><span class="notranslate">height</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The height of the area the view captures.</td>
+        <td><span class="notranslate">The height of the area the view captures.</span></td>
       </tr>
       <tr>
-        <td>angle</td>
+        <td><span class="notranslate">angle</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td><span class="optional">OPTIONAL</span> The angle to set the for the camera view(from 0° - 360°, default is 0).</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> L'angle à définir pour la vue de la caméra (de 0° à 360°, la valeur par défaut est 0).</td>
       </tr>
       <tr>
-        <td>object</td>
-        <td><span data-keyref="Type_Asset_Object">Object Asset</span> or <span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td><span class="optional">OPTIONAL</span> The object ID (or instance ID) for the camera view to follow (default is -1, no object).</td>
+        <td><span class="notranslate">object</span></td>
+        <td> <span data-keyref="Type_ID_Instance">ID de l'</span><span data-keyref="Type_Asset_Object">actif</span> ou de l'<span data-keyref="Type_ID_Instance">instance de</span>l'<span data-keyref="Type_Asset_Object">objet</span> </td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> L'ID de l'objet (ou l'ID de l'instance) pour la vue de la caméra à suivre (la valeur par défaut est -1, aucun objet).</td>
       </tr>
       <tr>
-        <td>x_speed</td>
+        <td><span class="notranslate">x_speed</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td><span class="optional">OPTIONAL</span> The maximum horizontal speed the view can move at (set to -1 for &quot;instant&quot; following, default is -1).</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> La vitesse horizontale maximale à laquelle la vue peut se déplacer (définie à -1 pour un suivi &quot;instantané&quot;, la valeur par défaut est -1).</td>
       </tr>
       <tr>
-        <td>y_speed</td>
+        <td><span class="notranslate">y_speed</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td><span class="optional">OPTIONAL</span> The maximum vertical speed the view can move at (set to -1 for &quot;instant&quot; following, default is -1).</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> La vitesse verticale maximale à laquelle la vue peut se déplacer (définie à -1 pour un suivi &quot;instantané&quot;, la valeur par défaut est -1).</td>
       </tr>
       <tr>
-        <td>x_border</td>
+        <td><span class="notranslate">x_border</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td><span class="optional">OPTIONAL</span> The minimum horizontal space between the edge of the view area and the instance it is set to follow (before the view begins moving and if it is set to follow an instance, default is 0).</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> L'espace horizontal minimum entre le bord de la zone de vue et l'instance qu'elle est censée suivre (avant que la vue ne commence à se déplacer et si elle est censée suivre une instance, la valeur par défaut est 0).</td>
       </tr>
       <tr>
-        <td>y_border</td>
+        <td><span class="notranslate">y_border</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td><span class="optional">OPTIONAL</span> The minimum vertical space between the edge of the view area and the instance it is set to follow (before the view begins moving and if it is set to follow an instance, default is 0).</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> L'espace vertical minimum entre le bord de la zone de vue et l'instance qu'elle est censée suivre (avant que la vue ne commence à se déplacer et si elle est censée suivre une instance, la valeur par défaut est 0).</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_ID_Camera">Camera ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">camera_destroy(view_camera[0]);<br />
     view_camera[0] = camera_create_view(0, 0, 640, 480, 0, obj_Player, 5, 5, -1, -1);</p>
-  <p>The above code removes the current camera assigned to viewport[0] and then creates a new camera, defines its view properties and then assigns that to viewport[0].</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus supprime la caméra actuelle affectée au viewport [0], puis crée une nouvelle caméra, définit ses propriétés d'affichage et l'affecte au viewport [0].</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_View_Ports.htm">Cameras And View Ports</a></div>
-        <div style="float:right">Next: <a href="camera_destroy.htm">camera_destroy</a></div>
+        <div style="float:left">Retour : <a href="Cameras_And_View_Ports.htm">Caméras et ports d'observation</a></div>
+        <div style="float:right">Suivant : <a href="camera_destroy.htm"><span class="notranslate">camera_destroy</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 camera_create_view

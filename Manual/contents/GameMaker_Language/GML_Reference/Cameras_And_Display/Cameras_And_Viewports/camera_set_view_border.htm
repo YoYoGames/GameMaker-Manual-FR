@@ -6,7 +6,7 @@
   <title>camera_set_view_border</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for camera_set_view_border" />
   <meta name="rh-index-keywords" content="camera_set_view_border" />
@@ -16,50 +16,50 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>camera_set_view_border</h1>
-  <p>You can use this function to set the follow border of the view camera within the room. You give the unique camera ID value (as returned by the different <span class="inline">camera_create</span> functions) and then give the x border size and the y border size (horizontal
-    and vertical). These values will only be used when the view camera has been assigned an instance target to follow (either in the Room Editor or using the function <a href="camera_set_view_target.htm"><span class="inline">camera_set_view_target()</span></a>) and relate
-    to how far from the border of the view the instance needs to be before the view will update its position to follow.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Vous pouvez utiliser cette fonction pour définir la bordure de suivi de la caméra de visualisation dans la pièce. Vous indiquez la valeur d'identification unique de la caméra (telle qu'elle est renvoyée par les différentes fonctions de <span class="inline">camera_create</span> ), puis la taille de la bordure x et la taille de la bordure y (horizontale et verticale).
+    et verticale). Ces valeurs ne seront utilisées que si une cible d'instance a été attribuée à la caméra de visualisation (soit dans l'éditeur de salle, soit à l'aide de la fonction <a href="camera_set_view_target.htm"><span class="inline">camera_set_view_target()</span></a>) et concernent
+    à quelle distance du bord de la vue l'instance doit être avant que la vue ne mette à jour sa position pour la suivre.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">camera_set_view_border(camera_id, x_border, y_border)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>camera_id</td><td><span data-keyref="Type_ID_Camera"></span></td>
-        <td>The unique camera ID value returned when you created the camera.</td>
+        <td><span class="notranslate">camera_id</span></td><td><span data-keyref="Type_ID_Camera"></span></td>
+        <td><span class="notranslate">The unique camera ID value returned when you created the camera.</span></td>
      </tr>
       <tr>
-        <td>x_border</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The border (in pixels) for the view camera along the horizontal axis</td>
+        <td><span class="notranslate">x_border</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The border (in pixels) for the view camera along the horizontal axis</span></td>
      </tr>
       <tr>
-        <td>y_border</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The border (in pixels) for the view camera along the vertical axis</td>
+        <td><span class="notranslate">y_border</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The border (in pixels) for the view camera along the vertical axis</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">camera_set_view_border(view_camera[0], 64, 64);</p>
-  <p>The above code will set the view camera border for the camera assigned to view port[0].</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus définira la bordure de la caméra de vue pour la caméra affectée au port de vue [0].</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_View_Ports.htm">Cameras And View Ports</a></div>
-        <div style="float:right">Next: <a href="camera_set_view_angle.htm">camera_set_view_angle</a></div>
+        <div style="float:left">Retour : <a href="Cameras_And_View_Ports.htm">Caméras et ports de vue</a></div>
+        <div style="float:right">Suivant : <a href="camera_set_view_angle.htm"><span class="notranslate">camera_set_view_angle</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 camera_set_view_border

@@ -4,10 +4,10 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>time_source_pause</title>
+  <title>temps_source_pause</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Reference page for time_source_pause" />
@@ -15,11 +15,11 @@
   <meta name="search-keywords" content="time_source_pause" />
 </head>
 <body>
-  <h1>time_source_pause</h1>
-  <p>This function pauses the given <span data-keyref="Type_Resource_TimeSource">Time Source</span>. The <span data-keyref="Type_Resource_TimeSource">Time Source</span> must be active when this function is called.</p>
-  <p>To resume it, call <a href="time_source_resume.htm"><span class="inline">time_source_resume()</span></a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>temps_source_pause</h1>
+  <p>Cette fonction met en pause la <span data-keyref="Type_Resource_TimeSource">source de temps</span> donnée. La <span data-keyref="Type_Resource_TimeSource">source de temps</span> doit être active lorsque cette fonction est appelée.</p>
+  <p>Pour le reprendre, appelez <a href="time_source_resume.htm"><span class="inline">time_source_resume()</span></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">time_source_pause(id);</p>
   <table>
     <colgroup>
@@ -29,22 +29,22 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>id</td>
-        <td><span data-keyref="Type_ID_TimeSource"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/time_source_create.htm" target="_blank">Time Source ID</a></span></td>
-        <td>The <span data-keyref="Type_Resource_TimeSource">Time Source</span> to pause</td>
+        <td><span class="notranslate">id</span></td>
+        <td><span data-keyref="Type_ID_TimeSource"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/time_source_create.htm" target="_blank">ID de la source de temps</a></span></td>
+        <td><span class="notranslate">The <span data-keyref="Type_Resource_TimeSource">Time Source</span> de faire une pause</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if (keyboard_check_pressed(vk_space))<br />
     {<br />
         var _state = time_source_get_state(time_source);<br />
@@ -59,18 +59,18 @@
         }<br />
     }
   </p>
-  <p>When the Space key is pressed, this code will get a <span data-keyref="Type_Resource_TimeSource">Time Source</span>&#39;s state.</p>
-  <p>When the state is active, it will pause the <span data-keyref="Type_Resource_TimeSource">Time Source</span>, and when it&#39;s paused, it will resume it.</p>
-  <p> </p>
-  <p> </p>
+  <p>Lorsque la touche Espace est pressée, ce code récupère l'état d'une <span data-keyref="Type_Resource_TimeSource">source de temps</span>.</p>
+  <p>Lorsque l'état est actif, il met en pause la <span data-keyref="Type_Resource_TimeSource">source de temps</span>, et lorsqu'elle est en pause, il la reprend.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Time_Sources.htm">Time Sources</a> </div>
-        <div>Next: <a data-xref="{title}" href="time_source_resume.htm">time_source_resume</a></div>
+        <div>Retour : <a data-xref="{title}" href="Time_Sources.htm">Sources de temps</a> </div>
+        <div>Suivant : <a data-xref="{title}" href="time_source_resume.htm">time_source_resume</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 time_source_pause

@@ -2,69 +2,69 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Write To Ini File</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page that explains the Write To Ini File action"/>
-  <meta name="rh-index-keywords" content="GML Visual Action - Write To Ini File"/>
-  <meta name="search-keywords" content="Write To Ini File"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Ecrire dans un fichier Ini</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <script src="../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page that explains the Write To Ini File action" />
+  <meta name="rh-index-keywords" content="GML Visual Action - Write To Ini File" />
+  <meta name="search-keywords" content="Write To Ini File" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Write To Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Write_To_Ini_File.png"/> Write To Ini File</h1>
-  <p>With this action you can write a numeric value or a string to an Ini file. You must previously have opened the Ini file for reading/writing using the action <a href="Open_Ini_File.htm">Open Ini File</a>, and then with this action you give the type of
-    data to write (either a real number or a string enclosed in &quot;&quot;), as well as the section header, the key within that section and the value for the key. To help visualise the structure of an Ini file, see this image:</p>
-  <p><img alt="Example Ini File Contents" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/Ini_Example.png"/>As you can see, Ini files are split into sections - where each section has its own header name - and
-    then each section is subsequently split into various key/value pairs (much like a <a href="../Data_Structures/Create_Map.htm">Map Data Structure</a>). Note that you can create Ini files yourself using any text processing software (like Notepad on
-    Windows) and then include them as an <a href="../../../Settings/Included_Files.htm">Included File</a> to read from and write to in your game.</p>
-  <p class="note"><b>IMPORTANT!</b> Trying to read data from an Ini file that has not been opened previously using the <a href="Open_Ini_File.htm">Open Ini File</a> action will cause a serious error and crash your game.<b></b></p>
-  <p class="note"><b>IMPORTANT!</b> This only writes the data to memory and to finally write the data to the file on disk, you <b>must call <a href="Close_Ini_File.htm">Close Ini File</a></b>, otherwise the data will not be saved.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Write To Ini Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Write_To_Ini_File.png"/></p>
-  <h4>Arguments:</h4>
+  <h1><img> Ecrire dans un fichier Ini</h1>
+  <p>Avec cette action, vous pouvez écrire une valeur numérique ou une chaîne de caractères dans un fichier Ini. Vous devez préalablement avoir ouvert le fichier Ini en lecture/écriture à l'aide de l'action <a href="Open_Ini_File.htm">Ouvrir un Fichier Ini</a>, puis avec cette action vous donnez le type de
+    données à écrire (soit un nombre réel, soit une chaîne de caractères entourée de &quot;&quot;), ainsi que l'en-tête de section, la clé dans cette section et la valeur de la clé. Pour aider à visualiser la structure d'un fichier Ini, voir cette image :</p>
+  <p><img>Comme vous pouvez le voir, les fichiers Ini sont divisés en sections - où chaque section a son propre nom d'en-tête - et
+    puis chaque section est ensuite divisée en diverses paires clé/valeur (un peu comme une <a href="../Data_Structures/Create_Map.htm">structure de données Map</a>). Notez que vous pouvez créer vous-même des fichiers Ini à l'aide de n'importe quel logiciel de traitement de texte (comme le Bloc-notes sur
+   <span class="notranslate">Windows</span>), puis les inclure dans votre jeu en tant que <a href="../../../Settings/Included_Files.htm">fichier inclus dans</a> lequel vous pourrez lire et écrire.</p>
+  <p class="note"><b>IMPORTANT !</b> Essayer de lire les données d'un fichier Ini qui n'a pas été ouvert précédemment à l'aide de l'action <a href="Open_Ini_File.htm">Ouvrir un fichier Ini</a> provoquera une erreur grave et fera planter votre jeu.<b></b></p>
+  <p class="note"><b>IMPORTANT !</b> Cette opération ne fait qu'écrire les données en mémoire. Pour écrire définitivement les données dans le fichier sur le disque, vous <b>devez appeler <a href="Close_Ini_File.htm">Close Ini File</a></b>, sinon les données ne seront pas enregistrées.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Write To Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Write_To_Ini_File.png"/></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Type</td>
-        <td>The type of data to write, either a <span class="inline">string</span> (enclosed in quotes &quot;&quot;), or a <span class="inline">real number</span></td>
+        <td><span class="notranslate">Type</span></td>
+        <td>Le type de données à écrire, soit un <span class="inline">string</span> (entre guillemets &quot;&quot;), soit un <span class="inline">real number</span></td>
       </tr>
       <tr>
-        <td>Section</td>
-        <td>The section of the Ini file to write to (as a string)</td>
+        <td><span class="notranslate">Section</span></td>
+        <td>La section du fichier Ini dans laquelle il faut écrire (sous forme de chaîne).</td>
       </tr>
       <tr>
-        <td>Key</td>
-        <td>The key within the section to write to (as a string)</td>
+        <td><span class="notranslate">Key</span></td>
+        <td>La clé de la section sur laquelle écrire (sous forme de chaîne).</td>
       </tr>
       <tr>
-        <td>Value</td>
-        <td>The value to write, either a string or a real number based on the &quot;type&quot; argument (above)</td>
+        <td><span class="notranslate">Value</span></td>
+        <td>La valeur à écrire, soit une chaîne de caractères, soit un nombre réel basé sur l'argument &quot;type&quot; (ci-dessus).</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Write To Ini Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Write_To_Ini_File.png"/>The above action block code will open an ini then write data to three different keys under
-    the same section header (one string and two real numbers) before closing the ini file again (thus writing the data to disk).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus ouvrira un fichier ini puis écrira des données sur trois clés différentes sous
+    le même en-tête de section (une chaîne de caractères et deux nombres réels) avant de refermer le fichier ini (et d'écrire les données sur le disque).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="File_Actions.htm">File Actions</a></div>
-        <div style="float:right">Next: <a href="Read_Ini_File.htm">Read Ini File</a></div>
+        <div style="float:left">Retour : <a href="File_Actions.htm">Actions sur les fichiers</a></div>
+        <div style="float:right">Suivant : <a href="Read_Ini_File.htm">Lire le fichier Ini</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Write To Ini File

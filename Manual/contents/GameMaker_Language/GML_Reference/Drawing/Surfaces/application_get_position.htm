@@ -6,7 +6,7 @@
   <title>application_get_position</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for application_get_position" />
   <meta name="rh-index-keywords" content="application_get_position" />
@@ -16,32 +16,32 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>application_get_position</h1>
-  <p>When you have &quot;maintain aspect ratio&quot; ticked in the Game Options for a target platform, <span data-keyref="GameMaker Name">GameMaker</span> will automatically set the draw position for the application surface so that it is displayed correctly centered and scaled on
-    the given display. However if you are manipulating this surface and wish to draw it yourself, then this function gives you an easy way to find exactly <i>where</i> within the display or window that the surface was being drawn so that you can then
-    draw it there yourself, or align GUI images or post draw images to it.</p>
-  <p>The function will return an <a href="../../../GML_Overview/Arrays.htm">array</a> with four keys, where key 0 and 1 are the x and y position of the top lefthand corner of the surface, and keys 2 and 3 are the x and y of the bottom righthand corner of
-    the surface, all relative to the size of the display or window.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Lorsque l'option &quot;Maintenir le rapport hauteur/largeur&quot; est cochée dans les options de jeu pour une plate-forme cible, <span data-keyref="GameMaker Name">GameMaker</span> définit automatiquement la position de dessin de la surface de l'application afin qu'elle soit affichée correctement centrée et mise à l'échelle sur l'écran donné.
+    l'écran donné. Cependant, si vous manipulez cette surface et souhaitez la dessiner vous-même, cette fonction vous permet de trouver facilement l <i>'endroit</i> exact de l'affichage ou de la fenêtre où la surface a été dessinée, afin que vous puissiez ensuite
+    la dessiner vous-même, ou aligner les images de l'interface graphique ou les images de post-découpe sur celle-ci.</p>
+  <p>La fonction renvoie un <a href="../../../GML_Overview/Arrays.htm">tableau de</a> quatre clés, où les clés 0 et 1 sont les positions x et y du coin supérieur gauche de la surface, et les clés 2 et 3 sont les positions x et y du coin inférieur droit de la surface, toutes relatives à la taille de l'écran ou de la fenêtre.
+    la surface, le tout par rapport à la taille de l'écran ou de la fenêtre.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">application_get_position();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Array"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var a = application_get_position();<br/> xx = a[0];<br/> yy = a[1];<br/> ww = a[2] - a[0];<br/> hh = a[3] - a[1];</p>
-  <p>The above code will get the position of the application surface, as well as the absolute width and height in relation to the display window, and store them in four variables for future use.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus récupère la position de la surface de l'application, ainsi que la largeur et la hauteur absolues par rapport à la fenêtre d'affichage, et les stocke dans quatre variables pour une utilisation ultérieure.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Surfaces.htm">Surfaces</a></div>
-        <div style="float:right">Next: <a href="application_surface_draw_enable.htm">application_surface_draw_enable</a></div>
+        <div style="float:left">Retour : <a href="Surfaces.htm">Surfaces</a></div>
+        <div style="float:right">Suivant : <a href="application_surface_draw_enable.htm"><span class="notranslate">application_surface_draw_enable</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 application_get_position

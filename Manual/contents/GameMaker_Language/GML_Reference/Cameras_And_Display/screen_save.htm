@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>screen_save</title>
+  <title>écran_sauvegarde</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for screen_save" />
   <meta name="rh-index-keywords" content="screen_save" />
@@ -14,50 +14,50 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>screen_save</h1>
-  <p>With this function you can save a screenshot of the game as it currently appears in the game window.</p>
-  <p>The file will be saved to the working directory of the game, which in windows is located at <span class="inline">&lt;drive&gt;:/Users/YOURUSERNAME/AppData/Local/[Game Name]/</span> and on Mac it would be <span class="inline">~/Library/Application Support/[Game Name]/</span>. The image captured will be the final render of the application surface of the game, or (if the app surface has been disabled) it will be an image of the whole display or window.</p>
-  <p>It is important to note that the function is designed to be called in the <b>Draw GUI End Event</b>, which should give consistent results across all platforms. Using it in any other event may not work as expected, and may give different results across different targets and even devices.</p>
-  <p>Should you need more control over what is being saved, you should use the function <a href="screen_save_part.htm"><span class="inline">screen_save_part()</span></a>.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>This function does not work on the HTML5 target.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>écran_sauvegarde</h1>
+  <p>Cette fonction vous permet d'enregistrer une capture d'écran du jeu tel qu'il apparaît actuellement dans la fenêtre de jeu.</p>
+  <p>Le fichier sera enregistré dans le répertoire de travail du jeu, qui se trouve sous Windows à l'adresse <span class="inline">&lt;drive&gt;:/Users/YOURUSERNAME/AppData/Local/[Game Name]/</span> et sous Mac à l'adresse <span class="inline">~/Library/Application Support/[Game Name]/</span>. L'image capturée sera le rendu final de la surface d'application du jeu, ou (si la surface d'application a été désactivée) ce sera une image de l'affichage ou de la fenêtre entière.</p>
+  <p>Il est important de noter que la fonction est conçue pour être appelée dans l'<b>événement Draw GUI End Event</b>, qui devrait donner des résultats cohérents sur toutes les plateformes. L'utiliser dans un autre événement peut ne pas fonctionner comme prévu et donner des résultats différents selon les cibles et même les appareils.</p>
+  <p>Si vous avez besoin de plus de contrôle sur ce qui est sauvegardé, vous devez utiliser la fonction <a href="screen_save_part.htm"><span class="inline">screen_save_part()</span></a>.</p>
+  <p class="note"><b><span class="note">NOTE</span> </b>Cette fonction ne fonctionne pas sur la cible HTML5.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">screen_save(fname);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>fname</td>
-        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The filename for the screenshot to save</td>
+        <td><span class="notranslate">fname</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Chaîne de caractères</a></span></td>
+        <td><span class="notranslate">The filename for the screenshot to save</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if keyboard_check_pressed(ord(&quot;S&quot;))<br />
     {<br />
         screen_save(working_directory + &quot;Screens\Screen_&quot; + string(num++) + &quot;.png&quot;)<br />
     }</p>
-  <p>The above code takes a screenshot of the game when the user presses the &quot;S&quot; key. This screen shot is saved to a specific directory and numbered using a variable which is then incremented.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus prend une capture d'écran du jeu lorsque l'utilisateur appuie sur la touche &quot;S&quot;. Cette capture d'écran est enregistrée dans un répertoire spécifique et numérotée à l'aide d'une variable qui est ensuite incrémentée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_Display.htm">Cameras And Display</a></div>
-        <div style="float:right">Next: <a href="screen_save_part.htm">screen_save_part</a></div>
+        <div style="float:left">Retour : <a href="Cameras_And_Display.htm">Appareils photo et écran</a></div>
+        <div style="float:right">Suivant : <a href="screen_save_part.htm"><span class="notranslate">screen_save_part</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 screen_save

@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>How to Disable Extensions?</title>
+  <title>Comment désactiver les extensions ?</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
@@ -14,32 +14,32 @@
   <meta name="search-keywords" content="disable extensions, configurations, configs, config" />
 </head>
 <body>
-  <h1>How to Disable Extensions?</h1>
-  <p>GameMaker has extensions for some target platforms, e.g. <a href="https://marketplace.yoyogames.com/assets/10709/steamworks-ext">Steamworks</a> and <a href="https://github.com/YoYoGames/GDKExtension">GDK</a>.</p>
-  <p>If you&#39;re using both of these extensions, you&#39;ll want to disable the GDK extension when building for Steam, and vice-versa.</p>
-  <p>This problem is not limited to these two extensions, and applies to any extension that is meant for a specific target.</p>
-  <h2>Disabling extensions selectively</h2>
-  <p>First, <a href="../../Settings/Configurations.htm">set up a configuration</a> for each one of your target platforms, if you haven&#39;t done so already.</p>
-  <p>This example only uses Steamworks and GDK.</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Disabling_Extensions/DisExt_Configs.png" />Select the configuration for one target platform. Let&#39;s assume you selected the <strong>GDK</strong> configuration.</p>
-  <p>Open an extension that should not be used for GDK. For this example, open the Steamworks extension.</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Disabling_Extensions/DisExt_CopiesTo.png" />Disable all of the targets under <strong>Copies To</strong>. This will ensure that the Steamworks extension is not executed when using the GDK configuration.</p>
-  <p>Now, switch over to your <strong>Steamworks</strong> configuration. Open the GDK extension, and disable all of its targets.</p>
-  <h2>Done!</h2>
-  <p>Now, whenever you build for GDK, use the GDK configuration; when you build for Steam, use the Steamworks configuration, and so on.</p>
-  <p>Using configurations this way allows you to control which extensions are used for building which platforms.</p>
-  <p>If you have more extensions, give them the same treatment: disable their exports in configurations that don&#39;t need them.</p>
-  <p>If you have more target platforms, add configurations for them, and modify which extensions are used for them.</p>
-  <p> </p>
-  <p> </p>
+  <h1>Comment désactiver les extensions ?</h1>
+  <p>GameMaker possède des extensions pour certaines plateformes cibles, par exemple <a href="https://marketplace.yoyogames.com/assets/10709/steamworks-ext">Steamworks</a> et <a href="https://github.com/YoYoGames/GDKExtension">GDK</a>.</p>
+  <p>Si vous utilisez ces deux extensions, il est préférable de désactiver l'extension GDK lors de la compilation pour <span class="notranslate">Steam</span>, et vice-versa.</p>
+  <p>Ce problème n'est pas limité à ces deux extensions, et s'applique à toute extension destinée à une cible spécifique.</p>
+  <h2>Désactiver les extensions de manière sélective</h2>
+  <p>Tout d'abord, établissez <a href="../../Settings/Configurations.htm">une configuration</a> pour chacune de vos plates-formes cibles, si vous ne l'avez pas déjà fait.</p>
+  <p>Cet exemple n'utilise que Steamworks et GDK.</p>
+  <p><img>Sélectionnez la configuration pour une plate-forme cible. Supposons que vous ayez sélectionné la configuration <strong>GDK</strong>.</p>
+  <p>Ouvrez une extension qui ne doit pas être utilisée pour GDK. Pour cet exemple, ouvrez l'extension Steamworks.</p>
+  <p><img>Désactivez toutes les cibles sous <strong>Copies vers</strong>. Cela permettra de s'assurer que l'extension Steamworks n'est pas exécutée lors de l'utilisation de la configuration GDK.</p>
+  <p>Maintenant, passez à votre configuration <strong>Steamworks</strong>. Ouvrez l'extension GDK, et désactivez toutes ses cibles.</p>
+  <h2>C'est fait !</h2>
+  <p>Maintenant, lorsque vous construisez pour GDK, utilisez la configuration GDK ; lorsque vous construisez pour <span class="notranslate">Steam</span>, utilisez la configuration Steamworks, et ainsi de suite.</p>
+  <p>En utilisant les configurations de cette manière, vous pouvez contrôler quelles extensions sont utilisées pour construire quelles plateformes.</p>
+  <p>Si vous avez d'autres extensions, appliquez-leur le même traitement : désactivez leurs exportations dans les configurations qui n'en ont pas besoin.</p>
+  <p>Si vous avez d'autres plates-formes cibles, ajoutez des configurations pour elles, et modifiez les extensions qui sont utilisées pour elles.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="../Extensions.htm">The Extension Editor</a></div>
-        <div>Next: <a data-xref="{title}" href="Creating_An_Extension.htm">Creating An Extension</a></div>
+        <div>Retour : <a data-xref="{title}" href="../Extensions.htm">Extensions</a></div>
+        <div>Suivant : <a data-xref="{title}" href="Creating_An_Extension.htm">Création d'une extension</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
 </body>
 </html>

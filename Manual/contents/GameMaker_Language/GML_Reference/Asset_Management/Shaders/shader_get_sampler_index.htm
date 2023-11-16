@@ -6,7 +6,7 @@
   <title>shader_get_sampler_index</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function shader_get_sampler_index" />
   <meta name="rh-index-keywords" content="shader_get_sampler_index" />
@@ -16,52 +16,52 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>shader_get_sampler_index</h1>
-  <p>Since you cannot change the value of a shader sampler within the shader itself, you have to set it before calling the shader using one of the available <strong>uniform set</strong> functions. However, to be able to do <i>that</i> you must first call this function to get the &quot;handle&quot; of the shader sampler that you will want to set.</p>
-  <p class="note"><span class="note">NOTE</span> Although a shader is made up of two discreet programs (vertex and fragment) this function will not differentiate between the two and will return the handle of the shader sample from either of them.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Comme vous ne pouvez pas modifier la valeur d'un échantillonneur <span class="notranslate">shader</span> au sein même de <span class="notranslate">shader</span>, vous devez le définir avant d'appeler <span class="notranslate">shader</span> à l'aide de l'une des fonctions de <strong>définition d'uniformes</strong> disponibles. Cependant, pour pouvoir <i>le</i> faire, vous devez d'abord appeler cette fonction pour obtenir le &quot;handle&quot; de l'échantillonneur <span class="notranslate">shader</span> que vous souhaitez définir.</p>
+  <p class="note"><span class="note">NOTE</span> Bien qu'un <span class="notranslate">shader</span> soit composé de deux programmes discrets (vertex et fragment), cette fonction ne fera pas la différence entre les deux et renverra le handle de l'échantillon <span class="notranslate">shader</span> de l'un ou l'autre.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">shader_get_sampler_index(shader, uniform);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>shader</td>
+        <td><span class="notranslate">shader</span></td>
         <td><span data-keyref="Type_Asset_Shader"><a data-rhwidget="HyperlinkPopover" href="../../../../../The_Asset_Editors/Shaders.htm">Shader Asset</a></span></td>
-        <td>The index of the shader to use.</td>
+        <td><span class="notranslate">The index of the shader to use.</span></td>
       </tr>
       <tr>
-        <td>uniform</td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">String</a></span></td>
-        <td>The shader sampler to get the handle of (a string).</td>
+        <td><span class="notranslate">uniform</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Chaîne de caractères</a></span></td>
+        <td><span class="notranslate">The shader sampler to get the handle of (a string).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Handle_Shader_Sampler"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Shaders/shader_get_sampler_index.htm">Shader Sampler Handle</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">glassshader_bgsampler = shader_get_sampler_index(GlassShader, &quot;s_BackgroundSampler&quot;)<br />
     spr = sprite_get_texture(sprite_index, 0);<br />
     shader_set(GlassShader);<br />
     texture_set_stage(glassshader_bgsampler, spr);<br />
     shader_reset();</p>
-  <p>The above code will get the <i>handle</i> for the sampler within the shader indexed as &quot;GlassShader&quot; and then set that shader constant to the given sprite texture.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus récupère l'<i>identifiant de</i> l'échantillonneur dans le fichier <span class="notranslate">shader</span> indexé comme &quot;GlassShader&quot;, puis définit cette constante <span class="notranslate">shader</span> sur la texture <span class="notranslate">sprite</span> donnée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Shaders.htm">Shaders</a></div>
-        <div style="float:right">Next: <a href="shader_set.htm">shader_set</a></div>
+        <div style="float:left">Retour : <a href="Shaders.htm">Shaders</a></div>
+        <div style="float:right">Suivant : <a href="shader_set.htm"><span class="notranslate">shader_set</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 shader_get_sampler_index

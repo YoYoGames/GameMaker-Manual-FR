@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>External Merge/Diff Tools</title>
+  <title>Outils externes de fusion/diffusion</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section that covers Source Control merge and diff tools" />
   <meta name="rh-index-keywords" content="Source Control - Esternal Merge/Dif Tools" />
@@ -14,48 +14,48 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>External Merge/Diff Tools</h1>
-  <h2>Merge Tool</h2>
-  <p>When you work on a project with other people, there&#39;s always a chance there could be a conflict, as multiple people edit the same file and most source control systems can make a good attempt at merging any conflicted files, but when there are changes in the same place, it requires a bit of help to know what to do – this is where a <strong>merge tool </strong>comes in to show you the changes, and let you decide.</p>
-  <p>As each merge tool is different, there are four macros that can be used to help specify files to it which can be set up from the <strong>Conflicts </strong>window by clicking the button labelled <strong>Choose Merge Tool</strong><strong></strong>:</p>
+  <h1>Outils externes de fusion/diffusion</h1>
+  <h2>Outil de fusion</h2>
+  <p>Lorsque vous travaillez sur un projet avec d'autres personnes, il y a toujours une chance qu'il y ait un conflit, car plusieurs personnes éditent le même fichier et la plupart des systèmes de contrôle de source peuvent faire une bonne tentative de fusionner les fichiers en conflit, mais quand il y a des changements au même endroit, il faut un peu d'aide pour savoir quoi faire - c'est là qu'un <strong>outil de fusion </strong>intervient pour vous montrer les changements et vous laisser décider.</p>
+  <p>Comme chaque outil de fusion est différent, il existe quatre macros qui peuvent être utilisées pour aider à lui spécifier des fichiers. Ces macros peuvent être configurées à partir de la fenêtre <strong>Conflits </strong>en cliquant sur le bouton intitulé <strong>Choose Merge Tool</strong><strong></strong>:</p>
   <p><img alt="Source Control Conflict Window" class="center" src="../../assets/Images/IDE Tools/SCM_ConflictsWindow.png" /></p>
-  <p>When you click that button the <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Plugin_Preferences.htm">Preferences</a> window will open on the Git plugin:</p>
-  <p><img alt="Source Control Choose Merge Tool" class="center" src="../../assets/Images/IDE Tools/SCM_ChooseMergeTool.png" />Here you provide a path to the chosen merge tool and then a <strong>Merge Tool Options</strong> macro (or macros) to use when deciding what to do, with the following options available:</p>
+  <p>Lorsque vous cliquez sur ce bouton, la fenêtre des <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Plugin_Preferences.htm">préférences</a> s'ouvre sur le plugin <span class="notranslate">Git</span>:</p>
+  <p><img>Vous fournissez ici un chemin d'accès à l'outil de fusion choisi, puis une (ou plusieurs) macro(s) <strong>Options de l'outil de fusion</strong> à utiliser pour décider de ce qu'il faut faire, avec les options suivantes disponibles :</p>
   <ul class="colour">
-    <li><span class="inline">${scm_mine}</span>: path to your version</li>
-    <li><span class="inline">${scm_theirs}</span>: path to their version</li>
-    <li><span class="inline">${scm_base}</span>: path to the version before the conflicted changes occurred</li>
-    <li><span class="inline">${scm_merged}</span>: path to where the merge tool should save to</li>
+    <li><span class="inline">${scm_mine}</span>: chemin vers votre version</li>
+    <li><span class="inline">${scm_theirs}</span>: chemin vers leur version</li>
+    <li><span class="inline">${scm_base}</span>: chemin d'accès à la version avant les changements conflictuels</li>
+    <li><span class="inline">${scm_merged}</span>chemin d'accès à l'endroit où l'outil de fusion doit être sauvegardé</li>
   </ul>
-  <p>As a help to setting up, when you give a path to certain merge tools, <span data-keyref="GameMaker Name">GameMaker</span> will fill in some defaults to get started with, depending on the tool chosen:</p>
+  <p>Pour aider à la mise en place, lorsque vous donnez un chemin d'accès à certains outils de fusion, <span data-keyref="GameMaker Name">GameMaker</span> remplit quelques valeurs par défaut pour commencer, en fonction de l'outil choisi :</p>
   <ul class="colour">
-    <li><strong>KDiff3</strong>: <span class="inline"><span>&quot;${scm_theirs} &quot;${scm_mine}&quot; -o &quot;${scm_merged}&quot;</span></span></li>
-    <li><strong>Meld</strong>: <span class="inline"><span>&quot;${scm_mine}&quot; &quot;${scm_merged}&quot; &quot;${scm_theirs}&quot;</span></span></li>
+    <li><strong>KDiff3</strong>: <span class="inline"><span>&quot;${scm_theirs} &quot;${scm_mine}&quot; -o &quot;${scm_merged}&quot;</span></li>
+    <li><strong>Meld</strong>: <span class="inline"><span>&quot;${scm_mine}&quot; &quot;${scm_merged}&quot; &quot;${scm_theirs}&quot;</span></li>
     <li><strong>Notepad++</strong>: <span class="inline">${scm_merged}</span></li>
-    <li><strong>TortoiseMerge</strong>: <span class="inline"><span>/base:&quot;${scm_base}&quot; /theirs:&quot;${scm_theirs}&quot; /mine:&quot;${scm_mine}&quot; /merged:&quot;${scm_merged}&quot;</span></span></li>
-    <li><strong>DiffMerge</strong>:<strong> &quot;<span class="inline"><span>${scm_mine}&quot; &quot;${scm_merged}&quot; &quot;${scm_theirs}&quot;</span></span></strong></li>
+    <li><strong>TortoiseMerge</strong>: <span class="inline"><span>/base:&quot;${scm_base}&quot; /theirs:&quot;${scm_theirs}&quot; /mine:&quot;${scm_mine}&quot; /merged:&quot;${scm_merged}&quot;</span></li>
+    <li><strong>DiffMerge</strong>:<strong> &quot;</strong><strong><span class="inline"><span>${scm_mine}&quot; &quot;${scm_merged}&quot; &quot;${scm_theirs}&quot;</span></strong></li>
   </ul>
-  <p>Note that if you don&#39;t have (or don&#39;t want to use) a merge tool, then you can open up the script in the IDE and attempt to fix it from there.</p>
-  <p>So, back to our example Conflict as stated in the section on <a href="Conflicts.htm">Conflicts</a>... We have done a pull from master and one of the files is conflicted. This opens the Source Control <strong>Conflicts </strong>window, where you can click on the conflicted script, and now click on <strong>Merge</strong>, since you have configured your merge tool. Clicking merge will now open the tool where you can deal with the conflict and then use the macro(s) supplied to make the required changes. Once you have finished and closed the merge tool, the <span data-keyref="GameMaker Name">GameMaker</span> IDE will show the following confirmation window:</p>
-  <p><img alt="Source Control Merge Confirm" class="center" src="../../assets/Images/IDE Tools/SCM_MergeConfirm.png" />Simply answer &quot;Yes&quot; to this prompt as you&#39;ve just done it yourself using the merge tool, and then you need to commit this change to signify the end of the merge operation (<strong>Source Control </strong>&gt; <strong>Commit Changes</strong>). The Commit window will now show that a merge is in progress as well as show some unstaged files:</p>
-  <p><img alt="Source Control Merge In Progress" class="center" src="../../assets/Images/IDE Tools/SCM_MergeInProgress.png" />These unstaged files are our script file with the addition of <span class="inline">.base</span>, <span class="inline">.ours</span> and <span class="inline">.theirs</span>. We can safely delete all these so click <img alt="LMB Icon" class="icon" height="22" src="../../assets/Images/Icons/Icon_LMB.png" style="cursor: nwse-resize;" width="20" /> on the top one and then <img alt="Shift Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Shift.png" width="55" /> + <img alt="LMB Icon" class="icon" height="22" src="../../assets/Images/Icons/Icon_LMB.png" style="cursor: nwse-resize;" width="20" /> on the bottom one to select them all. Next, we right click on the selected files and choose <strong>Delete Path</strong> to remove them. There&#39;s also a commit message pre-filled for us as well, stating that this was a merge, and that there was a conflict (we can add to this or edit it as we wish).</p>
-  <p>We can click <strong>Commit </strong>now.</p>
-  <p>Due to the fact that you can have issues with other files, it means that your workflow when using remote or shared repositories should be as follows:</p>
+  <p>Notez que si vous n'avez pas (ou ne voulez pas utiliser) d'outil de fusion, vous pouvez ouvrir le script à l'adresse <span class="notranslate">IDE</span> et tenter de le corriger à partir de là.</p>
+  <p>Donc, revenons à notre exemple de conflit comme indiqué dans la section sur les <a href="Conflicts.htm">conflits</a>... Nous avons effectué un pull depuis master et l'un des fichiers est en conflit. Cela ouvre la fenêtre <strong>Conflits de </strong>Contrôle de Source, où vous pouvez cliquer sur le script en conflit, et maintenant cliquer sur <strong>Fusionner</strong>, puisque vous avez configuré votre outil de fusion. En cliquant sur Fusionner, vous ouvrirez l'outil où vous pourrez traiter le conflit et utiliser la ou les macros fournies pour effectuer les modifications requises. Une fois que vous avez terminé et fermé l'outil de fusion, la fenêtre de confirmation suivante s'affiche sur <span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span>:</p>
+  <p><img>Répondez simplement &quot;Oui&quot; à cette demande, car vous venez de le faire vous-même à l'aide de l'outil de fusion, puis vous devez valider cette modification pour signifier la fin de l'opération de fusion<strong>(Contrôle de source &gt; </strong> <strong>Valider les modifications</strong>). La fenêtre Commit indique maintenant qu'une fusion est en cours et présente des fichiers non indexés :</p>
+  <p><img>Ces fichiers non organisés sont notre fichier de script avec l'ajout de <span class="inline">.base</span>, <span class="inline">.ours</span> et <span class="inline">.theirs</span>. Nous pouvons les supprimer en toute sécurité. Cliquez donc sur <img> sur le fichier du haut, puis sur <img> + <img> sur le fichier du bas pour les sélectionner tous. Ensuite, nous faisons un clic droit sur les fichiers sélectionnés et choisissons <strong>Supprimer le chemin</strong> pour les supprimer. Il y a également un message de livraison pré-rempli pour nous, indiquant qu'il s'agissait d'une fusion et qu'il y avait un conflit (nous pouvons le compléter ou le modifier comme nous le souhaitons).</p>
+  <p>Nous pouvons cliquer sur <strong>Commit </strong>maintenant.</p>
+  <p>Étant donné que vous pouvez avoir des problèmes avec d'autres fichiers, cela signifie que votre flux de travail lorsque vous utilisez des dépôts distants ou partagés doit être le suivant :</p>
   <p class="code">Make Changes &gt; Save &gt; Commit &gt; Pull &gt; Merge &gt; Push</p>
-  <h2>Diff Tool</h2>
-  <p>You should also set up a <strong>Diff Tool</strong> for use when doing commits to a repository. This is set up from the <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Plugin_Preferences.htm">Preferences</a>, same as for the Merge tool:</p>
-  <p><img alt="Source Control Choose Diff Tool" class="center" src="../../assets/Images/IDE Tools/SCM_ChooseDiffTool.png" style="cursor: nwse-resize;" />The Diff tool is configured in much the same manner as the Merge tool, but only uses the <span class="inline">${scm_base}</span> and <span class="inline">${scm_theirs}</span> options - in this case, <span class="inline">${scm_base}</span> represents the unmodified file whereas <span class="inline">${scm_theirs}</span> represents the current state of the file. The Tool Options should be pre-populated with the default options for <strong>Meld</strong>, <strong>KDiff3 </strong>and <strong>TortoiseMerge</strong>, just as they were for the Merge tool. Note that <span data-keyref="GameMaker Name">GameMaker</span> does <em>not </em>support the outputting of single file diff patches, therefore there is no default for <strong>Notepad++</strong>.</p>
-  <p>In order to view changes between current and previous revisions using the Diff tool, simply open up the Commit window and then double click on a file. If the tool has been setup correctly, it will be launched and you&#39;ll be able to see the changes between the files.</p>
-  <p> </p>
-  <p> </p>
+  <h2>Outil de diffusion</h2>
+  <p>Vous devriez également configurer un <strong>outil de différence</strong> pour l'utiliser lorsque vous faites des commits à un référentiel. Cet outil est configuré dans les <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Plugin_Preferences.htm">préférences</a>, comme pour l'outil de fusion :</p>
+  <p><img>L'outil Diff est configuré à peu près de la même manière que l'outil Fusion, mais utilise seulement les options <span class="inline">${scm_base}</span> et <span class="inline">${scm_theirs}</span> - dans ce cas, <span class="inline">${scm_base}</span> représente le fichier non modifié alors que <span class="inline">${scm_theirs}</span> représente l'état actuel du fichier. Les options de l'outil devraient être pré-remplies avec les options par défaut pour <strong>Meld</strong>, <strong>KDiff3 </strong>et <strong>TortoiseMerge</strong>, comme elles l'ont été pour l'outil Fusion. Notez que <span data-keyref="GameMaker Name">GameMaker</span> <em>ne </em>prend <em>pas </em>en charge la sortie de patchs de différences de fichiers uniques, il n'y a donc pas de valeur par défaut pour <strong>Notepad++</strong>.</p>
+  <p>Pour visualiser les changements entre les révisions actuelles et précédentes à l'aide de l'outil Diff, il suffit d'ouvrir la fenêtre Commit et de double-cliquer sur un fichier. Si l'outil a été configuré correctement, il sera lancé et vous pourrez voir les changements entre les fichiers.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Source_Control.htm">Source Control</a></div>
-        <div style="float:right">Next: <a href="Setting_Up_Git_Plugin.htm">Setting Up The Git Plugin</a></div>
+        <div style="float:left">Retour : <a href="../Source_Control.htm">Contrôle de la source</a></div>
+        <div style="float:right">Suivant : <a href="Setting_Up_Git_Plugin.htm">Configuration du plugin <span class="notranslate">Git</span> </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Source Control External Tools

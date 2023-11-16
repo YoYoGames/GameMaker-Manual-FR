@@ -6,7 +6,7 @@
   <title>xboxlive_stats_flush_user</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_stats_flush_user" />
   <meta name="rh-index-keywords" content="xboxlive_stats_flush_user,achievement_stat_event" />
@@ -15,60 +15,60 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_stats_flush_user</h1>
-  <p>This function can be used to flush the stats data for a given user from the statistics manager, to the live server, ensuring that the server is up to date with the current values. According to XBox documentation, developers should be careful not to call this too often as the XBox will rate-limit the requests, and the XBox OS will also automatically flush stats approximately every 5 minutes automatically anyway.</p>
-  <p class="note"><b>NOTE</b>: Removing the user can return an error if the statistics that have been set on the user are invalid (such as the stat names containing non-alpha numeric characters).</p>
-  <p>To use the function, you supply the user ID as returned by (for example) the function <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>, and a proprity value (which will be 1 for high priority and 0 for low priority). The function will will return -1 if there was an error or the user ID is invalid, or any other value if the function was successfully called. The function will also generate a callback which will trigger a <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">System Asynchronous Event</a>. This event will have the special DS map <span class="inline"><a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span> which should then be parsed for the following keys:</p>
+  <p>Cette fonction peut être utilisée pour transférer les données de statistiques d'un utilisateur donné du gestionnaire de statistiques vers le serveur en direct, afin de s'assurer que le serveur est à jour avec les valeurs actuelles. Selon la documentation de la XBox, les développeurs doivent veiller à ne pas appeler cette fonction trop souvent, car la XBox limitera le nombre de requêtes et le système d'exploitation de la XBox évacuera automatiquement les statistiques toutes les 5 minutes environ.</p>
+  <p class="note"><b>REMARQUE</b>: la suppression de l'utilisateur peut renvoyer une erreur si les statistiques qui ont été définies sur l'utilisateur ne sont pas valides (par exemple, si les noms des statistiques contiennent des caractères numériques non alpha).</p>
+  <p>Pour utiliser la fonction, vous devez fournir l'ID utilisateur tel que renvoyé par (par exemple) la fonction <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>et une valeur de priorité (qui sera de 1 pour une haute priorité et de 0 pour une basse priorité). La fonction renverra -1 s'il y a eu une erreur ou si l'ID utilisateur est invalide, ou toute autre valeur si la fonction a été appelée avec succès. La fonction génère également un callback qui déclenche un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">événement asynchrone du système</a>. Cet événement contiendra la carte spéciale DS <span class="inline"><a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span> qui devra ensuite être analysée pour les clés suivantes :</p>
   <ul class="colour">
-    <li>&quot;<b>id</b>&quot; - Will hold the constant <span class="inline">achievement_stat_event</span></li>
-    <li>&quot;<b>eventname</b>&quot; - Will hold the string &quot;<i>StatisticUpdateComplete</i>&quot;</li>
-    <li>&quot;<b>userid</b>&quot; - The user ID associated with the request</li>
-    <li>&quot;<b>error</b>&quot; - 0 if successful, some other value if there has been an error</li>
-    <li>&quot;<b>errormessage</b>&quot; - A string with an error message, if any is available</li>
+    <li>&quot;<b>id</b>&quot; - Tiendra la constante <span class="inline">achievement_stat_event</span></li>
+    <li>&quot;<b>Eventname</b>&quot; - Contient la chaîne &quot;<i>StatisticUpdateComplete</i>&quot;.</li>
+    <li>&quot;<b>userid</b>&quot; - L'ID utilisateur associé à la demande</li>
+    <li>&quot;<b>error</b>&quot; - 0 en cas de succès, une autre valeur en cas d'erreur.</li>
+    <li>&quot;<b>errormessage</b>&quot; - Une chaîne contenant un message d'erreur, s'il en existe un.</li>
   </ul>
-  <p>Note that stats will be flushed automatically for you when you remove a user from the stat manager. See <a href="xboxlive_stats_remove_user.htm"><span class="inline">xboxlive_stats_remove_user()</span></a> for more information.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Notez que les statistiques seront vidées automatiquement pour vous lorsque vous supprimez un utilisateur du gestionnaire de statistiques. Voir <a href="xboxlive_stats_remove_user.htm"><span class="inline">xboxlive_stats_remove_user()</span></a> pour plus d'informations.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">xboxlive_stats_flush_user(user_id, priority);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>user_id</td>
-        <td><span data-keyref="Type_ID_Xbox_User">Xbox User ID</span></td>
-        <td>The user ID (a pointer) to use</td>
+        <td><span class="notranslate">user_id</span></td>
+        <td><span data-keyref="Type_ID_Xbox_User">ID utilisateur Xbox</span></td>
+        <td><span class="notranslate">The user ID (a pointer) to use</span></td>
       </tr>
       <tr>
-        <td>priority</td>
+        <td><span class="notranslate">priority</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The prority value (0 or 1)</td>
+        <td><span class="notranslate">The prority value (0 or 1)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">for(var i = 0; i &lt; array_length(user_id); ++i;)<br />
     {<br />
         xboxlive_stats_flush_user(user_id[i], 0);<br />
     }</p>
-  <p>The above code loops through the stored user account IDs and then flushes the stat manager data for each user.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus passe en boucle les identifiants de compte utilisateur stockés, puis vide les données du gestionnaire de statuts pour chaque utilisateur.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a href="xboxlive_stats_set_stat_real.htm">xboxlive_stats_set_stat_real</a></div>
+        <div style="float:left">Retour : <a href="Stats_And_Leaderboards.htm">Stats et classements</a></div>
+        <div style="float:right">Suivant : <a href="xboxlive_stats_set_stat_real.htm"><span class="notranslate">xboxlive_stats_set_stat_real</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_flush_user

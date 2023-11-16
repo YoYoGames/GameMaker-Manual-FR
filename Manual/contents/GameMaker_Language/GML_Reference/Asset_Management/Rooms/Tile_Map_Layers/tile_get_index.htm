@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>tile_get_index</title>
+  <title>tuile_get_index</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function tile_get_index" />
   <meta name="rh-index-keywords" content="tile_get_index" />
@@ -15,31 +15,31 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tile_get_index</h1>
-  <p>This function can be used to get the tile index (the position of the tile within the tile set image) from a set of tile-data. You specify the tile-data, which can be retrieved using the function <a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a>, and the function will return an integer value for the index.</p>
-  <p>When using this function, ensure that the given tile-data is valid, otherwise the returned index value will not be valid either which may result in unexpected behaviour.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>tuile_get_index</h1>
+  <p>Cette fonction peut être utilisée pour obtenir l'indice de tuile (la position de la tuile dans l'image du jeu de tuiles) à partir d'un jeu de données de tuiles. Vous spécifiez les données de tuiles, qui peuvent être récupérées à l'aide de la fonction <a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a>et la fonction renvoie une valeur entière pour l'index.</p>
+  <p>Lorsque vous utilisez cette fonction, assurez-vous que les données de tuiles données sont valides, sinon la valeur de l'index retourné ne sera pas valide non plus, ce qui peut entraîner un comportement inattendu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">tile_get_index(tiledata)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>tiledata</td>
-        <td><span data-keyref="Type_Real_Tile_Data">Tile Data</span></td>
-        <td>the tile-data to check</td>
+        <td><span class="notranslate">tiledata</span></td>
+        <td><span data-keyref="Type_Real_Tile_Data">Données sur les tuiles</span></td>
+        <td><span class="notranslate">the tile-data to check</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br />
     var map_id = layer_tilemap_get_id(lay_id);<br />
     var mx = tilemap_get_cell_x_at_pixel(map_id, mouse_x, mouse_y);<br />
@@ -48,18 +48,18 @@
     var ind = tile_get_index(data);<br />
     data = tile_set_index(data, irandom(23));<br />
     tilemap_set(map_id, data, mx, my);</p>
-  <p>The above code gets the tile map ID from the given layer and then uses that to get the tile-data for the cell under the mouse position. This data is then used to set the tile index to a random number.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus récupère l'ID de la carte des tuiles de la couche donnée, puis l'utilise pour obtenir les données des tuiles de la cellule située sous la position de la souris. Ces données sont ensuite utilisées pour définir l'index de la tuile à un nombre aléatoire.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Tile_Map_Layers.htm">Tile Map Layers</a></div>
-        <div style="float:right">Next: <a href="tile_get_flip.htm">tile_get_flip</a></div>
+        <div style="float:left">Retour : <a href="Tile_Map_Layers.htm">Carrelage des couches de la carte</a></div>
+        <div style="float:right">Suivant : <a href="tile_get_flip.htm"><span class="notranslate">tile_get_flip</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 tile_get_index

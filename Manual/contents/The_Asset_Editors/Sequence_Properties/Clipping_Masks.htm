@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Clipping Masks</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Masques d'écrêtage</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing how to use clipping masks in the track editor" />
   <meta name="rh-index-keywords" content="Sequences - Clipping Masks" />
@@ -14,27 +14,34 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Clipping Masks</h1>
-  <p>As mentioned in the <a href="The_Track_Panel.htm">Track Panel</a> page, there is an action to create what is called a <strong>clipping mask group </strong>in the track editor. This is accessed by clicking on the <img alt="Clip Mask Icon" src="../../assets/Images/Icons/Icon_AddClipMask.png" /> button at the bottom of the Track Panel:</p>
-  <p><img alt="Clip Mask Button in the Track Panel" class="center" src="../../assets/Images/Asset_Editors/Track_Panel_ClipMask_Button.png" />Clicking this will create a clipping mask group that is comprised of two sub-sets of assets that can be used as either the <strong>subject </strong>or the <strong>mask </strong>of the group. Basically the subject is the asset that is going to be masked, and the mask is the asset that is going to do the masking:</p>
-  <p><img alt="Basic Clipping Mask" class="center" src="../../assets/Images/Asset_Editors/Track_Clipping_Mask.png" />The idea behind using a clipping mask is that you add a subject sprite, and then a mask sprite, and the mask sprite will &quot;hide&quot; (mask) the subject. You can then use the mask sprite animation, or move or scale the mask sprite to change the visibility of the subject (or parts of the subject). Each group (mask and subject) can contain multiple assets, and each of the assets can have multiple parameter tracks.</p>
-  <p>To add a subject and mask, simply drag the sprite, object, sequence or particle system from the Asset Browser over the folder that you want to add it to:</p>
-  <p><img alt="Add A Clipping Mask" src="../../assets/Images/Asset_Editors/Track_Add_Clipping_Mask.gif" /></p>
-  <p>The mask sprite <em>alpha </em>will be used to &quot;hide&quot; whatever subject is underneath it, where a value of 100% alpha (opaque) will mask completely and a value of 0% alpha (transparent) will show it. For example, we have this sprite for masking:</p>
-  <p><img alt="Clipping Mask Example Sprite" class="center" src="../../assets/Images/Asset_Editors/Clipping_Mask_Sprite.png" />We can then apply this as a clipping mask to icons to create a &quot;cooldown&quot; effect, like this:</p>
-  <p><img alt="Animated Clipping Mask Example" class="center" src="../../assets/Images/Asset_Editors/Clipping_Mask_Example.gif" />In the above example &quot;<span class="inline">Sprite_2</span>&quot; is simply a static sprite asset that is the base icon, and then over that we&#39;ve created a clipping mask group with a greyscale version of the sprite, as well as a mask (using the example sprite shown above). When combined and the sequence is played, the clipping mask group reveals the base sprite underneath, creating our cooldown effect.</p>
-  <p>Note that clipping mask groups can be treated as a single item in the track list and dope sheet, and you can add rotation and position parameter tracks to the group <em>as a whole</em>. You can also apply clipping mask groups to group folders of assets or even to <em>other</em> clipping mask groups, making them a very powerful tool.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <h1>Masques d'écrêtage</h1>
+  <p>Comme mentionné dans la page du <a href="The_Track_Panel.htm">panneau des pistes</a>, il existe une action permettant de créer ce que l'on appelle un <strong>groupe de masques d'écrêtage </strong>dans l'éditeur de pistes. On y accède en cliquant sur le bouton <img> en bas du panneau des pistes :</p>
+  <p><img>En cliquant sur ce bouton, vous créez un groupe de masques d'écrêtage composé de deux sous-ensembles d'actifs pouvant être utilisés comme
+    le <strong>sujet </strong>ou le <strong>masque </strong>du groupe. En fait, le sujet est l'élément qui va être masqué, et le masque est l'élément qui va effectuer le masquage :</p>
+  <p><img>L'idée derrière l'utilisation d'un masque d'écrêtage est que vous ajoutez un sujet <span class="notranslate">sprite</span>, puis un masque <span class="notranslate">sprite</span>, et le masque <span class="notranslate">sprite</span> va &quot; cacher &quot; (masquer) le sujet.
+    (masque) le sujet. Vous pouvez ensuite utiliser l'animation du masque <span class="notranslate">sprite</span>, ou déplacer ou mettre à l'échelle le masque <span class="notranslate">sprite</span> pour modifier la visibilité du sujet (ou de certaines parties du sujet). Chaque groupe (masque et sujet) peut contenir plusieurs ressources, et chacune de ces ressources peut avoir plusieurs pistes de paramètres.
+    avoir plusieurs pistes de paramètres.</p>
+  <p>Pour ajouter un sujet et un masque, il suffit de faire glisser le site <span class="notranslate">sprite</span>, l'objet ou la séquence depuis le navigateur de ressources vers le dossier auquel vous souhaitez l'ajouter :</p>
+  <p><img alt="Clip Mask Icon" src="../../assets/Images/Icons/Icon_AddClipMask.png"
+    /></p>
+  <p>Le masque <span class="notranslate">sprite</span> <em>alpha </em>sera utilisé pour &quot;cacher&quot; le sujet qui se trouve en dessous, où une valeur de 100% alpha (opaque) masquera complètement et une valeur de 0% alpha (transparent) le montrera. Par exemple, nous avons ce <span class="notranslate">sprite</span> pour le masquage :</p>
+  <p><img>Nous pouvons ensuite l'appliquer comme masque d'écrêtage aux icônes pour créer un effet de &quot;refroidissement&quot;, comme ceci :</p>
+  <p><img>Dans l'exemple ci-dessus, &quot;<span class="inline">Sprite_2</span>&quot; est simplement un actif statique <span class="notranslate">sprite</span> qui est l'icône de base,
+    et par-dessus, nous avons créé un groupe de masques d'écrêtage avec une version en niveaux de gris de <span class="notranslate">sprite</span>, ainsi qu'un masque (en utilisant l'exemple <span class="notranslate">sprite</span> montré ci-dessus). Lorsqu'il est combiné et que la séquence est jouée, le groupe de masques d'écrêtage révèle le sprite de base.
+    sous-jacent, créant ainsi notre effet de refroidissement.</p>
+  <p>Notez que les groupes de masques d'écrêtage peuvent être traités comme un seul élément dans la liste des pistes et sur <span class="notranslate">dope sheet</span>, et que vous pouvez ajouter des pistes de paramètres de rotation et de position au groupe <em>dans son ensemble</em>. Vous pouvez également appliquer des groupes de masques d'écrêtage à des dossiers de groupe d'actifs
+    ou même à d'<em>autres</em> groupes de masques d'écrêtage, ce qui en fait un outil très puissant.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="Using_The_Dope_Sheet.htm">Using The Dope Sheet</a></div>
+        <div style="float:left">Retour : <a href="../Sequences.htm">Séquences</a></div>
+        <div style="float:right">Suivant : <a href="Using_The_Dope_Sheet.htm">Utilisation de la fiche d'information</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Clipping Masks

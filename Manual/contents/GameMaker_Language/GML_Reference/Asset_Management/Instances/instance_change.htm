@@ -6,7 +6,7 @@
   <title>instance_change</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function instance_change" />
   <meta name="rh-index-keywords" content="instance_change" />
@@ -16,53 +16,53 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>instance_change</h1>
-  <p>You can use this function to change one instance of an object into another instance of a different object, and while doing so decide whether to perform the initial instances Destroy and Clean Up Events and the new instances Create Event. In this way, you can have (for example) a bomb change into an explosion - in which case the &quot;perf&quot; argument would probably be true as you would want the bomb to perform its Destroy Event and Clean Up Event, as well as the explosion to perform its Create Event - or you could have your player character change into a different one - in which case the &quot;perf&quot; argument would probably be false as you do not want the instances to perform their Create and Destroy/Clean Up events.</p>
-  <p>It is worth noting that changing the instance means that you should perform no further actions with that instance until the next step, in particular trying to access variables etc... as that will cause an error. Basically, you change the instance but it is not actually available until the end of the current step, so to access any of the variables it contains directly (for example, calling <span class="inline">obj_Changed.x</span>) will not work.</p>
-  <p class="note"><b>WARNING!</b> When changing a physics enabled instance, the physical properties <b>will not be carried over</b> to the new instance being changed into. Therefore you should have code in place to &quot;transfer&quot; the physics state of the current instance over to the new instance, or have defined the new instances physical properties in its Create Event, or in the object editor. For this reason it is recommended that you not use this function with physics enabled instances, but rather use a combination of <span style="font-size:1px;"><span class="inline">instance_destroy()</span></span> and <span><span style="font-size:1px;"><span class="inline">instance_create_layer()</span></span>.</span></p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Vous pouvez utiliser cette fonction pour transformer une instance d'un objet en une autre instance d'un objet différent, et ce faisant, décider d'exécuter les événements Destroy et Clean Up des instances initiales et l'événement Create des nouvelles instances. De cette façon, vous pouvez (par exemple) faire en sorte qu'une bombe se transforme en une explosion - auquel cas l'argument &quot;perf&quot; sera probablement vrai car vous voudrez que la bombe exécute ses événements Destroy et Clean Up, et que l'explosion exécute son événement Create - ou vous pouvez faire en sorte que votre personnage joueur se transforme en un autre - auquel cas l'argument &quot;perf&quot; sera probablement faux car vous ne voulez pas que les instances exécutent leurs événements Create et Destroy/Clean Up.</p>
+  <p>Il convient de noter que la modification de l'instance signifie que vous ne devez plus effectuer d'autres actions avec cette instance jusqu'à l'étape suivante, en particulier essayer de <span class="notranslate">access</span> variables etc... car cela provoquera une erreur. En fait, vous modifiez l'instance mais elle n'est pas réellement disponible avant la fin de l'étape en cours. Par conséquent, l'appel direct à <span class="notranslate">access</span> des variables qu'elle contient (par exemple, en appelant <span class="inline">obj_Changed.x</span>) ne fonctionnera pas.</p>
+  <p class="note"><b>ATTENTION !</b> Lors de la modification d'une instance activée par la physique, les propriétés physiques <b>ne seront pas</b> transférées vers la nouvelle instance. Par conséquent, vous devez avoir un code en place pour &quot;transférer&quot; l'état physique de l'instance actuelle vers la nouvelle instance, ou avoir défini les propriétés physiques de la nouvelle instance dans son événement de création, ou dans l'éditeur d'objets. Pour cette raison, il est recommandé de ne pas utiliser cette fonction avec des instances dotées de physique, mais plutôt d'utiliser une combinaison de <span style="font-size:1px;"><span class="inline">instance_destroy()</span></span> et <span><span style="font-size:1px;"><span class="inline">instance_create_layer()</span></span></span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">instance_change(obj, perf);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>obj</td>
-        <td><span data-keyref="Type_Asset_Object">Object Asset</span></td>
-        <td>The new object the calling object will change into.</td>
+        <td><span class="notranslate">obj</span></td>
+        <td><span data-keyref="Type_Asset_Object">Objet Asset</span></td>
+        <td><span class="notranslate">The new object the calling object will change into.</span></td>
       </tr>
       <tr>
-        <td>perf</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether to perform that new object&#39;s Create and Destroy events (true) or not (false).</td>
+        <td><span class="notranslate">perf</span></td>
+        <td><span data-keyref="Type_Bool">Booléen</span></td>
+        <td><span class="notranslate">Whether to perform that new object&#39;s Create and Destroy events (true) or not (false).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if keyboard_check(vk_enter)<br />
     {<br />
         instance_change(obj_Player_Swimming, false);<br />
         exit;<br />
     }</p>
-  <p>The above code will change the calling instance into an instance of &quot;obj_Player_Swimming&quot; without performing the original instances destroy event nor the new instances create event when the user presses the &quot;Enter&quot; key, exiting the code block when done.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus transformera l'instance appelante en une instance de &quot;obj_Player_Swimming&quot; sans exécuter l'événement de destruction de l'instance d'origine ni l'événement de création de la nouvelle instance lorsque l'utilisateur appuie sur la touche &quot;Entrée&quot;, en sortant du bloc de code lorsque cela est fait.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Instances.htm">Instances</a></div>
-        <div style="float:right">Next: <a href="instance_copy.htm">instance_copy</a></div>
+        <div style="float:left">Retour : <a href="Instances.htm">Instances</a></div>
+        <div style="float:right">Suivant : <a href="instance_copy.htm"><span class="notranslate">instance_copy</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 instance_change

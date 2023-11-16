@@ -6,7 +6,7 @@
   <title>display_reset</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for display_reset" />
   <meta name="rh-index-keywords" content="display_reset,display_aa" />
@@ -15,53 +15,53 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>display_reset</h1>
-  <p>This function Resets the display settings to the ones that were set when the game was started, but also allows you to change the current level of full screen anti-aliasing being used and whether to use vertical synchronisation. The available anti-aliasing levels are 0,2,4 and 8, with the default startup value being set to 0, and the default v-sync setting is false (off). Switching v-sync on may give a smoother gaming experience but it will also need more processing power and so its impact must be considered careful before use, and the same goes for the anti-aliasing where the higher the number the more processing that is required.</p>
-  <p>Since not all target devices are the same, some may not support 8x or 4x anti-aliasing for example, and so there is a <b>read only</b> variable available for getting the different levels of AA that the device running the game can display:</p>
+  <p>Cette fonction réinitialise les paramètres d'affichage à ceux qui ont été définis au démarrage du jeu, mais vous permet également de modifier le niveau actuel d'anticrénelage plein écran utilisé et d'utiliser ou non la synchronisation verticale. Les niveaux d'anticrénelage disponibles sont 0, 2, 4 et 8, la valeur par défaut au démarrage étant 0, et le paramètre par défaut de la synchronisation verticale est false (désactivé). L'activation de la synchronisation verticale peut donner une expérience de jeu plus fluide, mais elle nécessitera également plus de puissance de traitement et son impact doit donc être considéré avec attention avant l'utilisation, et il en va de même pour l'anticrénelage où plus le nombre est élevé, plus le traitement est nécessaire.</p>
+  <p>Comme tous les périphériques cibles ne sont pas les mêmes, certains peuvent ne pas supporter l'anticrénelage 8x ou 4x par exemple, et il y a donc une variable en <b>lecture seule</b> disponible pour obtenir les différents niveaux d'AA que le périphérique exécutant le jeu peut afficher :</p>
   <p class="code">display_aa</p>
-  <p>This variable will return an integer value based on the setting of bits for the different levels. So for only 2xAA, this will report 2, for 2x and 4x availability it will report 6. For 8 and 4 it will report 12. For all 3 levels (2,4 and 8) it will report 14.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette variable renverra une valeur entière basée sur le réglage des bits pour les différents niveaux. Ainsi, pour seulement 2xAA, cela donnera 2, pour 2x et 4x disponibilité, cela donnera 6. Pour 8 et 4, la valeur sera de 12. Pour les 3 niveaux (2,4 et 8), la valeur sera de 14.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">display_reset(aa, vsync);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>aa</td>
+        <td><span class="notranslate">aa</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The level of anti-aliasing filtering (0, 2, 4 or 8).</td>
+        <td><span class="notranslate">The level of anti-aliasing filtering (0, 2, 4 or 8).</span></td>
       </tr>
       <tr>
-        <td>vsync</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Toggle vertical synchronisation to on (true) or off (false).</td>
+        <td><span class="notranslate">vsync</span></td>
+        <td><span data-keyref="Type_Bool">Booléen</span></td>
+        <td><span class="notranslate">Toggle vertical synchronisation to on (true) or off (false).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if (display_aa &gt; 12)<br />
     {<br />
         display_reset(8, true);<br />
     }</p>
-  <p>The above code will set the anti-aliasing level to 8 if supported and switch v-sync to on.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus définira le niveau d'anticrénelage à 8 s'il est pris en charge et activera la synchronisation verticale.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_Display.htm">Cameras And Display</a></div>
-        <div style="float:right">Next: <a href="display_get_width.htm">display_get_width</a></div>
+        <div style="float:left">Retour : <a href="Cameras_And_Display.htm">Appareils photo et écran</a></div>
+        <div style="float:right">Suivant : <a href="display_get_width.htm"><span class="notranslate">display_get_width</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 display_reset

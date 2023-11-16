@@ -6,7 +6,7 @@
   <title>gamepad_set_vibration</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for gamepad_set_vibration" />
   <meta name="rh-index-keywords" content="gamepad_set_vibration" />
@@ -14,57 +14,54 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">gamepad_set_vibration</span></h1>
-  <p>With this function you can set the vibration of the gamepad motors, with either motor using a value from 0 (no vibration) to 1 (full vibration). Note that there is no time limit on this function, so you will need to use a variable or an alarm to switch off the vibration (set motors to 0) after a given time has passed, otherwise the gamepad will continue to vibrate indefinitely.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> This function is currently only available for the standard <b>Windows</b>, <b>PS4</b> and <b>Xbox One</b> target modules.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">gamepad_set_vibration</span>(device, left_motor, right_motor);</p>
+  <h1>gamepad_set_vibration</h1>
+  <p>Cette fonction permet de régler la vibration des moteurs du gamepad, chaque moteur ayant une valeur comprise entre 0 (aucune vibration) et 1 (vibration complète). Notez qu'il n'y a pas de limite de temps pour cette fonction, vous devrez donc utiliser une variable ou une alarme pour arrêter la vibration (mettre les moteurs à 0) après un certain temps, sinon le gamepad continuera à vibrer indéfiniment.</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction n'est actuellement disponible que pour les modules cibles standard <b>Windows</b>, <b>PS4</b> et <b>Xbox One</b>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">gamepad_set_vibration(device, left_motor, right_motor);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
-      </tr>
+     </tr>
       <tr>
-        <td>device</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>Which gamepad device &quot;slot&quot; to check.</td>
-      </tr>
+        <td><span class="notranslate">device</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">Which gamepad device &quot;slot&quot; to check.</span></td>
+     </tr>
       <tr>
-        <td>left_motor</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The amount of vibration from the left motor from 0 to 1.</td>
-      </tr>
+        <td><span class="notranslate">left_motor</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The amount of vibration from the left motor from 0 to 1.</span></td>
+     </tr>
       <tr>
-        <td>right_motor</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The amount of vibration from the right motor from 0 to 1.</td>
-      </tr>
+        <td><span class="notranslate">right_motor</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The amount of vibration from the right motor from 0 to 1.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if lives == 0<br />
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if lives = 0<br />
     {<br />
-        <span data-field="title" data-format="default">gamepad_set_vibration</span>(0, 1, 1);<br />
-        alarm[0] = game_get_speed(gamespeed_fps) / 2;<br />
+        gamepad_set_vibration(0, 1, 1);<br />
+        alarm[0] = room_speed / 2;<br />
     }</p>
-  <p>The above code would be used (for example) in a collision event to make the gamepad plugged into &quot;slot&quot; 0 vibrate for half a second, with the alarm that is set being used to switch it off again once that time has passed.</p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus serait utilisé (par exemple) dans un événement de collision pour faire vibrer pendant une demi-seconde la manette de jeu branchée sur le &quot;slot&quot; 0, l'alarme définie étant utilisée pour la désactiver une fois ce temps écoulé.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
-        <div style="float:right">Next: <a href="gamepad_set_colour.htm"> gamepad_set_colour </a></div>
+        <div style="float:left">Retour : <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div>
+        <div style="float:right">Suivant : <a href="gamepad_set_colour.htm"> gamepad_set_colour </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_set_vibration

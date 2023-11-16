@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_tile</title>
+  <title>dessiner_carreau</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for draw_tile" />
   <meta name="rh-index-keywords" content="draw_tile,tile_rotate,tile_mirror,tile_flip,tile_index_mask" />
@@ -14,8 +14,8 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_tile</h1>
-  <p>With this function you can draw any given tile from a tile set - compete with rotations, flips and mirrors - setting the frame (if animated) and the position within the room. The tile set ID value is the tile set index as set in the IDE and the tile data is the data &quot;blob&quot; that contains all the information about the tile index and the transformations that have been applied. You can use the function <a href="../../Asset_Management/Rooms/Tile_Map_Layers/tilemap_get.htm"><span class="inline">tilemap_get()</span></a> to get the tile data which can then be manipulated using the <a href="../../Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">Tile Functions</a>, or you can construct it yourself using the following tile constants along with the index value of the tile to create:</p>
+  <h1>dessiner_carreau</h1>
+  <p>Avec cette fonction, vous pouvez dessiner n'importe quelle tuile d'un ensemble de tuiles - avec des rotations, des renversements et des miroirs - en définissant l'image (si elle est animée) et la position dans la pièce. La valeur ID de l'ensemble de tuiles est l'indice de l'ensemble de tuiles tel qu'il est défini sur le site <span class="notranslate">IDE</span> et les données des tuiles sont le &quot;blob&quot; de données qui contient toutes les informations sur l'indice de tuiles et les transformations qui ont été appliquées. Vous pouvez utiliser la fonction <a href="../../Asset_Management/Rooms/Tile_Map_Layers/tilemap_get.htm"><span class="inline">tilemap_get()</span></a> pour obtenir les données des tuiles qui peuvent ensuite être manipulées à l'aide des <a href="../../Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">fonctions de tuiles</a>, ou vous pouvez les construire vous-même en utilisant les constantes de tuiles suivantes avec la valeur de l'index de la tuile à créer :</p>
   <table>
     <tbody>
       <tr>
@@ -23,86 +23,86 @@
         <th>Description</th>
       </tr>
       <tr>
-        <td><span class="inline">tile_rotate</span></td>
-        <td>Used to set/get the rotate bit of a tile data blob.</td>
+        <td><span class="notranslate"><span class="inline">tile_rotate</span></td>
+        <td>Utilisé pour définir/obtenir le bit de rotation d'un blob de données de tuiles.</td>
       </tr>
       <tr>
-        <td><span class="inline">tile_mirror</span></td>
-        <td>Used to set/get the mirror bit of a tile data blob.</td>
+        <td><span class="notranslate"><span class="inline">tile_mirror</span></td>
+        <td>Utilisé pour définir/obtenir le bit miroir d'un blob de données de tuile.</td>
       </tr>
       <tr>
-        <td><span class="inline">tile_flip</span></td>
-        <td>Used to set/get the flip bit of a tile data blob.</td>
+        <td><span class="notranslate"><span class="inline">tile_flip</span></td>
+        <td>Utilisé pour définir/obtenir le bit de retournement d'un blob de données de tuile.</td>
       </tr>
       <tr>
-        <td><span class="inline">tile_index_mask</span></td>
-        <td>A special constant that is for &quot;and&quot;-ing with the tile data blob to extract the tile index.</td>
+        <td><span class="notranslate"><span class="inline">tile_index_mask</span></td>
+        <td>Une constante spéciale qui est utilisée pour &quot;et&quot; avec le blob de données de tuile pour extraire l'index de tuile.</td>
       </tr>
     </tbody>
   </table>
-  <p><br />
-    You would bitwise &quot;or&quot; these constants with the tile index value to get the final tiledata:</p>
+  <p><br>
+    Vous devez effectuer un &quot;or&quot; bit à bit de ces constantes avec la valeur de l'index de la tuile pour obtenir les données de la tuile finale :</p>
   <p class="code">var tiledata = 8 | tile_rotate | tile_flip;</p>
-  <p>The above code simply creates a local variable to store the tiledata for the tile with the index of 8 on the tile set, and it is rotated and flipped. This can then be used to draw the tile at that index from the tile set that you specify. this is not linked to any tilemap layer and the tile will be drawn at the layer depth of the instance doing the drawing, at the x/y position that you specify in the room. Note that you can also set the frame to draw too. If the indexed tile is part of an animation set, then you can set the frame number here (from 0 to the number of frames - 1) and the indexed tile will simply be the indicator for which animated tile set you are using while it will be the given frame that is drawn. If the tile is not part of an animated set then frame should be set to 0.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Le code ci-dessus crée simplement une variable locale pour stocker les données de la tuile avec l'index 8 sur le jeu de tuiles, et il est tourné et retourné. Ceci peut ensuite être utilisé pour dessiner la tuile à cet index à partir de l'ensemble de tuiles que vous spécifiez. Ceci n'est pas lié à une couche de carte de tuiles et la tuile sera dessinée à la profondeur de couche de l'instance effectuant le dessin, à la position x/y que vous spécifiez dans la pièce. Notez que vous pouvez également définir le cadre à dessiner. Si la tuile indexée fait partie d'un ensemble d'animations, vous pouvez définir le numéro de l'image ici (de 0 au nombre d'images - 1) et la tuile indexée sera simplement l'indicateur de l'ensemble de tuiles animées que vous utilisez, tandis que c'est l'image donnée qui sera dessinée. Si la tuile ne fait pas partie d'un jeu de tuiles animées, la trame doit être définie sur 0.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">draw_tile(tileset, tiledata, frame, x, y)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>tileset</td>
-        <td><span data-keyref="Type_Asset_Tile_Set">Tile Set Asset</span></td>
-        <td>The ID of the tile set to use</td>
+        <td><span class="notranslate">tileset</span></td>
+        <td><span data-keyref="Type_Asset_Tile_Set">Ensemble de tuiles Asset</span></td>
+        <td><span class="notranslate">The ID of the tile set to use</span></td>
       </tr>
       <tr>
-        <td>tiledata</td>
-        <td><span data-keyref="Type_Real_Tile_Data">Tile Data</span></td>
-        <td>The tile data to use</td>
+        <td><span class="notranslate">tiledata</span></td>
+        <td><span data-keyref="Type_Real_Tile_Data">Données sur les tuiles</span></td>
+        <td><span class="notranslate">The tile data to use</span></td>
       </tr>
       <tr>
-        <td>frame</td>
+        <td><span class="notranslate">frame</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The frame number for the animated tile to use (default 0 for non-animated tiles)</td>
+        <td><span class="notranslate">The frame number for the animated tile to use (default 0 for non-animated tiles)</span></td>
       </tr>
       <tr>
-        <td>x</td>
+        <td><span class="notranslate">x</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x position within the room to draw at</td>
+        <td><span class="notranslate">The x position within the room to draw at</span></td>
       </tr>
       <tr>
-        <td>y</td>
+        <td><span class="notranslate">y</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y position within the room to draw at</td>
+        <td><span class="notranslate">The y position within the room to draw at</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br />
     var map_id = layer_tilemap_get_id(lay_id);<br />
     var data = tilemap_get(map_id, 0, 0);<br />
     tile_set_flip(data, true);<br />
     draw_tile(set_Wall, data, 0, x, y);</p>
-  <p>The above code will get the data on a tile from the given tilemap, then set the &quot;flip&quot; flag and use this data to draw the tile flipped at the instance position.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus récupère les données sur une tuile à partir de la carte de tuiles donnée, puis active l'indicateur &quot;flip&quot; et utilise ces données pour dessiner la tuile retournée à la position de l'instance.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprites_And_Tiles.htm">Sprites And Tiles</a></div>
-        <div style="float:right">Next: <a href="draw_tilemap.htm">draw_tilemap</a></div>
+        <div style="float:left">Retour : <a href="Sprites_And_Tiles.htm">Sprites et tuiles</a></div>
+        <div style="float:right">Suivant : <a href="draw_tilemap.htm"><span class="notranslate">draw_tilemap</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 draw_tile

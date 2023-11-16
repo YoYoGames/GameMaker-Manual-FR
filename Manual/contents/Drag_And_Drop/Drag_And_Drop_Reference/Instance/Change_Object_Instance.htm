@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Change Object Instance</title>
+  <title>Modifier l'instance de l'objet</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Change Object Instance action" />
   <meta name="rh-index-keywords" content="" />
@@ -14,46 +14,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Change Object INstance Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Change.png" /> Change Object Instance</h1>
-  <p>With this action you can change one instance into another instance. You need to specify the object that the instance it change into another instance of, and the action will change the instance, performing the Destroy Event and the Clean Up Event of
-    the initial instance and the Create Event of the new instance. Note that if you do not specify a direction or a speed etc... then the new instance will &quot;inherit&quot; these values. For example, if the initial instance has an <span class="inline">image_angle</span> (rotation)
-    of 180, travels at 2px per game tick and has an <span class="inline">image_speed</span> (animation speed) of 0.5, then the instance it changes into will maintain these values unless explicitly set in the Create event of the new instance.</p>
-  <p>It is worth noting that changing the instance means that you <i>can perform no further actions with that instance until the next game tick</i>, in particular trying to access variables etc... as that will cause an error. Basically, you
-    change the instance but it is not actually available until the end of the current step, so to access any of the variables it contains directly (for example, calling <span class="inline">inst_changed.x</span>) will not work.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Change Object Instance Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Change.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Changement d'instance d'objet</h1>
+  <p>Avec cette action, vous pouvez changer une instance en une autre instance. Vous devez spécifier l'objet que l'instance doit changer en une autre instance, et l'action changera l'instance, en exécutant l'événement Destroy et l'événement Clean Up de l'instance initiale et l'événement Create de la nouvelle instance.
+    l'instance initiale et l'événement de création de la nouvelle instance. Notez que si vous ne spécifiez pas de direction ou de vitesse etc... alors la nouvelle instance &quot;héritera&quot; de ces valeurs. Par exemple, si l'instance initiale a une <span class="inline">image_angle</span> (rotation)
+    de 180, se déplace à 2px par tick de jeu et a une <span class="inline">image_speed</span> (vitesse d'animation) de 0,5, alors l'instance dans laquelle elle se transforme conservera ces valeurs à moins qu'elles ne soient explicitement définies dans l'événement Create de la nouvelle instance.</p>
+  <p>Il convient de noter que la modification de l'instance signifie que vous <i>ne pouvez plus effectuer d'autres actions avec cette instance jusqu'au prochain tic-tac de jeu</i>, en particulier essayer de <span class="notranslate">access</span> variables etc... car cela provoquera une erreur. En fait, vous
+    En fait, vous modifiez l'instance mais elle n'est pas réellement disponible avant la fin de l'étape en cours, de sorte que <span class="notranslate">access</span> l'une des variables qu'elle contient directement (par exemple, en appelant <span class="inline">inst_changed.x</span>) ne fonctionnera pas.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Change Object INstance Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Change.png" /></p>
+  <h4>Arguments :</h4>
   <p></p>
   
     <table>
       <tbody>
         <tr>
-          <th>Argument</th>
+          <th>Arguments</th>
           <th>Description</th>
         </tr>
         <tr>
-          <td>Object</td>
-          <td>The name of the object to change to an instance of.</td>
+          <td><span class="notranslate">Object</span></td>
+          <td>Le nom de l'objet à transformer en une instance.</td>
         </tr>
       </tbody>
     </table>
   
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Change Object Instance Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/e_Instance_Change.png" />The above action block code checks for a mouse press and if one is detected
-    then it changes the instance into different one.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus vérifie s'il y a eu une pression de la souris et, s'il y en a eu une, il change l'instance en une autre.
+    alors il change l'instance en une autre.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Actions_Library.htm">Instance Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Alarm.htm">Set Alarm Countdown</a></div>
+        <div style="float:left">Retour : <a href="Instance_Actions_Library.htm">Actions de l'instance</a></div>
+        <div style="float:right">Suivant : <a href="Set_Alarm.htm">Régler le compte à rebours de l'alarme</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Change Object Instance

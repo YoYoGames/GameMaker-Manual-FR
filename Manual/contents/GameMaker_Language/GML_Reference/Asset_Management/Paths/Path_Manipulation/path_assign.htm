@@ -6,7 +6,7 @@
   <title>path_assign</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function path_assign" />
   <meta name="rh-index-keywords" content="path_assign" />
@@ -16,47 +16,47 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>path_assign</h1>
-  <p>With this function you can copy the path data from one path to another. The path being copied <i>to</i> will be cleared first (should it have any path points) and be <strong>completely overwritten</strong> by the path being
-    copied from. Neither path is deleted in the process and the result is two paths, with two different indexes, but the exact same form and points. In general you would want to use this function on a path created using <span class="inline"><a href="path_add.htm">path_add()</a></span>,
-    since if you use it on a path asset, <strong>it will permanently affect the path for all instances in the game</strong> from the moment the function is used until the end of the game.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Avec cette fonction, vous pouvez copier les données de chemin d'un chemin à un autre. Le chemin <i>vers lequel</i> la copie est effectuée sera d'abord effacé (s'il a des points de chemin) et sera <strong>complètement écrasé</strong> par le chemin à partir duquel la copie est effectuée.
+    copié. Aucun chemin n'est supprimé dans le processus et le résultat est deux chemins, avec deux index différents, mais la même forme et les mêmes points. En général, vous voudriez utiliser cette fonction sur un chemin créé en utilisant <span class="inline"><a href="path_add.htm">path_add()</a></span>,
+    car si vous l'utilisez sur un actif de chemin, <strong>cela affectera de façon permanente le chemin pour toutes les instances du jeu</strong>, du moment où la fonction est utilisée jusqu'à la fin du jeu.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">path_assign(index, path);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>index</td><td><span data-keyref="Type_Asset_Path"></span></td>
-        <td>The index of the path to be overwritten.</td>
+        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Path"></span></td>
+        <td><span class="notranslate">The index of the path to be overwritten.</span></td>
      </tr>
       <tr>
-        <td>path</td><td><span data-keyref="Type_Asset_Path"></span></td>
-        <td>The index of the path that will overwrite &#39;index&#39;.</td>
+        <td><span class="notranslate">path</span></td><td><span data-keyref="Type_Asset_Path"></span></td>
+        <td><span class="notranslate">The index of the path that will overwrite &#39;index&#39;.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">mypath = path_add();<br/> path_assign(mypath, choose(path_1, path_2, path_3));</p>
-  <p>The above code will create a new, empty path indexed in the variable &quot;mypath&quot; and then copy over the path data from one of the three available path resources.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus créera un nouveau chemin vide indexé dans la variable &quot;mypath&quot; et copiera ensuite les données du chemin à partir de l'une des trois ressources de chemin disponibles.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Path_Manipulation.htm">Path Manipulation</a></div>
-        <div style="float:right">Next: <a href="path_delete.htm">path_delete</a></div>
+        <div style="float:left">Retour : <a href="Path_Manipulation.htm">Manipulation des chemins</a></div>
+        <div style="float:right">Suivant : <a href="path_delete.htm"><span class="notranslate">path_delete</span></a></div>
         
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 path_assign

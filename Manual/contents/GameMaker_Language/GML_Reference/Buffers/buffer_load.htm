@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_load</title>
+  <title>Chargement de la mémoire tampon</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_load" />
   <meta name="rh-index-keywords" content="buffer_load" />
@@ -14,48 +14,48 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_load</h1>
-  <p>This function is used to load a buffer that was previously saved using the <a href="buffer_save.htm"><span class="inline">buffer_save()</span></a> functions, as well as any <a href="../../../Settings/Included_Files.htm" title="Included Files">Included Files</a> or files loaded externally. It will return a new buffer&#39;s ID which is created by the function as a &quot;grow&quot; buffer (see <a href="buffer_create.htm">here</a>) with a byte alignment of 1. This ID should be stored in a variable and used in all further function calls to this buffer. If the load fails for whatever reason, the function will return -1 and a message will be shown in the compiler output window saying that the load has failed.</p>
-  <p class="note"><span class="note">NOTE</span> It&#39;s important that you remove any dynamically created resources like this from memory when you no longer need them to prevent memory leaks, so when you are finished with the buffer that you have created you should free it up again using <a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a>.</p>
-  <h2>Platform-specific notes</h2>
+  <h1>Chargement de la mémoire tampon</h1>
+  <p>Cette fonction est utilisée pour charger un <span class="notranslate">buffer</span> qui a été précédemment enregistré à l'aide des fonctions <a href="buffer_save.htm"><span class="inline">buffer_save()</span></a> ainsi que tout <a href="../../../Settings/Included_Files.htm" title="Included Files">Fichier Inclus</a> ou fichier chargé en externe. Elle renvoie l'ID du nouveau tampon qui est créé par la fonction sous forme de &quot;grow&quot; <span class="notranslate">buffer</span> (voir <a href="buffer_create.htm">ici</a>) avec un alignement d'octets de 1. Cet ID doit être stocké dans une variable et utilisé dans tous les autres appels de fonction à ce <span class="notranslate">buffer</span>. Si le chargement échoue pour une raison quelconque, la fonction renvoie -1 et un message s'affiche dans la fenêtre de sortie du compilateur indiquant que le chargement a échoué.</p>
+  <p class="note"><span class="note">REMARQUE</span> Il est important que vous supprimiez de la mémoire toute ressource créée dynamiquement comme celle-ci lorsque vous n'en avez plus besoin afin d'éviter les fuites de mémoire. Ainsi, lorsque vous en avez terminé avec le site <span class="notranslate">buffer</span> que vous avez créé, vous devez le libérer à nouveau à l'aide de la commande <a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a>.</p>
+  <h2>Notes spécifiques à la plate-forme</h2>
   <ul class="colour">
-    <li>On HTML5, any buffers loaded from the <strong>local storage</strong> will be decoded using base64 (since they are saved as base64 strings), however, using this function on Included Files or any external files will not use base64 decoding, as they are not expected to be in a base64 format.</li>
-    <li>On HTML5, all Included Files are stored as UTF-8 encoded text, which may result in an increase in the size of the loaded buffer when compared to the original file, as the UTF-8 encoded version of the file may have a different size than your original one (due to the change in format).</li>
+    <li>Sur HTML5, tout <span class="notranslate">buffers</span> chargé depuis le <strong>stockage local</strong> sera décodé à l'aide de base64 (puisqu'il est enregistré en tant que chaîne de caractères base64). Cependant, l'utilisation de cette fonction sur les fichiers inclus ou tout autre fichier externe n'utilisera pas le décodage base64, puisqu'ils ne sont pas censés être dans un format base64.</li>
+    <li>En HTML5, tous les fichiers inclus sont stockés sous forme de texte codé en UTF-8, ce qui peut entraîner une augmentation de la taille du fichier chargé <span class="notranslate">buffer</span> par rapport au fichier original, car la version codée en UTF-8 du fichier peut avoir une taille différente de celle de votre fichier original (en raison du changement de format).</li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">buffer_load(filename);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>filename</td><td><span data-keyref="Type_String"></span></td>
-        <td>The name of the file to load from.</td>
+        <td><span class="notranslate">filename</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The name of the file to load from.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_ID_Buffer">Buffer ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">player_buffer = buffer_load(&quot;Player_Save.sav&quot;);</p>
-  <p>The above code will load a previously saved buffer into memory, creating a new buffer. The index of this new buffer is stored in the variable &quot;player_buffer&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus va charger en mémoire un <span class="notranslate">buffer</span> précédemment enregistré, créant ainsi un nouveau <span class="notranslate">buffer</span>. L'index de ce nouveau <span class="notranslate">buffer</span> est stocké dans la variable &quot;player_buffer&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_load_ext.htm"><span>buffer_load_ext</span></a></div>
+        <div style="float:left">Retour : <a href="Buffers.htm">Tampons</a></div>
+        <div style="float:right">Suivant : <a href="buffer_load_ext.htm"><span>buffer_load_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_load

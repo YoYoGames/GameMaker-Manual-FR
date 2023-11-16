@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>matrix_build_projection_ortho</title>
+  <title>matrice_construction_projection_ortho</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for matrix_build_projection_ortho" />
   <meta name="rh-index-keywords" content="matrix_build_projection_ortho" />
@@ -15,57 +15,57 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>matrix_build_projection_ortho</h1>
-  <p>This function builds an orthographic projection matrix based on the specified parameters listed below (this is the default projection method used when you create a room in <span data-keyref="GameMaker Name">GameMaker</span> without changing anything). Sometimes you need to switch from a perspective projection to an orthographic projection which is what this function is for. It is typically used to draw an overlay, for example, to show the score or other aspects as this gives a &quot;flat&quot; view of the elements drawn (ie: no perspective) in a 3D game. See the image below to get an idea of the difference between orthographic and perspective views.</p>
-  <p class="note"><b>NOTE</b>: You may also need to temporarily switch off hidden surface removal if you want the information to be drawn regardless of the current depth value.</p>
+  <h1>matrice_construction_projection_ortho</h1>
+  <p>Cette fonction construit une matrice de projection orthographique basée sur les paramètres spécifiés ci-dessous (il s'agit de la méthode de projection par défaut utilisée lorsque vous créez une pièce dans <span data-keyref="GameMaker Name">GameMaker</span> sans rien changer). Il est parfois nécessaire de passer d'une projection en perspective à une projection orthographique, ce à quoi sert cette fonction. Elle est généralement utilisée pour dessiner une superposition, par exemple pour montrer le score ou d'autres aspects, car elle donne une vue &quot;plate&quot; des éléments dessinés (c'est-à-dire sans perspective) dans un jeu en 3D. Voir l'image ci-dessous pour avoir une idée de la différence entre les vues orthographiques et les vues en perspective.</p>
+  <p class="note"><b>REMARQUE</b>: vous devrez peut-être aussi désactiver temporairement la suppression des surfaces cachées si vous souhaitez que les informations soient dessinées quelle que soit la valeur de la profondeur actuelle.</p>
   <p><img alt="Ortho prjection matrix  example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/ortho_persp_image.png" /></p>
-  <h4>Syntax:</h4>
+  <h4>Syntaxe :</h4>
   <p class="code">matrix_build_projection_ortho(width, height, znear, zfar);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>w</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The width of the projection.</td>
+        <td><span class="notranslate">w</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The width of the projection.</span></td>
      </tr>
       <tr>
-        <td>h</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The height of the projection.</td>
+        <td><span class="notranslate">h</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The height of the projection.</span></td>
      </tr>
       <tr>
-        <td>znear</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The near clipping plane.</td>
+        <td><span class="notranslate">znear</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The near clipping plane.</span></td>
      </tr>
       <tr>
-        <td>zfar</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The far clipping plane.</td>
+        <td><span class="notranslate">zfar</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The far clipping plane.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Array_Matrix">Matrix Array</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">viewmat = matrix_build_lookat(640, 240, -10, 640, 240, 0, 0, 1, 0);<br />
     projmat = matrix_build_projection_ortho(640, 480, 1.0, 32000.0);<br />
     camera_set_view_mat(view_camera[0], viewmat);<br />
     camera_set_proj_mat(view_camera[0], projmat);</p>
-  <p>The above code creates a new look-at matrix and orthographic matrix, stores their IDs in local variables and then uses them to set the view and projection matrices for the camera assigned to view port[0].</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus crée une nouvelle matrice d'observation et une matrice orthographique, stocke leurs ID dans des variables locales, puis les utilise pour définir les matrices de vue et de projection pour la caméra affectée au port de vue [0].</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Matrix_Functions.htm">Matrix Functions</a></div>
-        <div style="float:right">Next: <a href="matrix_build_projection_perspective.htm">matrix_build_projection_perspective</a></div>
+        <div style="float:left">Retour : <a href="Matrix_Functions.htm">Fonctions de la matrice</a></div>
+        <div style="float:right">Suivant : <a href="matrix_build_projection_perspective.htm"><span class="notranslate">matrix_build_projection_perspective</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 matrix_build_projection_ortho

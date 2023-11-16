@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Project Image Generator</title>
+  <title>Générateur d'images de projet</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section that covers the Project Image Generator" />
   <meta name="rh-index-keywords" content="Project Image Generator" />
@@ -14,41 +14,41 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Project Image Generator</h1>
-  <p><img alt="Generate Project Images" class="center" src="../assets/Images/IDE Tools/Project_Image_Generator.png" />The <strong>Project Image Generator</strong> is accessed from the <a href="../IDE_Navigation/Menus/The_Tools_Menu.htm">Tools Menu</a> at
-    the top of the <span data-keyref="GameMaker Name">GameMaker</span> IDE. This tool is designed to quickly create all the different splash screens, promo images and icons that are required by all the different target platforms from a single set of images. You supply the base image
-    and the base icon and then click the <strong>Generate </strong>button, and your <a href="../Settings/Game_Options.htm">Game Options</a> for each platform will update with the new images.</p>
-  <p>For this to work correctly you need to supply a high resolution splash screen and a high resolution icon image. The recommended sizes would be:</p>
+  <h1>Générateur d'images de projet</h1>
+  <p><img>Le <strong>générateur d'images de projet</strong> est accessible à partir du <a href="../IDE_Navigation/Menus/The_Tools_Menu.htm">menu Outils</a> en haut de la page de GameMaker.
+    en haut de l'écran de <span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span>. Cet outil est conçu pour créer rapidement, à partir d'un seul jeu d'images, tous les différents écrans d'accueil, images promotionnelles et icônes requis par les différentes plates-formes cibles. Vous fournissez l'image de base
+    et l'icône de base, puis cliquez sur le bouton <strong>Générer </strong>, et vos <a href="../Settings/Game_Options.htm">options de jeu</a> pour chaque plate-forme seront mises à jour avec les nouvelles images.</p>
+  <p>Pour que cela fonctionne correctement, vous devez fournir un écran d'accueil en haute résolution et une image d'icône en haute résolution. Les tailles recommandées sont les suivantes :</p>
   <ul class="colour">
-    <li><strong>Splash Screen</strong>: at least 1920x1080px, or 1080x1920px for portrait, and authored as a 24bit <span class="inline">*.png</span> with no transparencies.</li>
-    <li><strong>Icons</strong>: at least 1024x1024px (which is the size of the largest icon required), and authored as a 24bit <span class="inline">*.png</span> which can have transparencies</li>
+    <li><strong>Splash Screen</strong>: au moins 1920x1080px, ou 1080x1920px pour le portrait, et créé en 24bit <span class="inline">*.png</span> sans transparences.</li>
+    <li><strong>Icônes</strong>: au moins 1024x1024px (qui est la taille de la plus grande icône requise), et créées en 24bit <span class="inline">*.png</span> qui peut avoir des transparences.</li>
   </ul>
-  <p>Once you have supplied these images they will be shown in the <strong>Preview Windows</strong> and you can then set the type of &quot;fit&quot; to be used when applying them to the different platforms. You can choose from the following:</p>
+  <p>Une fois que vous aurez fourni ces images, elles seront affichées dans les <strong>fenêtres de prévisualisation</strong> et vous pourrez alors définir le type d'ajustement à utiliser pour les appliquer aux différentes plateformes. Vous pouvez choisir parmi les options suivantes :</p>
   <ul class="colour">
-    <li><strong>Keep Aspect Ratio</strong> - this will scale the image to fit maintaining the aspect ratio and adding in a background colour to fill in the sides if the fit is not 1:1</li>
-    <li><strong>Stretch To Fit</strong> - this will stretch the images to fit the full size of the image/icon.</li>
-    <li><strong>Crop To Fit</strong> - this will take the base image and make it fit best along either the horizontal or vertical axis and then crop the remainder. For example, if you have a 640x480 image that has to be used as a splash screen for 480x800,
-      then the image will be scaled <em>up</em> to fit the vertical axis (480 -&gt; 800) and the rest of the image will be cropped away. Likewise if you have a 1080x1920 image that has to fit 800x800 then the image will be scaled down to fit the horizontal
-      axis and the rest cropped away.</li>
+    <li><strong>Conserver le rapport d'aspect</strong> - cette option permet de mettre l'image à l'échelle en conservant le rapport d'aspect et en ajoutant une couleur d'arrière-plan pour remplir les côtés si le rapport n'est pas de 1:1.</li>
+    <li><strong>Étirer pour adapter</strong> - cette option permet d'étirer les images pour qu'elles s'adaptent à la taille de l'image/icône.</li>
+    <li><strong>Crop To Fit (Recadrer pour adapter)</strong> - cette fonction prend l'image de base et la fait s'adapter au mieux le long de l'axe horizontal ou vertical, puis recadre le reste. Par exemple, si vous avez une image de 640x480 qui doit être utilisée comme écran de démarrage pour un écran de 480x800,
+      l'image sera mise à <em>l</em> 'échelle pour s'adapter à l'axe vertical (480 -&gt; 800) et le reste de l'image sera recadré. De même, si vous avez une image 1080x1920 qui doit être utilisée en 800x800, l'image sera réduite pour s'adapter à l'axe horizontal et le reste sera rogné.
+      et le reste de l'image sera rogné.</li>
   </ul>
-  <p>You can also set the <strong>background colour</strong> for both icons and images. This colour will be used to &quot;pad&quot; the image when scaled with aspect ratio. The following image shows how this will look once everything has been set up:</p>
-  <p><img alt="Generate Project Images Example" class="center" src="../assets/Images/IDE Tools/Project_Image_Generator_Example.png" />Now all you have to do is click on <strong>Generate </strong>and <span data-keyref="GameMaker Name">GameMaker</span> will populate all the Game Options <strong>Image </strong>and
-    <strong>Icon </strong>settings with images for each platform.</p>
-  <p class="note"><strong>NOTE</strong>: The exception to the above statement is <a href="../Settings/Game_Options/Android.htm">Android Adaptive Icons</a>. These <strong>will not be generated</strong> using this tool due to the way they are structured.</p>
-  <p class="note"><strong>IMPORTANT! </strong>While this tool will generate all the images you require, that does not mean it is perfect! It will try to do its best to make the images suit the different sizes and resolutions for each platform but sometimes this may not
-    look how you really want since there really is no &quot;one size fits all&quot; solution. Therefore after running this tool we recommend that you revise all the images in each platforms Game Options and tweak those that may not look exactly how you
-    want manually.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Vous pouvez également définir la <strong>couleur de fond</strong> des icônes et des images. Cette couleur sera utilisée pour &quot;rembourrer&quot; l'image lorsqu'elle est mise à l'échelle avec le rapport d'aspect. L'image suivante montre à quoi cela ressemble une fois que tout a été configuré :</p>
+  <p><img>Maintenant, tout ce que vous avez à faire est de cliquer sur <strong>Générer </strong>et <span data-keyref="GameMaker Name">GameMaker</span> remplira tous les paramètres d'<strong>image </strong>et d'icône des options de jeu avec des images pour chaque plate-forme.
+   <strong>Icônes </strong>avec des images pour chaque plateforme.</p>
+  <p class="note"><strong>NOTE</strong>: L'exception à la déclaration ci-dessus concerne les <a href="../Settings/Game_Options/Android.htm">icônes adaptatives Android</a>. Celles-ci <strong>ne seront pas générées</strong> à l'aide de cet outil en raison de la manière dont elles sont structurées.</p>
+  <p class="note"><strong>IMPORTANT ! </strong>Bien que cet outil génère toutes les images dont vous avez besoin, cela ne signifie pas qu'il soit parfait ! Il fera de son mieux pour adapter les images aux différentes tailles et résolutions de chaque plate-forme, mais il se peut parfois qu'elles ne ressemblent pas à ce que vous souhaitez, car il n'existe pas de solution unique.
+    Mais il se peut que l'image ne corresponde pas à vos attentes, car il n'existe pas de solution unique. Par conséquent, après avoir utilisé cet outil, nous vous recommandons de réviser toutes les images dans les options de jeu de chaque plateforme et de modifier manuellement celles qui ne sont pas exactement comme vous le souhaitez.
+    comme vous le souhaitez.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Additional_IDE_Tools.htm">Additional IDE Tools</a></div>
-        <div style="float:right">Next: <a href="Sound_Mixer.htm">Sound Mixer</a></div>
+        <div style="float:left">Retour : <a href="Additional_IDE_Tools.htm">Outils supplémentaires sur <span class="notranslate">IDE</span> </a></div>
+        <div style="float:right">Suivant : <a href="Sound_Mixer.htm">Mixeur de son</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Project Image Generator

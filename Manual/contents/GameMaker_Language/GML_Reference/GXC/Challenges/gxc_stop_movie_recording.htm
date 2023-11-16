@@ -6,7 +6,7 @@
   <title>gxc_stop_movie_recording</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Reference page for gxc_stop_movie_recording" />
   <meta name="rh-index-keywords" content="gxc_stop_movie_recording" />
@@ -15,14 +15,14 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gxc_stop_movie_recording</h1>
-  <p>This function is used to stop a GXC recording that was previously started with <span class="inline"><a href="gxc_start_movie_recording.htm">gxc_start_movie_recording()</a></span>. It also submits the recording to the URL specified in the arguments, however the behaviour is different depending on the kind of string specified:</p>
+  <p>Cette fonction est utilisée pour arrêter un enregistrement GXC qui a été précédemment lancé avec <span class="inline"><a href="gxc_start_movie_recording.htm">gxc_start_movie_recording()</a></span>. Elle soumet également l'enregistrement à l'URL spécifié dans les arguments, cependant le comportement est différent selon le type de chaîne spécifié :</p>
   <ul class="colour">
-    <li>If you specify a file name, the recording will be saved with that name in your Downloads folder</li>
-    <li>If you specify a URL, the recording will be uploaded to that URL</li>
+    <li>Si vous spécifiez un nom de fichier, l'enregistrement sera sauvegardé sous ce nom dans votre dossier Téléchargements.</li>
+    <li>Si vous spécifiez une URL, l'enregistrement sera téléchargé vers cette URL.</li>
   </ul>
-  <p>The URL method should be used when the recording needs to be uploaded to GXC, and the file should be saved locally only for checking whether the recording was successful.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>La méthode URL doit être utilisée lorsque l'enregistrement doit être téléchargé vers le GXC, et le fichier doit être sauvegardé localement uniquement pour vérifier si l'enregistrement a réussi.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">gxc_stop_movie_recording(filename);</p>
   <table>
     <colgroup>
@@ -32,38 +32,38 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>filename</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The file name or URL where the recording is to be saved or uploaded</td>
+        <td><span class="notranslate">filename</span></td>
+        <td><span data-keyref="Type_String">Chaîne de caractères</span></td>
+        <td><span class="notranslate">The file name or URL where the recording is to be saved or uploaded</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">gxc_submit_challenge_score(_score, function(_status, _result) {<br />
-    var _uploadUrl = _result.data.gameplayVideoUploadUrl;<br />
-    gxc_stop_movie_recording(_uploadUrl);<br />
+        var _uploadUrl = _result.data.gameplayVideoUploadUrl;<br />
+        gxc_stop_movie_recording(_uploadUrl);<br />
     });</p>
-  <p>The above code uses the GXC API Library to upload a score to the currently active challenge, and when a response is received in its callback method, it retrieves the upload URL for the video and uploads the recording to it.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus utilise la bibliothèque API GXC pour charger un score dans le défi actuellement actif. Lorsqu'une réponse est reçue dans sa méthode de rappel, il récupère l'URL de chargement de la vidéo et y charge l'enregistrement.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="../GXC_Functions.htm">GX.games Functions</a></div>
-        <div style="float:right">Next: <a href="gxc_pause_movie_recording.htm">gxc_pause_movie_recording</a></div>
+        <div style="float:left">Retour : <a href="../GXC_Functions.htm">Opéra GX et GXC</a></div>
+        <div style="float:right">Suivant : <a href="gxc_pause_movie_recording.htm">gxc_pause_movie_recording</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gxc_stop_movie_recording

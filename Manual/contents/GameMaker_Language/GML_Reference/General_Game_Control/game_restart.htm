@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>game_restart</title>
+  <title>redémarrage du jeu</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="This page outlines the function game_restart" />
   <meta name="rh-index-keywords" content="game_restart" />
@@ -14,39 +14,39 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">game_restart</span></h1>
-  <p>With this function you can restart the game. This is essentially the same as running the game for the first time and so the <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Game Start Event</a> will be triggered, <i>as well as</i> the <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Game End Event</a>.</p>
+  <h1>redémarrage du jeu</h1>
+  <p>Cette fonction vous permet de redémarrer le jeu. Cela revient essentiellement à lancer le jeu pour la première fois et l'<a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">événement de début de partie</a> sera donc déclenché, ainsi que l <i>'</i> <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">événement de fin de partie</a>.</p>
   <div data-conref="../../../assets/snippets/changing_room_stops_instance_creation.hts"> </div>
-  <p>It should be noted that certain things will <b>not</b> be reset when this function is called:</p>
+  <p>Il convient de noter que certaines choses <b>ne seront pas</b> remises à zéro lorsque cette fonction est appelée :</p>
   <ul class="colour">
-    <li>Global variables will not be re-initialised unless explicitly coded as such - for example, the built-in global variable <span class="inline">score</span> will not start at zero after a game restart if it has been modified in the game already.</li>
-    <li>The GPU state will not be changed (so if you have set the draw colour or alpha, for example, it will remain at the changed value).</li>
-    <li>The game speed will remain at whatever you set it in your game code (if you changed it this change will be perpetuated).</li>
-    <li>Any asset from the Asset Browser that has been changed at run time within the game - for example if you change the origin for a sprite resource or shift the position of a path resource - will <i>not</i> be reset.</li>
-    <li>Dynamic resources like buffers, surfaces, data-structures or imported sprites will also not be cleaned up or removed (although you may lose references to them, so take care when using this function to either use global references for the dynamic resource, or to clean them up before the function is called).</li>
+    <li>Les variables globales ne seront pas réinitialisées à moins d'être explicitement codées comme telles - par exemple, la variable globale intégrée <span class="inline">score</span> ne repartira pas à zéro après un redémarrage du jeu si elle a déjà été modifiée dans le jeu.</li>
+    <li>L'état du GPU ne sera pas modifié (ainsi, si vous avez défini la couleur ou l'alpha du dessin, par exemple, il restera à la valeur modifiée).</li>
+    <li>La vitesse du jeu restera celle que vous avez définie dans votre code de jeu (si vous l'avez modifiée, ce changement sera perpétué).</li>
+    <li>Toute ressource du navigateur de ressources qui a été modifiée au moment de l'exécution dans le jeu - par exemple si vous changez l'origine d'une ressource <span class="notranslate">sprite</span> ou déplacez la position d'une ressource de chemin - <i>ne</i> sera <i>pas</i> réinitialisée.</li>
+    <li>Les ressources dynamiques telles que <span class="notranslate">buffers</span>, les surfaces, les structures de données ou les ressources importées <span class="notranslate">sprites</span> ne seront pas non plus nettoyées ou supprimées (bien que vous puissiez perdre les références à ces ressources, il faut donc veiller, lorsque vous utilisez cette fonction, à utiliser des références globales pour la ressource dynamique ou à les nettoyer avant l'appel de la fonction).</li>
     <br />
-    <br />
-     
+     
   </ul>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">game_restart</span>();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <h4>Syntaxe :</h4>
+  <p class="code">game_restart();</p>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if keyboard_check_pressed(ord(&quot;R&quot;)) <span data-field="title" data-format="default">game_restart</span>();</p>
-  <p>This would restart the game when the player presses the &quot;R&quot; key.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">if keyboard_check_pressed(ord(&quot;R&quot;)) game_restart();</p>
+  <p>Cela permettrait de redémarrer le jeu lorsque le joueur appuie sur la touche &quot;R&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="General_Game_Control.htm">General Game Control</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="game_change.htm">game_change</a></div>
+        <div style="float:left">Retour : <a href="General_Game_Control.htm">Contrôle général du jeu</a></div>
+        <div style="float:right">Suivant : <a href="game_load.htm"><span class="notranslate">game_load</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 game_restart

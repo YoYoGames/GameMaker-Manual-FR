@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Timeline Speed</title>
+  <title>Définir la vitesse de la ligne de temps</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Set Timeline Speed action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Set Timeline Speed" />
@@ -14,46 +14,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Timeline Speed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/i_Timelines_Set_Timeline_Speed.png" /> Set Timeline Speed</h1>
-  <p>This action can be used to set the speed at which a timeline will move through the moments it contains. Normally, in each game frame you&#39;d want the position in the timeline to be increased by 1, however you can change this amount by setting this
-    action to a different value. The value you choose will be treated as a <i>multiplier</i> so a value of 2, for example, will make the timeline run at twice the speed, while a value of 0.5 would make it run at half the speed.
-    What this means for the moments is that if the value is greater than one, then several moments could occur within the same game frame (no moments are ever skipped), and if the speed is less than one, then after a moment has run, there will be frames
-    where nothing happens until the next moment runs - if you set the timeline speed to 0.1, for example, you will get a moment on one game frame, then 9 game frames with no moments, and on the tenth game frame the next moment will be run.</p>
-  <p>If you set a timeline to start using the actions <a href="Set_Instance_Timeline.htm">Set Instance Timeline</a> or <a href="Set_Timeline_State.htm">Set Timeline State</a> but <i>don&#39;t</i> set
-    the speed, then the timeline will default to 1 moment per game frame.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Timeline Speed Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/a_Timelines_Set_Timeline_Speed.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Définir la vitesse de la ligne de temps</h1>
+  <p>Cette action peut être utilisée pour définir la vitesse à laquelle une ligne de temps se déplacera à travers les moments qu'elle contient. Normalement, à chaque image de jeu, vous souhaitez que la position dans la timeline soit augmentée de 1, mais vous pouvez modifier cette quantité en définissant cette action
+    à une valeur différente. La valeur que vous choisissez sera traitée comme un <i>multiplicateur</i>. Ainsi, une valeur de 2, par exemple, multipliera par deux la vitesse d'exécution de la ligne de temps, tandis qu'une valeur de 0,5 la réduira de moitié.
+    Ce que cela signifie pour les moments, c'est que si la valeur est supérieure à un, plusieurs moments peuvent se produire dans la même image de jeu (aucun moment n'est jamais sauté), et si la vitesse est inférieure à un, après qu'un moment se soit écoulé, il y aura des images où rien ne se passera jusqu'au moment suivant.
+    Si vous définissez la vitesse de la ligne de temps sur 0,1, par exemple, vous aurez un moment sur une image de jeu, puis 9 images de jeu sans moment, et sur la dixième image de jeu, le moment suivant sera exécuté.</p>
+  <p>Si vous définissez le démarrage d'une ligne de temps à l'aide des actions <a href="Set_Instance_Timeline.htm">Définir la ligne de temps de l'instance</a> ou <a href="Set_Timeline_State.htm">Définir l'état de la</a> 
+    la vitesse, alors la timeline sera par défaut à 1 moment par image de jeu.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Set Timeline Speed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/i_Timelines_Set_Timeline_Speed.png" /></p>
+  <h4>Arguments :</h4>
   
     <table>
       <tbody>
         <tr>
-          <th>Argument</th>
+          <th>Arguments</th>
           <th>Description</th>
         </tr>
         <tr>
-          <td>Speed</td>
-          <td>The speed - as a multiplier - for the timeline to run at (default is 1)</td>
+          <td><span class="notranslate">Speed</span></td>
+          <td>La vitesse - en tant que multiplicateur - à laquelle la timeline doit fonctionner (1 par défaut)</td>
         </tr>
       </tbody>
     </table>
   
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set Timeline Speed Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/e_Timelines_Set_Instance_Timeline.png" />The above action block code will assign a timeline
-    to the instance calling the actions as well as set the initial moment to 10 and then the timeline speed to 2.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus attribuera une ligne de temps
+    à l'instance qui appelle les actions, ainsi qu'à définir le moment initial à 10 et la vitesse de la ligne de temps à 2.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Timeline_Actions.htm">Timeline Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Timeline_State.htm">Set Timeline State</a></div>
+        <div style="float:left">Retour : <a href="Timeline_Actions.htm">Actions de la ligne de temps</a></div>
+        <div style="float:right">Suivant : <a href="Set_Timeline_State.htm">Définir l'état de la ligne de temps</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Timeline Speed

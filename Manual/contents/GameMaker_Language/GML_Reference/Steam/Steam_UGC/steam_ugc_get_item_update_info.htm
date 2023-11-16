@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_ugc_get_item_update_info</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_ugc_get_item_update_info" />
+  <meta name="rh-index-keywords" content="steam_ugc_get_item_update_info" />
+  <meta name="search-keywords" content="steam_ugc_get_item_update_info" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_ugc_get_item_update_info</h1>
+  <p>Cette fonction peut être utilisée pour récupérer des informations sur l'état actuel du téléchargement pour l'ID de fichier donné. Vous donnez l'ID de l'élément et fournissez l'index d'une <a href="../../Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> vide qui sera ensuite remplie avec les paires clé/valeur suivantes si l'élément existe :</p>
+  <ul class="colour">
+    <li>&quot;<b>needs_update</b>&quot; - renvoie <tt>true</tt> ou <tt>false</tt> selon que l'élément doit être mis à jour ou non.</li>
+    <li>&quot;<b>is_downloading</b>&quot; - renvoie <tt>true</tt> ou <tt>false</tt> selon que l'élément est en cours de téléchargement ou non.</li>
+    <li>&quot;<b>bytes_downloaded</b>&quot; - Le nombre d'octets qui ont été téléchargés.</li>
+    <li>&quot;<b>bytes_total</b>&quot; - La taille totale (nombre d'octets) requise pour l'élément sur le disque.</li>
+  </ul>
+  <p>Si l'élément existe, la fonction renvoie <tt>true</tt> et remplit la carte, sinon elle renvoie <tt>false</tt> et la carte reste vide.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_ugc_get_item_update_info(published_file_id, info_map);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">published_file_id</span></td>
+        <td>L'ID de fichier unique pour l'UGC à vérifier.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">info_map</span></td>
+        <td>Un index de carte DS (précédemment créé).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var info_map = ds_map_create();<br />
+    var info = steam_ugc_get_item_update_info(global.fileID, info_map);<br />
+    if info<br />
+    {<br />
+        draw_text(32, 15, &quot;needs_update: &quot; + string(info_map[? &quot;needs_update&quot;]));<br />
+        draw_text(32, 30, &quot;is_downloading: &quot; + string(info_map[? &quot;is_downloading&quot;]));<br />
+        draw_text(32, 45, &quot;bytes_downloaded: &quot; + string(info_map[? &quot;bytes_downloaded&quot;]));<br />
+        draw_text(32, 60, &quot;bytes_total: &quot; + string(info_map[? &quot;bytes_total&quot;]));<br />
+    }</p>
+  <p>Le code ci-dessus interroge l'état de téléchargement de l'élément indexé dans la variable globale &quot;fileID&quot;, en utilisant un <tt>DS Map</tt> pour stocker l'information.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">Suivant : <a href="steam_ugc_request_item_details.htm"><span class="notranslate">steam_ugc_request_item_details</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_get_item_update_info
+-->
+  <!-- TAGS
+steam_ugc_get_item_update_info
+-->
+</body>
+</html>

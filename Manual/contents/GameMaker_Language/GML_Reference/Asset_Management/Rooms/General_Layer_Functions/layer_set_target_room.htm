@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_set_target_room</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_set_target_room" />
   <meta name="rh-index-keywords" content="layer_set_target_room" />
@@ -14,32 +14,29 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">layer_set_target_room</span></h1>
-  <p>This function tells <span data-keyref="GameMaker Name">GameMaker</span> that <i>all further layer functions should be applied to the given room</i>. In this way you can procedurally change or generate layers and layer contents in a room that is not the current room.</p>
-  <p>When you are finished adding layers or layer elements to a room, call the function <span class="inline3_func"><a data-xref="{title}" href="layer_reset_target_room.htm">layer_reset_target_room</a></span> to reset the room target or call this function again with a <span class="inline2">room</span> argument of <span class="inline2">-1</span>.</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_warning.hts"> </span> While targeting another room, you can use all the regular layer functions <b>except</b> you cannot create instances using <span class="inline3_func"><a data-xref="{title}" href="../../Instances/instance_create_layer.htm">instance_create_layer</a></span> or <span class="inline3_func"><a data-xref="{title}" href="../../Instances/instance_create_depth.htm">instance_create_depth</a></span>, nor will the layer function <span class="inline3_func"><a data-xref="{title}" href="layer_add_instance.htm">layer_add_instance</a></span> be available.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">layer_set_target_room</span>(room);</p>
+  <h1>layer_set_target_room</h1>
+  <p>Lorsque vous appelez cette fonction, vous indiquez à <span data-keyref="GameMaker Name">GameMaker</span> que <i>toutes les autres fonctions de calques doivent être appliquées à la pièce donnée</i>. De cette façon, vous pouvez modifier ou générer de manière procédurale des calques et des contenus de calque dans une pièce qui n'est pas la pièce actuelle. Lorsque vous avez fini d'ajouter des calques ou des éléments de calque à une room, appelez la fonction <a href="layer_reset_target_room.htm"><span class="inline">layer_reset_target_room()</span></a> pour réinitialiser la cible de la pièce (ou appelez à nouveau cette fonction avec un argument de pièce de -1). Notez que cette fonction ne peut être utilisée que sur des <i>pièces autres que la pièce actuelle</i>, et qu'elle est conçue pour que vous puissiez ajouter/supprimer des calques et des éléments de calque dans des pièces autres que la pièce en cours d'exécution.</p>
+  <p class="note"><b>ATTENTION !</b> Lorsque vous ciblez une autre pièce, vous pouvez utiliser toutes les fonctions normales des calques <b>, sauf que</b> vous ne pouvez pas créer d'instances à l'aide des fonctions <span style="font-size:1px;"><a href="../../Instances/instance_create_layer.htm"><span class="inline">instance_create_layer()</span></a></span> ou <span style="font-size:1px;"><a href="../../Instances/instance_create_depth.htm"><span class="inline">instance_create_depth()</span></a></span>et la fonction de couche <a href="layer_add_instance.htm"><span style="font-size:1px;"><span class="inline">layer_add_instance()</span></span></a> ne sera pas disponible.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_set_target_room(room)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
-      </tr>
+     </tr>
       <tr>
-        <td>room</td>
-        <td><span data-keyref="Type_Asset_Room"><a href="The_Asset_Editors/Rooms.htm" target="_blank">Room Asset</a></span></td>
-        <td>The room to target for all further layer functions, or -1 for the current room</td>
-      </tr>
+        <td><span class="notranslate">room</span></td><td><span data-keyref="Type_Asset_Room"></span></td>
+        <td><span class="notranslate">The room to target for all further layer functions</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">layer_set_target_room(rm_Game);<br />
     var l = layer_get_id(&quot;SpriteAssets&quot;);<br />
     repeat(50)<br />
@@ -49,17 +46,18 @@
         layer_sprite_create(l, _x, _y, spr_Trees);<br />
     }<br />
     layer_reset_target_room();</p>
-  <p>The above code sets the target room to the room &quot;rm_Game&quot; and then gets the layer ID for the layer called &quot;SpriteAssets&quot; in that room. This layer ID is then used to add 50 random sprite assets to the layer, before the layer target is reset to the current room.</p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus définit la pièce cible comme étant la pièce &quot;rm_Game&quot; et obtient ensuite l'ID du calque appelé &quot;SpriteAssets&quot; dans cette pièce. Cet ID de couche est ensuite utilisé pour ajouter 50 actifs <span class="notranslate">sprite</span> aléatoires à la couche, avant que la cible de la couche ne soit réinitialisée à la pièce actuelle.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="General_Layer_Functions.htm">General Layer Functions</a></div>
-        <div style="float:right">Next: <a href="layer_get_target_room.htm">layer_get_target_room</a></div>
+        <div style="float:left">Retour : <a href="General_Layer_Functions.htm">Fonctions générales des couches</a></div>
+        <div style="float:right">Suivant : <a href="layer_get_target_room.htm"><span class="notranslate">layer_get_target_room</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_set_target_room

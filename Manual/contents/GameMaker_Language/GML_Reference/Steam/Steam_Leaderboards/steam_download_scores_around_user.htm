@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_download_scores_autour_de_l'utilisateur</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_download_scores_around_user" />
+  <meta name="rh-index-keywords" content="steam_download_scores_around_user" />
+  <meta name="search-keywords" content="steam_download_scores_around_user" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_download_scores_autour_de_l'utilisateur</h1>
+  <p>Cette fonction est utilisée pour récupérer les entrées du classement relatives à l'entrée de l'utilisateur actuel. Le paramètre <tt>range_start</tt> est le nombre d'entrées à récupérer <i>avant l'</i> entrée de l'utilisateur actuel, et le paramètre <tt>range_end</tt> est le nombre d'entrées après l'entrée de l'utilisateur actuel.
+    d'entrées après l'entrée de l'utilisateur actuel, et l'entrée de l'utilisateur actuel est <i>toujours</i> incluse dans les résultats. Par exemple, si l'utilisateur actuel est numéro 5 dans un classement donné, le fait de définir la plage de début à -2 et la plage de fin à
+    2, vous obtiendrez 5 entrées : 3 à 7. S'il n'y a pas assez d'entrées dans le classement avant ou après l'entrée de l'utilisateur, <span class="notranslate">Steam</span> ajustera la plage pour essayer de retourner le nombre d'entrées demandé. Par exemple, si l'utilisateur est numéro 1 au classement,
+    que la valeur start est fixée à -2 et la valeur end à 2, <span class="notranslate">Steam</span> renverra les 5 premières entrées du classement.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_download_scores_around_user(lb_name, range_start, range_end);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">lb_name</span></td>
+        <td>Le nom du classement à partir duquel vous téléchargez les scores (une chaîne).</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">range_start</span></td>
+        <td>La position de départ dans le classement.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">range_end</span></td>
+        <td>La position finale dans le classement.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">score_get = steam_download_scores_around_user(&quot;Game Scores&quot;, -4, 5);</p>
+  <p>Cette méthode enverra une requête au serveur <span class="notranslate">Steam</span> pour une série de 10 scores du classement &quot;Game Scores&quot;, centrée sur le joueur et stockera l'<b>identifiant asynchrone de</b> la requête dans la variable &quot;score_get&quot;. Celle-ci sera ensuite
+    traitée dans l'application <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm"><b>Événement asynchrone Steam</b></a>comme indiqué dans l'exemple étendu de <a href="steam_download_scores.htm"><tt>steam_download_scores()</tt></a>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_Leaderboards.htm">Tableaux de classement</a></div>
+        <div style="float:right">Suivant : <a href="steam_download_friends_scores.htm"><span class="notranslate">steam_download_friends_scores</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_download_scores_around_user
+-->
+  <!-- TAGS
+steam_download_scores_around_user
+-->
+</body>
+</html>

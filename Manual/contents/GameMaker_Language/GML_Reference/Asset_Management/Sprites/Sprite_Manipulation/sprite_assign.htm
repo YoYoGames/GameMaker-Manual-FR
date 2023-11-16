@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sprite_assign</title>
+  <title>affectation des sprites</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function sprite_assign" />
   <meta name="rh-index-keywords" content="sprite_assign" />
@@ -15,32 +15,32 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_assign</h1>
-  <p>This function takes two previously created (or included) sprite indexes, and copies the image from one to the other. In this way you can copy (or &quot;clone&quot;) one sprite into another index. Note that <i>you cannot copy to a game resource</i>. You have to have created the sprite to be copied to previously using the <a href="sprite_add.htm"><span class="inline">sprite_add()</span></a> or <a href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a> functions.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>affectation des sprites</h1>
+  <p>Cette fonction prend deux index <span class="notranslate">sprite</span> précédemment créés (ou inclus), et copie l'image de l'un à l'autre. De cette façon, vous pouvez copier (ou &quot;cloner&quot;) un <span class="notranslate">sprite</span> dans un autre index. Notez que <i>vous ne pouvez pas copier vers une ressource de jeu</i>. Vous devez avoir créé le <span class="notranslate">sprite</span> à copier au préalable à l'aide de la commande <a href="sprite_add.htm"><span class="inline">sprite_add()</span></a> ou <a href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a> pour le copier.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">sprite_assign(index, sprite);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>index</td><td><span data-keyref="Type_Asset_Sprite"></span></td>
-        <td>The index of the sprite to be copied to (ie: overwritten).</td>
+        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The index of the sprite to be copied to (ie: overwritten).</span></td>
      </tr>
       <tr>
-        <td>sprite</td><td><span data-keyref="Type_Asset_Sprite"></span></td>
-        <td>The sprite to be copied from.</td>
+        <td><span class="notranslate">sprite</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The sprite to be copied from.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns</h4>
+  <p> </p>
+  <h4>Renvoie à</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if sprite_exists(global.Player_Sprite)<br />
     {<br />
         var t_spr = sprite_add(&quot;player.png&quot;, 16, true, true, 0, 0);<br />
@@ -51,18 +51,18 @@
     {<br />
         global.Player_Sprite = sprite_add(&quot;player.png&quot;, 16, true, true, 0, 0);<br />
     }</p>
-  <p>The above code checks to see if the global variable &quot;Player_Sprite&quot; contains a sprite and if it does it uses sprite_assign to change it for one that has been loaded from an external file. If it does not contain a sprite one is loaded and its index is stored in that variable.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifie si la variable globale &quot;Player_Sprite&quot; contient un <span class="notranslate">sprite</span> et si c'est le cas, il utilise sprite_assign pour le remplacer par un autre qui a été chargé depuis un fichier externe. Si ce n'est pas le cas, un <span class="notranslate">sprite</span> est chargé et son index est stocké dans cette variable.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_merge.htm">sprite_merge</a></div>
+        <div style="float:left">Retour : <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div>
+        <div style="float:right">Suivant : <a href="sprite_merge.htm"><span class="notranslate">sprite_merge</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_assign

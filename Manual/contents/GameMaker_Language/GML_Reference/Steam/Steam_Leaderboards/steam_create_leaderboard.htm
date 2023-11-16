@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_create_leaderboard</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_create_leaderboard" />
+  <meta name="rh-index-keywords" content="steam_create_leaderboard,lb_sort_none,lb_sort_ascending,lb_sort_descending,lb_disp_none,lb_disp_numeric,lb_disp_time_sec,lb_disp_time_ms" />
+  <meta name="search-keywords" content="steam_create_leaderboard,lb_sort_none,lb_sort_ascending,lb_sort_descending,lb_disp_none,lb_disp_numeric,lb_disp_time_sec,lb_disp_time_ms" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_create_leaderboard</h1>
+  <p>Cette fonction vous permet de créer un nouveau classement pour votre jeu. Le premier argument est une chaîne de caractères qui définit le nom de votre classement. Ce nom doit être utilisé dans tous les autres appels de fonction relatifs au classement en cours de création. Vous pouvez ensuite
+    ensuite définir la méthode de tri (voir les constantes listées ci-dessous) ainsi que la manière dont les informations sont affichées (encore une fois, une des constantes listées ci-dessous). La fonction renvoie la valeur -1 si elle ne parvient pas à créer le classement ou une valeur supérieure à -1 si elle a réussi.
+    supérieure à -1 si elle a réussi.</p>
+  <p class="note"><b>REMARQUE</b>: Si vous avez déjà créé un classement avec le même nom (soit par le code, soit par votre page <span class="notranslate">Steam</span> pour le jeu), cette fonction sera ignorée !</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Tri constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>lb_sort_none</td>
+        <td>Pas de tri. Les informations seront affichées &quot;telles quelles&quot;.</td>
+      </tr>
+      <tr>
+        <td>lb_tri_ascendant</td>
+        <td>Trier le classement dans l'ordre croissant.</td>
+      </tr>
+      <tr>
+        <td>lb_tri_décroissant</td>
+        <td>Trier le classement par ordre décroissant.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Affichage constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>lb_disp_none</td>
+        <td>Afficher le classement &quot;tel quel&quot;.</td>
+      </tr>
+      <tr>
+        <td>lb_disp_numeric</td>
+        <td>Afficher le classement sous forme numérique.</td>
+      </tr>
+      <tr>
+        <td>lb_disp_time_sec</td>
+        <td>Afficher les valeurs du classement sous forme de temps, la valeur de base étant les secondes.</td>
+      </tr>
+      <tr>
+        <td>lb_disp_time_ms</td>
+        <td>Afficher les valeurs du classement sous forme de temps, la valeur de base étant les milli-secondes.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_create_leaderboard(lb_name, sort_method, display_type);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">lb_name</span></td>
+        <td>Le nom du classement que vous créez (une chaîne).</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">sort_method</span></td>
+        <td>La méthode de tri des entrées du classement (voir les constantes énumérées ci-dessous).</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">display_type</span></td>
+        <td>La façon d'afficher le classement à l'utilisateur (voir les constantes ci-dessous).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">steam_create_leaderboard(&quot;Game Times&quot;, lb_sort_ascending, lb_disp_time_sec);</p>
+  <p>Le code ci-dessus va créer un classement appelé &quot;Game Times&quot;, et le configurer pour qu'il affiche les résultats dans l'ordre croissant et avec un affichage en secondes.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_Leaderboards.htm">Tableaux de classement</a></div>
+        <div style="float:right">Suivant : <a href="steam_upload_score.htm"><span class="notranslate">steam_upload_score</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_create_leaderboard
+lb_sort_none
+lb_sort_ascending
+lb_sort_descending
+lb_disp_none
+lb_disp_numeric
+lb_disp_time_sec
+lb_disp_time_ms
+-->
+  <!-- TAGS
+steam_create_leaderboard
+-->
+</body>
+</html>

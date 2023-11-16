@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Nine Slice</title>
+  <title>Neuf tranches</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet Matharoo" />
   <meta name="topic-comment" content="Page detailing how the Nine Slice technique works" />
   <meta name="rh-index-keywords" content="Sprite Editor" />
@@ -14,28 +14,28 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Nine Slice</h1>
-  <p><span data-keyref="Nine Slicing">Nine Slicing</span> (also known as 9-slicing) is a technique used to scale rectangular images for preserving details, making them retain their original form after scaling.</p>
-  <p>This is achieved by dividing the image into nine separate parts or &quot;slices&quot;. The corner slices are moved during scaling and drawn at the same scale, then the edge and centre slices are stretched or repeated (depending on your setting) to fill the space.</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Nine_Slice_0_Preview.png" />Four <strong>guides </strong>are placed on a sprite to divide the image into nine slices. The following visual demonstrates how the guides stay in place after the sprite is scaled using Nine Slice:</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Nine_Slice_1_Guides.png" />The <strong>Tile Mode</strong> of a slice determines how that slice is displayed when the sprite is scaled. It can only be set for the edge and centre slices (as corner slices are not scaled).</p>
-  <p>The following visual demonstrates each Tile Mode when applied to the centre slice:<img class="center" height="746" src="../../assets/Images/Asset_Editors/Nine_Slice_3_TileModes.png" width="1258" />If <strong>Nine Slicing</strong> is enabled for a sprite, it will be used for resizing the sprite wherever it appears, and will work in any existing places where the sprite was used without any other changes being required.</p>
-  <p class="note"><strong>NOTE</strong>: Nine Slicing will not work with functions that draw only a part of the sprite or distort it, such as <span class="inline"><a href="../../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_part.htm">draw_sprite_part()</a> </span>or <span class="inline"><a href="../../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_pos.htm">draw_sprite_pos()</a></span>.</p>
-  <p>In conjunction with <a href="../Sequences.htm">Sequences</a>, this feature can be used to build user interfaces, and can be used, for example, to create rectangular walls in a game level. Texture memory can also be saved using <strong><span data-keyref="Nine Slicing">Nine Slicing</span></strong>, as a smaller image can be used to cover a larger area on-screen.</p>
-  <p><span data-keyref="Nine Slicing">Nine Slicing</span> can be enabled on Sprites in the IDE. For more information, see <a href="../Sprites.htm">The Sprite Editor</a>.</p>
-  <p>For information on the <a class="glossterm" data-glossterm="Runtime" href="#">Runtime</a> functions available for <span data-keyref="Nine Slicing">Nine Slicing</span>, see the following page:</p>
+  <h1>Neuf tranches</h1>
+  <p>Le<span data-keyref="Nine Slicing">découpage en neuf</span> (également connu sous le nom de découpage en neuf) est une technique utilisée pour mettre à l'échelle des images rectangulaires afin de préserver les détails, ce qui leur permet de conserver leur forme originale après la mise à l'échelle.</p>
+  <p>Pour ce faire, l'image est divisée en neuf parties distinctes ou &quot;tranches&quot;. Les tranches d'angle sont déplacées pendant la mise à l'échelle et dessinées à la même échelle, puis les tranches de bord et de centre sont étirées ou répétées (selon votre réglage) pour remplir l'espace.</p>
+  <p><img>Quatre <strong>guides </strong>sont placés sur une <span class="notranslate">sprite</span> pour diviser l'image en neuf tranches. Le visuel suivant montre comment les guides restent en place après la mise à l'échelle de <span class="notranslate">sprite</span> à l'aide de Nine Slice :</p>
+  <p><img>Le <strong>mode tuile</strong> d'une tranche détermine comment cette tranche est affichée lorsque le site <span class="notranslate">sprite</span> est mis à l'échelle. Il ne peut être défini que pour les tranches de bord et de centre (les tranches d'angle n'étant pas mises à l'échelle).</p>
+  <p>L'illustration suivante montre chaque mode de tuile appliqué à la tranche centrale :<img>Si le mode <strong>de découpage en neuf</strong> est activé pour un <span class="notranslate">sprite</span>, il sera utilisé pour redimensionner le <span class="notranslate">sprite</span> partout où il apparaît, et fonctionnera à tous les endroits existants où le <span class="notranslate">sprite</span> a été utilisé sans qu'aucune autre modification ne soit nécessaire.</p>
+  <p class="note"><strong>REMARQUE</strong>: Le découpage en neuf ne fonctionnera pas avec les fonctions qui ne dessinent qu'une partie du site <span class="notranslate">sprite</span> ou le déforment, comme <span class="inline"><a href="../../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_part.htm">draw_sprite_part()</a> </span>ou <span class="inline"><a href="../../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_pos.htm">draw_sprite_pos()</a></span>.</p>
+  <p>En conjonction avec les <a href="../Sequences.htm">séquences</a>, cette fonctionnalité peut être utilisée pour construire des interfaces utilisateur, et peut être utilisée, par exemple, pour créer des murs rectangulaires dans un niveau de jeu. La mémoire des textures peut également être économisée en utilisant <strong><span data-keyref="Nine Slicing">Découpage en neuf</span></strong>car une image plus petite peut être utilisée pour couvrir une plus grande surface à l'écran.</p>
+  <p>Le<span data-keyref="Nine Slicing">découpage en neuf</span> peut être activé sur <span class="notranslate">Sprites</span> dans l'éditeur <span class="notranslate">IDE</span>. Pour plus d'informations, voir l'<a href="../Sprites.htm">éditeur <span class="notranslate">Sprite</span> </a>.</p>
+  <p>Pour plus d'informations sur les fonctions du <a class="glossterm" data-glossterm="Temps d'exécution" href="#">Runtime</a> disponibles pour le <span data-keyref="Nine Slicing">Nine Slicing</span>, voir la page suivante :</p>
   <ul class="colour">
-    <li><a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Nine_Slice_Functions.htm" title="Nine Slice Functions">Nine Slice Functions</a></li>
+    <li><a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Nine_Slice_Functions.htm" title="Nine Slice Functions">Neuf fonctions de tranche</a></li>
   </ul>
-  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sprites.htm">The Sprite Editor</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Sprite_Strips.htm">Sprite Strips</a></div>
+        <div style="float:left">Retour : <a href="../Sprites.htm">L'éditeur de sprites</a></div>
+        <div style="float:right">Suivant : <a href="../Tile_Sets.htm">Jeux de carreaux</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Nine Slice

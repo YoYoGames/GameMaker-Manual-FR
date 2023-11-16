@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>part_type_direction</title>
+  <title>direction_type_partie</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for part_type_direction" />
   <meta name="rh-index-keywords" content="part_type_direction" />
@@ -14,53 +14,52 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_type_direction</h1>
-  <p>This function is used to determine the direction of the particle when it is created and can also be used to make the particle increase or decrease its direction over its lifetime. The minimum and maximum direction values default at 0, which means that the particle will move to the right with no variation, but these values can be changed to limit the direction of movement following the standard <span data-keyref="GameMaker Name">GameMaker</span> directions of 0 being right, 90 being up, 180 being left and 270 being down. If you set them to the same value the particles will only move in one direction.</p>
-  <p>You can also set an increment value which will add (if a positive number) or subtract (if a negative number) an amount of degrees to the direction over its lifetime. This value can be a minimum of (+/-) 0.01.</p>
-  <p>Finally, you can set the &quot;wiggle&quot; factor. This is a value that will be added or subtracted randomly to the direction each step of the particles lifetime. Obviously larger values are more pronounced than smaller ones, and this value can even be a negative with the maximum range being between -20 and 20.</p>
-  <div data-conref="../../../../../assets/snippets/Note_Particle_Property_Can_Be_Changed.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>direction_type_partie</h1>
+  <p>Cette fonction est utilisée pour déterminer la direction de la particule lors de sa création et peut également être utilisée pour que la particule augmente ou diminue sa direction au cours de sa vie. Les valeurs de direction minimale et maximale sont par défaut à 0, ce qui signifie que la particule se déplacera vers la droite sans variation, mais ces valeurs peuvent être modifiées pour limiter la direction du mouvement en suivant les directions standard de <span data-keyref="GameMaker Name">GameMaker</span>, à savoir 0 pour la droite, 90 pour le haut, 180 pour la gauche et 270 pour le bas. Si vous les réglez sur la même valeur, les particules ne se déplaceront que dans une seule direction.</p>
+  <p>Vous pouvez également définir une valeur d'incrémentation qui ajoutera (s'il s'agit d'un nombre positif) ou soustraira (s'il s'agit d'un nombre négatif) une quantité de degrés à la direction pendant sa durée de vie. Cette valeur peut être au minimum de (+/-) 0,01.</p>
+  <p>Enfin, vous pouvez définir le facteur &quot;wiggle&quot;. Il s'agit d'une valeur qui sera ajoutée ou soustraite aléatoirement à la direction à chaque étape de la vie des particules. Évidemment, les valeurs les plus grandes sont plus prononcées que les plus petites, et cette valeur peut même être négative, la plage maximale étant comprise entre -20 et 20.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">part_type_direction(ind, dir_min, dir_max, dir_incr, dir_wiggle);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>ind</td>
-        <td><span data-keyref="Type_ID_PartType"><a href="../../../../../../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Types/part_type_create.htm" target="_blank">Particle Type ID</a></span></td>
-        <td>The index of the particle type to change.</td>
+        <td><span class="notranslate">ind</span></td>
+        <td><span data-keyref="Type_ID_PartType">Type de particule ID</span></td>
+        <td><span class="notranslate">The index of the particle type to change.</span></td>
       </tr>
       <tr>
-        <td>dir_min</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The minimum direction the particle can start at.</td>
+        <td><span class="notranslate">dir_min</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The minimum direction the particle can start at.</span></td>
       </tr>
       <tr>
-        <td>dir_max</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The maximum direction the particle can start at.</td>
+        <td><span class="notranslate">dir_max</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The maximum direction the particle can start at.</span></td>
       </tr>
       <tr>
-        <td>dir_incr</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>How much the particle direction should increase or decrease per step.</td>
+        <td><span class="notranslate">dir_incr</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">How much the particle direction should increase or decrease per step.</span></td>
       </tr>
       <tr>
-        <td>dir_wiggle</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>How much should randomly be added or subtracted from the particle&#39;s direction per step.</td>
+        <td><span class="notranslate">dir_wiggle</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">How much should randomly be added or subtracted from the particle&#39;s direction per step.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">part_type_shape(particle1, pt_shape_pixel);<br />
     part_type_size(particle1, 0.19, 0.79, 0.01, 0);<br />
     part_type_scale(particle1, 5, 5);<br />
@@ -72,18 +71,18 @@
     part_type_orientation(particle1, 0, 359, 0, 0, 1);<br />
     part_type_blend(particle1, 1);<br />
     part_type_life(particle1, 10, 50);</p>
-  <p>The above code will set various particle values including the direction which will be random value between 0 and 359 degrees. It will also go up by 1 degree each step and has a random amount added to it of anywhere between 0 and 20 each step too.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus définira diverses valeurs de particules, y compris la direction qui sera une valeur aléatoire entre 0 et 359 degrés. Elle augmentera également d'un degré à chaque étape et une quantité aléatoire sera ajoutée à chaque étape, entre 0 et 20.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Types.htm">Particle Types</a></div>
-        <div style="float:right">Next: <a href="part_type_gravity.htm">part_type_gravity</a></div>
+        <div style="float:left">Retour : <a href="Particle_Types.htm">Types de particules</a></div>
+        <div style="float:right">Suivant : <a href="part_type_gravity.htm"><span class="notranslate">part_type_gravity</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 part_type_direction

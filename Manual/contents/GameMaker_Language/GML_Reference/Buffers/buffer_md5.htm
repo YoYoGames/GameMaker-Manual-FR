@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_md5</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>tampon_md5</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_md5" />
   <meta name="rh-index-keywords" content="buffer_md5" />
@@ -15,54 +14,53 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_md5</h1>
-  <p>In cryptography, MD5 (Message-Digest algorithm 5) is a widely used cryptographic <a class="glossterm" data-glossterm="hashing" href="#">hashing</a> function with a 128-bit hash value and has been employed in a wide variety of security applications. It is also commonly used to check the integrity of data. This function will take the input data from a given buffer (or part of the buffer) and return the 32-character hexadecimal MD5 hash that is unique to that data. In this way you can generate a secure key which can be stored and used to check the integrity of the information being sent to (or received from) an external server (for example). When applying this to buffers using this function you must specify the buffer id of the buffer to use, then an offset value (in bytes) for where to begin, and then a size (again in bytes) for the region to be hashed.</p>
-  <p class="note"><strong><span data-conref="../../../assets/snippets/Tag_note.hts"> </span></strong> MD5 is not completely secure and can be broken. See <a href="https://en.wikipedia.org/wiki/MD5">this page</a> for more info.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>tampon_md5</h1>
+  <p>En cryptographie, MD5 (Message-Digest algorithm 5) est une fonction de <a class="glossterm" data-glossterm="hachage" href="#">hachage</a> cryptographique largement utilisée avec une valeur de hachage de 128 bits et a été employée dans une grande variété d'applications de sécurité.
+    Elle est également couramment utilisée pour vérifier l'intégrité des données. Cette fonction prend les données d'entrée d'un site <span class="notranslate">buffer</span> (ou d'une partie du site <span class="notranslate">buffer</span>) et renvoie le hachage MD5 hexadécimal de 32 caractères qui est unique pour ces données. De cette façon, vous pouvez générer
+    une clé sécurisée qui peut être stockée et utilisée pour vérifier l'intégrité des informations envoyées à (ou reçues de) un serveur externe (par exemple). Lorsque vous appliquez cette fonction à <span class="notranslate">buffers</span>, vous devez spécifier l'identifiant <span class="notranslate">buffer</span> du <span class="notranslate">buffer</span> à utiliser.
+    à utiliser, puis une valeur de décalage (en octets) pour le point de départ, et enfin une taille (toujours en octets) pour la région à hacher.</p>
+  <p class="note"><strong>REMARQUE</strong>: MD5 n'est pas complètement sécurisé et peut être cassé. Voir <a href="https://en.wikipedia.org/wiki/MD5">cette page</a> pour plus d'informations.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">buffer_md5(buffer, offset, size);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
-      </tr>
+     </tr>
       <tr>
-        <td>buffer</td>
-        <td><span data-keyref="Type_ID_Buffer"><a href="GameMaker_Language/GML_Reference/Buffers/buffer_create.htm" target="_blank">Buffer ID</a></span></td>
-        <td>The index of the buffer to use.</td>
-      </tr>
+        <td><span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
+        <td><span class="notranslate">The index of the buffer to use.</span></td>
+     </tr>
       <tr>
-        <td>offset</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The data offset value.</td>
-      </tr>
+        <td><span class="notranslate">offset</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The data offset value.</span></td>
+     </tr>
       <tr>
-        <td>size</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The size of the buffer.</td>
-      </tr>
+        <td><span class="notranslate">size</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The size of the buffer.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_String"></span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">check_string = buffer_md5(buff, 0, buffer_get_size(buff));</p>
-  <p>The above code will create an md5 hash for the full data stored in the buffer indexed by the variable &quot;buff&quot;, and store the returned hash in the variable &quot;check_string&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus créera un hachage md5 pour les données complètes stockées dans le site <span class="notranslate">buffer</span> indexé par la variable &quot;buff&quot;, et stockera le hachage renvoyé dans la variable &quot;check_string&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_sha1.htm">buffer_sha1</a></div>
+        <div style="float:left">Retour : <a href="Buffers.htm">Tampons</a></div>
+        <div style="float:right">Suivant : <a href="buffer_sha1.htm"><span class="notranslate">buffer_sha1</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_md5
@@ -70,5 +68,5 @@ buffer_md5
   <!-- TAGS
 buffer_md5
 -->
-</body>
-</html>
+
+</body></html>

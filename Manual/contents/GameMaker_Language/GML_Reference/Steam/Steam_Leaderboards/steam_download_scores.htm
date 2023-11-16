@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>scores de téléchargement de la vapeur</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_download_scores" />
+  <meta name="rh-index-keywords" content="steam_download_scores" />
+  <meta name="search-keywords" content="steam_download_scores" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>scores de téléchargement de la vapeur</h1>
+  <p>Cette fonction est utilisée pour récupérer une série séquentielle d'entrées de classement par rang de classement. Les paramètres <tt>start_idx</tt> et <tt>end_idx</tt> contrôlent la plage de rangs demandée. Par exemple, vous pouvez afficher les 10 premiers sur un classement pour votre jeu en définissant la valeur de début à 1 et la valeur de fin à 10. Le nom du classement est une chaîne définie lorsque vous avez créé le classement à l'aide de la fonction <a href="steam_create_leaderboard.htm"><tt>steam_create_leaderboard()</tt></a>La fonction renvoie une valeur qui peut ensuite être utilisée pour identifier le rappel dans l'<a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">événement asynchrone Steam</a>, ou -1 si elle a échoué. Notez que lors du téléchargement d'un classement, la clé &quot;entries&quot; de la carte <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> peut avoir une clé &quot;data&quot; supplémentaire si d'autres données <span class="notranslate">buffer</span> ont été téléchargées avec le score (cf. <a href="steam_upload_score_buffer.htm"><tt>steam_upload_score_buffer()</tt></a>). Ces données <span class="notranslate">buffer</span> seront <b>codées en Base 64</b> et vous devrez donc utiliser la fonction <a href="../../Buffers/buffer_base64_decode.htm"><tt>buffer_base64_decode()</tt></a> sur le site <span class="notranslate">buffer</span> avant de lire les données.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_download_scores(lb_name, start_idx, end_idx);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">lb_name</span></td>
+        <td>Le nom du classement à partir duquel vous téléchargez les scores (une chaîne).</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">start_idx</span></td>
+        <td>La position de départ dans le classement.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">end_idx</span></td>
+        <td>La position finale dans le classement.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Exemple étendu :</h4>
+  <p>Dans cet exemple étendu, nous allons demander le classement des dix premiers pour le leaderboard donné et analyser ses résultats dans l'<b>événement Steam Async</b>. Pour commencer, nous devons demander les scores avec le code suivant :</p>
+  <p class="code">score_get = steam_download_scores(&quot;Game Scores&quot;, 1, 10);</p>
+  <p>Cela enverra une requête au serveur <span class="notranslate">Steam</span> pour les scores du classement &quot;Game Scores&quot;, en stockant l'<b>identifiant asynchrone de</b> la requête dans la variable &quot;score_get&quot;. Cela sera ensuite traité dans l'<b>événement asynchrone Steam</b> de la manière suivante :</p>
+  <p class="code">var async_id = ds_map_find_value(async_load, &quot;id&quot;);<br />
+    if async_id == score_get<br />
+    {<br />
+        var entries = ds_map_find_value(async_load, &quot;entries&quot;);<br />
+        var map = json_decode(entries);<br />
+        if ds_map_exists(map, &quot;default&quot;)<br />
+        {<br />
+            ds_map_destroy(map);<br />
+            exit;<br />
+        }<br />
+        else<br />
+        {<br />
+            var list = ds_map_find_value(map, &quot;entries&quot;);<br />
+            var len = ds_list_size(list);<br />
+            var entry;<br />
+            for(var i = 0; i &lt; len; i++;)<br />
+            {<br />
+                entry = ds_list_find_value(list, i );<br />
+                steam_name[i] = ds_map_find_value(entry, &quot;name&quot;);<br />
+                steam_score[i] = ds_map_find_value(entry, &quot;score&quot;);<br />
+                steam_rank[i] = ds_map_find_value(entry, &quot;rank&quot;);<br />
+            }<br />
+        }<br />
+        ds_map_destroy(map)<br />
+    }</p>
+  <p>Ce que nous faisons ici, c'est d'abord vérifier la clé &quot;id&quot; de la carte spéciale <tt>async_load</tt> DS. Si cette valeur est la même que celle de la fonction de rappel originale (stockée dans la variable &quot;score_get&quot;), nous continuons à traiter les données. La première chose que nous faisons est d'analyser la carte <tt>async_load</tt> ds_map pour la clé &quot;entries&quot; qui contient un objet JSON contenant les données du classement. Cet objet JSON est ensuite décodé (voir <a href="../../File_Handling/Encoding_And_Hashing/json_decode.htm"><tt>json_decode()</tt></a>) comme une autre carte DS, et ce nouvel identifiant de carte est stocké dans la variable &quot;map&quot;.</p>
+  <p>Cette carte est vérifiée pour la clé &quot;default&quot; et si elle est trouvée, la carte est détruite et l'événement est quitté. Si aucune clé &quot;default&quot; n'est trouvée, le code analysera la carte pour extraire les informations nécessaires sur le classement, en extrayant d'abord une liste de DS à partir de la clé &quot;entries&quot; de la carte DS, puis en parcourant en boucle chaque entrée de la liste pour obtenir une <i>autre</i> carte DS avec le nom, le score et le rang de chaque entrée. Ces valeurs sont ensuite stockées dans des tableaux.</p>
+  <p>Une fois la boucle terminée, la carte JSON DS est détruite (ce qui a pour effet de détruire toutes les cartes et listes internes). Il n'est pas nécessaire de détruire la carte DS <tt>async_load</tt>, car <span class="notranslate">GameMaker Studio 2</span> s'en charge pour vous.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_Leaderboards.htm">Tableaux de classement</a></div>
+        <div style="float:right">Suivant : <a href="steam_download_scores_around_user.htm"><span class="notranslate">steam_download_scores_around_user</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_download_scores
+-->
+  <!-- TAGS
+steam_download_scores
+-->
+</body>
+</html>

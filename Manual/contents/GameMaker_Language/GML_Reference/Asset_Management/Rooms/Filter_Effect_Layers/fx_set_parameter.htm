@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>fx_set_parameter</title>
+  <title>fx_set_paramètre</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Page outlining the function fx_set_parameter" />
   <meta name="rh-index-keywords" content="fx_set_parameter" />
@@ -14,58 +14,58 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>fx_set_parameter</h1>
-  <p>This function is used to change the value of a parameter in the given FX struct. You specify an FX struct (as returned from <span class="inline"><a href="fx_create.htm">fx_create()</a></span> or <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>), a parameter name as a string, and its new value. This will make your changes visible in the layer that the FX struct is assigned to.</p>
-  <p>You are able to pass in multiple arguments for the parameter in case it is a vector, however you can also simply specify an array as your only argument which would contain your multiple values.</p>
-  <p>Find the parameter names for a filter/effect on this page: <a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">FX Types &amp; Parameters</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>fx_set_paramètre</h1>
+  <p>Cette fonction est utilisée pour changer la valeur d'un paramètre dans le FX <span class="notranslate">struct</span> donné. Vous spécifiez un FX <span class="notranslate">struct</span> (tel que renvoyé par <span class="inline"><a href="fx_create.htm">fx_create()</a></span> ou <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>), un nom de paramètre sous forme de chaîne de caractères, et sa nouvelle valeur. Vos modifications seront visibles dans la couche à laquelle le FX <span class="notranslate">struct</span> est affecté.</p>
+  <p>Vous pouvez passer plusieurs arguments pour le paramètre s'il s'agit d'un vecteur, mais vous pouvez aussi simplement spécifier un tableau comme seul argument qui contiendra vos multiples valeurs.</p>
+  <p>Trouvez les noms des paramètres d'un filtre/effet sur cette page : <a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">Types et paramètres de FX</a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">fx_set_parameter(filter_or_effect, parameter_name, val, ...);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>filter_or_effect</td>
+        <td><span class="notranslate">filter_or_effect</span></td>
         <td><span data-keyref="Type_Struct_FX"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/fx_create.htm">FX Struct</a></span></td>
-        <td>The FX struct to modify</td>
+        <td><span class="notranslate">The FX struct to modify</span></td>
       </tr>
       <tr>
-        <td>parameter_name</td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
-        <td>The name of the parameter to change the value of (as a string)</td>
+        <td><span class="notranslate">parameter_name</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Chaîne de caractères</a></span></td>
+        <td><span class="notranslate">The name of the parameter to change the value of (as a string)</span></td>
       </tr>
       <tr>
-        <td>val...</td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span> or <span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
-        <td>The new value(s) for that parameter as a real or array</td>
+        <td><span class="notranslate">val...</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span> ou <span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Tableau</a></span></td>
+        <td><span class="notranslate">The new value(s) for that parameter as a real or array</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var _fx_tint = fx_create(&quot;_filter_tintfilter&quot;);<br />
     fx_set_parameter(_fx_tint, &quot;g_TintCol&quot;, [1, 0, 0, 1]);<br />
     layer_set_fx(&quot;EffectLayer&quot;, _fx_tint);</p>
-  <p>The above code creates a new FX struct from the <span class="inline2">&quot;_filter_tintfilter&quot;</span> effect, which is the &quot;Colour Tint&quot; filter found in the Room Editor. It assigns a value to its <span class="inline2">&quot;g_TintCol&quot;</span> parameter which is the colour of the tint, and as it&#39;s a <span class="inline">vec4</span> internally, it takes an array containing four values (corresponding to its red, green, blue and alpha values). The FX struct for the tint is then applied to an FX layer.</p>
-  <p>Note that you are also able to pass values to the vector as separate arguments instead of an array:</p>
+  <p>Le code ci-dessus crée un nouveau FX <span class="notranslate">struct</span> à partir de l'effet <span class="inline2">&quot;_filter_tintfilter&quot;</span>, qui est le filtre &quot;Colour Tint&quot; trouvé dans l'éditeur de pièce. Il assigne une valeur à son paramètre <span class="inline2">&quot;g_TintCol&quot;</span> qui est la couleur de la teinte, et comme il s'agit d'un <span class="inline">vec4</span> interne, il prend un tableau contenant quatre valeurs (correspondant à ses valeurs rouge, verte, bleue et alpha). Le FX <span class="notranslate">struct</span> pour la teinte est ensuite appliqué à un calque FX.</p>
+  <p>Notez que vous pouvez également passer des valeurs au vecteur comme des arguments séparés au lieu d'un tableau :</p>
   <p class="code">fx_set_parameter(_fx_tint, &quot;g_TintCol&quot;, 1, 0, 0, 1);</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Filter_Effect_Functions.htm">Filter and Effect Functions</a></div>
-        <div style="float:right">Next: <a href="fx_set_parameters.htm">fx_set_parameters</a></div>
+        <div style="float:left">Retour : <a href="Filter_Effect_Functions.htm">Fonctions de filtre et d'effet</a></div>
+        <div style="float:right">Suivant : <a href="fx_set_parameters.htm">fx_set_paramètres</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 fx_set_parameter

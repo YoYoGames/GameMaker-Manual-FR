@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_depth</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>profondeur de la couche</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_depth" />
   <meta name="rh-index-keywords" content="layer_depth" />
@@ -14,53 +14,54 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">layer_depth</span></h1>
-  <p>This function can be used to change the <b>depth</b> of the given layer, changing the order in which its contents will be rendered to the screen. You supply the layer ID (which you get when you create the layer using <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) or the layer name (as a string - this will have a performance impact) and then give the new depth to set it to (an integer value from <span data-keyref="Const_Depth_Min">-16000</span> to <span data-keyref="Const_Depth_Max">16000</span>). The layer depth is defined as being higher when &quot;further away&quot; from the camera and lower when &quot;closer&quot; to the camera, so if you have three layers with depths -100, 0, 100, the layers will draw in the order 100, 0, -100, so that the &quot;top&quot; layer (i.e., the closest to the camera view and so drawn over everything else) will be the layer with the -100 depth.</p>
-  <p>The following image shows a schematic of how depth works for layers:</p>
-  <p><img alt="Layer depth example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/Layer_Depths.png" />Note that you can check the depth of a layer at any time using the function <a href="layer_get_depth.htm"><span class="inline">layer_get_depth()</span></a>. Also note that the minimum and maximum layer depths are <span data-keyref="Const_Depth_Min">-16000</span> to <span data-keyref="Const_Depth_Max">16000</span>, and anything outside of those depths <b>will not be rendered</b>. If you require a depth outside of that range then you will need to use the function <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>
-  <p>Keep in mind that modifying the depth of a layer may change which <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">Filters &amp; Effects</a> are applied on it, as changing the depth to be lower than an FX layer&#39;s depth will no longer apply its effect on the layer.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">layer_depth</span>(layer_id, depth)</p>
+  <h1>profondeur de la couche</h1>
+  <p>Cette fonction peut être utilisée pour modifier la <b>profondeur</b> de la couche donnée, en changeant l'ordre dans lequel son contenu sera rendu à l'écran. Vous fournissez l'ID du calque (que vous obtenez lorsque vous créez le calque à l'aide de la fonction <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) ou le nom du calque (sous la forme d'une chaîne de caractères - cela aura un impact sur les performances), puis indiquez la nouvelle profondeur à laquelle le calque doit être défini (une valeur entière comprise entre -16000 et 16000). La profondeur du calque est définie comme étant plus élevée lorsqu'elle est &quot;éloignée&quot; de la caméra et plus faible lorsqu'elle est &quot;proche&quot; de la caméra. Ainsi, si vous avez trois calques avec des profondeurs de -100, 0, 100, les calques seront dessinés dans l'ordre 100, 0, -100, de sorte que le calque &quot;supérieur&quot; (c'est-à-dire le plus proche de la vue de la caméra et donc dessiné au-dessus de tout le reste) sera le calque avec la profondeur -100.</p>
+  <p>L'image suivante montre un schéma du fonctionnement de la profondeur pour les couches :</p>
+  <p><img>Notez que vous pouvez vérifier la profondeur d'une couche à tout moment en utilisant la fonction <a href="layer_get_depth.htm"><span class="inline">layer_get_depth()</span></a>. Notez également que les profondeurs minimale et maximale des couches sont de -16000 à 16000, et que tout ce qui se trouve en dehors de ces profondeurs <b>ne sera pas rendu</b>. Si vous avez besoin d'une profondeur en dehors de cette plage, vous devrez utiliser la fonction <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>
+  <p>Gardez à l'esprit que modifier la profondeur d'un calque peut changer les <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">filtres et les effets</a> qui lui sont appliqués, car si vous modifiez la profondeur pour qu'elle soit inférieure à celle d'un calque FX, l'effet ne sera plus appliqué au calque.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">layer_depth(layer_id, depth)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>layer_id</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> or <span data-keyref="Type_ID_Layer"><a href="GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_get_id.htm" target="_blank">Layer ID</a></span></td>
-        <td>The unique ID value of the layer to set the depth of (or the layer name as a string)</td>
+        <td><span class="notranslate">layer_id</span></td>
+        <td><span data-keyref="Type_String">Chaîne</span> ou <span data-keyref="Type_ID_Layer">ID de couche</span></td>
+        <td><span class="notranslate">The unique ID value of the layer to set the depth of (or the layer name as a string)</span></td>
       </tr>
       <tr>
-        <td>depth</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The new depth for the layer</td>
+        <td><span class="notranslate">depth</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The new depth for the layer</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if layer_get_depth(layer) != -100<br />
     {<br />
         layer_depth(layer, -100);<br />
     }</p>
-  <p>The above code gets the depth of the layer that the instance running the code is on, and if it is not -100 then the depth is set to -100.</p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus récupère la profondeur de la couche sur laquelle se trouve l'instance qui exécute le code, et si elle n'est pas -100, alors la profondeur est fixée à -100.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="General_Layer_Functions.htm">General Layer Functions</a></div>
-        <div style="float:right">Next: <a href="layer_force_draw_depth.htm">layer_force_draw_depth</a></div>
+        <div style="float:left">Retour : <a href="General_Layer_Functions.htm">Fonctions générales des couches</a></div>
+        <div style="float:right">Suivant : <a href="layer_force_draw_depth.htm"><span class="notranslate">layer_force_draw_depth</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_depth

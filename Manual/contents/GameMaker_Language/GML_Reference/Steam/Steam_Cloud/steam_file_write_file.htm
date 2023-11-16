@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_file_write_file</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_file_write_file" />
+  <meta name="rh-index-keywords" content="steam_file_write_file" />
+  <meta name="search-keywords" content="steam_file_write_file" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_file_write_file</h1>
+  <p>Cette fonction vous permet de copier le contenu d'un fichier enregistré localement vers un fichier synchronisé avec le cloud <span class="notranslate">Steam</span>. Le fichier local <i>doit exister</i> avant d'utiliser cette fonction, qui renvoie une valeur de 0 si elle échoue pour une raison quelconque et une valeur supérieure à 0 si elle réussit.
+    une valeur supérieure à 0 si elle réussit.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_file_write_file(steam_filename, local_filename);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">steam_filename</span></td>
+        <td>Le fichier <span class="notranslate">Steam</span> Cloud à copier.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">local_filename</span></td>
+        <td>Le fichier local à utiliser pour la copie.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">real</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">steam_file_write_file(&quot;rm_koala.png&quot;, &quot;Koala2.png&quot;);</p>
+  <p>Le code ci-dessus copiera le contenu du fichier &quot;Koala2.png&quot; dans le fichier &quot;rm_koala.png&quot; du nuage <span class="notranslate">Steam</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_Cloud.htm">Nuage de vapeur</a></div>
+        <div style="float:right">Suivant : <a href="steam_file_read.htm"><span class="notranslate">steam_file_read</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_file_write_file
+-->
+  <!-- TAGS
+steam_file_write_file
+-->
+</body>
+</html>

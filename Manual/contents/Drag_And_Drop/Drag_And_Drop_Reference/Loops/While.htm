@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>While</title>
+  <title>Alors que</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the While action" />
   <meta name="rh-index-keywords" content="GML Visual Action - While" />
@@ -14,54 +14,54 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="While Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/i_Loops_While.png" /> While</h1>
-  <p>The <b>While</b> action is used to perform loops that only terminate when a specific condition returns <span class="inline">true</span>. For example, you can use a variable and set it to <span class="inline">false</span> then run the While loop and have it checking this variable, then at
-    some time in the loop you set the variable to <span class="inline">true</span> and the loop will terminate. Note that no matter where you set the condition within the while loop, <i>all</i> actions within the loop will be run to the end before the rest of the script
-    or event continues, changing the condition does not instantly break out of the loop.</p>
-  <p>When you add a While action into your code, you need to supply the variable to check, what kind of check to perform (less than, greater than, equals, etc...), and the value to check the variable against (you can also flag <i>not</i> to have the While
-    loop check to see if the condition is <i>not</i> true). You then add the actions to be performed within the While loop, much as you would add an action to an &quot;if&quot;, ie: dropping it to the side of the action rather than under it:</p>
-  <p><img alt="While drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/While_Drop.png" />All actions added to the side will be included in the While and will be performed before the event or script
-    continues with the actions added under (as shown in the example below). Note that you can end any loop prematurely if you call the <a href="Break.htm">Break</a> action.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="While Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/a_Loops_While.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Alors que</h1>
+  <p>L'action <b>While</b> est utilisée pour exécuter des boucles qui ne se terminent que lorsqu'une condition spécifique renvoie <span class="inline">true</span>. Par exemple, vous pouvez utiliser une variable et lui attribuer la valeur <span class="inline">false</span>, puis exécuter la boucle While et lui faire vérifier cette variable.
+    Puis, à un moment donné dans la boucle, vous donnez à la variable la valeur <span class="inline">true</span> et la boucle se termine. Notez que, quel que soit l'endroit où vous définissez la condition dans la boucle while, <i>toutes les</i> actions de la boucle seront exécutées jusqu'à la fin avant que le reste du script ou de l'événement ne continue.
+    ou l'événement ne se poursuive, le fait de changer la condition ne permet pas de sortir instantanément de la boucle.</p>
+  <p>Lorsque vous ajoutez une action While dans votre code, vous devez fournir la variable à vérifier, le type de vérification à effectuer (inférieur à, supérieur à, égal à, etc...) et la valeur à comparer à la variable (vous pouvez également choisir de <i>ne pas</i> faire vérifier par la boucle While
+    vérifie si la condition <i>n'est pas</i> vraie). Vous ajoutez ensuite les actions à exécuter dans la boucle While, de la même manière que vous ajouteriez une action à un &quot;if&quot;, c'est-à-dire en la plaçant à côté de l'action plutôt qu'en dessous :</p>
+  <p><img>Toutes les actions ajoutées sur le côté seront incluses dans le While et seront exécutées avant que l'événement ou le script ne continue avec les actions ajoutées en dessous (comme dans l'exemple ci-dessous).
+    ne continue avec les actions ajoutées en dessous (comme le montre l'exemple ci-dessous). Notez que vous pouvez mettre fin à toute boucle prématurément si vous appelez l'action <a href="Break.htm">Break</a>.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="While Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/i_Loops_While.png" /></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Variable</td>
-        <td>The variable to use in the check</td>
+        <td><span class="notranslate">Variable</span></td>
+        <td>La variable à utiliser dans le contrôle</td>
       </tr>
       <tr>
-        <td>Is</td>
-        <td>The type of evaluation to perform (less than, greater than, equal to, greater than or equal to and less than or equal to)</td>
+        <td><span class="notranslate">Is</span></td>
+        <td>Le type d'évaluation à effectuer (inférieur à, supérieur à, égal à, supérieur ou égal à et inférieur ou égal à)</td>
       </tr>
       <tr>
-        <td>Value</td>
-        <td>The value to check the variable against</td>
+        <td><span class="notranslate">Value</span></td>
+        <td>La valeur pour vérifier la variable par rapport à</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="While Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/e_Loops_While.png" />The above action block code creates a temporary local variable and sets it to <span class="inline">false</span>. This variable is
-    then checked in the While loop action and while it returns false the loop will run. In the loop we get two temporary local variables for a random x/y position in the room then we check that position for a collision. If no collision is found, the initial
-    variable is set to <span class="inline">true</span>, ending the loop. After the loop has ended an new instance is created at the random position that we discovered to have no collisions.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus crée une variable locale temporaire et lui attribue la valeur <span class="inline">false</span>.
+    ensuite vérifiée dans l'action de la boucle While et si elle renvoie un résultat faux, la boucle s'exécute. Dans la boucle, nous obtenons deux variables locales temporaires pour une position x/y aléatoire dans la pièce, puis nous vérifions que cette position ne présente pas de collision. Si aucune collision n'est trouvée, la variable initiale
+    initiale est définie sur <span class="inline">true</span>, ce qui met fin à la boucle. Une fois la boucle terminée, une nouvelle instance est créée à la position aléatoire où nous avons découvert qu'il n'y avait pas de collision.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Loop_Actions.htm">Loop Actions</a></div>
-        <div style="float:right">Next: <a href="For.htm">For</a></div>
+        <div style="float:left">Retour : <a href="Loop_Actions.htm">Actions en boucle</a></div>
+        <div style="float:right">Suivant : <a href="For.htm">Pour</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - While

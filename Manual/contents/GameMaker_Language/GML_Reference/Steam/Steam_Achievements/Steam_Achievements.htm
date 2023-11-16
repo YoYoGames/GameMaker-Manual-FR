@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Réalisations de Steam</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference section for the different Steam Achievement and Statistic functions" />
+  <meta name="rh-index-keywords" content="" />
+  <meta name="search-keywords" content="Steam Achievements,Steam Statistics" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Réalisations et statistiques</h1>
+  <p>L'API Stats and Achievements <span class="notranslate">Steam</span> offre un moyen simple pour votre jeu de fournir un suivi persistant et itinérant des réalisations et des statistiques pour vos utilisateurs. Les données de l'utilisateur sont associées à son compte <span class="notranslate">Steam</span>, et les réalisations et statistiques de chaque utilisateur peuvent être formatées et affichées dans son profil communautaire <span class="notranslate">Steam</span>.</p>
+  <p>En plus de fournir des récompenses de grande valeur aux joueurs de vos jeux, les succès sont utiles pour encourager et récompenser le travail d'équipe et l'interaction entre joueurs, pour donner une dimension supplémentaire aux objectifs du jeu et pour récompenser les utilisateurs qui passent plus de temps dans le jeu. Ils sont facilement configurables à partir du tableau de bord <span class="notranslate">Steam</span>, mais vous devrez créer des icônes spéciales pour eux.</p>
+  <p>Les statistiques permettent de suivre des informations très précises, telles que le temps de jeu, le nombre de power-ups utilisés, etc. Vous pouvez choisir de les utiliser simplement pour le suivi des données internes du jeu, de manière à pouvoir, par exemple, accorder un succès en fonction des statistiques de jeu multi-sessions recueillies auprès de l'utilisateur sur plusieurs ordinateurs. Vous pouvez également suivre des données de jeu intéressantes pour les afficher sur la page de la communauté <span class="notranslate">Steam</span>, où les utilisateurs peuvent comparer leurs propres statistiques à celles de leurs amis.</p>
+  <p>Il existe trois types de statistiques : les <strong>nombres entiers</strong>, les <strong>nombres flottants </strong>et les <strong>moyennes </strong>. <span class="notranslate">GameMaker Studio 2</span> vous permet de les modifier à partir de votre jeu, mais elles doivent avoir été initialisées au préalable à partir du panneau de configuration Steamworks de votre jeu.</p>
+  <p class="note"><b><span class="note">NOTE</span></b> Vous devez attendre que <span style="font-size:1px;"><a href="../Steam_API/steam_stats_ready.htm"><tt style="font-size: 14px">steam_stats_ready()</tt></a></span> ait retourné vrai, avant de tenter de lire ou d'écrire des statistiques et des succès.</p>
+  <p>Vous trouverez de plus amples détails et des instructions sur l'utilisation des statistiques et des réalisations dans les pages suivantes décrivant les fonctions :</p>
+  <ul class="colour">
+    <li><a href="steam_set_achievement.htm"><span class="notranslate">steam_set_achievement</span></a></li>
+    <li><a href="steam_get_achievement.htm"><span class="notranslate">steam_get_achievement</span></a></li>
+    <li><a href="steam_clear_achievement.htm"><span class="notranslate">steam_clear_achievement</span></a></li>
+    <li><a href="steam_set_stat_int.htm"><span class="notranslate">steam_set_stat_int</span></a></li>
+    <li><a href="steam_set_stat_float.htm"><span class="notranslate">steam_set_stat_float</span></a></li>
+    <li><a href="steam_set_stat_avg_rate.htm"><span class="notranslate">steam_set_stat_avg_rate</span></a></li>
+    <li><a href="steam_get_stat_int.htm"><span class="notranslate">steam_get_stat_int</span></a></li>
+    <li><a href="steam_get_stat_float.htm"><span class="notranslate">steam_get_stat_float</span></a></li>
+    <li><a href="steam_get_stat_avg_rate.htm"><span class="notranslate">steam_get_stat_avg_rate</span></a></li>
+    <li><a href="steam_reset_all_stats.htm"><span class="notranslate">steam_reset_all_stats</span></a></li>
+    <li><a href="steam_reset_all_stats_achievements.htm"><span class="notranslate">steam_reset_all_stats_achievements</span></a></li>
+  </ul>
+  <p> </p>
+  <p>Si l'utilisateur est en <b>mode hors ligne</b>, <span class="notranslate">Steam</span> conserve une adresse locale ( <span class="notranslate">cache</span> ) des statistiques et des données de réussite afin que les API puissent être utilisées normalement. Toutes les statistiques qui ne peuvent pas être engagées sont sauvegardées pour la prochaine fois que l'utilisateur est en ligne. Dans le cas où il y a eu des modifications sur plus d'une machine, <span class="notranslate">Steam</span> fusionne automatiquement les réalisations et choisit l'ensemble de statistiques qui a le plus progressé. Étant donné que <span class="notranslate">Steam</span> conserve un fichier local <span class="notranslate">cache</span> des données de statistiques, il n'est pas nécessaire que le jeu conserve <i>également</i> un fichier local <span class="notranslate">cache</span> des données sur le disque, d'autant plus que ces <span class="notranslate">caches</span> entrent souvent en conflit et que, dans ce cas, l'utilisateur a l'impression que sa progression a été annulée, ce qui est une expérience frustrante.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="../Steam.htm">Vapeur</a></div>
+        <div style="float:right">Suivant : <a href="../Steam_Cloud/Steam_Cloud.htm">Nuage de vapeur</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+Steam Achievements
+Steam Statistics
+-->
+  <!-- TAGS
+achievement_stat_functions
+-->
+</body>
+</html>

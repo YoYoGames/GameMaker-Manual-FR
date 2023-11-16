@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Gradient Ellipse</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Dessiner une ellipse dégradée</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Draw Gradient Ellipse action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Draw Gradient Ellipse" />
@@ -14,60 +14,63 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Draw Gradient Ellipse Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Ellipse_Gradient.png" /> Draw Gradient Ellipse</h1>
-  <p>This action will draw an ellipse at a given position within the room, using a set of blend colours to create a gradient. You give the top left position and the bottom right position of the area that the ellipse is to &quot;fit&quot; into, and the ellipse will be drawn between them. The position can either be an absolute position within the room, or a position relative to the instance calling the action and you can set the colours to blend from the edge of the ellipse and from its center. The ellipse can be drawn filled or outlined by checking the <b>fill</b> box at the bottom.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> This action is only for use in the various <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw Events</a>, and will not draw anything if used elsewhere.</p>
-  <p> </p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Draw Gradient Ellipse Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Gradient_Ellipse.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Dessiner une ellipse dégradée</h1>
+  <p>Cette action va dessiner une ellipse à une position donnée dans la pièce, en utilisant un ensemble de couleurs de mélange pour créer un gradient. Vous donnez la position supérieure gauche et la position inférieure droite de la zone dans laquelle l'ellipse doit &quot;s'insérer&quot;, et l'ellipse sera dessinée entre ces deux positions.
+    sera dessinée entre ces deux positions. La position peut être soit une position absolue dans la pièce, soit une position relative à l'instance appelant l'action et vous pouvez définir les couleurs à mélanger à partir du bord de l'ellipse et de son centre. L'ellipse
+    peut être dessinée avec un remplissage ou un contour en cochant la case de <b>remplissage</b> en bas.</p>
+  <p class="note"><b>REMARQUE</b>: Cette action est uniquement destinée à être utilisée dans les différents <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">événements de tirage au sort</a>, et ne tirera rien si elle est utilisée ailleurs.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Draw Gradient Ellipse Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Ellipse_Gradient.png" /></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Left</td>
-        <td>The left position to start drawing from</td>
+        <td><span class="notranslate">Left</span></td>
+        <td>La position gauche pour commencer à dessiner à partir de</td>
       </tr>
       <tr>
-        <td>Top</td>
-        <td>The top position to start drawing from</td>
+        <td><span class="notranslate">Top</span></td>
+        <td>La meilleure position pour commencer à dessiner</td>
       </tr>
       <tr>
-        <td>Right</td>
-        <td>The right position to end drawing from</td>
+        <td><span class="notranslate">Right</span></td>
+        <td>La bonne position pour terminer le dessin</td>
       </tr>
       <tr>
-        <td>Bottom</td>
-        <td>The bottom position to end drawing from</td>
+        <td><span class="notranslate">Bottom</span></td>
+        <td>La position inférieure pour terminer le dessin de</td>
       </tr>
       <tr>
-        <td>Center</td>
-        <td>The colour to blend from the center</td>
+        <td><span class="notranslate">Center</span></td>
+        <td>La couleur à mélanger à partir du centre</td>
       </tr>
       <tr>
-        <td>Edge</td>
-        <td>The colour to blend from the edge</td>
+        <td><span class="notranslate">Edge</span></td>
+        <td>La couleur à mélanger à partir du bord</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Draw Gradient Ellipse Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Gradient_Ellipse.png" />The above action block code draws a gradient ellipse at the position of the instance of &quot;obj_Player&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus dessine une ellipse à gradient à la position de l'instance "obj_Player".
+    instance de &quot;obj_Player&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Line.htm">Draw Line</a></div>
+        <div style="float:left">Retour : <a href="Drawing_Actions.htm">Actions de dessin</a></div>
+        <div style="float:right">Suivant : <a href="Draw_Line.htm">Tracer une ligne</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Draw Gradient Ellipse

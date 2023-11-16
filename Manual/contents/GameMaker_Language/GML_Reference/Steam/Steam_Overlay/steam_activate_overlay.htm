@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_activate_overlay</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_activate_overlay" />
+  <meta name="rh-index-keywords" content="steam_activate_overlay,ov_friends,ov_community,ov_players,ov_settings,ov_gamegroup,ov_achievements" />
+  <meta name="search-keywords" content="steam_activate_overlay,ov_friends,ov_community,ov_players,ov_settings,ov_gamegroup,ov_achievements" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_activate_overlay</h1>
+  <p>La superposition <span class="notranslate">Steam</span> est un élément de l'interface utilisateur <span class="notranslate">Steam</span> qui peut être activé au-dessus de presque tous les jeux lancés par <span class="notranslate">Steam</span>. Elle permet à l'utilisateur d'accéder à <span class="notranslate">access</span> à sa liste d'amis, au navigateur Web, au chat et à l'achat de DLC dans le jeu. La touche par défaut d'un utilisateur pour <span class="notranslate">access</span> la superposition pendant un jeu est SHIFT+TAB, mais vous pouvez également faire apparaître n'importe quelle page de la superposition en utilisant cette fonction. Elle prend l'une des six <b>constantes</b> énumérées ci-dessous :</p>
+  <blockquote>
+    <p> </p>
+    <table>
+      <tbody>
+        <tr>
+          <th>Constant</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><span class="notranslate">ov_friends</span></td>
+          <td>La page des amis de l'utilisateur actuel</td>
+        </tr>
+        <tr>
+          <td><span class="notranslate">ov_community</span></td>
+          <td>La page de la communauté pour votre jeu</td>
+        </tr>
+        <tr>
+          <td><span class="notranslate">ov_players</span></td>
+          <td>La page montrant les autres personnes qui jouent au même jeu ou avec qui vous avez récemment joué.</td>
+        </tr>
+        <tr>
+          <td><span class="notranslate">ov_settings</span></td>
+          <td>Les paramètres de recouvrement du client <span class="notranslate">Steam</span> </td>
+        </tr>
+        <tr>
+          <td><span class="notranslate">ov_gamegroup</span></td>
+          <td>Ouvre le navigateur Web de la communauté <span class="notranslate">Steam</span> vers le groupe de jeu officiel pour ce jeu.</td>
+        </tr>
+        <tr>
+          <td><span class="notranslate">ov_achievements</span></td>
+          <td>La page des réalisations de votre jeu</td>
+        </tr>
+      </tbody>
+    </table>
+  </blockquote>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_activate_overlay(overlayindex);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">overlayindex</span></td>
+        <td>L'index de la page de l'interface utilisateur de l'API <span class="notranslate">Steam</span> à afficher (voir les constantes énumérées ci-dessous).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var key = keyboard_lastkey;<br />
+    switch (key)<br />
+    {<br />
+        case vk_f1: steam_activate_overlay(ov_friends); break;<br />
+        case vk_f2: steam_activate_overlay(ov_community); break;<br />
+        case vk_f3: steam_activate_overlay(ov_players); break;<br />
+        case vk_f4: steam_activate_overlay(ov_settings); break;<br />
+        case vk_f5: steam_activate_overlay(ov_gamegroup); break;<br />
+        case vk_f6: steam_activate_overlay(ov_achievements); break;<br />
+    }</p>
+  <p>Le code ci-dessus interroge la dernière touche du clavier enfoncée et, s'il s'agit d'une des touches de fonction de 1 à 6, il ouvre la page correspondante de la superposition <span class="notranslate">Steam</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_Overlay.htm">Superposition de la vapeur</a></div>
+        <div style="float:right">Suivant : <a href="steam_activate_overlay_browser.htm"><span class="notranslate">steam_activate_overlay_browser</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_activate_overlay
+ov_friends
+ov_community
+ov_players
+ov_settings
+ov_gamegroup
+ov_achievements
+-->
+  <!-- TAGS
+steam_activate_overlay
+-->
+</body>
+</html>

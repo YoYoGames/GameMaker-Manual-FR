@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>sprite_replace</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function sprite_replace" />
   <meta name="rh-index-keywords" content="sprite_replace" />
@@ -15,80 +15,80 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_replace</h1>
-  <p>This function works in almost the exact same manner as <a href="sprite_add.htm"><span class="inline">sprite_add()</span></a>, only instead of returning the index of the sprite you are importing, it overwrites a previously created sprite index. When using this function you should use a sprite index that has been created and stored in a variable using other functions like <a href="sprite_add.htm"><span class="inline">sprite_add()</span></a> or <a href="sprite_create_from_surface.htm"><span class="inline">sprite_create_from_surface()</span></a>, or even <a href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a>, rather than a resource tree sprite asset. You <i>can</i> replace a sprite from the game assets using this function, but doing so means that you will lose the reference ID for the sprite that you are replacing, regardless of whether you call <span class="inline">game_restart()</span> or not, and so is not recommended. Regardless of the sprite being replaced, this function will <b>create a new texture page for the sprite</b> and so care should be taken when using it as it may adversely affect performance by increasing the number of required texture swaps for rendering.</p>
-  <p>The image file to be loaded should <b>always</b> be in <span class="inline">*.png</span> format and all images that are to be turned into animated sprites should have a &quot;strip&quot; format (see the image below). They will be split into the number of sub-images specified following the rule <b>sprite width = strip width / sub images</b>.</p>
+  <p>Cette fonction fonctionne presque de la même manière que la fonction <a href="sprite_add.htm"><span class="inline">sprite_add()</span></a>mais au lieu de renvoyer l'index du site <span class="notranslate">sprite</span> que vous importez, elle écrase un index <span class="notranslate">sprite</span> précédemment créé. Lorsque vous utilisez cette fonction, vous devez utiliser un index <span class="notranslate">sprite</span> qui a été créé et stocké dans une variable à l'aide d'autres fonctions telles que <a href="sprite_add.htm"><span class="inline">sprite_add()</span></a> ou <a href="sprite_create_from_surface.htm"><span class="inline">sprite_create_from_surface()</span></a>ou même <a href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a>plutôt qu'un actif de l'arborescence des ressources <span class="notranslate">sprite</span>. Vous <i>pouvez</i> remplacer un <span class="notranslate">sprite</span> à partir des ressources du jeu en utilisant cette fonction, mais cela signifie que vous perdrez l'ID de référence pour le <span class="notranslate">sprite</span> que vous remplacez, que vous appeliez <span class="inline">game_restart()</span> ou non, et ce n'est donc pas recommandé. Indépendamment de l'adresse <span class="notranslate">sprite</span> remplacée, cette fonction <b>créera une nouvelle page de texture pour le sprite</b>. Il convient donc d'être prudent lors de son utilisation, car elle peut nuire aux performances en augmentant le nombre de changements de texture nécessaires au rendu.</p>
+  <p>Le fichier image à charger doit <b>toujours</b> être au format <span class="inline">*.png</span> et toutes les images qui doivent être transformées en <span class="notranslate">sprites</span> animé doivent avoir un format &quot;bande&quot; (voir l'image ci-dessous). Elles seront divisées en un nombre de sous-images spécifié selon la règle suivante : <b>largeur du sprite = largeur de la bande / sous-images</b>.</p>
   <p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png" /></p>
-  <p>As you can see in the above image, the sprite has been placed on a dark purple background, and this can be removed by setting the &quot;removeback&quot; argument to <span class="inline">true</span>. This works by checking the <i>bottom left</i> pixel of the sprite for the colour there and then uses that as the colour to be removed. For example, in the above image, if we had the bottom left pixel colour as green, all the green parts of the sprite would have been removed and the rest of the purple background ignored.</p>
-  <p>If you choose the &quot;removeback&quot; option, you may also want <span data-keyref="GameMaker Name">GameMaker</span> to smooth the edges of the sprite by setting the &quot;smooth&quot; argument to <span class="inline">true</span>. All this does is create a semi-transparent border around the edges of the sprite after it has had its background removed.</p>
-  <p>Finally you can also specify the x and y <i>origin</i> for the sprite. This is the point where the sprite is &quot;fixed&quot; onto the instance that uses it, and is always calculated as relative to the 0,0 top left corner of one sprite sub-image. So, for example, a sprite that is 32 x 32 pixels with these values set to (16,16) will have its origin in the center.</p>
-  <p>By default all new sprites have their bounding boxes calculated automatically (the exact bbox will depend on the size and transparency of the sprite), however you may wish to customise this, in which case you should also use the function <a href="sprite_collision_mask.htm"><span class="inline">sprite_collision_mask()</span></a>.</p>
-  <div data-conref="../../../../../assets/snippets/Note_File_Handling_Limitations.hts"> </div>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span> You should be aware that if you are using this function in your HTML5 target game to load resources from an external server, then, due to XSS protection in browsers, attempts to load resources from across domains can be blocked and may appear to return blank results.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Comme vous pouvez le voir dans l'image ci-dessus, le <span class="notranslate">sprite</span> a été placé sur un fond violet foncé, et cela peut être supprimé en définissant l'argument &quot;removeback&quot; sur <span class="inline">true</span>. Cela fonctionne en vérifiant la couleur du pixel <i>en bas à gauche</i> du <span class="notranslate">sprite</span> et l'utilise ensuite comme couleur à supprimer. Par exemple, dans l'image ci-dessus, si la couleur du pixel inférieur gauche était le vert, toutes les parties vertes de <span class="notranslate">sprite</span> auraient été supprimées et le reste du fond violet ignoré.</p>
+  <p>Si vous choisissez l'option &quot;removeback&quot;, vous pouvez également souhaiter que <span data-keyref="GameMaker Name">GameMaker</span> lisse les bords du site <span class="notranslate">sprite</span> en donnant à l'argument &quot;smooth&quot; la valeur <span class="inline">true</span>. Cela permet de créer une bordure semi-transparente autour des bords du site <span class="notranslate">sprite</span> après la suppression de son arrière-plan.</p>
+  <p>Enfin, vous pouvez également spécifier l'<i>origine</i> x et y de <span class="notranslate">sprite</span>. Il s'agit du point où <span class="notranslate">sprite</span> est &quot;fixé&quot; sur l'instance qui l'utilise, et il est toujours calculé par rapport au coin supérieur gauche 0,0 d'une sous-image <span class="notranslate">sprite</span>. Ainsi, par exemple, un <span class="notranslate">sprite</span> de 32 x 32 pixels avec ces valeurs définies sur (16,16) aura son origine au centre.</p>
+  <p>Par défaut, les boîtes englobantes de tous les nouveaux sites <span class="notranslate">sprites</span> sont calculées automatiquement (la boîte englobante exacte dépend de la taille et de la transparence du site <span class="notranslate">sprite</span>). Toutefois, vous pouvez personnaliser cette fonction, auquel cas vous devez également utiliser la fonction <a href="sprite_collision_mask.htm"><span class="inline">sprite_collision_mask()</span></a>.</p>
+  <p class="note"><b>REMARQUE</b>: Selon la plate-forme cible choisie, vous êtes limité quant à l'endroit où vous pouvez enregistrer et charger des fichiers. Voir <a href="../../../../../Additional_Information/The_File_System.htm">Manipulation des fichiers</a> pour plus d'informations.</p>
+  <p class="note"><b>REMARQUE</b>: vous devez savoir que si vous utilisez cette fonction dans votre jeu cible HTML5 pour charger des ressources à partir d'un serveur externe, alors, en raison de la protection XSS des navigateurs, les tentatives de chargement de ressources à partir d'autres domaines peuvent être bloquées et renvoyer des résultats vides.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">sprite_replace(ind, fname, imgnumb, removeback, smooth, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>ind</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The index of the sprite to permanently replace.</td>
+        <td><span class="notranslate">ind</span></td>
+        <td><span data-keyref="Type_Asset_Sprite">Sprite Asset</span></td>
+        <td><span class="notranslate">The index of the sprite to permanently replace.</span></td>
       </tr>
       <tr>
-        <td>fname</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The filename of the image to make the new sprite.</td>
+        <td><span class="notranslate">fname</span></td>
+        <td><span data-keyref="Type_String">Chaîne de caractères</span></td>
+        <td><span class="notranslate">The filename of the image to make the new sprite.</span></td>
       </tr>
       <tr>
-        <td>imgnumb</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The number of frames the sprite will be cut up into horizontally. Use 1 for one single image or <span class="inline">*.gif</span>.</td>
+        <td><span class="notranslate">imgnumb</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The number of frames the sprite will be cut up into horizontally. Use 1 for one single image or <span class="inline">*.gif</span>.</td>
       </tr>
       <tr>
-        <td>removeback</td>
-        <td><span data-keyref="Type_Bool"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Indicates whether to make all pixels with the background colour (left-bottom pixel) transparent.</td>
+        <td><span class="notranslate">removeback</span></td>
+        <td><span data-keyref="Type_Bool">Booléen</span></td>
+        <td><span class="notranslate">Indicates whether to make all pixels with the background colour (left-bottom pixel) transparent.</span></td>
       </tr>
       <tr>
-        <td>smooth</td>
-        <td><span data-keyref="Type_Bool"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Indicates whether to smooth the edges.</td>
+        <td><span class="notranslate">smooth</span></td>
+        <td><span data-keyref="Type_Bool">Booléen</span></td>
+        <td><span class="notranslate">Indicates whether to smooth the edges.</span></td>
       </tr>
       <tr>
-        <td>xorig</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of the origin, relative to the sprite&#39;s top left corner.</td>
+        <td><span class="notranslate">xorig</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The x coordinate of the origin, relative to the sprite&#39;s top left corner.</span></td>
       </tr>
       <tr>
-        <td>yorig</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of the origin, relative to the sprite&#39;s top left corner.</td>
+        <td><span class="notranslate">yorig</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The y coordinate of the origin, relative to the sprite&#39;s top left corner.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns</h4>
+  <p> </p>
+  <h4>Renvoie à</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">sprite_replace(spr_banner, &quot;gravemaker.png&quot;, 1, false, false, 0, 0);</p>
-  <p>The above code will replace the image asset indexed in &quot;spr_banner&quot; with another one loaded from an external source.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus remplacera l'image indexée dans &quot;spr_banner&quot; par une autre image chargée depuis une source externe.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_duplicate.htm">sprite_duplicate</a></div>
+        <div style="float:left">Retour : <a href="Sprite_Manipulation.htm">Manipulation des sprites</a></div>
+        <div style="float:right">Suivant : <a href="sprite_duplicate.htm"><span class="notranslate">sprite_duplicate</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_replace

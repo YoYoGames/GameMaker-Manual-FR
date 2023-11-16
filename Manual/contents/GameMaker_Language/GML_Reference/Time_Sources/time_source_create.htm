@@ -4,10 +4,10 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>time_source_create</title>
+  <title>création_source_temps</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Reference page for time_source_create" />
@@ -15,52 +15,52 @@
   <meta name="search-keywords" content="time_source_create" />
 </head>
 <body>
-  <h1>time_source_create</h1>
-  <p>This function creates a new <span data-keyref="Type_Resource_TimeSource">Time Source</span>. Read <a data-xref="{title}" href="Time_Sources.htm">Time Sources</a> for an overview.</p>
-  <p>Creating a new <span data-keyref="Type_Resource_TimeSource">Time Source</span> does not start it automatically; you must call <a href="time_source_start.htm"><span class="inline">time_source_start()</span></a> to activate it.</p>
-  <p>A new <span data-keyref="Type_Resource_TimeSource">Time Source</span> only runs once, unless the <span class="inline2">repetitions</span> argument is specified (read below).</p>
-  <p>You must destroy a <span data-keyref="Type_Resource_TimeSource">Time Source</span> using <a href="time_source_destroy.htm"><span class="inline">time_source_destroy()</span></a> when you no longer need it.</p>
+  <h1>création_source_temps</h1>
+  <p>Cette fonction crée une nouvelle <span data-keyref="Type_Resource_TimeSource">source de temps</span>. Lisez <a data-xref="{title}" href="Time_Sources.htm">Sources de temps</a> pour une vue d'ensemble.</p>
+  <p>La création d'une nouvelle <span data-keyref="Type_Resource_TimeSource">source de temps</span> ne la lance pas automatiquement ; vous devez appeler <a href="time_source_start.htm"><span class="inline">time_source_start()</span></a> pour l'activer.</p>
+  <p>Une nouvelle <span data-keyref="Type_Resource_TimeSource">source de temps</span> ne s'exécute qu'une seule fois, à moins que l'argument <span class="inline2">répétitions</span> ne soit spécifié (voir ci-dessous).</p>
+  <p>Vous devez détruire une <span data-keyref="Type_Resource_TimeSource">Source de temps</span> en utilisant <a href="time_source_destroy.htm"><span class="inline">time_source_destroy()</span></a> lorsque vous n'en avez plus besoin.</p>
   <h2>Arguments</h2>
-  <p>Here is a breakdown of the function&#39;s arguments:</p>
-  <h3><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Parent Time Source</a></h3>
+  <p>Voici la répartition des arguments de la fonction :</p>
+  <h3><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Source du temps des parents</a></h3>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">This is the parent <span data-keyref="Type_Resource_TimeSource">Time Source</span> which controls the new <span data-keyref="Type_Resource_TimeSource">Time Source</span>. This may be <span class="inline2">time_source_global</span>, <span class="inline2">time_source_game</span> or a custom <span data-keyref="Type_Resource_TimeSource">Time Source</span> that already exists.<br />
-      <br />
-      See: <a data-xref="{title}" href="Built_In_Time_Sources.htm">Built-In Time Sources</a>
+    <p class="dropspot">Il s'agit de la <span data-keyref="Type_Resource_TimeSource">source de temps</span> parente qui contrôle la nouvelle <span data-keyref="Type_Resource_TimeSource">source de temps</span>. Il peut s'agir de <span class="inline2">time_source_global</span>, <span class="inline2">time_source_game</span> ou d'une <span data-keyref="Type_Resource_TimeSource">source temporelle</span> personnalisée qui existe déjà.<br>
+      <br>
+      Voir : <a data-xref="{title}" href="Built_In_Time_Sources.htm">Sources temporelles intégrées</a>
     </p>
   </div>
-  <h3><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Period</a></h3>
+  <h3><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Période</a></h3>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">This is a period of time that may be expressed in seconds or frames, depending on the unit specified in the next argument.</p>
-    <p class="dropspot">When using frames as the unit, the period must be an integer. Non-integer values are rounded down (floored), with the exception of values lower than 1, which are rounded up to 1.</p>
+    <p class="dropspot">Il s'agit d'une période de temps qui peut être exprimée en secondes ou en images, selon l'unité spécifiée dans l'argument suivant.</p>
+    <p class="dropspot">Lorsque l'unité utilisée est l'image, la période doit être un nombre entier. Les valeurs non entières sont arrondies à l'unité inférieure, à l'exception des valeurs inférieures à 1, qui sont arrondies à l'unité supérieure.</p>
   </div>
-  <h3><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Unit</a></h3>
+  <h3><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Unité</a></h3>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">This is the unit that the period is expressed in, and may be <span class="inline2">time_source_units_seconds</span> or <span class="inline2">time_source_units_frames</span>.</p>
-    <p class="dropspot">See: <a data-xref="{title}" href="Time_Source_Units.htm">Time Source Units</a></p>
-    <p class="dropspot">You can use a beats-per-minute value by using <span class="inline"><a href="time_bpm_to_seconds.htm">time_bpm_to_seconds()</a></span>.</p>
+    <p class="dropspot">C'est l'unité dans laquelle la période est exprimée, et peut être <span class="inline2">time_source_units_seconds</span> ou <span class="inline2">time_source_units_frames</span>.</p>
+    <p class="dropspot">Voir : <a data-xref="{title}" href="Time_Source_Units.htm">Unités de source de temps</a></p>
+    <p class="dropspot">Vous pouvez utiliser une valeur de battements par minute en utilisant <span class="inline"><a href="time_bpm_to_seconds.htm">time_bpm_to_seconds()</a></span>.</p>
   </div>
-  <h3><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Callback &amp; Args</a></h3>
+  <h3><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Rappel et arguments</a></h3>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">You must specify a &quot;callback&quot; <a href="../../GML_Overview/Method_Variables.htm">method</a> that is called when the <span data-keyref="Type_Resource_TimeSource">Time Source</span> expires.</p>
-    <p class="dropspot">You can optionally specify an array containing the arguments that should be passed into the method when it&#39;s called.</p>
-    <p class="dropspot">The array itself will not be passed into the method, rather each element of the array will be passed as a separate argument.</p>
-    <p class="dropspot">For example, if your function expects the arguments <span class="inline2">(x, y, object)</span>, then your <span class="inline2">args</span> array may look like this: <span class="inline2">[30, 600, obj_player]</span>.</p>
+    <p class="dropspot">Vous devez spécifier un &quot;callback&quot; (rappel) <a href="../../GML_Overview/Method_Variables.htm"><span class="notranslate">method</span></a> qui sera appelé lorsque la <span data-keyref="Type_Resource_TimeSource">source de temps</span> expirera.</p>
+    <p class="dropspot">Vous pouvez éventuellement spécifier un tableau contenant les arguments qui doivent être passés à la méthode lorsqu'elle est appelée.</p>
+    <p class="dropspot">Le tableau lui-même ne sera pas transmis à la méthode, mais chaque élément du tableau sera transmis comme un argument distinct.</p>
+    <p class="dropspot">Par exemple, si votre fonction attend les arguments <span class="inline2">(x, y, objet)</span>, alors votre tableau d'<span class="inline2">arguments</span> peut ressembler à ceci : <span class="inline2">[30, 600, obj_player]</span>.</p>
   </div>
-  <h3><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Repetitions</a></h3>
+  <h3><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Répétitions</a></h3>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">You can optionally specify how many times your <span data-keyref="Type_Resource_TimeSource">Time Source</span> should repeat. A value of <span class="inline2">1</span> means it only runs once, which is the default value.</p>
-    <p class="dropspot">You can specify the total number of times it should repeat, or <span class="inline2">-1</span> to make it repeat indefinitely.</p>
-    <p class="dropspot">For example, if you set this to 3, and your <span data-keyref="Type_Resource_TimeSource">Time Source</span> period is &quot;4 seconds&quot;, then the <span data-keyref="Type_Resource_TimeSource">Time Source</span> will be active for a total of 12 seconds and will call the callback method every 4 seconds.</p>
+    <p class="dropspot">Vous pouvez optionnellement spécifier combien de fois votre <span data-keyref="Type_Resource_TimeSource">source de temps</span> doit se répéter. Une valeur de <span class="inline2">1</span> signifie qu'elle ne s'exécute qu'une seule fois, ce qui est la valeur par défaut.</p>
+    <p class="dropspot">Vous pouvez spécifier le nombre total de fois qu'il doit se répéter, ou <span class="inline2">-1</span> pour qu'il se répète indéfiniment.</p>
+    <p class="dropspot">Par exemple, si vous réglez cette valeur sur 3 et que la période de votre <span data-keyref="Type_Resource_TimeSource">source de temps</span> est de &quot;4 secondes&quot;, la <span data-keyref="Type_Resource_TimeSource">source de temps</span> sera active pendant un total de 12 secondes et appellera la méthode de rappel toutes les 4 secondes.</p>
   </div>
-  <h3><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Expiry Type</a></h3>
+  <h3><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Type d'expiration</a></h3>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">This may be <span class="inline2">time_source_expire_nearest</span> or <span class="inline2">time_source_expire_after</span>.</p>
-    <p class="dropspot">See: <a data-xref="{title}" href="Time_Source_Expiry_Types.htm">Time Source Expiry Types</a></p>
+    <p class="dropspot">Il peut s'agir de la <span class="inline2">date d'expiration la plus proche</span> ou de la <span class="inline2">date d'expiration ultérieure</span>.</p>
+    <p class="dropspot">Voir : <a data-xref="{title}" href="Time_Source_Expiry_Types.htm">Types d'expiration des sources de temps</a></p>
   </div>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">time_source_create</span>(parent, period, units, callback, [args, repetitions, expiry_type]);</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">time_source_create(parent, period, units, callback, [args, repetitions, expiry_type]);</p>
   <table>
     <colgroup>
       <col />
@@ -69,67 +69,67 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>parent</td>
-        <td><span data-keyref="Type_ID_TimeSource"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/time_source_create.htm" target="_blank">Time Source ID</a></span></td>
-        <td>The parent <span data-keyref="Type_Resource_TimeSource">Time Source</span> that controls the new <span data-keyref="Type_Resource_TimeSource">Time Source</span></td>
+        <td><span class="notranslate">parent</span></td>
+        <td><span data-keyref="Type_ID_TimeSource"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/time_source_create.htm" target="_blank">ID de la source de temps</a></span></td>
+        <td><span class="notranslate">The parent <span data-keyref="Type_Resource_TimeSource">Time Source</span> qui contrôle la nouvelle <span data-keyref="Type_Resource_TimeSource">source de temps</span></td>
       </tr>
       <tr>
-        <td>period</td>
+        <td><span class="notranslate">period</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The period that the <span data-keyref="Type_Resource_TimeSource">Time Source</span> runs for, in the given units</td>
+        <td><span class="notranslate">The period that the <span data-keyref="Type_Resource_TimeSource">Time Source</span> fonctionne pour, dans les unités données</td>
       </tr>
       <tr>
-        <td>units</td>
-        <td><span data-keyref="Type_Constant_TimeSource_Unit"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Source_Units.htm" target="_blank">Time Source Unit Constant</a></span></td>
-        <td>The units that the given period is in</td>
+        <td><span class="notranslate">units</span></td>
+        <td><span data-keyref="Type_Constant_TimeSource_Unit"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Source_Units.htm" target="_blank">Source de temps Unité Constante</a></span></td>
+        <td><span class="notranslate">The units that the given period is in</span></td>
       </tr>
       <tr>
-        <td>callback</td>
-        <td><span data-keyref="Type_Method"><a href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm" target="_blank">Method</a></span> or <span data-keyref="Type_Function_Script"><a href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm" target="_blank">Script Function</a></span></td>
-        <td>The method or script function to call when the <span data-keyref="Type_Resource_TimeSource">Time Source</span> expires</td>
+        <td><span class="notranslate">callback</span></td>
+        <td><span data-keyref="Type_Method"><a href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm" target="_blank">Méthode</a></span> ou <span data-keyref="Type_Function_Script"><a href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm" target="_blank">Fonction de script</a></span></td>
+        <td><span class="notranslate">The method or script function to call when the <span data-keyref="Type_Resource_TimeSource">Time Source</span> expirant à</td>
       </tr>
       <tr>
-        <td>args</td>
+        <td><span class="notranslate">args</span></td>
         <td><span data-keyref="Type_Array"><a href="../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span></td>
-        <td><span class="optional">OPTIONAL</span> An array containing the arguments to pass into the method</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Un tableau contenant les arguments à passer dans la méthode</td>
       </tr>
       <tr>
-        <td>repetitions</td>
+        <td><span class="notranslate">repetitions</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td><span class="optional">OPTIONAL</span> The number of times the <span data-keyref="Type_Resource_TimeSource">Time Source</span> should repeat, or -1 for indefinite repetition</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Le nombre de fois que la <span data-keyref="Type_Resource_TimeSource">source temporelle</span> doit se répéter, ou -1 pour une répétition indéfinie.</td>
       </tr>
       <tr>
-        <td>expiry_type</td>
-        <td><span data-keyref="Type_Constant_TimeSource_Expiry"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Source_Expiry_Types.htm" target="_blank">Time Source Expiry Constant</a></span></td>
-        <td><span class="optional">OPTIONAL</span> Whether the <span data-keyref="Type_Resource_TimeSource">Time Source</span> expires on the frame nearest to its expiry, or on the next frame</td>
+        <td><span class="notranslate">expiry_type</span></td>
+        <td><span data-keyref="Type_Constant_TimeSource_Expiry"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Source_Expiry_Types.htm" target="_blank">Constante d'expiration de la source de temps</a></span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Si la <span data-keyref="Type_Resource_TimeSource">source de temps</span> expire sur la trame la plus proche de son expiration, ou sur la trame suivante.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_ID_TimeSource"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/time_source_create.htm" target="_blank">Time Source ID</a></span></p>
-  <p> </p>
-  <h4>Example 1:</h4>
+  <p> </p>
+  <h4>Exemple 1 :</h4>
   <p class="code">var _my_method = function()<br />
     {<br />
         instance_destroy();<br />
     }<br />
     <br />
-    var _time_source = <span data-field="title" data-format="default">time_source_create</span>(time_source_game, 300, time_source_units_frames, _my_method);<br />
+    var _time_source = time_source_create(time_source_game, 300, time_source_units_frames, _my_method);<br />
     <br />
     time_source_start(_time_source);
   </p>
-  <p>In this example, we want the instance to destroy itself 300 frames later.</p>
-  <p>The code first creates a method that simply calls <a href="../Asset_Management/Instances/instance_destroy.htm"><span class="inline">instance_destroy()</span></a>.</p>
-  <p>It then creates a <span data-keyref="Type_Resource_TimeSource">Time Source</span>, inheriting from the Game <span data-keyref="Type_Resource_TimeSource">Time Source</span>. It sets its period to <strong>300 frames</strong>.</p>
-  <p>Finally, it starts the <span data-keyref="Type_Resource_TimeSource">Time Source</span>.</p>
-  <p> </p>
-  <h4>Example 2:</h4>
+  <p>Dans cet exemple, nous voulons que l'instance se détruise 300 images plus tard.</p>
+  <p>Le code crée d'abord une méthode qui appelle simplement <a href="../Asset_Management/Instances/instance_destroy.htm"><span class="inline">instance_destroy()</span></a>.</p>
+  <p>Il crée ensuite une <span data-keyref="Type_Resource_TimeSource">source de temps</span>, héritant de la <span data-keyref="Type_Resource_TimeSource">source de temps</span> du jeu. Il fixe sa période à <strong>300 images</strong>.</p>
+  <p>Enfin, il lance la <span data-keyref="Type_Resource_TimeSource">source de temps</span>.</p>
+  <p> </p>
+  <h4>Exemple 2 :</h4>
   <p class="code">var _my_method = function()<br />
     {<br />
         show_debug_message(&quot;A second has passed!&quot;);<br />
@@ -139,22 +139,22 @@
     <br />
     time_source_start(global.time_per_second);
   </p>
-  <p>In this example, we&#39;re creating a global <span data-keyref="Type_Resource_TimeSource">Time Source</span> that expires once every second. This code would be placed at the root of a <a href="../../../The_Asset_Editors/Scripts.htm">script</a>.</p>
-  <p>The code first creates a method that prints a message to the output log, saying <strong>&quot;A second has passed!&quot;</strong>.</p>
-  <p>It then creates a new <span data-keyref="Type_Resource_TimeSource">Time Source</span>, inheriting from the Game <span data-keyref="Type_Resource_TimeSource">Time Source</span>. It sets its period to <strong>1 second</strong>.</p>
-  <p>The method is passed into the <span data-keyref="Type_Resource_TimeSource">Time Source</span> so it can be called each time it expires. An empty array is given for the arguments.</p>
-  <p>The repetition count is set to -1, so the <span data-keyref="Type_Resource_TimeSource">Time Source</span> never stops and keeps repeating forever. Its expiry type is set so the callback runs on the first frame after its expiry.</p>
-  <p>Finally, the <span data-keyref="Type_Resource_TimeSource">Time Source</span> is started.</p>
-  <p> </p>
-  <p> </p>
+  <p>Dans cet exemple, nous créons une <span data-keyref="Type_Resource_TimeSource">source de temps</span> globale qui expire une fois par seconde. Ce code serait placé à la racine d'un fichier . <a href="../../../The_Asset_Editors/Scripts.htm"><span class="notranslate">script</span></a>.</p>
+  <p>Le code crée d'abord une méthode qui imprime un message dans le journal de sortie, disant <strong>&quot;Une seconde est passée !&quot;.</strong></p>
+  <p>Il crée ensuite une nouvelle <span data-keyref="Type_Resource_TimeSource">source de temps</span>, héritant de la <span data-keyref="Type_Resource_TimeSource">source de temps</span> du jeu. Elle fixe sa période à <strong>1 seconde</strong>.</p>
+  <p>La méthode est passée dans la <span data-keyref="Type_Resource_TimeSource">source de temps</span> afin qu'elle puisse être appelée à chaque fois qu'elle expire. Un tableau vide est donné pour les arguments.</p>
+  <p>Le nombre de répétitions est fixé à -1, de sorte que la <span data-keyref="Type_Resource_TimeSource">source de temps</span> ne s'arrête jamais et se répète indéfiniment. Son type d'expiration est défini de manière à ce que le callback soit exécuté sur la première image après son expiration.</p>
+  <p>Enfin, la <span data-keyref="Type_Resource_TimeSource">source de temps</span> est lancée.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Time_Sources.htm">Time Sources</a> </div>
-        <div>Next: <a data-xref="{title}" href="time_source_destroy.htm">time_source_destroy</a></div>
+        <div>Retour : <a data-xref="{title}" href="Time_Sources.htm">Sources de temps</a> </div>
+        <div>Suivant : <a data-xref="{title}" href="time_source_destroy.htm">time_source_destroy</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 time_source_create

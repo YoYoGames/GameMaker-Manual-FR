@@ -6,7 +6,7 @@
   <title>physics_particle_get_group_flags</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_particle_get_group_flags" />
   <meta name="rh-index-keywords" content="physics_particle_get_group_flags" />
@@ -16,47 +16,47 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_particle_get_group_flags</h1>
-  <p>With this function you can retrieve the group flags for a group of particles. The <span class="inline">group</span> value is that which was returned when you created the group of particles using the function <a href="physics_particle_group_end.htm"><span class="inline">physics_particle_group_end()</span></a>, and the function will return a value which is the combined value of the currently set flags.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction permet de récupérer le groupe <span class="notranslate">flags</span> pour un groupe de particules. La valeur <span class="inline">group</span> est celle qui a été renvoyée lorsque vous avez créé le groupe de particules à l'aide de la fonction <a href="physics_particle_group_end.htm"><span class="inline">physics_particle_group_end()</span></a>La fonction renvoie une valeur qui est la valeur combinée des valeurs actuellement définies pour <span class="notranslate">flags</span>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">physics_particle_get_group_flags(group)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>group</td>
-        <td><span data-keyref="Type_ID_Phy_Particle_Group">Physics Particle Group ID</span></td>
-        <td>The particle group to get.</td>
+        <td><span class="notranslate">group</span></td>
+        <td><span data-keyref="Type_ID_Phy_Particle_Group">ID du groupe de particules de physique</span></td>
+        <td><span class="notranslate">The particle group to get.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var flags = physics_particle_get_group_flags(group, flags);<br />
     if flags != (phy_particle_group_flag_solid | phy_particle_group_flag_rigid)<br />
     {<br />
         flags = phy_particle_group_flag_solid | phy_particle_group_flag_rigid;<br />
         physics_particle_set_group_flags(group, flags);<br />
     }</p>
-  <p>The above code will create a variable to store the flags value and then use it to check the flags of the group indexed in the variable &quot;group&quot;. If they are not the same, the group is set with these flags.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus créera une variable pour stocker la valeur <span class="notranslate">flags</span> et l'utilisera ensuite pour vérifier le <span class="notranslate">flags</span> du groupe indexé dans la variable &quot;groupe&quot;. Si elles ne sont pas les mêmes, le groupe est défini avec ces <span class="notranslate">flags</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
-        <div style="float:right">Next: <a href="physics_particle_group_get_inertia.htm">physics_particle_group_get_inertia</a></div>
+        <div style="float:left">Retour : <a href="Soft_Body_Particles.htm">Particules molles du corps</a></div>
+        <div style="float:right">Suivant : <a href="physics_particle_group_get_inertia.htm"><span class="notranslate">physics_particle_group_get_inertia</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_get_group_flags

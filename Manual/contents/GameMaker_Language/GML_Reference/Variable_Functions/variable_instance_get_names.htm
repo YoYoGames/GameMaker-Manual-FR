@@ -6,7 +6,7 @@
   <title>variable_instance_get_names</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function variable_instance_get_names" />
   <meta name="rh-index-keywords" content="variable_instance_get_names" />
@@ -16,9 +16,9 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>variable_instance_get_names</h1>
-  <p>With this function you can retrieve an array populated with the <b>instance</b> variable names for an instance, or the <b>global</b> variables for a game. When you pass in an instance ID value, each entry in the array will be a string of the variable name that corresponds to an <a href="../../GML_Overview/Variables_And_Variable_Scope.htm">instance scope</a> variable that has been created in the instance. However if you pass in the keyword <span class="inline">global</span>, each entry in the array will be a string of the variable name that corresponds to an <a href="../../GML_Overview/Variables_And_Variable_Scope.htm">global scope</a> variable.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction vous permet de récupérer un tableau contenant les noms des variables d'une <b>instance</b> ou les variables <b>globales</b> d'un jeu. Lorsque vous passez une valeur d'ID d'instance, chaque entrée du tableau sera une chaîne de caractères du nom de la variable qui correspond à une variable <a href="../../GML_Overview/Variables_And_Variable_Scope.htm">de portée d'instance</a> qui a été créée dans l'instance. Cependant, si vous passez le mot-clé <span class="inline">global</span>, chaque entrée du tableau sera une chaîne de caractères du nom de la variable correspondant à une variable de <a href="../../GML_Overview/Variables_And_Variable_Scope.htm">portée globale</a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">variable_instance_get_names(instance_id/global);</p>
   <table>
     <colgroup>
@@ -28,22 +28,22 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>instance_id/global</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span> or <span class="inline">global</span></td>
-        <td>The unique ID value of the instance to check or the keyword <span class="inline">global</span></td>
+        <td><span class="notranslate">instance_id/global</span></td>
+        <td><span data-keyref="Type_ID_Instance">ID de l'instance</span> ou <span class="inline">global</span></td>
+        <td><span class="notranslate">The unique ID value of the instance to check or the keyword <span class="inline">global</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Array">Array</span> (each entry is a string)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var str = &quot;&quot;;<br />
     var array = variable_instance_get_names(id);<br />
     show_debug_message(&quot;Variables for &quot; + object_get_name(object_index) + string(id));<br />
@@ -52,18 +52,18 @@
         str = array[i] + &quot;:&quot; + string(variable_instance_get(id, array[i]));<br />
         show_debug_message(str);<br />
     }</p>
-  <p>The above code will retrieve an array of all instance scope variables for the instance running the code block and then display these along with their values in the debug output.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus récupère un tableau de toutes les variables d'instance pour l'instance qui exécute le bloc de code, puis les affiche avec leurs valeurs dans la sortie de débogage.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Variable_Functions.htm">Variable Functions</a></div>
-        <div style="float:right">Next: <a href="variable_instance_names_count.htm">variable_instance_names_count</a></div>
+        <div style="float:left">Retour : <a href="Variable_Functions.htm">Fonctions variables</a></div>
+        <div style="float:right">Suivant : <a href="variable_instance_names_count.htm"><span class="notranslate">variable_instance_names_count</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 variable_instance_get_names

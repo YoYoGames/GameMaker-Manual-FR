@@ -6,7 +6,7 @@
   <title>xboxlive_stats_set_stat_string</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_stats_set_stat_string" />
   <meta name="rh-index-keywords" content="xboxlive_stats_set_stat_string" />
@@ -15,54 +15,54 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_stats_set_stat_string</h1>
-  <p>This function can be used to set a stat to a string for the given user ID. You supply the user ID as returned by (for example) the function <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>, then the stat string to set (<b>if the stat string does not already exist then a new stat will be created and set to the given value</b>) and then the string to set the stat to. Note that the stat name must be alphanumeric only, with no symbols or spaces, but the string value you are setting can have spaces and special characters.</p>
-  <p>When setting the stat string, any previous string will be overridden, therefore it is up to you to determine if the stat string should be updated or not by comparing to the current stat string with the new one before setting it.</p>
-  <p>The function will will return -1 if there was an error or the user ID is invalid, or any other value if the function was successfully called.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction peut être utilisée pour définir un statut à une chaîne pour l'ID utilisateur donné. Vous fournissez l'ID utilisateur tel que retourné par (par exemple) la fonction <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>puis la chaîne de statut à définir<b>(si la chaîne de statut n'existe pas déjà, un nouveau statut sera créé et défini à la valeur donnée</b>) et enfin la chaîne à laquelle définir le statut. Notez que le nom de la statue doit être uniquement alphanumérique, sans symboles ni espaces, mais que la valeur de la chaîne que vous définissez peut comporter des espaces et des caractères spéciaux.</p>
+  <p>Lors de la définition de la chaîne de statut, toute chaîne précédente sera remplacée. Il vous appartient donc de déterminer si la chaîne de statut doit être mise à jour ou non en comparant la chaîne de statut actuelle avec la nouvelle avant de la définir.</p>
+  <p>La fonction renverra -1 s'il y a eu une erreur ou si l'ID utilisateur est invalide, ou toute autre valeur si la fonction a été appelée avec succès.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">xboxlive_stats_set_stat_string(user_id, stat, value);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>user_id</td>
-        <td><span data-keyref="Type_ID_Xbox_User">Xbox User ID</span></td>
-        <td>The user ID pointer to set the stat for</td>
+        <td><span class="notranslate">user_id</span></td>
+        <td><span data-keyref="Type_ID_Xbox_User">ID utilisateur Xbox</span></td>
+        <td><span class="notranslate">The user ID pointer to set the stat for</span></td>
       </tr>
       <tr>
-        <td>stat</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The statistic to set (a string)</td>
+        <td><span class="notranslate">stat</span></td>
+        <td><span data-keyref="Type_String">Chaîne de caractères</span></td>
+        <td><span class="notranslate">The statistic to set (a string)</span></td>
       </tr>
       <tr>
-        <td>value</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The value to set the stat to (a string)</td>
+        <td><span class="notranslate">value</span></td>
+        <td><span data-keyref="Type_String">Chaîne de caractères</span></td>
+        <td><span class="notranslate">The value to set the stat to (a string)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">xboxlive_stats_set_stat_string(p_user_id, &quot;LevelName&quot;, global.LevelName);</p>
-  <p>The above code sets the stat &quot;LevelName&quot; to the string stored in the given global variable. </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus définit l'état &quot;LevelName&quot; à la chaîne stockée dans la variable globale donnée. </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a href="xboxlive_stats_delete_stat.htm">xboxlive_stats_delete_stat</a></div>
+        <div style="float:left">Retour : <a href="Stats_And_Leaderboards.htm">Stats et classements</a></div>
+        <div style="float:right">Suivant : <a href="xboxlive_stats_delete_stat.htm"><span class="notranslate">xboxlive_stats_delete_stat</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_set_stat_string

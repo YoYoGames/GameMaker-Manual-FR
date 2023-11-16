@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Animated Tiles</title>
+  <title>Carreaux animés</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing how the tile set editor animated tiles works" />
   <meta name="rh-index-keywords" content="Tile Sets - Animated Tiles" />
@@ -14,40 +14,39 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Animated Tiles</h1>
-  <p>Tiles are generally considered to be static cells within the game room, however with <span data-keyref="GameMaker Name">GameMaker</span> it is possible to animate them, just as you would a sprite. Why not just use sprites, you ask? Well, sprites have a certain processing overhead due
-    to them being associated with a bounding box and the way in which they are rendered, but tiles have a much lower processing overhead and so are faster to render. This does come at a price however, in that with tile set animations you are limited to
-    creating animations that must be a power of two in length - ie: of 2, 4, 8, 16, etc... frames - and they must obviously be created within the tile grid, <em>and </em>they must all animate at the same speed (on a per-tile set basis). However, even
-    with these limitations, animated tiles are a powerful feature that can be used to add life and colour to otherwise static environments and backgrounds.</p>
-  <p>To create a tile animation you must first have a tile set that has the required tiles all within the one sprite image (but not as sprite frames, so a single large sprite frame with all the animation images within it), and then in the <a href="../Tile_Sets.htm">Tile Set Editor</a>    you click on the <strong>Tile Animation</strong> button to bring up the Animation Editor:</p>
-  <p><img alt="Tile Animation Window" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Animations.png" />The example image above is a single image with all animation frames contained within it, but it should be noted that the image could
-    also contain other non-animation tiles too, since you can use a single massive tile set and then &quot;cherry pick&quot; the parts of it that you want to create the animation from. For example, you could have a large landscape tile set with trees,
-    earth and water, and within the tile set have multiple tiles to be animated to make the water ripple.</p>
-  <p>To create a tile animation you first have to add an animation to the animation library by clicking the <strong>Add Animation </strong>button <img alt="Add Animation Icon" class="icon" src="../../assets/Images/Icons/Icon_AddArgument.png" />, which will
-    add an empty animation strip to the library and request that you select a number of frames to be used:</p>
-  <p><img alt="Add Animation" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_AnimationAdd.png" />You will then be presented with a view of each empty animation frame, with the initial frame highlighted for you:</p>
-  <p><img alt="An Empty Animation" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_EmptyAnim.png" />If you then go back to the tile set image on the left of the editor you can click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png"
-      width="21" /> on any tile to add it into the animation and the frame will advance to the next one. Clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> on successive tiles will fill up the
-    animation, which you can then preview by clicking on the &quot;play&quot; button beside the frames:</p>
-  <p><img alt="Add Animation Frames" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_AddFrames.gif" />Once you have done that your animation will become part of the animation library and when you enter the <a href="../Rooms.htm">Room Editor</a>    you can select it and place it within the room. Note that if you select any of the tiles from an animation to place in a room, that tile will animate from the selected tile onwards, so you can &quot;desynchronise&quot; an animation by placing separate
-    frames within the room and they will all animate. The only caveat to this is that the animation speed will always be the same, since it is defined for the whole tile set and not individual animations within the library.</p>
-  <p>A few things to note about tiles that are being used in animations:</p>
+  <h1>Carreaux animés</h1>
+  <p>Les tuiles sont généralement considérées comme des cellules statiques dans la salle de jeu, mais avec <span data-keyref="GameMaker Name">GameMaker</span>, il est possible de les animer, tout comme vous le feriez avec un <span class="notranslate">sprite</span>. Pourquoi ne pas utiliser simplement <span class="notranslate">sprites</span>? Eh bien, <span class="notranslate">sprites</span> a une certaine surcharge de traitement due au fait qu'il
+    de traitement en raison de leur association à une boîte englobante et de la manière dont elles sont rendues, alors que les tuiles ont un surcoût de traitement beaucoup plus faible et sont donc plus rapides à rendre. Cela a toutefois un prix, car avec les animations en tuiles, vous êtes limité à
+    créer des animations d'une longueur égale à une puissance de deux - c'est-à-dire de 2, 4, 8, 16, etc... images - et elles doivent évidemment être créées dans la grille de tuiles, <em>et </em>elles doivent toutes s'animer à la même vitesse (sur une base par ensemble de tuiles). Cependant, même
+    Cependant, même avec ces limitations, les tuiles animées sont une fonctionnalité puissante qui peut être utilisée pour ajouter de la vie et de la couleur à des environnements et des arrière-plans autrement statiques.</p>
+  <p>Pour créer une animation de tuiles, vous devez d'abord disposer d'un jeu de tuiles contenant toutes les tuiles requises dans une image <span class="notranslate">sprite</span> (mais pas sous forme de cadres <span class="notranslate">sprite</span>, donc un seul grand cadre <span class="notranslate">sprite</span> contenant toutes les images d'animation), puis dans l'<a href="../Tile_Sets.htm">éditeur de jeu de tuiles</a>, cliquez sur le bouton <strong>Animation de tuiles</strong> pour faire apparaître l'éditeur d'animation :</p>
+  <p><img>L'exemple d'image ci-dessus est une image unique contenant toutes les images d'animation, mais il convient de noter que l'image peut également contenir d'autres tuiles sans animation.
+    également contenir d'autres tuiles de non-animation, puisque vous pouvez utiliser un seul jeu de tuiles massif et ensuite &quot;choisir&quot; les parties de celui-ci dont vous voulez créer l'animation. Par exemple, vous pouvez avoir un grand ensemble de tuiles de paysage avec des arbres,
+    de la terre et de l'eau, et dans ce jeu de tuiles, plusieurs tuiles à animer pour faire onduler l'eau.</p>
+  <p>Pour créer une animation de tuile, vous devez d'abord ajouter une animation à la bibliothèque d'animations en cliquant sur le bouton <strong>Ajouter une animation </strong> <img>, ce qui va
+    ajoutera une bande d'animation vide à la bibliothèque et vous demandera de sélectionner un nombre d'images à utiliser :</p>
+  <p><img>Vous verrez alors une vue de chaque cadre d'animation vide, le cadre initial étant mis en évidence pour vous :</p>
+  <p><img>Si vous revenez ensuite à l'image du jeu de tuiles à gauche de l'éditeur, vous pouvez cliquer sur <img> sur n'importe quelle tuile pour l'ajouter à l'animation et la trame passera à la suivante. Si vous cliquez sur <img> sur des tuiles successives, l'animation sera remplie.
+    que vous pouvez alors prévisualiser en cliquant sur le bouton &quot;play&quot; à côté des images :</p>
+  <p><img>Une fois que vous aurez fait cela, votre animation fera partie de la bibliothèque d'animations et lorsque vous entrerez dans l'<a href="../Rooms.htm">éditeur de pièce</a>, vous pourrez la sélectionner et la placer dans la pièce. Notez que si vous sélectionnez l'une des tuiles d'une animation pour la placer dans une pièce, cette tuile s'animera à partir de la tuile sélectionnée, vous pouvez donc &quot;désynchroniser&quot; une animation en plaçant des cadres séparés dans la pièce et ils s'animeront tous.
+    dans la pièce et elles s'animeront toutes. Le seul inconvénient est que la vitesse de l'animation sera toujours la même, puisqu'elle est définie pour l'ensemble des tuiles et non pour les animations individuelles de la bibliothèque.</p>
+  <p>Il convient de noter quelques points concernant les dalles utilisées dans les animations :</p>
   <ul class="colour">
-    <li>If the tile has its own animation specified (so there is an animation where it is set as the first tile) then it will use that animation.</li>
-    <li>If the tile doesn&#39;t have its own animation but is used in only one other animation, then it will use that animation starting at the first position that tile is present in the animation.</li>
-    <li>If the tile doesn&#39;t have its own animation and is used in multiple other animations, then it will not animate at all. You will need to explicitly specify an animation with it as the first tile.</li>
+    <li>Si la tuile a sa propre animation spécifiée (il y a donc une animation où elle est définie comme la première tuile), elle utilisera cette animation.</li>
+    <li>Si la tuile n'a pas sa propre animation mais qu'elle est utilisée dans une seule autre animation, alors elle utilisera cette animation à partir de la première position de cette tuile dans l'animation.</li>
+    <li>Si la tuile n'a pas sa propre animation et est utilisée dans plusieurs autres animations, elle ne sera pas animée du tout. Vous devrez spécifier explicitement une animation avec cette tuile comme première tuile.</li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Tile_Sets.htm">Tile Sets</a></div>
-        <div style="float:right">Next: <a href="Auto_Tiles.htm">Auto Tiles</a></div>
+        <div style="float:left">Retour : <a href="../Tile_Sets.htm">Jeux de carreaux</a></div>
+        <div style="float:right">Suivant : <a href="Auto_Tiles.htm">Carreaux automobiles</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Animated Tiles

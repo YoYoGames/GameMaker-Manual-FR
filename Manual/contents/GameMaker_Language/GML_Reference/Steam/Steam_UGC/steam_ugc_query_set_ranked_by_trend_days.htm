@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_ugc_query_set_ranked_by_trend_days</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_ugc_query_set_ranked_by_trend_days" />
+  <meta name="rh-index-keywords" content="steam_ugc_query_set_ranked_by_trend_days" />
+  <meta name="search-keywords" content="steam_ugc_query_set_ranked_by_trend_days" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_ugc_query_set_ranked_by_trend_days</h1>
+  <p>Cette fonction peut être utilisée pour filtrer davantage toute requête UGC effectuée à l'aide de la constante <tt>ugc_query_RankedByTrend</tt>, notamment pour effectuer une recherche sur un certain nombre de jours. Le handle de la requête est la valeur renvoyée lorsque vous avez créé la requête (en utilisant, par exemple,
+    <a href="steam_ugc_create_query_user.htm"><tt>steam_ugc_create_query_user()</tt></a>) et le second argument est le nombre de jours sur lequel vous souhaitez que la requête soit exécutée. La fonction renvoie <tt>true</tt> si le filtre de la requête a été correctement défini,
+    ou <tt>faux</tt> dans le cas contraire.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">steam_ugc_query_set_ranked_by_trend_days(ugc_query_handle , days);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">ugc_query_handle</span></td>
+        <td>La poignée de requête à utiliser.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">days</span></td>
+        <td>Le nombre de jours à interroger.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var query_handle = steam_ugc_create_query_all(ugc_query_RankedByTrend, ugc_match_Items, 1);<br/> steam_ugc_query_set_ranked_by_trend_days(query_handle, 5);<br/> steam_ugc_query_set_return_long_description(query_handle, true);<br/> steam_ugc_query_set_allow_cached_response(query_handle,
+    true);<br/> query_ID = steam_ugc_send_query(query_handle);</p>
+  <p>Le code ci-dessus crée une demande de requête et stocke son identifiant dans une variable locale pour une utilisation future dans le reste des fonctions qui définissent plus précisément la demande de requête avant d'envoyer la requête.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">Suivant : <a href="steam_ugc_query_add_required_tag.htm"><span class="notranslate">steam_ugc_query_add_required_tag</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_query_set_ranked_by_trend_days
+-->
+  <!-- TAGS
+steam_ugc_query_set_ranked_by_trend_days
+-->
+</body>
+</html>

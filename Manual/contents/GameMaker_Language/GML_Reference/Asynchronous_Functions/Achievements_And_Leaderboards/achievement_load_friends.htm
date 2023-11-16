@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>réalisation_chargement_amis</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_load_friends" />
+  <meta name="rh-index-keywords" content="achievement_load_friends" />
+  <meta name="search-keywords" content="achievement_load_friends,achievement_friends_info" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>réalisation_chargement_amis</h1>
+  <p>Cette fonction enverra une requête au serveur pour obtenir des informations sur tous les amis des utilisateurs connectés et déclenchera un callback <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Événement social asynchrone</a> qui contient
+    le site <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> map remplie avec les paires clé/valeur pertinentes. La clé <i>id</i> de cette <tt>carte DS</tt> est utilisée pour identifier le callback correct (il peut y avoir plus d'une fonction de déclenchement pour un même événement).
+    (il peut y avoir plus d'une fonction de déclenchement pour un événement asynchrone donné), et sera associée à la <b>constante</b> <tt>achievement_friends_info</tt> ainsi qu'à un certain nombre d'autres paires clé/valeur pour chaque ami. Le contenu exact de la carte est
+    montré ci-dessous :</p>
+  <p class="note"><b>REMARQUE</b>: Cette fonction n'est disponible que pour <b>iOS</b>.</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - Pour cette fonction, il s'agit de <tt>achievement_friends_info</tt>.</li>
+    <li>&quot;<b>FriendN</b>&quot; - Le nom de l'ami, où &quot;N&quot; est une valeur entière correspondant à sa position dans la liste d'amis.</li>
+    <li>&quot;<b>FriendidN</b>&quot; - L'identifiant unique de l'ami, &quot;N&quot;.</li>
+  </ul>
+  <p> </p>
+  <h4><b>Syntaxe :</b></h4>
+  <p class="code">achievement_load_friends()</p>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Exemple étendu :</h4>
+  <p>Le code suivant serait probablement appelé après que le joueur se soit connecté à son compte de jeu à l'aide de la fonction <a href="achievement_login.htm"><tt>achievement_login()</tt></a> pour obtenir une liste de tous les amis de l'utilisateur :</p>
+  <p class="code">achievement_friends_info();</p>
+  <p>Ceci enverra une requête pour les informations sur les amis de l'utilisateur et générera un callback asynchrone avec la carte spéciale <tt>async_load</tt> DS contenant les données suivantes :</p>
+  <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br/> if ident == achievement_friends_info<br/>     {
+    <br/>     var numfriends = ds_map_find_value(async_load, &quot;numfriends&quot;);<br/>     global.numfriends = numfriends;<br/>     for(var i=0; i &lt; numfriends; i++;)<br/>         {
+    <br/>         global.friendname[i] = ds_map_find_value(async_load, &quot;Friend&quot; + string(i));<br/>         global.friendid[i] = ds_map_find_value(async_load, &quot;Friendid&quot; + string(i));<br/>         achievement_get_pic(global.friendid[i]);
+    <br/>         }
+    <br/>     }
+  </p>
+  <p>Le code ci-dessus vérifie la <tt>carte DS</tt> retournée dans l'<b>événement social asynchrone</b> et si son &quot;id&quot; correspond à la constante vérifiée, il boucle ensuite dans la carte en stockant toutes les différentes valeurs dans un certain nombre de tableaux et demande
+    une image pour chacune des entrées de la carte (cf. <a href="achievement_get_pic.htm"><tt>achievement_get_pic()</tt></a>).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Retour : <a href="Achievements_And_Leaderboards.htm">Réalisations et classements</a></div>
+        <div style="float:right">Suivant : <a href="achievement_load_leaderboard.htm"><span class="notranslate">achievement_load_leaderboard</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_load_friends
+achievement_friends_info
+-->
+  <!-- TAGS
+achievement_load_friends
+-->
+</body>
+</html>

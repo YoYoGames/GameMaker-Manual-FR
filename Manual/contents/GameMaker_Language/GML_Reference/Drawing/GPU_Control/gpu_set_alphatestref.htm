@@ -6,7 +6,7 @@
   <title>gpu_set_alphatestref</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_set_alphatestref" />
   <meta name="rh-index-keywords" content="gpu_set_alphatestref" />
@@ -15,46 +15,46 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_set_alphatestref</h1>
-  <p>This function will set the reference value for the alpha testing (when it has been enabled using the <a href="gpu_set_alphatestenable.htm"><span class="inline">gpu_set_alphatestenable()</span></a>). This is the &quot;cut-off&quot; threshold at which pixels with alpha will not be drawn.</p>
-  <p>Basically, if you have this value set to 0 and you have linear interpolation turned on (either in the Game Options or using <a href="gpu_set_texfilter.htm"><span class="inline">gpu_set_texfilter()</span></a>), you can still get visual errors at the edges of overlapping objects. This is because you can have <i>almost</i> completely transparent areas that block things drawn behind them, but if you set this reference value to, for example, 254 (i.e. one below maximum), this guarantees that only 100% opaque pixels are going to be drawn. You can also turn texture interpolation off, which would normally allow you to use the default values with no problems and no need to use this function at all, however a lot depends on the source artwork.</p>
-  <p class="note"><b>NOTE</b>: This is an advanced drawing feature, so if you are not sure whether you need it or not, or don&#39;t know exactly what it does, you are probably better off not using it as it can seriously corrupt how your game is drawn.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction permet de définir la valeur de référence pour le test alpha (lorsqu'il a été activé à l'aide de la touche <a href="gpu_set_alphatestenable.htm"><span class="inline">gpu_set_alphatestenable()</span></a>). Il s'agit du seuil de &quot;coupure&quot; à partir duquel les pixels avec alpha ne seront pas dessinés.</p>
+  <p>En fait, si cette valeur est égale à 0 et que l'interpolation linéaire est activée (soit dans les options du jeu, soit à l'aide de la commande <a href="gpu_set_texfilter.htm"><span class="inline">gpu_set_texfilter()</span></a>), vous pouvez toujours obtenir des erreurs visuelles sur les bords des objets qui se chevauchent. En effet, vous pouvez avoir des zones <i>presque</i> entièrement transparentes qui bloquent les objets dessinés derrière elles, mais si vous définissez cette valeur de référence à, par exemple, 254 (c'est-à-dire une valeur inférieure au maximum), cela garantit que seuls les pixels 100 % opaques seront dessinés. Vous pouvez également désactiver l'interpolation des textures, ce qui vous permet normalement d'utiliser les valeurs par défaut sans problème et sans avoir besoin d'utiliser cette fonction, mais cela dépend beaucoup de l'œuvre source.</p>
+  <p class="note"><b>REMARQUE</b>: Il s'agit d'une fonction de dessin avancée, donc si vous n'êtes pas sûr d'en avoir besoin ou si vous ne savez pas exactement ce qu'elle fait, il est préférable de ne pas l'utiliser car elle peut sérieusement corrompre la façon dont votre jeu est dessiné.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">gpu_set_alphatestref(val);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>val</td><td><span data-keyref="Type_Real"></span></td>
-        <td>Sets the reference value for alpha testing from 0 to 255 (default value is 0)</td>
+        <td><span class="notranslate">val</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">Sets the reference value for alpha testing from 0 to 255 (default value is 0)</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if !gpu_get_alphatestenable()<br />
     {<br />
         gpu_set_alphatestenable(true);<br />
         gpu_set_alphatestref(128);<br />
     }</p>
-  <p>The above code will check to see if alpha testing is enabled and if not it will switch on alpha testing and set the test threshold to 128 (only pixels with an alpha over 0.5 will be drawn).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifie si le test d'alpha est activé et, si ce n'est pas le cas, il active le test d'alpha et fixe le seuil de test à 128 (seuls les pixels dont l'alpha est supérieur à 0,5 seront dessinés).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_set_texfilter.htm">gpu_set_texfilter</a></div>
+        <div style="float:left">Retour : <a href="GPU_Control.htm">Contrôle du GPU</a></div>
+        <div style="float:right">Suivant : <a href="gpu_set_texfilter.htm"><span class="notranslate">gpu_set_texfilter</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_alphatestref

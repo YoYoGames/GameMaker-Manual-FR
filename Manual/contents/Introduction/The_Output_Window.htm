@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Output Window</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>La fenêtre de sortie</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Debugging Projects In GameMaker" />
   <meta name="rh-index-keywords" content="Output Window,Search Results,Breakpoints" />
@@ -14,79 +14,89 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">The Output Window</span></h1>
+  <h1>La fenêtre de sortie</h1>
   <p><img alt="The Output Dock" class="center" src="../assets/Images/Introduction/Output_General.png" /></p>
-  <p>When you open a project in <span data-keyref="GameMaker Name">GameMaker</span> for the first time, you will be presented with the Output Window<strong> </strong>docked at the bottom of the screen. This docked window contains various tabs that show the different output information for your project, depending on certain circumstances. The dock can be closed by clicking the button at the bottom of the <a class="glossterm" data-glossterm="IDE" href="#">IDE</a>, and you can click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and drag any tab in the docked window to another dock to change its position, or you can click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on the dock contents bar and drag it into the workspace to create a stand-alone window:</p>
-  <p><img alt="Docking / Undocking The Output Window" class="center" src="../assets/Images/Introduction/Output_Window.gif" />You can also click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and drag a docked output into another one to create a split view output window, as shown in the example below where the two error outputs have been placed within the same tab (you can slow click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on a tab to change its name too):</p>
-  <p><img alt="Split Output Window" class="center" src="../assets/Images/Introduction/Output_SplitWindow.gif" />You can recover the default state of the IDE at any time by selecting <em>Reset Layout</em> from <a data-xref="{title}" href="../IDE_Navigation/Menus/The_Layouts_Menu.htm">The Layouts Menu</a> and you can re-open any closed tab from <a data-xref="{title}" href="../IDE_Navigation/Menus/The_Windows_Menu.htm">The Windows Menu</a>. You can also change the way the contents of each of the output window are displayed by editing the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/General/Output_Windows.htm">Output Window Preferences</a>.</p>
-  <p>The default docked tabs are explained below:</p>
-  <p id="output"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down" href="#">Output</a></p>
+  <p>Lorsque vous ouvrez un projet dans <span data-keyref="GameMaker Name">GameMaker</span> pour la première fois, la <strong>fenêtre de sortie </strong>est affichée en bas de l'écran. Cette fenêtre contient plusieurs onglets qui affichent les différentes informations de sortie de votre projet, en fonction de certaines circonstances. La station d'accueil peut être fermée en cliquant sur le bouton situé en bas de l'<a class="glossterm" data-glossterm="IDE" href="#">IDE</a>. Vous pouvez cliquer sur <img> et faire glisser n'importe quel onglet de la fenêtre ancrée vers une autre station d'accueil pour modifier sa position, ou vous pouvez cliquer sur <img> dans la barre de contenu de la station d'accueil et la faire glisser dans l'espace de travail pour créer une fenêtre autonome :</p>
+  <p><img>Vous pouvez également cliquer sur <img> et faire glisser une sortie ancrée dans une autre pour créer une fenêtre de sortie à vue partagée, comme le montre l'exemple ci-dessous où les deux sorties d'erreur ont été placées dans le même onglet (vous pouvez cliquer lentement sur <img> sur un onglet pour changer son nom également) :</p>
+  <p><img>Vous pouvez retrouver l'état par défaut du site <span class="notranslate">IDE</span> à tout moment en sélectionnant <em>Réinitialiser la mise en page</em> dans la <a href="../IDE_Navigation/Menus/The_Layouts_Menu.htm">fenêtre Mise en page</a> et vous pouvez rouvrir tout onglet fermé à partir du <a href="../IDE_Navigation/Menus/The_Windows_Menu.htm">menu Fenêtre</a>. Vous pouvez également modifier le mode d'affichage du contenu de chacune des fenêtres de sortie en modifiant les préférences des fenêtres de sortie.</p>
+  <p>Les onglets ancrés par défaut sont expliqués ci-dessous :</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down" href="#">Sortie</a></p>
   <div class="droptext" data-targetname="drop_down">
-    <p class="dropspot"><img alt="The Output Window" class="center" src="../assets/Images/Introduction/Output_Output.png" />The general <strong>Output </strong>window is where all compiler output is shown, as well as any messages that you may have added to your game using the <span class="inline3_func"><a data-xref="{title}" href="../GameMaker_Language/GML_Reference/Debugging/show_debug_message.htm">show_debug_message</a></span> function. Most of the initial information shown is simply debug information on how the game is being built and as such can generally be ignored. However if you have an issue building your project for a target platform it can prove helpful in finding the cause as well as provide information for Support should you contact them.</p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> You can change the quantity of information shown here from the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/General_Preferences.htm">Compiling</a> section of the <a href="../Setting_Up_And_Version_Information/IDE_Preferences.htm">Preferences</a>.</p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> The <strong>Log</strong> window of <a data-xref="{title}" href="../GameMaker_Language/GML_Reference/Debugging/The_Debug_Overlay.htm">The Debug Overlay</a> also shows this output.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img>La fenêtre de <strong>sortie </strong>générale affiche toutes les données de sortie du compilateur, ainsi que les messages que vous avez ajoutés à votre jeu à l'aide de la commande
+      la fonction <a href="../GameMaker_Language/GML_Reference/Debugging/show_debug_message.htm"><span class="inline">show_debug_message()</span></a> de votre jeu. La plupart des informations initiales affichées sont des informations de débogage sur la façon dont le jeu est construit et peuvent être ignorées.
+      en tant que telles peuvent généralement être ignorées. Cependant, si vous rencontrez un problème lors de la construction de votre projet pour une plate-forme cible, elles peuvent s'avérer utiles pour trouver la cause et fournir des informations au support technique si vous le contactez. Notez que vous pouvez modifier la
+      quantité d'informations affichées ici dans la section <a href="../Setting_Up_And_Version_Information/IDE_Preferences/General_Preferences.htm">Compilation</a> des <a href="../Setting_Up_And_Version_Information/IDE_Preferences.htm">Préférences</a>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down1" href="#">Search Results</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down1" href="#">Résultats de la recherche</a></p>
   <div class="droptext" data-targetname="drop_down1">
-    <p class="dropspot"><img alt="Search Results" class="center" src="../assets/Images/Introduction/Output_Search.png" />You can open the <strong>Search And Replace Window</strong> using the keyboard shortcut  <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> +  <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> + &quot; <strong>F</strong>&quot;, or go to the <a href="../IDE_Navigation/Menus/The_Edit_Menu.htm">Edit Menu</a>. Once you have entered your search terms, the results will be shown in this window with the format:</p>
+    <p class="dropspot"><img>Vous pouvez ouvrir la <strong>fenêtre de recherche et de remplacement</strong> en utilisant le raccourci clavier <img> / <img> + <img> + &quot; <strong>F</strong>&quot;, ou en allant dans le <a href="../IDE_Navigation/Menus/The_Edit_Menu.htm">menu Edition</a>. Une fois que vous avez saisi vos termes de recherche, les résultats s'affichent dans cette fenêtre au format :</p>
     <p class="code">[object] - [event] - [Line Number]: [search string]</p>
-    <p class="dropspot">If the search term is found in a script then it will simply be:</p>
+    <p class="dropspot">Si le terme recherché se trouve dans un script, il sera tout simplement :</p>
     <p class="code">[script] - [Line Number]: [search string]</p>
-    <p class="dropspot">You can then double-click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on any of the returned entries to open the given asset at the correct position for editing.</p>
-    <p class="dropspot">This window will also show results for Feather&#39;s <a href="../The_Asset_Editors/Code_Editor_Properties/Feather_Features.htm#h1">&quot;Quick Fixes&quot;</a> functionality.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Vous pouvez ensuite double-cliquer sur <img> sur l'une des entrées retournées pour ouvrir l'actif donné à la position correcte pour l'édition.</p>
+    <p class="dropspot">Cette fenêtre affichera également les résultats de la fonctionnalité &quot;<a data-xref="{text}" href="../The_Asset_Editors/Code_Editor_Properties/Feather_Features.htm#h">Rechercher toutes les références</a>&quot; de Plume.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down2" href="#">Source Control</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down2" href="#">Contrôle des sources</a></p>
   <div class="droptext" data-targetname="drop_down2">
-    <p class="dropspot"><img alt="Source Control Output" class="center" src="../assets/Images/Introduction/Output_SourceControl.png" />This window will show all the output for your <a class="glossterm" data-glossterm="SCM" href="#">SCM</a> plugin. See the <a data-xref="{title}" href="../IDE_Tools/Source_Control.htm">Source Control</a> page to find out more about setting up.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img>Cette fenêtre affichera tous les résultats de votre plugin <a class="glossterm" data-glossterm="SCM" href="#">SCM</a>. Vous pouvez trouver plus d'informations sur
+      la configuration de Source Control <a href="../IDE_Tools/Source_Control.htm">ici</a>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down3" href="#">Breakpoints</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down3" href="#">Points d'arrêt</a></p>
   <div class="droptext" data-targetname="drop_down3">
-    <p class="dropspot"><img alt="Breakpoints Output" class="center" src="../assets/Images/Introduction/Output_Breakpoints.png" />Breakpoints are places in your game code or GML Visual where you have instructed <span data-keyref="GameMaker Name">GameMaker</span> to pause the running of the project while in <a href="Debugging.htm">Debug Mode</a>. You can add a breakpoint anywhere in the game loop using the key &quot; <strong>F9</strong>&quot;, and when you do it will appear in this output tab. You can enable and disable them (without removing them) by clicking on the checkbox to the left and if you use the right mouse button <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> on one then you get a small menu that permits you to remove the breakpoint or open the <span data-keyref="GML_Code">GML Code</span>/<span data-keyref="GML_Visual">GML Visual</span> window where the breakpoint is located.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img>Les points d'arrêt sont des endroits de votre code de jeu ou de <span class="notranslate">GML</span> Visual où vous avez demandé à <span data-keyref="GameMaker Name">GameMaker</span> de mettre en pause l'exécution du projet pendant qu'il est en
+     <a href="Debugging.htm">mode débogage</a>. Vous pouvez ajouter un point d'arrêt n'importe où dans la boucle du jeu en utilisant la touche &quot; <strong>F9</strong>&quot;, et lorsque vous le faites, il apparaîtra dans cet onglet de sortie. Vous pouvez les activer et les désactiver (sans les supprimer)
+      en cliquant sur la case à cocher à gauche et si vous utilisez le bouton droit de la souris <img> sur l'un d'entre eux, vous obtenez un petit menu qui vous permet de supprimer le point d'arrêt ou d'ouvrir la fenêtre du code/GML Visual
+      où se trouve le point d'arrêt.
+    </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down4" href="#">Syntax Errors</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down4" href="#">Erreurs de syntaxe</a></p>
   <div class="droptext" data-targetname="drop_down4">
-    <p class="dropspot"><img alt="Syntax Errors Output" class="center" src="../assets/Images/Introduction/Output_SyntaxErrors.png" />Syntax errors are those errors in your code that the <span data-keyref="GameMaker Name">GameMaker</span> <a class="glossterm" data-glossterm="syntax" href="#">syntax</a> checker has picked up. There are many reasons why you might get a syntax error - like having a &quot;;&quot; in your code when a &quot;:&quot; is expected - and these should be fixed before trying to test or compile your game. Each syntax error entry in the output window can be double-clicked using the left mouse button <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> to open a window at the position flagged so it can be resolved.</p>
-    <p class="dropspot">Syntax errors will update as you write your code (there will be a short pause between typing something and any errors appearing in this window to prevent errors being reported for unfinished code), and will follow the format:</p>
+    <p class="dropspot"><img>Les erreurs de syntaxe sont les erreurs dans votre code que le vérificateur de <a class="glossterm" data-glossterm="syntaxe" href="#">syntaxe</a> de <span data-keyref="GameMaker Name">GameMaker</span> 
+      a détecté dans votre code. Il existe de nombreuses raisons pour lesquelles vous pouvez obtenir une erreur de syntaxe - comme avoir un &quot; ;&quot; dans votre code alors qu'un &quot; :&quot; est attendu - et celles-ci doivent être corrigées avant d'essayer de tester ou de compiler votre jeu. Chaque entrée d'erreur de syntaxe dans
+      la fenêtre de sortie peut être double-cliquée à l'aide du bouton gauche de la souris <img> pour ouvrir une fenêtre à la position indiquée afin de la résoudre.</p>
+    <p class="dropspot">Les erreurs de syntaxe seront mises à jour au fur et à mesure que vous écrirez votre code (il y aura une courte pause entre le moment où vous tapez quelque chose et celui où les erreurs apparaissent dans cette fenêtre, afin d'éviter que des erreurs soient signalées pour un code inachevé), et suivront le format suivant :</p>
     <p class="code">[object] - [event] - [Line Number] - [Position In Line]: [error string]</p>
-    <p class="dropspot">Or if the error is in a script, it will be:</p>
+    <p class="dropspot">Ou si l'erreur est dans un script, elle le sera :</p>
     <p class="code">[script] - [Line Number] - [Position in line]: [error string]</p>
-    <p class="dropspot">Note that syntax errors will usually prevent the game from being compiled, however there are errors that will be flagged that won&#39;t prevent compiling, but that should, nonetheless, be resolved. The errors in question are:</p>
+    <p class="dropspot">Notez que les erreurs de syntaxe empêchent généralement la compilation du jeu, mais il existe des erreurs qui seront signalées et qui n'empêcheront pas la compilation, mais qui doivent néanmoins être résolues. Les erreurs en question sont :</p>
     <ul class="colour">
-      <li class="dropspot">for declared variables that aren&#39;t used anywhere</li>
-      <li class="dropspot">for variables used somewhere that haven&#39;t been declared yet</li>
+      <li class="dropspot">pour les variables déclarées qui ne sont utilisées nulle part</li>
+      <li class="dropspot">pour les variables utilisées quelque part qui n'ont pas encore été déclarées</li>
     </ul>
-    <p class="dropspot">In general either of these would suggest a <a class="glossterm" data-glossterm="typo" href="#">typo</a> in a variable name, or some other kind of easy-to-make error - and so they are flagged for you to revise - but it can also be intentional, as you may have declared the variable for future use, but not got around to actually using it yet. This is why these errors will still permit your game to compile. For a full list of possible syntax error messages, please see <a href="../Additional_Information/Errors/Syntax_Errors.htm">here</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">En général, l'un ou l'autre de ces cas suggère une <a class="glossterm" data-glossterm="faute de frappe" href="#">faute de frappe</a> dans le nom d'une variable, ou un autre type d'erreur facile à commettre - et ils sont donc signalés pour que vous les révisiez.
+      Mais cela peut aussi être intentionnel, car vous avez peut-être déclaré la variable pour un usage futur, mais vous n'avez pas encore eu le temps de l'utiliser. C'est pourquoi ces erreurs permettront quand même à votre jeu de compiler. Pour une liste complète des messages d'erreur de syntaxe possibles, veuillez consulter <a href="../Additional_Information/Errors/Syntax_Errors.htm">cette page</a>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down5" href="#">Compile Errors</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down5" href="#">Erreurs de compilation</a></p>
   <div class="droptext" data-targetname="drop_down5">
-    <p class="dropspot"><img alt="Compile Error Output" class="center" src="../assets/Images/Introduction/Output_CompileErrors.png" />A Compiler Error happens when your game encounters some type of error that the syntax checker may not have been able to detect, or when an error is related to how you have set up the compile options. When this happens, your game will give you a compiler error and stop running. Any compiler errors will be shown in the General Output window too, but they will also be listed here separately (since they can get &quot;lost&quot; in the rest of the general output).</p>
-    <p class="dropspot">The compiler error messages will all follow the same format:</p>
+    <p class="dropspot"><img>Une erreur de compilation se produit lorsque votre jeu rencontre un type d'erreur que le vérificateur de syntaxe n'a pas pu détecter, ou lorsqu'une erreur est liée à la façon dont vous avez configuré les options de compilation. Dans ce cas, le jeu affiche une erreur de compilation et cesse de fonctionner. Toutes les erreurs de compilation seront également affichées dans la fenêtre General Output, mais elles seront également listées ici séparément (car elles peuvent être &quot;perdues&quot; dans le reste de la sortie générale).</p>
+    <p class="dropspot">Les messages d'erreur du compilateur suivront tous le même format :</p>
     <p class="code">[object] - [event] - [Line Number]: [error string]</p>
-    <p class="dropspot">If the error is found in a script then it will simply be:</p>
+    <p class="dropspot">Si l'erreur se trouve dans un script, ce sera simplement :</p>
     <p class="code">[script] - [Line Number]: [error string]</p>
-    <p class="dropspot">You can then double-click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on any of the compiler error entries to open the given asset at the position flagged as giving the error. For a full list of possible error messages, please see <a href="../Additional_Information/Errors/Compiler_Errors.htm">here</a>.</p>
+    <p class="dropspot">Vous pouvez ensuite double-cliquer sur <img> sur l'une des entrées d'erreur du compilateur pour ouvrir le poste donné à la position signalée comme donnant lieu à l'erreur. Pour une liste complète des messages d'erreur possibles, veuillez consulter <a href="../Additional_Information/Errors/Compiler_Errors.htm">ici</a>.</p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down6" href="#">Feather Messages</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down6" href="#">Messages de plumes</a></p>
   <div class="droptext" data-targetname="drop_down6">
-    <p class="dropspot"><img src="../assets/Images/Scripting_Reference/Additional_Information/Output_Feather_Searchable_Sortable.png" /></p>
-    <p class="dropspot">The Feather Messages window shows you all errors, warnings and suggestions reported by <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a>. You can double-click any item in the list to navigate to its corresponding code window.</p>
-    <p class="dropspot">See <a data-xref="{text}" href="../Additional_Information/Errors/Syntax_Errors.htm#h">Feather Messages (Feather enabled)</a> for more info.</p>
+    <p class="dropspot"><img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /></p>
+    <p class="dropspot">La fenêtre Messages de Feather vous montre toutes les erreurs, avertissements et suggestions signalés par <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a>. Vous pouvez double-cliquer sur n'importe quel élément de la liste pour naviguer vers sa fenêtre de code correspondante.</p>
+    <p class="dropspot">Voir <a data-xref="{text}" href="../Additional_Information/Errors/Syntax_Errors.htm#h">Messages de la Plume (Plume activée)</a> pour plus d'informations.</p>
   </div>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Introduction_To_GameMaker_Studio_2.htm">Introduction To <span data-keyref="GameMaker Name">GameMaker</span></a></div>
-        <div style="float:right">Next: <a href="The_Marketplace.htm">The Marketplace</a></div>
+        <div style="float:left">Retour : <a href="Introduction_To_GameMaker_Studio_2.htm">Introduction à <span data-keyref="GameMaker Name">GameMaker</span></a></div>
+        <div style="float:right">Suivant : <a href="The_Marketplace.htm">Le marché</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Compiler Error Output

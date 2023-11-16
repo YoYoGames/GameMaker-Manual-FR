@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>surface_exists</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>surface_existante</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for surface_exists" />
   <meta name="rh-index-keywords" content="surface_exists" />
@@ -15,30 +15,28 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1 id="h">surface_exists</h1>
-  <p>This function is essential when working with surfaces due to their volatile nature. Surfaces are always held in texture memory which means that they can be destroyed from one moment to the next (for example, when a screensaver starts on windows, or when minimised on an Android device), so you should always check that a surface exists before doing anything with it (this includes drawing it to the screen). The example code below shows a typical use of this command in the draw event of an instance to check for a surface and re-create it if it has been removed (note that the surface will have been originally created in the create event of the object).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>surface_existante</h1>
+  <p>Cette fonction est essentielle lorsque vous travaillez avec des surfaces en raison de leur nature volatile. Les surfaces sont toujours conservées dans la mémoire de texture, ce qui signifie qu'elles peuvent être détruites d'un moment à l'autre (par exemple, lorsqu'un économiseur d'écran démarre sur Windows ou lorsqu'il est réduit sur un périphérique <span class="notranslate">Android</span> ). Vous devez donc toujours vérifier qu'une surface existe avant de faire quoi que ce soit avec elle (y compris la dessiner à l'écran). L'exemple de code ci-dessous montre une utilisation typique de cette commande dans l'événement draw d'une instance pour vérifier l'existence d'une surface et la recréer si elle a été supprimée (notez que la surface aura été initialement créée dans l'événement create de l'objet).</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">surface_exists(surface_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
-      </tr>
+     </tr>
       <tr>
-        <td>surface_id</td>
-        <td><span data-keyref="Type_ID_Surface"></span></td>
-        <td>The ID of the surface to check.</td>
-      </tr>
+        <td><span class="notranslate">surface_id</span></td><td><span data-keyref="Type_ID_Surface"></span></td>
+        <td><span class="notranslate">The ID of the surface to check.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if !surface_exists(surf)<br />
     {<br />
         surf = surface_create(1024, 1024);<br />
@@ -50,18 +48,18 @@
             draw_surface(surf,0,0);<br />
         }<br />
     }</p>
-  <p>The above code will check to see if a surface indexed in the variable &quot;surf&quot; exists, and if it does not, it will re-create it. If it does exist, it then checks to see which view is currently being drawn and if it is view[1] it draws the surface.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus va vérifier si une surface indexée dans la variable &quot;surf&quot; existe, et si ce n'est pas le cas, il va la recréer. Si elle existe, il vérifie alors quelle vue est actuellement dessinée et si c'est la vue [1], il dessine la surface.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Surfaces.htm">Surfaces</a></div>
-        <div style="float:right">Next: <a href="surface_create.htm">surface_create</a></div>
+        <div style="float:left">Retour : <a href="Surfaces.htm">Surfaces</a></div>
+        <div style="float:right">Suivant : <a href="surface_create.htm"><span class="notranslate">surface_create</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 surface_exists

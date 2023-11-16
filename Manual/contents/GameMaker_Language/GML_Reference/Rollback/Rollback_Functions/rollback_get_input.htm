@@ -7,7 +7,7 @@
   <title>rollback_get_input</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Reference page for rollback_get_input" />
@@ -17,12 +17,12 @@
 </head>
 <body>
   <h1>rollback_get_input</h1>
-  <p>This function returns a struct containing the input values for a player. It takes an optional argument specifying the ID of the player for which inputs will be returned.</p>
-  <p>When used in a player instance that was created by <a href="rollback_define_input.htm"><span class="inline">rollback_define_player()</span></a>, you do not need to specify a player ID, so you can call this function without any arguments.</p>
-  <p>When used in any other instances, or player instances that were created manually, you must specify a player ID.</p>
-  <p>For information on what inputs are returned and how they can be changed, see <a data-xref="{title}" href="../Defining_Inputs.htm">Defining Inputs</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction renvoie un <span class="notranslate">struct</span> contenant les valeurs d'entrée pour un joueur. Elle prend un argument facultatif spécifiant l'ID du joueur pour lequel les entrées seront retournées.</p>
+  <p>Lorsqu'elle est utilisée dans une instance de joueur qui a été créée par <a href="rollback_define_input.htm"><span class="inline">rollback_define_player()</span></a>vous n'avez pas besoin de spécifier l'ID du lecteur, vous pouvez donc appeler cette fonction sans aucun argument.</p>
+  <p>Lorsqu'il est utilisé dans d'autres instances, ou dans des instances de joueur créées manuellement, vous devez spécifier un ID de joueur.</p>
+  <p>Pour plus d'informations sur les entrées qui sont renvoyées et sur la façon dont elles peuvent être modifiées, voir <a data-xref="{title}" href="../Defining_Inputs.htm">Définition des entrées</a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">rollback_get_input(player_id);</p>
   <table>
     <colgroup>
@@ -32,22 +32,22 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>player_id</td>
+        <td><span class="notranslate">player_id</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td><span class="optional">OPTIONAL</span> The ID of the player for which inputs will be returned.</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> L'ID du lecteur pour lequel les entrées seront retournées.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Struct"><a href="../../../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var _input = rollback_get_input();<br />
     <br />
     if (_input.left) x -= 2;<br />
@@ -55,18 +55,18 @@
     if (_input.up) y -= 2;<br />
     if (_input.down) y += 2;
   </p>
-  <p>The code above gets the input struct in a player instance that was automatically created by the Rollback system. Based on the returned values, it moves the instance by 2 pixels in each direction.</p>
-  <p>For an extended example, see <a data-xref="{title}" href="../Creating_Multiplayer.htm">Creating a Multiplayer Game</a>.</p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus récupère l'entrée <span class="notranslate">struct</span> dans une instance de joueur qui a été automatiquement créée par le système Rollback. Sur la base des valeurs renvoyées, il déplace l'instance de 2 pixels dans chaque direction.</p>
+  <p>Pour un exemple détaillé, voir <a data-xref="{title}" href="../Creating_Multiplayer.htm">Création d'un jeu multi-joueurs</a>.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Functions.htm">Rollback Functions</a></div>
-        <div>Next: <a data-xref="{title}" href="rollback_sync_on_frame.htm">rollback_sync_on_frame</a><a href="rollback_sync_on_frame.htm"></a></div>
+        <div>Retour : <a data-xref="{title}" href="Rollback_Functions.htm">Fonctions de retour en arrière</a></div>
+        <div>Suivant : <a data-xref="{title}" href="rollback_sync_on_frame.htm">rollback_sync_on_frame</a><a href="rollback_sync_on_frame.htm"></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_get_input

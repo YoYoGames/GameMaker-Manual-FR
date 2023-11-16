@@ -6,7 +6,7 @@
   <title>gpu_set_alphatestenable</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_set_alphatestenable" />
   <meta name="rh-index-keywords" content="gpu_set_alphatestenable" />
@@ -15,46 +15,46 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_set_alphatestenable</h1>
-  <p>This function will enable or disable alpha testing for your game (by default this is disabled). By switching alpha testing on you can then use the companion function <a href="gpu_set_alphatestref.htm"><span class="inline">gpu_set_alphatestref()</span></a> to set the &quot;cut-off&quot; value at which all alpha values will be set to 0. The image below shows the difference that can be seen when alpha testing is switched on or off:</p>
+  <p>Cette fonction permet d'activer ou de désactiver le test alpha pour votre jeu (par défaut, il est désactivé). En activant le test d'alpha, vous pouvez alors utiliser la fonction complémentaire <a href="gpu_set_alphatestref.htm"><span class="inline">gpu_set_alphatestref()</span></a> pour définir la valeur de &quot;coupure&quot; à laquelle toutes les valeurs alpha seront mises à 0. L'image ci-dessous montre la différence que l'on peut observer lorsque le test d'alpha est activé ou désactivé :</p>
   <p><img alt="Alpha test example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/alpha_test_on_off.png" /></p>
-  <p class="note"><b>NOTE</b>: This function may negatively affect performance on iOS and Android devices.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p class="note"><b>REMARQUE</b>: Cette fonction peut avoir un effet négatif sur les performances des appareils <span class="notranslate">iOS</span> et Android.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">gpu_set_alphatestenable(enable);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>enable</td><td><span data-keyref="Type_Bool"></span></td>
-        <td>Enable or disable alpha testing (<span class="inline">true</span> / <span class="inline">false</span>)</td>
+        <td><span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">Enable or disable alpha testing (<span class="inline">true</span> / <span class="inline">false</span>)</td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if !gpu_get_alphatestenable()<br />
     {<br />
         gpu_set_alphatestenable(true);<br />
         gpu_set_alphatestref(128);<br />
     }</p>
-  <p>The above code will check to see if alpha testing is enabled and if not it will switch on alpha testing and set the test threshold to 128 (only pixels with an alpha over 0.5 will be drawn).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifie si le test d'alpha est activé et, si ce n'est pas le cas, il active le test d'alpha et fixe le seuil de test à 128 (seuls les pixels dont l'alpha est supérieur à 0,5 seront dessinés).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_set_alphatestref.htm">gpu_set_alphatestref</a></div>
+        <div style="float:left">Retour : <a href="GPU_Control.htm">Contrôle du GPU</a></div>
+        <div style="float:right">Suivant : <a href="gpu_set_alphatestref.htm"><span class="notranslate">gpu_set_alphatestref</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_alphatestenable

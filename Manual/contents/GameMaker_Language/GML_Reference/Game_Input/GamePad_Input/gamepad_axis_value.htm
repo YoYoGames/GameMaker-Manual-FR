@@ -6,7 +6,7 @@
   <title>gamepad_axis_value</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for gamepad_axis_value" />
   <meta name="rh-index-keywords" content="gamepad_axis_value" />
@@ -16,51 +16,51 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gamepad_axis_value</h1>
-  <p>You can use this function to get the value of the different axes from a given gamepad slot. You supply the gamepad slot index to check, along with either an axis index constant (as listed <a href="Gamepad_Input.htm">here</a>), or an integer value between <span class="inline">0</span> and <span class="inline"><a href="gamepad_axis_count.htm">gamepad_axis_count()</a></span><span class="inline">-1</span>. The returned value will be between <span class="inline">-1</span> and <span class="inline">1</span> for each of the available horizontal and vertical axes.</p>
-  <p>Note that the returned value is normalised to take into consideration the value set for the axis deadzone (using the function <span class="inline"><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone()</a></span>), and so will always be between -1 and 0, and 0 and 1. For example, setting the deadzone to 0.2 will mean that pushing the stick right will only start returning a value from 0 - 1 when the <em>raw</em> axis value is over 0.2 - so for example, when the raw value is 0.2, the return value will be 0, when the raw value is at 0.5, the return value will be 0.375, or if the raw value is 0.9, then the return value would be 0.875.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Vous pouvez utiliser cette fonction pour obtenir la valeur des différents axes d'un slot de gamepad donné. Vous fournissez l'index du slot de la manette à vérifier, ainsi qu'une constante d'index d'axe (telle que listée <a href="Gamepad_Input.htm">ici</a>), ou une valeur entière entre <span class="inline">0</span> et <span class="inline"><a href="gamepad_axis_count.htm">gamepad_axis_count()</a></span><span class="inline">-1</span>. La valeur renvoyée sera comprise entre <span class="inline">-1</span> et <span class="inline">1</span> pour chacun des axes horizontaux et verticaux disponibles.</p>
+  <p>Notez que la valeur retournée est normalisée pour prendre en compte la valeur définie pour la zone morte de l'axe (en utilisant la fonction <span class="inline"><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone()</a></span>), et sera donc toujours comprise entre -1 et 0, et 0 et 1. Par exemple, en définissant la zone morte à 0.2 signifie que le fait de pousser le manche vers la droite ne commencera à renvoyer une valeur comprise entre 0 et 1 que lorsque la valeur <em>brute</em> de l'axe sera supérieure à 0,2. Par exemple, lorsque la valeur brute est de 0,2, la valeur renvoyée sera 0, lorsque la valeur brute est de 0,5, la valeur renvoyée sera 0,375, ou si la valeur brute est de 0,9, la valeur renvoyée sera 0,875.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">gamepad_axis_value(device, axisIndex);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>device</td>
+        <td><span class="notranslate">device</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>Which gamepad device &quot;slot&quot; to check.</td>
+        <td><span class="notranslate">Which gamepad device &quot;slot&quot; to check.</span></td>
       </tr>
       <tr>
-        <td>axisIndex</td>
-        <td><span data-keyref="Type_Constant_Gamepad_Axis">Gamepad Axis Constant</span></td>
-        <td>The axis index to check (see the <a href="Gamepad_Input.htm">constants list</a>).</td>
+        <td><span class="notranslate">axisIndex</span></td>
+        <td><span data-keyref="Type_Constant_Gamepad_Axis">Constante d'axe de la manette de jeu</span></td>
+        <td><span class="notranslate">The axis index to check (see the <a href="Gamepad_Input.htm">constants list</a>).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var haxis = gamepad_axis_value(0, gp_axislh);<br />
     var vaxis = gamepad_axis_value(0, gp_axislv);<br />
     direction = point_direction(0, 0, haxis, vaxis);<br />
     speed = point_distance(0 ,0, haxis, vaxis) * 5;</p>
-  <p>The above code sets the speed and direction of the instance based on the returned values of the left analog controller of the gamepad plugged into device &quot;slot&quot; 0.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus définit la vitesse et la direction de l'instance en fonction des valeurs renvoyées par le contrôleur analogique gauche de la manette de jeu branchée sur le périphérique &quot;slot&quot; 0.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
-        <div style="float:right">Next: <a href="gamepad_button_check.htm"> gamepad_button_check </a></div>
+        <div style="float:left">Retour : <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div>
+        <div style="float:right">Suivant : <a href="gamepad_button_check.htm"> gamepad_button_check </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_axis_value

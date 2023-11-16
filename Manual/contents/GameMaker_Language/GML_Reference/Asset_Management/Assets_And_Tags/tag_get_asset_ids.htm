@@ -6,7 +6,7 @@
   <title>tag_get_asset_ids</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function tag_get_asset_ids" />
   <meta name="rh-index-keywords" content="tag_get_asset_ids,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
@@ -15,52 +15,108 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">tag_get_asset_ids</span></h1>
-  <p>This function gets all the assets of a given type that have the given tags assigned to them.</p>
-  <p>You supply either a single tag (as a string) or an array, where each item in the array is a tag (as a string), as well as the type of asset to check. The type of asset should be one of the following constants:</p>
-  <div data-conref="../../../../assets/snippets/Asset_Type_Constants.hts"> </div>
-  <p>The function will return an array, where each item in the array will be a single asset index value. If there are no assets of the type that have the given tag(s), an empty array will be returned.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">tag_get_asset_ids</span>(tags, asset_type);</p>
+  <h1>tag_get_asset_ids</h1>
+  <p>Avec cette fonction, vous pouvez obtenir tous les actifs d'un type donné qui ont les balises données qui leur sont assignées. Vous fournissez soit une seule balise (sous forme de chaîne) soit un tableau, où chaque élément du tableau est une balise (sous forme de chaîne), ainsi que le type de bien à vérifier. Le type de bien doit être l'une des constantes suivantes :</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">asset_object</span></td>
+        <td>Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Objects.htm">objet</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">asset_sprite</span></td>
+        <td>Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Sprites.htm">sprite</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">asset_sound</span></td>
+        <td>Le prénom fait référence à un <a href="../../../../The_Asset_Editors/Sounds.htm">son</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">asset_room</span></td>
+        <td>Le prénom fait référence à un <a href="../../../../The_Asset_Editors/Rooms.htm"><span class="notranslate">room</span></a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">asset_tiles</span></td>
+        <td>Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Tile_Sets.htm">ensemble de carreaux</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">asset_path</span></td>
+        <td>Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Paths.htm">chemin</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">asset_script</span></td>
+        <td>Le prénom fait référence à un <a href="../../../../The_Asset_Editors/Scripts.htm"><span class="notranslate">script</span></a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">asset_font</span></td>
+        <td>Le nom donné fait référence à une <a href="../../../../The_Asset_Editors/Fonts.htm">police de caractères</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">asset_timeline</span></td>
+        <td>Le prénom fait référence à une <a href="../../../../The_Asset_Editors/Timelines.htm">ligne de temps</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">asset_shader</span></td>
+        <td>Le nom donné fait référence à un <a href="../../../../The_Asset_Editors/Shaders.htm">shader</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">asset_animationcurve</span></td>
+        <td>Le nom donné fait référence à une <a href="../../../../The_Asset_Editors/Animation_Curves.htm">courbe d'animation</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">asset_sequence</span></td>
+        <td>Le nom donné fait référence à une <a href="../../../../The_Asset_Editors/Sequences.htm">Séquence</a>.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>La fonction renvoie un tableau, où chaque élément du tableau est une valeur d'index de bien unique. S'il n'y a pas de biens du type ayant la ou les étiquettes données, un tableau vide sera renvoyé.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
+  <p class="code">tag_get_asset_ids(tags, asset_type);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>tags</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> or <span data-keyref="Type_Array"><a href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span> of Strings</td>
-        <td>A single asset tag string or an array with various asset tags.</td>
+        <td><span class="notranslate">tags</span></td>
+        <td><span data-keyref="Type_String">Chaîne</span> ou <span data-keyref="Type_Array">tableau</span> de chaînes de caractères</td>
+        <td><span class="notranslate">A single asset tag string or an array with various asset tags.</span></td>
       </tr>
       <tr>
-        <td>asset_type</td>
-        <td><span data-keyref="Type_Constant_Asset_Type"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Assets_And_Tags/asset_get_type.htm" target="_blank">Asset Type Constant</a></span></td>
-        <td>An asset type constant (listed above)</td>
+        <td><span class="notranslate">asset_type</span></td>
+        <td><span data-keyref="Type_Constant_Asset_Type">Type d'actif Constant</span></td>
+        <td><span class="notranslate">An asset type constant (listed above)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Array"><a href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var _paths = <span data-field="title" data-format="default">tag_get_asset_ids</span>(&quot;enemy&quot;, asset_path);<br />
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Array">Array</span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p class="code">var _paths = tag_get_asset_ids(&quot;enemy&quot;, asset_path);<br />
     var _num = irandom(array_length(_paths) - 1);<br />
     path_start(_paths[_num], 1, path_action_reverse, false);</p>
-  <p>The above code uses the tag &quot;enemy&quot; to find all the path assets with that tag, before choosing one at random and assigning it to the instance running the code.</p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus utilise la balise &quot;enemy&quot; pour trouver toutes les ressources de chemin avec cette balise, avant d'en choisir une au hasard et de l'attribuer à l'instance qui exécute le code.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Assets_And_Tags.htm">Assets And Tags</a></div>
-        <div style="float:right">Next: <a href="tag_get_assets.htm">tag_get_assets</a></div>
+        <div style="float:left">Retour : <a href="Assets_And_Tags.htm">Actifs et étiquettes</a></div>
+        <div style="float:right">Suivant : <a href="tag_get_assets.htm"><span class="notranslate">tag_get_assets</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 tag_get_asset_ids

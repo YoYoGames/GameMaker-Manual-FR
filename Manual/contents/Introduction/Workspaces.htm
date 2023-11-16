@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Workspaces</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Espaces de travail</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="GameMaker Workspaces Overview" />
   <meta name="rh-index-keywords" content="Workspaces" />
@@ -14,129 +14,119 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Workspaces</span></h1>
-  <p>After logging in and starting a new project, <span data-keyref="GameMaker Name">GameMaker</span> will take you to the initial <strong>workspace </strong>with some basic windows docked to the <a class="glossterm" data-glossterm="IDE" href="#">IDE</a>. In general, the workspace is simply an area where you can organise the different assets for your game while you are working:</p>
+  <h1>Espaces de travail</h1>
+  <p>Après s'être connecté et avoir démarré un nouveau projet, <span data-keyref="GameMaker Name">GameMaker</span> vous amènera à l'<strong>espace de travail </strong>initial avec quelques fenêtres de base ancrées dans l'<a class="glossterm" data-glossterm="IDE" href="#">IDE</a>. En général, l'espace de travail est simplement une zone où vous pouvez organiser les différentes ressources de votre jeu pendant que vous travaillez :</p>
   <p><img alt="Workspaces" class="center" src="../assets/Images/Introduction/QS_Workspace.png" /></p>
-  <p>As you can see, the initial workspace is on a tab at the top of the screen (and you can rename it by double clicking the tab), but you can create further workspaces for the project by clicking the <img alt="Add New Workspace" class="icon" height="32" src="../assets/Images/Introduction/Icon_Add.png" style="max-width: 20px; max-height: 20px;" width="32" /> to the side, giving you multiple possible workspaces for any single project. For example, maybe you are working on interactions between the player and several enemy objects, so you&#39;d have the player on its own workspace and the enemy objects in another, and perhaps another workspace only to show the scripts that both use.</p>
-  <p>Another important feature of workspaces is that you can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on the tab and - still holding the mouse button <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> down - drag it off of the main IDE window into its own individual window, making it very easy to organise things if you are using - for example - multiple displays. You also merge these secondary workspace windows back into the main one by dragging the tab back onto the first window. Note that although you appear to have two instances of the IDE running when you do this, they are <strong>both for the same project</strong> and you cannot have one project in one and another in the other unless you specifically open two instances of <span data-keyref="GameMaker Name">GameMaker</span>.</p>
-  <p>When you first start <span data-keyref="GameMaker Name">GameMaker</span>, your workspace will already be populated by a couple of windows which will be &quot;<strong>docked</strong>&quot; to the IDE. These are explained briefly below:</p>
+  <p>Comme vous pouvez le voir, l'espace de travail initial se trouve sur un onglet en haut de l'écran (et vous pouvez le renommer en double-cliquant sur l'onglet), mais vous pouvez créer d'autres espaces de travail pour le projet en cliquant sur le site <img> sur le côté, ce qui vous donne plusieurs espaces de travail possibles pour un même projet. Par exemple, si vous travaillez sur les interactions entre le joueur et plusieurs objets ennemis, vous aurez le joueur dans son propre espace de travail et les objets ennemis dans un autre, et peut-être un autre espace de travail uniquement pour montrer les scripts que les deux utilisent.</p>
+  <p>Une autre caractéristique importante des espaces de travail est que vous pouvez cliquer sur <img> sur l'onglet et - tout en maintenant le bouton de la souris <img> enfoncé - le faire glisser hors de la fenêtre principale <span class="notranslate">IDE</span> dans sa propre fenêtre individuelle, ce qui facilite grandement l'organisation si vous utilisez - par exemple - plusieurs écrans. Vous pouvez également fusionner ces fenêtres d'espace de travail secondaires dans la fenêtre principale en faisant glisser l'onglet vers la première fenêtre. Notez que même si vous semblez avoir deux instances du site <span class="notranslate">IDE</span> en cours d'exécution, elles sont <strong>toutes deux destinées au même projet</strong> et vous ne pouvez pas avoir un projet dans l'une et un autre dans l'autre, à moins d'ouvrir spécifiquement deux instances de <span data-keyref="GameMaker Name">GameMaker</span>.</p>
+  <p>Lorsque vous lancez <span data-keyref="GameMaker Name">GameMaker</span> pour la première fois, votre espace de travail est déjà peuplé de quelques fenêtres qui sont &quot; <strong>ancrées&quot;</strong> sur le site <span class="notranslate">IDE</span>. Elles sont expliquées brièvement ci-dessous :</p>
   <ul class="colour">
-    <li><strong>Output </strong>- You can also see in the image above <a data-xref="{title}" href="The_Output_Window.htm">The Output Window</a>. There are a number of sub tabs in this window related to <strong>Source Control</strong>, <strong>Searching</strong>, and <strong>Debugging</strong>, with the initial tab being for the console/compiler output, which shows you what is happening when you are compiling a game for testing or when creating a final package for distribution. This will also show any debug messages that you choose to send from your project at runtime, and can be configured to show different quantities of information from the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/General/Output_Windows.htm">General Preferences</a>. If you close the output window and wish to recover it you can use <a data-xref="{title}" href="../IDE_Navigation/Menus/The_Windows_Menu.htm">The Windows Menu</a>.</li>
-    <li><strong>Assets </strong>- On the right of the screen you can find <a data-xref="{title}" href="The_Asset_Browser.htm">The Asset Browser</a>. Here is where you can create and edit the different assets that your game uses, as well as generate and change configurations, game options, room order and other things. Assets are created by right-clicking <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> on an asset folder (or anywhere in the main Asset Browser view) and selecting <strong>Create</strong>, or by clicking the plus icon at the top and selecting an asset from the <strong>Create </strong><strong>Asset</strong> window (note that with this method you can create multiple assets of the same type at a time, by setting the value at the bottom):<br />
-      <br />
-      <img alt="Resources Menu" class="center" src="../assets/Images/Introduction/QS_ResourcesMenu.png" />Selecting any one of these options will create a new, empty resource of the given type for you, with the name field highlighted so you can immediately give it a name. Note that while the Asset Browser is docked to the IDE by default, you can take it out and into its own window by clicking <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on the &quot;Asset Browser&quot; text at the top and dragging. You can re-dock it again at any time by dragging it to the sides or bottom of the IDE. If you close the Asset Browser window and wish to recover it you can use <a data-xref="{title}" href="../IDE_Navigation/Menus/The_Windows_Menu.htm">The Windows Menu</a>. For more information on the available assets please see the section on <a href="../The_Asset_Editors/The_Asset_Editors.htm">Editors</a>.
+    <li><strong>Sortie - </strong> Vous pouvez également voir dans l'image ci-dessus la <a href="The_Output_Window.htm">fenêtre de sortie</a>. Il y a un certain nombre de sous-onglets dans cette fenêtre liés au <strong>contrôle de la source</strong>, à la <strong>recherche</strong> et au <strong>débogage</strong>, avec l'onglet initial pour la sortie de la console/compilateur, qui vous montre ce qui se passe lorsque vous compilez un jeu pour le tester ou lorsque vous créez un paquet final pour la distribution. Cet onglet affiche également tous les messages de débogage que vous choisissez d'envoyer depuis votre projet à l'adresse <span class="notranslate">runtime</span>. Il peut être configuré pour afficher différentes quantités d'informations dans les <a href="../Setting_Up_And_Version_Information/IDE_Preferences/General/Output_Windows.htm">préférences générales</a>. Si vous fermez la fenêtre de sortie et souhaitez la récupérer, vous pouvez utiliser le <a href="../IDE_Navigation/Menus/The_Windows_Menu.htm">menu Windows</a>.</li>
+    <li><strong>Actifs - </strong> Sur la droite de l'écran, vous pouvez trouver l'icône . <a href="The_Asset_Browser.htm"> <strong>Navigateur d'actifs</strong></a>. C'est ici que vous pouvez créer et modifier les différentes ressources utilisées par votre jeu, ainsi que générer et modifier les configurations, les options de jeu, l'ordre des pièces et d'autres éléments. Les actifs sont créés en cliquant avec le bouton droit de la souris <img> sur un dossier d'actifs (ou n'importe où dans la vue principale du navigateur d'actifs) et en sélectionnant <strong>Créer</strong>, ou en cliquant sur l'icône plus en haut et en sélectionnant un actif dans la fenêtre <strong>Créer un </strong><strong>actif</strong> (notez qu'avec cette méthode, vous pouvez créer plusieurs actifs du même type à la fois, en définissant la valeur en bas) :<br>
+      <br>
+      <img>En sélectionnant l'une de ces options, vous créerez une nouvelle ressource vide du type donné, avec le champ du nom en surbrillance pour que vous puissiez immédiatement lui donner un nom. Notez que si le navigateur d'actifs est ancré par défaut sur le site <span class="notranslate">IDE</span>, vous pouvez le sortir et le placer dans sa propre fenêtre en cliquant sur <img> sur le texte &quot;Navigateur d'actifs&quot; en haut et en le faisant glisser. Vous pouvez l'ancrer à nouveau à tout moment en le faisant glisser sur les côtés ou en bas de la fenêtre <span class="notranslate">IDE</span>. Si vous fermez la fenêtre de l'Asset Browser et souhaitez la récupérer, vous pouvez utiliser le <a href="../IDE_Navigation/Menus/The_Windows_Menu.htm">menu Windows</a>. Pour plus d'informations sur les ressources disponibles, veuillez consulter la section sur les <a href="../The_Asset_Editors/The_Asset_Editors.htm">éditeurs</a>.
     </li>
-    <li><strong>Inspector</strong>: On the left of the screen you can find <a data-xref="{title}" href="../IDE_Tools/The_Inspector.htm">The Inspector</a>. This shows the properties of the element(s) that you have selected in the IDE.<br />
-      You can change these properties here as well.</li>
   </ul>
-  <p>There are also a set of preferences related to how certain things will be displayed in the workspace so you can customise how it looks as well as certain aspects of the general workflow. You can find these preferences from the following page:</p>
+  <p>Il existe également un ensemble de préférences liées à l'affichage de certains éléments dans l'espace de travail, ce qui vous permet de personnaliser son apparence ainsi que certains aspects du flux de travail général. Vous pouvez trouver ces préférences à la page suivante :</p>
   <ul class="colour">
-    <li><a href="../Setting_Up_And_Version_Information/IDE_Preferences/General/Workspace.htm">Workspace Preferences</a></li>
+    <li><a href="../Setting_Up_And_Version_Information/IDE_Preferences/General/Workspace.htm">Préférences de l'espace de travail</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <h1>Workspace RMB Menu</h1>
-  <p>While within any workspace you can call up the Right Button Menu at any time by right-clicking <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> anywhere, which will open the following menu:</p>
-  <p><img alt="RMB Menu Options" class="center" src="../assets/Images/Introduction/QS_RMB_Options.png" /></p>
-  <p>Clicking <strong>Assets </strong>will open up a list of all the assets in <a data-xref="{title}" href="The_Asset_Browser.htm">The Asset Browser</a> that you can create, and selecting any one of them will create that asset resource for you, as well as focus the workspace on the editor window for that resource. If you click the <strong>Windows </strong>option, you will be shown a list of all the currently open windows within the workspace and you can select any of them to have the workspace focus on that window. Finally you have the <strong>Go To </strong>option which will open the following window:</p>
-  <p><img alt="Goto Window" class="center" src="../assets/Images/Introduction/QS_Goto.png" /></p>
-  <p>This window permits you to search though every asset, function, <strong>Game Option</strong> and <strong>Preference </strong>in your project for the search term you input. For example, typing &quot;icon&quot; as the search term will show all the items in your project that have &quot;icon&quot; somewhere in their name, e.g.: if a sprite is <span class="inline"> <span class="inline">spr_Icon_Play</span></span>, then it will show up here, as will the object &quot; <span class="inlinecode"> <span class="inline">obj_Iconoclast</span></span>&quot;, and you&#39;ll even see the Game Options for the different icons like &quot;<strong>Icon for hdpi</strong>&quot;. Clicking on any of the items shown in the filtered list will open it in the current workspace, or focus the workspace on it if it is already open.</p>
-  <p>Note that you can also use the keyboard shortcut <img alt="CTRL Key Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Key Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <strong>T</strong> to open the Go To window, and that the number of items listed is (by default) set to a maximum of 16. You can change this maximum limit along with other search options in the <strong>Go To</strong> section of the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/General/Go_To.htm">General Preferences</a>.</p>
-  <p>For more information on Workspace Navigation, please see the section on <a href="../IDE_Navigation/IDE_Input.htm">IDE Input and Navigation</a>.</p>
-  <p> </p>
-  <p> </p>
-  <h1>Docking</h1>
-  <p>We mentioned briefly above that you can dock many windows into the current workspace window and you can un-dock those that are already docked. If you click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on, for example, the Asset Browser tab at the top and drag it to the left of the current workspace, you will see that it becomes a free floating window.</p>
-  <p><img alt="Un-docking the asset browser" class="center" src="../assets/Images/Introduction/QS_UnDocking.gif" />This converse is true and if you drag certain windows to the sides of the workspace (or the bottom) then they will be docked, meaning that it essentially becomes part of the IDE window overlay and is no longer independent. When doing this, you drag the window to the area you want to dock to and it will be highlighted to show that you can dock the window there:</p>
-  <p><img alt="Docking The Asset Browser" class="center" src="../assets/Images/Introduction/QS_Docking.gif" />In this way you can create a personalised IDE experience that fits your workflow and way of doing things. It&#39;s worth noting that all docked windows can be hidden/unhidden individually by clicking the button to the side of the docked items (highlighted in the image at the top of this page), or you can hide/unhide all docked items using the quick-button  <img alt="Docking Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_Docking.png" width="24" /> at the top of the IDE, and note too that the IDE will remember docked windows between sessions.</p>
-  <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> Some windows will disappear from the dock when you change editors, like in the room editor. However when you return to the editor in question, they will be re-opened in the dock again.</p>
-  <p> </p>
-  <h1>Quick Buttons</h1>
-  <p>Below we list the quick buttons that are available by default with <span data-keyref="GameMaker Name">GameMaker</span>. These buttons can be found at the top of the IDE and represent many of the most common commands that you&#39;ll be using while working in <span data-keyref="GameMaker Name">GameMaker</span> to make your workflow smoother (note that most of these buttons have an equivalent <a href="../IDE_Navigation/Menus.htm">menu option</a> too):</p>
+  <p> </p>
+  <p> </p>
+  <h1>Menu RMB de l'espace de travail</h1>
+  <p>Dans n'importe quel espace de travail, vous pouvez appeler le menu du bouton droit à tout moment en cliquant avec le bouton droit de la souris à l'adresse <img>, ce qui ouvre le menu suivant :</p>
+  <p><img alt="Add New Workspace" class="icon" height="32" src="../assets/Images/Introduction/Icon_Add.png" style="max-width: 20px; max-height: 20px;" width="32" /></p>
+  <p>En cliquant sur <strong>Assets </strong>, vous ouvrirez une liste de tous les actifs que vous pouvez créer dans l'<a href="The_Asset_Browser.htm">Asset Browser</a>, et en sélectionnant l'un d'entre eux, vous créerez cette ressource d'actif pour vous, ainsi que l'espace de travail sur la fenêtre de l'éditeur pour cette ressource. Si vous cliquez sur l'option <strong>Windows </strong>, vous verrez une liste de toutes les fenêtres actuellement ouvertes dans l'espace de travail et vous pouvez sélectionner l'une d'entre elles pour que l'espace de travail se concentre sur cette fenêtre. Enfin, vous disposez de l'option <strong>Go To </strong>qui ouvrira la fenêtre suivante :</p>
+  <p><img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /></p>
+  <p>Cette fenêtre vous permet de rechercher le terme de recherche que vous avez entré dans chaque actif, fonction, <strong>option de jeu</strong> et <strong>préférence </strong>de votre projet. Par exemple, si vous tapez &quot;icône&quot; comme terme de recherche, vous obtiendrez tous les éléments de votre projet dont le nom contient le mot &quot;icône&quot;. Par exemple, si un <span class="notranslate">sprite</span> est <span class="inline"> <span class="inline">spr_Icon_Play</span>, il apparaîtra ici, tout comme l'objet &quot; <span class="inlinecode"> <span class="inline">obj_Iconoclast</span></span>&quot;, et vous verrez même les options de jeu pour les différentes icônes comme &quot;<strong>Icône pour hdpi</strong>&quot;. En cliquant sur l'un des éléments affichés dans la liste filtrée, vous l'ouvrirez dans l'espace de travail actuel, ou vous focaliserez l'espace de travail sur cet élément s'il est déjà ouvert.</p>
+  <p>Notez que vous pouvez également utiliser le raccourci clavier <img> / <img> + <strong>T</strong> pour ouvrir la fenêtre Aller à, et que le nombre d'éléments listés est (par défaut) fixé à un maximum de 16. Vous pouvez modifier cette limite maximale ainsi que d'autres options de recherche dans la section " <strong>Aller à"</strong> des <a href="../Setting_Up_And_Version_Information/IDE_Preferences/General/Go_To.htm">préférences générales</a>.</p>
+  <p>Pour plus d'informations sur la navigation dans l'espace de travail, veuillez consulter la section sur la <a href="../IDE_Navigation/IDE_Input.htm">saisie et la navigation dans l'IDE</a>.</p>
+  <p> </p>
+  <p> </p>
+  <h1>Accostage</h1>
+  <p>Nous avons brièvement mentionné ci-dessus que vous pouvez ancrer de nombreuses fenêtres dans la fenêtre de l'espace de travail actuel et que vous pouvez désancrer celles qui sont déjà ancrées. Si vous cliquez sur <img>, par exemple, sur l'onglet Asset Browser en haut et que vous le faites glisser vers la gauche de l'espace de travail actuel, vous verrez qu'il devient une fenêtre flottante libre.</p>
+  <p><img>L'inverse est vrai et si vous faites glisser certaines fenêtres vers les côtés de l'espace de travail (ou vers le bas), elles seront ancrées, ce qui signifie qu'elles font essentiellement partie du recouvrement de la fenêtre <span class="notranslate">IDE</span> et ne sont plus indépendantes. Pour ce faire, faites glisser la fenêtre vers la zone où vous voulez l'ancrer et elle sera mise en évidence pour montrer que vous pouvez l'y ancrer :</p>
+  <p><img>De cette façon, vous pouvez créer une expérience personnalisée sur <span class="notranslate">IDE</span> qui correspond à votre flux de travail et à votre façon de faire les choses. Il convient de noter que toutes les fenêtres ancrées peuvent être masquées/démasquées individuellement en cliquant sur le bouton situé sur le côté des éléments ancrés (mis en évidence dans l'image en haut de cette page), ou vous pouvez masquer/démasquer tous les éléments ancrés à l'aide du bouton rapide <img> en haut de la page <span class="notranslate">IDE</span>, et notez également que <span class="notranslate">IDE</span> se souviendra des fenêtres ancrées entre les sessions.</p>
+  <p class="note"><strong>NOTE</strong>: Certaines fenêtres disparaissent du dock lorsque vous changez d'éditeur, comme dans l'éditeur de pièce. Cependant, lorsque vous revenez à l'éditeur en question, elles seront à nouveau ouvertes dans le dock.</p>
+  <p> </p>
+  <h1>Boutons rapides</h1>
+  <p>Vous trouverez ci-dessous une liste des boutons rapides disponibles par défaut dans <span data-keyref="GameMaker Name">GameMaker</span>. Ces boutons se trouvent en haut de l'adresse <span class="notranslate">IDE</span> et représentent la plupart des commandes les plus courantes que vous utiliserez en travaillant dans <span data-keyref="GameMaker Name">GameMaker</span> pour faciliter votre travail (notez que la plupart de ces boutons ont également une <a href="../IDE_Navigation/Menus.htm">option de menu</a> équivalente) :</p>
   <table class="icons">
     <tbody>
       <tr>
-        <td class="icons"><img alt="Home Icon" class="icon" src="../assets/Images/Icons/Icon_Home.png" /></td>
-        <td class="text">Opens the Start Page in a new workspace</td>
+        <td class="icons"><img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /></td>
+        <td class="text">Ouvre la page de démarrage dans un nouvel espace de travail</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="New Project Icon" src="../assets/Images/Icons/Icon_NewProject.png" /></td>
-        <td class="text">Create a new project.</td>
+        <td class="icons"><img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /></td>
+        <td class="text">Créez un nouveau projet.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Open Project" src="../assets/Images/Icons/Icon_OpenProject.png" /></td>
-        <td class="text">Open a previously created project.</td>
+        <td class="icons"><img alt="Resources Menu" class="center" src="../assets/Images/Introduction/QS_ResourcesMenu.png" /></td>
+        <td class="text">Ouvrez un projet précédemment créé.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Save Project" src="../assets/Images/Icons/Icon_Save.png" /></td>
-        <td class="text">Save the current project. Note that by default <span data-keyref="GameMaker Name">GameMaker</span> will save your project automatically (depending on the <a href="../Setting_Up_And_Version_Information/IDE_Preferences.htm">Preferences</a> that you have set) and this button is simply so you can force a save at any time.</td>
+        <td class="icons"><img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /></td>
+        <td class="text">Enregistrer le projet en cours. Notez que par défaut, <span data-keyref="GameMaker Name">GameMaker</span> enregistre automatiquement votre projet (en fonction des <a href="../Setting_Up_And_Version_Information/IDE_Preferences.htm">préférences</a> que vous avez définies). Ce bouton vous permet simplement de forcer un enregistrement à tout moment.</td>
       </tr>
       <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Compile.png" /></td>
-        <td class="text">This will compile the current project and create an <a class="glossterm" data-glossterm="executable package" href="../IDE_Navigation/Menus/The_Build_Menu.htm#">executable package</a> (or packages) for the target platform. It will first open the file explorer so that you can select where you want to save the project and then compile the game. See the section on <a href="Compiling.htm">Compiling</a> for more information on setting up the compile targets.</td>
+        <td class="icons"><img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /></td>
+        <td class="text">En cliquant sur ce bouton, votre projet actuel sera testé avec le module de débogage. Utilisez-le pour tester et déboguer votre jeu. Vous trouverez plus d'informations sur le module de débogage dans la section consacrée au <a href="../IDE_Tools/The_Debugger.htm">débogueur</a>.</td>
       </tr>
       <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_CompileAndLaunch.png" /></td>
-        <td class="text">This will create an executable, just like the option above, and then it will launch that executable on the target platform.</td>
+        <td class="icons"><img alt="RMB Menu Options" class="center" src="../assets/Images/Introduction/QS_RMB_Options.png" /></td>
+        <td class="text">En cliquant sur ce bouton, votre projet sera testé sur la plateforme cible choisie.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Debug Project" src="../assets/Images/Icons/Icon_Debug.png" /></td>
-        <td class="text">Clicking this will test-run your current project along with the debug module. Use this to test and debug your game. You can find more about the debug module from the section on <a data-xref="{title}" href="../IDE_Tools/The_Debugger.htm">The Debugger</a>.</td>
+        <td class="icons"><img alt="Goto Window" class="center" src="../assets/Images/Introduction/QS_Goto.png" /></td>
+        <td class="text">Ce bouton peut être utilisé pour annuler la compilation de vos jeux vers le module cible, ou (sur certaines cibles uniquement) pour arrêter le jeu en cours d'exécution après sa compilation.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Test Play Game" src="../assets/Images/Icons/Icon_PlayGame.png" /></td>
-        <td class="text">Clicking this will test-run your project on the chosen target platform.</td>
-      </tr>
-      <tr>
-        <td class="icons"><img alt="Stop Game Test" src="../assets/Images/Icons/Icon_StopGame.png" /></td>
-        <td class="text">This button can be used to cancel the compilation of your games to the target module, or (on certain targets only) to stop the game while it is running after it has been compiled.</td>
-      </tr>
-      <tr>
-        <td class="icons"><img alt="Clean Compiler Cache Icon" src="../assets/Images/Icons/Icon_Clean.png" /></td>
-        <td class="text">Pressing this button will clear the current asset compiler cache. <span data-keyref="GameMaker Name">GameMaker</span> stores images, sounds, scripts, etc. between use in a cache so as to save time when testing your game as it will only re-compile those things that have been changed before testing. However, this cache may become corrupted or &quot;stale&quot; over time, or you may wish to do a full test with no caching being done previously, in which case you can clear the cache by pressing this button.
-          <div class="note"><span data-conref="../assets/snippets/Tag_important.hts"> </span> It is recommended that you always clear the cache before creating the executable for any target platform.</div>
+        <td class="icons"><img alt="CTRL Key Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /></td>
+        <td class="text">En appuyant sur ce bouton, vous effacerez le compilateur d'actifs actuel <span class="notranslate">cache</span>. <span data-keyref="GameMaker Name">GameMaker</span> stocke les images, les sons, les scripts etc... entre deux utilisations dans un <span class="notranslate">cache</span> afin de gagner du temps lors du test de votre jeu car il ne recompilera que les éléments qui ont été modifiés avant le test. Cependant, ce <span class="notranslate">cache</span> peut devenir corrompu ou &quot;périmé&quot; avec le temps, ou vous pouvez souhaiter faire un test complet sans qu'aucune mise en cache n'ait été faite auparavant, dans ce cas vous pouvez effacer le <span class="notranslate">cache</span> en appuyant sur ce bouton.
+         <div class="note"><b>IMPORTANT</b>: Il est recommandé de toujours effacer le site <span class="notranslate">cache</span> avant de créer l'exécutable pour toute plate-forme cible.</div>
         </td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Game Options" height="24" src="../assets/Images/Icons/Icon_GameOptions.png" width="24" /></td>
-        <td class="text">Clicking this will open up the <a href="../Settings/Game_Options.htm">Main Game Options Editor</a>. Note that this is only the main, general, options for the current project, but you may also have platform specific options being listed as a part of <a data-xref="{title}" href="The_Asset_Browser.htm">The Asset Browser</a>.</td>
+        <td class="icons"><img alt="CMD Key Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /></td>
+        <td class="text">En cliquant dessus, vous ouvrirez l'<a href="../Settings/Game_Options.htm">éditeur d'options principales du jeu</a>. Notez qu'il s'agit uniquement des options principales et générales du projet en cours, mais il se peut que des options spécifiques à la plate-forme soient listées dans le <a href="The_Asset_Browser.htm">navigateur d'actifs</a>.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Help Icon" height="24" src="../assets/Images/Icons/Icon_Help.png" width="24" /></td>
-        <td class="text">Click this to open the manual (or alternatively, press  <img alt="Icon F1" class="icon" height="20" src="../assets/Images/Icons/Icon_f1.png" width="55" />).</td>
+        <td class="icons"><img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /></td>
+        <td class="text">Cliquez sur ce bouton pour ouvrir le manuel (ou appuyez sur <img>).</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Zoom Out Icon" src="../assets/Images/Icons/Icon_ZoomOut.png" /></td>
-        <td class="text">This will zoom the focused workspace out to make everything smaller (you can also achieve this holding down <img alt="CTRL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> /  <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> and using the mouse wheel <img alt="MMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_MMB.png" width="21" />).</td>
+        <td class="icons"><img alt="Un-docking the asset browser" class="center" src="../assets/Images/Introduction/QS_UnDocking.gif" /></td>
+        <td class="text">Cette opération permet de dézoomer l'espace de travail ciblé afin de le rendre plus petit (vous pouvez également réaliser cette opération en maintenant la touche <img> / <img> enfoncée et en utilisant la molette de la souris <img>).</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Zoom Reset Icon" src="../assets/Images/Icons/Icon_ZoomReset.png" /></td>
-        <td class="text">This will reset the focused workspace to be 1:1 again.</td>
+        <td class="icons"><img alt="Docking The Asset Browser" class="center" src="../assets/Images/Introduction/QS_Docking.gif" /></td>
+        <td class="text">Cela réinitialisera l'espace de travail focalisé pour qu'il soit à nouveau 1:1.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Zoom In Icon" height="24" src="../assets/Images/Icons/Icon_ZoomIn.png" width="24" /></td>
-        <td class="text">This will zoom the focused workspace in to make everything larger (you can also achieve this holding down <img alt="CTRL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> /  <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> and using the mouse wheel <img alt="MMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_MMB.png" width="21" />).</td>
+        <td class="icons"><img alt="Docking Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_Docking.png" width="24" /></td>
+        <td class="text">Cette opération permet de zoomer sur l'espace de travail ciblé afin de l'agrandir (vous pouvez également réaliser cette opération en maintenant la touche <img> / <img> enfoncée et en utilisant la molette de la souris <img>).</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Open Close Docks Icon" src="../assets/Images/Icons/Icon_Docking.png" /></td>
-        <td class="text">This will toggle all the docked elements between hidden and unhidden.</td>
+        <td class="icons"><img alt="Home Icon" class="icon" src="../assets/Images/Icons/Icon_Home.png" /></td>
+        <td class="text">Cela fera basculer tous les éléments ancrés entre cachés et non cachés.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Laptop Mode" src="../assets/Images/Icons/Icon_LaptopMode.png" /></td>
-        <td class="text">This will toggle laptop mode on and off (This will only appear if you are currently using a laptop - see the section on <a data-xref="{title}" href="../IDE_Navigation/IDE_Input.htm">IDE Input And Navigation</a> for more details)</td>
+        <td class="icons"><img alt="New Project Icon" src="../assets/Images/Icons/Icon_NewProject.png" /></td>
+        <td class="text">Ceci activera et désactivera le mode ordinateur portable (Ceci n'apparaîtra que si vous utilisez un ordinateur portable - voir la section sur l'<a href="../IDE_Navigation/IDE_Input.htm">entrée IDE</a> pour plus de détails).</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Introduction_To_GameMaker_Studio_2.htm">Introduction To <span data-keyref="GameMaker Name">GameMaker</span></a></div>
-        <div style="float:right">Next: <a href="The_Asset_Browser.htm">The Asset Browser</a></div>
+        <div style="float:left">Retour : <a href="Introduction_To_GameMaker_Studio_2.htm">Introduction à <span data-keyref="GameMaker Name">GameMaker</span></a></div>
+        <div style="float:right">Suivant : <a href="The_Asset_Browser.htm">Le navigateur d'actifs</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Workspaces

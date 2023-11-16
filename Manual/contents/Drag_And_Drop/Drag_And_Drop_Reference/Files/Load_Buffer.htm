@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Load Buffer</title>
+  <title>Chargement de la mémoire tampon</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Load Buffer action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Load Buffer" />
@@ -14,45 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Load Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Load_Buffer.png" /> Load Buffer</h1>
-  <p>With this action you can load a buffer that was previously saved with the action <a href="Save_Buffer.htm">Save Buffer</a>. The action will create a new buffer, load the data file into it, and return the unique ID value to identify the buffer to the
-    variable. You supply the name of the file to load (as a string) and a variable to store the returned buffer ID in. Note that if you flag the variable as a temporary local variable, you need to make sure to delete the buffer this function creates before
-    the end of the action script or event, otherwise you will lose the reference to it and get a memory leak when the variable is discarded.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Load Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Load_Buffer.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Chargement de la mémoire tampon</h1>
+  <p>Avec cette action, vous pouvez charger un <span class="notranslate">buffer</span> qui a été précédemment enregistré avec l'action <a href="Save_Buffer.htm">Save Buffer</a>. L'action créera un nouveau <span class="notranslate">buffer</span>, chargera le fichier de données dans celui-ci, et renverra la valeur ID unique pour identifier le <span class="notranslate">buffer</span> à la variable
+    variable. Vous devez fournir le nom du fichier à charger (sous forme de chaîne de caractères) et une variable dans laquelle stocker l'ID retourné de <span class="notranslate">buffer</span>. Notez que si vous marquez la variable comme une variable locale temporaire, vous devez vous assurer de supprimer le <span class="notranslate">buffer</span> que cette fonction crée avant la
+    avant la fin du script d'action ou de l'événement, sinon vous perdrez la référence à cette variable et obtiendrez une fuite de mémoire lorsque la variable sera supprimée.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Load Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Load_Buffer.png" /></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Filename</td>
-        <td>The name (as a string) of the file to open</td>
+        <td><span class="notranslate">Filename</span></td>
+        <td>Le nom (sous forme de chaîne) du fichier à ouvrir.</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to hold the unique ID value for the buffer created on load</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>La variable cible qui contient la valeur d'identification unique pour le site <span class="notranslate">buffer</span> créé au chargement.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Load Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Load_Buffer.png" />The above action block code will create a variable to hold buffer data and then check to see if a
-    buffer save file has been made previously. If the file exists, then it is loaded into the buffer variable that we created, but if it doesn&#39;t exist, it is created, written to and then saved out ready for loading the next time.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus crée une variable pour contenir les données de <span class="notranslate">buffer</span> et vérifie ensuite si un fichier de sauvegarde a été effectué précédemment.
+    <span class="notranslate">buffer</span> fichier de sauvegarde a été créé précédemment. Si le fichier existe, il est chargé dans la variable <span class="notranslate">buffer</span> que nous avons créée, mais s'il n'existe pas, il est créé, écrit puis sauvegardé, prêt à être chargé la prochaine fois.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="File_Actions.htm">File Actions</a></div>
-        <div style="float:right">Next: <a href="Save_Buffer.htm">Save Buffer</a></div>
+        <div style="float:left">Retour : <a href="File_Actions.htm">Actions sur les fichiers</a></div>
+        <div style="float:right">Suivant : <a href="Save_Buffer.htm">Sauvegarder le tampon</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Load Buffer

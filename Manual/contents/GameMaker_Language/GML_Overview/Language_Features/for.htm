@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>for</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>pour</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the for function" />
   <meta name="rh-index-keywords" content="for" />
@@ -14,32 +14,32 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>for</h1>
-  <p>One of the most used ways to iterate over a <a class="glossterm" data-glossterm="statement" href="#">statement</a> (or statements) multiple times is to use a <span class="inline">for</span> loop, which has this form:</p>
+  <h1>pour</h1>
+  <p>L'un des moyens les plus utilisés pour itérer sur une ou plusieurs <a class="glossterm" data-glossterm="déclaration" href="#">déclarations</a> plusieurs fois est d'utiliser une boucle <span class="inline">for</span>, qui a la forme suivante :</p>
   <p class="code">for (&lt;assignment&gt;; &lt;expression&gt;; &lt;operation&gt;;)<br />
     {<br />
         &lt;statement&gt;;<br />
         &lt;statement&gt;;<br />
         ...<br />
     }</p>
-  <p>This works as follows - First the assignment is executed which assigns a value to a variable, then the <a class="glossterm" data-glossterm="expression" href="#">expression</a>  is evaluated and, if it is <span class="inline">true</span>, the statements in the curly brackets{} are executed executed. Next the operation is performed on the assigned variable and then the expression is evaluated again. This loop will continue until the expression is found to be <span class="inline">false</span>.</p>
-  <p>Now, this may sound complicated when written like that, but you should interpret it as:</p>
+  <p>Cela fonctionne de la manière suivante - Tout d'abord, l'affectation est exécutée, ce qui permet d'attribuer une valeur à une variable, puis l'<a class="glossterm" data-glossterm="expression" href="#">expression</a> est évaluée et, si elle vaut <span class="inline">true</span>, les instructions entre crochets{} sont exécutées. Ensuite, on effectue l'opération sur la variable assignée, puis on évalue à nouveau l'expression. Cette boucle se poursuit jusqu'à ce que l'expression se révèle être <span class="inline">false</span>.</p>
+  <p>Maintenant, cela peut sembler compliqué quand c'est écrit comme ça, mais vous devez l'interpréter comme suit :</p>
   <ol>
-    <li>The first assignment initializes the for-loop</li>
-    <li>The expression tests whether the loop should be ended</li>
-    <li>The statement is performed</li>
-    <li>The operation is performed</li>
-    <li>Go back to step 2 and perform the expression again and continue or exit the loop</li>
+    <li>La première affectation initialise la boucle for</li>
+    <li>L'expression teste si la boucle doit être terminée</li>
+    <li>La déclaration est effectuée</li>
+    <li>L'opération est effectuée</li>
+    <li>Retournez à l'étape 2 et réalisez à nouveau l'expression et continuez ou quittez la boucle.</li>
   </ol>
-  <p>This is extremely useful for doing repetitive tasks that would involve multiple lines of code in any other way, and is commonly used as a counter for evaluating arrays, drawing things, setting incremental values, etc... The following code example illustrates a typical use for this type of statement:</p>
+  <p>C'est extrêmement utile pour effectuer des tâches répétitives qui impliqueraient de multiples lignes de code d'une autre manière, et est couramment utilisé comme compteur pour évaluer des tableaux, dessiner des choses, définir des valeurs incrémentales, etc... L'exemple de code suivant illustre une utilisation typique de ce type d'instruction :</p>
   <p class="code">for (var i = 0; i &lt; 10; i += 1)<br />
     {<br />
         draw_text(32, 32 + (i * 32), string(i) + &quot;. &quot;+ string(scr[i]));<br />
     }</p>
-  <p>The above code initialises a <span class="inline">for</span> loop, starting at 0 and counting up to (and including) 9, and then uses the loop value of <span class="inline">i</span> to draw the values stored in an array down the screen. Note how the <span class="inline">for</span> loop variable <span class="inline">i</span> is used to not only loop through the array, but to draw a number as well as tell <span data-keyref="GameMaker Name">GameMaker</span> where to draw the values to in the room. This flexibility is one of the main reasons why <span class="inline">for</span> loops are so important in programming.</p>
-  <p><strong>When should you use a <span class="inline">for</span> loop?</strong> Anytime you need to perform a fixed number of iterations over one or more statements while keeping track of the <a class="glossterm" data-glossterm="iteration" href="#">iteration</a> that is currently being run and using that iteration value.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> You will see multiple examples when working with other people of the variables &quot;<span class="inline">i</span>&quot; and &quot;<span class="inline">j</span>&quot; being used for the loop counter variable. These are <b>not</b> obligatory variable names and you can use anything like &quot;<span class="inline">a</span>&quot; or &quot;<span class="inline">foo</span>&quot; or whatever. The use of &quot;<span class="inline">i</span>&quot; and &quot;<span class="inline">j</span>&quot; is simply a standard convention in programming.</p>
-  <p>It is worth noting that you can use the special <span class="inline"><a href="break.htm">break</a></span> and <span class="inline"><a href="continue.htm">continue</a></span> statements within a <span class="inline">for</span> loop too. Using <span class="inline">break</span> will immediately exit the loop and move on to any code that is in the event or function after the loop should have finished, e.g.:</p>
+  <p>Le code ci-dessus initialise une boucle <span class="inline">for</span>, commençant à 0 et comptant jusqu'à (et y compris) 9, puis utilise la valeur de boucle de <span class="inline">i</span> pour dessiner les valeurs stockées dans un tableau à l'écran. Notez comment la variable de boucle <span class="inline">for</span> <span class="inline">i</span> est utilisée non seulement pour boucler le tableau, mais aussi pour dessiner un nombre et indiquer à <span data-keyref="GameMaker Name">GameMaker</span> où dessiner les valeurs dans la pièce. Cette flexibilité est l'une des principales raisons pour lesquelles les boucles <span class="inline">for</span> sont si importantes en programmation.</p>
+  <p><strong>Quand faut-il utiliser une boucle <span class="inline">for</span>?</strong> Chaque fois que vous devez effectuer un nombre fixe d'itérations sur une ou plusieurs instructions tout en gardant la trace de l'<a class="glossterm" data-glossterm="itération" href="#">itération</a> en cours d'exécution et en utilisant cette valeur d'itération.</p>
+  <p class="note"><b>NOTE</b>: Vous verrez de nombreux exemples, lorsque vous travaillerez avec d'autres personnes, des variables &quot;<span class="inline">i</span>&quot; et &quot;<span class="inline">j</span>&quot; utilisées pour la variable du compteur de boucle. Ces noms de variables <b>ne sont pas</b> obligatoires et vous pouvez utiliser n'importe quoi comme &quot;<span class="inline">a</span>&quot; ou &quot;<span class="inline">foo</span>&quot; ou autre. L'utilisation de &quot;<span class="inline">i</span>&quot; et &quot;<span class="inline">j</span>&quot; est simplement une convention standard en programmation.</p>
+  <p>Il convient de noter que vous pouvez également utiliser les instructions spéciales <span class="inline"><a href="break.htm">break</a></span> et <span class="inline"><a href="continue.htm">continue</a></span> dans une boucle <span class="inline">for</span>. L'utilisation de <span class="inline">break</span> permet de sortir immédiatement de la boucle et de passer à tout code se trouvant dans l'événement ou la fonction après que la boucle ait dû se terminer, par exemple :</p>
   <p class="code">var _inst = noone;<br />
     for (var i = 0; i &lt; 10; i += 1)<br />
     {<br />
@@ -53,8 +53,8 @@
         }<br />
     }<br />
     target = _inst;</p>
-  <p>The above code loops through the 10 nearest instances of the given &quot;parent&quot; object, and if an instance is found it checks the instance object ID, and if it is an instance of <span class="inline">obj_Enemy_Melee</span> then the loop is ended using <span class="inline">break</span> and the ID value assigned to a variable (if no instance is found, then the keyword <span class="inline"><a href="../Instance_Keywords.htm">noone</a></span> will be added to the variable).</p>
-  <p>An example of using <span class="inline">continue</span> in a <span class="inline">for</span> loop would be:</p>
+  <p>Le code ci-dessus passe en boucle les 10 instances les plus proches de l'objet &quot;parent&quot; donné, et si une instance est trouvée, il vérifie l'ID de l'objet de l'instance, et s'il s'agit d'une instance de <span class="inline">obj_Enemy_Melee</span>, alors la boucle se termine en utilisant <span class="inline">break</span> et la valeur de l'ID est assignée à une variable (si aucune instance n'est trouvée, alors le mot clé <span class="inline"><a href="../Instance_Keywords.htm">noone</a></span> sera ajouté à la variable).</p>
+  <p>Voici un exemple d'utilisation de <span class="inline">continue</span> dans une boucle <span class="inline">for</span>:</p>
   <p class="code">var _val = 0;<br />
     for (var i = 0; i &lt; 10; i += 1)<br />
     {<br />
@@ -65,19 +65,19 @@
         _val += val_array[i];<br />
     }<br />
     draw_text(32, 32, &quot;Positive Values Total = &quot; + string(_val));</p>
-  <p>This code will check the value stored in each array position of a 10 length 1D <a href="../Arrays.htm">array</a>, and if any are less than or equal to 0 it will <span class="inline">continue</span> the loop, meaning that the current iteration will end, <span class="inline">i</span> will be incremented, and the next loop iteration will be started. If the value is greater than 0, then it is added to the local variable <span class="inline">_val</span>, and after the loop is finished the total value is drawn to the screen.</p>
-  <p>For more examples of loop keywords please see the sections on <a href="repeat.htm"><span class="inline">repeat</span></a>, <a href="while.htm"><span class="inline">while</span></a>, and <a href="do___until.htm"><span class="inline">do / until</span></a>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Ce code vérifie la valeur stockée dans chaque position du tableau d'un <a href="../Arrays.htm">tableau</a> 1D de 10 longueurs, et si l'une d'entre elles est inférieure ou égale à 0, la boucle se termine à l'adresse <span class="inline">continue</span>, ce qui signifie que l'itération en cours se termine, que <span class="inline">i</span> est incrémenté et que l'itération suivante de la boucle commence. Si la valeur est supérieure à 0, elle est ajoutée à la variable locale <span class="inline">_val</span>, et une fois la boucle terminée, la valeur totale est affichée à l'écran.</p>
+  <p>Pour plus d'exemples de mots-clés de boucle, veuillez consulter les sections sur <a href="repeat.htm"><span class="inline">repeat</span></a>, <a href="while.htm"><span class="inline">while</span></a>, et <a href="do___until.htm"><span class="inline">do / until</span></a>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="switch.htm">switch</a></div>
+        <div style="float:left">Retour : <a href="../Language_Features.htm">Caractéristiques de la langue</a></div>
+        <div style="float:right">Suivant : <a href="switch.htm"><span class="notranslate">switch</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 for

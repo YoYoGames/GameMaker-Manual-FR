@@ -1,184 +1,201 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Guide To Using Particles</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module">
-    //<![CDATA[
-    <
-    meta name = "rh-authors"
-    content = "Mark Alexander" / >
-      <
-      meta name = "topic-comment"
-    content = "Page that explains how to set up and use particles" / >
-      <
-      meta name = "rh-index-keywords"
-    content = "Guide To Using Particles" / >
-      <
-      meta name = "search-keywords"
-    content = "particles,particle guide,particle setup" / >
-    //]]>
-  </script>
-</head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Guide To Using Particles</span></h1>
-  <p>This guide is for those of you who want to understand how to use and create <strong>particles</strong> in GML. This page will cover both the <a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm"><span data-keyref="GML_Code">GML Code</span> functions</a> and <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Particle_Actions.htm"><span data-keyref="GML_Visual">GML Visual</span> actions</a> for particles, so if you&#39;ve never used particles before, we hope that this guide can get you started as they are very useful and quite fun to make.</p>
-  <div data-conref="../assets/snippets/Note_tip_use_particle_system_editor.hts"> </div>
-  <p>Before going any further, we should probably explain what a particle actually is... Basically, a <a id="particle"></a>particle is a graphic resource that has certain properties which are defined by a <strong>particle system</strong>. These properties cannot be manipulated directly for <em>individual </em>particles, but are changed collectively through the code or actions that are used to define the system that it belongs to. They are very useful for creating beautiful and flashy effects - or subtle and discreet ones - in a game without the CPU overhead that using instances has.</p>
-  <p>We have mentioned particle systems, so let&#39;s explain what that is before continuing. Think of a <a id="particle_system"></a>particle system like a container that you will use to hold your particles ready for use. You can use code or actions to define the visual aspect of the particles, and then they are placed in the &quot;container&quot; (the particle system) so that you can take it out and use it whenever and wherever you need it later.</p>
-  <p>Before setting up a system and creating particles, it&#39;s important to know a few things... First is that most of a particle systems code is <strong>only ever called once in the game</strong>, usually in some type of controller object in the first room or level - this is not always the case, but for the sake of simplicity, we&#39;ll be using this scenario for the following brief guide as it&#39;s the most common way to use particles. You do this because a particle system, once created, stays in memory and is ready to be used at any time, so if you create it more than once it can quickly increase the memory usage and cause serious lag, and even has the potential of crashing the game. For the sake of simplicity in this guide, you will make a <a href="../GameMaker_Language/GML_Overview/Variables/Global_Variables.htm">global</a><strong> </strong>particle system that can be used by any instance in the game at any time.</p>
-  <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Creating A Particle System</a></p>
-  <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">To start with you need to define the particle system and give it a name so that you can use it. As this is going to be a global system that any object can use you would do this in a controller object or an initialisation function run at the start of the game. The <span data-keyref="GML_Code">GML Code</span> would look like this:</p>
-    <p class="code">global.P_System = part_system_create_layer(&quot;Instance_Layer&quot;, false);</p>
-    <p class="dropspot">And using <span data-keyref="GML_Visual">GML Visual</span>:</p>
-    <p class="dropspot"><img alt="Create Particle System" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_CreateSystem.png" /></p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> The layer name supplied must be a valid layer in the room where the system will be used, otherwise no particles will be visible. Also note that we set the <span class="inline2"><a data-xref="{title}" href="../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/persistent.htm">persistent</a></span> flag (both in code and in <span data-keyref="GML_Visual">GML Visual</span>) to <span class="inline2">false</span>. A persistent particle system is one that will &quot;persist&quot; across rooms without the need to destroy and re-create it for each room. However, to keep things simple for this guide, we&#39;ll not be using persistence.</p>
-    <p class="dropspot">So that&#39;s the system created, but what about the particles? We have to define them too or the system is useless and does nothing.</p>
-    <p class="dropspot">If you already have a <span data-keyref="Type_Asset_ParticleSystem"><a href="../../The_Asset_Editors/Particle_Systems.htm" target="_blank">Particle System Asset</a></span>, you can create it using the above function/action by passing the asset into the <span class="inline2">partsys</span>/&quot;System&quot; argument.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Defining A Particle Type</a></p>
-  <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">To use a particle in a system you have to first define its general properties. These are like object properties, but they only apply in a <em>general </em>way to individual particles. What this means is that if you give the particles a minimum movement speed of 1 and a maximum movement speed of 2, any particle created by the system will have a random speed between 1 and 2 pixels per step, and that overall they will have an average speed of 1.5. You should name and add your first particle to the system using the following GML in the same object that you used to create the system:</p>
-    <p class="code">global.Particle1 = part_type_create();</p>
-    <p class="dropspot">And for those of you that use <span data-keyref="GML_Visual">GML Visual</span>:</p>
-    <p class="dropspot"><img alt="Create Particle Type" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Create_Type.png" /></p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> Using <span data-keyref="GML_Visual">GML Visual</span> we also tick the <strong>blend </strong>option. This enables <strong>additive blending</strong> for the particle, which we&#39;ll discuss a bit further down.</p>
-    <p class="dropspot">You now have a system and a particle to put in it, but you&#39;re not ready yet to create your outstanding effects! You still have to define the properties of the particle, ie: how it looks - its speed, its rotation, its alpha, etc. There are a lot of details that can be used to define a particle effect, so below is an overview of the most important settings and then a snippet of code and <span data-keyref="GML_Visual">GML Visual</span> that uses all of them:</p>
-    <ul class="dropspotlist">
-      <li class="dropspot"><strong>shape</strong>: The shape of the particle is the built in sprite that it will use, with the default being the constant <span class="inline">pt_shape_pixel</span>. There is also a function to add a custom particle if required - <span class="inline3_func"><a data-xref="{title}" href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Types/part_type_sprite.htm">part_type_sprite</a></span> - or the action <a data-xref="{title}" href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Set_Particle_Sprite.htm">Set Particle Sprite</a>.</li>
-      <li class="dropspot"><strong>size</strong>: Sets the size parameters for the particle type. You specify the minimum starting size, the maximum starting size, and the size increase in each step (use a negative number for a decrease in size). This is a scalar value that will modify the base image x/y scale equally.</li>
-      <li class="dropspot"><strong>colour</strong>: Sets the colour for the particle if a single colour is used. If two or three colours are supplied this will be the colour blend, blending from one to the other over its lifetime.</li>
-      <li class="dropspot"><strong>alpha</strong>: Sets the alpha value for the particle between a value of 0 and 1. If a single value is passed in this will be the alpha of the particle, if two or three values are passed in then the alpha will blend between these over the lifetime of the particle.</li>
-      <li class="dropspot"><strong>speed</strong>: Sets the speed properties for the particle type. You specify a minimum and maximum speed and a random value between the given bounds is chosen when the particle is created. You can indicate a speed increase in each step, and even use a negative number to slow the particle down (the speed will never become smaller than 0).</li>
-      <li class="dropspot"><strong>direction</strong>: Sets the direction properties for the particle type. Again you specify a range of directions (in counterclockwise degrees - 0 indicates a motion to the right, 90 indicates a motion upwards, etc...). For example, to let the particle move in a random direction you&#39;d choose a minimum of 0 and a maximum of 360 as values. You can specify an increase in direction for each step too (can also be negative).</li>
-      <li class="dropspot"><strong>orientation</strong>: Sets the orientation angle properties for the particle type. You specify the minimum angle, the maximum angle, and the increase in each step. You can also indicate whether the given angle should be relative to the current direction of motion or absolute, e.g: by setting all values to 0 but relative to true, the particle orientation will precisely follow the path of the particle.</li>
-      <li class="dropspot"><strong>blending</strong>: Sets whether to use <strong>additive </strong>blending or <strong>normal </strong>blending for the particle type. This is set in a function when using <span data-keyref="GML_Code">GML Code</span> and as part of the particle initialisation when using <span data-keyref="GML_Visual">GML Visual</span>. Additive blending means that the particles will use the <span class="inline2">bm_add</span> blend mode, giving them a &quot;glowing&quot; look where they overlap, and also blending them with anything drawn underneath (sprites, backgrounds, tiles, etc.) - very useful for fire and magic effects (for example), but best left off for something like smoke. Experiment to see the differences! Note that enabling this will break the texture batching when particles are created, and so more batches will be required per step to draw them - something to consider as it may affect performance, especially on mobile.</li>
-      <li class="dropspot"><strong>life</strong>: Sets the lifetime bounds, in steps (game frames) for the particle type. Like previous settings, this has a minimum and maximum value and particles will last a random number of steps within these values. So, a lifetime of 30 min and 30 max will have the particle existing for exactly 30 steps, but a lifetime of 20 min and 60 max will have each particle exists for a random number of steps between 20 and 60.</li>
-    </ul>
-    <p class="dropspot">Now, before we present you the code for defining the particle, let&#39;s just talk about &quot;<strong>wiggle</strong>&quot; for a moment... Believe it or not, &quot;wiggle&quot; is a particle property and can be set for many of the above settings individually. When you see &quot;wiggle&quot; as an argument for a particle function or action, it means that if you place a number between 1 and 20 the particle will &quot;wiggle&quot; or fluctuate between the min and max values for the property, with 1 being a slow wiggle and 20 being very fast. So a particle speed minimum of 2 and maximum of 5 with a wiggle of 20 will oscillate very quickly between the min/max speeds for the lifetime of each particle created.</p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> There are other minor particle properties too which we don&#39;t cover here, just to keep things as simple as possible to start with. See the appropriate pages for full details of particle properties.</p>
-    <p class="dropspot">Let&#39;s look at some code that defines a particle now:</p>
-    <p class="code">// This defines the particle&#39;s shape<br />
-      part_type_shape(global.Particle1,pt_shape_pixel);<br />
-      <br />
-      // This is for the size<br />
-      part_type_size(global.Particle1,1,1,0,2);<br />
-      <br />
-      // This sets its colour. There are three different codes for this<br />
-      part_type_color1(global.Particle1,c_white);<br />
-      <br />
-      // This is its alpha. There are three different codes for this<br />
-      part_type_alpha1(global.Particle1,1);<br />
-      <br />
-      // The particles speed<br />
-      part_type_speed(global.Particle1,0.50,2,-0.10,0);<br />
-      <br />
-      // The direction<br />
-      part_type_direction(global.Particle1,0,359,0,20);<br />
-      <br />
-      // This changes the rotation of the particle<br />
-      part_type_orientation(global.Particle1,0,0,0,0,true);<br />
-      <br />
-      // This is the blend mode, either additive or normal<br />
-      part_type_blend(global.Particle1,1);<br />
-      <br />
-      // This is its lifespan in steps<br />
-      part_type_life(global.Particle1,5,30);
-    </p>
-    <p class="dropspot">To create this same particle definition in <span data-keyref="GML_Visual">GML Visual</span> we&#39;d need these actions:</p>
-    <p class="dropspot"><img alt="Define Particle Type" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Define_Particle.png" />So that&#39;s it! We have now defined our particles and they are ready to be used.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Creating Particles Directly In-Game</a></p>
-  <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">There are a couple of ways to create particles, and each has its pros and cons. You can use <strong>emitters</strong> to <strong>burst </strong>or <strong>stream </strong>particles, or you can create particles <strong>directly </strong>at a point. Which one you use really depends on what you are trying to achieve and the effect you are wanting to create, but we&#39;ll start with the easiest of the two, which is creating particles directly. In GML we&#39;d use the following function:</p>
-    <p class="code">part_particles_create(global.P_System, x, y, global.Particle1, 10);</p>
-    <p class="dropspot">and in <span data-keyref="GML_Visual">GML Visual</span> it&#39;d be:</p>
-    <p class="dropspot"><img alt="Create Particles At A Position" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Burst.png" />That single code/action above will create 10 particles at the given x/y coordinates of type &quot;Particle1&quot; from our global system. Simple! The great thing about that line of code/action is that it can be used anywhere without any fuss. For example if you place it in the <strong>Global Left Pressed</strong> event for the mouse in an object and change x/y values for the mouse_x/y position, it will create particles at the mouse position every time you press the button. Or if you have a rocket, then you could place this in the step event and have smoke particles coming every step (although 1 or 2 would probably be better than 10!). You can even have it create particles over an area by changing the x/y coordinates randomly, for example:</p>
-    <p class="code">repeat(50)<br />
-      {<br />
-      var xx = x + 20 - random(40);<br />
-      var yy = y + 20 - random(40);<br />
-      part_particles_create(global.P_System, xx, yy, global.Particle1, 1);<br />
-      }</p>
-    <p class="dropspot"><img alt="Create Particles Over A Random Area" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Create_Particles.png" />The above code will create 50 particles at a random position within a 40px square area.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Creating Particles With Emitters</a></p>
-  <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">Since we&#39;ve explained the easy way to create particles, let&#39;s now go the slightly more complex way, which is to use <strong>emitters</strong>. Emitters are another part of the particle system that has to be defined before being used, so we&#39;ll make a global emitter the same as we did for the system and the particles. We also have to decide whether to have a static (non-moving) emitter or not and whether we are going to <strong>burst </strong>or <strong>stream </strong>the particles, as well as decide over what area and what kind of distribution we are going to have the emitter use.</p>
-    <p class="dropspot">What does all that mean? Well, a <strong>static </strong>emitter is one that you can define once and forget about as it will not be moving anywhere for the duration of the game, ie: think of a log fire - it doesn&#39;t move, it just emits flames and so is static, but a fireball would require a <strong>dynamic</strong> emitter and will move across the screen. As for bursting or streaming, a burst is a one off explosion of particles, whereas a stream is just that - a constant stream of particles every step. For area and distribution, with emitters you can define an area for emitting particles (which can be a rectangle, ellipse, diamond or line) as well as the distribution curve (gaussian, inverse gaussian, or linear).</p>
-    <p class="dropspot">The following images illustrate the different types of area shape available for emitters:</p>
-    <p class="dropspot"> </p>
-    <center><img alt="Rectangle Emitter" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_Rectangular.gif" /> <img alt="Line Emitter" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_Line.gif" /></center>
-    <center><img alt="Ellipse Emitter" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_Ellipse.gif" /> <img alt="Diamond Emitter" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_Diamond.gif" /></center>
-    <p class="dropspot"><br />
-      And the distribution curves (linear, gaussian, and inverse gaussian) are illustrated here:</p>
-    <p><img alt="Particle distribution" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_Distribution.png" /></p>
-    <p class="dropspot">Below is an example of the code/actions required to define two emitters, which would normally go in the <strong>Create Event</strong> of a controller object, just after defining the particle system. One will be static and stream particles over the area of the whole room, while the other will be dynamic and follow the mouse and burst every 30 steps from a small ellipse:</p>
-    <p> </p>
-    <p class="code">global.Particle1_Emitter1 = part_emitter_create(global.P_System);<br />
-      global.Particle1_Emitter2 = part_emitter_create(global.P_System);<br />
-      <br />
-      // Set up the area that will emit particles<br />
-      part_emitter_region(global.P_System, global.Particle1_Emitter1, 0, room_width, 0, room_height, ps_shape_rectangle, ps_distr_linear);<br />
-      part_emitter_region(global.P_System, global.Particle1_Emitter2, mouse_x-10, mouse_x+10, mouse_y-10, mouse_y+10, ps_shape_ellipse, ps_distr_gaussian);<br />
-      <br />
-      // Set the first to stream 10 particles every step<br />
-      part_emitter_stream(global.P_System, global.Particle1_Emitter1, global.Particle1, 10);<br />
-      <br />
-      // This can now be forgotten as it will function until told to stop...<br />
-      // Set the alarm[0] event to burst the emitter2 particles...<br />
-      alarm[0] = 30;
-    </p>
-    <p class="dropspot"><img alt="Define Particle Emitters" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Create_Emitter.png" />So, here we are creating two particle emitters that are assigned to the particle system we created at the start. The functions/actions to create these emitters permit us to define an area in the room over which they will emit particles, as well as give the particle type to emit, and the shape and distribution to use within the defined area. The functions/actions will return a numeric value, which is the emitter ID value, and we store this in a variable so that we can use further emitter functions to target those emitters.</p>
-    <p class="dropspot">Now we have code/<span data-keyref="GML_Visual">GML Visual</span> to stream particles (these particles will be emitted every game step without us having to anything else), but we also want to add an <strong>A</strong><strong>larm[0]</strong> <strong>Event</strong> to burst particles at specific intervals:</p>
-    <p class="code">part_emitter_region(global.P_System, global.Particle1_Emitter2, mouse_x - 10, mouse_x + 10, mouse_y - 10, mouse_y + 10, ps_shape_ellipse, ps_distr_gaussian);<br />
-      part_emitter_burst(global.P_System, global.Particle1_Emitter2, global.Particle1, 30);<br />
-      alarm[0] = 30;</p>
-    <p class="dropspot"><img alt="Burst Particles From Emitter" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Set_Emitter.png" />A particle burst is simply a one-off explosion of particles from the emitter, rather than a constant stream of them every game step.</p>
-    <p class="dropspot">But what if you want several objects to emit particles? A global emitter can only be in one place at a time, so you would need to create <em>local </em>emitters in each object. These emitters will still use the global particle system and any particles that are within it, but they can be different shapes and sizes and move with the object, making them ideal for rockets or bullets or things. The code you would use is exactly the same as above, but without the &quot;global&quot; prefix before the emitter names.</p>
-    <p class="dropspot">That&#39;s the creation of particles dealt with but there is one more thing that&#39;s very important... Cleaning up when you are finished with them.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Cleaning Up</a></p>
-  <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">As mentioned at the start, once created, a particle system (and its particles, emitters, etc.) are stored in memory for instant use. Great, but what happens when you restart the game? Or if your player dies and starts the room again? Well, if you don&#39;t manage the game right you get a <strong>memory leak</strong>. This is when something has been created and uses up memory, but has been &quot;de-referenced&quot; meaning that <span data-keyref="GameMaker Name">GameMaker</span> no longer has access to it. This kind of thing will slowly eat up memory and cause lag in your game or even block the computer causing your game to crash, and it is a pretty common problem with first time users of particle systems.</p>
-    <p class="dropspot">How do you avoid this? Well, <span data-keyref="GameMaker Name">GameMaker</span> has <span data-keyref="GML_Code">GML Code</span> functions and <span data-keyref="GML_Visual">GML Visual</span> actions to delete particle systems and their emitters and particles from memory when not in use, and with a little bit of planning when using the following code/actions, you can easily prevent this potential problem.</p>
-    <p class="dropspot">The first thing you have to do is decide where you are going to create the system and how you will use it. You could create a global system in the <strong>Game Start Event</strong> of an object that is in your first room (like a menu or title screen), but this means that if you restart the game using the <span class="inline3_func"><a data-xref="{title}" href="../GameMaker_Language/GML_Reference/General_Game_Control/game_restart.htm">game_restart</a></span> function, it will be recreated and cause a memory leak. Or you could create a local system in an instance in any room, but again, if you leave the room then the system will be inaccessible and cause a memory leak. To avoid this you would need to have something like this in the <a href="../The_Asset_Editors/Object_Properties/Other_Events.htm"><strong>Game End Event</strong></a> or the <a href="../The_Asset_Editors/Object_Properties/Object_Events.htm"><strong>Clean Up Event</strong></a> of your object:</p>
-    <p class="code">part_type_destroy(global.Particle1);<br />
-      part_emitter_destroy(global.P_System, global.Particle1_Emitter);<br />
-      part_emitter_destroy(global.P_System, global.Particle2_Emitter);<br />
-      part_system_destroy(global.P_System);</p>
-    <p class="dropspot"><img alt="Clean Up Particle System" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_CleanUp.png" />This will remove the defined particles, emitters, and then the system from memory ready for you to restart the game or change room. Just remember that after thinking about where would be the most suitable place to create the system, think about where would be the most suitable place to destroy the system too!</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p> </p>
-  <p>Now you know the basics about particles, particle systems and emitters, so you can now add them into your game! But before rushing off and adding particle effects to everything, please note that while particles are less CPU hungry than instances, they are not the solution to everything as they will cause lag if you have thousands of them at a time. The best thing to do is experiment and use them carefully to &quot;flesh out&quot; visually a game and give it a bit more eye-candy without over doing it.</p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Additional_Information.htm">Additional Information</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Guide_To_Using_Shaders.htm">Guide To Using Shaders</a></div>
-      </div>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Guide d'utilisation des particules</title>
+    <meta name="generator" content="Adobe RoboHelp 2020" />
+    <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
+    <script src="../assets/scripts/main_script.js"></script>
+    <meta name="rh-authors" content="Mark Alexander" />
+    <meta name="topic-comment" content="Page that explains how to set up and use particles" />
+    <meta name="rh-index-keywords" content="Guide To Using Particles" />
+    <meta name="search-keywords" content="particles,particle guide,particle setup" />
+  </head>
+  <body><!--<div class="body-scroll" style="top: 150px;">-->
+    <h1>Guide d'utilisation des particules</h1>
+    <p>Ce guide est destiné à ceux d'entre vous qui veulent comprendre comment utiliser et créer des <strong>particules</strong>. Cette page couvrira à la fois les <a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particles.htm">fonctions du GameMaker Language</a> et les <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Particle_Actions.htm">actions visuelles GML</a> pour les particules. Si vous n'avez jamais utilisé de particules auparavant, nous espérons que ce guide vous aidera à vous lancer car elles sont très utiles et assez amusantes à réaliser.</p>
+    <p>Avant d'aller plus loin, nous devrions probablement expliquer ce qu'est réellement une particule... Fondamentalement, une particule est une ressource graphique qui a certaines propriétés qui sont définies par un <strong>système de particules</strong>. Ces propriétés ne peuvent pas être manipulées directement pour les particules <em>individuelles </em>, mais sont modifiées collectivement par le code ou les actions qui sont utilisés pour définir le système auquel elles appartiennent. Les particules sont très utiles pour créer de beaux effets tape-à-l'œil - ou des effets subtils et discrets - dans un jeu sans la surcharge du processeur qu'implique l'utilisation d'instances.</p>
+    <p>Nous avons mentionné les systèmes de particules, alors expliquons ce que c'est avant de continuer. Pensez à un système de particules comme à un conteneur que vous utiliserez pour contenir vos particules prêtes à être utilisées. Vous pouvez utiliser du code ou des actions pour définir l'aspect visuel des particules, puis elles sont placées dans le &quot;conteneur&quot; (le système de particules) afin que vous puissiez le sortir et l'utiliser à tout moment et partout où vous en aurez besoin par la suite.</p>
+    <p>Avant de mettre en place un système et de créer des particules, il est important de savoir quelques petites choses... La première est que la plupart du code d'un système de particules <strong>n'</strong>est <strong>appelé qu'une seule fois dans le jeu</strong>, généralement dans un type d'objet contrôleur dans la première pièce ou le premier niveau - ce n'est pas toujours le cas, mais pour des raisons de simplicité, nous utiliserons ce scénario pour le bref guide suivant car c'est la façon la plus commune d'utiliser les particules. En effet, un système de particules, une fois créé, reste en mémoire et est prêt à être utilisé à tout moment. Si vous le créez plus d'une fois, cela peut rapidement augmenter l'utilisation de la mémoire et provoquer de sérieux décalages, voire même faire planter le jeu. Pour des raisons de simplicité, dans ce guide, vous allez créer un système de particules <strong>global </strong>qui pourra être utilisé par n'importe quelle instance du jeu à tout moment.</p>
+    <p> </p>
+    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Créer un système de particules</a></p>
+    <div class="droptext" data-targetname="drop-down">
+      <p class="dropspot">Pour commencer, vous devez définir le système de particules et lui donner un nom afin de pouvoir l'utiliser. Comme il s'agit d'un système global que tout objet peut utiliser, vous devez le faire dans un objet contrôleur ou dans une fonction d'initialisation exécutée au début du jeu. Le site <span class="notranslate">GML</span> devrait ressembler à ceci :</p>
+      <p class="code">global.P_System = part_system_create_layer(&quot;Instance_Layer&quot;, false);</p>
+      <p class="dropspot">Et en utilisant <span class="notranslate">GML</span> Visual :</p>
+      <p class="dropspot"><img>Notez que le nom de couche fourni doit être une couche valide dans la pièce où le système sera utilisé, sinon aucune particule ne sera visible. Notez également que nous avons mis l'indicateur &quot;persistant&quot; (à la fois dans le code et dans <span class="notranslate">GML</span> Visual) à false. Un système de particules persistant est un système qui &quot;persiste&quot; dans toutes les pièces sans qu'il soit nécessaire de le détruire et de le recréer pour chaque pièce. Cependant, pour garder les choses simples dans ce guide, nous n'utiliserons pas la persistance.</p>
+      <p class="dropspot">C'est donc le système créé, mais qu'en est-il des particules ? Nous devons les définir aussi, sinon le système est inutile et ne fait rien.</p>
+      <p class="dropspot"> </p>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
-  </div>
-  <!-- KEYWORDS
+    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Définir un type de particule</a></p>
+    <div class="droptext" data-targetname="drop-down1">
+      <p class="dropspot">Pour utiliser une particule dans un système, vous devez d'abord définir ses propriétés générales. Celles-ci sont comme les propriétés des objets, mais elles ne s'appliquent que de manière <em>générale </em>aux particules individuelles. Cela signifie que si vous donnez aux particules une vitesse de mouvement minimale de 1 et une vitesse de mouvement maximale de 2, toute particule créée par le système aura une vitesse aléatoire comprise entre 1 et 2 pixels par pas, et que globalement elles auront une vitesse moyenne de 1,5. Vous devez nommer et ajouter votre première particule au système en utilisant l'adresse suivante <span class="notranslate">GML</span> dans le même objet que celui que vous avez utilisé pour créer le système :</p>
+      <p class="code">global.Particle1 = part_type_create();</p>
+      <p class="dropspot">Et pour ceux d'entre vous qui utilisent <span class="notranslate">GML</span> Visual :</p>
+      <p class="dropspot"><img>Notez qu'en utilisant <span class="notranslate">GML</span> Visual, nous cochons également l'option <strong>blend </strong>. Cela active le <strong>mélange additif</strong> pour la particule, dont nous parlerons un peu plus loin.</p>
+      <p class="dropspot">Vous avez maintenant un système et une particule à y placer, mais vous n'êtes pas encore prêt à créer vos effets exceptionnels ! Vous devez encore définir les propriétés de la particule, c'est-à-dire son apparence - sa vitesse, sa rotation, son alpha etc... Il y a beaucoup de détails qui peuvent être utilisés pour définir un effet de particule, donc ci-dessous un aperçu des paramètres les plus importants et ensuite un extrait de code et <span class="notranslate">GML</span> Visual qui les utilise tous :</p>
+      <ul class="dropspotlist">
+        <li class="dropspot"><strong>shape</strong>: La forme de la particule est le <span class="notranslate">sprite</span> intégré qu'elle utilisera, le défaut étant la constante <span class="inline">pt_shape_pixel</span>. Il existe également une fonction permettant d'ajouter une particule personnalisée si besoin est - <a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Types/part_type_sprite.htm"><span class="inline">part_type_sprite()</span></a> - ou l'action <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Set_Particle_Sprite.htm">Set Particle Sprite</a>.</li>
+        <li class="dropspot"><strong>taille</strong>: Définit les paramètres de taille pour le type de particule. Vous spécifiez la taille de départ minimale, la taille de départ maximale et l'augmentation de la taille à chaque étape (utilisez un nombre négatif pour une diminution de la taille). Il s'agit d'une valeur scalaire qui modifiera l'échelle x/y de l'image de base de manière égale.</li>
+        <li class="dropspot"><strong>colour</strong>: Définit la couleur de la particule si une seule couleur est utilisée. Si deux ou trois couleurs sont fournies, il s'agira du mélange de couleurs, qui passera de l'une à l'autre au cours de sa durée de vie.</li>
+        <li class="dropspot"><strong>alpha</strong>: Définit la valeur alpha de la particule entre 0 et 1. Si une seule valeur est passée, ce sera l'alpha de la particule, si deux ou trois valeurs sont passées, l'alpha se mélangera entre elles pendant la durée de vie de la particule.</li>
+        <li class="dropspot"><strong>speed</strong>: Définit les propriétés de vitesse pour le type de particule. Vous spécifiez une vitesse minimale et maximale et une valeur aléatoire entre les limites données est choisie lors de la création de la particule. Vous pouvez indiquer une augmentation de la vitesse à chaque étape, et même utiliser un nombre négatif pour ralentir la particule (la vitesse ne sera jamais inférieure à 0).</li>
+        <li class="dropspot"><strong>direction</strong>: Définit les propriétés de direction pour le type de particule. Là encore, vous spécifiez un éventail de directions (en degrés dans le sens inverse des aiguilles d'une montre - 0 indique un mouvement vers la droite, 90 indique un mouvement vers le haut, etc...). Par exemple, pour que la particule se déplace dans une direction aléatoire, vous choisirez un minimum de 0 et un maximum de 360 comme valeurs. Vous pouvez également spécifier une augmentation de la direction pour chaque étape (peut également être négative).</li>
+        <li class="dropspot"><strong>orientation</strong>: Définit les propriétés d'angle d'orientation pour le type de particule. Vous spécifiez l'angle minimum, l'angle maximum et l'augmentation à chaque étape. Vous pouvez également indiquer si l'angle donné doit être relatif à la direction actuelle du mouvement ou absolu, par exemple : en fixant toutes les valeurs à 0 mais relative à true, l'orientation de la particule suivra précisément la trajectoire de la particule.</li>
+        <li class="dropspot"><strong>mélange</strong>: Définit s'il faut utiliser le mélange <strong>additif </strong>ou le mélange <strong>normal </strong>pour le type de particule. Ce paramètre est défini dans une fonction lorsque vous utilisez <span class="notranslate">GML</span> et dans le cadre de l'initialisation des particules lorsque vous utilisez <span class="notranslate">GML</span> Visual. Le mélange additif signifie que les particules utiliseront le mode de mélange <span class="inline">bm_add</span>, leur donnant un aspect &quot;lumineux&quot; là où elles se chevauchent, et les mélangeant également avec tout ce qui est dessiné en dessous (<span class="notranslate">sprites</span>, fonds, tuiles, etc...) - très utile pour les effets de feu et de magie (par exemple), mais mieux vaut ne pas le faire pour quelque chose comme de la fumée. Expérimentez pour voir les différences ! Notez qu'en activant cette option, le regroupement des textures lors de la création des particules sera interrompu, et donc plus de lots seront nécessaires à chaque étape pour les dessiner - quelque chose à considérer car cela peut affecter les performances, en particulier sur les mobiles.</li>
+        <li class="dropspot"><strong>vie</strong>: Définit les limites de la durée de vie, en pas (images de jeu) pour le type de particule. Comme les paramètres précédents, ceci a une valeur minimale et maximale et les particules dureront un nombre aléatoire de pas dans ces valeurs. Ainsi, une durée de vie de 30 min et 30 max fera exister la particule pendant exactement 30 pas, mais une durée de vie de 20 min et 60 max fera exister chaque particule pendant un nombre aléatoire de pas entre 20 et 60.</li>
+      </ul>
+      <p class="dropspot">Maintenant, avant de vous présenter le code pour définir la particule, parlons un instant de &quot;<strong>wiggle</strong>&quot;... Croyez-le ou non, &quot;wiggle&quot; est une propriété de la particule et peut être défini pour plusieurs des paramètres ci-dessus individuellement. Lorsque vous voyez &quot;wiggle&quot; comme argument pour une fonction ou une action de particule, cela signifie que si vous placez un nombre entre 1 et 20, la particule va &quot;s'agiter&quot; ou fluctuer entre les valeurs min et max de la propriété, avec 1 étant une agitation lente et 20 étant très rapide. Ainsi, une vitesse de particule minimale de 2 et maximale de 5 avec une oscillation de 20 oscillera très rapidement entre les vitesses minimale et maximale pendant la durée de vie de chaque particule créée.</p>
+      <p class="note"><strong>NOTE</strong>: Il existe d'autres propriétés mineures des particules que nous ne couvrons pas ici, afin de garder les choses aussi simples que possible pour commencer. Voir les pages appropriées pour les détails complets des propriétés des particules.</p>
+      <p class="dropspot">Regardons maintenant un peu de code qui définit une particule :</p>
+      <p class="code">// This defines the particle&#39;s shape
+        <br/>
+        part_type_shape(global.Particle1,pt_shape_pixel);
+        <br/>
+        <br/>
+        // This is for the size
+        <br/>
+        part_type_size(global.Particle1,1,1,0,2);
+        <br/>
+        <br/>
+        // This sets its colour. There are three different codes for this
+        <br/>
+        part_type_color1(global.Particle1,c_white);
+        <br/>
+        <br/>
+        // This is its alpha. There are three different codes for this
+        <br/>
+        part_type_alpha1(global.Particle1,1);
+        <br/>
+        <br/>
+        // The particles speed
+        <br/>
+        part_type_speed(global.Particle1,0.50,2,-0.10,0);
+        <br/>
+        <br/>
+        // The direction
+        <br/>
+        part_type_direction(global.Particle1,0,359,0,20);
+        <br/>
+        <br/>
+        // This changes the rotation of the particle
+        <br/>
+        part_type_orientation(global.Particle1,0,0,0,0,true);
+        <br/>
+        <br/>
+        // This is the blend mode, either additive or normal
+        <br/>
+        part_type_blend(global.Particle1,1);
+        <br/>
+        <br/>
+        // This is its lifespan in steps
+        <br/>
+        part_type_life(global.Particle1,5,30); </p>
+      <p class="dropspot">Pour créer cette même définition de particule dans <span class="notranslate">GML</span> Visual, nous aurions besoin de ces actions :</p>
+      <p class="dropspot"><img>Voilà, c'est fait ! Nous avons maintenant défini nos particules et elles sont prêtes à être utilisées.</p>
+      <p class="dropspot"> </p>
+    </div>
+    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Créer des particules directement dans le jeu</a></p>
+    <div class="droptext" data-targetname="drop-down2">
+      <p class="dropspot">Il y a deux façons de créer des particules, et chacune a ses avantages et ses inconvénients. Vous pouvez utiliser des <strong>émetteurs</strong> pour <strong>faire éclater les </strong>particules ou les faire <strong>ruisseler </strong>, ou vous pouvez créer des particules <strong>directement </strong>sur un point. Le choix de l'une ou l'autre dépend de ce que vous essayez de faire et de l'effet que vous voulez créer, mais nous allons commencer par la plus simple des deux, qui consiste à créer des particules directement. Dans <span class="notranslate">GML</span>, nous utiliserons la fonction suivante :</p>
+      <p class="code">part_particles_create(global.P_System, x, y, global.Particle1, 10);</p>
+      <p class="dropspot">et dans <span class="notranslate">GML</span> Visual ce serait :</p>
+      <p class="dropspot"><img>Ce seul code/action ci-dessus créera 10 particules aux coordonnées x/y données de type &quot;Particle1&quot; à partir de notre système global. C'est simple ! Ce qui est génial avec cette ligne de code/action, c'est qu'elle peut être utilisée n'importe où sans problème. Par exemple, si vous la placez dans l'événement <strong>Global Left Pressed</strong> pour la souris dans un objet et que vous modifiez les valeurs x/y pour la position mouse_x/y, elle créera des particules à la position de la souris chaque fois que vous appuierez sur le bouton. Ou si vous avez une fusée, vous pouvez placer cet événement dans l'événement step et avoir des particules de fumée à chaque pas (bien que 1 ou 2 serait probablement mieux que 10 !). Vous pouvez même lui faire créer des particules sur une zone en changeant les coordonnées x/y de façon aléatoire, par exemple :</p>
+      <p class="code">repeat(50)
+        <br/>
+        {
+        <br/>
+        var xx = x + 20 - random(40);
+        <br/>
+        var yy = y + 20 - random(40);
+        <br/>
+        part_particles_create(global.P_System, xx, yy, global.Particle1, 1);
+        <br/>
+        }</p>
+      <p class="dropspot"><img>Le code ci-dessus va créer 50 particules à une position aléatoire dans une zone carrée de 40px.</p>
+      <p class="dropspot"> </p>
+    </div>
+    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Créer des particules avec des émetteurs</a></p>
+    <div class="droptext" data-targetname="drop-down3">
+      <p class="dropspot">Puisque nous avons expliqué la manière simple de créer des particules, passons maintenant à la manière légèrement plus complexe, qui consiste à utiliser des <strong>émetteurs</strong>. Les émetteurs sont une autre partie du système de particules qui doit être définie avant d'être utilisée, nous allons donc créer un émetteur global comme nous l'avons fait pour le système et les particules. Nous devons également décider si nous voulons avoir un émetteur statique (immobile) ou non et si nous allons faire <strong>éclater </strong>ou <strong>faire ruisseler </strong>les particules, ainsi que décider de la zone et du type de distribution que nous allons utiliser pour l'émetteur.</p>
+      <p class="dropspot">Que signifie tout cela ? Eh bien, un émetteur <strong>statique </strong>est un émetteur que vous pouvez définir une fois et oublier car il ne bougera pas pendant toute la durée du jeu. Par exemple, pensez à un feu de bois : il ne bouge pas, il émet juste des flammes et est donc statique, mais une boule de feu nécessiterait un émetteur <strong>dynamique</strong> et se déplacerait à travers l'écran. Pour ce qui est de l'éclatement ou du flux, un éclatement est une explosion ponctuelle de particules, alors qu'un flux est simplement un flux constant de particules à chaque étape. En ce qui concerne la zone et la distribution, avec les émetteurs, vous pouvez définir une zone d'émission des particules (qui peut être un rectangle, une ellipse, un losange ou une ligne) ainsi que la courbe de distribution (gaussienne, gaussienne inverse ou linéaire).</p>
+      <p class="dropspot">Les images suivantes illustrent les différents types de forme de zone disponibles pour les émetteurs :</p>
+      <p class="dropspot"> </p>
+      <center><img alt="Create Particle System" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_CreateSystem.png"/> <img alt="Create Particle Type" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Create_Type.png"/></center>
+      <center><img alt="Define Particle Type" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Define_Particle.png"/> <img alt="Create Particles At A Position" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Burst.png"/></center>
+      <p class="dropspot">
+        <br>
+        Et les courbes de distribution (linéaire, gaussienne et gaussienne inverse) sont illustrées ici :</p>
+      <p><img alt="Create Particles Over A Random Area" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Particles_DnD_Create_Particles.png"/></p>
+      <p class="dropspot">Voici un exemple du code/des actions nécessaires pour définir deux émetteurs, qui devraient normalement aller dans l'<strong>événement Create</strong> d'un objet contrôleur, juste après avoir défini le système de particules. L'un sera statique et diffusera des particules sur toute la surface de la pièce, tandis que l'autre sera dynamique et suivra la souris pour éclater tous les 30 pas à partir d'une petite ellipse :</p>
+      <p> </p>
+      <p class="code">global.Particle1_Emitter1 = part_emitter_create(global.P_System);
+        <br/>
+        global.Particle1_Emitter2 = part_emitter_create(global.P_System);
+        <br/>
+        <br/>
+        // Set up the area that will emit particles
+        <br/>
+        part_emitter_region(global.P_System, global.Particle1_Emitter1, 0, room_width, 0, room_height, ps_shape_rectangle, ps_distr_linear);
+        <br/>
+        part_emitter_region(global.P_System, global.Particle1_Emitter2, mouse_x-10, mouse_x+10, mouse_y-10, mouse_y+10, ps_shape_ellipse, ps_distr_gaussian);
+        <br/>
+        <br/>
+        // Set the first to stream 10 particles every step
+        <br/>
+        part_emitter_stream(global.P_System, global.Particle1_Emitter1, global.Particle1, 10);
+        <br/>
+        <br/>
+        // This can now be forgotten as it will function until told to stop...
+        <br/>
+        // Set the alarm[0] event to burst the emitter2 particles...
+        <br/>
+        alarm[0] = 30; </p>
+      <p class="dropspot"><img>Nous créons donc ici deux émetteurs de particules qui sont affectés au système de particules que nous avons créé au départ. Les fonctions/actions pour créer ces émetteurs nous permettent de définir une zone dans la pièce sur laquelle ils émettront des particules, ainsi que de donner le type de particule à émettre, et la forme et la distribution à utiliser dans la zone définie. Les fonctions/actions renvoient une valeur numérique, qui est la valeur d'identification de l'émetteur, et nous la stockons dans une variable afin de pouvoir utiliser d'autres fonctions d'émetteur pour cibler ces émetteurs.</p>
+      <p class="dropspot">Nous avons maintenant du code/GML Visual pour diffuser des particules (ces particules seront émises à chaque étape du jeu sans que nous ayons à faire quoi que ce soit d'autre), mais nous voulons aussi ajouter un <strong>événement</strong><strong>Alarm[0]</strong> pour faire éclater les particules à des intervalles spécifiques :</p>
+      <p class="code">part_emitter_region(global.P_System, global.Particle1_Emitter2, mouse_x - 10, mouse_x + 10, mouse_y - 10, mouse_y + 10, ps_shape_ellipse, ps_distr_gaussian);
+        <br/>
+        part_emitter_burst(global.P_System, global.Particle1_Emitter2, global.Particle1, 30);
+        <br/>
+        alarm[0] = 30;</p>
+      <p class="dropspot"><img>Une explosion de particules est simplement une explosion ponctuelle de particules provenant de l'émetteur, plutôt qu'un flux constant de particules à chaque étape du jeu.</p>
+      <p class="dropspot">Mais que faire si vous voulez que plusieurs objets émettent des particules ? Un émetteur global ne peut se trouver qu'à un seul endroit à la fois. Vous devrez donc créer des émetteurs <em>locaux </em>dans chaque objet. Ces émetteurs utiliseront toujours le système de particules global et toutes les particules qui s'y trouvent, mais ils peuvent avoir des formes et des tailles différentes et se déplacer avec l'objet, ce qui les rend idéaux pour les fusées, les balles ou autres. Le code à utiliser est exactement le même que ci-dessus, mais sans le préfixe &quot;global&quot; devant les noms des émetteurs.</p>
+      <p class="dropspot">C'est la création de particules traitée mais il y a une autre chose qui est très importante... Le nettoyage lorsque vous avez terminé avec eux.</p>
+      <p class="dropspot"> </p>
+    </div>
+    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Le nettoyage</a></p>
+    <div class="droptext" data-targetname="drop-down4">
+      <p class="dropspot">Comme mentionné au début, une fois créé, un système de particules (et ses particules, émetteurs etc...) est stocké en mémoire pour une utilisation instantanée. Super, mais que se passe-t-il lorsque vous redémarrez le jeu ? Ou si votre joueur meurt et recommence la pièce ? Eh bien, si vous ne gérez pas le jeu correctement, vous obtenez une <strong>fuite de mémoire</strong>. C'est le cas lorsque quelque chose a été créé et utilise de la mémoire, mais a été &quot;déréférencé&quot;, ce qui signifie que <span class="notranslate">GameMaker</span> n'a plus de <span class="notranslate">access</span>. Ce genre de chose va lentement consommer de la mémoire et provoquer un décalage dans votre jeu, voire bloquer l'ordinateur et faire planter votre jeu, et c'est un problème assez courant chez les nouveaux utilisateurs de systèmes de particules.</p>
+      <p class="dropspot">Comment éviter cela ? Eh bien, <span data-keyref="GameMaker Name">GameMaker</span> dispose de fonctions de code <span class="notranslate">GML</span> et d'actions visuelles <span class="notranslate">GML</span> pour supprimer de la mémoire les systèmes de particules et leurs émetteurs et particules lorsqu'ils ne sont pas utilisés. Avec un peu de planification lors de l'utilisation du code/des actions suivants, vous pouvez facilement éviter ce problème potentiel.</p>
+      <p class="dropspot">La première chose à faire est de décider où vous allez créer le système et comment vous allez l'utiliser. Vous pourriez créer un système global dans l'<strong>événement de début de jeu</strong> d'un objet qui se trouve dans votre première pièce (comme un menu ou un écran titre), mais cela signifie que si vous redémarrez le jeu en utilisant la fonction <a href="../GameMaker_Language/GML_Reference/General_Game_Control/game_restart.htm"><span class="inline">game_restart()</span></a> il sera recréé et provoquera une fuite de mémoire. Vous pouvez aussi créer un système local dans une instance de n'importe quelle room, mais là encore, si vous quittez la room, le système sera inaccessible et provoquera une fuite de mémoire. Pour éviter cela, vous devriez avoir quelque chose comme ceci dans la balise <a href="../The_Asset_Editors/Object_Properties/Other_Events.htm"><strong>Événement de fin de partie</strong></a> ou le <a href="../The_Asset_Editors/Object_Properties/Object_Events.htm"><strong>Événement de nettoyage</strong></a> de votre objet :</p>
+      <p class="code">part_type_destroy(global.Particle1);
+        <br/>
+        part_emitter_destroy(global.P_System, global.Particle1_Emitter);
+        <br/>
+        part_emitter_destroy(global.P_System, global.Particle2_Emitter);
+        <br/>
+        part_system_destroy(global.P_System);</p>
+      <p class="dropspot"><img>Cela supprimera les particules définies, les émetteurs, puis le système de la mémoire pour que vous puissiez redémarrer le jeu ou changer de pièce. N'oubliez pas qu'après avoir réfléchi à l'endroit le plus approprié pour créer le système, pensez aussi à l'endroit le plus approprié pour détruire le système !</p>
+      <p class="dropspot"> </p>
+    </div>
+    <p> </p>
+    <p>Vous connaissez maintenant les bases des particules, des systèmes de particules et des émetteurs, vous pouvez donc les ajouter dans votre jeu ! Mais avant de vous précipiter et d'ajouter des effets de particules à tout, veuillez noter que, bien que les particules soient moins gourmandes en ressources CPU que les instances, elles ne sont pas la solution à tout, car elles provoquent un décalage si vous en avez des milliers à la fois. La meilleure chose à faire est d'expérimenter et de les utiliser avec précaution pour &quot;étoffer&quot; visuellement un jeu et lui donner un peu plus d'attrait sans en faire trop.</p>
+    <p> </p>
+    <p> </p>
+    <div class="footer">
+      <div class="buttons">
+        <div class="clear">
+          <div style="float:left">Retour : <a href="Additional_Information.htm">Informations complémentaires</a></div>
+          <div style="float:right">Suivant : <a href="Guide_To_Using_Shaders.htm">Guide d'utilisation des shaders</a></div>
+        </div>
+      </div>
+      <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+    </div>
+    <!-- KEYWORDS
 Vectors
 Vector Maths
--->
-  <!-- TAGS
+--><!-- TAGS
 vector_maths
--->
-</body>
+--></body>
 </html>

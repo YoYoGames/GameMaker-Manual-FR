@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Transformed Value</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Dessiner la valeur transformée</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Draw Transformed Value action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Draw Transformed Value" />
@@ -14,63 +14,69 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Draw Transformed Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Transformed_Value.png" /> Draw Transformed Value</h1>
-  <p>With this action you can draw a string caption and/or a variable or value to the screen. The caption argument is a string that you wish to add preceding the value, and can be left blank if required, and the value can be a variable, a fixed value, or another string - in which case it should be enclosed in quotes, and can also be left blank if required. You then give the position where the string should be drawn, either as an absolute position or as a position relative to the instance drawing the text. Additionally you can set the scale of the text, stretching it either along the horizontal or vertical axis, as well as the rotation (angles for rotating text are anti-clockwise, so setting it to 90° will rotate it to the left and -90° to the right). Scaling is done by the factor given, so a scale of 0.5 will <i>half</i> the width of the text and a scale of 2 will double the width, with 1 being the default value for no scaling. Note that how the text will look when drawn will depend on the font used, the colour used, and the alignment. All these things can be changed before drawing, as shown in the example below.<b></b><b></b></p>
-  <div data-conref="../../../assets/snippets/Note_Action_Only_For_Draw_Events.hts"> </div>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Draw Transformed Value Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Transformed_Value.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Dessiner la valeur transformée</h1>
+  <p>Avec cette action, vous pouvez dessiner une légende de chaîne et/ou une variable ou une valeur à l'écran. L'argument de la légende est une chaîne que vous souhaitez ajouter avant la valeur, et peut être laissé vide si nécessaire, et la valeur peut être une variable, une valeur fixe, ou
+    une autre chaîne - dans ce cas, elle doit être placée entre guillemets, et peut également être laissée en blanc si nécessaire. Vous indiquez ensuite la position où la chaîne de caractères doit être dessinée, soit en tant que position absolue, soit en tant que position relative à l'instance dessinant le
+    texte. De plus, vous pouvez définir l'échelle du texte, en l'étirant le long de l'axe horizontal ou vertical, ainsi que la rotation (les angles de rotation du texte sont dans le sens inverse des aiguilles d'une montre, donc une rotation de 90° le fera pivoter vers la gauche et de -90° vers la
+    droite). La mise à l'échelle est effectuée par le facteur indiqué, ainsi une échelle de 0,5 réduira <i>de moitié</i> la largeur du texte et une échelle de 2 la doublera, 1 étant la valeur par défaut pour l'absence de mise à l'échelle. Notez que l'aspect du texte lorsqu'il est dessiné dépend des facteurs suivants
+    de la police utilisée, de la couleur utilisée et de l'alignement. Tous ces éléments peuvent être modifiés avant le dessin, comme le montre l'exemple ci-dessous.<b></b></p>
+  <p class="note"><b></b><b>REMARQUE</b>: Cette action est uniquement destinée à être utilisée dans les différents <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">événements de tirage au sort</a>, et ne tirera rien si elle est utilisée ailleurs.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Draw Transformed Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Transformed_Value.png" /></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Caption</td>
-        <td>The caption to draw (a string), can be left blank</td>
+        <td><span class="notranslate">Caption</span></td>
+        <td>La légende à dessiner (une chaîne de caractères), peut être laissée vide.</td>
       </tr>
       <tr>
-        <td>Value</td>
-        <td>The value to draw (real, variable or string)</td>
+        <td><span class="notranslate">Value</span></td>
+        <td>La valeur à dessiner (réel, variable ou chaîne)</td>
       </tr>
       <tr>
-        <td>x</td>
-        <td>The x position to draw at</td>
+        <td><span class="notranslate">x</span></td>
+        <td>La position x à dessiner</td>
       </tr>
       <tr>
-        <td>y</td>
-        <td>The y position to draw at</td>
+        <td><span class="notranslate">y</span></td>
+        <td>La position y à dessiner</td>
       </tr>
       <tr>
-        <td>xscale</td>
-        <td>The x (horizontal) scale factor, default is 1</td>
+        <td><span class="notranslate">xscale</span></td>
+        <td>Le facteur d'échelle x (horizontal), la valeur par défaut est 1</td>
       </tr>
       <tr>
-        <td>yscale</td>
-        <td>The y (vertical) scale factor, default is 1</td>
+        <td><span class="notranslate">yscale</span></td>
+        <td>Le facteur d'échelle y (vertical), la valeur par défaut est 1</td>
       </tr>
       <tr>
-        <td>Rotation</td>
-        <td>The rotation angle for drawing the text</td>
+        <td><span class="notranslate">Rotation</span></td>
+        <td>L'angle de rotation pour dessiner le texte</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Draw Transformed Value Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Transformed_Value.png" />The above action block code sets a colour, a font and then aligns the text to draw from the center before actually drawing the &quot;current_time&quot; value along with the caption &quot;TIME: &quot;, scaled to be double the size and &quot;vibrating&quot; slightly due to the random angle change.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus définit une couleur, une police et aligne ensuite le texte
+    pour qu'il soit dessiné à partir du centre avant d'afficher la valeur &quot;current_time&quot; ainsi que la légende &quot;TIME : &quot;, mise à l'échelle pour doubler la taille et &quot;vibrer&quot; légèrement en raison du changement d'angle aléatoire.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Sprite.htm">Draw Sprite</a></div>
+        <div style="float:left">Retour : <a href="Drawing_Actions.htm">Actions de dessin</a></div>
+        <div style="float:right">Suivant : <a href="Draw_Sprite.htm">Dessiner un Sprite</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Draw Transformed Value

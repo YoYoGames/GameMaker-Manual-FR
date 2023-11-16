@@ -3,20 +3,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Keyframe Data Struct</title>
+  <title>La structure de données des images clés</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining The Keyframe Data Struct" />
-  <meta name="rh-index-keywords" content="Sequence Keyframe Data Struct,seqaudiokey_loop,seqaudiokey_oneshot,seqtextkey_left,seqtextkey_center,seqtextkey_right,seqtextkey_justify,seqtextkey_top,seqtextkey_middle,seqtextkey_bottom" />
-  <meta name="search-keywords" content="The Keyframe Data Struct,seqaudiokey_loop,seqaudiokey_oneshot,channel,spriteIndex,soundIndex,playbackMode,curve,value,colour,sequence,objectIndex,events,event,seqtextkey_left,seqtextkey_right,seqtextkey_center,seqtextkey_justify,seqtextkey_top,seqtextkey_bottom,seqtextkey_middle" />
+  <meta name="rh-index-keywords" content="Sequence Keyframe Data Struct" />
+  <meta name="search-keywords" content="The Keyframe Data Struct,seqaudiokey_loop,seqaudiokey_oneshot,channel,spriteIndex,soundIndex,playbackMode,curve,value,colour,sequence,objectIndex,events,event" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Keyframe Data Struct</h1>
-  <p>When you define a <a href="The_Keyframe_Struct.htm">keyframe struct</a> for a track, you need to also define the data that will be associated with it. This is comprised of different <i>channels</i>, where each channel is simply a Keyframe Data Struct. A channel can be given specific type of data depending on what type of track you are setting the keyframe data for.</p>
-  <p>A Keyframe Data Struct contains the following variables:</p>
+  <h1>La structure de données des images clés</h1>
+  <p>Lorsque vous définissez une <a href="The_Keyframe_Struct.htm">structure d'image clé</a> pour une piste, vous devez également définir les données qui lui seront associées. Ces données sont constituées de différents <i>canaux</i>, chaque canal étant simplement une donnée d'image clé <span class="notranslate">Struct</span>. Un canal peut recevoir un type de données spécifique en fonction du type de piste pour lequel vous définissez les données d'image clé.</p>
+  <p>Une donnée d'image clé <span class="notranslate">Struct</span> contient les variables suivantes :</p>
   <table>
     <colgroup>
       <col />
@@ -25,7 +25,7 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Struct_Sequence_Keyframe_Data"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm" target="_blank">Sequence Keyframe Data Struct</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Struct_Sequence_Keyframe_Data"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm">Structure des données d'images-clés de la séquence</a></span></th>
       </tr>
       <tr>
         <th>Variable</th>
@@ -34,66 +34,66 @@
       </tr>
       <tr>
         <td><span class="inline">channel</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>This is the channel that the keyframe data should be applied to. It is a positive integer value starting at 0, and it&#39;s worth noting that when creating parameter tracks for &quot;position&quot; or &quot;scale&quot; keyframes, then you need to use very specific channel values. These are: channel 0 is the X position or the X scale, channel 1 is the Y position or Y scale.</td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>Il s'agit du canal auquel les données de l'image clé doivent être appliquées. Il s'agit d'une valeur entière positive commençant à 0. Il convient de noter que lorsque vous créez des pistes de paramètres pour des images clés de &quot;position&quot; ou d'&quot;échelle&quot;, vous devez utiliser des valeurs de canal très spécifiques. Ces valeurs sont les suivantes : le canal 0 correspond à la position X ou à l'échelle X, le canal 1 correspond à la position Y ou à l'échelle Y.</td>
       </tr>
       <tr>
         <td><span class="inline">spriteIndex</span></td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="../../../../../../The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The index of the sprite asset to use for the track. This property is only available for tracks of the type <span class="inline">seqtracktype_graphic</span> and you can get or set it.</td>
+        <td><span data-keyref="Type_Asset_Sprite"><a data-rhwidget="HyperlinkPopover" href="../../../../../../The_Asset_Editors/Sprites.htm">Sprite Asset</a></span></td>
+        <td>L'index de l'actif <span class="notranslate">sprite</span> à utiliser pour la piste. Cette propriété est uniquement disponible pour les pistes de type <span class="inline">seqtracktype_graphic</span> et vous pouvez l'obtenir ou la définir.</td>
       </tr>
       <tr>
         <td><span class="inline">soundIndex</span></td>
-        <td><span data-keyref="Type_Asset_Sound"><a href="../../../../../../The_Asset_Editors/Sounds.htm" target="_blank">Sound Asset</a></span></td>
-        <td>The index of the audio asset to use for the track. This property is only available for tracks of the type <span class="inline">seqtracktype_audio</span> and you can get or set it.</td>
+        <td><span data-keyref="Type_Asset_Sound"><a data-rhwidget="HyperlinkPopover" href="../../../../../../The_Asset_Editors/Sounds.htm">Actif sonore</a></span></td>
+        <td>L'index de l'actif audio à utiliser pour la piste. Cette propriété est uniquement disponible pour les pistes de type <span class="inline">seqtracktype_audio</span> et vous pouvez l'obtenir ou la définir.</td>
       </tr>
       <tr>
         <td><span class="inline">playbackMode</span></td>
-        <td><span data-keyref="Type_Constant_Sequence_Audio_Key"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm" target="_blank">Sequence Audio Key Constant</a></span></td>
-        <td>The playback mode for the sound. This property is only available for tracks of the type <span class="inline">seqtracktype_audio</span> and you can get or set it. The property should be one of the constants given in the table below this one.</td>
+        <td><span data-keyref="Type_Constant_Sequence_Audio_Key"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm">Séquence Audio Key Constant</a></span></td>
+        <td>Le mode de lecture du son. Cette propriété est uniquement disponible pour les pistes de type <span class="inline">seqtracktype_audio</span> et vous pouvez l'obtenir ou la définir. La propriété doit être une des constantes données dans le tableau ci-dessous.</td>
       </tr>
       <tr>
         <td><span class="inline">curve</span></td>
-        <td><span data-keyref="Type_Struct_AnimCurve"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get.htm" target="_blank">Animation Curve Struct</a></span></td>
-        <td>This property requires an animation curve struct (see <a href="../../Animation_Curves/animcurve_channel_new.htm">here</a> for more information) and is only available for tracks of the type <span class="inline">seqtracktype_real</span>. If no curve struct is used then the value for this property will be -1.</td>
+        <td><span data-keyref="Type_Struct_AnimCurve"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get.htm">Structure de la courbe d'animation</a></span></td>
+        <td>Cette propriété nécessite une courbe d'animation <span class="notranslate">struct</span> (voir <a href="../../Animation_Curves/animcurve_channel_new.htm">ici</a> pour plus d'informations) et n'est disponible que pour les pistes du type <span class="inline">seqtracktype_real</span>. Si aucune courbe <span class="notranslate">struct</span> n'est utilisée, la valeur de cette propriété sera -1.</td>
       </tr>
       <tr>
         <td><span class="inline">value</span></td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>This property is simply a value that is associated with the keyframe data channel, and is only available for tracks of the type <span class="inline">seqtracktype_real</span> when no <span class="inline">curve</span> struct is supplied. This can be, for example, the X or Y position of the track if placed inside a <strong>&quot;position&quot;</strong> parameter track.</td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>Cette propriété est simplement une valeur associée au canal de données d'image clé, et n'est disponible que pour les pistes de type <span class="inline">seqtracktype_real</span> lorsqu'aucune <span class="inline">curve</span> <span class="notranslate">struct</span> n'est fournie. Il peut s'agir, par exemple, de la position X ou Y de la piste si elle est placée à l'intérieur d'une piste à paramètre <strong>&quot;position&quot;</strong>.</td>
       </tr>
       <tr>
         <td><span class="inline">colour</span></td>
-        <td><span data-keyref="Type_Array"><a href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span> of <span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span>s</td>
-        <td>This property returns (or requires, if being set) an <a href="../../../../GML_Overview/Arrays.htm">array</a> for the colour value of the keyframe with the format [A, R, G, B]. This is only available for tracks of the type <span class="inline">seqtracktype_colour</span>. Note that the values for each component should be expressed as between 0 and 1, where 0 corresponds to the HEX value #00 and 1 corresponds to the HEX value #FF (0 - 255 as shown in the colour picker for colour tracks in the Sequences Editor).</td>
+        <td><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> de <span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Véritable</a></span>s</td>
+        <td>Cette propriété renvoie (ou exige, si elle est définie) un <a href="../../../../GML_Overview/Arrays.htm">tableau</a> pour la valeur de couleur de l'image clé au format [A, R, G, B]. Cette propriété n'est disponible que pour les pistes de type <span class="inline">seqtracktype_colour</span>. Notez que les valeurs de chaque composant doivent être exprimées entre 0 et 1, où 0 correspond à la valeur HEX #00 et 1 correspond à la valeur HEX #FF (0 - 255 comme indiqué dans le sélecteur de couleur pour les pistes en couleur dans l'éditeur de séquences).</td>
       </tr>
       <tr>
         <td><span class="inline">sequence</span></td>
-        <td><span data-keyref="Type_Struct_Sequence_Object"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Object_Struct.htm" target="_blank">Sequence Object Struct</a></span></td>
-        <td>This property will return (or requires, if being set) a <a href="The_Sequence_Object_Struct.htm">sequence object struct</a> and is only available for tracks of the type <span class="inline">seqtracktype_sequence</span>.</td>
+        <td><span data-keyref="Type_Struct_Sequence_Object"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Object_Struct.htm">Structure de l'objet de la séquence</a></span></td>
+        <td>Cette propriété renvoie (ou requiert, si elle est définie) une <a href="The_Sequence_Object_Struct.htm">structure d'objet de séquence</a> et n'est disponible que pour les pistes de type <span class="inline">seqtracktype_sequence</span>.</td>
       </tr>
       <tr>
         <td><span class="inline">objectIndex</span></td>
-        <td><span data-keyref="Type_Asset_Object"><a href="../../../../../../The_Asset_Editors/Objects.htm" target="_blank">Object Asset</a></span></td>
-        <td>This property will return (or requires, if being set) an object index and is only available for tracks of the type <span class="inline">seqtracktype_instance</span>.</td>
+        <td><span data-keyref="Type_Asset_Object"><a data-rhwidget="HyperlinkPopover" href="../../../../../../The_Asset_Editors/Objects.htm">Objet Asset</a></span></td>
+        <td>Cette propriété renvoie (ou requiert, si elle est définie) un indice d'objet et n'est disponible que pour les pistes de type <span class="inline">seqtracktype_instance</span>.</td>
       </tr>
       <tr>
         <td><span class="inline">events</span></td>
-        <td><span data-keyref="Type_Array"><a href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span> of <span data-keyref="Type_String"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span>s</td>
-        <td>This property allows access to the <b>events</b> and <b>broadcast messages</b> associated with the keyframe data struct. You can get or set this property, and when getting it an array of strings is returned, and when setting it an array of strings should be specified. For more information on events, please see the section <a href="../Sequence_Events_Moments_Broadcast.htm">Sequence Events And Moments</a>. This property is only available for tracks of the type <span class="inline">seqtracktype_message</span>.</td>
+        <td><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Tableau</a></span> de <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Chaîne de caractères</a></span>s</td>
+        <td>Cette propriété permet d'accéder à <span class="notranslate">access</span> aux <b>événements</b> et aux <b>messages de diffusion</b> associés aux données d'image clé <span class="notranslate">struct</span>. Vous pouvez obtenir ou définir cette propriété. Lorsque vous l'obtenez, un tableau de chaînes est renvoyé, et lorsque vous le définissez, un tableau de chaînes doit être spécifié. Pour plus d'informations sur les événements, veuillez consulter la section <a href="../Sequence_Events_Moments_Broadcast.htm">Événements et moments de la séquence</a>. Cette propriété n'est disponible que pour les pistes de type <span class="inline">seqtracktype_message</span>.</td>
       </tr>
       <tr>
         <td><span class="inline">event</span></td>
-        <td><span data-keyref="Type_Method"><a href="../../../../../../GameMaker_Language/GML_Overview/Method_Variables.htm" target="_blank">Method</a></span></td>
-        <td>This property will return (or can be set to) the <a href="../../../../GML_Overview/Method_Variables.htm">method</a> associated with the keyframe data struct. If no method has been specified or you wish to remove the method, then the property should be -1. This property is only available for tracks of the type <span class="inline">seqtracktype_moment</span>.</td>
+        <td><span data-keyref="Type_Method"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Method_Variables.htm">Méthode</a></span></td>
+        <td>Cette propriété renverra (ou peut être réglée sur) les <a href="../../../../GML_Overview/Method_Variables.htm"><span class="notranslate">method</span></a> associée aux données d'image clé <span class="notranslate">struct</span>. Si aucune méthode n'a été spécifiée ou si vous souhaitez supprimer la méthode, la propriété doit être -1. Cette propriété n'est disponible que pour les pistes de type <span class="inline">seqtracktype_moment</span>.</td>
       </tr>
       <tr>
-        <td colspan="3"><em>Any additional variables listed in the table(s) below</em></td>
+        <td colspan="3"><em>Toute variable supplémentaire figurant dans le(s) tableau(x) ci-dessous</em></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p>The <span class="inline">playbackMode</span> variable can be one of the following constants:</p>
+  <p> </p>
+  <p>La variable <span class="inline">playbackMode</span> peut être l'une des constantes suivantes :</p>
   <table>
     <colgroup>
       <col />
@@ -102,28 +102,28 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Constant_Sequence_Audio_Key"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm" target="_blank">Sequence Audio Key Constant</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Constant_Sequence_Audio_Key"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm">Séquence Audio Key Constant</a></span></th>
       </tr>
       <tr>
         <th>Constant</th>
         <th>Description</th>
-        <th>Value</th>
+        <th>Valeur</th>
       </tr>
       <tr>
-        <td><span class="inline">seqaudiokey_loop</span></td>
-        <td>The sound will loop when played.</td>
-        <td>0</td>
+        <td><span class="notranslate"><span class="inline">seqaudiokey_loop</span></td>
+        <td>Le son est joué en boucle.</td>
+        <td><span class="notranslate">0</span></td>
       </tr>
       <tr>
-        <td><span class="inline">seqaudiokey_oneshot</span></td>
-        <td>The sound will only play once then stop.</td>
-        <td>1</td>
+        <td><span class="notranslate"><span class="inline">seqaudiokey_oneshot</span></td>
+        <td>Le son ne sera joué qu'une fois puis s'arrêtera.</td>
+        <td><span class="notranslate">1</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h2 id="text">Text Track Data</h2>
-  <p>The struct will contain the following additional variables if assigned to a <a href="../../../../../The_Asset_Editors/Sequence_Properties/Text_in_Sequences.htm">text track</a> (<span class="inline">seqtracktype_text</span>):</p>
+  <p> </p>
+  <h2 id="text">Données de la piste de texte</h2>
+  <p>Le site <span class="notranslate">struct</span> contiendra les variables supplémentaires suivantes s'il est affecté à une <a href="../../../../../The_Asset_Editors/Sequence_Properties/Text_in_Sequences.htm">piste de texte</a> (<span class="inline">seqtracktype_text</span>) :</p>
   <table>
     <colgroup>
       <col />
@@ -132,7 +132,7 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Struct_Sequence_Keyframe_Data"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm" target="_blank">Sequence Keyframe Data Struct</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Struct_Sequence_Keyframe_Data"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm">Structure des données d'images-clés de la séquence</a></span></th>
       </tr>
       <tr>
         <th>Variable</th>
@@ -141,33 +141,33 @@
       </tr>
       <tr>
         <td><span class="inline">text</span></td>
-        <td><span data-keyref="Type_String"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>This is the text string that is drawn on the track.</td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Chaîne de caractères</a></span></td>
+        <td>Il s'agit de la chaîne de texte qui est dessinée sur la piste.</td>
       </tr>
       <tr>
         <td><span class="inline">wrap</span></td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>This is a boolean that indicates whether the text should be wrapped (<span class="inline">true</span>) or not (<span class="inline">false</span>).</td>
+        <td><span data-keyref="Type_Bool"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Booléen</a></span></td>
+        <td>Il s'agit d'un booléen qui indique si le texte doit être enveloppé (<span class="inline">true</span>) ou non (<span class="inline">false</span>).</td>
       </tr>
       <tr>
         <td><span class="inline">alignmentH</span></td>
-        <td><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text" target="_blank">Sequence Text Alignment Constant</a></span></td>
-        <td>This is the horizontal alignment of the text, and will be one of the <span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text" target="_blank">Sequence Text Alignment Constant</a></span>s given below.</td>
+        <td><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text">Constante d'alignement du texte de la séquence</a></span></td>
+        <td>Il s'agit de l'alignement horizontal du texte. <span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text">Constante d'alignement du texte de la séquence</a></span>données ci-dessous.</td>
       </tr>
       <tr>
         <td><span class="inline">alignmentV</span></td>
-        <td><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text" target="_blank">Sequence Text Alignment Constant</a></span></td>
-        <td>This is the vertical alignment of the text, and will be one of the <span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text" target="_blank">Sequence Text Alignment Constant</a></span>s given below.</td>
+        <td><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text">Constante d'alignement du texte de la séquence</a></span></td>
+        <td>Il s'agit de l'alignement vertical du texte. <span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text">Constante d'alignement du texte de la séquence</a></span>données ci-dessous.</td>
       </tr>
       <tr>
         <td><span class="inline">fontIndex</span></td>
-        <td><span data-keyref="Type_Asset_Font"><a href="../../../../../../The_Asset_Editors/Fonts.htm" target="_blank">Font Asset</a></span></td>
-        <td>This is the <span data-keyref="Type_Asset_Font"><a href="../../../../../../The_Asset_Editors/Fonts.htm" target="_blank">Font Asset</a></span> used by the text track.</td>
+        <td><span data-keyref="Type_Asset_Font"><a data-rhwidget="HyperlinkPopover" href="../../../../../../The_Asset_Editors/Fonts.htm">Font Asset</a></span></td>
+        <td>Il s'agit de la <span data-keyref="Type_Asset_Font"><a data-rhwidget="HyperlinkPopover" href="../../../../../../The_Asset_Editors/Fonts.htm">Font Asset</a></span> utilisée par la piste de texte.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p><span class="inline">alignmentH</span> can be any of the following constants:</p>
+  <p> </p>
+  <p><span class="inline">alignmentH</span> peut être l'une des constantes suivantes :</p>
   <table>
     <colgroup>
       <col />
@@ -175,65 +175,65 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text" target="_blank">Sequence Text Alignment Constant</a></span> (<span class="inline">alignmentH</span>)</th>
+        <th colspan="2"><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text">Constante d'alignement des séquences et des textes</a></span> (<span class="inline">alignmentH</span>)</th>
       </tr>
       <tr>
         <th>Constant</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td><span class="inline">seqtextkey_left</span></td>
-        <td>The text will be aligned to the left of the frame</td>
+        <td><span class="notranslate"><span class="inline">seqtextkey_left</span></td>
+        <td>Le texte sera aligné à gauche du cadre.</td>
       </tr>
       <tr>
-        <td><span class="inline">seqtextkey_right</span></td>
-        <td>The text will be aligned to the right of the frame</td>
+        <td><span class="notranslate"><span class="inline">seqtextkey_right</span></td>
+        <td>Le texte sera aligné à droite du cadre.</td>
       </tr>
       <tr>
-        <td><span class="inline">seqtextkey_center</span></td>
-        <td>The text will be centred horizontally within the frame</td>
+        <td><span class="notranslate"><span class="inline">seqtextkey_center</span></td>
+        <td>Le texte sera centré horizontalement dans le cadre.</td>
       </tr>
       <tr>
-        <td><span class="inline">seqtextkey_justify</span></td>
-        <td>The text will be justified within the frame</td>
+        <td><span class="notranslate"><span class="inline">seqtextkey_justify</span></td>
+        <td>Le texte sera justifié dans le cadre</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p><span class="inline">alignmentV</span> can be any of the following constants:</p>
+  <p> </p>
+  <p><span class="inline">alignmentV</span> peut être l'une des constantes suivantes :</p>
   <table>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text" target="_blank">Sequence Text Alignment Constant</a></span> (<span class="inline">alignmentV</span>)</th>
+        <th colspan="2"><span data-keyref="Type_Constant_Sequence_TextKey_Alignment"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Data_Struct.htm#text">Constante d'alignement des séquences et des textes</a></span> (<span class="inline">alignmentV</span>)</th>
       </tr>
       <tr>
         <th>Constant</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td><span class="inline">seqtextkey_top</span></td>
-        <td>The text will be aligned to the top of the frame</td>
+        <td><span class="notranslate"><span class="inline">seqtextkey_top</span></td>
+        <td>Le texte sera aligné sur le haut du cadre.</td>
       </tr>
       <tr>
-        <td><span class="inline">seqtextkey_bottom</span></td>
-        <td>The text will be aligned to the bottom of the frame</td>
+        <td><span class="notranslate"><span class="inline">seqtextkey_bottom</span></td>
+        <td>Le texte sera aligné sur le bas du cadre.</td>
       </tr>
       <tr>
-        <td><span class="inline">seqtextkey_middle</span></td>
-        <td>The text will be centred vertically within the frame</td>
+        <td><span class="notranslate"><span class="inline">seqtextkey_middle</span></td>
+        <td>Le texte sera centré verticalement dans le cadre.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="The_Sequence_Object_Struct.htm">The Sequence Object Struct</a></div>
+        <div style="float:left">Retour : <a href="../Sequences.htm">Séquences</a></div>
+        <div style="float:right">Suivant : <a href="The_Sequence_Object_Struct.htm">La structure de l'objet séquence</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 The Keyframe Data Struct

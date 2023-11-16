@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Rooms</title>
+  <title>Chambres</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the different functions and variables associated with Rooms" />
   <meta name="rh-index-keywords" content="" />
@@ -14,73 +14,73 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Rooms</span></h1>
-  <p>Rooms are created in <a data-xref="{title}" href="../../../../The_Asset_Editors/Rooms.htm">The Room Editor</a> in <span data-keyref="GameMaker Name">GameMaker</span><span> and </span>are where everything happens in your game. You must have at least one room in any game for it to run, but you may need many more depending on the type of game and how you structure your project. This section has all the general GML functions and variables related to rooms and for getting information about them as well as for setting certain properties within them.</p>
-  <p>The following <a href="../../../GML_Overview/Variables/Global_Variables.htm">global variables</a> and functions can be used for getting basic information about any given room:</p>
+  <h1>Chambres</h1>
+  <p>Les pièces sont créées dans l'<a href="../../../../The_Asset_Editors/Rooms.htm">éditeur de pièces</a> de <span data-keyref="GameMaker Name">GameMaker</span><span> et </span>c'est là que tout se passe dans votre jeu. Vous devez avoir au moins une room dans un jeu pour qu'il fonctionne, mais vous pouvez en avoir besoin de beaucoup plus selon le type de jeu et la façon dont vous structurez votre projet. Cette section présente toutes les fonctions et variables générales de <span class="notranslate">GML</span> liées aux pièces, permettant d'obtenir des informations sur celles-ci et de définir certaines propriétés.</p>
+  <p>Les <a href="../../../GML_Overview/Variables/Global_Variables.htm">variables</a> et fonctions <a href="../../../GML_Overview/Variables/Global_Variables.htm">globales</a> suivantes peuvent être utilisées pour obtenir des informations de base sur une pièce donnée :</p>
   <ul class="colour">
-    <li><a href="room_first.htm">room_first</a></li>
-    <li><a href="room_last.htm">room_last</a></li>
-    <li><a href="room_next.htm">room_next</a></li>
-    <li><a href="room_previous.htm">room_previous</a></li>
-    <li><a href="room.htm">room</a></li>
-    <li><a href="room_speed.htm">room_speed</a> <span data-conref="../../../../assets/snippets/Tag_deprecated.hts"> </span></li>
-    <li><a href="room_height.htm">room_height</a></li>
-    <li><a href="room_width.htm">room_width</a></li>
-    <li><a href="room_persistent.htm">room_persistent</a></li>
+    <li><a href="room_first.htm"><span class="notranslate">room_first</span></a></li>
+    <li><a href="room_last.htm"><span class="notranslate">room_last</span></a></li>
+    <li><a href="room_next.htm"><span class="notranslate">room_next</span></a></li>
+    <li><a href="room_previous.htm"><span class="notranslate">room_previous</span></a></li>
+    <li><a href="room.htm"><span class="notranslate">room</span></a></li>
+    <li><a href="room_speed.htm"><span class="notranslate">room_speed</span></a></li>
+    <li><a href="room_height.htm"><span class="notranslate">room_height</span></a></li>
+    <li><a href="room_width.htm"><span class="notranslate">room_width</span></a></li>
+    <li><a href="room_persistent.htm"><span class="notranslate">room_persistent</span></a></li>
   </ul>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> The variables listed above will not be valid in a script, as scripts are executed before the first room is loaded.<br />
-    <br />
-    This only applies to code written at the root of a script, but not to functions created inside scripts, as those functions can be executed at any time during the game.
+  <p class="note"><span class="note">NOTE</span> Les variables énumérées ci-dessus ne seront pas valables dans un script, car les scripts sont exécutés avant le chargement de la première pièce.<br>
+    <br>
+    Cela ne s'applique qu'au code écrit à la racine d'un script, mais pas aux fonctions créées à l'intérieur des scripts, car ces fonctions peuvent être exécutées à tout moment pendant le jeu.
   </p>
-  <p>You can also use the following functions to get the name of the current room (as defined in the <a href="../../../../Introduction/The_Asset_Browser.htm">Asset Browser</a>) as well as move between rooms:</p>
+  <p>Vous pouvez également utiliser les fonctions suivantes pour obtenir le nom de la pièce actuelle (telle que définie dans le <a href="../../../../Introduction/The_Asset_Browser.htm">navigateur d'actifs</a>) ainsi que pour vous déplacer entre les pièces :</p>
   <ul class="colour">
-    <li><a href="room_get_name.htm">room_get_name</a></li>
-    <li><a href="room_goto.htm">room_goto</a></li>
-    <li><a href="room_goto_next.htm">room_goto_next</a></li>
-    <li><a href="room_goto_previous.htm">room_goto_previous</a></li>
-    <li><a href="room_restart.htm">room_restart</a></li>
+    <li><a href="room_get_name.htm"><span class="notranslate">room_get_name</span></a></li>
+    <li><a href="room_goto.htm"><span class="notranslate">room_goto</span></a></li>
+    <li><a href="room_goto_next.htm"><span class="notranslate">room_goto_next</span></a></li>
+    <li><a href="room_goto_previous.htm"><span class="notranslate">room_goto_previous</span></a></li>
+    <li><a href="room_restart.htm"><span class="notranslate">room_restart</span></a></li>
   </ul>
-  <p> </p>
-  <p>Next, we have a series of functions that can be used to change rooms and their contents or even create new rooms and add to them. It should be noted that these functions should <i>never be run from within the room that you wish to change</i>, but rather be run from an instance in another room first. Also note that if you change any room asset in this way, the change is <strong>permanent</strong> and will be maintained for the entire duration of the game, even if you call the room_restart() function (closing and restarting the game will reset the room properties though).</p>
+  <p> </p>
+  <p>Ensuite, nous avons une série de fonctions qui peuvent être utilisées pour modifier les salles et leur contenu ou même créer de nouvelles salles et les compléter. Il convient de noter que ces fonctions <i>ne</i> doivent <i>jamais être exécutées à partir de la pièce que vous souhaitez modifier</i>, mais plutôt à partir d'une instance d'une autre pièce. Notez également que si vous modifiez un actif de salle de cette manière, le changement est <strong>permanent</strong> et sera maintenu pendant toute la durée du jeu, même si vous appelez la fonction room_restart() (la fermeture et le redémarrage du jeu réinitialiseront les propriétés de la salle).</p>
   <ul class="colour">
-    <li><a href="room_exists.htm">room_exists</a></li>
-    <li><a href="room_add.htm">room_add</a></li>
-    <li><a href="room_duplicate.htm">room_duplicate</a></li>
-    <li><a href="room_assign.htm">room_assign</a></li>
-    <li><a href="room_instance_add.htm">room_instance_add</a></li>
-    <li><a href="room_instance_clear.htm">room_instance_clear</a></li>
-    <li><a href="room_set_height.htm">room_set_height</a></li>
-    <li><a href="room_set_width.htm">room_set_width</a></li>
-    <li><a href="room_set_persistent.htm">room_set_persistent</a></li>
-    <li><a href="room_set_view_enabled.htm">room_set_view_enabled</a></li>
-    <li><a href="room_set_viewport.htm">room_set_viewport</a></li>
-    <li><a href="room_get_viewport.htm">room_get_viewport</a></li>
-    <li><a href="room_set_camera.htm">room_set_camera</a></li>
-    <li><a href="room_get_camera.htm">room_get_camera</a></li>
+    <li><a href="room_exists.htm"><span class="notranslate">room_exists</span></a></li>
+    <li><a href="room_add.htm"><span class="notranslate">room_add</span></a></li>
+    <li><a href="room_duplicate.htm"><span class="notranslate">room_duplicate</span></a></li>
+    <li><a href="room_assign.htm"><span class="notranslate">room_assign</span></a></li>
+    <li><a href="room_instance_add.htm"><span class="notranslate">room_instance_add</span></a></li>
+    <li><a href="room_instance_clear.htm"><span class="notranslate">room_instance_clear</span></a></li>
+    <li><a href="room_set_height.htm"><span class="notranslate">room_set_height</span></a></li>
+    <li><a href="room_set_width.htm"><span class="notranslate">room_set_width</span></a></li>
+    <li><a href="room_set_persistent.htm"><span class="notranslate">room_set_persistent</span></a></li>
+    <li><a href="room_set_view_enabled.htm"><span class="notranslate">room_set_view_enabled</span></a></li>
+    <li><a href="room_set_viewport.htm"><span class="notranslate">room_set_viewport</span></a></li>
+    <li><a href="room_get_viewport.htm"><span class="notranslate">room_get_viewport</span></a></li>
+    <li><a href="room_set_camera.htm"><span class="notranslate">room_set_camera</span></a></li>
+    <li><a href="room_get_camera.htm"><span class="notranslate">room_get_camera</span></a></li>
   </ul>
-  <p> </p>
-  <p>There are also a number of different functions related to creating and manipulating the different types of elements that can be placed on layers in the room. These functions are listed in the appropriate sections for each element type listed below:</p>
+  <p> </p>
+  <p>Il existe également un certain nombre de fonctions différentes liées à la création et à la manipulation des différents types d'éléments qui peuvent être placés sur des couches dans la pièce. Ces fonctions sont énumérées dans les sections appropriées pour chaque type d'élément énuméré ci-dessous :</p>
   <ul class="colour">
-    <li><a href="General_Layer_Functions/General_Layer_Functions.htm">General Layer Functions</a></li>
-    <li><a href="Tile_Map_Layers/Tile_Map_Layers.htm">Tile Map Layers</a></li>
-    <li><a href="Background_Layers/Background_Layers.htm">Background Layers</a></li>
-    <li><a href="Sprite_Layers/Sprite_Layers.htm">Sprite Layers</a></li>
-    <li><a href="Sequence_Layers/Sequence_Layers.htm">Sequence Layers</a></li>
-    <li><a href="Filter_Effect_Layers/Filter_Effect_Functions.htm">Filter and Effect Functions</a></li>
+    <li><a href="General_Layer_Functions/General_Layer_Functions.htm">Fonctions de la couche générale</a></li>
+    <li><a href="Tile_Map_Layers/Tile_Map_Layers.htm">Les couches de la carte Tile</a></li>
+    <li><a href="Background_Layers/Background_Layers.htm">Couches d'arrière-plan</a></li>
+    <li><a href="Sprite_Layers/Sprite_Layers.htm">Couches de sprites</a></li>
+    <li><a href="Sequence_Layers/Sequence_Layers.htm">Couches de séquences</a></li>
+    <li><a href="Filter_Effect_Layers/Filter_Effect_Functions.htm">Fonctions de filtre et d'effet</a></li>
   </ul>
-  <p> </p>
-  <p>An important thing to note when creating room layers is that <i>you can have multiple different element types on one layer</i>. So, for example, you may have a layer for enemies, and on that layer have the enemy instances as well as certain sprite assets that are only related to that enemy. Or you could have a background element with a tile map element to create the look of a room. This is not permitted in the room editor, but when creating things dynamically you can do this, which is why functions like <a href="General_Layer_Functions/layer_get_all_elements.htm"><span class="inline">layer_get_all_elements()</span></a> exist.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p>Une chose importante à noter lors de la création de couches de salle est que <i>vous pouvez avoir plusieurs types d'éléments différents sur une seule couche</i>. Ainsi, par exemple, vous pouvez avoir un calque pour les ennemis, et sur ce calque, vous avez les instances de l'ennemi ainsi que certains actifs <span class="notranslate">sprite</span> qui sont uniquement liés à cet ennemi. Ou vous pouvez avoir un élément d'arrière-plan avec un élément de carte de tuiles pour créer l'aspect d'une pièce. Cela n'est pas autorisé dans l'éditeur de salle, mais lorsque vous créez des choses dynamiquement, vous pouvez le faire, c'est pourquoi des fonctions comme <a href="General_Layer_Functions/layer_get_all_elements.htm"><span class="inline">layer_get_all_elements()</span></a> existent.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Asset_Management.htm">Asset Management</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="../Extensions/Extensions.htm">Extensions</a></div>
+        <div style="float:left">Retour : <a href="../Asset_Management.htm">Gestion des actifs</a></div>
+        <div style="float:right">Suivant : <a data-xref="{title}" href="../Extensions/Extensions.htm">Extensions</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Rooms

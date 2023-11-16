@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Create Grid</title>
+  <title>Créer une grille</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Create Grid action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Create Grid" />
@@ -14,47 +14,47 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Create Grid Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Create_Grid.png" /> Create Grid</h1>
-  <p>This action will create a new <b>grid</b> data-structure and return the index value so you can later access the grid through the other Data Structure actions. The grid index will be returned to the Target Variable that you supply, which can have been
-    created earlier using either <a href="../Common/Assign_Variable.htm">Assign Variable</a> or <a href="../Common/Declare_Temporary_Variable.htm">Declare Temp</a>, or you can flag the &quot;Temp&quot; checkbox to name and create a temporary local variable
-    to store the value until the end of the script or event. Note that unlike other data structures, grids are <i>not</i> created &quot;empty&quot;, and each cell of a newly created grid will have the value 0. It&#39;s up to you to change the cell data
-    or clear the grid yourself to another value using the action <a href="Clear_Grid.htm">Clear Grid</a>. Note that you can create additional DS grids by clicking the plus icon<span> <span><img alt="Expand Icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png"/></span></span>
-    beside the action, and selecting another variable to hold the grid ID and and giving the width and height values again.<b></b></p>
-  <p class="note"><b>IMPORTANT!</b> Creating any data structure uses up memory on the target platform, and as such all data structures should be free when no longer needed using the action <a href="Free_Data_Structure.htm">Free Data Structure</a> otherwise you get a
-    memory leak which can impair your games performance or even cause it to crash. This is particularly relevant when using temporary local variables to store data structure indices, as these variables are removed at the end of the code or event, but
-    that does not mean the data structure is removed too! The data structure will still exist, only you will have no way to reference it, so either use an instance variable and free the structure at a later time, or free the structure before the end of
-    the event or function if its index is stored in a temporary variable.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Create Grid Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Create_Grid.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Créer une grille</h1>
+  <p>Cette action créera une nouvelle structure de données de <b>grille</b> et renverra la valeur de l'index afin que vous puissiez plus tard <span class="notranslate">access</span> la grille par le biais des autres actions de structure de données. L'index de la grille sera renvoyé à la variable cible que vous fournissez, qui peut avoir été
+    qui peut avoir été créée précédemment en utilisant soit <a href="../Common/Assign_Variable.htm">Assign Variable</a> ou <a href="../Common/Declare_Temporary_Variable.htm">Declare Temp</a>, ou vous pouvez cocher la case &quot;Temp&quot; pour nommer et créer une variable locale temporaire pour stocker la valeur jusqu'à la fin du projet.
+    pour stocker la valeur jusqu'à la fin du script ou de l'événement. Notez que contrairement à d'autres structures de données, les grilles <i>ne</i> sont <i>pas</i> créées &quot;vides&quot;, et chaque cellule d'une grille nouvellement créée aura la valeur 0. C'est à vous de modifier les données de la cellule
+    ou d'effacer vous-même la grille à une autre valeur en utilisant l'action <a href="Clear_Grid.htm">Effacer la grille</a>. Notez que vous pouvez créer des grilles DS supplémentaires en cliquant sur l'icône plus<span> <span><img></span></span>
+    à côté de l'action, et en sélectionnant une autre variable pour contenir l'ID de la grille et en donnant à nouveau les valeurs de largeur et de hauteur.<b></b></p>
+  <p class="note"><b>IMPORTANT !</b> La création de toute structure de données utilise de la mémoire sur la plate-forme cible, et en tant que telle, toutes les structures de données doivent être libérées lorsqu'elles ne sont plus nécessaires en utilisant l'action <a href="Free_Data_Structure.htm">Free Data Structure</a>, sinon vous obtenez une fuite de mémoire qui peut nuire aux performances de votre jeu, voire provoquer un crash.
+    fuites de mémoire qui peuvent nuire aux performances de votre jeu ou même le faire planter. Ceci est particulièrement pertinent lorsque vous utilisez des variables locales temporaires pour stocker les indices de la structure de données, car ces variables sont supprimées à la fin du code ou de l'événement, mais
+    mais cela ne signifie pas que la structure de données est également supprimée ! La structure de données existera toujours, mais vous n'aurez aucun moyen d'y faire référence, alors soit vous utilisez une variable d'instance et libérez la structure ultérieurement, soit vous libérez la structure avant la fin de l'événement ou de la fonction si son indice est égal à zéro.
+    l'événement ou de la fonction si son index est stocké dans une variable temporaire.</p>
+  <p> </p>
+  <h4>Syntaxe de l'action :</h4>
+  <p><img alt="Create Grid Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Create_Grid.png" /></p>
+  <h4>Arguments :</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to store the grid index in</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>La variable cible pour stocker l'index de la grille dans</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Create Grid Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Create_Grid.png" />The above action block code creates two temporary variables to hold the number of 32px cells
-    along the width and height of the room, and then creates a new global scope variable to hold the index of a newly created grid data structure. The grid is then cleared using the keyword <span class="inline">noone</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Exemple :</h4>
+  <p><img>Le code du bloc d'action ci-dessus crée deux variables temporaires pour contenir le nombre de cellules de 32px
+    le long de la largeur et de la hauteur de la pièce, puis crée une nouvelle variable de portée globale pour contenir l'index d'une structure de données de grille nouvellement créée. La grille est ensuite effacée à l'aide du mot-clé <span class="inline">noone</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Data_Structure_Actions.htm">Data Structure Actions</a></div>
-        <div style="float:right">Next: <a href="Create_Stack.htm">Create Stack</a></div>
+        <div style="float:left">Retour : <a href="Data_Structure_Actions.htm">Actions sur les structures de données</a></div>
+        <div style="float:right">Suivant : <a href="Create_Stack.htm">Créer une pile</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create Grid

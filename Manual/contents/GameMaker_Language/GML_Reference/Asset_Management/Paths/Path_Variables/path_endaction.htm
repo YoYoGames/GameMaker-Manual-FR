@@ -6,7 +6,7 @@
   <title>path_endaction</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function path_endaction" />
   <meta name="rh-index-keywords" content="path_endaction" />
@@ -15,7 +15,7 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>path_endaction</h1>
-  <p>This variable can be used to get or to change the reaction of an instance when it reaches the end of the current path. Normally you would set this when you start the path using <a href="../path_start.htm"><span class="inline">path_start()</span></a> but you may wish to change this behaviour depending on any number of events in your game. The available values are expressed using the following constants:</p>
+  <p>Cette variable peut être utilisée pour obtenir ou modifier la réaction d'une instance lorsqu'elle atteint la fin du chemin actuel. Normalement, vous devez définir cette variable lorsque vous commencez le chemin en utilisant <a href="../path_start.htm"><span class="inline">path_start()</span></a> mais vous pouvez souhaiter modifier ce comportement en fonction d'un certain nombre d'événements dans votre jeu. Les valeurs disponibles sont exprimées à l'aide des constantes suivantes :</p>
   <table>
     <colgroup>
       <col />
@@ -30,47 +30,47 @@
         <th>Description</th>
       </tr>
       <tr>
-        <td><span class="inline">path_action_stop</span></td>
-        <td>Stop the path</td>
+        <td><span class="notranslate"><span class="inline">path_action_stop</span></td>
+        <td>Arrêter le chemin</td>
       </tr>
       <tr>
-        <td><span class="inline">path_action_restart</span></td>
-        <td>Continue from start position, jumping to the start if the path is not closed</td>
+        <td><span class="notranslate"><span class="inline">path_action_restart</span></td>
+        <td>Continuer à partir de la position de départ, en sautant au départ si le chemin n'est pas fermé.</td>
       </tr>
       <tr>
-        <td><span class="inline">path_action_continue</span></td>
-        <td>Start the path again from the current position</td>
+        <td><span class="notranslate"><span class="inline">path_action_continue</span></td>
+        <td>Recommencer le parcours à partir de la position actuelle</td>
       </tr>
       <tr>
-        <td><span class="inline">path_action_reverse</span></td>
-        <td>Reverse the speed of the path (run the path in reverse)</td>
+        <td><span class="notranslate"><span class="inline">path_action_reverse</span></td>
+        <td>Inverser la vitesse du chemin (exécuter le chemin en sens inverse)</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">path_endaction;</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Constant_Path_End_Action"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Paths/Path_Variables/path_endaction.htm">Path End Action Constant</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if (path_endaction == path_action_stop)<br />
     {<br />
         path_endaction = path_action_reverse;<br />
     }</p>
-  <p>The above code will check the path end action and if it&#39;s set to stop, then the end action will be changed to reverse.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifiera l'action de fin de chemin et s'il est réglé sur stop, alors l'action de fin sera changée en marche arrière.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Path_Variables.htm">Path Variables</a></div>
-        <div style="float:right">Next: <a href="../path_start.htm">path_start</a></div>
+        <div style="float:left">Retour : <a href="Path_Variables.htm">Variables de chemin</a></div>
+        <div style="float:right">Suivant : <a href="../path_start.htm"><span class="notranslate">path_start</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 path_endaction

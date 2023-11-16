@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>view_camera</title>
+  <title>vue_caméra</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for view_camera" />
   <meta name="rh-index-keywords" content="view_camera" />
@@ -14,32 +14,32 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>view_camera</h1>
-  <p>This array holds the unique camera ID assigned to the given view port, and can be set to a new camera or read to get the current camera, returning -1 if no camera is assigned. You can have up to 8 view ports active in a room (array values 0 through 7), and can assign a camera to any of them by simply setting this variable to the camera ID value (as returned by the functions <a href="camera_create.htm"><span class="inline">camera_create()</span></a> or <a href="camera_create_view.htm"><span class="inline">camera_create_view()</span></a>). If you have set the camera to a view port through the Room Editor, this variable will hold the camera ID for that port.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>vue_caméra</h1>
+  <p>Ce tableau contient l'ID unique de la caméra attribuée au port de vue donné, et peut être défini pour une nouvelle caméra ou lu pour obtenir la caméra actuelle, renvoyant -1 si aucune caméra n'est attribuée. Vous pouvez avoir jusqu'à 8 ports de vue actifs dans une pièce (valeurs de tableau 0 à 7), et vous pouvez affecter une caméra à l'un d'entre eux en définissant simplement cette variable à la valeur de l'ID de la caméra (telle que renvoyée par les fonctions <a href="camera_create.htm"><span class="inline">camera_create()</span></a> ou <a href="camera_create_view.htm"><span class="inline">camera_create_view()</span></a>). Si vous avez défini la caméra sur un port de vue via l'éditeur de salle, cette variable contient l'ID de la caméra pour ce port.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">view_camera[0 ... 7];</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_ID_Camera">Camera ID</span> or -1 (if no camera is assigned)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if view_camera[0] == -1<br />
     {<br />
         view_camera[0] = camera_create_view(0, 0, room_width, room_height);<br />
     }</p>
-  <p>The above code checks to see if the view port [0] has a camera attached to it and if it doesn&#39;t then one is created and set to it.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifie si une caméra est attachée au port de vue [0] et si ce n'est pas le cas, une caméra est créée et fixée à ce port.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_View_Ports.htm">Cameras And View Ports</a></div>
-        <div style="float:right">Next: <a href="view_current.htm">view_current</a></div>
+        <div style="float:left">Retour : <a href="Cameras_And_View_Ports.htm">Caméras et ports de vue</a></div>
+        <div style="float:right">Suivant : <a href="view_current.htm"><span class="notranslate">view_current</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 view_camera

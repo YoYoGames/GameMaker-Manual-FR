@@ -6,7 +6,7 @@
   <title>ds_list_shuffle</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for ds_list_shuffle" />
   <meta name="rh-index-keywords" content="ds_list_shuffle" />
@@ -15,46 +15,44 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ds_list_shuffle</h1>
-  <p>With this function you can shuffle a list, which will re-order all the component values into random positions from those in which they were originally added to the list.</p>
-  <div data-conref="../../../../assets/snippets/Note_randomise_shuffle.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Cette fonction vous permet de mélanger une liste, ce qui réorganisera toutes les valeurs des composants dans des positions aléatoires par rapport à celles dans lesquelles ils ont été ajoutés à l'origine à la liste.</p>
+  <p class="note"><b>REMARQUE</b>: cette fonction mélangera les éléments de la liste aux mêmes positions chaque fois que le jeu est relancé, car <span data-keyref="GameMaker Name">GameMaker</span> génère à chaque fois la même graine aléatoire initiale pour faciliter le code de <span class="notranslate">debugging</span>. Pour éviter ce comportement, utilisez <span style="font-size:1px;"><a href="../../Maths_And_Numbers/Number_Functions/randomise.htm"><span class="inline">randomise()</span></a></span> au début de votre jeu. Cela n'est vrai que lorsque vous testez le jeu et que vous l'envoyez à l'adresse <span class="notranslate">debugging</span>, car l'exécutable final ne présentera pas ce comportement et sera aléatoire à chaque partie.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">ds_list_shuffle(id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
-      </tr>
+     </tr>
       <tr>
-        <td>id</td>
-        <td><span data-keyref="Type_ID_DS_List"><a href="../../../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Lists/ds_list_create.htm" target="_blank">DS List ID</a></span></td>
-        <td>The id of the list to shuffle.</td>
-      </tr>
+        <td><span class="notranslate">id</span></td><td><span data-keyref="Type_ID_DS_List"></span></td>
+        <td><span class="notranslate">The id of the list to shuffle.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if restart<br />
     {<br />
         ds_list_shuffle(card_list);<br />
     }</p>
-  <p>The above code will shuffle the list indexed in the variable &quot;card_list&quot; if the variable &quot;restart&quot; is flagged as <span class="inline">true</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus mélangera la liste indexée dans la variable &quot;card_list&quot; si la variable &quot;restart&quot; est signalée comme <span class="inline">true</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="DS_Lists.htm">DS Lists</a></div>
-        <div style="float:right">Next: <a href="ds_list_sort.htm">ds_list_sort</a></div>
+        <div style="float:left">Retour : <a href="DS_Lists.htm">Listes de DS</a></div>
+        <div style="float:right">Suivant : <a href="ds_list_sort.htm"><span class="notranslate">ds_list_sort</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 ds_list_shuffle

@@ -2,15 +2,15 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gamepad_get_mapping</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Reference page for gamepad_get_mapping"/>
-  <meta name="rh-index-keywords" content="gamepad_get_mapping"/>
-  <meta name="search-keywords" content="gamepad_get_mapping"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for gamepad_get_mapping" />
+  <meta name="rh-index-keywords" content="gamepad_get_mapping" />
+  <meta name="search-keywords" content="gamepad_get_mapping" />
   <meta name="is_pure" content="true" />
 </head>
 
@@ -20,49 +20,49 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gamepad_get_mapping</h1>
-  <p>This function can be used to retrieve the mapping string for the gamepad. This string will be either:</p>
+  <p>Cette fonction peut être utilisée pour récupérer la chaîne de mappage pour le gamepad. Cette chaîne sera soit :</p>
   <ul class="colour">
-    <li>The current map string for the gamepad, for example:
-      <p class="code">&quot;050000005e040000fd020000ffff3f00,Xbox Wireless Controller,a:b0,b:b1,start:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b6,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,rightshoulder:b10,rightstick:b8,righttrigger:a5,rightx:a2,righty:a3,x:b2,y:b3,platform:android&quot;</p>
+    <li>La chaîne de la carte actuelle pour le gamepad, par exemple :
+     <p class="code">&quot;050000005e040000fd020000ffff3f00,Xbox Wireless Controller,a:b0,b:b1,start:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b6,leftshoulder:b9,leftstick:b7,lefttrigger:a4,leftx:a0,lefty:a1,rightshoulder:b10,rightstick:b8,righttrigger:a5,rightx:a2,righty:a3,x:b2,y:b3,platform:android&quot;</p>
     </li>
-    <li>A string with &quot;no mapping&quot; if there is no mapping set (this is <i>not</i> the same as when no mapping is available)</li>
-    <li>A string with &quot;device index out of range&quot; if the slot index is not a valid gamepad index</li>
-    <li>An empty string &quot;&quot; if no mapping is available for the connected gamepad</li>
+    <li>Une chaîne avec &quot;no mapping&quot; s'il n'y a pas de mapping défini (ce <i>n'</i> est <i>pas</i> la même chose que lorsqu'aucun mapping n'est disponible)</li>
+    <li>Une chaîne avec &quot;device index out of range&quot; si l'indice de l'emplacement n'est pas un indice de manette de jeu valide.</li>
+    <li>Une chaîne vide &quot;&quot; si aucun mappage n'est disponible pour la manette de jeu connectée.</li>
   </ul>
-  <p>For more information on the formatting of the returned map string, please see the function <a href="gamepad_test_mapping.htm"><span class="inline">gamepad_test_mapping()</span></a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Pour plus d'informations sur le formatage de la chaîne de caractères retournée, veuillez consulter la fonction <a href="gamepad_test_mapping.htm"><span class="inline">gamepad_test_mapping()</span></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">gamepad_get_mapping(index);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
+        <th>Arguments</th><th>Type</th>
         <th>Description</th>
      </tr>
       <tr>
-        <td>index</td><td><span data-keyref="Type_Real"></span></td>
-        <td>Which gamepad index &quot;slot&quot; to get the mapping from.</td>
+        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">Which gamepad index &quot;slot&quot; to get the mapping from.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_String"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">var _gpMap = gamepad_get_mapping(global.PadIndex);<br/> show_debug_message(&quot;Gamepad Mapping = &quot; + _gpMap);</p>
-  <p>The above code get the map string for the given gamepad slot, and then output it to the console for debugging.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus récupère la chaîne de caractères de la carte pour le slot de gamepad donné, puis l'envoie à la console pour <span class="notranslate">debugging</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
-        <div style="float:right">Next: <a href="gamepad_test_mapping.htm">gamepad_test_mapping</a></div>
+        <div style="float:left">Retour : <a href="Gamepad_Input.htm">Entrée de la manette de jeu</a></div>
+        <div style="float:right">Suivant : <a href="gamepad_test_mapping.htm"><span class="notranslate">gamepad_test_mapping</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_get_mapping

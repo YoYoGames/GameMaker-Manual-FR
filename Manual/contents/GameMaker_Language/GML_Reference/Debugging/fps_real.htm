@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>fps_real</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for fps_real" />
   <meta name="rh-index-keywords" content="fps_real" />
@@ -14,34 +14,34 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">fps_real</span></h1>
-  <p>In <span data-keyref="GameMaker Name">GameMaker</span> there are two main ways that can be used to tell the speed at which your game runs. The <a href="../General_Game_Control/game_get_speed.htm"><span class="inline">game speed</span></a> (as specified in the Game Options) and the <span class="inline">fps</span> (frames per second). These values are often confused, but basically one is the number of game steps that <span data-keyref="GameMaker Name">GameMaker</span> is supposed to be completing in a second (game speed), while the other is the number of CPU steps that <span data-keyref="GameMaker Name">GameMaker</span> is actually completing in a second (the real fps), and this value is generally much higher than the game speed, but will drop as your game gets more complex and uses more processing power to maintain the set room speed.</p>
-  <p>This <b>read-only</b> variable returns the current fps as an integer value. Please note that the function will only update once every step of your game and so may appear to &quot;jump&quot; from one value to another, but this is quite normal.</p>
-  <p class="note"><b><span data-conref="../../../assets/snippets/Tag_note.hts"> </span></b> On the HTML5 target, this variable will instead return a multiple of the monitor refresh rate as <span data-keyref="GameMaker Name">GameMaker</span> has to rely on the browser for timing and dispatch.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>fps_real</h1>
+  <p>Dans <span data-keyref="GameMaker Name">GameMaker</span>, il existe deux façons principales d'indiquer la vitesse d'exécution de votre jeu. Le <a href="../General_Game_Control/game_get_speed.htm"><span class="inline">game speed</span></a> (comme spécifié dans les Options du jeu) et le <span class="inline">fps</span> (images par seconde). Ces valeurs sont souvent confondues, mais à la base, l'une correspond au nombre d'étapes de jeu que <span data-keyref="GameMaker Name">GameMaker</span> est censé effectuer en une seconde (vitesse du jeu), tandis que l'autre correspond au nombre d'étapes du processeur que <span data-keyref="GameMaker Name">GameMaker</span> effectue réellement en une seconde (l'image par seconde réelle). Cette valeur est généralement beaucoup plus élevée que la vitesse du jeu, mais elle diminuera au fur et à mesure que votre jeu deviendra plus complexe et utilisera plus de puissance de traitement pour maintenir la vitesse de la pièce définie.</p>
+  <p>Cette variable <b>en lecture seule</b> renvoie le fps actuel sous la forme d'une valeur entière. Veuillez noter que la fonction ne sera mise à jour qu'une fois par étape de votre jeu et peut donc sembler &quot;sauter&quot; d'une valeur à l'autre, mais c'est tout à fait normal.</p>
+  <p class="note"><b>NOTE</b>: Sur la cible HTML5, cette variable renverra plutôt un multiple de la fréquence de rafraîchissement du moniteur, car <span data-keyref="GameMaker Name">GameMaker</span> doit s'en remettre au navigateur pour la synchronisation et l'envoi.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">fps_real</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_Real"></span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">if debug_mode<br />
     {<br />
         draw_text(32, 32, &quot;FPS = &quot; + string(fps_real));<br />
     }</p>
-  <p>The above code will check to see if the game is in debug mode and if it is it will display the current real fps on the screen.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifiera si le jeu est en mode débogage et si c'est le cas, il affichera la vitesse réelle actuelle à l'écran.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Debugging.htm">Debugging</a></div>
-        <div style="float:right">Next: <a href="debug_mode.htm">debug_mode</a></div>
+        <div style="float:left">Retour : <a href="Debugging.htm">Débogage</a></div>
+        <div style="float:right">Suivant : <a href="debug_mode.htm"><span class="notranslate">debug_mode</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 fps_real

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_create</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>couche_créer</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_create" />
   <meta name="rh-index-keywords" content="layer_create" />
@@ -15,51 +15,51 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_create</h1>
-  <p>This function is used to create a new layer within the current room. You supply the depth that the new layer is to occupy and the function returns the unique Layer ID value that can then be used to access the layer in further functions. You can also supply an optional &quot;name&quot; argument, which will enable you to give the layer a specific name (as a string), and instead of using the layer ID to access the layer, you can use this name string instead, although it should be noted that using name strings will have a greater impact on performance than using just the ID value. If you do not specify the name of the layer, then the created layer will be assigned a name with the format &quot;<span class="inline">_layer_XXX</span>&quot;, where &quot;XXX&quot; is a hex value used to give the layer a unique name.</p>
-  <p>When giving a depth value, this will be higher the &quot;further away&quot; from the camera the layer is and lower the &quot;closer&quot; to the camera the layer is, so if you have three layers with depths -100, 0, 100, the layers will draw in the order 100, 0, -100, so that the &quot;top&quot; layer (ie, the closest to the camera view and so drawn over everything else) will be the layer with the -100 depth.</p>
-  <p>The following image shows a schematic of how depth works for layers:</p>
-  <p><img alt="Layer depth example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Rooms/Layer_Depths.png" style="cursor: nwse-resize;" />It is worth noting that while you <i>can</i> assign more than one layer to a single depth, <i>there is no way that you can guarantee that layers on the same depth will be drawn in any given order</i> and as such it is best to assign only one layer to any given depth. Also note that the minimum and maximum layer depths are <span data-keyref="Const_Depth_Min">-16000</span> to <span data-keyref="Const_Depth_Max">16000</span>, and anything outside of those depths <b>will not be rendered</b>. If you require a depth outside of that range then you will need to use the function <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>couche_créer</h1>
+  <p>Cette fonction est utilisée pour créer une nouvelle couche dans la pièce actuelle. Vous fournissez la profondeur que la nouvelle couche doit occuper et la fonction renvoie la valeur unique de l'ID de la couche qui peut ensuite être utilisée pour <span class="notranslate">access</span> la couche dans d'autres fonctions. Vous pouvez également fournir un argument facultatif &quot;nom&quot;, qui vous permettra de donner à la couche un nom spécifique (sous forme de chaîne), et au lieu d'utiliser l'ID de la couche pour <span class="notranslate">access</span> la couche, vous pouvez utiliser cette chaîne de nom à la place, bien qu'il faille noter que l'utilisation des chaînes de noms aura un impact plus important sur les performances que l'utilisation de la seule valeur ID. Si vous ne spécifiez pas le nom de la couche, la couche créée se verra attribuer un nom au format &quot;<span class="inline">_layer_XXX</span>&quot;, où &quot; XXX &quot; est une valeur hexagonale utilisée pour donner un nom unique à la couche.</p>
+  <p>Lorsque vous donnez une valeur de profondeur, celle-ci sera d'autant plus élevée que le calque est &quot;éloigné&quot; de la caméra et d'autant plus faible que le calque est &quot;proche&quot; de la caméra. Ainsi, si vous avez trois calques avec des profondeurs de -100, 0, 100, les calques seront dessinés dans l'ordre 100, 0, -100, de sorte que le calque &quot;supérieur&quot; (c'est-à-dire le plus proche de la vue de la caméra et donc dessiné par-dessus tout le reste) sera le calque avec la profondeur -100.</p>
+  <p>L'image suivante montre un schéma du fonctionnement de la profondeur pour les couches :</p>
+  <p><img>Il convient de noter que si vous <i>pouvez</i> affecter plus d'un calque à une même profondeur, <i>vous ne pouvez pas garantir que les calques de la même profondeur seront dessinés dans un ordre donné</i> et il est donc préférable d'affecter un seul calque à une profondeur donnée. Notez également que les profondeurs de couche minimale et maximale sont de -16000 à 16000, et que tout ce qui se trouve en dehors de ces profondeurs <b>ne sera pas rendu</b>. Si vous avez besoin d'une profondeur en dehors de cette plage, vous devrez utiliser la fonction <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>
+  <p> </p>
+  <h4>Syntaxe :</h4>
   <p class="code">layer_create(depth, [name])</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
+        <th>Arguments</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>depth</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The depth that the layer has to be created at.</td>
+        <td><span class="notranslate">depth</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The depth that the layer has to be created at.</span></td>
       </tr>
       <tr>
-        <td>name</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td><span class="optional">OPTIONAL</span> The name to give the layer (a string).</td>
+        <td><span class="notranslate">name</span></td>
+        <td><span data-keyref="Type_String">Chaîne de caractères</span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Le nom à donner à la couche (une chaîne de caractères).</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Layer"><a href="GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_get_id.htm" target="_blank">Layer ID</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Les retours :</h4>
+  <p class="code"><span data-keyref="Type_ID_Layer">Layer ID</span></p>
+  <p> </p>
+  <h4>Exemple :</h4>
   <p class="code">global.Bullet_Layer = layer_create(-100);</p>
-  <p>The above code will create a new layer with a depth value of -100 and assign its ID value to a global variable.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus va créer une nouvelle couche avec une valeur de profondeur de -100 et affecter sa valeur d'identification à une variable globale.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="General_Layer_Functions.htm">General Layer Functions</a></div>
-        <div style="float:right">Next: <a href="layer_destroy.htm">layer_destroy</a></div>
+        <div style="float:left">Retour : <a href="General_Layer_Functions.htm">Fonctions générales des couches</a></div>
+        <div style="float:right">Suivant : <a href="layer_destroy.htm"><span class="notranslate">layer_destroy</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
   <!-- KEYWORDS
 layer_create
