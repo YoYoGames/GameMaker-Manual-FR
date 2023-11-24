@@ -27,4 +27,18 @@ jobs:
 
         git --version
 
-        ls
+        # Add upstream remote and fetch
+        git remote add upstream "https://x-access-token:${GITHUB_TOKEN}@github.com/${UPSTREAM}.git"
+        git remote -v
+        git fetch upstream
+
+        # Merge from upstream/develop with merge strategy to keep translation in case of conflicts
+        git merge -X ours upstream/develop
+
+        # this is dangerous but will essentially remove any files not staged in the merge
+        # this is useful since the merge strategy `-X ours` will not handle files where
+        # they have been deleted on only one branch
+        # Only use this you're sure that the failing merges fall under this category and are acceptable
+        # git diff --name-only --diff-filter=U | xargs git rm
+
+        git show-ref
