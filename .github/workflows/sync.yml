@@ -20,12 +20,12 @@ jobs:
     - name: Merge from upstream
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        UPSTREAM: git@github.com:YoYoGames/GameMaker-Manual
+        UPSTREAM: YoYoGames/GameMaker-Manual
       run: |
         git --version
 
         # Add upstream remote and fetch
-        git remote add upstream "https://x-access-token:${GITHUB_TOKEN}${UPSTREAM}.git"
+        git remote add upstream "https://x-access-token:${GITHUB_TOKEN}@github.com:${UPSTREAM}.git"
         git remote -v
         git fetch upstream
 
