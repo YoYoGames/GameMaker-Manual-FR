@@ -41,5 +41,8 @@ jobs:
         # git diff --name-only --diff-filter=U | xargs git rm
 
         git show-ref
-
-        git push origin HEAD:${{ github.ref }}
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GH_TOKEN }}
+        branch: ${{ github.ref }}
