@@ -42,4 +42,4 @@ jobs:
 
         git show-ref
 
-        git push origin develop
+        git push origin ${GITHUB_REF##*/}
