@@ -42,4 +42,4 @@ jobs:
 
         git show-ref
 
-        git push
+        git push origin HEAD:${{ github.ref }}
