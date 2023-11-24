@@ -19,7 +19,6 @@ jobs:
         persist-credentials: false
     - name: Merge from upstream
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         UPSTREAM: YoYoGames/GameMaker-Manual
       run: |
         git config --global user.name "github-actions"
@@ -28,7 +27,7 @@ jobs:
         git --version
 
         # Add upstream remote and fetch
-        git remote add upstream "https://x-access-token:${GITHUB_TOKEN}@github.com/${UPSTREAM}.git"
+        git remote add upstream "https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${UPSTREAM}.git"
         git remote -v
         git fetch upstream
 
