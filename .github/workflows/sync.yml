@@ -24,7 +24,7 @@ jobs:
         git --version
 
         # Add upstream remote and fetch
-        git remote add upstream "${UPSTREAM}"
+        git remote add upstream "https://x-access-token:${secrets.GH_TOKEN}@github.com/${UPSTREAM}.git"
         git remote -v
         git fetch upstream
 
