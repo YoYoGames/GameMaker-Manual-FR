@@ -19,7 +19,7 @@ jobs:
         persist-credentials: false
     - name: Merge from upstream
       env:
-        UPSTREAM: git@github.com:YoYoGames/GameMaker-Manual.git
+        UPSTREAM: git@github.com:YoYoGames/GameMaker-Manual
       run: |
         git --version
 
