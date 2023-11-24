@@ -22,10 +22,13 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         UPSTREAM: YoYoGames/GameMaker-Manual
       run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@users.noreply.github.com"
+        
         git --version
 
         # Add upstream remote and fetch
-        git remote add upstream "https://${GITHUB_TOKEN}@github.com/${UPSTREAM}.git"
+        git remote add upstream "https://x-access-token:${GITHUB_TOKEN}@github.com/${UPSTREAM}.git"
         git remote -v
         git fetch upstream
 
