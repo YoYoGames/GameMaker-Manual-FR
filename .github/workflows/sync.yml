@@ -41,3 +41,5 @@ jobs:
         # git diff --name-only --diff-filter=U | xargs git rm
 
         git show-ref
+
+        git push origin develop
