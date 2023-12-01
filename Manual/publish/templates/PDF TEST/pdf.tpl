@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <settings>
   <type>pdf</type>
-  <name>PDF</name>
+  <name>PDF TEST</name>
   <version>2022.0.0</version>
   <layout>pdf</layout>
   <tocLayout></tocLayout>
