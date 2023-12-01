@@ -5,9 +5,6 @@
       <path>../../toc/Default.toc</path>
       <name>Default</name>
     </toc>
-    <masterpage>
-      <path>../../contents/assets/masterpages/pdf.htt</path>
-    </masterpage>
     <brs type="array"></brs>
     <mapFiles type="array"></mapFiles>
     <includereftopics type="boolean">true</includereftopics>
@@ -27,20 +24,15 @@
   <title>Blank Project</title>
   <pdf>
     <multiHeaders type="boolean">false</multiHeaders>
-    <margin type="array">
-      <marginitem>15mm</marginitem>
-      <marginitem>15mm</marginitem>
-      <marginitem>15mm</marginitem>
-      <marginitem>15mm</marginitem>
-    </margin>
-    <multiheaders type="boolean">false</multiheaders>
     <useTopicsAndChaptersForToc type="boolean">true</useTopicsAndChaptersForToc>
-    <portraitLayout type="boolean">true</portraitLayout>
-    <startTopicsFromNewPage type="boolean">true</startTopicsFromNewPage>
-    <startChapterFromNewPage type="boolean">true</startChapterFromNewPage>
     <mergePdfs type="boolean">true</mergePdfs>
     <embeddFonts type="boolean">true</embeddFonts>
+    <splitPdf type="boolean">false</splitPdf>
   </pdf>
   <outputPath>C:/Users/Kai/Documents/My RoboHelp Projects/outputs/GMS2 Manual/PDF</outputPath>
   <patchHomepage type="boolean">true</patchHomepage>
+  <template>
+    <path>../templates/PDF/pdf.tpl</path>
+  </template>
+  <excludeTopicCss type="boolean">true</excludeTopicCss>
 </preset>

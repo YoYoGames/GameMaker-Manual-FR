@@ -6,10 +6,6 @@
       <path>../../toc/Default.toc</path>
     </toc>
     <brs type="array"></brs>
-    <masterpage>
-      <name>pdf</name>
-      <path>../../contents/assets/masterpages/pdf.htt</path>
-    </masterpage>
     <mapFiles type="array"></mapFiles>
     <includereftopics type="boolean">false</includereftopics>
     <includeExpandingText type="boolean">true</includeExpandingText>
@@ -33,18 +29,13 @@
   <patchHomepage type="boolean">true</patchHomepage>
   <gdprCompliance type="boolean">true</gdprCompliance>
   <pdf>
-    <margin type="array">
-      <marginitem>15mm</marginitem>
-      <marginitem>15mm</marginitem>
-      <marginitem>15mm</marginitem>
-      <marginitem>15mm</marginitem>
-    </margin>
-    <multiheaders type="boolean">false</multiheaders>
     <useTopicsAndChaptersForToc type="boolean">true</useTopicsAndChaptersForToc>
-    <portraitLayout type="boolean">true</portraitLayout>
-    <startTopicsFromNewPage type="boolean">true</startTopicsFromNewPage>
-    <startChapterFromNewPage type="boolean">true</startChapterFromNewPage>
     <mergePdfs type="boolean">true</mergePdfs>
     <embeddFonts type="boolean">true</embeddFonts>
+    <splitPdf type="boolean">false</splitPdf>
   </pdf>
+  <template>
+    <path>../templates/PDF TEST/pdf.tpl</path>
+  </template>
+  <excludeTopicCss type="boolean">true</excludeTopicCss>
 </preset>

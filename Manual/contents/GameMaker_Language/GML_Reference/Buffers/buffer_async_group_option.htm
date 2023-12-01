@@ -52,9 +52,9 @@
   <p> </p>
   <h4>Exemple :</h4>
   <p class="code">buffer_async_group_begin(&quot;save_folder_name&quot;);<br />
-    buffer_async_group_option(&quot;showdialog&quot;, false);<br />
-    buffer_async_group_option(&quot;slottitle&quot;, &quot;Catch The Haggis Save&quot;);<br />
-    buffer_async_group_option(&quot;subtitle&quot;, &quot;All your haggis are saved here!&quot;);<br />
+    <span data-field="title" data-format="default">buffer_async_group_option</span>(&quot;showdialog&quot;, false);<br />
+    <span data-field="title" data-format="default">buffer_async_group_option</span>(&quot;slottitle&quot;, &quot;Catch The Haggis Save&quot;);<br />
+    <span data-field="title" data-format="default">buffer_async_group_option</span>(&quot;subtitle&quot;, &quot;All your haggis are saved here!&quot;);<br />
     save = buffer_save_async(buff, &quot;Player_Save.sav&quot;, 0, 16384);<br />
     buffer_async_group_end();</p>
   <p>Le code ci-dessus démarre un groupe <span class="notranslate">buffer</span> puis définit les options du groupe avant de définir 4 fichiers à sauvegarder de manière asynchrone. La définition du groupe est ensuite terminée (à ce moment-là, la sauvegarde commence).</p>
