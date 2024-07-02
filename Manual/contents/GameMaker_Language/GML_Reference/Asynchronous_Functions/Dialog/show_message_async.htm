@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>show_message_async</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -45,9 +45,9 @@
   <p>L'exemple ci-dessus affichera un message avec la chaîne de caractères donnée. L'identifiant du message est stocké dans la variable &quot;msg&quot; et sera utilisé dans l'événement asynchrone Dialogs comme indiqué ci-dessous :</p>
   <p class="code">var i_d, stat;<br />
     i_d = ds_map_find_value(async_load, &quot;id&quot;);<br />
-    if i_d == msg<br />
+    if (i_d == msg) <br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;)<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;)) <br />
         {<br />
             url_open(&quot;https://play.google.com/store&quot;);<br />
         }<br />

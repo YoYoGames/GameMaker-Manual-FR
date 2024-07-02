@@ -27,7 +27,7 @@
   <p>Toutefois, la méthode de loin la plus courante et la plus pratique consiste à utiliser une <i>variable</i> à gauche du point, pour autant que la variable en question<i> ait enregistré un <b>identifiant d'instance</b></i> valide. Les exemples suivants illustrent cette méthode.</p>
   <p class="code">// Example 1<br />
     var _inst = instance_position(mouse_x, mouse_y, all);<br />
-    if instance_exists(_inst)<br />
+    if (instance_exists(_inst)) <br />
     {<br />
         _inst.speed = 0;<br />
     }<br />
@@ -40,7 +40,7 @@
   <p>Dans le code ci-dessus de l'exemple 1, il y a un appel de type <a href="../GML_Reference/Asset_Management/Instances/instance_exists.htm"><span class="inline">instance_exists()</span></a> dans le bloc de code. C'est parce que l'utilisation de la méthode point pour <span class="notranslate">access</span> ou changer la valeur d'une autre instance donnera une erreur et fera planter le jeu si l'instance n'existe pas, et il est possible que ce soit le cas dans cet exemple. Nous n'avons pas besoin de cette vérification dans les exemples 2 et 3 car nous <i>savons</i> que l'instance existe puisque dans l'exemple 2 nous l'avons créée, et dans l'exemple 3, c'est l'autre instance dans un événement de collision. Cependant, s'il existe <i>une</i> possibilité que l'instance soit détruite, désactivée ou retirée de la room en utilisant cette méthode, vous devriez <i>toujours</i> vérifier au préalable en utilisant la fonction <span class="inline">instance_exists()</span> ou la fonction <a href="../GML_Reference/Asset_Management/Instances/instance_number.htm"><span class="inline">instance_number()</span></a> fonction.</p>
   <p>Notez que vous ne pouvez pas utiliser le <a href="Instance_Keywords.htm">mot-clé</a> spécial &quot;<span class="inline">all</span>&quot; avec cette méthode pour cibler toutes les instances (par exemple : <span class="inline">all.val = 10</span> donnerait une erreur), mais vous <i>pouvez</i> utiliser les mots-clés &quot;<span class="inline">other</span>&quot; et &quot;<span class="inline">self</span>&quot; sans problème. Par exemple, l'utilisation de <span class="inline">other</span> dans un <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">événement de collision</a>:</p>
   <p class="code">// Example 3 other.hp -= 10;<br />
-    if other.hp &lt;= 0<br />
+    if (other.hp &lt;= 0)<br />
     {<br />
         other.sprite_index = spr_E_Dead;<br />
     }</p>
@@ -51,8 +51,8 @@
     <br />
     //or<br />
     <br />
-    var inst = instance_nearest(x, y, obj);<br />
-    inst.speed = 0;
+    var _inst = instance_nearest(x, y, obj);<br />
+    _inst.speed = 0;
   </p>
   <p>Toutes ces méthodes sont parfaitement valables pour lire, modifier et définir des variables dans d'autres instances, et fonctionnent parce que le point est en fait un <i>opérateur</i>. Il prend une valeur comme <a class="glossterm" data-glossterm="opérande" href="#">opérande</a> gauche et une variable comme opérande droit, et renvoie l'adresse de cette variable particulière dans l'objet ou l'instance indiqué. Tous les noms d'objets, les constantes, les ID, etc... représentent simplement des valeurs et celles-ci peuvent être traitées comme n'importe quelle autre valeur.</p>
   <p>L'autre moyen de référencer des variables dans une autre instance est d'utiliser la fonction <span class="notranslate">GameMaker Language</span> <span class="inline">with()</span> , qui est abordée en détail <a href="Language_Features/with.htm">ici</a>:</p>
@@ -64,7 +64,7 @@
     <br />
     // This will affect one instance of the object &quot;obj_Enemy&quot;<br />
     var _enemy = instance_nearest(x, y, obj_Enemy);<br />
-    if instance_exists(_enemy)<br />
+    if (instance_exists(_enemy)) <br />
     {<br />
         with (_enemy)<br />
         {<br />

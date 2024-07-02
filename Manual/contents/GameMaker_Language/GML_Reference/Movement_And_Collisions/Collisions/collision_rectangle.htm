@@ -73,9 +73,9 @@
   <h4>Exemple :</h4>
   <p class="code">var inst;<br />
     inst = collision_rectangle(50, 50, 200, 100, obj_Ball, false, true);<br />
-    if inst != noone<br />
+    if (inst != noone) <br />
     {<br />
-        with (inst) instance_destroy();<br />
+        instance_destroy(inst);<br />
     }</p>
   <p>Ce court code utilise collision_rectangle pour vérifier une zone dans la pièce de 50x, 50y (en haut à gauche du rectangle) à 200x, 200y (en bas à droite du rectangle) pour une instance d'un objet appelé &quot;obj_ball&quot;. Elle stocke la valeur de retour dans une variable temporaire qui est ensuite vérifiée pour voir si cette valeur est un identifiant d'instance, ou le mot-clé <a href="../../../GML_Overview/Instance_Keywords.htm"><b>personne</b></a>. Si ce <i>n'est pas</i> <b>le</b> cas, elle utilise l'identifiant d'instance stocké pour détruire l'objet.</p>
   <p> </p>

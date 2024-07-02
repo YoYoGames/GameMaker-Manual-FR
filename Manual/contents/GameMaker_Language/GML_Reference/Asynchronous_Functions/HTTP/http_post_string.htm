@@ -60,9 +60,9 @@
     post = http_post_string(&quot;http://www.angusgames.com/game?game_id=&quot; + string(global.game_id), str);</p>
   <p>Le code ci-dessus envoie une requête de récupération à l'URL spécifiée avec les paramètres donnés, ainsi que les données supplémentaires (nom du joueur et score sous forme codée par URL) stockées dans la variable str. Cela déclenchera tous les <b>événements Http</b> asynchrones définis si un rappel est reçu, et vous pouvez vérifier l'&quot;id&quot; renvoyé par rapport à celui stocké dans la variable <span class="inline">post</span> pour vous assurer que vous exécutez le bon code si vous avez utilisé diverses fonctions <span class="inline">http_post_string()</span>. L'exemple de code suivant montre comment procéder :</p>
   <p class="code">var r_str = &quot;null&quot;;<br />
-    if ds_map_find_value(async_load, &quot;id&quot;) == post<br />
+    if (ds_map_find_value(async_load, &quot;id&quot;) == post) <br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) == 0<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == 0) <br />
         {<br />
             r_str = ds_map_find_value(async_load, &quot;result&quot;);<br />
         }<br />

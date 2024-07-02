@@ -60,7 +60,7 @@
   <p>Le code ci-dessus charge le contenu du fichier &quot;<i>Player_Save.sav</i>&quot; sur le site <span class="notranslate">buffer</span>, en stockant l'ID de l'appel de fonction dans la variable &quot;<i>loadid</i>&quot;. Lorsque le chargement est terminé, l'événement asynchrone Save/Load est déclenché et vous pouvez analyser la carte <span class="inline">async_load</span> pour trouver l'ID correct de la fonction, comme ceci :</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == loadid<br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) == false<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == false) <br />
         {<br />
             show_debug_message(&quot;Load failed!&quot;);<br />
         }<br />

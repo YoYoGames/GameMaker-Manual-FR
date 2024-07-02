@@ -20,12 +20,12 @@
   <p>Cette distinction entre les entiers et les flottants est très importante lorsqu'il s'agit de développement multiplateforme, car la précision des calculs effectués sur un PC <span class="notranslate">Windows</span> <i>n'</i> est <i>pas</i> la même que celle de ces mêmes calculs lorsqu'ils sont effectués sur un appareil mobile. Cela signifie que vous devez faire particulièrement attention lorsque vous effectuez des comparaisons, par exemple :</p>
   <p class="code">if (image_index == 1)<br />
     {<br />
-        do something...<br />
+        // Do something...<br />
     }</p>
   <p>Dans l'exemple ci-dessus, si nous avons fixé la valeur de <span class="inline">image_speed</span> à 0,25 - par exemple - alors après quatre étapes, vous pouvez supposer que la valeur de <span class="inline">image_index</span> sera 1, mais il <i>peut s</i> 'agir d'une valeur comme 1,0000002 en raison de la façon dont les mathématiques à virgule flottante fonctionnent et l'évaluation ne sera donc pas <span class="inline">true</span>. Ces types d'erreurs peuvent être assez difficiles à déboguer et il est donc toujours bon d'en être conscient et de prévoir d'autres moyens de vérifier les valeurs ou d'utiliser les fonctions de plancher ou d'arrondi appropriées (listées ci-dessous) pour convertir le nombre à vérifier en un entier (pour plus d'informations sur les mathématiques en virgule flottante et pourquoi cela pose problème, veuillez <a href="https://floating-point-gui.de/" target="_blank">voir ici</a>). Par exemple, le code ci-dessus pourrait être écrit comme suit :</p>
   <p class="code">if (floor(image_index) == 1)<br />
     {<br />
-        do something...<br />
+        // Do something...<br />
     }</p>
   <p>Il convient également de noter que lors de l'utilisation des cibles <b>YoYo Compiler</b>, toutes les expressions et fonctions sont <i>évaluées de gauche à droite</i>, alors que sur toutes les autres plateformes cibles, elles sont évaluées <i>de droite à</i> gauche, ce qui signifie que ceci - par exemple - donnera des résultats différents selon la plateforme :</p>
   <p class="code">val = max(num, ++num, num++);</p>

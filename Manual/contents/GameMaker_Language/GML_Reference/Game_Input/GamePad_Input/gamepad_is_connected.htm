@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gamepad_is_connected</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -26,7 +26,7 @@
       <tr>
         <th>Arguments</th><th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
         <td><span class="notranslate">device</span></td><td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">Which gamepad &quot;slot&quot; to check.</span></td>
@@ -39,9 +39,12 @@
   <p> </p>
   <h4>Exemple :</h4>
   <p class="code">var gp_num = gamepad_get_device_count();<br />
-    for (var i = 0; i &lt; gp_num; i++;)<br />
+    for (var i = 0; i &lt; gp_num; i++)<br />
     {<br />
-        if gamepad_is_connected(i) global.gp[i] = true else global.gp[i] = false;<br />
+        if gamepad_is_connected(i)<br />
+            global.gp[i] = true<br />
+        else<br />
+            global.gp[i] = false;<br />
     }</p>
   <p>Le code ci-dessus passe en boucle les game pads (ou emplacements de gamepad) disponibles, puis vérifie pour chacun d'entre eux s'il existe un gamepad connecté. La valeur renvoyée est ensuite utilisée pour définir un tableau global à <span class="inline">true</span> ou <span class="inline">false</span>, qui sera utilisé lors des prochaines vérifications.</p>
   <p> </p>

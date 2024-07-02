@@ -48,6 +48,10 @@
         <td><span class="notranslate"><span class="inline">bboxkind_precise</span></td>
         <td>Un masque de collision précis, où le masque se conformera aux pixels non transparents du site <span class="notranslate">sprite</span>, en fonction de la valeur de tolérance indiquée (voir ci-dessous)).</td>
       </tr>
+      <tr>
+        <td><span class="inline">bboxkind_spine</span></td>
+        <td>Apart from rectangle, this is the only valid option for Spine sprites. It enables more precise collision checking against the mesh in the sprite.</td>
+      </tr>
     </tbody>
   </table>
   <p><br>
@@ -133,6 +137,11 @@
   </div>
   <!-- KEYWORDS
 sprite_collision_mask
+bboxkind_precise
+bboxkind_diamond
+bboxkind_ellipse
+bboxkind_rectangular
+bboxkind_spine
 -->
   <!-- TAGS
 sprite_collision_mask

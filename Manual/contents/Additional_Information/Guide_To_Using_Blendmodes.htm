@@ -99,17 +99,29 @@
     <p class="dropspot"><img>Donc, notre mode de fusion ressemble à ça :</p>
     <p class="code">Source: (128, 255, 64, 255) = (0.5, 1, 0.25, 1)<br />
       Destination: (64, 128, 255, 255) = (0.25, 0.5, 1, 1)<br />
+      <br />
+      <strong>Factors:</strong><br />
       bm_src_alpha (As, As, As, As) = (255, 255, 255, 255) = (1, 1, 1, 1)<br />
       bm_inv_src_alpha (1-As, 1-As, 1-As, 1-As) =  (0, 0, 0, 0)<br />
+      <br />
+      <strong>Formula:</strong><br />
       (Rs,Gs,Bs,As) * bm_src_alpha + (Rd,Gd,Bd,Ad) * bm_inv_src_alpha<br />
+      <br />
+      <strong>Apply factors</strong>:<br />
       (0.5, 1, 0.25, 1) * (1, 1, 1, 1) + (0.25, 0.5, 1, 1) * (0, 0, 0, 0)<br />
       (0.5, 1, 0.25, 1) + (0, 0, 0, 0) = (0.5, 1, 0.25, 1) = (128, 255, 64, 255)</p>
     <p class="dropspot">Comme vous pouvez le voir, nous multiplions les valeurs de destination par 0, ce qui leur donne également une valeur de 0, ce qui signifie que les couleurs sources restent inchangées, de sorte que notre valeur de couleur finale est <strong>(128, 255, 64, 255)</strong>. Vous pouvez voir comment l'inclusion de l'alpha affecte également cette valeur :</p>
     <p class="code">Source (128, 255, 64, 128) = (0.5, 1, 0.25, 0.5)<br />
       Destination: (64, 128, 255, 255) = (0.25, 0.5, 1, 1)<br />
+      <br />
+      <strong>Factors:</strong><br />
       bm_src_alpha (As, As, As, As) = (128, 128, 128, 128) = (0.5, 0.5, 0.5, 0.5)<br />
       bm_inv_src_alpha (1-As, 1-As, 1-As, 1-As) = (0.5, 0.5, 0.5, 0.5)<br />
+      <br />
+      <strong>Formula:</strong><br />
       (Rs,Gs,Bs,As) * bm_src_alpha + (Rd,Gd,Bd,Ad) * bm_inv_src_alpha<br />
+      <br />
+      <strong>Apply factors</strong>:<br />
       (0.5, 1, 0.25, 0.5) * (0.5, 0.5, 0.5, 0.5) + (0.25, 0.5, 1, 1) * (0.5, 0.5, 0.5, 0.5)<br />
       (0.25, 0.5, 0.125, 0.25) + (0.125, 0.25, 0.5, 0.5) = (0.375, 0.75, 0.625, 0.75) = (96, 192, 159, 192)</p>
     <p class="dropspot">Cela donne une couleur finale de pixel (96, 192, 159, 192), et donnera une image comme celle montrée ci-dessous :</p>
