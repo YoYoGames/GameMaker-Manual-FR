@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the with function" />
+  <meta name="topic-comment" content="Page outlining the with statement" />
   <meta name="rh-index-keywords" content="with" />
   <meta name="search-keywords" content="with" />
 </head>
@@ -22,46 +22,46 @@
   <p>elle aura exactement le même effet puisqu'il s'agit simplement d'une abréviation de la première déclaration. Alors comment faire <i>pour</i> obtenir quelque chose comme ça ? C'est pourquoi la déclaration <span class="inline">with</span> existe dans <span class="notranslate">GML</span>. La déclaration <span class="inline">with</span> a la syntaxe suivante :</p>
   <p class="code">with (&lt;expression&gt;)<br />
     {<br />
-        &lt;statement&gt;;<br />
-        &lt;statement&gt;;<br />
-        ...<br />
+    &lt;statement&gt;;<br />
+    &lt;statement&gt;;<br />
+    ...<br />
     }</p>
   <p>Pour l'<a class="glossterm" data-glossterm="expression" href="#">expression</a>, vous pouvez indiquer une ou plusieurs instances (ou un <span class="notranslate">struct</span>) sur lesquelles exécuter le code, en utilisant un ID d'instance, l'ID d'objet (qui indique que <i>toutes les instances</i> de la room de cet objet doivent exécuter le bloc de code), l'ID <span class="notranslate">struct</span> ou l'un des <a href="../Instance_Keywords.htm">mots-clés</a> spéciaux (<span class="inline">all</span> ou <span class="inline">other</span>). Cela aura pour effet de modifier la <strong>portée</strong> du code entre les crochets <span class="inline">{}</span>, de l'instance, <span class="notranslate">struct</span> ou de la fonction qui contient réellement le code à l'instance (ou aux instances ou <span class="notranslate">struct</span>) indiquée(s) dans l'expression.</p>
   <p>Une fois que l'expression a défini la portée de <span class="inline">with</span>, l'<a class="glossterm" data-glossterm="déclaration" href="#">instruction</a> sera exécutée pour chacune des instances indiquées, comme si cette instance était l'instance actuelle ( <span class="inline">self</span>). Donc, pour revenir à notre problème initial, pour déplacer toutes les instances de l'objet boule de 8 pixels vers le bas, vous devez taper :</p>
   <p class="code">with (obj_ball)<br />
     {<br />
-        y += 8;<br />
+        y += 8;<br />
     }</p>
   <p>Il s'agit essentiellement d'une boucle, et à chaque <a class="glossterm" data-glossterm="itération" href="#">itération</a> de la boucle, le code sera exécuté sur une instance de l'objet <span class="inline">obj_ball</span>.</p>
   <p>Si vous souhaitez exécuter plusieurs instructions, il suffit de les inclure entre les crochets, comme vous le feriez pour tout autre bloc de code. Ainsi, pour déplacer toutes les billes de notre exemple vers une position aléatoire et leur donner une vitesse et une direction aléatoires, vous utiliserez :</p>
   <p class="code">with (obj_ball)<br />
     {<br />
-        x = random(room_width);<br />
-        y = random(room_height);<br />
-        speed = 1 + random(2);<br />
-        direction = random(360);<br />
+        x = random(room_width);<br />
+        y = random(room_height);<br />
+        speed = 1 + random(2);<br />
+        direction = random(360);<br />
     }</p>
   <p>Comme mentionné ci-dessus, dans la ou les déclarations, l'instance ou la structure indiquée est devenue l'instance cible (<span class="inline">self</span>) qui exécute le bloc de code, ce qui signifie que l'instance d'origine (qui contient le <span class="inline">with</span> et l'ensemble du bloc de code) est devenue l'instance cible. <a href="../Instance_Keywords.htm"><span class="inline">other</span></a> instance. Ainsi, par exemple, pour déplacer toutes les billes vers la position de l'instance actuelle qui contient réellement le code, vous pouvez taper ceci :</p>
   <p class="code">with (obj_ball)<br />
     {<br />
-        x = other.x;<br />
-        y = other.y;<br />
+        x = other.x;<br />
+        y = other.y;<br />
     }</p>
   <p>La déclaration <span class="inline">with</span> est un outil extrêmement puissant et utile dans de très nombreuses circonstances. Il est donc important que vous compreniez parfaitement comment l'utiliser. Pour vous aider, vous trouverez ci-dessous quelques autres exemples d'utilisation :</p>
   <p class="code">with (instance_create_layer(x, y, &quot;Instances&quot;, obj_Ball))<br />
     {<br />
-        speed = other.speed;<br />
-        direction = other.direction;<br />
+        speed = other.speed;<br />
+        direction = other.direction;<br />
     }</p>
   <p>Le code ci-dessus crée une instance de <span class="inline">obj_Ball</span> et lui attribue la vitesse et la direction de l'instance qui exécute l'ensemble du bloc de code.</p>
   <p class="code">with (instance_nearest(x, y, obj_Ball))<br />
     {<br />
-        instance_destroy();<br />
+        instance_destroy();<br />
     }</p>
   <p>Le code ci-dessus détruira l'instance de <span class="inline">obj_Ball</span> la plus proche de l'instance qui exécute le code.</p>
   <p class="code">with(clone_struct)<br />
     {<br />
-        xx = other.x;<br />
+        xx = other.x;<br />
         yy = other.y;<br />
         spd = other.speed;<br />
         dir = other.direction;<br />
@@ -70,11 +70,12 @@
   <p class="code">var _inst = noone;<br />
     with (obj_ball)<br />
     {<br />
-        if (str &gt; other.str)<br />
-        {<br />
+        if (str &gt; other.str)<br />
+        {<br />
             _inst = id;<br />
         }<br />
     }<br />
+    <br />
     if (_inst != noone)<br />
     {<br />
         target = _inst;<br />
@@ -114,9 +115,11 @@
     </div>
     <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
   </div>
-  <p> </p>
-  <p><br />
-     </p>
-  <p> </p>
+  <!-- KEYWORDS
+with
+-->
+  <!-- TAGS
+with
+-->
 </body>
 </html>
