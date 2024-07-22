@@ -22,9 +22,9 @@
   <p>elle aura exactement le même effet puisqu'il s'agit simplement d'une abréviation de la première déclaration. Alors comment faire <i>pour</i> obtenir quelque chose comme ça ? C'est pourquoi la déclaration <span class="inline">with</span> existe dans <span class="notranslate">GML</span>. La déclaration <span class="inline">with</span> a la syntaxe suivante :</p>
   <p class="code">with (&lt;expression&gt;)<br />
     {<br />
-    &lt;statement&gt;;<br />
-    &lt;statement&gt;;<br />
-    ...<br />
+        &lt;statement&gt;;<br />
+        &lt;statement&gt;;<br />
+        ...<br />
     }</p>
   <p>Pour l'<a class="glossterm" data-glossterm="expression" href="#">expression</a>, vous pouvez indiquer une ou plusieurs instances (ou un <span class="notranslate">struct</span>) sur lesquelles exécuter le code, en utilisant un ID d'instance, l'ID d'objet (qui indique que <i>toutes les instances</i> de la room de cet objet doivent exécuter le bloc de code), l'ID <span class="notranslate">struct</span> ou l'un des <a href="../Instance_Keywords.htm">mots-clés</a> spéciaux (<span class="inline">all</span> ou <span class="inline">other</span>). Cela aura pour effet de modifier la <strong>portée</strong> du code entre les crochets <span class="inline">{}</span>, de l'instance, <span class="notranslate">struct</span> ou de la fonction qui contient réellement le code à l'instance (ou aux instances ou <span class="notranslate">struct</span>) indiquée(s) dans l'expression.</p>
   <p>Une fois que l'expression a défini la portée de <span class="inline">with</span>, l'<a class="glossterm" data-glossterm="déclaration" href="#">instruction</a> sera exécutée pour chacune des instances indiquées, comme si cette instance était l'instance actuelle ( <span class="inline">self</span>). Donc, pour revenir à notre problème initial, pour déplacer toutes les instances de l'objet boule de 8 pixels vers le bas, vous devez taper :</p>

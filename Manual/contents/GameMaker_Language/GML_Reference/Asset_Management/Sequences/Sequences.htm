@@ -49,7 +49,7 @@
     <li>Définissez les valeurs de haut niveau de l'objet séquentiel, comme la longueur, le mode de lecture, la vitesse de lecture, etc... Par exemple :</li>
   </ul>
   <p class="code">myseq.length = 120;<br />
-    myseq.loopmode = seqplay_pingpong</p>
+    myseq.loopmode = seqplay_pingpong;</p>
   <ul class="colour">
     <li>Avant de pouvoir ajouter des pistes à l'objet séquence, vous devez les créer, donc vous allez maintenant créer un tableau de pistes d'<i>actifs</i> qui ont été définies avec la fonction <a href="sequence_track_new.htm"><span class="inline">sequence_track_new()</span></a>. Notez que dans le code, il n'y a pas vraiment de différence entre les pistes d'actifs et les pistes de paramètres - il s'agit simplement de pistes et leur comportement dépend du type de piste que vous créez et du fait qu'elles soient assignées en tant que sous-pistes à une piste de niveau supérieur ou non. Ainsi, vous pouvez créer une piste pour un actif, puis lui attribuer des sous-pistes pour les différents paramètres et ces sous-pistes agiront comme des pistes de <i>paramètres</i> pour l'actif. L'exemple ci-dessous crée une seule piste d'actif graphique qui sera ajoutée à la séquence ultérieurement :</li>
   </ul>
@@ -61,21 +61,26 @@
   <p class="code">// Create a new keyframe struct for a graphics asset track and add it to an array (as you can have multiple keys in a frame)<br />
     var graphickeys = array_create(1);<br />
     graphickeys[0] = sequence_keyframe_new(seqtracktype_graphic);<br />
+    <br />
     // Set the graphics keyframe top level data for the keyframe position and length, etc...<br />
     graphickeys[0].frame = 0;<br />
     graphickeys[0].length = 1;<br />
     graphickeys[0].stretch = true;<br />
     graphickeys[0].disabled = false;<br />
+    <br />
     // Create the channel data that will go into this keyframe (again an array, as each key can have multiple channels of keyframe data)<br />
     var graphickeydata = array_create(1);<br />
     graphickeydata[0] = sequence_keyframedata_new(seqtracktype_graphic);<br />
     graphickeydata[0].spriteIndex = spr_Platform;<br />
     graphickeydata[0].channel = 0;<br />
+    <br />
     // Add the keyframe data channels to the graphics track keyframe<br />
     graphickeys[0].channels = graphickeydata;<br />
+    <br />
     // Add the definied keyframes to the track<br />
     mytracks[0].name = &quot;TestGraphicTrack&quot;;<br />
-    mytracks[0].keyframes = graphickeys;</p>
+    mytracks[0].keyframes = graphickeys;
+  </p>
   <ul class="colour">
     <li>Nous devons maintenant créer une piste de paramètres que nous allons affecter comme sous-piste à la piste graphique que nous venons de créer. Cette opération s'effectue de la même manière que ci-dessus, mais nous devons maintenant donner à la piste un nom qui indique son objectif, dans ce cas &quot;position&quot;, car nous utiliserons cette piste pour déplacer la piste graphique au cours des images d'animation de la séquence :</li>
   </ul>
@@ -90,14 +95,17 @@
     paramkeys[0].frame = 0;<br />
     paramkeys[1] = sequence_keyframe_new(seqtracktype_real);<br />
     paramkeys[1].frame = 120;<br />
+    <br />
     // Create the keyframe data structs<br />
     var paramkeydata1 = array_create(2);<br />
     paramkeydata1[0] = sequence_keyframedata_new(seqtracktype_real);<br />
     paramkeydata1[0].channel = 0; // Channel 0 for a position track is the X position<br />
     paramkeydata1[0].value = 0;<br />
+    <br />
     paramkeydata1[1] = sequence_keyframedata_new(seqtracktype_real);<br />
     paramkeydata1[1].channel = 1; // Channel 1 for a position track is the Y position<br />
     paramkeydata1[1].value = 0;<br />
+    <br />
     var paramkeydata2 = array_create(2);<br />
     paramkeydata2[0] = sequence_keyframedata_new(seqtracktype_real);<br />
     paramkeydata2[0].channel = 0;<br />
@@ -105,11 +113,14 @@
     paramkeydata2[1] = sequence_keyframedata_new(seqtracktype_real);<br />
     paramkeydata2[1].channel = 1;<br />
     paramkeydata2[1].value = room_height;<br />
+    <br />
     // Assign the keyframe data structs to the channels for each key<br />
     paramkeys[0].channels = paramkeydata1;<br />
     paramkeys[1].channels = paramkeydata2;<br />
+    <br />
     // Assign the keys to the parameter track<br />
-    paramtracks[0].keyframes = paramkeys;</p>
+    paramtracks[0].keyframes = paramkeys;
+  </p>
   <ul class="colour">
     <li>Ceci étant fait, la dernière chose à faire est d'assigner la piste de paramètres comme sous-piste à notre piste principale d'actifs graphiques que nous avons créée au début, puis d'assigner ces pistes à la séquence dont nous pouvons ensuite créer une instance dans la pièce :</li>
   </ul>
