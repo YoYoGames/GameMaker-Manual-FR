@@ -45,8 +45,8 @@
   <h4>Exemple étendu :</h4>
   <p>L'<b>événement de création (</b> par exemple) de l'objet qui contrôle la connexion de notre utilisateur aurait le code suivant :</p>
   <p class="code">ini_open(&quot;Profile.ini&quot;);<br />
-    u = ini_read_string(&quot;User&quot;,&quot;0&quot;,&quot;&quot;);<br />
-    p = ini_read_string(&quot;User&quot;,&quot;1&quot;,&quot;&quot;);<br />
+    u = ini_read_string(&quot;User&quot;, &quot;0&quot;, &quot;&quot;);<br />
+    p = ini_read_string(&quot;User&quot;, &quot;1&quot;, &quot;&quot;);<br />
     ini_close();<br />
     login = get_login_async(u,p);</p>
   <p>Le code ci-dessus ouvre un fichier ini (ou en crée un s'il n'existe pas) et récupère le nom et le mot de passe stockés dans ce fichier. S'ils n'existent pas, une chaîne vide (&quot;&quot;) est retournée par défaut. Ces valeurs sont ensuite utilisées dans <span class="inline">get_login_async()</span> pour demander à l'utilisateur son nom d'utilisateur et son mot de passe, l'index de la requête étant stocké dans la variable &quot;login&quot;. Notez qu'en attendant que l'utilisateur fournisse les informations nécessaires, le jeu et ses événements continuent de fonctionner normalement.</p>
