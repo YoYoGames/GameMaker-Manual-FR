@@ -90,7 +90,7 @@
     draw_sprite(spr_Body, 0, 0, 0);<br />
     draw_sprite(spr_Clothes, 0, 0, 0);<br />
     draw_sprite(spr_Hair, 0, 0, 0);<br />
-    spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, true, true, 16, 16);<br />
+    spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, false, false, 16, 16);<br />
     surface_reset_target();<br />
     surface_free(surf);</p>
   <p>Le code ci-dessus crée une surface et stocke son index dans la variable locale &quot;surf&quot;. Il cible ensuite cette surface, la vide et dessine plusieurs <span class="notranslate">sprites</span> les uns sur les autres. Enfin, il crée un nouveau <span class="notranslate">sprite</span> à partir de l'image composite dessinée sur la surface et attribue son index à &quot;spr_Custom&quot; avant de libérer la mémoire utilisée par la surface.</p>

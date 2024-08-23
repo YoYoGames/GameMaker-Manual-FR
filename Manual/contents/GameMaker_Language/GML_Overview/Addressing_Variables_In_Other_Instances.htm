@@ -27,7 +27,7 @@
   <p>Toutefois, la méthode de loin la plus courante et la plus pratique consiste à utiliser une <i>variable</i> à gauche du point, pour autant que la variable en question<i> ait enregistré un <b>identifiant d'instance</b></i> valide. Les exemples suivants illustrent cette méthode.</p>
   <p class="code">// Example 1<br />
     var _inst = instance_position(mouse_x, mouse_y, all);<br />
-    if (instance_exists(_inst)) <br />
+    if (instance_exists(_inst))<br />
     {<br />
         _inst.speed = 0;<br />
     }<br />
@@ -64,7 +64,7 @@
     <br />
     // This will affect one instance of the object &quot;obj_Enemy&quot;<br />
     var _enemy = instance_nearest(x, y, obj_Enemy);<br />
-    if (instance_exists(_enemy)) <br />
+    if (instance_exists(_enemy))<br />
     {<br />
         with (_enemy)<br />
         {<br />
