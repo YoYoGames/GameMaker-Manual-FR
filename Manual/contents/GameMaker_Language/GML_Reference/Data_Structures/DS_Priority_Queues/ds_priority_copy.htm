@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_priority_copy</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -24,7 +24,7 @@
       <tr>
         <th>Arguments</th><th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
         <td><span class="notranslate">id</span></td><td><span data-keyref="Type_ID_DS_Priority"></span></td>
         <td><span class="notranslate">The id of the priority queue to copy <i>to</i>.</span></td>
@@ -42,8 +42,8 @@
   <h4>Exemple :</h4>
   <p class="code">with (instance_create_layer(x, y, &quot;Enemies&quot;, obj_Enemy))<br />
     {<br />
-        p_queue = ds_priority_create();<br />
-        ds_priority_copy(p_queue, other.p_queue);<br />
+    p_queue = ds_priority_create();<br />
+    ds_priority_copy(p_queue, other.p_queue);<br />
     }</p>
   <p>La fonction ci-dessus crée une nouvelle instance, puis dans cette instance, elle crée une nouvelle file d'attente prioritaire DS et copie le contenu de la file d'attente prioritaire de l'instance qui exécute le bloc de code, dans la file d'attente prioritaire de l'instance nouvellement créée.</p>
   <p> </p>
