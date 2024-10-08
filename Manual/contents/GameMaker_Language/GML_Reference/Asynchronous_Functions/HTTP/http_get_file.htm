@@ -62,10 +62,10 @@
   <p>Le code ci-dessus demandera un fichier à partir de l'URL donnée et le configurera pour qu'il soit téléchargé dans la zone de stockage locale (comme spécifié dans les options du jeu HTML5), dans un répertoire &quot;Downloads&quot; avec le nom de fichier donné (il n'est pas nécessaire que ce soit le même que le nom du fichier source, mais il doit utiliser la même extension de fichier). L'index de la carte <span class="inline">async_load</span> sera stocké dans la variable &quot;file&quot; afin que vous puissiez vérifier le callback correct dans l'événement asynchrone, et si le répertoire de sauvegarde n'existe pas, il sera créé. L'événement asynchrone déclenché serait le sous-événement <b>HTTP</b>, et dans cet événement, vous auriez quelque chose comme ce qui suit :</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == file<br />
     {<br />
-        var _status = ds_map_find_value(async_load, &quot;status&quot;);<br />
+        var _status = async_load[? &quot;status&quot;];<br />
         if (_status == 0)<br />
         {<br />
-            var _path = ds_map_find_value(async_load, &quot;result&quot;);<br />
+            var _path = async_load[? &quot;result&quot;];<br />
             var _files = zip_unzip(path, &quot;/NewContent/&quot;);<br />
             if (_files &gt; 0)<br />
             {<br />

@@ -62,9 +62,9 @@
   <p class="code">var r_str = &quot;null&quot;;<br />
     if (ds_map_find_value(async_load, &quot;id&quot;) == post) <br />
     {<br />
-        if (ds_map_find_value(async_load, &quot;status&quot;) == 0)<br />
+        if (async_load[? &quot;status&quot;] == 0)<br />
         {<br />
-            _r_str = ds_map_find_value(async_load, &quot;result&quot;);<br />
+            _r_str = async_load[? &quot;result&quot;];<br />
         }<br />
     }</p>
   <p>Le code ci-dessus va d'abord vérifier l'id de la carte DS qui a été créée, puis vérifier le statut de la callback. Si la valeur est égale à 0 (signalant le succès), le résultat de la callback sera alors stocké dans une variable pour une utilisation future, sinon la variable contiendra simplement une valeur par défaut (dans ce cas &quot;null&quot;).</p>
