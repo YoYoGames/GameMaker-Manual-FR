@@ -25,7 +25,7 @@
       <tr>
         <th>Arguments</th><th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
         <td><span class="notranslate">key</span></td><td><span data-keyref="Type_Constant_VK"></span></td>
         <td><span class="notranslate">This is the key that you wish to get the mapped value from</span></td>
@@ -39,7 +39,7 @@
   <h4><b>Exemple :</b></h4>
   <p class="code">if keyboard_get_map(ord(&quot;A&quot;)) = ord(&quot;A&quot;)<br />
     {<br />
-        keyboard_set_map(ord(&quot;A&quot;), keyboard_lastkey);<br />
+        keyboard_set_map(_keycode, keyboard_lastkey);<br />
     }</p>
   <p>L'exemple de code ci-dessus vérifie d'abord si &quot;A&quot; a été associé à une autre touche, et si ce n'est pas le cas, il l'associe à la dernière touche sur laquelle l'utilisateur a appuyé.</p>
   <p> </p>

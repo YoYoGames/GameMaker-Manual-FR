@@ -91,7 +91,7 @@
       }<br />
       <br />
       // Delete the array<br />
-      a = -1;
+      a = undefined;
     </p>
     <p class="dropspot">Si le tableau a plusieurs dimensions (voir ci-dessous), elles seront toutes nettoyées également. Notez que lorsque vous créez des tableaux dans des instances, ils n'ont pas besoin d'être nettoyés lorsque l'instance est retirée du jeu, car ils seront automatiquement supprimés par le <a class="glossterm" data-glossterm="éboueur" href="#">garbage collector</a> lors de la destruction ou de la fin de la room. Cependant, si l'une des positions du tableau contient des références à des ressources <em>dynamiques</em>, telles que des systèmes de particules, <span class="notranslate">buffers</span>, ou des structures de données, celles-ci <em>devront</em> être détruites avant que le tableau ne soit supprimé, l'instance détruite ou la pièce terminée.</p>
     <p class="dropspot"> </p>
