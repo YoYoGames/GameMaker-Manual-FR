@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gpu_set_texrepeat_ext</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -25,7 +25,7 @@
       <tr>
         <th>Arguments</th><th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
         <td><span class="notranslate">sampler_id</span></td><td><span data-keyref="Type_Handle_Shader_Sampler"></span></td>
         <td><span class="notranslate">The sampler id from the shader.</span></td>
@@ -42,13 +42,13 @@
   <p> </p>
   <h4>Exemple :</h4>
   <p class="code">var s_tex = shader_get_sampler_index(shader_glass, &quot;s_NoiseSampler&quot;);<br />
-    if gpu_get_texfilter_ext(s_tex)<br />
+    if (gpu_get_texrepeat_ext(s_tex))<br />
     {<br />
-        gpu_set_texfilter_ext(s_tex, false);<br />
+        gpu_set_texrepeat_ext(s_tex, false);<br />
     }<br />
     else<br />
     {<br />
-        gpu_set_texfilter_ext(s_tex, true);<br />
+        gpu_set_texrepeat_ext(s_tex, true);<br />
     }</p>
   <p>Le code ci-dessus vérifie si le filtrage de texture est activé ou non pour un ID d'échantillonneur spécifique (stocké dans une variable locale) et l'active en conséquence.</p>
   <p> </p>

@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>buffer_load_async</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -31,7 +31,7 @@
       <tr>
         <th>Arguments</th><th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
         <td><span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
         <td><span class="notranslate">The index of the buffer to load.</span></td>
@@ -60,7 +60,7 @@
   <p>Le code ci-dessus charge le contenu du fichier &quot;<i>Player_Save.sav</i>&quot; sur le site <span class="notranslate">buffer</span>, en stockant l'ID de l'appel de fonction dans la variable &quot;<i>loadid</i>&quot;. Lorsque le chargement est terminé, l'événement asynchrone Save/Load est déclenché et vous pouvez analyser la carte <span class="inline">async_load</span> pour trouver l'ID correct de la fonction, comme ceci :</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == loadid<br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) == false<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == false)<br />
         {<br />
             show_debug_message(&quot;Load failed!&quot;);<br />
         }<br />

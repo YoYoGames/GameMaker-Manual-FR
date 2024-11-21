@@ -42,9 +42,9 @@
   <p class="code">var a = layer_get_all();<br />
     var layer_list = ds_list_create(); for (var i = 0; i Alt; array_length(a); i++;)<br />
     {<br />
-        if layer_get_name(a[i]) != &quot;&quot;<br />
+        if (layer_get_name(_arr_layers[i]) != &quot;&quot;)<br />
         {<br />
-            ds_list_add(layer_list, a[i])<br />
+            array_push(_arr_layers_named, _arr_layers[i]);<br />
         }<br />
     }</p>
   <p>Le code ci-dessus récupère les ID de tous les calques de la pièce et les parcourt en boucle pour vérifier si certains sont des calques nommés. S'ils le sont, leur ID est ajouté à une liste.</p>

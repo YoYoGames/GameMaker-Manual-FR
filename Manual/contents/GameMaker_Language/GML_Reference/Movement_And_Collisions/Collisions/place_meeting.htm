@@ -52,7 +52,10 @@
   <h4>Exemple :</h4>
   <p class="code">if keyboard_check(vk_left)<br />
     {<br />
-        if !place_meeting(x - 5, y, obj_wall) x -=5;<br />
+        if (!place_meeting(x - 5, y, obj_wall))<br />
+        {<br />
+            x -= 5;<br />
+        }<br />
     }</p>
   <p>Le code ci-dessus vérifie qu'il <i>n'y a pas de</i> collision à gauche de l'instance et déplace l'instance s'il n'y en a pas.</p>
   <p> </p>
