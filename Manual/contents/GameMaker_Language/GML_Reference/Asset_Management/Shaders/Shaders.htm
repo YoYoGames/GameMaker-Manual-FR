@@ -30,9 +30,9 @@
     colour_to_set = shader_get_uniform(sShaderDemo5, &quot;f_Colour2&quot;);</p>
   <p>Une fois que vous avez les poignées uniformes, vous pouvez les définir dans le code <span class="notranslate">shader</span> pour l'<b>événement Draw</b> comme ceci :</p>
   <p class="code">shader_set(sShaderDemo5);<br />
-    shader_set_uniform_f(colour_to_find, 1,1,1 );<br />
-    shader_set_uniform_f(colour_to_set, 1,0,0 );<br />
-    draw_sprite(sprite_index,image_index,x+24, y);<br />
+    shader_set_uniform_f(colour_to_find, 1, 1, 1);<br />
+    shader_set_uniform_f(colour_to_set, 1, 0, 0);<br />
+    draw_sprite(sprite_index, image_index, x + 24, y);<br />
     shader_reset();</p>
   <p>Une dernière chose à noter est que, bien que <span class="notranslate">shaders</span> soit accepté sur toutes les plateformes, il est toujours spécifique à un appareil et si le matériel ou le logiciel de l'appareil ne peut pas utiliser <span class="notranslate">shaders</span>, vous obtiendrez une erreur. Il est donc recommandé de vérifier que le fichier <span class="notranslate">shader</span> a été compilé avant de définir les uniformes ou d'utiliser le fichier <span class="notranslate">shader</span> lui-même, comme ceci :</p>
   <p class="code">if (shader_is_compiled(myShader))<br />
