@@ -40,11 +40,11 @@
   <p> </p>
   <h4>Exemple :</h4>
   <p class="code">var a = layer_get_all_elements(layer);<br />
-    for (var i = 0; i &lt; array_length(a); i++;)<br />
+    for (var i = 0; i &lt; array_length(a); i++)<br />
     {<br />
         if (layer_get_element_type(a[i]) == layerelementtype_sprite)<br />
         {<br />
-            layer_sprite_destroy(a[i])<br />
+            layer_sprite_destroy(a[i]);<br />
         }<br />
     }</p>
   <p>Le code ci-dessus récupère les ID de tous les éléments d'instance affectés à la couche de l'instance qui exécute le code. Le code vérifie ensuite si l'un des éléments renvoyés est un actif de <span class="notranslate">sprite</span> et s'il l'est, il est détruit.</p>

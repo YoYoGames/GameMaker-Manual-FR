@@ -55,7 +55,7 @@
   <p class="code">var num = instance_number(obj_Enemy);<br />
     with (obj_Enemy)<br />
     {<br />
-        if num&gt;10 instance_destroy();<br />
+        if (num &gt; 10) instance_destroy();<br />
     }</p>
   <p>Le code ci-dessus fonctionne parce que la variable déclarée <span class="inline">var</span> est locale à l'<i>événement</i> (ou à la fonction) dans lequel elle est contenue, pas à l'instance, ni au monde du jeu, et peut donc être utilisée dans n'importe quelle fonction de n'importe quel objet tant qu'elle se trouve dans le même bloc de code.</p>
   <p> </p>

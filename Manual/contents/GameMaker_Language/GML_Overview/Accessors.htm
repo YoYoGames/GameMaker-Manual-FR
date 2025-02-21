@@ -23,10 +23,10 @@
     <p class="code">list_index[| index]</p>
     <p class="dropspot">Ainsi, lorsque vous avez utilisé <span class="inline">ds_list_create()</span> pour créer votre liste, vous utilisez l'index de la liste (que vous avez stocké dans une variable) pour la référencer, la valeur &quot;index&quot; étant la position dans la liste à définir ou à ajouter. Par exemple, le code suivant crée une liste et ajoute ensuite 10 entrées, en définissant chaque entrée comme un nombre aléatoire de 0 à 9 :</p>
     <p class="code">ds = ds_list_create();<br />
-      var index = 0;<br />
+      var _index = 0;<br />
       repeat(10)<br />
       {<br />
-          ds[| index++] = irandom(9);<br />
+          ds[| _index++] = irandom(9);<br />
       }</p>
     <p class="dropspot">Notez que si vous utilisez une expression pour ajouter une référence à un index qui a déjà une valeur, la valeur précédente sera remplacée plutôt que d'avoir un autre index ajouté à la liste. Pour ajouter des entrées supplémentaires, vous devrez connaître la taille de ds_list et les ajouter à la fin. Il est également intéressant de noter que vous pouvez définir un index de liste qui est <i>plus grand</i> que la taille de la liste référencée, et ceci définira cette valeur, développant la liste en même temps et initialisant toutes les positions dans la liste jusqu'à l'index donné comme 0.</p>
     <p class="dropspot">Une fois que vous avez créé votre structure de liste et que vous l'avez remplie de données, pour obtenir des valeurs à partir de la liste, il vous faut quelque chose du genre :</p>
@@ -56,15 +56,15 @@
     <p class="dropspot">Après avoir créé votre grille à l'aide de la fonction <span class="inline">ds_grid_create()</span>, vous utiliserez l'index de la grille que vous avez stocké dans une variable pour la référencer, les &quot;xpos&quot; et &quot;ypos&quot; étant la position dans la grille pour obtenir ou définir une valeur. Par exemple, le code suivant crée une grille, la remet à 0, puis y ajoute quelques entrées :</p>
     <p class="code">ds = ds_grid_create();<br />
       ds_grid_clear(ds, 0);<br />
-      var gw = ds_grid_width(ds) - 1;<br />
-      var gh = ds_grid_height(ds) - 1;<br />
+      var _gw = ds_grid_width(ds) - 1;<br />
+      var _gh = ds_grid_height(ds) - 1;<br />
       repeat(10)<br />
       {<br />
-          var xx = irandom(gw);<br />
-          var yy = irandom(gh);<br />
-          if (ds[# xx, yy] == 0)<br />
+          var _xx = irandom(_gw);<br />
+          var _yy = irandom(_gh);<br />
+          if (ds[# _xx, _yy] == 0)<br />
           {<br />
-              ds[# xx, yy] = 1;<br />
+              ds[# _xx, _yy] = 1;<br />
           }<br />
       }</p>
     <p class="dropspot">Une fois que vous avez créé votre structure de grille et que vous l'avez remplie de données, pour obtenir des valeurs à partir d'une position spécifique de la grille, il vous faudrait quelque chose du genre :</p>
@@ -84,7 +84,8 @@
     <p class="dropspot">La fonction elle-même aurait quelque chose comme ceci :</p>
     <p class="code">function array_populate(_array)<br />
       {<br />
-          var a = _array; var i = 0; repeat(25)<br />
+          var a = _array; var i = 0;<br />
+          repeat(25)<br />
           {<br />
               i = irandom(99);<br />
               while (a[i] != 0)<br />
