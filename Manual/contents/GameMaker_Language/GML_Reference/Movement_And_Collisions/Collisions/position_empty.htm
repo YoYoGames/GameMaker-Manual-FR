@@ -25,7 +25,7 @@
       <tr>
         <th>Arguments</th><th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
         <td><span class="notranslate">x</span></td><td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The x position to check.</span></td>
@@ -46,7 +46,7 @@
     yy = random(room_height);<br />
     if (position_empty(xx, yy)) <br />
     {<br />
-        instance_create_layer(xx, yy, &quot;Bullets&quot;, obj_Bomb);<br />
+        instance_create_layer(_xx, _yy, &quot;Bullets&quot;, obj_bomb);<br />
     }</p>
   <p>Cela va vérifier une position aléatoire quelque part dans la pièce pour une collision et s'il n'y en a pas, cela va créer une instance de obj_Bomb.</p>
   <p> </p>

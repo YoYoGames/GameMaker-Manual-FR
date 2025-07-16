@@ -47,9 +47,10 @@
     {<br />
         if (key != &quot;gold&quot;)<br />
         {<br />
-            key = ds_map_find_next(inventory, key);<br />
+            break;<br />
         }<br />
-        else break;<br />
+        <br />
+        _key = ds_map_find_next(inventory, _key);<br />
     }</p>
   <p>Le code ci-dessus crée quelques variables temporaires, puis obtient la taille de la carte DS et trouve la première clé stockée par l'ordinateur dans la carte. Il utilise ensuite une boucle <span class="inline">for</span> pour parcourir la carte DS à la recherche de la valeur clé &quot;gold&quot;. S'il la trouve, il interrompt la boucle.</p>
   <p> </p>

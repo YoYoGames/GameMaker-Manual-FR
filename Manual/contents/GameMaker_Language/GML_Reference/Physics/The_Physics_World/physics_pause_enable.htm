@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_pause_enable</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -25,7 +25,7 @@
       <tr>
         <th>Arguments</th><th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
         <td><span class="notranslate">flag</span></td><td><span data-keyref="Type_Bool"></span></td>
         <td><span class="notranslate">This can be set to <span class="inline">true</span> pour mettre la simulation en pause, ou <span class="inline">false</span> pour la relancer.</td>
@@ -41,7 +41,7 @@
     {<br />
         physics_pause_enable(true);<br />
         instance_deactivate_all(true);<br />
-        instance_create_layer(x, y, &quot;Controllers&quot;, obj_PauseMenu);<br />
+        instance_create_layer(x, y, &quot;Controllers&quot;, obj_pause_menu);<br />
     }</p>
   <p>Le code ci-dessus vérifie si l'OS a été mis en pause et si c'est le cas, il met en pause le monde physique, désactive tout sauf lui-même, puis crée une instance de menu de pause.</p>
   <p> </p>

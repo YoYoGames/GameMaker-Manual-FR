@@ -51,9 +51,9 @@
   <h4>Exemple :</h4>
   <p class="code">if mouse_check_button(mb_left)<br />
     {<br />
-        if (!position_meeting(mouse_x, mouse_y, all)) <br />
+        if (!position_meeting(mouse_x, mouse_y, all))<br />
         {<br />
-            instance_create_layer(mouse_x, mouse_y, &quot;Walls&quot;, obj_Wall);<br />
+            instance_create_layer(mouse_x, mouse_y, &quot;Walls&quot;, obj_wall);<br />
         }<br />
     }</p>
   <p>Le code ci-dessus vérifie la présence du bouton gauche de la souris, et s'il est enfoncé, il vérifie la position x/y de la souris pour détecter une collision avec une instance. S'il n'y en a pas, une instance de &quot;obj_Wall&quot; est créée.</p>

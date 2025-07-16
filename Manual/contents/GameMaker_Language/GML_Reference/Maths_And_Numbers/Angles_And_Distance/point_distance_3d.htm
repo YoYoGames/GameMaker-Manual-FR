@@ -2,8 +2,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
-
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>distance_point_3d</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
@@ -27,7 +25,7 @@
       <tr>
         <th>Arguments</th><th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
         <td><span class="notranslate">x1</span></td><td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The x coordinate of the first component of the vector</span></td>
@@ -63,12 +61,9 @@
     inst = instance_nearest(x, y, enemy);<br />
     if (instance_exists(inst))<br />
     {<br />
-        ex = inst.x;<br />
-        ey = inst.y;<br />
-        ez = inst.z;<br />
-        if (point_distance_3d(x, y, z, ex, ey, ez) &lt; 200) <br />
+        if (point_distance_3d(x, y, z, _nearest.x, _nearest.y, _nearest.z) &lt; 200)<br />
         {<br />
-            instance_create_layer(x, y, &quot;Bullets&quot;, obj_Missile)<br />
+            instance_create_layer(x, y, &quot;Bullets&quot;, obj_missile);<br />
         }<br />
     }</p>
   <p>Le code ci-dessus obtiendra les coordonnées x, y et z de l'ennemi le plus proche, puis les utilisera pour vérifier la distance (longueur) du vecteur formé par ces coordonnées et celles du joueur. Si la valeur est inférieure à 200, l'objet joueur créera une instance de &quot;obj_Missile&quot;.</p>

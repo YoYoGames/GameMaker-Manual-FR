@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_fixture_set_edge_shape</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -24,7 +24,7 @@
       <tr>
         <th>Arguments</th><th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
         <td><span class="notranslate">fixture</span></td><td><span data-keyref="Type_ID_PhyFixture"></span></td>
         <td><span class="notranslate">the index of the fixture</span></td>
@@ -57,13 +57,13 @@
     var y2 = room_height - 50 - irandom(100);<br />
     for (var i = 0; i &lt; 10; i++;)<br />
     {<br />
-        var fix = physics_fixture_create();<br />
-        physics_fixture_set_edge_shape(fix, xx, y1, xx + 50, y2);<br />
-        physics_fixture_bind(fix, id);<br />
-        physics_fixture_delete(fix);<br />
-        xx += 50;<br />
-        y1 = y2;<br />
-        y2 = room_height - 50 - irandom(100);<br />
+        var _fix = physics_fixture_create();<br />
+        physics_fixture_set_edge_shape(_fix, _xx, _y1, _xx + 50, _y2);<br />
+        physics_fixture_bind(_fix, id);<br />
+        physics_fixture_delete(_fix);<br />
+        _xx += 50;<br />
+        _y1 = y2;<br />
+        _y2 = room_height - 50 - irandom(100);<br />
     }</p>
   <p>Le code ci-dessus créera une ligne de luminaires &quot;de bord&quot; avec une variété de hauteurs sur la longueur de la pièce.</p>
   <p> </p>

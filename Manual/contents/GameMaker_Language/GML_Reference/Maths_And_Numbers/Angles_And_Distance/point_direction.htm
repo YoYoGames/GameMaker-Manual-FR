@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>point_direction</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -26,7 +26,7 @@
       <tr>
         <th>Arguments</th><th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
         <td><span class="notranslate">x1</span></td><td><span data-keyref="Type_Real"></span></td>
         <td><span class="notranslate">The x coordinate of the first component of the vector</span></td>
@@ -55,7 +55,7 @@
     ey = instance_nearest(x, y, enemy).y;<br />
     with (instance_create_layer(x, y, &quot;Bullets&quot;, obj_Missile))<br />
     {<br />
-        direction = point_direction(x, y, ex, ey);<br />
+        direction = point_direction(x, y, _ex, _ey);<br />
     }</p>
   <p>Le code ci-dessus obtiendra les coordonnées x et y de l'ennemi le plus proche, puis les transmettra à un objet balle à utiliser dans la fonction point_direction pour définir correctement sa direction de déplacement.</p>
   <p> </p>
