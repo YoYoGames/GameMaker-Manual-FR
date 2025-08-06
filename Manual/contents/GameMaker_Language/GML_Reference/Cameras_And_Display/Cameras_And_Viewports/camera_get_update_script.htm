@@ -40,7 +40,7 @@
   <p class="code">var scr = camera_get_update_script(camera_view[0]);<br />
     if (scr != scr_cutscene) <br />
     {<br />
-        camera_set_update_script(camera_view[0], scr_cutscene);<br />
+        camera_set_update_script(view_camera[0], scr_cutscene);<br />
     }</p>
   <p>Le code ci-dessus vérifie la fonction de script assignée en tant que fonction de mise à jour pour la caméra assignée au port de vue [0] et si ce n'est pas &quot;cutScene&quot;, il est défini sur ce script.</p>
   <p> </p>
