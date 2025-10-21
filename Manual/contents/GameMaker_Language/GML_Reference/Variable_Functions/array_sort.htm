@@ -59,9 +59,9 @@
   <h4>Exemple :</h4>
   <p class="code">var _a = [10, 9, 8, 7, 6, 5];<br />
     <br />
-    array_sort(_a, function(elm1, elm2)<br />
+    array_sort(_a, function(current, next)<br />
     {<br />
-        return elm1 - elm2;<br />
+        return current - next;<br />
     });
   </p>
   <p>Le code ci-dessus utilise une fonction de tri personnalisée pour trier le tableau dans un ordre croissant. La fonction de tri prend les deux éléments du tableau <span class="inline">elm1</span> et <span class="inline">elm2</span> et effectue une soustraction sur eux. Si <span class="inline">elm1</span> est supérieur à <span class="inline">elm2</span>, la soustraction donne un nombre positif qui place <span class="inline">elm1</span> après <span class="inline">elm2</span>, ce qui les place dans un ordre croissant.</p>
