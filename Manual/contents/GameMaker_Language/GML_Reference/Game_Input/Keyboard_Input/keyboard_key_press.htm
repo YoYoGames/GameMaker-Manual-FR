@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>touche_clavier_press</title>
+  <title>keyboard_key_press</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>touche_clavier_press</h1>
+  <h1><span data-field="title" data-format="default">keyboard_key_press</span></h1>
   <p>Cette fonction permet de simuler l'enfoncement de n'importe quelle touche du clavier. Lorsqu'elle est utilisée, la touche sera signalée comme étant enfoncée jusqu'à ce que la fonction de libération correspondante soit appelée (cf. <a href="keyboard_key_release.htm"><span class="inline">keyboard_key_release()</span></a>).
     La fonction prendra une valeur de code de touche telle que retournée par la fonction <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a> (uniquement les lettres <i>majuscules</i> de A à Z ou les chiffres de 0 à 9), ou l'une des constantes <span class="inline">vk_*</span> listées sur la page principale de <a href="Keyboard_Input.htm">saisie du clavier</a>.</p>
   <p>Notez qu'après l'appel de cette fonction, si la touche est <i>physiquement</i> pressée sur le clavier, cet événement de pression <i>ne</i> sera <i>pas</i> réenregistré tant que la touche n'aura pas été physiquement relâchée (ce qui déclenche l'événement de libération et arrête cette fonction),

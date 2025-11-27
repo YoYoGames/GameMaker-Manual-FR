@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>attachement_squelette_créer_couleur</title>
+  <title>skeleton_attachment_create_colour</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>attachement_squelette_créer_couleur</h1>
+  <h1><span data-field="title" data-format="default">skeleton_attachment_create_colour</span></h1>
   <p>Lorsque vous créez votre animation squelettique <span class="notranslate">sprite</span>, vous pouvez attribuer des <i>emplacements d'attachement</i> et des <i>attachements</i> à y placer. Il s'agit simplement d'images (<span class="notranslate">sprites</span>) qui sont séparées de l'animation mais qui, lorsqu'elles sont attachées, se déplacent avec l'os auquel elles sont attachées. Normalement, vous devez attribuer ces pièces jointes dans votre programme d'animation (<span class="notranslate">Spine</span>), mais cette fonction vous permet de créer les vôtres au moment de l'exécution en utilisant une ressource <span class="notranslate">sprite</span> de votre jeu. La fonction nécessite que vous donniez un nom à la pièce jointe (sous forme de chaîne) et que vous définissiez les paramètres <a href="../../Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a> et <a href="../../Sprite_Instance_Variables/image_index.htm"><span class="inline">image_index</span></a> à utiliser, ainsi que l'origine x et y (qui peut être différente de celle définie par <span class="notranslate">sprite</span> dans les propriétés de <span class="notranslate">sprite</span> ), et vous pouvez également définir toutes les transformations que vous souhaitez appliquer à l'image lorsqu'elle est jointe, ainsi que la couleur à mélanger avec l'image et sa valeur alpha (transparence). Si la pièce jointe a été créée avec succès, la fonction renvoie <span class="inline">1</span>. Dans le cas contraire (vous avez fourni un index <span class="notranslate">sprite</span> invalide ou la base <span class="notranslate">sprite</span> n'est pas un <span class="notranslate">Spine</span> <span class="notranslate">sprite</span>), elle renvoie <span class="inline">-1</span>.</p>
   <p>Il convient de noter que l'instance <span class="notranslate">sprite</span> peut avoir une couleur de fusion et un paramètre alpha (<a href="../../Sprite_Instance_Variables/image_blend.htm"><span class="inline">image_blend</span></a> et <a href="../../Sprite_Instance_Variables/image_alpha.htm"><span class="inline">image_alpha</span></a>), tout comme le slot d'attachement (voir la fonction <a href="../Slots/skeleton_slot_colour_set.htm"><span class="inline">skeleton_slot_colour_set()</span></a>), et donc la couleur et l'alpha finaux que l'attachement assigné <span class="notranslate">sprite</span> pour le slot aura seront une combinaison de toutes ces valeurs.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">skeleton_attachment_create_colour(name, sprite, ind, xorigin, yorigin, xscale, yscale, rot, colour, alpha);</p>
+  <p class="code"><span data-field="title" data-format="default">skeleton_attachment_create_colour</span>(name, sprite, ind, xorigin, yorigin, xscale, yscale, rot, colour, alpha);</p>
   <table>
     <tbody>
       <tr>

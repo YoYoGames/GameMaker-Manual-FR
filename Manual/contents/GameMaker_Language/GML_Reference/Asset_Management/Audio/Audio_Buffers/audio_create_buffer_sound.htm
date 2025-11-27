@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_create_buffer_sound</h1>
+  <h1><span data-field="title" data-format="default">audio_create_buffer_sound</span></h1>
   <p>Avec cette fonction, vous pouvez créer un nouveau son à partir du contenu d'un <span class="notranslate">buffer</span>. Le <span class="notranslate">buffer</span> aura été créé précédemment (voir les <a href="../../../Buffers/Buffers.htm">fonctions de tampon</a> pour plus de détails sur la façon de procéder), et des données y auront été ajoutées ou chargées. Vous le passez ensuite à cette fonction avec le format des données (seuls <span class="inline">buffer_u8</span> ou <span class="inline">buffer_s16</span> sont actuellement supportés), la fréquence d'échantillonnage (qui peut être comprise entre 1000hz et 48000hz), et un décalage dans le <span class="notranslate">buffer</span> pour obtenir les données. Vous devez également fournir le nombre d'échantillons dans <span class="notranslate">buffer</span> et les canaux dont le son a besoin. Ces canaux sont définis par l'une des constantes suivantes :</p>
   <table>
     <colgroup>
@@ -47,7 +47,7 @@
   <p>Notez qu'après avoir créé un son, vous devez libérer l'index pointeur qui lui est associé lorsqu'il n'est plus nécessaire en utilisant la fonction <a href="audio_free_buffer_sound.htm"><span class="inline">audio_free_buffer_sound()</span></a>. Si vous ne le faites pas et que vous réassignez ensuite la variable ou changez de pièce, etc... l'ID du son sera perdu et vous aurez une fuite de mémoire. Notez également que vous ne pouvez pas supprimer le site <span class="notranslate">buffer</span> si un son a été créé à partir de celui-ci et que le son n'a pas été libéré au préalable. Vous devez donc libérer le (ou les) son(s) d'abord, <i>puis</i> supprimer le <span class="notranslate">buffer</span>. Il convient également de noter qu'ajouter quoi que ce soit au <span class="notranslate">buffer</span>, ou modifier la taille du <span class="notranslate">buffer</span>, après qu'un son ait été créé à partir de celui-ci, donnera des résultats inattendus et n'est pas recommandé - une fois que vous avez commencé à créer des sons à partir d'un <span class="notranslate">buffer</span>, vous ne devez plus le manipuler d'aucune autre manière.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">audio_create_buffer_sound(bufferId, bufferFormat, bufferRate, bufferOffset, bufferLength, bufferChannels);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_create_buffer_sound</span>(bufferId, bufferFormat, bufferRate, bufferOffset, bufferLength, bufferChannels);</p>
   <table>
     <tbody>
       <tr>

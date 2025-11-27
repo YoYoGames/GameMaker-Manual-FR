@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>application_surface_enable</h1>
+  <h1><span data-field="title" data-format="default">application_surface_enable</span></h1>
   <p>Cette fonction permet d'activer ou de désactiver la surface d'application. Par défaut, la surface d'application est activée et tous les dessins pour les événements Draw seront effectués sur cette surface et la surface sera dessinée à l'écran. Cependant, sur certains appareils plus anciens et sur des chipsets spécifiques, cela peut entraîner une baisse des performances. Dans ce cas, vous pouvez désactiver le dessin sur la surface de l'application et tous les événements de dessin seront alors dessinés directement sur l'écran <span class="notranslate">buffer</span>.</p>
   <p>Vous pouvez utiliser cette fonction pour activer ou désactiver la surface d'application à tout moment dans votre jeu, mais vous devez noter qu'il faut au moins une image (étape) pour que les changements prennent effet. Désactiver la surface d'application <i><b>désactivera toute correction du rapport hauteur/largeur</b></i>La surface d'application doit être activée ou désactivée à tout moment dans votre jeu. Cela signifie que vous devez disposer d'une méthode permettant de mettre le jeu à l'échelle de l'appareil, de la fenêtre ou de l'écran requis. Si vous l'activez à nouveau, les <i>options du jeu</i> prendront effet à l'étape suivante.</p>
   <p>Il est recommandé d'utiliser cette fonction avec précaution car elle aura un impact sur la façon dont tout est dessiné à l'écran. En général, il est préférable de l'utiliser comme une option dans un menu de votre jeu, ou de ne l'appeler qu'une seule fois au début de votre jeu et d'écrire votre code en fonction de son activation ou de sa désactivation.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">application_surface_enable(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">application_surface_enable</span>(enable);</p>
   <table>
     <tbody>
       <tr>

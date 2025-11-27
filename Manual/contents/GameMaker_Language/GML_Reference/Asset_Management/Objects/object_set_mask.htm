@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>objet_set_mask</title>
+  <title>object_set_mask</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>objet_set_mask</h1>
+  <h1><span data-field="title" data-format="default">object_set_mask</span></h1>
   <p>Cette fonction vous permet de définir le mask_index d'un objet spécifique (pour plus d'informations sur les masques, voir <a href="../../../../The_Asset_Editors/Objects.htm">L'éditeur d'objets</a>). Cela signifie que toutes les instances de cet objet qui sont créées <i>après la modification du masque</i> seront créées avec ce nouveau masque, tandis que les instances qui sont déjà dans la room peuvent ne pas être affectées. Vous pouvez définir cette valeur à -1 pour supprimer un masque <span class="notranslate">sprite</span> et ainsi utiliser par défaut le masque défini pour le <span class="notranslate">sprite</span> de l'objet (ou aucun masque si aucun <span class="notranslate">sprite</span> n'a été choisi).</p>
   <p>Veuillez noter qu'il ne s'agit pas d'une fonction d'instance ! Vous pouvez définir l'indice de masque des instances individuelles en utilisant la variable <a href="../Sprites/Sprite_Instance_Variables/mask_index.htm"><span class="inline">mask_index</span></a> et ainsi avoir dix instances ayant toutes un masque différent de celui de l'objet à partir duquel elles sont créées, et même si vous changez l'indice de masque de l'objet en utilisant cette fonction, toutes les instances qui sont actuellement dans la pièce resteront telles qu'elles étaient, et seules les instances créées après l'appel de la fonction commenceront avec le nouveau masque.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">object_set_mask(index, spr);</p>
+  <p class="code"><span data-field="title" data-format="default">object_set_mask</span>(index, spr);</p>
   <table>
     <tbody>
       <tr>

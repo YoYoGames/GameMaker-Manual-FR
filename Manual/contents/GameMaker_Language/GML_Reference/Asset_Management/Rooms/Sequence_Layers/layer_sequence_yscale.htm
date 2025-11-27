@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>échelle_de_séquence_de_couche</title>
+  <title>layer_sequence_yscale</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>échelle_de_séquence_de_couche</h1>
+  <h1><span data-field="title" data-format="default">layer_sequence_yscale</span></h1>
   <p>Avec cette fonction, vous pouvez définir l'échelle Y pour l'élément de séquence donné. Vous fournissez l'ID de l'élément de séquence tel que renvoyé par <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> ou par l'une des <a href="../General_Layer_Functions/General_Layer_Functions.htm">fonctions d'élément de couche</a> avec la nouvelle échelle à définir sur l'axe Y et la séquence sera mise à l'échelle par cette quantité. Une échelle de 1 indique qu'il n'y a pas de mise à l'échelle (1:1), des valeurs plus petites réduiront l'échelle (0,5, par exemple, réduira de moitié la largeur de la séquence), des valeurs plus grandes augmenteront l'échelle et des valeurs négatives renverseront la séquence autour de son origine <i>et</i> la mettront à l'échelle, sauf si la valeur utilisée est exactement -1 (dans ce cas, la séquence est simplement renversée autour de son origine sans mise à l'échelle).</p>
   <p>Il est très important de noter que l'application d'une mise à l'échelle <em>inégale</em> (par exemple : mise à l'échelle de l'axe X par 3 et de l'axe Y par 2) à des éléments de séquence contenant une instance qui utilise la <em>rotation</em>, <strong>peut causer des problèmes avec le dessin de l'instance, les collisions, l'élimination, et bien d'autres choses</strong>. En résumé, si votre séquence repose sur <em>des</em> propriétés d'instance, nous vous déconseillons de combiner une mise à l'échelle inégale avec une rotation d'instance.</p>
   <p>Notez également que vous ne devez pas modifier les variables <span class="inline">image_xscale</span>; <span class="inline">image_yscale</span>; <span class="inline">image_angle</span>; <span class="inline">x</span>; <span class="inline">y</span> pour toute instance d'une séquence utilisant cette fonction, car elles seront écrasées dès que la séquence sera mise à jour après l'appel de la fonction.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">layer_sequence_yscale(sequence_element_id, xscale)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_sequence_yscale</span>(sequence_element_id, xscale)</p>
   <table>
     <tbody>
       <tr>

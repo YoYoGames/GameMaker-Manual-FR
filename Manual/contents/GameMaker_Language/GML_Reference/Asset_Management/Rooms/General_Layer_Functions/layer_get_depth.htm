@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>couche_get_depth</title>
+  <title>layer_get_depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>couche_get_depth</h1>
+  <h1><span data-field="title" data-format="default">layer_get_depth</span></h1>
   <p>Vous pouvez utiliser cette fonction pour obtenir la valeur de <i>profondeur</i> associée à une couche donnée. Vous fournissez l'ID de la couche (que vous obtenez lorsque vous créez la couche à l'aide de la fonction <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) ou le nom du calque (sous forme de chaîne de caractères - cela aura un impact sur les performances) et la fonction renverra la profondeur du calque sous forme de nombre réel. Notez que la profondeur est définie comme étant plus élevée au fur et à mesure que l'on s'éloigne de la caméra et plus faible au fur et à mesure que l'on s'en rapproche. Ainsi, si vous avez trois couches avec des profondeurs de -100, 0, 100, les couches seront dessinées dans l'ordre 100, 0, -100, de sorte que la couche &quot;supérieure&quot; (c'est-à-dire la plus proche de la vue de la caméra et donc dessinée par-dessus tout le reste) sera la couche avec la profondeur -100.</p>
   <p>L'image suivante montre un schéma du fonctionnement de la profondeur pour les couches :</p>
   <p><img>Notez que si vous fournissez une valeur d'ID de couche invalide, vous obtiendrez une erreur.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">layer_get_depth(layer_id)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_get_depth</span>(layer_id)</p>
   <table>
     <tbody>
       <tr>

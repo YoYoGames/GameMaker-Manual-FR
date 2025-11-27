@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physique_joint_prismatique_créer</title>
+  <title>physics_joint_prismatic_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physique_joint_prismatique_créer</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_prismatic_create</span></h1>
   <p>Comme une articulation à rotule, l'articulation prismatique n'a qu'un seul degré de liberté, mais avec cette articulation, il est directionnel par rapport à un axe plutôt que rotatif et empêche en fait toute forme de rotation. Voici une image pour vous aider à visualiser comment cela fonctionne :</p>
   <p><img>Nous avons deux instances jointes au point d'ancrage, avec un axe de mouvement défini à partir du vecteur des deux coordonnées x/y de l'axe w par rapport aux coordonnées (0,0) du monde physique (ainsi, une composante x de 0 et une composante y de 1 (0,1) ferait de l'articulation une articulation prismatique verticale). Cette articulation <i>ne</i> peut alors se déplacer <i>que</i> par rapport à cet axe, comme un ressort ou un piston. Si vous définissez la limite trans inférieure ou supérieure, vous limitez essentiellement la quantité de mouvement le long de cet axe, où la position 0 est le point exact que vous avez défini avec w_anchor x/y, donc une valeur négative irait à la &quot;gauche&quot; de ce point le long de l'axe et une valeur positive à la &quot;droite&quot; comme indiqué dans le diagramme suivant (comprenez que &quot;gauche&quot; et &quot;droite&quot; sont des termes relatifs !)</p>
   <p><img>Vous pouvez également définir l'articulation comme ayant un moteur ou non. Cela signifie que lorsqu'elle n'est pas influencée par une collision, l'articulation se déplacera dans une direction le long de l'axe. Cette direction est définie par la vitesse du moteur, avec un nombre positif étant vers les coordonnées de l'axe (&quot;droite&quot;) et un nombre négatif étant vers le point d'ancrage (&quot;gauche&quot;). L'argument &quot;max_motor_force&quot; permet de limiter la vitesse du mouvement afin de ne pas avoir un moteur en perpétuelle accélération et de limiter l'influence qu'une collision peut avoir sur le mouvement. De cette façon, vous pouvez utiliser un moteur d'articulation pour simuler la friction des articulations en fixant la vitesse de l'articulation à zéro et la force maximale à une valeur faible mais significative. Le moteur essaiera d'empêcher l'articulation de bouger, mais cédera à une charge importante.</p>
   <p>Comme pour toutes les articulations, si vous définissez la valeur &quot;col&quot; sur <span class="inline">true</span>, les deux instances peuvent interagir et entrer en collision l'une avec l'autre, mais <i>seulement</i> si elles ont des événements de collision. Cependant, si elle est définie sur <span class="inline">false</span>, elles n'entreront pas en collision, quoi qu'il arrive.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">physics_joint_prismatic_create(inst1, inst2, w_anchor_x, w_anchor_y, w_axis_x, w_axis_x, lower_trans_limit, upper_trans_limit, limit, max_motor_force, motor_speed, motor, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_prismatic_create</span>(inst1, inst2, w_anchor_x, w_anchor_y, w_axis_x, w_axis_x, lower_trans_limit, upper_trans_limit, limit, max_motor_force, motor_speed, motor, col)</p>
   <table>
     <tbody>
       <tr>

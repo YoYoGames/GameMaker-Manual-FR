@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_draw</h1>
+  <h1><span data-field="title" data-format="default">physics_particle_draw</span></h1>
   <p>Cette fonction va dessiner un <span class="notranslate">sprite</span> à la position de toutes les particules qui partagent la même valeur de catégorie définie par l'utilisateur, et qui ont <span class="notranslate">flags</span> qui coïncide avec celles définies pour le masque. La valeur du masque est définie de la même manière que vous définissez le <span class="notranslate">flags</span> lors de la création de la particule (voir la fonction <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a> pour un exemple), c'est-à-dire en utilisant le <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>ou</i></a> &quot;|&quot; pour masquer les bits appropriés pour chaque drapeau.</p>
   <p class="note"><b>REMARQUE</b>: Cette fonction dessinera <b>toutes les</b> particules de la simulation physique avec <span class="notranslate">flags</span> qui coïncide avec celles du masque, qu'il s'agisse de particules individuelles ou de groupes, si la catégorie de l'utilisateur est la même.</p>
   <p>La particule dessinée utilisera les valeurs de couleur et d'alpha définies lors de sa création, et tournera avec le moment angulaire de la particule. Cependant, si vous souhaitez mettre à l'échelle le site <span class="notranslate">sprite</span> ou modifier toute autre propriété dessinée, vous devez utiliser la fonction <a href="physics_particle_draw_ext.htm"><span class="inline">physics_particle_draw_ext()</span></a>.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">physics_particle_draw(typemask, category, sprite, subimg)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_particle_draw</span>(typemask, category, sprite, subimg)</p>
   <table>
     <tbody>
       <tr>

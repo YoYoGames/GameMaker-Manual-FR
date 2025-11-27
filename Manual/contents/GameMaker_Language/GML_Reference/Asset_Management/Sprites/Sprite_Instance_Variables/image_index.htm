@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>image_index</h1>
+  <h1><span data-field="title" data-format="default">image_index</span></h1>
   <p>Un <span class="notranslate">sprite</span> est composé d'une ou plusieurs <i>sous-images</i> qui peuvent faire apparaître le <span class="notranslate">sprite</span> animé en passant de l'une à l'autre, ou qui peuvent être basculées entre elles dans le code pour donner différents &quot;états&quot;, un peu comme un bouton dans les fenêtres. Si le site <span class="notranslate">sprite</span> est animé, vous pouvez obtenir l'image actuelle de l'animation en vérifiant la variable <span class="inline">image_index</span>, ou si vous souhaitez modifier l'état d'un site <span class="notranslate">sprite</span> statique, vous pouvez sélectionner une nouvelle sous-image en définissant cette variable sur la sous-image souhaitée du site <span class="notranslate">sprite</span>. Veuillez noter que pour que les modifications de cette variable soient visibles, l'instance <i>ne</i> doit <i>pas</i> avoir d'événement de dessin (et <span data-keyref="GameMaker Name">GameMaker</span> dessinera donc par défaut le site <span class="notranslate">sprite</span>) ou être dessinée à l'aide d'une des fonctions de dessin telles que <a href="../../../Drawing/Sprites_And_Tiles/draw_self.htm"><span class="inline">draw_self()</span></a> ou <a href="../../../Drawing/Sprites_And_Tiles/draw_sprite_ext.htm"><span class="inline">draw_sprite_ext()</span></a> (en fournissant l'index de l'image dans l'argument approprié).</p>
   <p>Notez que le fait de définir cette variable directement sur une image <em>ne</em> déclenchera <em>pas</em> les messages de diffusion qui peuvent être présents sur cette image.</p>
   <p>Notez également que lorsque vous utilisez l'animation squelettique <span class="notranslate">sprites</span>, vous pouvez toujours obtenir et définir les valeurs de <span class="inline">image_index</span> - voir la fonction <a href="../Skeletal_Animation/Animation/skeleton_animation_get_duration.htm"><span class="inline">skeleton_animation_get_duration()</span></a> pour des exemples de la manière de procéder.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">image_index;</p>
+  <p class="code"><span data-field="title" data-format="default">image_index</span></p>
   <p> </p>
   <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real"></span> (single precision floating point value)</p>

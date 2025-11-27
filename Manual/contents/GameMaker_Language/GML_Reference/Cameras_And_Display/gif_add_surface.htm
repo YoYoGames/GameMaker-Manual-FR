@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gif_add_surface</h1>
+  <h1><span data-field="title" data-format="default">gif_add_surface</span></h1>
   <p>Cette fonction permet d'enregistrer une image dans un fichier GIF à partir d'une surface. Vous fournissez l'ID du fichier GIF (tel que renvoyé par la fonction <a href="gif_open.htm"><span class="inline">gif_open()</span></a>) et un ID de surface (tel que renvoyé par la fonction <a href="../Drawing/Surfaces/surface_create.htm"><span class="inline">surface_create()</span></a>), ainsi qu'un temps de retard entre les images. Le délai est calculé en 1/100e de seconde, mais notez qu'une fois le GIF créé, si vous l'utilisez à des fins promotionnelles par exemple, différents navigateurs peuvent interpréter le délai entre les images de manière légèrement différente - voir <a href="https://www.deviantart.com/humpy77/journal/Frame-Delay-Times-for-Animated-GIFs-214150546" target="_blank">ici</a> pour plus de détails. Vous pouvez (facultativement) fournir des valeurs de décalage X et Y pour la surface utilisée pour l'ajout au GIF, auquel cas la partie dessinée au GIF commencera à partir du décalage et non de la position par défaut (0,0), ce qui vous permet de sélectionner uniquement une section de la surface à ajouter. Vous pouvez également fournir une valeur de quantification, qui est un nombre entier compris entre 0 et 3, où 0 correspond à une quantification complète et 3 à une quantification nulle (les valeurs inférieures auront une dégradation ultérieure de la qualité, mais créeront un GIF plus petit). Notez qu'il n'y a pas beaucoup de différence entre la qualité par défaut de 2, et la plus élevée de 3, et l'utilisation de 3 ralentira significativement la création du GIF, donc il faut faire attention en utilisant la valeur maximale.</p>
   <p>Notez qu'il n'y a pas de limites intégrées sur le nombre d'images ou sur la taille de ces images dans votre GIF, mais si vous utilisez trop de mémoire, la fonction échouera et retournera -1, sinon elle retournera 0.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">gif_add_surface(gif_index, surface, delay_time, [xoffset], [yoffset]);</p>
+  <p class="code"><span data-field="title" data-format="default">gif_add_surface</span>(gif_index, surface, delay_time, [xoffset], [yoffset]);</p>
   <table>
     <tbody>
       <tr>

@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>zip_unzip</h1>
+  <h1><span data-field="title" data-format="default">zip_unzip</span></h1>
   <p>Cette fonction ouvrira un fichier zip stocké et extraira son contenu dans le répertoire donné. Notez que si vous ne fournissez pas un chemin complet vers le répertoire ZIP, la <i>racine du</i> lecteur actuel sera utilisée, et si vous voulez le placer dans un chemin relatif au répertoire de travail du bundle du jeu, vous devez utiliser la variable <a href="../File_Directories/working_directory.htm"><span class="inline">working_directory</span></a> comme partie du chemin (les chemins relatifs utilisant &quot;.&quot; ou &quot;..&quot; ne fonctionneront pas comme prévu et doivent être évités). Notez également que le fichier zip doit faire partie du paquet de jeu (c'est-à-dire un <a href="../../../../Settings/Included_Files.htm">fichier inclus</a>) ou avoir été téléchargé dans la zone de stockage à l'aide de <a href="../../Asynchronous_Functions/HTTP/http_get_file.htm">http_get_file()</a>.</p>
   <p>La fonction renvoie une valeur indiquant le nombre de fichiers extraits, ou elle renvoie 0 ou moins si l'extraction a échoué.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">zip_unzip(zip_file, target_directory)</p>
+  <p class="code"><span data-field="title" data-format="default">zip_unzip</span>(zip_file, target_directory)</p>
   <table>
     <tbody>
       <tr>

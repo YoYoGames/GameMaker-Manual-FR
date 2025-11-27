@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>profondeur de la couche</title>
+  <title>layer_depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>profondeur de la couche</h1>
+  <h1><span data-field="title" data-format="default">layer_depth</span></h1>
   <p>Cette fonction peut être utilisée pour modifier la <b>profondeur</b> de la couche donnée, en changeant l'ordre dans lequel son contenu sera rendu à l'écran. Vous fournissez l'ID du calque (que vous obtenez lorsque vous créez le calque à l'aide de la fonction <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) ou le nom du calque (sous la forme d'une chaîne de caractères - cela aura un impact sur les performances), puis indiquez la nouvelle profondeur à laquelle le calque doit être défini (une valeur entière comprise entre -16000 et 16000). La profondeur du calque est définie comme étant plus élevée lorsqu'elle est &quot;éloignée&quot; de la caméra et plus faible lorsqu'elle est &quot;proche&quot; de la caméra. Ainsi, si vous avez trois calques avec des profondeurs de -100, 0, 100, les calques seront dessinés dans l'ordre 100, 0, -100, de sorte que le calque &quot;supérieur&quot; (c'est-à-dire le plus proche de la vue de la caméra et donc dessiné au-dessus de tout le reste) sera le calque avec la profondeur -100.</p>
   <p>L'image suivante montre un schéma du fonctionnement de la profondeur pour les couches :</p>
   <p><img>Notez que vous pouvez vérifier la profondeur d'une couche à tout moment en utilisant la fonction <a href="layer_get_depth.htm"><span class="inline">layer_get_depth()</span></a>. Notez également que les profondeurs minimale et maximale des couches sont de -16000 à 16000, et que tout ce qui se trouve en dehors de ces profondeurs <b>ne sera pas rendu</b>. Si vous avez besoin d'une profondeur en dehors de cette plage, vous devrez utiliser la fonction <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>
   <p>Gardez à l'esprit que modifier la profondeur d'un calque peut changer les <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">filtres et les effets</a> qui lui sont appliqués, car si vous modifiez la profondeur pour qu'elle soit inférieure à celle d'un calque FX, l'effet ne sera plus appliqué au calque.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">layer_depth(layer_id, depth)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_depth</span>(layer_id, depth)</p>
   <table>
     <tbody>
       <tr>

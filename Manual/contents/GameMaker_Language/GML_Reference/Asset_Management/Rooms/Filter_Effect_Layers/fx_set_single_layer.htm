@@ -15,7 +15,7 @@
   <meta name="is_pure" content="true" />
 </head>
 <body>
-  <h1>fx_set_single_layer</h1>
+  <h1><span data-field="title" data-format="default">fx_set_single_layer</span></h1>
   <p>Cette fonction est utilisée pour activer ou désactiver le mode &quot;Single Layer&quot; pour un filtre/effet. Par défaut, un filtre/effet est appliqué au calque auquel il est <a href="layer_set_fx.htm">affecté</a> et à tous les calques inférieurs à ce calque, mais vous pouvez activer le mode Single Layer sur un FX <span class="notranslate">struct</span> pour vous assurer qu'il est uniquement appliqué au calque auquel il est affecté.</p>
   <p>Vous spécifiez un FX <span class="notranslate">struct</span> (tel que renvoyé par <span class="inline"><a href="fx_create.htm">fx_create()</a></span> ou <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>) et une valeur <a class="glossterm" data-glossterm="boolean" href="#">booléenne</a> pour activer (<span class="inline">true</span>) ou désactiver (<span class="inline">false</span>) le mode monocouche.</p>
   <p>Le visuel suivant montre un filtre utilisé avec le mode monocouche désactivé (qui est le comportement par défaut pour toutes les couches FX) et le même filtre avec le mode monocouche activé :</p>
@@ -30,7 +30,7 @@
   <p class="note"><span class="note">REMARQUE</span> Lorsque vous activez le mode Single Layer pour un FX, veillez à l'appliquer à un calque qui n'est pas un <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">calque FX</a>, car un calque FX en lui-même ne contient rien et donc aucun filtre/effet ne sera visible.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">fx_set_single_layer(filter_or_effect, enable);</p>
+  <p class="code"><span data-field="title" data-format="default">fx_set_single_layer</span>(filter_or_effect, enable);</p>
   <table>
     <tbody>
       <tr>

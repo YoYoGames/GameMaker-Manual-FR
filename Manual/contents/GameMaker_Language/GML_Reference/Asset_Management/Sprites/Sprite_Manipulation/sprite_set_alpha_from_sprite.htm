@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_set_alpha_from_sprite</h1>
+  <h1><span data-field="title" data-format="default">sprite_set_alpha_from_sprite</span></h1>
   <p>Cette fonction utilise la valeur/saturation d'un <span class="notranslate">sprite</span> et la multiplie par l'alpha de la cible <span class="notranslate">sprite</span>. Idéalement, le site <span class="notranslate">sprite</span> utilisé pour générer la nouvelle carte alpha doit être en échelle de gris, les zones blanches ayant une valeur alpha équivalente à 1 (opaque), les zones noires étant équivalentes à l'alpha 0 (transparent) et les zones grises ayant un alpha compris entre 0 et 1. Le site <span class="notranslate">sprite</span> dont vous définissez l'alpha <i>ne peut pas être une ressource permanente</i>, pas plus que le site <span class="notranslate">sprite</span> que vous utilisez pour définir l'alpha, car cela entraînerait une erreur. Cela signifie que vous devez créer deux <span class="notranslate">sprites</span> complètement nouveaux &quot;à la volée&quot; d'une manière ou d'une autre pour que la fonction fonctionne correctement. Pour ce faire, vous pouvez utiliser des surfaces ou créer un <span class="notranslate">sprite</span> à partir de l'écran (l'exemple de code ci-dessous montre comment obtenir cet effet avec des surfaces).</p>
   <p class="note"><b>NOTE</b>: Cette fonction n'est utile que pour les <b>bitmaps</b> <span class="notranslate">sprites</span> et ne fonctionne pas avec les SWF ou JSON (<span class="notranslate">Spine</span>) <span class="notranslate">sprites</span>.</p>
   <p>Vous trouverez ci-dessous une image qui illustre le fonctionnement de cette fonction :</p>
   <p><img alt="Sprite Set Alpha Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_alpha.png" /></p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">sprite_set_alpha_from_sprite(ind, spr);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_set_alpha_from_sprite</span>(ind, spr);</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>partie_système_créer_couche</title>
+  <title>part_system_create_layer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>partie_système_créer_couche</h1>
+  <h1><span data-field="title" data-format="default">part_system_create_layer</span></h1>
   <p>Cette fonction va créer un nouveau système de particules sur une couche donnée. Vous donnez l'ID unique de la couche tel que retourné par la fonction <a href="../../../Asset_Management/Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a> ou le nom de la couche à utiliser comme chaîne de caractères - par exemple &quot;instance_layer&quot; - puis indiquez si le système est persistant ou non. Si le système n'est pas marqué comme persistant, il sera automatiquement détruit à la fin de la pièce dans laquelle il a été créé (c'est la même chose que si vous aviez appelé la fonction <a href="part_system_destroy.htm"><span class="inline">part_system_destroy()</span></a> et détruira également tous les émetteurs associés au système). Cependant, lorsqu'il est marqué comme persistant, le système sera transporté dans la pièce suivante lorsque celle-ci est changée, et si la pièce suivante <i>n'a pas</i> de couche avec le même nom ou la même profondeur que celle assignée, alors une nouvelle couche sera créée pour le système qui persiste à travers les pièces, et elle sera nommée de la même façon que la couche originale. Lors d'un changement de pièce, s'il existe dans les pièces suivantes une autre couche portant le même nom, l'instance persistante sera affectée à la couche portant ce nom <i>, quelle que soit la profondeur de la couche</i>. Enfin, si un système persistant se déplace dans une pièce dont la couche a la même profondeur que la couche sur laquelle le système a été créé, il <i>ne</i> sera <i>pas</i> affecté à cette couche, mais une nouvelle couche sera créée à la même profondeur (avec le même nom que la couche d'origine).</p>
   <p>La fonction renvoie une valeur d'identification unique pour le système de particules qui doit être utilisée dans tous les autres appels de fonction où vous devez donner une identification du système.</p>
   <p class="note"><b>IMPORTANT !</b> Si vous marquez le système de particules comme persistant, il devra être nettoyé manuellement (ainsi que tous les émetteurs qui lui sont assignés) à l'aide des fonctions de destruction appropriées lorsqu'il n'est pas utilisé, sinon vous risquez une fuite de mémoire qui aura un impact négatif sur votre jeu final.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">part_system_create_layer(layer_id, persistent);</p>
+  <p class="code"><span data-field="title" data-format="default">part_system_create_layer</span>(layer_id, persistent);</p>
   <table>
     <tbody>
       <tr>

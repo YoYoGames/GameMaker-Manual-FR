@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_sound_set_listener_mask</h1>
+  <h1><span data-field="title" data-format="default">audio_sound_set_listener_mask</span></h1>
   <p>Cette fonction peut être utilisée pour définir le masque binaire d'un son afin qu'il ne soit lu que par les auditeurs spécifiés. Vous pouvez créer un masque binaire en utilisant la fonction <a href="Audio_Listeners/audio_get_listener_info.htm"><span class="inline">audio_get_listener_info()</span></a> puis en utilisant le bitwise <span class="inline">or</span> (&quot;|&quot;) pour créer un masque personnalisé avec les auditeurs à partir desquels vous souhaitez que le son soit lu, puis en appliquant ce masque personnalisé au son après l'avoir lu. Ce masque remplacera le masque par défaut ou celui que vous avez pu définir à l'aide de la fonction <a href="Audio_Listeners/audio_get_listener_mask.htm"><span class="inline">audio_set_listener_mask()</span></a>.</p>
   <p>Cette fonction ne peut être utilisée sur un son qu'après qu'il ait été réglé pour être joué et nécessite l'ID du son tel que renvoyé par la fonction utilisée pour jouer le son.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">audio_sound_set_listener_mask(soundID, mask);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_sound_set_listener_mask</span>(soundID, mask);</p>
   <table>
     <tbody>
       <tr>

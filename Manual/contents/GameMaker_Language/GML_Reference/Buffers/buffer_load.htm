@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Chargement de la mémoire tampon</title>
+  <title>buffer_load</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Chargement de la mémoire tampon</h1>
+  <h1><span data-field="title" data-format="default">buffer_load</span></h1>
   <p>Cette fonction est utilisée pour charger un <span class="notranslate">buffer</span> qui a été précédemment enregistré à l'aide des fonctions <a href="buffer_save.htm"><span class="inline">buffer_save()</span></a> ainsi que tout <a href="../../../Settings/Included_Files.htm" title="Included Files">Fichier Inclus</a> ou fichier chargé en externe. Elle renvoie l'ID du nouveau tampon qui est créé par la fonction sous forme de &quot;grow&quot; <span class="notranslate">buffer</span> (voir <a href="buffer_create.htm">ici</a>) avec un alignement d'octets de 1. Cet ID doit être stocké dans une variable et utilisé dans tous les autres appels de fonction à ce <span class="notranslate">buffer</span>. Si le chargement échoue pour une raison quelconque, la fonction renvoie -1 et un message s'affiche dans la fenêtre de sortie du compilateur indiquant que le chargement a échoué.</p>
   <p class="note"><span class="note">REMARQUE</span> Il est important que vous supprimiez de la mémoire toute ressource créée dynamiquement comme celle-ci lorsque vous n'en avez plus besoin afin d'éviter les fuites de mémoire. Ainsi, lorsque vous en avez terminé avec le site <span class="notranslate">buffer</span> que vous avez créé, vous devez le libérer à nouveau à l'aide de la commande <a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a>.</p>
   <h2>Notes spécifiques à la plate-forme</h2>
@@ -25,7 +25,7 @@
   <p> </p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">buffer_load(filename);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_load</span>(filename);</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>chemin_add_point</title>
+  <title>path_add_point</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>chemin_add_point</h1>
+  <h1><span data-field="title" data-format="default">path_add_point</span></h1>
   <p>Cette fonction permet d'ajouter un point à la trajectoire spécifiée et de définir son facteur de vitesse. Ce point est ajouté à la fin du chemin, quelle que soit la position du point, et le facteur est égal au pourcentage de <a href="../Path_Variables/path_speed.htm"><span class="inline">path_speed</span></a> que l'instance suivante va réellement lorsqu'elle atteint ce point du chemin. Si vous souhaitez placer un point du chemin à une autre position qui n'est pas la fin, vous devez utiliser la fonction <a href="path_insert_point.htm"><span class="inline">path_insert_point()</span></a>.</p>
   <p>Si elle est utilisée sur un chemin à partir du navigateur d'actifs, notez que la <strong>fonction modifiera l'actif réel</strong>, et affectera donc de façon permanente la façon dont le chemin est utilisé par toutes les instances du jeu à partir du moment où la fonction est utilisée jusqu'à la fin du jeu. Si ce n'est pas ce dont vous avez besoin, vous devriez utiliser une fonction comme <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> pour créer d'abord une copie du chemin, puis appeler cette fonction sur l'actif dupliqué (n'oubliez pas d'appeler <span class="inline"><a href="path_delete.htm">path_delete()</a></span> sur l'actif lorsqu'il n'est plus nécessaire).</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">path_add_point(index, x, y, speed);</p>
+  <p class="code"><span data-field="title" data-format="default">path_add_point</span>(index, x, y, speed);</p>
   <table>
     <tbody>
       <tr>

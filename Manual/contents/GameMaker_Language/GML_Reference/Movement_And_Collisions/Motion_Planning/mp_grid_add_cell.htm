@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_grid_add_cell</h1>
+  <h1><span data-field="title" data-format="default">mp_grid_add_cell</span></h1>
   <p>Avec cette fonction, nous pouvons marquer des cellules individuelles dans la grille MP donnée comme étant &quot;interdites&quot;, ce qui signifie que les fonctions de recherche de chemin ne les traverseront jamais. Normalement, on travaille en coordonnées x/y de <i>la pièce</i>, et non en coordonnées de <i>cellules de</i> la grille MP. Considérons donc l'image suivante qui montre comment les deux peuvent être corrélés :</p>
   <p><img>Comme vous pouvez le voir, la mp_grid est numérotée comme une série de cellules (commençant à 0,0 dans le coin supérieur gauche), et lorsque vous placez cette grille sur la pièce, il existe une corrélation directe entre les coordonnées de la pièce (qui commencent également à 0,0 dans le coin supérieur gauche) et les cellules de la grille. Dans l'image, vous pouvez voir qu'une instance située à la position 260,130 tombe sur la cellule 8,4 de la grille. Vous pouvez facilement calculer mathématiquement la cellule exacte sur laquelle se trouve une position en divisant le nombre par la résolution de la grille et en arrondissant à l'unité inférieure <i>ou</i>, si vous utilisez des résolutions de grille en puissance de 2 (comme 8, 16, 32, etc.), vous pouvez utiliser les <a href="../../../../Additional_Information/Bitwise_Operators.htm">opérateurs bit à bit</a>. Il convient de noter que l'opération par bit est plus rapide et l'exemple ci-dessous montre les deux méthodes.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">mp_grid_add_cell(id, h, v);</p>
+  <p class="code"><span data-field="title" data-format="default">mp_grid_add_cell</span>(id, h, v);</p>
   <table>
     <tbody>
       <tr>

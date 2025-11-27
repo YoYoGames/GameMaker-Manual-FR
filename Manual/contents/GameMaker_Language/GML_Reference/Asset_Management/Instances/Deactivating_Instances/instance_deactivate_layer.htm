@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>instance_désactivation_couche</title>
+  <title>instance_deactivate_layer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_désactivation_couche</h1>
+  <h1><span data-field="title" data-format="default">instance_deactivate_layer</span></h1>
   <p>Avec cette fonction, vous pouvez désactiver toutes les instances assignées à une couche spécifique. Vous devez fournir l'<b>ID de la couche</b>, qui peut être soit le nom de la couche tel qu'il est écrit dans l'éditeur de code (sous forme de chaîne), soit la valeur réelle de l'ID de la couche telle qu'elle est retournée par la fonction <a href="../../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>Notez que vous ne pouvez désactiver que les couches d'<i>instance</i> avec cette fonction. Notez que si vous avez désactivé une couche dont les instances d'objets sont marquées comme <b>persistantes</b>, vous devrez réactiver la couche à l'aide de la fonction <a href="instance_activate_layer.htm"><span class="inline">instance_activate_layer()</span></a> avant de changer de pièce, sinon toutes les instances persistantes de la couche <i>ne</i> seront <i>pas</i> reportées et seront rejetées. Notez également que la désactivation n'est pas instantanée, et qu'une instance qui a été désactivée de cette manière ne sera pas considérée comme inactive avant la fin de l'événement dans lequel la fonction a été appelée.</p>
   <p class="note"><b>NOTE</b>: Si vous désactivez une instance au démarrage de la room (c'est-à-dire à partir du code de création de la room, ou à partir d'un événement de création d'une instance dans la room), toutes les instances qui sont placées dans la room à partir de l'éditeur de room <b>exécuteront toujours leur événement de création</b> avant d'être désactivées.</p>
   <p class="note"><b></b><b>AVERTISSEMENT</b>: La désactivation des instances dont la physique est activée <b>n'</b> empêchera <b>PAS</b> leurs appareils d'interagir dans la simulation physique. Pour cela, vous devez définir leur variable <span style="font-size:1px;"><a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline">phy_active</span></a></span> à <span class="inline">true</span> ou <span class="inline">false</span> lorsque vous activez/désactivez les instances.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">instance_deactivate_layer(obj);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_deactivate_layer</span>(obj);</p>
   <table>
     <tbody>
       <tr>

@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_duplicate</h1>
+  <h1><span data-field="title" data-format="default">sprite_duplicate</span></h1>
   <p>Cette fonction renvoie l'index d'un nouveau site <span class="notranslate">sprite</span> qui est un double (copie) de celui qui est entré comme argument &quot;index&quot;. Si la fonction échoue, -1 est renvoyé. Cette fonction <i>doit</i> être utilisée pour copier n'importe quel <span class="notranslate">sprites</span> à partir des actifs d'origine avant que des transformations puissent être effectuées sur eux. Par exemple, si vous souhaitez modifier le rectangle de délimitation d'un <span class="notranslate">sprite</span>, ou définir son alpha à partir d'un autre <span class="notranslate">sprite</span>, vous devez d'abord le dupliquer, puis effectuer l'opération sur le <span class="notranslate">sprite</span> dupliqué et l'utiliser. Un <span class="notranslate">sprite</span> dupliqué sera placé sur sa propre page de texture unique lors de sa création, ce qui signifie que la duplication de plusieurs <span class="notranslate">sprites</span> créera de multiples pages de texture et aura un impact sur les performances, donc n'utilisez cette fonction que si nécessaire.</p>
   <p class="note"><b>REMARQUE</b>: Lorsque vous dupliquez un <span class="notranslate">sprite</span> dans <span data-keyref="GameMaker Name">GameMaker</span>, vous devez vous souvenir de le supprimer à nouveau (avec la touche <span style="font-size:1px;"><a href="sprite_delete.htm"><span class="inline">sprite_delete()</span></a></span>) lorsqu'il n'est plus nécessaire, sinon il y a un risque de fuite de mémoire qui ralentira et finira par faire planter votre jeu.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">sprite_duplicate(index);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_duplicate</span>(index);</p>
   <table>
     <tbody>
       <tr>

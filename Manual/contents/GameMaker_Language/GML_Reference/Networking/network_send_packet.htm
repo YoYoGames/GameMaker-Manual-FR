@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>réseau_envoi_paquet</title>
+  <title>network_send_packet</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>réseau_envoi_paquet</h1>
+  <h1><span data-field="title" data-format="default">network_send_packet</span></h1>
   <p>Cette fonction permet d'envoyer un &quot;paquet&quot; de données sur le réseau. La fonction prend l'<i>identifiant de la socket</i> à connecter, puis vous devez fournir l'<i>identifiant du tampon</i> qui contient les données à envoyer (pour plus d'informations sur <span class="notranslate">buffers</span>, voir <a href="../Buffers/Buffers.htm">Référence - Tampons</a>) et enfin la taille (en octets) du paquet de données. Les paquets envoyés avec cette fonction sont formatés de façon à ce que le jeu <span data-keyref="GameMaker Name">GameMaker</span> qui reçoit les données puisse &quot;découper&quot; les paquets correctement, et la fonction retournera le nombre d'octets de données envoyés, ou un nombre inférieur à 0 si l'envoi a échoué. Il convient de noter que la taille finale des données envoyées qui est renvoyée par cette fonction comprendra également les informations de l'en-tête <span class="notranslate">GameMaker</span>, qui représentent 12 octets supplémentaires.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">network_send_packet(socket, bufferid, size);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_packet</span>(socket, bufferid, size);</p>
   <table>
     <tbody>
       <tr>

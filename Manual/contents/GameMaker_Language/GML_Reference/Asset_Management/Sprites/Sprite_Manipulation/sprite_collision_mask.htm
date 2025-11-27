@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>masque_collision_spirituel</title>
+  <title>sprite_collision_mask</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>masque_collision_spirituel</h1>
+  <h1><span data-field="title" data-format="default">sprite_collision_mask</span></h1>
   <p>Cette fonction vous permet de définir les propriétés du masque de collision que doit avoir un <span class="notranslate">sprite</span>. Si vous sélectionnez le mode de boîte englobante automatique (0) ou image complète (1), les valeurs individuelles de la boîte englobante peuvent être définies sur 0. Cependant, pour un masque défini par l'utilisateur (2), vous devrez définir ces valeurs. Les différentes valeurs de la boîte englobante sont toujours relatives au coin supérieur gauche du site <span class="notranslate">sprite</span> (indépendamment de l'origine x et y) qui est considéré comme la position (0, 0).</p>
   <p>La définition du type de masque définit la forme générale du masque lui-même, mais notez que tout autre type de masque qu'un masque rectangulaire nécessitera plus de puissance de traitement lors de la résolution des collisions, ce qui entraînera une baisse des performances. En général, vous ne devriez utiliser des types de masque autres que rectangulaires qu'en cas de nécessité absolue.</p>
   <p class="note"><b>REMARQUE</b>: Cette fonction ne permet pas le type de masque de collision du <b>rectangle tourné</b>.</p>
@@ -60,7 +60,7 @@
   <p class="note"><b>NOTE</b>: Cette fonction ne fonctionnera que sur les ressources ajoutées <span class="notranslate">sprites</span> ou dupliquées <span class="notranslate">sprites</span> et <b>pas</b> directement sur les ressources pré-fabriquées. Vous pouvez dupliquer <span class="notranslate">sprites</span> en utilisant la fonction <span style="font-size:1px;"><a href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a></span>.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">sprite_collision_mask(ind, sepmasks, bboxmode, bbleft, bbtop, bbright, bbbottom, kind, tolerance);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_collision_mask</span>(ind, sepmasks, bboxmode, bbleft, bbtop, bbright, bbbottom, kind, tolerance);</p>
   <table>
     <tbody>
       <tr>

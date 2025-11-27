@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_shader</h1>
+  <h1><span data-field="title" data-format="default">layer_shader</span></h1>
   <p>Grâce à cette fonction, vous pouvez affecter une ressource <span class="notranslate">shader</span> à une couche donnée et la couche sera alors rendue en utilisant cette <span class="notranslate">shader</span>. Vous fournissez soit la valeur d'identification unique de la couche, soit le nom de la couche (sous forme de chaîne de caractères, ce qui a un impact sur les performances), ainsi que l'ID du site <span class="notranslate">shader</span> à utiliser. Le site <span class="notranslate">shader</span> doit avoir été créé précédemment dans l'Asset Browser et l'index <span class="notranslate">shader</span> (le nom de la ressource <span class="notranslate">shader</span> ) est ensuite transmis à cette fonction. Si des instances ont été ajoutées à la couche attribuée, l'adresse <span class="notranslate">shader</span> sera appliquée à <i>tous les</i> événements de dessin que l'instance utilise - par exemple, si l'instance a un événement Draw GUI Begin, l'adresse <span class="notranslate">shader</span> lui sera automatiquement appliquée. L'adresse <span class="notranslate">shader</span> affectera également tous les autres éléments graphiques dessinés sur cette couche, comme les actifs <span class="notranslate">sprite</span> ou les cartes de tuiles.</p>
   <p>Notez que la fonction <i>n'est pas</i> censée être appelée dans des événements de dessin ou des événements d'étape, mais qu'elle ne doit être appelée qu'au début de la pièce dans le <b>code de création de pièce</b> ou dans l'<b>événement de création / </b> de <b>début de pièce</b> d'une instance.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">layer_shader(layer_id, shader)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_shader</span>(layer_id, shader)</p>
   <table>
     <tbody>
       <tr>

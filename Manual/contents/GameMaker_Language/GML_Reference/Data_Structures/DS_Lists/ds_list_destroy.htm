@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_destroy</h1>
+  <h1><span data-field="title" data-format="default">ds_list_destroy</span></h1>
   <p>Cette fonction supprime de la mémoire la structure de données de la liste donnée, libérant les ressources qu'elle utilisait et supprimant toutes les valeurs qu'elle contenait. Cette fonction devrait toujours être utilisée lorsque vous avez fini d'utiliser la ds_list pour éviter les fuites de mémoire qui peuvent ralentir et faire planter votre jeu. Notez que la destruction d'une liste déréférencera toutes les structures de données qui y sont stockées, ce qui entraînera une fuite de mémoire. Vous devrez donc parcourir la liste et détruire manuellement tous les éléments de structure de données avant de la détruire pour éviter cela. La seule fois où cela n'est pas nécessaire est lorsque vous avez marqué des éléments de la liste comme étant une autre <a href="DS_Lists.htm">liste DS</a> ou une <a href="../DS_Maps/DS_Maps.htm">carte DS</a>, auquel cas ces éléments seront détruits et leur mémoire nettoyée automatiquement.</p>
   <p class="note"><b>IMPORTANT !</b> Lorsque vous créez une structure de données, la valeur de l'index pour l'identifier est une valeur entière commençant à 0. Cela signifie que des structures de données de différents types peuvent avoir la <b>même</b> valeur d'index, donc en cas de doute vous devriez utiliser la fonction <span style="font-size:1px;"><a href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span> avant d'y accéder. Notez également que les indices sont réutilisés, de sorte qu'une valeur d'indice de structure de données détruite peut être utilisée par une structure nouvellement créée par la suite ; nous recommandons donc de toujours définir la variable qui contenait l'indice DS à -1 après la destruction.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">ds_list_destroy(id);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_destroy</span>(id);</p>
   <table>
     <tbody>
       <tr>

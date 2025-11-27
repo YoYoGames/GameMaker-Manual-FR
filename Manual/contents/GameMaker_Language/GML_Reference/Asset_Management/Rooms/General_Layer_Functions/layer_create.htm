@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>couche_créer</title>
+  <title>layer_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>couche_créer</h1>
+  <h1><span data-field="title" data-format="default">layer_create</span></h1>
   <p>Cette fonction est utilisée pour créer une nouvelle couche dans la pièce actuelle. Vous fournissez la profondeur que la nouvelle couche doit occuper et la fonction renvoie la valeur unique de l'ID de la couche qui peut ensuite être utilisée pour <span class="notranslate">access</span> la couche dans d'autres fonctions. Vous pouvez également fournir un argument facultatif &quot;nom&quot;, qui vous permettra de donner à la couche un nom spécifique (sous forme de chaîne), et au lieu d'utiliser l'ID de la couche pour <span class="notranslate">access</span> la couche, vous pouvez utiliser cette chaîne de nom à la place, bien qu'il faille noter que l'utilisation des chaînes de noms aura un impact plus important sur les performances que l'utilisation de la seule valeur ID. Si vous ne spécifiez pas le nom de la couche, la couche créée se verra attribuer un nom au format &quot;<span class="inline">_layer_XXX</span>&quot;, où &quot; XXX &quot; est une valeur hexagonale utilisée pour donner un nom unique à la couche.</p>
   <p>Lorsque vous donnez une valeur de profondeur, celle-ci sera d'autant plus élevée que le calque est &quot;éloigné&quot; de la caméra et d'autant plus faible que le calque est &quot;proche&quot; de la caméra. Ainsi, si vous avez trois calques avec des profondeurs de -100, 0, 100, les calques seront dessinés dans l'ordre 100, 0, -100, de sorte que le calque &quot;supérieur&quot; (c'est-à-dire le plus proche de la vue de la caméra et donc dessiné par-dessus tout le reste) sera le calque avec la profondeur -100.</p>
   <p>L'image suivante montre un schéma du fonctionnement de la profondeur pour les couches :</p>
   <p><img>Il convient de noter que si vous <i>pouvez</i> affecter plus d'un calque à une même profondeur, <i>vous ne pouvez pas garantir que les calques de la même profondeur seront dessinés dans un ordre donné</i> et il est donc préférable d'affecter un seul calque à une profondeur donnée. Notez également que les profondeurs de couche minimale et maximale sont de -16000 à 16000, et que tout ce qui se trouve en dehors de ces profondeurs <b>ne sera pas rendu</b>. Si vous avez besoin d'une profondeur en dehors de cette plage, vous devrez utiliser la fonction <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">layer_create(depth, [name])</p>
+  <p class="code"><span data-field="title" data-format="default">layer_create</span>(depth, [name])</p>
   <table>
     <tbody>
       <tr>

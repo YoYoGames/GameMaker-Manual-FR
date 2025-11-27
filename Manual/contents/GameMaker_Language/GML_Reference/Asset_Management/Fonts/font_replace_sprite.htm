@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_replace_sprite</h1>
+  <h1><span data-field="title" data-format="default">font_replace_sprite</span></h1>
   <p>Avec cette fonction, vous pouvez utiliser une &quot;bande de sprites&quot; pour remplacer une ressource de police <span class="notranslate">sprite</span> précédemment créée, où chaque sous-image serait un symbole ou une lettre individuelle. L'index est le numéro de carte UTF8 du premier caractère à utiliser et les plages à utiliser sont les mêmes que pour une police normale, en commençant par &quot; !&quot;, mais n'oubliez pas que vous ne devez inclure que ce dont vous avez besoin et que vous devez utiliser la fonction <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a> pour obtenir la valeur UTF8 correcte pour la lettre de départ.</p>
   <p>Vous pouvez également définir l'espacement de la police pour qu'elle soit proportionnelle (<span class="inline">true</span>) ou non (<span class="inline">false</span>). Une police proportionnelle est espacée en fonction de la largeur réelle des lettres (la lettre &quot;i&quot; prend moins de place que la lettre &quot;w&quot;, par exemple), tandis qu'une police non proportionnelle sera espacée en fonction de la largeur de la sous-image, comme une police monospace. Enfin, vous pouvez définir l'espace à laisser entre chaque lettre lors de l'écriture. Il peut s'agir d'une valeur entière, 0 correspondant à l'absence d'espace (les lettres se &quot;toucheront&quot; si elles sont proportionnelles). </p>
   <p>Si la fonction échoue, elle échouera en silence sans remplacer la police <span class="notranslate">sprite</span> donnée.</p>
   <p>Il convient également de noter qu'il ne peut y avoir d'<i>espace</i> dans la carte de caractères, de sorte que si vous utilisez, par exemple, '.' et '0' mais pas '/', vous devez soit inclure '/' de toute façon, soit laisser une sous-image vide entre les deux caractères utilisés. L'image ci-dessous montre une disposition typique de la police <span class="notranslate">sprite</span>:</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">font_replace_sprite(ind, spr, first, prop, sep);</p>
+  <p class="code"><span data-field="title" data-format="default">font_replace_sprite</span>(ind, spr, first, prop, sep);</p>
   <table>
     <tbody>
       <tr>

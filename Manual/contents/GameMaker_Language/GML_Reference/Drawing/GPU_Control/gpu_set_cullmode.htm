@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_cullmode</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_cullmode</span></h1>
   <p>Cette fonction peut être utilisée pour définir le mode d'élimination de la face arrière. Un polygone (<span class="notranslate">primitive</span>) a une <i>face avant</i> et une face <i>arrière</i>. On dit que le côté avant est le côté où les sommets sont définis dans le <b>sens inverse des aiguilles d'une montre</b>. Normalement, les deux côtés sont dessinés, mais si vous créez une forme fermée (comme une pyramide), c'est un gaspillage de puissance de traitement car le côté arrière du triangle ne sera jamais visible. C'est dans ces cas-là que vous pouvez activer l'élimination des faces arrières, ce qui permet d'économiser environ la moitié du temps de dessin, même si cela signifie que vous devez définir vos polygones de la bonne manière pour éviter les problèmes.</p>
   <p>La valeur du mode d'élimination utilisée doit être l'une des constantes suivantes (la valeur par défaut est <span class="inline">cull_noculling</span>) :</p>
   <table>
@@ -39,7 +39,7 @@
   </table>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">gpu_set_cullmode(cullmode);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_cullmode</span>(cullmode);</p>
   <table>
     <tbody>
       <tr>

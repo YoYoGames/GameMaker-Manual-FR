@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>caméra_créer</title>
+  <title>camera_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>caméra_créer</h1>
+  <h1><span data-field="title" data-format="default">camera_create</span></h1>
   <p>Cette fonction va créer une caméra &quot;vide&quot;, c'est-à-dire une caméra sans paramètres de vue ou de projection définis. Une fois la caméra créée, vous pouvez utiliser les différentes <a href="../../Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">fonctions de matrice</a> pour définir les matrices de vue et de projection. Vous pouvez également utiliser cette fonction pour créer la caméra, puis utiliser les différentes fonctions de <span class="inline">camera_set_*</span> pour configurer la vue, mais notez que vous <i>devez</i> fournir au moins une position et une taille de vue, sinon la caméra résultante ne sera pas valide et donnera des résultats étranges si elle est appliquée à un port de vue (si vous ne définissez pas le suivi de l'objet, les frontières ou la vitesse de déplacement, ceux-ci seront définis sur les valeurs par défaut pour une caméra de vue dans l'éditeur de salle).</p>
   <p>Notez que les caméras sont comme toutes les ressources dynamiques et occupent de la mémoire lors de leur création. Cela signifie que vous devez faire attention à ne pas créer inutilement des caméras et à détruire celles dont vous n'avez pas besoin en appelant la fonction <a href="camera_destroy.htm"><span class="inline">camera_destroy()</span></a>. Cela signifie également que les caméras persistent d'une salle à l'autre si elles sont affectées à une variable <span class="inline">global</span> (elles persistent également lorsqu'elles sont affectées à des variables d'instance ou locales, mais vous ne pouvez pas <span class="notranslate">access</span> après avoir changé de salle, d'où la fuite de mémoire), de sorte que vous pouvez, par exemple, créer une nouvelle caméra, l'affecter à une variable globale, puis, au début de chaque salle, définir les matrices de vue et de projection requises et le port de vue que vous devez utiliser.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">camera_create();</p>
+  <p class="code"><span data-field="title" data-format="default">camera_create</span>();</p>
   <p> </p>
   <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_ID_Camera">Camera ID</span></p>

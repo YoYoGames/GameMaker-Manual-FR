@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_emitter_gain</h1>
+  <h1><span data-field="title" data-format="default">audio_emitter_gain</span></h1>
   <p>Cette fonction définit le gain (volume) maximal du son. Le volume perçu pour un son peut changer en fonction de la <a href="audio_emitter_falloff.htm">valeur de fall-off</a> et de la position qu'il occupe par rapport à l'<i>auditeur</i>, mais en réglant le gain avec cette fonction, le volume total ne dépassera jamais la valeur de gain spécifiée. L'image ci-dessous illustre comment le gain affecte le volume de l'émetteur lorsque le fall-off est supérieur à 0 :</p>
   <p><img>Cette fonction modifiera le volume du son pendant qu'il est joué ainsi que tous les sons suivants joués par l'émetteur donné. Notez que sur certaines plates-formes, vous pouvez avoir un gain supérieur à 1, bien qu'une valeur de 1 soit considérée comme &quot;plein volume&quot; et que toute valeur supérieure peut introduire un écrêtage ou une distorsion audio.</p>
   <p class="note"><b><span class="note">NOTE</span> </b>le volume final sera également influencé par le gain audio global qui a été défini par la fonction <span style="font-size:1px;"><a href="../audio_master_gain.htm"><span class="inline">audio_master_gain()</span></a></span>.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">audio_emitter_gain(emitter, gain);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_emitter_gain</span>(emitter, gain);</p>
   <table>
     <tbody>
       <tr>

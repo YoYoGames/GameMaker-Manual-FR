@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>création d'un émetteur partiel</title>
+  <title>part_emitter_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,11 +15,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>création d'un émetteur partiel</h1>
+  <h1><span data-field="title" data-format="default">part_emitter_create</span></h1>
   <p>Cette fonction est utilisée pour créer un nouvel émetteur de particules dans le système de particules donné. La fonction renvoie la valeur de l'index du nouvel émetteur qui doit être stockée dans une variable et utilisée dans toutes les autres fonctions qui font référence à l'émetteur. L'émetteur lui-même doit être détruit lorsqu'il n'est plus utilisé afin d'éviter les fuites de mémoire (ceci peut être réalisé en utilisant les fonctions spécifiques de destruction de l'émetteur ou en détruisant l'ensemble du système de particules auquel l'émetteur appartient).</p>
   <p class="note"><span class="note">NOTE</span> Les ID des émetteurs renvoyés par cette fonction sont réutilisés, par exemple, si vous créez d'abord trois émetteurs de particules, les ID 0, 1 et 2 leur seront attribués. Si vous détruisez ensuite le deuxième émetteur (dont l'ID est 1) en utilisant la fonction <a href="part_emitter_destroy.htm"><span class="notranslate">part_emitter_destroy</span></a> et que vous créez ensuite un autre émetteur, cet émetteur réutilisera l'ID de 1. Puisque l'ID de l'émetteur 2 est utilisé, l'émetteur suivant aura un ID de 3, et ainsi de suite.</p>
   <h4>Syntaxe :</h4>
-  <p class="code">part_emitter_create(ps);</p>
+  <p class="code"><span data-field="title" data-format="default">part_emitter_create</span>(ps);</p>
   <table>
     <tbody>
       <tr>

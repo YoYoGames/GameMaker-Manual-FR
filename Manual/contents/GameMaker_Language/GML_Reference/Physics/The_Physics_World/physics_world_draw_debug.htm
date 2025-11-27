@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_world_draw_debug</h1>
+  <h1><span data-field="title" data-format="default">physics_world_draw_debug</span></h1>
   <p>Cette fonction va dessiner une représentation du système physique de la pièce pour vous aider avec <span class="notranslate">debugging</span> lorsque vous avez des difficultés à faire fonctionner correctement la scène physique. Parfois, le problème peut se situer dans la partie rendu de votre jeu, par exemple un <span class="notranslate">sprite</span> peut être dessiné à la mauvaise position ou rotation, donnant l'apparence d'une physique incorrecte, ou il se peut que vos calculs ne soient pas corrects. Dans tous les cas, cette fonction vous aidera à trouver et à résoudre le problème en dessinant ce qui se passe dans votre système physique. Pour ce faire, vous devez lui indiquer quelle partie du système dessiner, et cela se fait en passant une valeur créée à partir des bits stockés dans diverses constantes &quot;flag&quot; :</p>
   <table>
     <colgroup>
@@ -66,7 +66,7 @@
   <p><img>Comme vous pouvez le constater avec le code ci-dessus, seuls les formes et les centres de masse sont dessinés à l'écran (ainsi que les couleurs représentant leurs états - pour plus d'informations, veuillez consulter la documentation Box 2D en ligne). De la même manière, vous pouvez afficher plus, voire toutes les constantes que vous souhaitez déboguer... Il suffit de les &quot;ou&quot; toutes ensemble ! Une autre chose à noter : cette fonction <i>ne</i> doit être appelée <i>que</i> dans l'événement de dessin d'une instance qui a une profondeur inférieure à celles que vous souhaitez déboguer, sinon vous ne serez pas en mesure de voir les informations de débogage.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">physics_world_draw_debug(flag)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_world_draw_debug</span>(flag)</p>
   <table>
     <tbody>
       <tr>

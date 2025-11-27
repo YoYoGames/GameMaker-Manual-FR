@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_free_play_queue</h1>
+  <h1><span data-field="title" data-format="default">audio_free_play_queue</span></h1>
   <p>Cette fonction est utilisée pour libérer la mémoire associée à la file d'attente audio donnée. L'index de la file est la valeur renvoyée lorsque vous avez créé la file à l'aide de la fonction <a href="audio_create_play_queue.htm"><span class="inline">audio_create_play_queue()</span></a>Cette fonction doit être appelée lorsque la file n'est plus nécessaire afin d'éviter les fuites de mémoire. Libérer la file d'attente arrêtera tout son en cours de lecture, et vous ne pouvez pas supprimer le site <span class="notranslate">buffer</span> à partir duquel un son est diffusé tant que la file d'attente à laquelle il est affecté n'a pas été libérée. Cette fonction déclenche un <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">événement asynchrone de lecture audio</a> et, dans cet événement, une <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> spéciale est créée dans la variable <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> avec les paires clé/valeur suivantes :</p>
   <ul class="colour">
     <li><strong>&quot;queue_id</strong>&quot; - la file d'attente qui a terminé la lecture des données.</li>
@@ -23,7 +23,7 @@
   </ul>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">audio_free_play_queue(queueIndex);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_free_play_queue</span>(queueIndex);</p>
   <table>
     <tbody>
       <tr>

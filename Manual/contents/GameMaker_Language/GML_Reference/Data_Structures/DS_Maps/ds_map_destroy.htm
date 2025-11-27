@@ -13,7 +13,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_map_destroy</h1>
+  <h1><span data-field="title" data-format="default">ds_map_destroy</span></h1>
   <p>Les cartes DS occupent de l'espace en mémoire, qui leur est alloué lors de leur création. Cela signifie que vous devez également libérer cette mémoire lorsque la carte DS n'est pas nécessaire afin d'éviter les erreurs, les fuites de mémoire et la perte de performance lors de l'exécution de votre jeu. Cette fonction
     fait exactement cela. Notez que la destruction d'une carte déréférencera toutes les structures de données stockées dans la carte, ce qui entraînera une fuite de mémoire. Vous devrez donc parcourir la carte et détruire manuellement tous les éléments de structure de données avant de la détruire pour éviter cela. Le site
     seule fois où cela n'est pas nécessaire est lorsque vous avez marqué des éléments dans la carte comme une <a href="../DS_Lists/DS_Lists.htm">liste DS</a> ou comme une autre <a href="DS_Maps.htm">carte DS</a>, dans ce cas, ces éléments seront détruits et leur mémoire nettoyée
@@ -23,7 +23,7 @@
       de toujours donner la valeur -1 à la variable qui contenait l'indice DS après la destruction.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">ds_map_destroy(id);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_map_destroy</span>(id);</p>
   <table>
     <tbody>
       <tr>

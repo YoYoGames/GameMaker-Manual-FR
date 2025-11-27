@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>http_get</h1>
+  <h1><span data-field="title" data-format="default">http_get</span></h1>
   <p>Avec cette fonction, vous vous connectez à l'URL spécifiée afin de récupérer des informations. Comme il s'agit d'une fonction asynchrone, <span data-keyref="GameMaker Name">GameMaker</span> ne bloquera pas en attendant une réponse, mais continuera à fonctionner jusqu'à ce qu'il reçoive une information de rappel. Ces informations se présenteront sous la forme d'une chaîne de caractères et déclencheront un <b>événement asynchrone</b> dans toutes les instances qui en ont défini un dans leurs propriétés d'objet. Vous devez également noter que les paramètres de requête HTTP (les bits parfois &quot;ajoutés&quot; à la fin d'une URL lorsque vous soumettez un formulaire sur une page Web) sont parfaitement acceptables lorsque vous utilisez cette fonction, par exemple :</p>
   <p class="code">http_get(&quot;http://www.example.com/logon?username=&quot;+name);</p>
   <p>transmettra la chaîne de caractères contenue dans la variable &quot;name&quot; au serveur et récupérera les données de cette URL. Donc, essentiellement, chaque fois qu'un élément simple et court de données doit être transmis du client au serveur, cette fonction serait un choix raisonnable à utiliser.</p>
@@ -34,7 +34,7 @@
   </ul>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">http_get(url);</p>
+  <p class="code"><span data-field="title" data-format="default">http_get</span>(url);</p>
   <table>
     <tbody>
       <tr>

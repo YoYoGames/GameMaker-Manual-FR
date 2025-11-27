@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>instance_créer_couche</title>
+  <title>instance_create_layer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_créer_couche</h1>
+  <h1><span data-field="title" data-format="default">instance_create_layer</span></h1>
   <p>Avec cette fonction, vous pouvez créer une nouvelle instance de l'objet spécifié en tout point de la pièce et sur la couche spécifiée. La couche peut être identifiée à l'aide de la valeur d'identification de la couche (telle que retournée par la fonction <a href="../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>) ou par le nom de la couche (sous forme de chaîne de caractères, par exemple &quot;instance_layer&quot;) tel que défini dans l'<a href="../../../../The_Asset_Editors/Rooms.htm">éditeur de la pièce</a>.</p>
   <p>Cette fonction renvoie le <a href="Instance_Variables/id.htm"><span class="inline">id</span></a> de la nouvelle instance qui peut alors être stockée dans une variable et utilisée pour <span class="notranslate">access</span> cette instance. Notez que cette fonction appelle également l'<a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">événement Create</a> de l'instance en cours de création <i>avant de</i> poursuivre le code ou les actions de l'événement qui a appelé la fonction.</p>
   <p class="note"><span class="important">IMPORTANT</span> Il existe une profondeur de couche minimale et maximale de -16000 à 16000. Tout ce qui est placé sur une couche en dehors de cette plage <b>ne sera pas dessiné</b>, mais tous les événements se dérouleront normalement.</p>
@@ -26,7 +26,7 @@
   <p class="note"><span class="note">REMARQUE</span> Les variables du site <span class="notranslate">struct</span> sont &quot;copiées superficiellement&quot; dans la nouvelle instance, ce qui signifie que tous les tableaux, <span class="notranslate">structs</span> et autres ressources sont copiés par référence et non dupliqués.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">instance_create_layer(x, y, layer_id, obj);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_create_layer</span>(x, y, layer_id, obj);</p>
   <table>
     <tbody>
       <tr>

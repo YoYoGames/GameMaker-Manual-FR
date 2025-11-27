@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>dessiner_carreau</title>
+  <title>draw_tile</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>dessiner_carreau</h1>
+  <h1><span data-field="title" data-format="default">draw_tile</span></h1>
   <p>Avec cette fonction, vous pouvez dessiner n'importe quelle tuile d'un ensemble de tuiles - avec des rotations, des renversements et des miroirs - en définissant l'image (si elle est animée) et la position dans la pièce. La valeur ID de l'ensemble de tuiles est l'indice de l'ensemble de tuiles tel qu'il est défini sur le site <span class="notranslate">IDE</span> et les données des tuiles sont le &quot;blob&quot; de données qui contient toutes les informations sur l'indice de tuiles et les transformations qui ont été appliquées. Vous pouvez utiliser la fonction <a href="../../Asset_Management/Rooms/Tile_Map_Layers/tilemap_get.htm"><span class="inline">tilemap_get()</span></a> pour obtenir les données des tuiles qui peuvent ensuite être manipulées à l'aide des <a href="../../Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">fonctions de tuiles</a>, ou vous pouvez les construire vous-même en utilisant les constantes de tuiles suivantes avec la valeur de l'index de la tuile à créer :</p>
   <table>
     <tbody>
@@ -46,7 +46,7 @@
   <p>Le code ci-dessus crée simplement une variable locale pour stocker les données de la tuile avec l'index 8 sur le jeu de tuiles, et il est tourné et retourné. Ceci peut ensuite être utilisé pour dessiner la tuile à cet index à partir de l'ensemble de tuiles que vous spécifiez. Ceci n'est pas lié à une couche de carte de tuiles et la tuile sera dessinée à la profondeur de couche de l'instance effectuant le dessin, à la position x/y que vous spécifiez dans la pièce. Notez que vous pouvez également définir le cadre à dessiner. Si la tuile indexée fait partie d'un ensemble d'animations, vous pouvez définir le numéro de l'image ici (de 0 au nombre d'images - 1) et la tuile indexée sera simplement l'indicateur de l'ensemble de tuiles animées que vous utilisez, tandis que c'est l'image donnée qui sera dessinée. Si la tuile ne fait pas partie d'un jeu de tuiles animées, la trame doit être définie sur 0.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">draw_tile(tileset, tiledata, frame, x, y)</p>
+  <p class="code"><span data-field="title" data-format="default">draw_tile</span>(tileset, tiledata, frame, x, y)</p>
   <table>
     <tbody>
       <tr>

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_blendmode_ext_sepalpha</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_blendmode_ext_sepalpha</span></h1>
   <p>Lorsque <span data-keyref="GameMaker Name">GameMaker</span> dessine un pixel, il y a une couleur source (la couleur du pixel que l'on va dessiner) et une couleur de destination (la couleur qui se trouve déjà dans le pixel que l'on dessine). Ainsi, pour déterminer la nouvelle couleur du pixel, les couleurs source et de destination sont calculées en fonction du mode de fusion choisi. Chaque composante des couleurs est stockée sous forme de valeur à virgule flottante comprise entre 0 et 1, et la nouvelle couleur est calculée en multipliant chaque composante de la couleur source par un certain facteur et en multipliant chaque composante de la couleur de destination par un autre facteur, puis en additionnant les résultats composante par composante.</p>
   <p>Cette fonction vous permet de définir les différentes parties de composants qui doivent être factorisées ensemble pour créer un mode de fusion personnalisé, en sélectionnant différentes parties de différents facteurs de mode de fusion pour les composants RVB et le composant Alpha. Ainsi, les arguments &quot;src&quot; et &quot;dest&quot; utiliseront les 3 premières valeurs du mode de fusion (RVB) et les arguments &quot;alphasrc&quot; et &quot;alphadest&quot; prendront la dernière partie du facteur de mode de fusion. Par exemple, si vous avez la source RGB comme <span class="inline">bm_zero</span>, alors (0, 0, 0) sera utilisé. Si vous définissez ensuite la source Alpha comme étant bm_one, alors (1) sera utilisé, donnant un mode de fusion final de la source de (0, 0, 0, 1).</p>
   <p>Le tableau suivant montre les valeurs RGBA pour chaque mode de fusion, où (Rs, Gs, Bs, As) sont considérées comme les valeurs sources et (Rd, Gd, Bd, Ad) comme les valeurs de destination. Les onze constantes disponibles peuvent être soit source, soit destination (ou les deux) lorsqu'elles sont utilisées dans cette fonction.</p>
@@ -92,7 +92,7 @@
   </ul>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">gpu_set_blendmode(src, dest, alphasrc, alphadest);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_blendmode_ext_sepalpha</span>(src, dest, alphasrc, alphadest);</p>
   <table>
     <tbody>
       <tr>

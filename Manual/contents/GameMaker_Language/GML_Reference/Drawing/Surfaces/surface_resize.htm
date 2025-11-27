@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_resize</h1>
+  <h1><span data-field="title" data-format="default">surface_resize</span></h1>
   <p>Cette fonction va redimensionner une surface aux dimensions données (en pixels). Le &quot;surface_id&quot; est celui d'une surface que vous avez créée précédemment, ou l'icône <a href="application_surface.htm"><span class="inline">application_suface</span></a>et la fonction redimensionnera cette surface. Notez que cette fonction ne va ni recadrer ni étirer le contenu de la surface, mais plutôt détruire la surface actuelle et la recréer avec la même poignée (surface_id) avec les nouvelles dimensions, ce qui signifie qu'elle devra être effacée et dessinée à nouveau (sauf s'il s'agit de <span class="inline">application_surface</span>, auquel cas <span data-keyref="GameMaker Name">GameMaker</span> le fera automatiquement).</p>
   <p class="note"><b>REMARQUE</b>: Si vous redimensionnez la surface de l'application, ces modifications ne seront pas enregistrées avant le début de la prochaine image de dessin, ce qui signifie que l'appel de la fonction <span style="font-size:1px;"><a href="surface_get_width.htm"><span class="inline">surface_get_width()</span></a></span> ou <span style="font-size:1px;"><a href="surface_get_height.htm"><span class="inline">surface_get_height()</span></a></span> dans le même événement ou la même étape renverra les valeurs précédentes.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">surface_resize(surface_id, w, h);</p>
+  <p class="code"><span data-field="title" data-format="default">surface_resize</span>(surface_id, w, h);</p>
   <table>
     <tbody>
       <tr>

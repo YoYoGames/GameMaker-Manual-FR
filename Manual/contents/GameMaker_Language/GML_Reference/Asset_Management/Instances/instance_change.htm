@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_change</h1>
+  <h1><span data-field="title" data-format="default">instance_change</span> <span data-conref="..\..\..\..\assets\snippets\Tag_deprecated.hts"> </span></h1>
   <p>Vous pouvez utiliser cette fonction pour transformer une instance d'un objet en une autre instance d'un objet différent, et ce faisant, décider d'exécuter les événements Destroy et Clean Up des instances initiales et l'événement Create des nouvelles instances. De cette façon, vous pouvez (par exemple) faire en sorte qu'une bombe se transforme en une explosion - auquel cas l'argument &quot;perf&quot; sera probablement vrai car vous voudrez que la bombe exécute ses événements Destroy et Clean Up, et que l'explosion exécute son événement Create - ou vous pouvez faire en sorte que votre personnage joueur se transforme en un autre - auquel cas l'argument &quot;perf&quot; sera probablement faux car vous ne voulez pas que les instances exécutent leurs événements Create et Destroy/Clean Up.</p>
   <p>Il convient de noter que la modification de l'instance signifie que vous ne devez plus effectuer d'autres actions avec cette instance jusqu'à l'étape suivante, en particulier essayer de <span class="notranslate">access</span> variables etc... car cela provoquera une erreur. En fait, vous modifiez l'instance mais elle n'est pas réellement disponible avant la fin de l'étape en cours. Par conséquent, l'appel direct à <span class="notranslate">access</span> des variables qu'elle contient (par exemple, en appelant <span class="inline">obj_Changed.x</span>) ne fonctionnera pas.</p>
   <p class="note"><b>ATTENTION !</b> Lors de la modification d'une instance activée par la physique, les propriétés physiques <b>ne seront pas</b> transférées vers la nouvelle instance. Par conséquent, vous devez avoir un code en place pour &quot;transférer&quot; l'état physique de l'instance actuelle vers la nouvelle instance, ou avoir défini les propriétés physiques de la nouvelle instance dans son événement de création, ou dans l'éditeur d'objets. Pour cette raison, il est recommandé de ne pas utiliser cette fonction avec des instances dotées de physique, mais plutôt d'utiliser une combinaison de <span style="font-size:1px;"><span class="inline">instance_destroy()</span></span> et <span><span style="font-size:1px;"><span class="inline">instance_create_layer()</span></span></span>.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">instance_change(obj, perf);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_change</span>(obj, perf);</p>
   <table>
     <tbody>
       <tr>

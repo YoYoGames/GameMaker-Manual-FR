@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_skeleton_instance</h1>
+  <h1><span data-field="title" data-format="default">draw_skeleton_instance</span></h1>
   <p>Cette fonction <i>ne</i> peut être utilisée <i>qu'</i> avec des instances auxquelles est assigné le site <span class="notranslate">sprites</span> et qui ont été créées à l'aide du programme d'animation de squelettes <span class="notranslate">Spine</span>. Bien que vous puissiez dessiner ces <span class="notranslate">sprites</span> à l'aide des fonctions de dessin normales (telles que <a href="../../../../Drawing/Sprites_And_Tiles/draw_self.htm"><span class="inline">draw_self()</span></a>), il peut arriver que vous souhaitiez dessiner une seule image ou montrer un changement de texture de peau sans modifier les propriétés de <span class="notranslate">sprite</span> pour une instance. Dans ces cas, vous pouvez dessiner le <span class="notranslate">sprite</span> qui a été assigné à l'instance avec cette fonction, où vous donnez l'ID unique de l'instance et ensuite le nom de l'animation pour obtenir l'image (une chaîne, telle que définie dans le programme utilisé pour créer le <span class="notranslate">sprite</span>). Ensuite, vous donnez le nom du skin à utiliser (là encore, tel qu'il a été défini lors de la création de <span class="notranslate">sprite</span> ), et une valeur de frame. La valeur de l'image sert à indiquer à <span data-keyref="GameMaker Name">GameMaker</span> quelle partie de l'animation doit être affichée et est une valeur comprise entre 0 et la valeur <a href="../../Sprite_Instance_Variables/image_number.htm"><span class="inline">image_number</span></a>. Les autres arguments sont les mêmes que ceux utilisés pour le dessin normal de <span class="notranslate">sprite</span> et modifieront l'échelle, l'angle, la couleur de fusion et l'alpha de l'image d'animation finale dessinée.</p>
   <p class="note"><b>ATTENTION !</b> En raison de la façon dont les animations squelettiques sont interpolées entre les différentes images &quot;clés&quot;, il y a une surcharge supplémentaire associée à cet appel et il est donc recommandé d'éviter de dessiner des animations basées sur des squelettes <span class="notranslate">sprites</span> en utilisant cette méthode, sauf en cas de nécessité absolue.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">draw_skeleton_instance(instance, animname, skinname, frame, x, y, xscale, yscale, rot, colour, alpha);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_skeleton_instance</span>(instance, animname, skinname, frame, x, y, xscale, yscale, rot, colour, alpha);</p>
   <table>
     <tbody>
       <tr>

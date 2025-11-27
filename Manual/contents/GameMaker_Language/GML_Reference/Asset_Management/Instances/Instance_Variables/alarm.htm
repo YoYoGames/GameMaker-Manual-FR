@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>alarme</title>
+  <title>alarm</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>alarme</h1>
+  <h1><span data-field="title" data-format="default">alarm</span></h1>
   <p>Ce <a href="../../../../GML_Overview/Arrays.htm">tableau</a> à une dimension est utilisé pour obtenir la valeur actuelle de toutes les alarmes que l'instance peut avoir, ou il peut être utilisé pour définir ces alarmes. Il y a douze alarmes intégrées dans chaque instance d'un objet, et chacune d'entre elles a sa propre valeur. <a href="../../../../../The_Asset_Editors/Object_Properties/Object_Events.htm"><span class="notranslate">event</span></a> qui se déclenchera lorsque cette variable atteindra 0.</p>
   <p>Les alarmes sont décomptées au début de chaque étape, <strong>après</strong> l'événement Begin Step mais <strong>avant</strong> l'événement Main Step, et avant que quoi que ce soit ne soit rendu pour l'image. Cela signifie que si vous définissez une alarme à <span class="inline2">1</span> dans l'événement Begin Step, son événement sera exécuté dans la même image (car l'alarme sera décomptée à 0 après la fin de Begin Step), mais si vous définissez une alarme à <span class="inline2">1</span> dans l'événement Step, elle sera exécutée dans l'image suivante.</p>
   <p>Il faut noter que l'alarme n'est pas terminée lorsqu'elle atteint 0 (bien que l'événement ait été déclenché) car à l'étape suivante, elle passera à -1, donc si vous devez arrêter une alarme pour une raison quelconque, vous devez définir sa valeur de tableau à -1 <i>et non</i> à 0. Les temps d'alarme sont calculés en <i>pas de jeu</i>, avec une valeur de 30 étant 30 pas, 60 étant 60 pas, etc...</p>

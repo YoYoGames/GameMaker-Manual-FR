@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_sprite_stretched_ext</h1>
+  <h1><span data-field="title" data-format="default">draw_sprite_stretched_ext</span></h1>
   <p>Cette fonction fait exactement la même chose que la fonction <a href="draw_sprite_stretched.htm"><span class="inline">draw_sprite_stretched()</span></a> avec la possibilité supplémentaire de définir le mélange de couleurs et la valeur alpha pour le site <span class="notranslate">sprite</span> lorsqu'il est dessiné (similaire à la fonction <a href="draw_sprite_ext.htm"><span class="inline">draw_sprite_ext()</span></a>).</p>
   <p class="note"><span class="note">REMARQUE</span> Lorsque vous dessinez avec cette fonction, le <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">décalage x</a> et le <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">décalage y</a> (ou origines) de <span class="notranslate">sprite</span> sont ignorés et <span class="notranslate">sprite</span> est dessiné avec le coin supérieur gauche à la position x/y spécifiée dans la pièce.</p>
   <p class="note"><span class="note">REMARQUE</span> Le mélange des couleurs n'est recommandé pour la cible HTML5 que lorsque WebGL est activé, bien que vous puissiez toujours définir la couleur de mélange si elle n'est pas activée et le mélange de <span class="notranslate">sprite</span> se fera normalement. Cependant, tout mélange de cette manière crée un double de <span class="notranslate">sprite</span> qui est ensuite stocké dans <span class="notranslate">cache</span> et utilisé au besoin. C'est loin d'être optimal et si vous utilisez plusieurs changements de couleur, cela ralentira les performances de votre jeu, à moins que vous n'activiez WebGL. Si vous ne souhaitez pas utiliser WebGL, vous pouvez définir la taille de la police <span class="notranslate">cache</span> pour essayer de limiter ce phénomène si nécessaire en utilisant la fonction <span style="font-size:1px;"><a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size_ext.htm"><span class="inline">sprite_set_cache_sizee()</span></a></span>.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">draw_sprite_stretched_ext(sprite, subimg, x, y, w, h, colour, alpha);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_sprite_stretched_ext</span>(sprite, subimg, x, y, w, h, colour, alpha);</p>
   <table>
     <tbody>
       <tr>

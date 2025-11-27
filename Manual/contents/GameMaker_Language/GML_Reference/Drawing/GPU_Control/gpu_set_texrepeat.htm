@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_texrepeat</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_texrepeat</span></h1>
   <p>Cette fonction peut être utilisée pour indiquer à <span data-keyref="GameMaker Name">GameMaker</span> si les textures doivent être répétées (<span class="inline">true</span>) ou non (<span class="inline">false</span>) lorsqu'elles sont utilisées pour les modèles et <span class="notranslate">primitives</span>. Normalement, la largeur et la hauteur des textures sont comprises entre 0 et 1, mais si vous spécifiez une valeur supérieure à 1, par défaut, le reste n'est pas dessiné (la texture entière sera dessinée avec une section &quot;vide&quot; correspondant au pourcentage supérieur à 1 qui est utilisé. Ainsi, une valeur de 2 pour la largeur ou la hauteur de la texture dessinerait la texture dans la moitié de l'espace et laisserait l'autre moitié vide). Toutefois, en utilisant cette fonction pour définir la valeur "repeat" sur true, la texture est répétée automatiquement sur tous les modèles et sur <span class="notranslate">primitives</span>. Le cas le plus probable d'utilisation de ces fonctions est la répétition d'une texture en 3D, mais pour que cela fonctionne et ne tire pas les images du reste de la page de texture, le site <span class="notranslate">sprite</span> utilisé devra être marqué comme étant sur une &quot;page de texture séparée&quot; dans l'éditeur <span class="notranslate">Sprite</span>.</p>
   <p class="note"><b>REMARQUE</b>: <span class="notranslate">Sprites</span> et les arrière-plans sont toujours dessinés sans répétition, donc une fois que vous dessinez un <span class="notranslate">sprite</span> ou un arrière-plan, cette valeur est réinitialisée à <span class="inline">false</span>. Ce comportement par défaut n'affectera pas les paramètres de la scène de texture (c'est-à-dire que l'appel de la fonction le fera, mais pas le réglage interne à false).</p>
   <p class="note"><b>REMARQUE</b>: Ce paramètre remplacera les répétitions d'étapes de texture définies pour <span class="notranslate">shaders</span> lors de l'utilisation de la fonction <a href="gpu_set_texrepeat_ext.htm"><span class="inline">gpu_set_texrepeat_ext()</span></a>.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">gpu_set_texrepeat(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_texrepeat</span>(enable);</p>
   <table>
     <tbody>
       <tr>

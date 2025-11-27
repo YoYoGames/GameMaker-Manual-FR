@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_replace</h1>
+  <h1><span data-field="title" data-format="default">sprite_replace</span></h1>
   <p>Cette fonction fonctionne presque de la même manière que la fonction <a href="sprite_add.htm"><span class="inline">sprite_add()</span></a>mais au lieu de renvoyer l'index du site <span class="notranslate">sprite</span> que vous importez, elle écrase un index <span class="notranslate">sprite</span> précédemment créé. Lorsque vous utilisez cette fonction, vous devez utiliser un index <span class="notranslate">sprite</span> qui a été créé et stocké dans une variable à l'aide d'autres fonctions telles que <a href="sprite_add.htm"><span class="inline">sprite_add()</span></a> ou <a href="sprite_create_from_surface.htm"><span class="inline">sprite_create_from_surface()</span></a>ou même <a href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a>plutôt qu'un actif de l'arborescence des ressources <span class="notranslate">sprite</span>. Vous <i>pouvez</i> remplacer un <span class="notranslate">sprite</span> à partir des ressources du jeu en utilisant cette fonction, mais cela signifie que vous perdrez l'ID de référence pour le <span class="notranslate">sprite</span> que vous remplacez, que vous appeliez <span class="inline">game_restart()</span> ou non, et ce n'est donc pas recommandé. Indépendamment de l'adresse <span class="notranslate">sprite</span> remplacée, cette fonction <b>créera une nouvelle page de texture pour le sprite</b>. Il convient donc d'être prudent lors de son utilisation, car elle peut nuire aux performances en augmentant le nombre de changements de texture nécessaires au rendu.</p>
   <p>Le fichier image à charger doit <b>toujours</b> être au format <span class="inline">*.png</span> et toutes les images qui doivent être transformées en <span class="notranslate">sprites</span> animé doivent avoir un format &quot;bande&quot; (voir l'image ci-dessous). Elles seront divisées en un nombre de sous-images spécifié selon la règle suivante : <b>largeur du sprite = largeur de la bande / sous-images</b>.</p>
   <p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png" /></p>
@@ -26,7 +26,7 @@
   <p class="note"><b>REMARQUE</b>: vous devez savoir que si vous utilisez cette fonction dans votre jeu cible HTML5 pour charger des ressources à partir d'un serveur externe, alors, en raison de la protection XSS des navigateurs, les tentatives de chargement de ressources à partir d'autres domaines peuvent être bloquées et renvoyer des résultats vides.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">sprite_replace(ind, fname, imgnumb, removeback, smooth, xorig, yorig);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_replace</span>(ind, fname, imgnumb, removeback, smooth, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>

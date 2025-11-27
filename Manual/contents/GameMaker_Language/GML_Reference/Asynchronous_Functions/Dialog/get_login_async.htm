@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>get_login_async</h1>
+  <h1><span data-field="title" data-format="default">get_login_async</span></h1>
   <p>Cette fonction ouvre une fenêtre qui demande à l'utilisateur de saisir un nom d'utilisateur et un mot de passe. Ces arguments peuvent être définis comme une chaîne vide ou vous pouvez stocker des valeurs précédemment saisies pour les utiliser si vous le souhaitez. Il s'agit d'une fonction asynchrone, et en tant que telle, <span data-keyref="GameMaker Name">GameMaker</span> <i>ne</i> bloque <i>pas</i> le périphérique sur lequel elle est exécutée en attendant une réponse, mais continue à exécuter les événements normalement. Une fois que l'utilisateur a saisi les détails et appuyé sur le bouton &quot;Okay&quot;, un événement asynchrone d'<b>interaction avec l'utilisateur</b> est déclenché qui, pour la durée de cet événement <i>uniquement</i>, aura une carte DS stockée dans la variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
   <p>Cette carte contiendra les deux clés, &quot;<strong>username&quot;</strong> et &quot;<strong>password</strong>&quot;, avec l'entrée utilisateur correspondante stockée dans chacune d'elles. Comme c'est une carte DS qui a été créée, elle peut ensuite être utilisée, par exemple, par la fonction <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a> prête à être envoyée à un serveur ou écrite dans un fichier sur le périphérique choisi.</p>
   <p>Cette fonction renvoie un numéro d'index pour l'événement asynchrone qui a été déclenché, qui peut ensuite être vérifié dans l'événement correspondant afin que vous puissiez &quot;cibler&quot; des données spécifiques au cas où vous attendriez le déclenchement de plusieurs événements asynchrones (peut-être à partir d'une autre fonction).</p>
   <p class="note"><strong><em><span class="note">NOTE</span></em></strong><em> Cette fonction est <span data-keyref="Dialog for debug only"> <strong>réservée à un usage de débogage et de test</strong></span>et ne doit pas être utilisée dans les jeux publiés. Dans ce cas, vous devez créer une interface utilisateur personnalisée pour recevoir les entrées des joueurs, de manière à avoir un contrôle total sur l'apparence et le comportement des boîtes de dialogue.</em></p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">get_login_async(name, password);</p>
+  <p class="code"><span data-field="title" data-format="default">get_login_async</span>(name, password);</p>
   <table>
     <tbody>
       <tr>

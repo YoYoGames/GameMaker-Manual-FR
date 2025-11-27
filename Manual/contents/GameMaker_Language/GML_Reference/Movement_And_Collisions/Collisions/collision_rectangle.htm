@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>rectangle de collision</title>
+  <title>collision_rectangle</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>rectangle de collision</h1>
+  <h1><span data-field="title" data-format="default">collision_rectangle</span></h1>
   <p><span class="inline">Collision_rectangle</span> utilise les quatre premiers arguments (x1,y1,x2,y2) pour définir une zone dans la pièce actuelle et vérifie ensuite si <b>un</b> objet défini par l'argument &quot;obj&quot; est en collision avec cette zone. Cette collision peut être vérifiée comme précise ou non, et vous pouvez également choisir de vérifier l'instance qui exécute le code elle-même ou non. Considérez cette image :</p>
   <p><img>Ici, l'instance du milieu utilise un rectangle de collision pour vérifier la présence de balles. Les boules bleues <i>n'ont pas</i> de boîte de délimitation précise et comme vous pouvez le voir, même si le <span class="notranslate">sprite</span> ne touche pas le rectangle, la collision se produira (même si vous avez défini l'option précise de la fonction sur true) car la boîte de délimitation de ce <span class="notranslate">sprite</span> dépasse le rectangle de collision. D'autre part, les boules vertes ne seront considérées comme étant en collision que si l'adresse réelle <span class="notranslate">sprite</span> dépasse le rectangle. N'oubliez pas que pour que les collisions précises soient prises en compte, l'objet <span class="notranslate">sprite</span> et la fonction de collision doivent <i>tous deux</i> avoir la précision activée. Il convient également de noter que la valeur de retour de la fonction peut être l'identifiant de <i>n'importe laquelle</i> des instances considérées comme étant en collision.</p>
   <p>Notez qu'au lieu d'un indice d'objet, vous pouvez fournir une instance <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> pour rechercher une instance spécifique, ou les <a href="../../../GML_Overview/Instance_Keywords.htm">mots-clés d'instance</a> <span class="inline">all</span>, ou <span class="inline">other</span> (en fonction de l'événement et de la portée actuelle du code).</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">collision_rectangle(x1, y1, x2, y2, obj, prec, notme);</p>
+  <p class="code"><span data-field="title" data-format="default">collision_rectangle</span>(x1, y1, x2, y2, obj, prec, notme);</p>
   <table>
     <tbody>
       <tr>

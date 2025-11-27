@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>objet_set_persistant</title>
+  <title>object_set_persistent</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>objet_set_persistant</h1>
+  <h1><span data-field="title" data-format="default">object_set_persistent</span></h1>
   <p>Cette fonction vous permet de définir la persistance d'un objet spécifique. Un objet persistant est &quot;reporté&quot; d'une pièce à l'autre et conserve ses propriétés à tout moment (pour plus d'informations sur la persistance, voir la section sur l'<a href="../../../../The_Asset_Editors/Objects.htm">éditeur d'objets</a>). Le fait de définir la persistance de l'objet signifie que toutes les instances de cet objet qui sont créées <i>après la modification de la persistance</i> seront créées de manière persistante, tandis que les instances qui sont déjà dans la salle peuvent ne pas être affectées.</p>
   <p>Lorsque vous créez une instance avec la persistance activée dans une room, un layer ou une profondeur lui est attribué (selon la fonction utilisée pour créer l'instance de l'objet). Lorsque la room est changée, et si la room suivante <i>n'a pas</i> de layer avec le même nom ou la même profondeur que celui attribué, alors un nouveau layer sera créé pour l'instance qui persiste à travers les rooms. Si vous avez donné un nom à la couche lors de la création de l'instance, alors la nouvelle couche portera également le même nom que la couche originale, tandis que si vous avez attribué une profondeur à l'instance, alors la nouvelle couche sera nommée &quot;<span class="inline">_layer_XXX</span>&quot;, où &quot;XXX&quot; est une valeur hexadécimale utilisée pour donner un nom unique à la couche. Ces couches seront supprimées de la pièce à la fin de la pièce. Une autre chose à noter à propos des couches et des instances persistantes est que si vous avez assigné à l'instance une couche nommée à la création, et qu'il y a une autre couche dans les salles suivantes avec le même nom, alors l'instance persistée sera assignée à la couche avec le même nom <i>indépendamment de la profondeur de la couche</i>. Enfin, si une instance persistante se déplace dans une pièce avec une couche à la même profondeur que celle où l'instance a été créée, elle <i>ne</i> sera <i>pas</i> assignée à cette couche, mais une nouvelle couche sera créée à la même profondeur (en suivant la convention de dénomination expliquée précédemment).</p>
   <p>Veuillez noter qu'il ne s'agit pas d'une fonction d'instance ! Vous pouvez définir l'indicateur de persistance d'instances individuelles à l'aide de la variable <a href="../Instances/Instance_Variables/persistent.htm"><span class="inline">persistent</span></a> et ainsi avoir dix instances toutes marquées comme persistantes même si l'objet en question a l'indicateur défini à false dans le <span class="notranslate">IDE</span>, et même si vous changez l'indicateur persistant de l'objet à true en utilisant cette fonction, toutes les instances qui sont actuellement dans la pièce resteront comme elles étaient, et seulement les instances créées après l'appel de la fonction commenceront avec persistent flagged as true.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">object_set_persistent(index, pers);</p>
+  <p class="code"><span data-field="title" data-format="default">object_set_persistent</span>(index, pers);</p>
   <table>
     <tbody>
       <tr>

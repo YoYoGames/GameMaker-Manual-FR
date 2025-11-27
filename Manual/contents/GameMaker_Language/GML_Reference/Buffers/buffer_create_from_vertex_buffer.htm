@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>création d'un tampon à partir d'un tampon_vertex</title>
+  <title>buffer_create_from_vertex_buffer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>création d'un tampon à partir d'un tampon_vertex</h1>
+  <h1><span data-field="title" data-format="default">buffer_create_from_vertex_buffer</span></h1>
   <p>Vous utilisez cette fonction pour allouer une portion de mémoire en tant que <span class="notranslate">buffer</span> dans votre jeu, remplie des données d'un <a href="../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">tampon de sommets</a> précédemment créé. La fonction renvoie un <i>identifiant de tampon</i> unique qui doit être stocké dans une variable et utilisé pour tous les autres appels de fonction à <span class="notranslate">buffer</span>. La fonction prend l'identifiant du sommet <span class="notranslate">buffer</span> à utiliser (tel que renvoyé par la fonction <a href="../Drawing/Primitives/vertex_create_buffer.htm"><span class="inline">vertex_create_buffer()</span></a>par exemple) et les constantes suivantes sont utilisées pour définir le type de <span class="notranslate">buffer</span>:</p>
   <table>
     <tbody>
@@ -59,7 +59,7 @@
   <p class="note"><b>REMARQUE</b>: Il est important de supprimer de la mémoire toute ressource créée dynamiquement comme celle-ci lorsque vous n'en avez plus besoin afin d'éviter les fuites de mémoire. Ainsi, lorsque vous en avez terminé avec le site <span class="notranslate">buffer</span> que vous avez créé, vous devez le libérer à nouveau à l'aide de la fonction <span style="font-size:1px;"><a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a></span>. Notez également que le vertex <span class="notranslate">buffer</span> utilisé pour créer le nouveau <span class="notranslate">buffer</span> n'est pas non plus supprimé de la mémoire et que vous devez utiliser la fonction <span style="font-size:1px;"><a href="../Drawing/Primitives/vertex_delete_buffer.htm"><span class="inline">vertex_delete_buffer()</span></a></span> lorsqu'elle n'est plus nécessaire.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">buffer_create_from_vertex_buffer(vertex_buffer, type, alignment)</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_create_from_vertex_buffer</span>(vertex_buffer, type, alignment)</p>
   <table>
     <tbody>
       <tr>

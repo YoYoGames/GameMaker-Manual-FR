@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_create_from_surface</h1>
+  <h1><span data-field="title" data-format="default">sprite_create_from_surface</span></h1>
   <p>Avec cette fonction, vous pouvez créer un <span class="notranslate">sprite</span> à partir d'une surface préalablement initialisée (la valeur de l'ID de l'index de la surface est renvoyée lorsque vous créez la surface à l'aide de la fonction <a href="../../../Drawing/Surfaces/surface_create.htm"><span class="inline">surface_create()</span></a>). Les coordonnées x et y que vous entrez ensuite dans la fonction doivent être relatives à la position (0,0) de la <i>surface</i> (le coin supérieur gauche) et non à la fenêtre du jeu (ni à la vue si vous en avez une active). Les arguments largeur et hauteur sont en pixels et définissent la largeur et la hauteur de la partie de la surface à utiliser.</p>
   <p>Si vous définissez l'argument &quot;removeback&quot; sur <span class="inline">true</span>, vous supprimez une couleur de <span class="notranslate">sprite</span>, en vérifiant la couleur du pixel <i>inférieur gauche</i> de <span class="notranslate">sprite</span> et en l'utilisant comme couleur à supprimer.</p>
   <p>Si vous choisissez l'option &quot;removeback&quot;, vous pouvez également souhaiter que <span data-keyref="GameMaker Name">GameMaker</span> lisse les bords du site <span class="notranslate">sprite</span> en donnant à l'argument &quot;smooth&quot; la valeur <span class="inline">true</span>. Cela permet de créer une bordure semi-transparente autour des bords du site <span class="notranslate">sprite</span> après la suppression de son arrière-plan.</p>
@@ -23,7 +23,7 @@
   <p class="note"><b><span class="note">NOTE</span></b> Lorsque vous créez un <span class="notranslate">sprite</span> dans <span data-keyref="GameMaker Name">GameMaker</span> avec cette méthode, vous devez vous souvenir de le supprimer à nouveau (avec la touche <a href="sprite_delete.htm"><span class="inline">sprite_delete()</span></a>) lorsqu'il n'est plus nécessaire, sinon il y a un risque de fuite de mémoire qui ralentira et finira par faire planter votre jeu.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">sprite_create_from_surface(index, x, y, w, h, removeback, smooth, xorig, yorig);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_create_from_surface</span>(index, x, y, w, h, removeback, smooth, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>

@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_set_persistent</h1>
+  <h1><span data-field="title" data-format="default">room_set_persistent</span></h1>
   <p>Cette fonction vous permet de modifier (ou de définir) la persistance de n'importe quelle room de votre jeu <i>, à l'exception de la room actuelle</i>. Une room dont la persistance est marquée comme <span class="inline">true</span> conservera l'état de toutes les instances de cette room si le joueur la quitte puis y revient, alors que si la persistance est marquée comme <span class="inline">false</span>, elle sera réinitialisée à l'état initial à chaque fois. Vous devez noter qu'une room persistante utilise beaucoup plus de mémoire qu'une room normale et qu'il n'est pas recommandé d'en avoir trop dans votre jeu.</p>
   <p class="note"><b>NOTE</b>: Cette fonction <b>ne</b> fonctionnera <b>PAS</b> pour désactiver la persistance si la pièce a déjà été visitée ! Une salle persistante, une fois visitée, est gardée en mémoire et pour désactiver la persistance, vous devez vous rendre dans cette salle et mettre la variable <span style="font-size:1px;"><a href="room_persistent.htm"><span class="inline">room_persistent</span></a></span> à <span class="inline">false</span>, puis sortir à nouveau de la pièce.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">room_set_persistent(index, val);</p>
+  <p class="code"><span data-field="title" data-format="default">room_set_persistent</span>(index, val);</p>
   <table>
     <tbody>
       <tr>

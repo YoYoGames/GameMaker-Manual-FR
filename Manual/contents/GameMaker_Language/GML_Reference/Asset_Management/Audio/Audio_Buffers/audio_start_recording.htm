@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>enregistrement_début_audio</title>
+  <title>audio_start_recording</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>enregistrement_début_audio</h1>
+  <h1><span data-field="title" data-format="default">audio_start_recording</span></h1>
   <p>Cette fonction démarre l'enregistrement audio à partir de la source d'enregistrement indexée. Vous pouvez obtenir le nombre de sources d'enregistrement à l'aide de la fonction <a href="audio_get_recorder_count.htm"><span class="inline">audio_get_recorder_count()</span></a>Une fois l'enregistrement commencé, l'audio sera stocké dans un fichier temporaire <span class="notranslate">buffer</span> et déclenchera un <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">événement asynchrone d'enregistrement audio</a>. Cet événement est déclenché à chaque étape de l'enregistrement et crée la <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> spéciale dans la variable <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> avec les paires clé/valeur suivantes :</p>
   <ul class="colour">
     <li>&quot;<strong>buffer_id</strong>&quot; - l'ID de l'adresse temporaire <span class="notranslate">buffer</span> que vous pouvez utiliser pour récupérer les données audio</li>
@@ -26,7 +26,7 @@
   <p class="note"><b><span class="note">NOTE</span> </b>La plupart des plates-formes prennent en charge l'enregistrement audio sous une forme ou une autre, mais cela ne signifie pas que tous les périphériques l'autoriseront, même si la plate-forme le fait. Vous devez donc toujours vérifier que la fonction <span style="font-size:1px;"><a href="audio_get_recorder_count.htm"><span class="inline">audio_get_recorder_count()</span></a></span> renvoie une valeur supérieure à 0 pour vérifier que les périphériques d'enregistrement sont disponibles avant d'utiliser le reste des fonctions d'enregistrement.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">audio_start_recording(recorder_index);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_start_recording</span>(recorder_index);</p>
   <table>
     <tbody>
       <tr>

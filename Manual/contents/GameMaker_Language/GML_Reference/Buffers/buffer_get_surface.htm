@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>tampon_get_surface</title>
+  <title>buffer_get_surface</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tampon_get_surface</h1>
+  <h1><span data-field="title" data-format="default">buffer_get_surface</span></h1>
   <p>Avec cette fonction, vous pouvez écrire des informations d'une surface vers un <span class="notranslate">buffer</span> donné. Le site <span class="notranslate">buffer</span> doit avoir été créé précédemment et doit être un <span class="notranslate">buffer</span> aligné sur 1 octet suffisamment grand pour stocker les données de la surface que vous allez écrire (si vous n'êtes pas sûr, utilisez un tampon de <a href="buffer_create.htm">croissance</a> ou consultez l'exemple au bas de cette page).</p>
   <p>Les informations relatives à la surface seront toujours écrites au début du site <span class="notranslate">buffer</span> (quelle que soit la position de recherche) mais vous pouvez choisir une valeur de décalage (en octets) pour déplacer la position d'écriture à partir du début du site <span class="notranslate">buffer</span>.</p>
   <p>Notez que la fonction écrit chaque pixel de la surface sur le site <span class="notranslate">buffer</span> en utilisant un formatage <b>RGBA</b> sur la cible <span class="notranslate">Windows</span>, mais sur d'autres cibles, il peut être différent selon le système d'exploitation ou même le périphérique.</p>
   <p class="note"><strong>REMARQUE</strong>: cette fonction a été modifiée à partir de la mise à jour 2.3.1 de <span data-keyref="GameMaker Name">GameMaker</span>. Les versions précédentes utilisaient la constante <span class="inline">buffer_surface_copy</span>, qui est désormais obsolète.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">buffer_get_surface(buffer, surface, offset);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_get_surface</span>(buffer, surface, offset);</p>
   <table>
     <tbody>
       <tr>

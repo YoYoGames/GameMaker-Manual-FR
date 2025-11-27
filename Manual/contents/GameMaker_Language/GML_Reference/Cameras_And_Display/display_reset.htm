@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>display_reset</h1>
+  <h1><span data-field="title" data-format="default">display_reset</span></h1>
   <p>Cette fonction réinitialise les paramètres d'affichage à ceux qui ont été définis au démarrage du jeu, mais vous permet également de modifier le niveau actuel d'anticrénelage plein écran utilisé et d'utiliser ou non la synchronisation verticale. Les niveaux d'anticrénelage disponibles sont 0, 2, 4 et 8, la valeur par défaut au démarrage étant 0, et le paramètre par défaut de la synchronisation verticale est false (désactivé). L'activation de la synchronisation verticale peut donner une expérience de jeu plus fluide, mais elle nécessitera également plus de puissance de traitement et son impact doit donc être considéré avec attention avant l'utilisation, et il en va de même pour l'anticrénelage où plus le nombre est élevé, plus le traitement est nécessaire.</p>
   <p>Comme tous les périphériques cibles ne sont pas les mêmes, certains peuvent ne pas supporter l'anticrénelage 8x ou 4x par exemple, et il y a donc une variable en <b>lecture seule</b> disponible pour obtenir les différents niveaux d'AA que le périphérique exécutant le jeu peut afficher :</p>
   <p class="code">display_aa</p>
   <p>Cette variable renverra une valeur entière basée sur le réglage des bits pour les différents niveaux. Ainsi, pour seulement 2xAA, cela donnera 2, pour 2x et 4x disponibilité, cela donnera 6. Pour 8 et 4, la valeur sera de 12. Pour les 3 niveaux (2,4 et 8), la valeur sera de 14.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">display_reset(aa, vsync);</p>
+  <p class="code"><span data-field="title" data-format="default">display_reset</span>(aa, vsync);</p>
   <table>
     <tbody>
       <tr>

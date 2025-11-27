@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>jeu_animation_squelette</title>
+  <title>skeleton_animation_set</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">jeu_animation_squelette</span></h1>
+  <h1><span data-field="title" data-format="default">skeleton_animation_set</span></h1>
   <p>Une fois que vous avez assigné une animation squelettique <span class="notranslate">sprite</span> à votre instance, vous pouvez alors définir le <i>jeu d'animations</i> qu'elle doit utiliser à tout moment avec cette fonction. Lorsque vous avez créé votre <span class="notranslate">sprite</span> (dans <span class="notranslate">Spine</span>), vous avez défini plusieurs jeux d'animations pour différents états et nommé chacun d'entre eux de manière appropriée. Ces noms sont ceux que vous utiliserez pour indiquer à <span data-keyref="GameMaker Name">GameMaker</span> quel jeu d'animations utiliser à tout moment dans votre jeu. Par exemple, si votre <span class="notranslate">sprite</span> est destiné à un jeu de plateforme, vous pouvez avoir un jeu de &quot;saut&quot;, un jeu de &quot;course&quot; et un jeu de &quot;repos&quot;, tous contenus dans le même <span class="notranslate">sprite</span> et vous pouvez passer de l'un à l'autre dans votre jeu en utilisant cette fonction.<br />
     L'animation est jouée en boucle, ce qui est le cas par défaut.</p>
   <p>Notez que le fait de paramétrer une nouvelle animation de cette manière réinitialisera le paramètre <a href="../../Sprite_Instance_Variables/image_index.htm"><span class="inline">image_index</span></a> à 0, faisant démarrer la nouvelle animation depuis le début de sa boucle d'animation. Si ce <i>n'est pas</i> le comportement souhaité, vous pouvez définir une valeur de &quot;mélange&quot; à l'aide de la commande <a href="skeleton_animation_mix.htm"><span class="inline">skeleton_animation_mix()</span></a> et lorsque vous définissez une nouvelle animation, elle sera interpolée en douceur avec l'ensemble précédent. Veillez également à avoir une image clé au début de chaque animation afin d'éviter que des données ne soient conservées à partir des animations précédentes, à moins que vous ne prévoyiez d'utiliser des pistes d'animation séparées.</p>

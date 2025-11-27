@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>instance_création_profondeur</title>
+  <title>instance_create_depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_création_profondeur</h1>
+  <h1><span data-field="title" data-format="default">instance_create_depth</span></h1>
   <p>Avec cette fonction, vous pouvez créer une nouvelle instance de l'objet spécifié à n'importe quel point de la pièce et à la profondeur spécifiée. La profondeur peut être n'importe quelle valeur, où plus la profondeur est faible, plus les objets seront dessinés &quot;près&quot; de la caméra et plus la profondeur est élevée, plus ils seront éloignés. Ainsi, une instance à la profondeur -200 sera dessinée par rapport à une instance à la profondeur +300 (par exemple).</p>
   <p>Notez que cette fonction va en fait créer un calque de room pour l'instance, puisque toutes les instances <i>doivent</i> se trouver sur un calque de la room, mais qu'il s'agit d'un calque <i>géré</i> (c'est-à-dire qu'il ne s'agit pas d'un calque que vous avez créé par le code ou dans la room, mais d'un calque que <span data-keyref="GameMaker Name">GameMaker</span> a créé automatiquement). Vous ne pouvez pas <span class="notranslate">access</span> ce calque, et la variable d'instance <a href="Instance_Variables/layer.htm"><span class="inline">layer</span></a> retournera -1.</p>
   <p class="note"><span class="important">IMPORTANT</span> Il existe une profondeur de couche minimale et maximale de -16000 à 16000. Tout ce qui est placé sur une profondeur en dehors de cette plage <b>ne sera pas dessiné</b>, mais tous les événements se dérouleront normalement.</p>
@@ -27,7 +27,7 @@
   <p class="note"><span class="note">REMARQUE</span> Les variables du site <span class="notranslate">struct</span> sont &quot;copiées superficiellement&quot; dans la nouvelle instance, ce qui signifie que tous les tableaux, <span class="notranslate">structs</span> et autres ressources sont copiés par référence et non dupliqués.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">instance_create_depth(x, y, depth, obj);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_create_depth</span>(x, y, depth, obj);</p>
   <table>
     <tbody>
       <tr>

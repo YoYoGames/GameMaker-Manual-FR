@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>tampon_async_groupe_début</title>
+  <title>buffer_async_group_begin</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tampon_async_groupe_début</h1>
+  <h1><span data-field="title" data-format="default">buffer_async_group_begin</span></h1>
   <p>Cette fonction est appelée lorsque vous voulez commencer l'enregistrement de plusieurs <span class="notranslate">buffers</span> dans plusieurs fichiers (ou le chargement de plusieurs <span class="notranslate">buffers</span>). Le <span class="inline2">nom de groupe</span> est une chaîne de caractères et sera utilisé comme nom de répertoire pour l'endroit où les fichiers sont sauvegardés, et devrait être utilisé comme partie du chemin d'accès au fichier lorsque vous rechargerez les fichiers dans le <span class="notranslate">IDE</span> plus tard (en utilisant l'une des fonctions <a href="buffer_load.htm"><span class="inline">buffer_load()</span></a> ). Cette fonction <i>ne</i> doit être utilisée <i>qu'</i> avec les fonctions <a href="buffer_save_async.htm"><span class="inline">buffer_save_async()</span></a> et <span class="inline"><a href="buffer_load_async.htm">buffer_load_async()</a></span> et vous devez également terminer le groupe asynchrone en appelant la fonction <a href="buffer_async_group_end.htm"><span class="inline">buffer_async_group_end()</span></a> sinon les fichiers ne seront pas sauvegardés/chargés.</p>
   <p>Notez que pour les plateformes de console (comme la PS4 par exemple), le <span class="inline2">nom du groupe</span> sera utilisé comme description de l'emplacement de sauvegarde, et l'utilisation de cette fonction peut vous éviter d'avoir l'interface utilisateur affichée pour chaque fichier en cours de sauvegarde. Notez également que lorsque vous utilisez UWP, vous pouvez faire circuler vos sauvegardes entre les fenêtres natives Xbox et Microsoft Store en créant un groupe identique à un groupe ERA Xbox, par exemple :</p>
   <p class="code">if os_type == os_uwp<br />
@@ -27,7 +27,7 @@
     }</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">buffer_async_group_begin(groupname);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_async_group_begin</span>(groupname);</p>
   <table>
     <tbody>
       <tr>

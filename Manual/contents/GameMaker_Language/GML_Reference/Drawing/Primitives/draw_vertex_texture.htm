@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>dessiner_texture_vertex</title>
+  <title>draw_vertex_texture</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>dessiner_texture_vertex</h1>
+  <h1><span data-field="title" data-format="default">draw_vertex_texture</span></h1>
   <p>Cette fonction définit la position d'un vertex texturé pour un <span class="notranslate">primitive</span>. L'aspect final du <span class="notranslate">primitive</span> dépendra du type de <span class="notranslate">primitive</span> choisi pour le dessin (Voir <a href="draw_primitive_begin.htm"><span class="inline">draw_primitive_begin()</span></a> pour plus d'informations), de l'ordre dans lequel vous y ajoutez les vertex et de la position du point de départ que vous avez défini pour la texture. Pour terminer et dessiner le <span class="notranslate">primitive</span>, vous devez appeler <a href="draw_primitive_end.htm"><span class="inline">draw_primitive_end()</span></a>.</p>
   <p>Vous pouvez également choisir de ne dessiner qu'<i>une partie</i> de la texture sur la surface du site <span class="notranslate">primitive</span> en définissant la position xtex/ytex appropriée pour l'échantillonnage (ces coordonnées sont également appelées points <b>UV</b> ). Ce point est défini par une valeur comprise entre 0 et 1, le coin supérieur gauche de l'image à utiliser étant le point (0,0) et le coin inférieur droit étant le point (1,1). De cette façon, vous pouvez texturer un site <span class="notranslate">primitive</span> avec seulement une partie de l'image source.</p>
   <p>Lorsque vous dessinez une texture <span class="notranslate">primitive</span>, la texture sera mélangée à la couleur définie par <a html="../colour And Blending/draw_set_colour.html"><span class="inline">draw_set_colour</span>. Cela signifie que pour dessiner la texture sans mélange, il faut définir la valeur <span class="inline">c_white</span>, comme le montre l'exemple ci-dessous.</a></p>

@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_clear</h1>
+  <h1><span data-field="title" data-format="default">ds_list_clear</span></h1>
   <p>Cette fonction vous permet d'effacer toutes les données de la structure de données d'une liste donnée. Cela <i>ne</i> détruit <i>PAS</i> la structure de données (pour cela, vous devez utiliser la fonction <a href="ds_list_destroy.htm"><span class="inline">ds_list_destroy()</span></a>), elle efface seulement toutes les données et rend la liste vide (de taille nulle). Notez que l'effacement d'une liste déréférencera toutes les structures de données qui y sont stockées, ce qui entraînera une fuite de mémoire. Vous devrez donc parcourir la liste et détruire manuellement tous les éléments de structure de données avant de l'effacer pour éviter cela. Le seul cas où cela n'est pas nécessaire est celui où vous avez marqué des éléments de la liste comme étant une autre <a href="DS_Lists.htm">liste DS</a> ou une <a href="../DS_Maps/DS_Maps.htm">carte DS</a>, auquel cas ces éléments seront détruits (et non effacés !) et leur mémoire nettoyée automatiquement lorsque le parent est effacé.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">ds_list_clear(id);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_clear</span>(id);</p>
   <table>
     <tbody>
       <tr>

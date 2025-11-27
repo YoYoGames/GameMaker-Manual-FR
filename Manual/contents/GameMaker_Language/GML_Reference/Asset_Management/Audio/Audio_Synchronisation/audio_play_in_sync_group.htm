@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_play_in_sync_group</h1>
+  <h1><span data-field="title" data-format="default">audio_play_in_sync_group</span></h1>
   <p>Cette fonction permet d'attribuer un son à un groupe de synchronisation précédemment créé. L'index du groupe est la valeur renvoyée lorsque vous avez créé le groupe à l'aide de la fonction <a href="audio_create_sync_group.htm"><span class="inline">audio_create_sync_group()</span></a>et l'index du son est l'index d'un son <i>compressé</i> (<span class="inline">*.ogg</span> ou <span class="inline">*.mp3</span>) provenant de l'Asset Browser. Cette fonction ajoute uniquement le son au groupe, mais ne le lit pas. La valeur de retour sera <span class="inline2">&gt;= 0</span> si elle réussit et <span class="inline2">-1</span> si elle échoue, où une valeur réussie indique l'ordre du son dans le groupe de synchronisation (donc 0 serait le premier son ajouté, 1 serait le deuxième, etc...).</p>
   <p class="note"><b>REMARQUE</b>: cette fonctionnalité n'est pas disponible pour la plateforme cible HTML5.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">audio_play_in_sync_group(group_index, sound_index);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_play_in_sync_group</span>(group_index, sound_index);</p>
   <table>
     <tbody>
       <tr>

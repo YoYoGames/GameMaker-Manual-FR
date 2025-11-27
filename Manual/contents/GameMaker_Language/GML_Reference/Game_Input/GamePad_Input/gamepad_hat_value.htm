@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_hat_value</h1>
+  <h1><span data-field="title" data-format="default">gamepad_hat_value</span></h1>
   <p>Avec cette fonction, vous pouvez obtenir la valeur actuelle d'un &quot;chapeau&quot; de gamepad. Chaque valeur de chapeau est un masque de bit pour les différentes directions où :</p>
   <ul class="colour">
     <li>Haut = 1</li>
@@ -26,7 +26,7 @@
   <p>Notez que ces valeurs peuvent être combinées (par exemple, en fournissant un index de chapeau de 3, vous vérifierez vers le haut et vers la droite, ou vous pouvez utiliser l'opérateur <span class="inline2">|</span> pour combiner les différentes valeurs) mais seuls 2 bits au maximum peuvent être pressés à la fois. La fonction renvoie une valeur réelle comprise entre 0 et 1, où 0 signifie que le chapeau n'a pas été pressé et 1 qu'il a été complètement pressé (et il peut y avoir des valeurs intermédiaires selon que la manette de jeu supporte ou non l'entrée analogique pour les chapeaux).</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">gamepad_hat_value(device, hatindex);</p>
+  <p class="code"><span data-field="title" data-format="default">gamepad_hat_value</span>(device, hatindex);</p>
   <table>
     <tbody>
       <tr>

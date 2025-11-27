@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>show_question_async</h1>
+  <h1><span data-field="title" data-format="default">show_question_async</span></h1>
   <p>Cette fonction ouvre une fenêtre et affiche la question que vous définissez dans la fonction à l'utilisateur. Il s'agit d'une fonction asynchrone, et en tant que telle, <span data-keyref="GameMaker Name">GameMaker</span> <i>ne</i> bloque <i>pas</i> le périphérique sur lequel elle est exécutée en attendant une réponse, mais continue à exécuter les événements normalement. La fonction a deux boutons qui affichent &quot;Oui&quot; et &quot;Non&quot;, et une fois que l'utilisateur a appuyé sur l'un d'eux, un événement <b>Dialog</b> asynchrone est déclenché qui, pour la durée de cet événement <i>seulement</i>, aura une carte DS stockée dans la variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
   <p>Cette carte contiendra les deux clés, &quot;<strong>id</strong>&quot; et &quot;<strong>status</strong>&quot;. &quot;id&quot; est la valeur renvoyée par la fonction lorsqu'elle a été appelée, tandis que &quot;status&quot; sera soit <span class="inline">true</span> soit <span class="inline">false</span> pour &quot;Oui&quot; et &quot;Non&quot; respectivement.</p>
   <p class="note"><strong><em><span class="note">NOTE</span></em></strong><em> Cette fonction est <span data-keyref="Dialog for debug only"> <strong>réservée à un usage de débogage et de test</strong></span>et ne doit pas être utilisée dans les jeux publiés. Dans ce cas, vous devez créer une interface utilisateur personnalisée pour recevoir les entrées des joueurs, de manière à avoir un contrôle total sur l'apparence et le comportement des boîtes de dialogue.</em></p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">show_question_async(string);</p>
+  <p class="code"><span data-field="title" data-format="default">show_question_async</span>(string);</p>
   <table>
     <tbody>
       <tr>

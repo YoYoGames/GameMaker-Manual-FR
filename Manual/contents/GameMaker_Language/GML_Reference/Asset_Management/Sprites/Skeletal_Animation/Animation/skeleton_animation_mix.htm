@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>mélange_animation_squelette</title>
+  <title>skeleton_animation_mix</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mélange_animation_squelette</h1>
+  <h1><span data-field="title" data-format="default">skeleton_animation_mix</span></h1>
   <p>Vous pouvez facilement changer de jeu d'animations à l'aide de la fonction <a href="skeleton_animation_set.htm"><span class="inline">skeleton_animation_set()</span></a> mais cela peut provoquer un saut ou un bégaiement lorsqu'une animation est remplacée par une autre. Pour éviter cela, vous pouvez définir la valeur de mixage entre deux jeux d'animation et le site <span class="notranslate">sprite</span> les interpolera. Normalement, vous devriez effectuer cette opération dans l'événement Create de l'instance avec l'animation du squelette, car elle ne doit être définie qu'une seule fois, et <span data-keyref="GameMaker Name">GameMaker</span> interpolera toutes les modifications ultérieures du site <span class="notranslate">sprite</span> en utilisant les jeux d'animation de cette instance. Notez que la valeur de la durée est comprise entre 0 et 1, alors qu'une valeur de 0,5 entraînerait une interpolation &quot;moitié-moitié&quot; d'un jeu à l'autre.</p>
   <p class="note"><span class="note">REMARQUE</span> Spine 4.0 modifie le fonctionnement de l'animation rotationnelle, car il n'interpole plus la rotation en utilisant le chemin le plus court possible, mais utilise les valeurs absolues de vos images clés pour l'interpolation. Cela peut entraîner un comportement inattendu si vous mettez à jour votre animation <span class="notranslate">Spine</span> à partir d'une version plus ancienne, et des modifications dans votre projet <span class="notranslate">Spine</span> peuvent être nécessaires pour que les rotations se comportent comme prévu.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">skeleton_animation_mix(animfrom, animto, duration);</p>
+  <p class="code"><span data-field="title" data-format="default">skeleton_animation_mix</span>(animfrom, animto, duration);</p>
   <table>
     <tbody>
       <tr>

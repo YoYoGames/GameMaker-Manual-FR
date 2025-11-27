@@ -15,11 +15,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_find_value</h1>
+  <h1><span data-field="title" data-format="default">ds_list_find_value</span></h1>
   <p>Avec cette fonction, vous pouvez vérifier la position de la liste donnée et la valeur contenue dans la liste pour cette position sera retournée. Notez que si vous donnez une position qui est en dehors de la taille de la liste donnée (par exemple, la position 11 dans une liste de 10 valeurs), la fonction peut retourner <span class="inline">undefined</span> <i>ou</i> 0. Ceci est dû au fait que lorsque vous créez la liste, les premières entrées de la liste sont mises à 0 pour minimiser les problèmes de performance lors de l'ajout initial d'éléments à la liste (bien que la fonction <a href="ds_list_size.htm"><span class="inline">ds_list_size()</span></a> retournera toujours 0 sur une liste nouvellement créée). Si vous souhaitez vous assurer que la liste est &quot;réellement&quot; vide lors de sa création, vous devez appeler la fonction <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a> après avoir créé la liste, ce qui signifie que toutes les valeurs renvoyées pour les emplacements de liste non remplis seront <span class="inline">undefined</span>, ce que vous pourrez ensuite vérifier de manière cohérente à l'aide de la fonction <a href="../../Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a> fonction.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">ds_list_find_value(id, pos);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_find_value</span>(id, pos);</p>
   <table>
     <tbody>
       <tr>

@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_fixture_bind</h1>
+  <h1><span data-field="title" data-format="default">physics_fixture_bind</span></h1>
   <p>Une fois que nous avons défini notre dispositif, il doit être lié à une instance. Cela signifie que ses <i>propriétés</i> sont transférées à l'instance sélectionnée, et <b>non au projecteur lui-même</b>, de sorte qu'un projecteur peut être lié à plusieurs instances si toutes doivent avoir les mêmes propriétés. Vous pouvez spécifier un index d'objet pour la cible et toutes les instances présentes dans la pièce à ce moment-là recevront les propriétés de ce luminaire (mais pas les nouvelles instances de l'objet créées ultérieurement), ou vous pouvez utiliser les mots-clés spéciaux <i>other</i> et <i>all</i>. Vous pouvez même spécifier un objet parent et toutes les instances enfants de ce parent recevront également le fixture. Une fois que le dispositif a été lié à toutes les instances dont vous avez besoin, il peut être supprimé s'il n'est plus nécessaire et les instances ayant les propriétés de ce dispositif ne seront pas affectées et conserveront ces propriétés.</p>
   <p>Le dispositif sera lié à l'instance avec le centre de masse positionné à l'origine de l'instance, et les dispositifs polygonaux sont liés en fonction de la position des points <i>par rapport à</i> l'origine. Si vous souhaitez que votre objet fixe soit lié à un point autre que l'origine, vous devez utiliser la commande <a href="physics_fixture_bind_ext.htm"><span class="inline">physics_fixture_bind_ext()</span></a>.</p>
   <p><img>La fonction renvoie également une valeur &quot;id&quot; unique pour le dispositif <i>lié</i><b>(pas le dispositif lui-même</b>) qui peut ensuite être utilisée pour supprimer (&quot;délier&quot;) les propriétés physiques de l'instance à l'aide de la fonction <a href="physics_remove_fixture.htm"><span class="inline">physics_remove_fixture()</span></a>. Cela vous permet d'ajouter et de supprimer des propriétés physiques d'une instance sans avoir à détruire et recréer des objets.</p>
   <p class="note"><b>REMARQUE</b>: les installations doivent être supprimées lorsqu'elles ne sont plus nécessaires, faute de quoi elles risquent de provoquer une fuite de mémoire qui ralentira et finira par faire planter votre jeu.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">physics_fixture_bind(fixture, target)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_fixture_bind</span>(fixture, target)</p>
   <table>
     <tbody>
       <tr>

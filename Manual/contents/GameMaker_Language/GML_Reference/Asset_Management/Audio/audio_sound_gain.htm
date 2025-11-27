@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_sound_gain</h1>
+  <h1><span data-field="title" data-format="default">audio_sound_gain</span></h1>
   <p>Cette fonction permet d'ajouter ou de supprimer un son sur une période donnée, ou de régler le gain du son instantanément.</p>
   <p>Le temps est mesuré en millisecondes, et la fonction exige que vous entriez un niveau de gain final que le son doit avoir atteint à la fin de ce temps. Ce gain peut être compris entre 0 (silencieux) et toute valeur supérieure à 0, bien que normalement vous considériez le volume maximum comme 1. Ce gain peut être compris entre 0 (silencieux) et toute valeur supérieure à 0, bien que normalement vous considériez que le volume maximum est de 1. Tout ce qui est supérieur à 1 peut être utilisé mais, selon le son utilisé et la plate-forme sur laquelle il est compilé, vous pouvez obtenir une distorsion ou un écrêtage lorsque le son est lu. Notez que l'échelle de gain est linéaire, et pour changer instantanément le gain, il suffit de mettre l'argument temps à 0.</p>
   <p>Cette fonction affectera <i>toutes les</i> instances du son en cours de lecture dans la pièce si l'index est une ressource sonore, et le volume final sera le volume auquel toutes les autres instances du son seront jouées. Cependant, si vous avez utilisé l'index renvoyé par une fonction telle que <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a> cela n'affectera que cette seule instance du son.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">audio_sound_gain(index, volume, time);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_sound_gain</span>(index, volume, time);</p>
   <table>
     <tbody>
       <tr>

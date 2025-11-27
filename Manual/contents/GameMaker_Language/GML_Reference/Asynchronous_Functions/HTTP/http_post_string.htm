@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>http_post_string</h1>
+  <h1><span data-field="title" data-format="default">http_post_string</span></h1>
   <p>En informatique, une requête <b>post</b> est utilisée lorsque le client doit envoyer des données au serveur dans le cadre de la requête de récupération, comme lors du téléchargement d'un fichier ou de la soumission d'un formulaire rempli, et il en va de même pour cette fonction dans <span data-keyref="GameMaker Name">GameMaker</span>. Contrairement à la méthode de requête <span class="inline"><a href="http_get.htm">http_get()</a></span> où seule une URL est envoyée au serveur, <span class="inline">http_post_string()</span> comprend également une chaîne de caractères qui est envoyée au serveur et qui peut entraîner la création d'une nouvelle ressource ou la mise à jour d'une ressource existante ou les deux. Il convient de noter que les paramètres de requête HTTP (les éléments parfois &quot;ajoutés&quot; à la fin d'une URL lorsque vous soumettez un formulaire sur une page Web) sont parfaitement acceptables lorsque vous utilisez cette fonction.</p>
   <p class="note"><b><span class="note">NOTE</span> </b>Vous devez savoir qu'en raison de la protection XSS des navigateurs, les demandes et les tentatives de chargement de ressources provenant d'autres domaines sont bloquées et peuvent donner lieu à des résultats vides. Veuillez consulter la partie sur les <a href="HTTP.htm">problèmes inter-domaines</a> pour plus de détails.</p>
   <p>Cet événement génère un &quot;call back&quot; qui est capté par tout <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">événement HTTP</a>, auquel cas il génère une <a href="../../Data_Structures/DS_Maps/DS_Maps.htm">carte DS</a> (plus communément appelée &quot;dictionnaire&quot;) exclusive à cet événement et stockée dans la variable spéciale <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>async_load</b></a>. Cette carte DS contient des valeurs différentes selon que des données sont renvoyées ou non. Par exemple, si vous avez demandé un fichier, l'événement se déclenchera plusieurs fois au fur et à mesure de la réception de chaque paquet de données afin de pouvoir afficher une barre de progression, par exemple. La structure générale de la carte DS sera la suivante :</p>
@@ -33,7 +33,7 @@
   </ul>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">http_post_string(url, string);</p>
+  <p class="code"><span data-field="title" data-format="default">http_post_string</span>(url, string);</p>
   <table>
     <tbody>
       <tr>

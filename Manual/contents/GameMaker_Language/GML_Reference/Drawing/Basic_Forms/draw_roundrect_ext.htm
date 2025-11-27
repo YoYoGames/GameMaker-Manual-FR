@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_roundrect_ext</h1>
+  <h1><span data-field="title" data-format="default">draw_roundrect_ext</span></h1>
   <p>Avec cette fonction, vous pouvez dessiner soit le contour d'un rectangle arrondi, soit un rectangle arrondi rempli dont la position (x1,y1) est le coin supérieur gauche et la position (x2,y2) le coin inférieur droit. Vous devez également fournir des valeurs de rayon pour les axes x et y (en pixels) et les coins seront arrondis de ces valeurs. Vous pouvez définir la précision du dessin des coins à l'aide de la fonction <a href="draw_set_circle_precision.htm"><span class="inline">draw_set_circle_precision()</span></a>. Veuillez noter que le rectangle dessiné peut nécessiter des valeurs différentes (+/-1 sur les axes x, y, ou la largeur ou la hauteur) pour être dessiné avec les dimensions souhaitées en raison des différences entre les diverses plateformes prises en charge.</p>
   <p class="note"><b>REMARQUE</b>: Si vous souhaitez dessiner une forme à l'aide d'un <span class="notranslate">shader</span>, vous devez savoir que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes : vertex, texture, couleur. Cependant, en utilisant cette fonction, seules les données de vertex et de couleur sont transmises, et donc le <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous avez besoin de dessiner des formes de cette manière, le site <span class="notranslate">shader</span> doit être personnalisé en conséquence.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">draw_roundrect_ext(x1, y1, x2, y2, xrad, yrad, outline);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_roundrect_ext</span>(x1, y1, x2, y2, xrad, yrad, outline);</p>
   <table>
     <tbody>
       <tr>

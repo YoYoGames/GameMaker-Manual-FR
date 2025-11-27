@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>weak_ref_any_alive</h1>
+  <h1><span data-field="title" data-format="default">weak_ref_any_alive</span></h1>
   <p>Avec cette fonction, vous pouvez vérifier la <a class="glossterm" data-glossterm="faible référence" href="#">référence faible</a> de diverses structures pour voir si elles sont toujours &quot;vivantes&quot; ou non. Vous fournissez un tableau de références faibles à vérifier (chaque référence faible doit avoir été créée en utilisant la fonction <a href="weak_ref_create.htm"><span class="inline">weak_ref_create()</span></a>), et la fonction retournera <span class="inline">true</span> si <em><strong>n'importe quel </strong></em>des structs sont toujours référencées quelque part ou <span class="inline">false</span> si elles ne le sont pas et ont été collectées. Notez que si vous fournissez un tableau dont l'une des valeurs n'est pas une référence faible, la fonction retournera <span class="inline">undefined</span>.</p>
   <p>Notez que la fonction prend également deux arguments optionnels, où le premier vous permet de fournir un index initial dans le tableau à vérifier, ainsi qu'un argument pour définir le nombre de positions (longueur) à partir de cet index à vérifier. S'ils sont spécifiés, seuls les indices du tableau compris dans ces paramètres seront vérifiés.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">weak_ref_any_alive(array, [index], [length]);</p>
+  <p class="code"><span data-field="title" data-format="default">weak_ref_any_alive</span>(array, [index], [length]);</p>
   <table>
     <tbody>
       <tr>

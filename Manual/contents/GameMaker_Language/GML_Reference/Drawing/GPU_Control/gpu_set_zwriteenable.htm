@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_zwriteenable</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_zwriteenable</span></h1>
   <p>Cette fonction peut être utilisée pour activer (<span class="inline">true</span>) et désactiver (<span class="inline">false</span>) l'ordre des profondeurs en utilisant le z-buffer. Lorsqu'une instance est rendue dans <span data-keyref="GameMaker Name">GameMaker</span>, la profondeur d'un pixel généré (sa coordonnée z) est stockée dans le z-buffer, puis, si une autre instance de la scène doit être rendue au même pixel, les deux profondeurs sont comparées (z-testing - voir <a href="gpu_set_ztestenable.htm"><span class="inline">gpu_set_ztestenable()</span></a>) et celle qui est &quot;plus proche&quot; de l'observateur est alors enregistrée dans le z-buffer, remplaçant l'ancienne. Cependant, ce n'est pas toujours ce que vous souhaitez et il y a des moments où vous voulez qu'un élément soit dessiné par-dessus tout le reste, quelle que soit sa valeur z. Dans ce cas, vous pouvez utiliser cette fonction pour désactiver l'écriture dans le tampon z et ainsi forcer ce qui est dessiné à être dessiné par-dessus tout le reste. Notez que la description donnée ici concerne le mode de comparaison <i>par défaut</i> du test z, mais qu'il est possible de le modifier.</p>
   <p>La valeur par défaut est que le z-buffering est activé (<span class="inline">true</span>).</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">gpu_set_zwriteenable(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_zwriteenable</span>(enable);</p>
   <table>
     <tbody>
       <tr>

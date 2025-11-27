@@ -15,11 +15,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_get_tex_mip_bias_ext</h1>
+  <h1><span data-field="title" data-format="default">gpu_get_tex_mip_bias_ext</span></h1>
   <p>Cette fonction vous permet de récupérer la valeur du biais mipmap pour un échantillonneur <span class="notranslate">shader</span> donné. Vous fournissez la valeur de l'index de l'échantillonneur <span class="notranslate">shader</span> (tel que renvoyé par la fonction <a href="../../Asset_Management/Shaders/shader_get_sampler_index.htm"><span class="inline">shader_get_sampler_index()</span></a>) et la fonction renverra une valeur de 0,0 pour aucun biais, ou une valeur supérieure où 1 équivaut au premier mipmap, 2 au second mipmap, etc... Cela contrôle la vitesse à laquelle la mip map est échangée et rendra généralement les textures de <span class="notranslate">shader</span> plus floues plus la valeur est élevée et plus la &quot;distance&quot; vue est grande. Notez que ce paramètre peut aussi renvoyer des valeurs négatives, dans ce cas les textures de <span class="notranslate">shader</span> seront plus nettes sur une plus grande distance, plus la valeur est faible.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">gpu_get_tex_mip_bias_ext(sampler_index);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_get_tex_mip_bias_ext</span>(sampler_index);</p>
   <table>
     <tbody>
       <tr>

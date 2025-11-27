@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gif_open</h1>
+  <h1><span data-field="title" data-format="default">gif_open</span></h1>
   <p>Cette fonction vous permet de créer une image vide au format GIF, prête à recevoir des données. Lorsque vous appelez la fonction, vous devez spécifier la largeur et la hauteur du GIF (en pixels, et il n'y a pas de limite supérieure à la taille, sauf pour la mémoire disponible), et la fonction renverra la valeur d'identification unique utilisée pour identifier le cadeau dans les fonctions suivantes, ou elle renverra -1 si le GIF n'a pas pu être initialisé (par exemple, si la largeur/hauteur est trop grande pour la mémoire disponible). Vous pouvez également spécifier un argument facultatif pour définir la &quot;couleur claire&quot; du GIF. Il s'agit d'une valeur RVB (sans composante alpha), et le GIF sera nettoyé à cette couleur avant que quoi que ce soit ne lui soit ajouté. Si vous ne fournissez pas d'argument pour la couleur d'effacement, la couleur par défaut, le noir, sera utilisée.</p>
   <p>Notez que lorsque vous utilisez cette fonction, vous devez appeler <a href="gif_save.htm"><span class="inline">gif_save()</span></a> pour terminer la création du GIF avant d'ouvrir un autre fichier pour l'enregistrement (ainsi, pour chaque <span class="inline">gif_open()</span>, il doit y avoir un <span class="inline">gif_save()</span>).</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">gif_open(width, height, [clear_colour]);</p>
+  <p class="code"><span data-field="title" data-format="default">gif_open</span>(width, height, [clear_colour]);</p>
   <table>
     <tbody>
       <tr>

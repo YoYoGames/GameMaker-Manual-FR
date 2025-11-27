@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_stop_recording</h1>
+  <h1><span data-field="title" data-format="default">audio_stop_recording</span></h1>
   <p>Cette fonction arrêtera l'enregistrement sur le canal de l'enregistreur donné (l'index du canal est renvoyé lorsque vous appelez la fonction <a href="audio_start_recording.htm"><span class="inline">audio_start_recording()</span></a>). Lorsque vous arrêtez l'enregistrement, aucun autre <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">événement asynchrone d'enregistrement audio</a> ne sera déclenché pour le canal d'enregistreur donné. Vous devriez donc normalement utiliser cette fonction dans l'événement asynchrone actuel pour vous assurer que vous avez capturé toutes les données.</p>
   <p class="note"><b><span class="note">NOTE</span> </b>La plupart des plates-formes prennent en charge l'enregistrement audio sous une forme ou une autre, mais cela ne signifie pas que tous les périphériques l'autoriseront, même si la plate-forme le fait. Vous devez donc toujours vérifier que la fonction <span style="font-size:1px;"><a href="audio_get_recorder_count.htm"><span class="inline">audio_get_recorder_count()</span></a></span> renvoie une valeur supérieure à 0 pour vérifier que les périphériques d'enregistrement sont disponibles avant d'utiliser le reste des fonctions d'enregistrement.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">audio_stop_recording(channel_index);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_stop_recording</span>(channel_index);</p>
   <table>
     <tbody>
       <tr>

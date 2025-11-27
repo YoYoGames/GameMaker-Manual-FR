@@ -16,13 +16,13 @@
   <meta name="condition-tags" content="" />
 </head>
 <body>
-  <h1>video_set_volume</h1>
+  <h1><span data-field="title" data-format="default">video_set_volume</span></h1>
   <p>Cette fonction modifie le volume audio de la vidéo qui est actuellement chargée. Elle prend une valeur entre <span class="inline2">0</span> et <span class="inline2">1</span>, où <span class="inline2">0</span> est silencieux et <span class="inline2">1</span> est le volume maximum.</p>
   <p>Assurez-vous que cette fonction est appelée après un appel à <span class="inline"><a href="video_open.htm">video_open()</a></span> mais avant un appel à <span class="inline"><a href="video_close.htm">video_close()</a></span>, sinon elle ne fera rien (car aucune vidéo ne sera chargée).</p>
   <p>Sur certaines plates-formes, cette fonction ne fonctionnera qu'après le chargement complet de la vidéo. Utilisez donc des <a data-xref="{text}" href="Videos.htm#h">rappels asynchrones</a> pour savoir quand la vidéo est prête, puis modifiez le volume.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">video_set_volume(value);</p>
+  <p class="code"><span data-field="title" data-format="default">video_set_volume</span>(value);</p>
   <table>
     <tbody>
       <tr>

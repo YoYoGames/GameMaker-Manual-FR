@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>nombre de gestes</title>
+  <title>gesture_tap_count</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,11 +15,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>nombre de gestes</h1>
+  <h1><span data-field="title" data-format="default">gesture_tap_count</span></h1>
   <p>Cette fonction est utilisée pour définir si le comptage des robinets est activé ou désactivé. Lorsqu'elle est réglée sur <span class="inline">true</span>, le comptage des coups est activé, et lorsqu'elle est réglée sur <span class="inline">false</span>, il est désactivé, bien que vous puissiez vérifier dans quel état il se trouve en utilisant la fonction <a href="gesture_get_tap_count.htm"><span class="inline">gesture_get_tap_count()</span></a>. Lorsqu'il est activé, chaque événement de tapotement aura une entrée supplémentaire &quot;tapcount&quot; sur la carte DS qui aura enregistré le nombre de tapotements, et lorsqu'il est activé, cela signifie que <i>tous les</i> événements de tapotement seront déclenchés, c'est-à-dire que deux tapotements déclencheront à la fois l'événement de tapotement simple et l'événement de tapotement double, le nombre de tapotements de l'événement de tapotement simple étant de 1 et le nombre de tapotements de l'événement de tapotement double étant de 2. La valeur du compteur de coups de robinet sera remise à 0 après que le temps défini pour la détection d'un double coup de robinet se soit écoulé (voir la fonction <a href="gesture_double_tap_time.htm"><span class="inline">gesture_double_tap_time()</span></a>). Si le comptage des tapotements est désactivé, le premier tapotement ne sera pas enregistré tant que le temps de double tapotement ne sera pas écoulé et qu'aucun deuxième tapotement n'aura été détecté. Notez que cette fonction est <b>activée</b> par défaut.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">gesture_tap_count(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">gesture_tap_count</span>(enable);</p>
   <table>
     <tbody>
       <tr>

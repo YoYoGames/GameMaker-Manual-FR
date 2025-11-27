@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>os_is_paused</h1>
+  <h1><span data-field="title" data-format="default">os_is_paused</span></h1>
   <p>Lorsque vous développez pour des appareils mobiles, vous devez avoir un moyen de vérifier si l'appareil est toujours concentré sur votre jeu ou non, d'autant plus que si votre jeu se trouve sur un appareil <span class="notranslate">iOS</span>, <span class="notranslate">Android</span> ou <span class="notranslate">Windows Phone</span>, il peut être interrompu par des appels téléphoniques et d'autres applications. Vous pouvez utiliser cette fonction pour vérifier si l'appareil est en pause ou non.</p>
   <p>Il convient de noter que cette fonction exécutera tout code contenu dans le bloc de code sur les appareils, mais que <span data-keyref="GameMaker Name">GameMaker</span> sera mis en pause immédiatement après car l'appareil <span class="notranslate">caches</span> le jeu en tant que processus d'arrière-plan. Ainsi, si vous avez quelque chose comme l'exemple de code fourni ci-dessous, l'instance à créer n'apparaîtra pas réellement et n'exécutera aucun de ses événements <i>avant que le jeu n'ait été redémarré à partir de l'état de mise en cache</i>. Cela signifie que vous préférerez peut-être que la fonction <span class="inline">os_is_paused</span> appelle une alarme et que, dans l'événement d'alarme (qui sera défini lorsque le dispositif est mis en pause mais ne sera pas exécuté tant qu'il n'aura pas été mis en pause), elle crée un menu de pause, redémarre la musique, etc...</p>
   <p>Si vous utilisez cette fonction sur les plates-formes <span class="notranslate">Windows</span>, <span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>), MacOS ou HTML5, la fonction n'est basculée qu'<b>une</b> seule fois sur <span class="inline">true</span> lorsque le jeu perd le focus, puis elle revient sur <span class="inline">false</span> jusqu'à ce que le jeu retrouve le focus (et le perde à nouveau). Cela s'explique par le fait que ces plates-formes ne disposent pas de <span class="notranslate">cache</span> apps et jeux, qui continueront donc à s'exécuter en arrière-plan.</p>
   <p class="note"><b>REMARQUE</b>: Sur les appareils mobiles, les sons et la musique sont arrêtés lorsque l'os est en pause. Ils <b>ne</b> redémarreront <b>pas</b> à moins que vous ne les démarriez spécifiquement avec la fonction appropriée.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">os_is_paused()</p>
+  <p class="code"><span data-field="title" data-format="default">os_is_paused</span>()</p>
   <p> </p>
   <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>

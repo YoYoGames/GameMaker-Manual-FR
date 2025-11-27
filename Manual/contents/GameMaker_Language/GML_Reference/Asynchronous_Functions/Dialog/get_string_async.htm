@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>get_string_async</h1>
+  <h1><span data-field="title" data-format="default">get_string_async</span></h1>
   <p>Cette fonction ouvre une fenêtre et affiche un message ainsi qu'un espace permettant à l'utilisateur de saisir une chaîne de caractères (qui contiendra la chaîne par défaut fournie pour commencer). Il s'agit d'une fonction asynchrone, et en tant que telle, <span data-keyref="GameMaker Name">GameMaker</span> <i>ne</i> bloque <i>pas</i> le périphérique sur lequel elle est exécutée en attendant une réponse, mais continue à exécuter les événements normalement. Une fois que l'utilisateur a tapé sa chaîne et appuyé sur le bouton &quot;Okay&quot;, un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">événement asynchrone Dialog </a>est déclenché qui, pour la durée de cet événement <i>uniquement</i>, aura une carte DS stockée dans la variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
   <p>Cette carte contiendra les trois clés suivantes : &quot;<strong>id</strong>&quot;, &quot;<strong>status</strong>&quot; et &quot;<strong>result</strong>&quot;. &quot;id&quot; est la valeur renvoyée par la fonction lorsqu'elle est appelée, &quot;status&quot; sera soit <span class="inline">true</span> si le bouton &quot;Okay&quot; a été pressé, soit <span class="inline">false</span> si le message a été annulé (le cas échéant, car toutes les plateformes cibles ne permettent pas d'annuler le message). Enfin, &quot;result&quot; renvoie la chaîne de caractères saisie par l'utilisateur (ou une chaîne vide &quot;&quot; si aucune chaîne n'a été fournie).</p>
   <p class="note"><strong><em><span class="note">NOTE</span></em></strong><em> Cette fonction est <span data-keyref="Dialog for debug only"> <strong>réservée à un usage de débogage et de test</strong></span>et ne doit pas être utilisée dans les jeux publiés. Dans ce cas, vous devez créer une interface utilisateur personnalisée pour recevoir les entrées des joueurs, de manière à avoir un contrôle total sur l'apparence et le comportement des boîtes de dialogue.</em></p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">get_string_async(string, default);</p>
+  <p class="code"><span data-field="title" data-format="default">get_string_async</span>(string, default);</p>
   <table>
     <tbody>
       <tr>

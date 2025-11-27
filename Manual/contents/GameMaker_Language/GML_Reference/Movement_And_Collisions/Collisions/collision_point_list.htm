@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>liste de points de collision</title>
+  <title>collision_point_list</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>liste de points de collision</h1>
+  <h1><span data-field="title" data-format="default">collision_point_list</span></h1>
   <p>Cette fonction est identique à la fonction <a href="collision_point.htm"><span class="inline">collision_point()</span></a> mais au lieu de détecter une seule instance en collision à la fois, elle en détectera plusieurs. Vous fournissez la position x/y du point à vérifier et vous pouvez définir que la vérification doit être précise (dans ce cas, toutes les instances vérifiées devront avoir des masques de collision <i>précis</i> ) et si la vérification doit inclure l'instance appelante ou non.</p>
   <p>Vous fournissez également une <a href="../../Data_Structures/DS_Lists/DS_Lists.htm">liste de DS</a>, de sorte que les <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> de toutes les instances qui entrent en collision avec l'instance appelante seront ajoutées à la fin de la liste donnée. Vous pouvez <a href="../../Data_Structures/DS_Lists/ds_list_clear.htm">effacer la</a> liste avant d'appeler cette fonction afin qu'elle ne contienne que les résultats de cet appel de fonction. Vous avez également la possibilité d'ordonner les instances en fonction de leur distance entre le point donné et leur origine. La fonction renvoie le nombre d'instances trouvées, ou 0 si aucune n'est trouvée.</p>
   <p>Notez qu'au lieu d'un index d'objet, vous pouvez fournir le <a href="../../../GML_Overview/Instance_Keywords.htm">mot-clé d'instance</a> <span class="inline">all</span>, pour vérifier toutes les instances dans la pièce actuelle, ce qui peut inclure l'instance qui exécute le code (selon l'argument <span class="inline">notme</span> ).</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">collision_point_list(x, y, obj, prec, notme, list, ordered);</p>
+  <p class="code"><span data-field="title" data-format="default">collision_point_list</span>(x, y, obj, prec, notme, list, ordered);</p>
   <table>
     <tbody>
       <tr>

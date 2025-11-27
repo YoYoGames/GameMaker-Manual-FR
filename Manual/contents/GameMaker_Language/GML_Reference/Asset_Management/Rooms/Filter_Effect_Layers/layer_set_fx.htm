@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_set_fx</h1>
+  <h1><span data-field="title" data-format="default">layer_set_fx</span></h1>
   <p>Cette fonction est utilisée pour assigner un FX <span class="notranslate">struct</span> à une couche de pièce. Vous spécifiez l'ID ou le nom de la couche que vous voulez modifier, puis un FX <span class="notranslate">struct</span> (tel que retourné par <span class="inline"><a href="fx_create.htm">fx_create()</a></span> ou <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>) qui sera appliqué à la couche spécifiée, rendant l'effet visible dans la pièce.</p>
   <p>Si vous spécifiez un calque qui n'est pas un calque de filtre/effet mais qui est d'un autre type (comme un calque d'instance, un calque d'actif, un calque de tuile, etc.), l'effet sera appliqué au contenu de ce calque ainsi qu'à tous les calques inférieurs.</p>
   <p>Si un FX <span class="notranslate">struct</span> est déjà attribué à la couche spécifiée, il sera remplacé par le nouveau.</p>
   <p class="note"><span class="note">NOTE</span> L'appel de cette fonction au niveau de la racine d'un script n'aura aucun effet, car les scripts sont exécutés avant le chargement de la première pièce. Vous pouvez d'abord définir une <a href="../General_Layer_Functions/layer_set_target_room.htm">pièce cible</a> et ensuite appeler cette fonction.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">layer_set_fx(layer_name_or_id, filter_or_effect);</p>
+  <p class="code"><span data-field="title" data-format="default">layer_set_fx</span>(layer_name_or_id, filter_or_effect);</p>
   <table>
     <tbody>
       <tr>

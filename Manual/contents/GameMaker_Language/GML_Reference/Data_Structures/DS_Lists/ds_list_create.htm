@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_create</h1>
+  <h1><span data-field="title" data-format="default">ds_list_create</span></h1>
   <p>Cette fonction crée une nouvelle structure de données de liste et renvoie la valeur de l'index. Cette valeur doit être stockée dans une variable et utilisée dans tous les autres appels de fonction relatifs à la liste. Notez que si vous essayez d'entrer une valeur dans la liste à l'adresse <span class="notranslate">access</span> <i>avant qu'</i> elle <i>n'</i> ait été remplie - c'est-à-dire si la liste est &quot;vide&quot; - la valeur de retour peut être 0 car, en interne, les quelques premières entrées de la liste sont définies lors de sa création afin de minimiser les problèmes de performance lors de l'ajout initial d'éléments à la liste (bien que la fonction <a href="ds_list_size.htm"><span class="inline">ds_list_size()</span></a> retournera toujours 0 sur une liste nouvellement créée). Si vous souhaitez vous assurer que la liste est &quot;réellement&quot; vide lors de sa création, vous devez appeler la fonction <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a> après la création de la liste, ce qui signifie que toute valeur renvoyée pour les emplacements de liste non remplis sera <span class="inline">undefined</span>.</p>
   <p class="note"><b>IMPORTANT !</b> Lorsque vous créez une structure de données, la valeur de l'index pour l'identifier est une valeur entière commençant à 0. Cela signifie que des structures de données de différents types peuvent avoir la <b>même</b> valeur d'index, donc en cas de doute vous devriez utiliser la fonction <span style="font-size:1px;"><a href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span> avant d'y accéder. Notez également que les index sont réutilisés, de sorte qu'une valeur d'index de structure de données détruite peut être utilisée par une structure nouvellement créée par la suite.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">ds_list_create();</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_create</span>();</p>
   <p> </p>
   <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_ID_DS_List">DS List ID</span></p>

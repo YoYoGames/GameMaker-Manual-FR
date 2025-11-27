@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_create_ext</h1>
+  <h1><span data-field="title" data-format="default">surface_create_ext</span></h1>
   <p>Cette fonction vous permet d'attacher une surface à un élément de canevas qui existe déjà dans votre page Web, ce qui signifie que vous pouvez effectivement diviser des parties de votre jeu à dessiner à différents endroits de la page. Pour cela, vous <i>devez</i> avoir défini correctement l'élément canvas dans la page <span class="inline">*.html</span> de votre jeu en utilisant les tailles et les noms corrects qui correspondent aux surfaces que vous souhaitez créer. Ainsi, vous aurez votre canevas &quot;principal&quot;, puis vos éléments de canevas de surface secondaire, qui seront assignés à l'aide de cette fonction aux surfaces correctes. L'image suivante est un exemple de la configuration d'une page comportant trois éléments de canevas :</p>
   <p><img>La mise en page peut être délicate, surtout si vous souhaitez que tous les éléments s'alignent correctement, mais une fois la tâche difficile de la création de la mise en page terminée, vous pouvez ajouter ce fichier <span class="inline">html</span> comme fichier de page par défaut pour le jeu en utilisant l'<a href="../../../../Settings/Game_Options/HTML5.htm">onglet HTML5</a> des <a href="../../../../Settings/Game_Options.htm">options de jeu</a>. La prochaine chose à faire est de configurer votre salle et vos vues, car chaque surface devra être associée à une vue spécifique pour &quot;capturer&quot; les images du jeu (voir la variable de vue <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><span class="inline">view_surface_id[0...7]</span></a>). L'image ci-dessous montre la configuration de la salle de jeu pour l'exemple de toile ci-dessus :</p>
   <p><img>Enfin, vous utiliserez cette fonction pour créer les surfaces, le nom étant le même que celui utilisé pour les éléments de la toile et la taille correspondant à la taille de cette même toile. La fonction renvoie l'indice de la surface, qui doit être stocké dans une variable pour les futurs appels de fonction. Lorsque la surface est créée pour la première fois, elle peut contenir du &quot;bruit&quot; car il s'agit simplement d'une zone de mémoire mise de côté à cet effet (et cette mémoire peut encore contenir des informations), vous pouvez donc effacer la surface avant de l'utiliser avec une fonction comme <a href="../Colour_And_Alpha/draw_clear_alpha.htm"><span class="inline">draw_clear_alpha()</span></a>.</p>
   <p class="note"><b>REMARQUE</b>: Cette fonction n'est disponible qu'avec le module HTML5.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">surface_create_ext(name, w, h);</p>
+  <p class="code"><span data-field="title" data-format="default">surface_create_ext</span>(name, w, h);</p>
   <table>
     <tbody>
       <tr>

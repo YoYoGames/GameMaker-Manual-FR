@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instanceof</h1>
+  <h1><span data-field="title" data-format="default">instanceof</span></h1>
   <p>Cette fonction peut être utilisée pour obtenir le nom de la <a href="../../GML_Overview/Structs.htm">fonction constructeur</a> qui a été utilisée pour créer un <span class="notranslate">struct</span>. Le <span class="notranslate">struct</span> lui-même devrait avoir été créé en utilisant la fonction <a href="../../GML_Overview/Language_Features/new.htm"><span class="inline"></span></a> <a href="../../GML_Overview/Language_Features/new.htm"><span class="inline">new</span></a> ainsi que le constructeur lui-même. Vous fournissez la variable avec la référence <span class="notranslate">struct</span> à vérifier et la fonction retournera soit une chaîne avec le nom du constructeur, soit <span class="inline">undefined</span>.</p>
   <p>Notez que si vous passez à la fonction un littéral <span class="notranslate">struct</span> (c'est-à-dire un <span class="notranslate">struct</span> qui a été créé sans utiliser de fonction constructrice), elle renverra simplement la chaîne <span class="inline2">&quot;struct&quot;.</span></p>
   <p>Cette fonction peut aussi être utilisée pour vérifier si une référence <span class="notranslate">struct</span> est une <strong><a class="glossterm" data-glossterm="faible référence" href="#">référence faible</a></strong> Dans ce cas, la fonction renvoie la chaîne <span class="inline2">&quot;weakref&quot;</span> au lieu du nom de la fonction qui a créé la référence <span class="notranslate">struct</span>. Pour plus d'informations, voir la fonction <a href="../Garbage_Collection/weak_ref_create.htm"><span class="inline">weak_ref_create()</span></a>.</p>
   <p>Le nom du constructeur renvoyé comprendra un texte supplémentaire si la fonction constructeur n'a pas été créée dans un script. Si elle a été créée dans un objet, son nom comprendra l'objet et l'événement dans lequel elle a été créée. Par exemple, un constructeur appelé <span class="inline2">test_constructor</span> créé dans l'événement Create d'<strong>Object1</strong> sera renvoyé sous le nom <span class="inline2">&quot;test_constructor_gml_Object_Object1_Create_0&quot;.</span> Pour éviter cela, créez vos constructeurs dans un fichier . <a href="../../GML_Overview/Script_Functions.htm"><span class="notranslate">script</span></a>.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">instanceof(struct_id);</p>
+  <p class="code"><span data-field="title" data-format="default">instanceof</span>(struct_id);</p>
   <table>
     <tbody>
       <tr>

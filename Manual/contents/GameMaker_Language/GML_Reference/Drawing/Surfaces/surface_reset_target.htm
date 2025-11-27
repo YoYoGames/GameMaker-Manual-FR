@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_reset_target</h1>
+  <h1><span data-field="title" data-format="default">surface_reset_target</span></h1>
   <p>Avec cette fonction, vous réinitialisez tout dessin ultérieur de la surface cible vers l'écran. Veuillez noter que pour commencer à dessiner sur une surface, vous devez d'abord appeler la fonction <a href="surface_set_target.htm"><span class="inline">surface_set_target()</span></a> puis celle-ci après avoir terminé, <i>pour chaque surface cible que vous avez définie</i>, sinon rien ne sera dessiné à l'écran car tous les dessins ultérieurs (même dans d'autres instances) seront effectués sur la surface. Vous devez également savoir que rien ne sera vu si la surface elle-même n'est pas dessinée à l'écran dans l'événement draw d'une instance.</p>
   <p class="note"><b>REMARQUE</b>: Si vous n'avez pas précédemment défini une cible de rendu avec la fonction <span style="font-size:1px;"><a href="surface_set_target.htm"><span class="inline">surface_set_target()</span></a></span>l'utilisation de cette fonction mettra fin de manière silencieuse (c'est-à-dire sans aucun message d'erreur) à toute autre exécution de code pour l'événement.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">surface_reset_target();</p>
+  <p class="code"><span data-field="title" data-format="default">surface_reset_target</span>();</p>
   <p> </p>
   <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>

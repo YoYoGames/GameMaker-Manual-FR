@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_sprite</h1>
+  <h1><span data-field="title" data-format="default">draw_sprite</span></h1>
   <p>Cette fonction dessine la <span class="notranslate">sprite</span> et la sous-image données à un endroit de la salle de jeu. Pour le <span class="notranslate">sprite</span>, vous pouvez utiliser la variable d'instance <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a> pour obtenir le <span class="notranslate">sprite</span> courant qui est assigné à l'instance qui exécute le code, ou vous pouvez utiliser n'importe quel autre actif <span class="notranslate">sprite</span>. Il en va de même pour la sous-image, qui peut également être définie par la variable d'instance <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm"><span class="inline">image_index</span></a> qui définira la sous-image sur celle sélectionnée pour l'instance actuelle <span class="notranslate">sprite</span> (notez que vous pouvez dessiner une autre <span class="notranslate">sprite</span> tout en utilisant la valeur de la sous-image pour l'instance actuelle), ou vous pouvez utiliser toute autre valeur pour dessiner une sous-image spécifique de la <span class="notranslate">sprite</span> choisie. Si la valeur est supérieure au nombre de sous-images, <span data-keyref="GameMaker Name">GameMaker</span> bouclera automatiquement le numéro pour sélectionner l'image correspondante (par exemple, si le site <span class="notranslate">sprite</span> à dessiner possède 5 sous-images numérotées de 0 à 4 et que nous fixons la valeur de l'index à 7, la fonction dessinera la sous-image 3, numérotée 0). Enfin, la position x et y est la position dans la pièce où le <span class="notranslate">sprite</span> sera dessiné, et elle est centrée sur le <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">décalage x</a> et le <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">décalage y</a> du <span class="notranslate">sprite</span>.</p>
   <p class="note"><span class="note">REMARQUE</span> Cette fonction peut ne pas fonctionner comme prévu lorsque vous utilisez l'animation de squelette <span class="notranslate">sprites</span>, et vous pouvez constater que la fonction ne dessine que la première image de la pose par défaut. Vous devriez utiliser les fonctions <span class="inline">draw_skeleton_*</span> à la place.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">draw_sprite(sprite, subimg, x, y);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_sprite</span>(sprite, subimg, x, y);</p>
   <table>
     <tbody>
       <tr>

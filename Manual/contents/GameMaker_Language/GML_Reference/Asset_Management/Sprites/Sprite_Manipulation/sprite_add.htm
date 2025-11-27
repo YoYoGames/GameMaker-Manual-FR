@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_add</h1>
+  <h1><span data-field="title" data-format="default">sprite_add</span></h1>
   <p>Cette fonction vous permet d'ajouter une image en tant que <span class="notranslate">sprite</span>, en la chargeant à partir d'une source externe. Le fichier image à charger doit <b>toujours</b> être au format <span class="inline">*.png</span>, <span class="inline">*.gif</span>, <span class="inline">*.jpg/jpeg</span> ou <span class="inline">*.json</span> (les fichiers<span class="inline">*json</span> sont utilisés pour charger des <a href="../Skeletal_Animation/Skeletal_Animation.htm">sprites d'animation de squelette</a> créés avec <span class="notranslate">Spine</span>). La fonction renvoie le nouvel index <span class="notranslate">sprite</span> qui doit ensuite être utilisé dans tout autre code relatif à <span class="notranslate">sprite</span>. Si vous utilisez cette fonction avec HTML5 ou si vous obtenez une image à partir d'une URL, cette fonction générera également un événement asynchrone <b>Image Loaded</b>. Voir <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">cette page</a> pour plus d'informations.</p>
   <p>Toutes les images qui doivent être transformées en <span class="notranslate">sprites</span> animées - à l'exception de <span class="inline">*.gif</span> (voir ci-dessous) - doivent avoir un format &quot;bande&quot; (voir l'image ci-dessous) et elles seront divisées en un nombre de sous-images spécifié selon la règle suivante : <b>largeur du sprite = largeur de la bande / sous-images</b>.</p>
   <p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png" /></p>
@@ -29,7 +29,7 @@
   <p class="note"><b>REMARQUE</b>: En <b>HTML5</b>, si vous chargez un site <span class="notranslate">sprite</span> à partir d'un serveur sécurisé, vous devrez peut-être définir le type cross-origin et utiliser un chemin relatif au lieu d'un chemin absolu. Voir <span style="font-size:1px;"><a href="../../../Asynchronous_Functions/HTTP/http_set_request_crossorigin.htm"><span class="inline">http_set_request_crossorigin()</span></a></span> pour plus de détails.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">sprite_add(fname, imgnumb, removeback, smooth, xorig, yorig);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_add</span>(fname, imgnumb, removeback, smooth, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>
