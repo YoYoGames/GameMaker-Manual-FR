@@ -51,7 +51,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     L'ID de la courbe d'animation est le nom de la courbe d'animation telle qu'elle a été définie dans l'Asset Browser, ou le pointeur <span class="notranslate">struct</span> tel que renvoyé par la fonction <a href="animcurve_create.htm"><span class="inline">animcurve_create()</span></a>. Le nom du canal est une chaîne qui fait référence au canal tel qu'il a été défini dans l'actif de la courbe d'animation, ou vous pouvez fournir une valeur d'index, comprise entre 0 et <i>n</i>, où <i>n</i> est le dernier canal de l'actif de la courbe (par exemple, si une courbe d'animation comporte 4 canaux, ils seront indexés de 0 à 3). Notez que le passage d'une valeur d'index nécessitera moins de traitement que le passage d'un nom de canal. Si la fonction échoue (c'est-à-dire si aucun canal n'existe avec le nom ou l'index donné), vous obtiendrez une erreur.</p>
   <p>Les points d'un canal unique sont stockés sous la forme <span class="notranslate">structs</span> dans un <a href="../../../GML_Overview/Arrays.htm">tableau</a>, où chaque élément du tableau est un point unique <span class="notranslate">struct</span>. Le point <span class="notranslate">struct</span> a les variables suivantes :</p>
   <table>

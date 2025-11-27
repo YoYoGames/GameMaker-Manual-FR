@@ -40,7 +40,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Vous devez effectuer un &quot;or&quot; bit à bit de ces constantes avec la valeur de l'index de la tuile pour obtenir les données de la tuile finale :</p>
   <p class="code">var tiledata = 8 | tile_rotate | tile_flip;</p>
   <p>Le code ci-dessus crée simplement une variable locale pour stocker les données de la tuile avec l'index 8 sur le jeu de tuiles, et il est tourné et retourné. Ceci peut ensuite être utilisé pour dessiner la tuile à cet index à partir de l'ensemble de tuiles que vous spécifiez. Ceci n'est pas lié à une couche de carte de tuiles et la tuile sera dessinée à la profondeur de couche de l'instance effectuant le dessin, à la position x/y que vous spécifiez dans la pièce. Notez que vous pouvez également définir le cadre à dessiner. Si la tuile indexée fait partie d'un ensemble d'animations, vous pouvez définir le numéro de l'image ici (de 0 au nombre d'images - 1) et la tuile indexée sera simplement l'indicateur de l'ensemble de tuiles animées que vous utilisez, tandis que c'est l'image donnée qui sera dessinée. Si la tuile ne fait pas partie d'un jeu de tuiles animées, la trame doit être définie sur 0.</p>

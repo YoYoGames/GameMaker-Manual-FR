@@ -28,22 +28,22 @@
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_fixed</span></td>
-        <td><br>
+        <td><br />
           Un <span class="notranslate">buffer</span> d'une taille fixe en octets. La taille est définie lors de la création du site <span class="notranslate">buffer</span> et ne peut plus être modifiée.</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_grow</span></td>
-        <td><br>
+        <td><br />
           Un <span class="notranslate">buffer</span> qui <i>s'agrandit</i> dynamiquement au fur et à mesure que des données sont ajoutées. Vous le créez avec une taille initiale (qui doit être une approximation de la taille des données à stocker), puis il se développe pour accepter d'autres données qui dépassent cette taille initiale.</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_wrap</span></td>
-        <td><br>
+        <td><br />
           Un <span class="notranslate">buffer</span> où les données seront <i>enveloppées</i>. Lorsque les données ajoutées atteignent la limite de la taille de <span class="notranslate">buffer</span>, l'écrasement est replacé au début de <span class="notranslate">buffer</span>, et l'écriture se poursuit à partir de ce point.</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_fast</span></td>
-        <td><br>
+        <td><br />
           Il s'agit d'une version spéciale &quot;dépouillée&quot; de <span class="notranslate">buffer</span> qui est extrêmement rapide en lecture/écriture. Cependant, il ne peut être utilisé qu'avec les types de données <span class="inline"><span class="inline">buffer_u8</span>, et doit être aligné sur 1 octet. (Des informations sur les <b>types de données</b> et l'<b>alignement des octets</b> sont disponibles plus bas sur cette page).</td>
       </tr>
     </tbody>
@@ -53,7 +53,7 @@
   <p><img>Lorsque vous créez un <span class="notranslate">buffer</span>, vous devez toujours essayer de lui donner une taille adaptée au type, la règle générale étant qu'il doit être créé pour accueillir la taille maximale des données qu'il doit stocker. En cas de doute, utilisez un <span class="notranslate">buffer</span> de croissance pour éviter les erreurs d'écrasement.</p>
   <p>Le code réel pour créer un <span class="notranslate">buffer</span> ressemblerait à quelque chose comme ceci :</p>
   <p class="code">player_buffer = buffer_create(16384, buffer_fixed, 2);</p>
-  <p><br>
+  <p><br />
     Cela créerait un <span class="notranslate">buffer</span> fixe de 16384 octets et aligné sur 2, la fonction renvoyant une valeur d'identification unique qui est stockée dans une variable pour une référence ultérieure de ce <span class="notranslate">buffer</span>.</p>
   <p>Lorsque vous lisez et écrivez des données sur un site <span class="notranslate">buffer</span>, vous le faites par &quot;morceaux&quot; de données définis par leur &quot;type de données&quot;. Le &quot;type de données&quot; détermine le nombre d'octets alloués à la valeur écrite sur le site <span class="notranslate">buffer</span>. Il est essentiel que vous vous y preniez correctement, sinon vous obtiendrez des résultats très étranges (voire des erreurs) pour votre code.</p>
   <p>Les tampons sont écrits (et lus) <strong>séquentiellement</strong>, c'est-à-dire qu'une donnée est écrite après l'autre, chaque donnée étant d'un type déterminé. Cela signifie que vous devez idéalement savoir à tout moment quelles données vous écrivez sur le site <span class="notranslate">buffer</span>. Ces types de données sont définis dans <span class="notranslate">GML</span> par les constantes suivantes :</p>
@@ -68,73 +68,73 @@
       <tr>
         <td><span class="inline">buffer_u8</span></td>
         <td>1</td>
-        <td><br>
+        <td><br />
           Un nombre entier non signé de 8 bits. Il s'agit d'une valeur positive comprise entre 0 et 255.</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_s8</span></td>
         <td>1</td>
-        <td><br>
+        <td><br />
           Un nombre entier signé de 8 bits. Il peut s'agir d'une valeur positive ou négative comprise entre -128 et 127 (0 est considéré comme positif).</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_u16</span></td>
         <td>2</td>
-        <td><br>
+        <td><br />
           Un nombre entier non signé de 16 bits. Il s'agit d'une valeur positive comprise entre 0 et 65 535.</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_s16</span></td>
         <td>2</td>
-        <td><br>
+        <td><br />
           Un nombre entier signé de 16 bits. Il peut s'agir d'une valeur positive ou négative comprise entre -32 768 et 32 767 (0 est considéré comme positif).</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_f16</span></td>
         <td>2</td>
-        <td><br>
+        <td><br />
           Un nombre à virgule flottante de 16 bits. Il peut s'agir d'une valeur positive ou négative comprise dans la plage de +/- 65504. <b>(Non pris en charge actuellement !)</b></td>
       </tr>
       <tr>
         <td><span class="inline">buffer_u32</span></td>
         <td>4</td>
-        <td><br>
+        <td><br />
           Un nombre entier non signé de 32 bits. Il s'agit d'une valeur positive comprise entre 0 et 4 294 967 295.</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_s32</span></td>
         <td>4</td>
-        <td><br>
+        <td><br />
           Un nombre entier signé de 32 bits. Il peut s'agir d'une valeur positive ou négative comprise entre -2 147 483 648 et 2 147 483 647 (0 étant considéré comme positif).</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_f32</span></td>
         <td>4</td>
-        <td><br>
+        <td><br />
           Un nombre à virgule flottante de 32 bits. Il peut s'agir d'une valeur positive ou négative comprise dans la plage de +/-16777216.</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_u64</span></td>
         <td>8</td>
-        <td><br>
+        <td><br />
           Une valeur entière non signée de 64 bits.<b>(Non supporté actuellement par toutes les fonctions de <span class="notranslate">buffer</span>!)</b></td>
       </tr>
       <tr>
         <td><span class="inline">buffer_f64</span></td>
         <td>8</td>
-        <td><br>
+        <td><br />
           Un nombre à virgule flottante de 64 bits.</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_bool</span></td>
         <td>1</td>
-        <td><br>
+        <td><br />
           Une valeur booléenne. Ne peut être que 1 ou 0 (<span class="inline">true</span> ou <span class="inline">false</span>)</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_string</span></td>
         <td>N/A</td>
-        <td><br>
+        <td><br />
           C'est une chaîne UTF-8 à terminaison nulle (0x00). En fait, une chaîne de caractères <span class="notranslate">GameMaker</span> est envoyée à <span class="notranslate">buffer</span>, et un 0 est placé à la fin.</td>
       </tr>
     </tbody>

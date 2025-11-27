@@ -39,9 +39,9 @@
       </tr>
       <tr>
         <td><span class="inline">rollback_connect_error</span></td>
-        <td>Une <a href="../../GML_Overview/Structs.htm">structure</a> contenant les variables suivantes :<br>
-          <br>
-         <span class="inline2">status</span> Le code d'état HTTP de la réponse<br>
+        <td>Une <a href="../../GML_Overview/Structs.htm">structure</a> contenant les variables suivantes :<br />
+          <br />
+         <span class="inline2">status</span> Le code d'état HTTP de la réponse<br />
          <span class="inline2">error</span> Une chaîne décrivant l'erreur
         </td>
       </tr>
@@ -61,18 +61,18 @@
       </tr>
       <tr>
         <td><span class="inline">rollback_chat_message</span></td>
-        <td>Déclenché lorsqu'un message de <a href="Rollback_Functions/rollback_chat.htm"><span class="inline">rollback_chat()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Send_Message.htm">Send Message</a> est reçu. Pendant cet événement, <span class="inline2">rollback_event_param</span> contiendra les variables suivantes :<br>
-          <br>
-         <span class="inline2">message</span>: La chaîne du message reçu<br>
-         <span class="inline2">from</span>: L'ID du joueur qui a envoyé le message<br>
+        <td>Déclenché lorsqu'un message de <a href="Rollback_Functions/rollback_chat.htm"><span class="inline">rollback_chat()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Send_Message.htm">Send Message</a> est reçu. Pendant cet événement, <span class="inline2">rollback_event_param</span> contiendra les variables suivantes :<br />
+          <br />
+         <span class="inline2">message</span>: La chaîne du message reçu<br />
+         <span class="inline2">from</span>: L'ID du joueur qui a envoyé le message<br />
          <span class="inline2">à</span>: L'ID du joueur auquel le message a été envoyé ; sera -1 si le message a été envoyé à tout le monde.
         </td>
       </tr>
       <tr>
         <td><span class="inline">rollback_player_prefs</span></td>
-        <td>Déclenché lorsqu'un joueur définit ses <a href="Rollback_Preferences.htm">préférences</a>. Lors de cet événement, <span class="inline2">rollback_event_param</span> contiendra les variables suivantes :<br>
-          <br>
-         <span class="inline2">player_id</span>: L'ID du joueur qui a défini ses préférences<br>
+        <td>Déclenché lorsqu'un joueur définit ses <a href="Rollback_Preferences.htm">préférences</a>. Lors de cet événement, <span class="inline2">rollback_event_param</span> contiendra les variables suivantes :<br />
+          <br />
+         <span class="inline2">player_id</span>: L'ID du joueur qui a défini ses préférences<br />
          <span class="inline2">préférences</span>: Les préférences définies pour ce joueur
         </td>
       </tr>
@@ -82,10 +82,10 @@
       </tr>
       <tr>
         <td><span class="inline">rollback_synchronizing_with_peer</span></td>
-        <td>Déclenché pendant que le joueur se synchronise avec un nouveau joueur. Pendant cet événement, <span class="inline2">rollback_event_param</span> contiendra les variables suivantes :<br>
-          <br>
-         <span class="inline2">player_id</span>: ID du joueur avec lequel vous vous synchronisez<br>
-         <span class="inline2">count</span>: Combien d'étapes de synchronisation ont été effectuées<br>
+        <td>Déclenché pendant que le joueur se synchronise avec un nouveau joueur. Pendant cet événement, <span class="inline2">rollback_event_param</span> contiendra les variables suivantes :<br />
+          <br />
+         <span class="inline2">player_id</span>: ID du joueur avec lequel vous vous synchronisez<br />
+         <span class="inline2">count</span>: Combien d'étapes de synchronisation ont été effectuées<br />
          <span class="inline2">total</span>: Combien d'étapes de synchronisation doivent être complétées au total ?
         </td>
       </tr>
@@ -99,9 +99,9 @@
       </tr>
       <tr>
         <td><span class="inline">rollback_game_interrupted</span></td>
-        <td>Déclenché lorsque le jeu est interrompu à cause d'un joueur dont la connexion est instable. Pendant cet événement, <span class="inline2">rollback_event_param</span> contiendra les variables suivantes :<br>
-          <br>
-         <span class="inline2">player_id</span>: ID du joueur ayant des problèmes de connexion<br>
+        <td>Déclenché lorsque le jeu est interrompu à cause d'un joueur dont la connexion est instable. Pendant cet événement, <span class="inline2">rollback_event_param</span> contiendra les variables suivantes :<br />
+          <br />
+         <span class="inline2">player_id</span>: ID du joueur ayant des problèmes de connexion<br />
          <span class="inline2">timeout</span>: Combien de temps il reste à ce joueur pour se déconnecter (en millisecondes). Après ce laps de temps, le joueur sera exclu et le jeu reprendra avec les joueurs restants.
         </td>
       </tr>
@@ -115,17 +115,17 @@
       </tr>
       <tr>
         <td><span class="inline">rollback_game_info</span></td>
-        <td>Déclenché lorsque des informations sur une salle sont reçues, mais avant qu'elle ne soit entièrement jointe.<br>
-          Pendant cet événement, <span class="inline2">rollback_event_param</span> contiendra les variables suivantes :<br>
-          <br>
-         <span class="inline2">num_players</span>: Le nombre total de joueurs dans la partie<br>
+        <td>Déclenché lorsque des informations sur une salle sont reçues, mais avant qu'elle ne soit entièrement jointe.<br />
+          Pendant cet événement, <span class="inline2">rollback_event_param</span> contiendra les variables suivantes :<br />
+          <br />
+         <span class="inline2">num_players</span>: Le nombre total de joueurs dans la partie<br />
          <span class="inline2">player_id</span>: L'ID du joueur local (commençant à 0)
         </td>
       </tr>
       <tr>
         <td><span class="inline">rollback_connect_info</span></td>
-        <td>Déclenché lorsqu'une salle a été créée et est prête à être partagée avec d'autres joueurs. L'URL à partager est stockée dans <span class="inline2">rollback_event_param.share_url</span>.<br>
-          <br>
+        <td>Déclenché lorsqu'une salle a été créée et est prête à être partagée avec d'autres joueurs. L'URL à partager est stockée dans <span class="inline2">rollback_event_param.share_url</span>.<br />
+          <br />
           Vous pouvez copier cette URL automatiquement lorsqu'elle devient disponible en appelant <span class="inline"><a href="../Strings/clipboard_set_text.htm">clipboard_set_text()</a></span>.
         </td>
       </tr>

@@ -15,10 +15,10 @@
 </head>
 <body>
   <h1>Créer un jeu multi-joueurs</h1>
-  <p class="note">Cette page vous présente les étapes détaillées de la création de votre premier jeu multi-joueurs.<br>
-    <br>
-    Pour plus d'informations sur le système Rollback, lisez <a data-xref="{title}" href="Rollback_System.htm">Système Rollback</a>.<br>
-    <br>
+  <p class="note">Cette page vous présente les étapes détaillées de la création de votre premier jeu multi-joueurs.<br />
+    <br />
+    Pour plus d'informations sur le système Rollback, lisez <a data-xref="{title}" href="Rollback_System.htm">Système Rollback</a>.<br />
+    <br />
     Pour plus de détails sur toutes les fonctions de Rollback, lisez <a data-xref="{title}" href="Rollback_Functions/Rollback_Functions.htm">Fonctions de Rollback</a>.
   </p>
   <h2>Mise en place du projet</h2>
@@ -26,8 +26,8 @@
   <p>Créez deux objets :</p>
   <ul class="colour">
     <li><strong>obj_game</strong>: Ceci gérera votre jeu multi-joueurs.</li>
-    <li><strong>obj_player</strong>: Il s'agit de votre objet joueur. Chaque joueur connecté aura sa propre instance de cet objet qu'il pourra contrôler.<br>
-      <br>
+    <li><strong>obj_player</strong>: Il s'agit de votre objet joueur. Chaque joueur connecté aura sa propre instance de cet objet qu'il pourra contrôler.<br />
+      <br />
       Assignez votre joueur <span class="notranslate">sprite</span> à l'objet joueur.
     </li>
   </ul>
@@ -53,8 +53,8 @@
   <h2>Les joueurs en mouvement</h2>
   <p>La saisie est gérée par le système Rollback et synchronisée automatiquement entre les joueurs.</p>
   <p>Dans votre objet lecteur, appelez <span class="inline"><a href="Rollback_Functions/rollback_get_input.htm">rollback_get_input()</a></span> pour obtenir un <span class="notranslate">struct</span> contenant toutes les entrées par défaut, qui sont les suivantes :</p>
-  <p class="note"><span class="inline"><strong>left</strong>, <strong>right</strong>, <strong>up</strong>, <strong>down</strong>, <strong>Z</strong>, <strong>X</strong>, <strong>C</strong>, <strong>space</strong></span><br>
-    <br>
+  <p class="note"><span class="inline"><strong>left</strong>, <strong>right</strong>, <strong>up</strong>, <strong>down</strong>, <strong>Z</strong>, <strong>X</strong>, <strong>C</strong>, <strong>space</strong></span><br />
+    <br />
     <em>Ils indiquent si la clé est maintenue.</em> <span class="inline">*<strong>_pressed</strong></span> <em>et </em><span class="inline">*<strong>_released</strong></span> <em>sont également fournies.</em>
   </p>
   <p>Pour définir vos propres entrées, voir <a data-xref="{title}" href="Defining_Inputs.htm">Définir les entrées</a>.</p>

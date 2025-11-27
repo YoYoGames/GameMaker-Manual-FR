@@ -55,7 +55,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     L'utilisation qui sera faite de ces constantes doit également être définie afin que les valeurs puissent être &quot;liées&quot; correctement dans le site <span class="notranslate">shader</span> en cours de création. Ceci est nécessaire car DX et OpenGL ont des exigences différentes et si vous ne les liez pas correctement, elles n'apparaîtront pas correctement sur le site <span class="notranslate">shader</span>. Les constantes d'utilisation que vous pouvez choisir sont listées ci-dessous et celles que vous utiliserez dépendront des spécificités du site <span class="notranslate">shader</span> en cours de création :</p>
   <table>
     <colgroup>
@@ -116,7 +116,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Il y a quelques points importants à noter lors de l'utilisation de formats personnalisés comme ceux-ci :</p>
   <ul class="colour">
     <li>La fonction <span class="inline">vertex_format_add_custom()</span> ne prend en charge que <span class="inline">vertex_usage_position</span>, <span class="inline">vertex_usage_colour</span>, <span class="inline">vertex_usage_normal</span> et <span class="inline">vertex_usage_textcoord</span> lorsque vous utilisez GLSL <span class="notranslate">shaders</span>. Ces attributs correspondent respectivement aux attributs <span class="inline">in_Position</span>, <span class="inline">in_Colour[0 - ...]</span>, <span class="inline">in_Normal</span> de <span class="notranslate">shader</span> (tout ce qui n'est pas l'un de ces trois attributs - par exemple, les coordonnées de la texture - peut correspondre à n'importe quel attribut que vous définissez).</li>
