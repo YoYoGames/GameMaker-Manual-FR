@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>nouveau</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>new</title>
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -14,24 +14,24 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>nouveau</h1>
-  <p>L'opérateur <span class="inline">new</span> peut être utilisé pour créer une <span class="notranslate">struct</span> avec une fonction qui est appelée avec les arguments donnés. La fonction peut alors remplir le <span class="notranslate">struct</span> avec les variables des arguments - de la même manière que l'événement de création d'une instance définira les variables initiales de l'instance - puis l'opérateur <span class="inline">new</span> retournera le <span class="notranslate">struct</span>. Avant d'utiliser cet opérateur, il est important de noter que la fonction donnée <i>doit être marquée comme une fonction <span class="inline">constructor</span> </i>, sinon l'opérateur <span class="inline">new</span> ne créera pas le <span class="notranslate">struct</span> (l'exemple de code ci-dessous le montre, et pour plus d'informations, veuillez consulter la page sur les <a href="../Structs.htm">Structs</a>).</p>
+  <h1><span data-field="title" data-format="default">new</span></h1>
+  <p>L&#39;opérateur <span class="inline">new</span> peut être utilisé pour créer une <span class="notranslate">struct</span> avec une fonction qui est appelée avec les arguments donnés. La fonction peut alors remplir le <span class="notranslate">struct</span> avec les variables des arguments - de la même manière que l&#39;événement de création d&#39;une instance définira les variables initiales de l&#39;instance - puis l&#39;opérateur <span class="inline">new</span> retournera le <span class="notranslate">struct</span>. Avant d&#39;utiliser cet opérateur, il est important de noter que la fonction donnée <i>doit être marquée comme une fonction <span class="inline">constructor</span> </i>, sinon l&#39;opérateur <span class="inline">new</span> ne créera pas le <span class="notranslate">struct</span> (l&#39;exemple de code ci-dessous le montre, et pour plus d&#39;informations, veuillez consulter la page sur les <a href="../Structs.htm">Structs</a>).</p>
   <p class="note"><span class="note">NOTE</span> Vous pouvez vérifier un <span class="notranslate">struct</span> pour savoir quelle fonction a été utilisée pour le créer en utilisant la fonction <span class="notranslate">runtime</span> <a href="../../GML_Reference/Variable_Functions/instanceof.htm"><span class="inline">instanceof()</span></a>.</p>
   <p>Cet opérateur a la syntaxe suivante :</p>
   <p class="code"><span>&lt;variable&gt; = </span>new &lt;function&gt; (&lt;argument&gt;, &lt;argument&gt;, ...);</p>
-  <p> <span class="notranslate">struct</span> Lorsque vous utilisez l'opérateur new avec une fonction, celle-ci renvoie une référence à <span class="notranslate">access</span> qui est stockée dans la variable donnée, ce qui vous permet d'accéder à <span class="notranslate">struct</span> et à toutes les variables qui y ont été créées par la fonction.</p>
-  <p>L'exemple suivant montre une fonction qui a été définie pour être utilisée comme constructeur :</p>
+  <p><span class="notranslate">struct</span> Lorsque vous utilisez l&#39;opérateur new avec une fonction, celle-ci renvoie une référence à <span class="notranslate">access</span> qui est stockée dans la variable donnée, ce qui vous permet d&#39;accéder à <span class="notranslate">struct</span> et à toutes les variables qui y ont été créées par la fonction.</p>
+  <p>L&#39;exemple suivant montre une fonction qui a été définie pour être utilisée comme constructeur :</p>
   <p class="code">function init_struct(_a, _b, _c) constructor<br />
     {<br />
         a = _a;<br />
         b = _b;<br />
         c = _c;<br />
     }</p>
-  <p>Cette fonction peut ensuite être utilisée avec l'opérateur <span class="inline">new</span> pour créer un <span class="notranslate">struct</span> et le remplir avec les variables définies par les valeurs des arguments utilisés dans la fonction, comme ceci :</p>
+  <p>Cette fonction peut ensuite être utilisée avec l&#39;opérateur <span class="inline">new</span> pour créer un <span class="notranslate">struct</span> et le remplir avec les variables définies par les valeurs des arguments utilisés dans la fonction, comme ceci :</p>
   <p class="code">mystruct = new init_struct(10, 100, &quot;Hello World&quot;);</p>
-  <p>Il est important de noter que l'appel de new sur une fonction qui <em>n'a pas</em> été marquée comme un constructeur provoquera une <a href="../../../Additional_Information/Errors/Runner_Errors.htm">exception d'exécution</a>.</p>
-  <p> </p>
-  <p> </p>
+  <p>Il est important de noter que l&#39;appel de new sur une fonction qui <em>n&#39;a pas</em> été marquée comme un constructeur provoquera une <a href="../../../Additional_Information/Errors/Runner_Errors.htm">exception d&#39;exécution</a>.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -39,7 +39,7 @@
         <div style="float:right">Suivant : <a href="delete.htm"><span class="notranslate">delete</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 new
