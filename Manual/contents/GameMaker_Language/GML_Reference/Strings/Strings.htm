@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Cordes</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -15,17 +15,17 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Cordes</h1>
-  <p>À un moment ou à un autre de la création de votre jeu, vous aurez besoin d'utiliser du texte. Dans les jeux, le texte est traité à l'aide des fonctions de <b>chaîne de caractères</b> (une chaîne de caractères est une autre façon de dire une ligne de texte) et <span data-keyref="GameMaker Name">GameMaker</span> possède un ensemble complet de fonctions qui vous permettent de manipuler les chaînes de caractères de nombreuses façons, y compris l'insertion d'une chaîne de caractères dans une autre, la copie de chaînes de caractères et la possibilité d'analyser les chaînes de caractères pour trouver les chiffres ou les lettres qu'elles contiennent. En général, une chaîne <i>ne</i> peut être créée <i>qu'</i> en ajoutant du texte entre guillemets doubles &quot; &quot; et les <em>chaînes entre guillemets simples ne sont pas acceptées</em>. Vous ne pouvez pas non plus diviser la chaîne sur plusieurs lignes et attendre de <span data-keyref="GameMaker Name">GameMaker</span> qu'il la rende comme si les sauts de ligne étaient des nouvelles lignes (à moins d'utiliser un identificateur de <strong>chaîne littérale</strong> <span class="inline">@</span>, comme expliqué ci-dessous).</p>
-  <p>Il convient de noter qu'il existe certaines conventions que vous pouvez utiliser lors de la création de chaînes de caractères, principalement en ce qui concerne l'utilisation des <i>caractères d'échappement</i>. Il s'agit de caractères précédés du symbole &quot;<span class="inline">\</span>&quot;. Ainsi, par exemple, si vous vouliez mettre des guillemets dans une chaîne de caractères, vous auriez quelque chose comme ceci :</p>
+  <p>À un moment ou à un autre de la création de votre jeu, vous aurez besoin d&#39;utiliser du texte. Dans les jeux, le texte est traité à l&#39;aide des fonctions de <b>chaîne de caractères</b> (une chaîne de caractères est une autre façon de dire une ligne de texte) et <span data-keyref="GameMaker Name">GameMaker</span> possède un ensemble complet de fonctions qui vous permettent de manipuler les chaînes de caractères de nombreuses façons, y compris l&#39;insertion d&#39;une chaîne de caractères dans une autre, la copie de chaînes de caractères et la possibilité d&#39;analyser les chaînes de caractères pour trouver les chiffres ou les lettres qu&#39;elles contiennent. En général, une chaîne <i>ne</i> peut être créée <i>qu&#39;</i> en ajoutant du texte entre guillemets doubles &quot; &quot; et les <em>chaînes entre guillemets simples ne sont pas acceptées</em>. Vous ne pouvez pas non plus diviser la chaîne sur plusieurs lignes et attendre de <span data-keyref="GameMaker Name">GameMaker</span> qu&#39;il la rende comme si les sauts de ligne étaient des nouvelles lignes (à moins d&#39;utiliser un identificateur de <strong>chaîne littérale</strong> <span class="inline">@</span>, comme expliqué ci-dessous).</p>
+  <p>Il convient de noter qu&#39;il existe certaines conventions que vous pouvez utiliser lors de la création de chaînes de caractères, principalement en ce qui concerne l&#39;utilisation des <i>caractères d&#39;échappement</i>. Il s&#39;agit de caractères précédés du symbole &quot;<span class="inline">\</span>&quot;. Ainsi, par exemple, si vous vouliez mettre des guillemets dans une chaîne de caractères, vous auriez quelque chose comme ceci :</p>
   <p class="code">str = &quot;Hello\&quot;World\&quot;&quot;;</p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> prend également en charge les caractères Unicode sur quatre octets, ce qui vous permet de décoder et de coder les caractères Unicode dans les limites supérieures de la norme (y compris, mais sans s'y limiter, les emoji). Pour traiter les caractères Unicode, vous pouvez utiliser le &quot;<span class="inline">\</span>&quot; pour précéder tout littéral Unicode - des chiffres hexadécimaux précédés d'un &quot;<span class="inline">u</span>&quot;, par exemple &quot;<span class="inline"><span class="inline">\u00e2</span>&quot; pour &quot; á &quot; - où les chiffres sont le numéro du caractère Unicode. Lorsque vous travaillez avec Unicode de cette manière, vous devez être conscient du fait que <span data-keyref="GameMaker Name">GameMaker</span> interprétera <i>tous les</i> chiffres suivant le &quot;<span class="inline">u</span>&quot;, donc si vous voulez écrire &quot; áa &quot; par exemple, vous devez utiliser :</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> prend également en charge les caractères Unicode sur quatre octets, ce qui vous permet de décoder et de coder les caractères Unicode dans les limites supérieures de la norme (y compris, mais sans s&#39;y limiter, les emoji). Pour traiter les caractères Unicode, vous pouvez utiliser le &quot;<span class="inline">\</span>&quot; pour précéder tout littéral Unicode - des chiffres hexadécimaux précédés d&#39;un &quot;<span class="inline">u</span>&quot;, par exemple &quot;<span class="inline">\u00e2</span>&quot; pour &quot; á &quot; - où les chiffres sont le numéro du caractère Unicode. Lorsque vous travaillez avec Unicode de cette manière, vous devez être conscient du fait que <span data-keyref="GameMaker Name">GameMaker</span> interprétera <i>tous les</i> chiffres suivant le &quot;<span class="inline">u</span>&quot;, donc si vous voulez écrire &quot; áa &quot; par exemple, vous devez utiliser :</p>
   <p class="code">&quot;\u00e2\a&quot;</p>
   <p>ou</p>
   <p class="code">&quot;\u00e2\u61&quot;</p>
   <p>ou</p>
   <p class="code">&quot;\u00e2&quot; + &quot;a&quot;</p>
-  <p>car le simple fait d'utiliser &quot;<span class="inline">\u00e2a</span>&quot; donnerait en fait le caractère Unicode &quot;<span class="inline">ส</span>&quot; (qui devient essentiellement &quot;<span class="inline">\ue2a</span>&quot;).<i></i></p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> peut également traiter n'importe quel littéral hexadécimal - normalement écrit sous forme de chiffres hexadécimaux à la suite de &quot;<span class="inline">0x</span>&quot;, par exemple &quot;<span class="inline">0xff</span>&quot;, où les chiffres correspondent au numéro du caractère à utiliser. Dans <span data-keyref="GameMaker Name">GameMaker</span>, ces caractères sont écrits en utilisant &quot;<span class="inline">\x</span>&quot;, puis la valeur hexadécimale. Ces caractères d'échappement et d'autres caractères prédéfinis sont répertoriés dans le tableau ci-dessous :</p>
+  <p>car le simple fait d&#39;utiliser &quot;<span class="inline">\u00e2a</span>&quot; donnerait en fait le caractère Unicode &quot;<span class="inline">ส</span>&quot; (qui devient essentiellement &quot;<span class="inline">\ue2a</span>&quot;).<i></i></p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> peut également traiter n&#39;importe quel littéral hexadécimal - normalement écrit sous forme de chiffres hexadécimaux à la suite de &quot;<span class="inline">0x</span>&quot;, par exemple &quot;<span class="inline">0xff</span>&quot;, où les chiffres correspondent au numéro du caractère à utiliser. Dans <span data-keyref="GameMaker Name">GameMaker</span>, ces caractères sont écrits en utilisant &quot;<span class="inline">\x</span>&quot;, puis la valeur hexadécimale. Ces caractères d&#39;échappement et d&#39;autres caractères prédéfinis sont répertoriés dans le tableau ci-dessous :</p>
   <table>
     <tbody>
       <tr>
@@ -85,15 +85,14 @@
     over multiple<br />
     lines<br />
     &quot;;</p>
-  <p>Le code ci-dessus rendra la chaîne sur plusieurs lignes comme s'il y avait un caractère d'échappement de saut de ligne inclus. Une chaîne littérale verbatim est similaire aux chaînes littérales de la version précédente <span class="notranslate">GameMaker</span>, mais elle utilise également des guillemets doubles ou simples et doit être préfixée par un symbole <span class="inline">@</span>. Elle peut être interrompue sur plusieurs lignes dans le fichier de code et ne prend PAS en charge les caractères échappés, c'est-à-dire que <span class="inline">@&quot;Hello\World&quot;</span> <em>n'</em> essaiera <em>pas</em> d'échapper le W de World et sera stockée verbatim. Notez cependant que lorsque vous utilisez des chaînes littérales comme celle-ci, vous devrez rompre la chaîne si vous souhaitez inclure des guillemets dans la chaîne, par exemple :</p>
+  <p>Le code ci-dessus rendra la chaîne sur plusieurs lignes comme s&#39;il y avait un caractère d&#39;échappement de saut de ligne inclus. Une chaîne littérale verbatim est similaire aux chaînes littérales de la version précédente <span class="notranslate">GameMaker</span>, mais elle utilise également des guillemets doubles ou simples et doit être préfixée par un symbole <span class="inline">@</span>. Elle peut être interrompue sur plusieurs lignes dans le fichier de code et ne prend PAS en charge les caractères échappés, c&#39;est-à-dire que <span class="inline">@&quot;Hello\World&quot;</span> <em>n&#39;</em> essaiera <em>pas</em> d&#39;échapper le W de World et sera stockée verbatim. Notez cependant que lorsque vous utilisez des chaînes littérales comme celle-ci, vous devrez rompre la chaîne si vous souhaitez inclure des guillemets dans la chaîne, par exemple :</p>
   <p class="code">var test = @&quot;Hello &quot; + &quot;\&quot;&quot; + @&quot;World&quot; + &quot;\&quot;&quot;</p>
-  <p>Une autre chose à noter est que le caractère Unicode 9647 (▯) est utilisé pour substituer tout glyphe manquant que vous pourriez avoir dans votre police désignée lors du rendu dans l'événement draw. Ainsi, si votre police ne possède pas, par exemple, le symbole °, l'écriture de 90° produira en fait 90▯.</p>
+  <p>Une autre chose à noter est que le caractère Unicode 9647 (▯) est utilisé pour substituer tout glyphe manquant que vous pourriez avoir dans votre police désignée lors du rendu dans l&#39;événement draw. Ainsi, si votre police ne possède pas, par exemple, le symbole °, l&#39;écriture de 90° produira en fait 90▯.</p>
   <p>La liste suivante de fonctions permet de traiter les chaînes de caractères :</p>
   <ul class="colour">
     <li><a href="ansi_char.htm"><span class="notranslate">ansi_char</span></a></li>
     <li><a href="chr.htm"><span class="notranslate">chr</span></a></li>
     <li><a href="ord.htm"><span class="notranslate">ord</span></a></li>
-    <li><a href="real.htm"><span class="notranslate">real</span></a></li>
     <li><a href="string.htm"><span class="notranslate">string</span></a></li>
     <li><a href="string_byte_at.htm"><span class="notranslate">string_byte_at</span></a></li>
     <li><a href="string_byte_length.htm"><span class="notranslate">string_byte_length</span></a></li>
@@ -125,16 +124,16 @@
     <li><a href="string_hash_to_newline.htm"><span class="notranslate">string_hash_to_newline</span></a></li>
     <li><a href="../Variable_Functions/is_string.htm"><span class="notranslate">is_string</span></a></li>
   </ul>
-  <p> </p>
+  <p> </p>
   <p>Outre les fonctions qui se rapportent spécifiquement aux chaînes de caractères, certaines cibles vous donnent également accès à <span class="notranslate">access</span> au presse-papiers pour obtenir et définir des informations textuelles :</p>
   <ul class="colour">
     <li><a href="clipboard_has_text.htm"><span class="notranslate">clipboard_has_text</span></a></li>
     <li><a href="clipboard_get_text.htm"><span class="notranslate">clipboard_get_text</span></a></li>
     <li><a href="clipboard_set_text.htm"><span class="notranslate">clipboard_set_text</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -142,7 +141,7 @@
         <div style="float:right">Suivant : <a href="../Maths_And_Numbers/Maths_And_Numbers.htm">Maths et nombres</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Strings
