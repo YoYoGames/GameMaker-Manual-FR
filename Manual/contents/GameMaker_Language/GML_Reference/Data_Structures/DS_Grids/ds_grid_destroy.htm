@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_grid_destroy</h1>
+  <h1><span data-field="title" data-format="default">ds_grid_destroy</span></h1>
   <p>Cette fonction supprime de la mémoire la structure de données de la grille donnée, libérant les ressources qu'elle utilisait et supprimant toutes les valeurs qu'elle contenait. Cette fonction doit toujours être utilisée lorsque vous avez fini d'utiliser la grille DS pour éviter les fuites de mémoire qui peuvent ralentir et faire planter votre jeu.</p>
   <p class="note"><b>IMPORTANT !</b> Lorsque vous créez une structure de données, la valeur de l'index pour l'identifier est une valeur entière commençant à 0. Cela signifie que des structures de données de différents types peuvent avoir la <b>même</b> valeur d'index, donc en cas de doute vous devriez utiliser la fonction <span style="font-size:1px;"><a href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span> avant d'y accéder. Notez également que les indices sont réutilisés, de sorte qu'une valeur d'indice de structure de données détruite peut être utilisée par une structure nouvellement créée par la suite ; nous recommandons donc de toujours définir la variable qui contenait l'indice DS à -1 après la destruction.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">ds_grid_destroy(index);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_grid_destroy</span>(index);</p>
   <table>
     <tbody>
       <tr>

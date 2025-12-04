@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>matrix_build_lookat</h1>
+  <h1><span data-field="title" data-format="default">matrix_build_lookat</span></h1>
   <p>Cette fonction construit une matrice d'observation (vue) basée sur les paramètres spécifiés ci-dessous. Puisque cette fonction modifie la matrice de vue et non la matrice de projection, vous devez d'abord initialiser la matrice de projection en utilisant l'autre fonction de matrice <a href="matrix_build_projection_perspective.htm"><span class="inline">matrix_build_projection_perspective()</span></a>puis utiliser cette fonction pour déplacer la caméra de vue dans la projection.</p>
   <p>Pour définir la vue, vous devez d'abord définir la position <i>depuis laquelle</i> vous regardez, ce qui est indiqué par les paramètres (xfrom, yfrom, zfrom). Ensuite, vous devez préciser la direction vers <i>laquelle</i> vous regardez, ce qui est fait en donnant un deuxième point vers lequel regarder avec les arguments (xto, yto, zto). Enfin, vous pouvez toujours faire tourner la caméra autour de la ligne allant du point de vue au point de regard, et pour spécifier cela, nous devons donner un vecteur &quot;up&quot; - la direction qui est vers le haut dans la caméra. Ceci est donné par les trois derniers arguments (xup, yup, zup).</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">matrix_build_lookat(xfrom, yfrom, zfrom, xto, yto, zto, xup, yup, zup);</p>
+  <p class="code"><span data-field="title" data-format="default">matrix_build_lookat</span>(xfrom, yfrom, zfrom, xto, yto, zto, xup, yup, zup);</p>
   <table>
     <tbody>
       <tr>

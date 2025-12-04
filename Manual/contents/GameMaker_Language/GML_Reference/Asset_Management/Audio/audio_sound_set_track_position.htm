@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_sound_set_track_position</h1>
+  <h1><span data-field="title" data-format="default">audio_sound_set_track_position</span></h1>
   <p>Cette fonction permet de définir la position (en secondes) pour l'ID sonore ou le poste donné.</p>
   <p>L'&quot;index&quot; fourni peut être soit une instance unique d'un son (tel que retourné à partir de <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a>) ou un actif sonore (par exemple, un actif ajouté via le navigateur d'actifs). Le comportement de cette fonction sera différent selon le type d'index que vous avez spécifié :</p>
   <ul class="colour">
@@ -24,7 +24,7 @@
   <p>Cette fonction modifie uniquement la position de la piste pour le son en cours de lecture, ou pour sa prochaine lecture (si un actif sonore est fourni). Si le son est lu avec le bouclage activé, les lectures suivantes commenceront toujours à partir du début (0,0 seconde), <em>et non</em> à partir de la position de la piste définie à l'aide de cette fonction. Par exemple, si vous démarrez une boucle sonore à 5,7 secondes, le premier son sera lu à partir de ce point, mais après cela, il continuera à répéter la piste entière, du début à la fin.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">audio_sound_set_track_position(index, time);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_sound_set_track_position</span>(index, time);</p>
   <table>
     <tbody>
       <tr>

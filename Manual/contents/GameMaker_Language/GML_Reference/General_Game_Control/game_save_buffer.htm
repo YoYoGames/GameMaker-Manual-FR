@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>tampon_sauvegarde_jeu</title>
+  <title>game_save_buffer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tampon_sauvegarde_jeu</h1>
+  <h1><span data-field="title" data-format="default">game_save_buffer</span></h1>
   <p>Il s'agit d'une variante de la fonction <span class="inline"><a href="game_save.htm">game_save()</a></span>. Veuillez donc d'abord lire <a href="game_save.htm">sa page</a> car elle contient des informations importantes relatives à son utilisation et à celle de cette fonction.</p>
   <p>Avec cette fonction, vous pouvez sauvegarder l'état actuel du jeu dans un &quot;grow&quot; <span class="notranslate">buffer</span> créé au préalable (voir <a href="../Buffers/Buffers.htm">Buffers</a>) qui peut ensuite être rechargé à tout moment en utilisant la fonction <a href="game_load_buffer.htm"><span class="inline">game_load_buffer()</span></a> fonction. Cette fonction est conçue pour être utilisée dans une seule pièce à la fois (c'est-à-dire qu'il n'est pas conseillé de faire une sauvegarde de <span class="notranslate">buffer</span> dans une pièce, puis d'essayer de charger le <span class="notranslate">buffer</span> depuis une autre pièce) et ne devrait idéalement être utilisée que pour les points de contrôle ou les redémarrages de niveau.</p>
   <p class="note"><b>REMARQUE</b>: Cette fonction est <i>très</i> limitée et est conçue pour les débutants qui souhaitent mettre en place un système de points de contrôle rapidement, mais les utilisateurs plus avancés préféreront peut-être coder leur propre système en utilisant les fonctions du <a href="../File_Handling/File_Handling.htm">fichier</a>, car le jeu <i>ne</i> sauvegardera <i>pas</i> les ressources dynamiques telles que les structures de données, les surfaces, les ajouts à <span class="notranslate">sprites</span>, etc.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">game_save_buffer(buffer);</p>
+  <p class="code"><span data-field="title" data-format="default">game_save_buffer</span>(buffer);</p>
   <table>
     <tbody>
       <tr>

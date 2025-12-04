@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>variable_struct_get</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>struct_get</title>
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -15,53 +15,56 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>variable_struct_get</h1>
-  <p>Avec cette fonction, vous pouvez obtenir la valeur d'une variable nommée donnée dans un <span class="notranslate">struct</span>. Vous fournissez la référence <span class="notranslate">struct</span> ainsi que le nom de la variable dont vous voulez obtenir la valeur <i>sous forme de chaîne</i> (voir l'exemple de code ci-dessous). La fonction renvoie la valeur détenue par la variable ou <span class="inline">undefined</span> si la variable nommée n'existe pas.<b></b></p>
-  <p class="note"><b>IMPORTANT !</b> Si la variable que vous obtenez n'existe pas, la fonction renverra le mot clé <span class="inline">undefined</span> et vous risquez d'obtenir des erreurs qui empêcheront le jeu de fonctionner, donc en cas de doute, utilisez d'abord la fonction <a href="variable_struct_exists.htm"><span class="inline">variable_struct_exists()</span></a> d'abord.</p>
-  <p> </p>
+  <h1><span data-field="title" data-format="default">struct_get</span></h1>
+  <p>Avec cette fonction, vous pouvez obtenir la valeur d&#39;une variable nommée donnée dans un <span class="notranslate">struct</span>. Vous fournissez la référence <span class="notranslate">struct</span> ainsi que le nom de la variable dont vous voulez obtenir la valeur <i>sous forme de chaîne</i> (voir l&#39;exemple de code ci-dessous). La fonction renvoie la valeur détenue par la variable ou <span class="inline">undefined</span> si la variable nommée n&#39;existe pas.<b></b></p>
+  <p class="note"><b>IMPORTANT !</b> Si la variable que vous obtenez n&#39;existe pas, la fonction renverra le mot clé <span class="inline">undefined</span> et vous risquez d&#39;obtenir des erreurs qui empêcheront le jeu de fonctionner, donc en cas de doute, utilisez d&#39;abord la fonction <a href="variable_struct_exists.htm"><span class="inline">struct_exists()</span></a>.</p>
+  <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">variable_struct_get(struct, name);</p>
+  <p class="code"><span data-field="title" data-format="default">struct_get</span>(struct, name)</p>
   <table>
     <tbody>
       <tr>
-        <th>Arguments</th><th>Type</th>
+        <th>Arguments</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">struct</span></td><td><span data-keyref="Type_Struct"></span></td>
+        <td><span class="notranslate">struct</span></td>
+        <td><span data-keyref="Type_Struct"><a href="../../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span></td>
         <td><span class="notranslate">The struct reference to use</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">name</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">name</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
         <td><span class="notranslate">The name of the variable to get (as a string)</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <h4>Les retours :</h4>
-  <p class="code"><span data-keyref="Type_Any">Variable</span> (any data type) or <span data-keyref="Type_Undefined">undefined</span> (if the named variable does not exist)<span class="inline"></span></p>
-  <p> </p>
+  <p class="code"><span data-keyref="Type_Any"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Any</a></span> (any data type) or <span data-keyref="Type_Undefined"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">undefined</a></span> (if the named variable does not exist)<span class="inline"></span></p>
+  <p> </p>
   <h4>Exemple :</h4>
-  <p class="code">if variable_struct_exists(mystruct, &quot;shields&quot;)<br />
+  <p class="code">if struct_exists(mystruct, &quot;shields&quot;)<br />
     {<br />
-        var ss = variable_struct_get(mystruct, &quot;shields&quot;);<br />
+        var ss = struct_get(mystruct, &quot;shields&quot;);<br />
     }<br />
     else<br />
     {<br />
         var ss = -1;<br />
     }</p>
-  <p>Le code ci-dessus vérifie si une variable existe dans le site <span class="notranslate">struct</span>. Si c'est le cas, la valeur qu'elle contient est récupérée et stockée dans une variable locale. Si elle n'existe pas, la variable locale prend la valeur -1.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifie si une variable existe dans le site <span class="notranslate">struct</span>. Si c&#39;est le cas, la valeur qu&#39;elle contient est récupérée et stockée dans une variable locale. Si elle n&#39;existe pas, la variable locale prend la valeur -1.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Retour : <a href="Variable_Functions.htm">Fonctions variables</a></div>
-        <div style="float:right">Suivant : <a href="variable_struct_set.htm"><span class="notranslate">variable_struct_set</span></a></div>
+        <div style="float:left">Retour : <a data-xref="{title}" href="Variable_Functions.htm">Fonctions variables</a></div>
+        <div style="float:right">Suivant : <a data-xref="{title}" href="variable_struct_set.htm">struct_set</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 variable_struct_get

@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_get_info</h1>
+  <h1><span data-field="title" data-format="default">font_get_info</span></h1>
   <p>Cette fonction est utilisée pour récupérer des informations sur une police donnée. Vous fournissez un index de police (qui peut être un actif ajouté via le <a href="../../../../Introduction/The_Asset_Browser.htm">navigateur d'actifs</a> ou une police <a href="font_add.htm">ajoutée</a> sur <span class="notranslate">runtime</span>) et la fonction renvoie une <a href="../../../GML_Overview/Structs.htm">structure</a> avec les variables suivantes :</p>
   <table>
     <colgroup>
@@ -117,8 +117,8 @@
       <tr>
         <td><span class="inline">char</span></td>
         <td style="">réel</td>
-        <td style="">Si la police a été créée à partir d'un <span class="notranslate">sprite</span>, il s'agira de l'index de l'image du glyphe de ce <span class="notranslate">sprite</span>, sinon ce sera son numéro de caractère Unicode.<br>
-          <br>
+        <td style="">Si la police a été créée à partir d'un <span class="notranslate">sprite</span>, il s'agira de l'index de l'image du glyphe de ce <span class="notranslate">sprite</span>, sinon ce sera son numéro de caractère Unicode.<br />
+          <br />
          <em><strong>Remarque</strong>: Toutes les variables inférieures à cette valeur ne seront pas présentes sur le site <span class="notranslate">struct</span> si la police a été créée à partir d'un sprite</em>.
         </td>
       </tr>
@@ -167,7 +167,7 @@
   <p class="note"><span class="note">REMARQUE</span>: pour les polices de fichiers chargées à l'adresse <span class="notranslate">runtime</span>, les valeurs <span class="inline">x</span> et <span class="inline">y</span> d'un glyphe peuvent être égales à -1 s'il n'a pas encore été rendu, car il n'aura pas de position sur la page de texture utilisée pour la mise en cache.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">font_get_info(font);</p>
+  <p class="code"><span data-field="title" data-format="default">font_get_info</span>(font);</p>
   <table>
     <tbody>
       <tr>

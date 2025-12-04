@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_potential_settings</h1>
+  <h1><span data-field="title" data-format="default">mp_potential_settings</span></h1>
   <p>Les fonctions de <span class="inline">mp_potential_</span> font leur travail en utilisant un certain nombre de paramètres qui peuvent être modifiés à l'aide de cette fonction. Globalement, la méthode fonctionne de la manière suivante : elle essaie d'abord de se déplacer en ligne droite vers le but, en regardant un certain nombre de pas en avant qui peut être défini avec le paramètre &quot;ahead&quot; (la valeur par défaut est 3). Réduire cette valeur signifie que l'instance commencera à changer de direction plus tard car elle ne &quot;voit&quot; pas aussi loin devant elle, et l'augmenter signifie qu'elle commencera à changer de direction plus tôt. Si cette vérification conduit à une collision, l'instance commence à regarder des directions plus à gauche et à droite de la direction idéale, en ligne droite. Il fait cela par étapes de taille &quot;rotstep&quot; (la valeur par défaut est 10), et réduire cette valeur donne à l'instance plus de possibilités de mouvement mais sera plus lent car il a besoin de plus de puissance de traitement.</p>
   <p>Le paramètre &quot;maxrot&quot; est un peu plus difficile à expliquer ! L'instance a une direction de mouvement actuelle, et maxrot (la valeur par défaut est 30) indique de combien elle est autorisée à varier sa direction de part et d'autre de cette direction actuelle en un pas. Ainsi, même si elle peut se déplacer, par exemple, directement vers le but, elle ne le fera que si elle ne viole pas ce changement de direction maximal. Si vous donnez à maxrot une valeur élevée, l'instance pourra changer de direction à chaque pas, ce qui facilitera la recherche d'un chemin court, mais le chemin sera plus laid et moins naturel. Si vous donnez une valeur plus petite à maxrot, le chemin sera plus lisse mais il pourra prendre des détours plus longs (et parfois même ne pas trouver le but). Enfin, quand aucun pas ne peut être fait, le comportement dépend de la valeur du paramètre &quot;onspot&quot;. Si onspot est vrai (la valeur par défaut), alors l'instance tournera sur son spot de la quantité indiquée par &quot;maxrot&quot; et s'il est faux, elle ne bougera pas du tout. La valeur "false" est utile pour les voitures par exemple, mais réduit les chances de l'instance de trouver un chemin.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">mp_potential_settings(maxrot, rotstep, ahead, onspot)</p>
+  <p class="code"><span data-field="title" data-format="default">mp_potential_settings</span>(maxrot, rotstep, ahead, onspot)</p>
   <table>
     <tbody>
       <tr>

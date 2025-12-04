@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_priority_destroy</h1>
+  <h1><span data-field="title" data-format="default">ds_priority_destroy</span></h1>
   <p>Cette fonction supprime de la mémoire la structure de données de la file d'attente prioritaire, libérant les ressources qu'elle utilisait et supprimant toutes les valeurs qu'elle contenait. Cette fonction doit toujours être utilisée lorsque vous avez fini d'utiliser la file d'attente prioritaire DS afin d'éviter les fuites de mémoire qui peuvent ralentir et faire planter votre jeu.</p>
   <p class="note"><b>IMPORTANT !</b> Lorsque vous créez une structure de données, la valeur d'index pour l'identifier est une valeur entière commençant à 0. Cela signifie que des structures de données de types différents peuvent avoir la <b>même</b> valeur d'index, donc en cas de doute, vous devriez utiliser la fonction <a href="../ds_exists.htm"><span class="inline"><span style="font-size:14px;">ds_exists()</span></a> avant d'y accéder. Notez également que les indices sont réutilisés, de sorte qu'une valeur d'indice de structure de données détruite peut être utilisée par une structure nouvellement créée par la suite ; nous recommandons donc de toujours définir la variable qui contenait l'indice DS à -1 après la destruction.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">ds_priority_destroy(id);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_priority_destroy</span>(id);</p>
   <table>
     <tbody>
       <tr>

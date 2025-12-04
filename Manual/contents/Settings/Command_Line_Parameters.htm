@@ -36,12 +36,12 @@
   <div class="droptext" data-targetname="drop-down">
     <p class="dropspot">Le site <span class="notranslate">YoYo</span> <span class="notranslate">runner</span> bénéficie également d'un paramètre de ligne de commande spécial :</p>
     <p class="dropspot" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 5em"><span class="inline">-game &lt;<em>filename</em>&gt;</span>: charge le fichier de jeu donné
-      <br>
+      <br />
     </p>
     <p class="dropspot">Pourquoi l'utiliser ? Normalement, vous ne l'utiliseriez pas, mais si vous souhaitez faire tourner plus d'une version de votre jeu à la fois, vous pouvez le faire en utilisant cette méthode, ce qui rend les tests comparatifs A/B beaucoup plus faciles. Avec cette méthode, vous pouvez faire des tests ciblés avec quelqu'un d'autre ou, en tant que concepteur, avoir une meilleure idée des choses en faisant des tests côte à côte.</p>
     <p class="dropspot">Pour le mettre en place, vous devez connaître quelques éléments au préalable. Pour commencer, vous aurez besoin du chemin d'accès au site <span class="notranslate">Runner</span> lui-même. Il se trouve dans le dossier <strong>Program Data</strong> de votre système d'exploitation <span class="notranslate">Windows</span> (il peut être caché par défaut, vous devrez donc modifier les propriétés d'affichage pour le voir), avec un format typique comme celui-ci :
-      <br>
-      <br>
+      <br />
+      <br />
     </p>
     <p class="code">C:\ProgramData\GameMaker\Cache\runtimes\&lt;runtime_version&gt;\windows\Runner.exe
       <br />
@@ -49,14 +49,14 @@
     <p class="dropspot">Notez que le dossier runtime_version dépendra du <span class="notranslate">runtimes</span> que vous avez installé actuellement. Vous aurez également besoin du chemin d'accès au fichier <span class="inline">&lt;<em>yourgame</em>&gt;.win</span>, car c'est vers ce fichier que nous allons diriger <span class="notranslate">runner</span>. Le moyen le plus simple de le trouver est d'aller dans le dossier <strong>Temp </strong>(généralement situé à <span class="inline">%localappdata%\Temp\GameMakerStudio\&lt;game_name&gt;\</span>) et de rechercher <span class="inline">*.win</span>, car cela vous montrera tous les fichiers disponibles et vous pourrez simplement choisir celui dont vous avez besoin pour obtenir le chemin complet.</p>
     <p class="dropspot">Maintenant, nous pourrions créer un raccourci vers le site <span class="notranslate">runner</span> comme nous l'avons fait pour l'exécutable, puis modifier les paramètres si nécessaire, mais cela signifie qu'il faut l'ouvrir et le modifier entre les tests, ce qui va à l'encontre de l'objectif de notre utilisation de cette fonctionnalité pour les tests côte à côte. Au lieu de cela, nous allons créer un couple de petits fichiers &quot;batch&quot; pour gérer cela.</p>
     <p class="dropspot">Pour ce faire, créez d'abord un nouveau document texte sur votre bureau et ouvrez-le dans le Bloc-notes (ou tout autre éditeur de texte). Ajoutez ce qui suit :
-      <br>
-      <br>
+      <br />
+      <br />
     </p>
     <p class="code">START C:\ProgramData\GameMaker\Cache\runtimes\&lt;runtime_version&gt;\windows\Runner.exe -game &lt;LOCAL TEMP PATH&gt;\&lt;GAMENAME&gt;.win
       <br />
     </p>
     <p class="dropspot">Vous devez définir le chemin temporaire pour qu'il pointe vers le fichier <span class="inline">*.win</span> de votre jeu, puis l'enregistrer sous le nom de &quot;<span class="inline">GM_Test_1.bat</span>&quot; sur votre bureau (sachez que Notepad enregistrera automatiquement le fichier <span class="inline">*.txt</span> à moins que vous ne choisissiez &quot; tous les fichiers &quot; dans les options de la boîte de dialogue d'enregistrement). Voici un exemple de ce à quoi devrait ressembler votre commande finale :
-      <br>
+      <br />
     </p>
     <p class="code">START C:\ProgramData\GameMaker\Cache\runtimes\runtime-9.9.1.199\windows\Runner.exe -game D:\Users\Mark\AppData\Local\Temp\GameMaker\AlphaDog_Reboot\AlphaDog_Reboot.win
       <br />

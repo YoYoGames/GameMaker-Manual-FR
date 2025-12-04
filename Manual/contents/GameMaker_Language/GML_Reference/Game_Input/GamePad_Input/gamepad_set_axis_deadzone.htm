@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_set_axis_deadzone</h1>
+  <h1><span data-field="title" data-format="default">gamepad_set_axis_deadzone</span></h1>
   <p>Cette fonction peut être utilisée pour définir la &quot;zone morte&quot; de l'axe du joystick. Vous spécifiez le slot de périphérique à définir, puis vous définissez une valeur de 0 à 1. Si la quantité d'entrée est inférieure à la valeur donnée, l'axe du joystick est considéré comme étant à 0.
     Notez qu'il s'agit d'un réglage global qui affectera <i>tous les</i> axes de tous les joysticks connectés au slot de périphérique spécifié. </p>
   <p>L'utilisation de cette fonction ne signifie pas que la valeur de l'axe partira de la valeur de la zone morte, car la fonction <a href="gamepad_axis_value.htm"><span class="inline">gamepad_axis_value()</span></a> renvoie <em>toujours</em> une valeur normalisée comprise entre -1
@@ -22,7 +22,7 @@
     lorsque la valeur brute est à 0,5, la valeur de retour sera 0,375, ou si la valeur brute est 0,9, alors la valeur de retour sera 0,875.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">gamepad_set_axis_deadzone(device, deadzone);</p>
+  <p class="code"><span data-field="title" data-format="default">gamepad_set_axis_deadzone</span>(device, deadzone);</p>
   <table>
     <tbody>
       <tr>

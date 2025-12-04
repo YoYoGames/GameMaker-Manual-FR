@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>format de vertex_add_custom</title>
+  <title>vertex_format_add_custom</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>format de vertex_add_custom</h1>
+  <h1><span data-field="title" data-format="default">vertex_format_add_custom</span></h1>
   <p>Cette fonction vous permet d'utiliser un type de données personnalisé pour des attributs spécifiques du format des sommets dans le cadre de la création du nouveau format des sommets. Les valeurs disponibles à utiliser sont définies par la constante de type de données que vous choisissez, listée ci-dessous :</p>
   <table>
     <colgroup>
@@ -55,7 +55,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     L'utilisation qui sera faite de ces constantes doit également être définie afin que les valeurs puissent être &quot;liées&quot; correctement dans le site <span class="notranslate">shader</span> en cours de création. Ceci est nécessaire car DX et OpenGL ont des exigences différentes et si vous ne les liez pas correctement, elles n'apparaîtront pas correctement sur le site <span class="notranslate">shader</span>. Les constantes d'utilisation que vous pouvez choisir sont listées ci-dessous et celles que vous utiliserez dépendront des spécificités du site <span class="notranslate">shader</span> en cours de création :</p>
   <table>
     <colgroup>
@@ -116,7 +116,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Il y a quelques points importants à noter lors de l'utilisation de formats personnalisés comme ceux-ci :</p>
   <ul class="colour">
     <li>La fonction <span class="inline">vertex_format_add_custom()</span> ne prend en charge que <span class="inline">vertex_usage_position</span>, <span class="inline">vertex_usage_colour</span>, <span class="inline">vertex_usage_normal</span> et <span class="inline">vertex_usage_textcoord</span> lorsque vous utilisez GLSL <span class="notranslate">shaders</span>. Ces attributs correspondent respectivement aux attributs <span class="inline">in_Position</span>, <span class="inline">in_Colour[0 - ...]</span>, <span class="inline">in_Normal</span> de <span class="notranslate">shader</span> (tout ce qui n'est pas l'un de ces trois attributs - par exemple, les coordonnées de la texture - peut correspondre à n'importe quel attribut que vous définissez).</li>
@@ -145,7 +145,7 @@
      
   </ul>
   <h4>Syntaxe :</h4>
-  <p class="code">vertex_format_add_custom(type, usage);</p>
+  <p class="code"><span data-field="title" data-format="default">vertex_format_add_custom</span>(type, usage);</p>
   <table>
     <tbody>
       <tr>

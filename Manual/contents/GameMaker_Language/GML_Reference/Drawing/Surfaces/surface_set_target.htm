@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_set_target</h1>
+  <h1><span data-field="title" data-format="default">surface_set_target</span></h1>
   <p>Avec cette fonction, vous définissez tous les dessins ultérieurs sur la surface cible plutôt que sur l'écran. De cette façon, vous pouvez demander à <span data-keyref="GameMaker Name">GameMaker</span> de ne dessiner que des éléments spécifiques sur la surface spécifiée. Veuillez noter que si vous n'appelez pas <a href="surface_reset_target.htm"><span class="inline">surface_reset_target()</span></a> après avoir terminé, rien ne sera dessiné à l'écran car tous les dessins ultérieurs (même dans d'autres instances) seront effectués sur la surface. Vous devez également savoir que rien ne sera vu si la surface elle-même n'est pas dessinée à l'écran dans l'événement draw d'une instance. Vous pouvez également vérifier la valeur de retour de cette fonction comme outil de débogage pour vérifier si la cible de la surface a été définie ou non, une valeur de retour de 0 étant un échec de la définition de la cible et toute autre valeur positive étant un succès.</p>
   <p>Il convient de noter que les surfaces sont <i>empilées</i>. Vous ne pouvez donc pas passer d'une cible à l'autre et revenir à la cible de dessin normale à la fin, mais vous devez ouvrir et fermer les cibles de rendu. Par exemple, ceci <b>ne</b> fonctionnera <b>pas</b> correctement :</p>
   <p class="code">surface_set_target(surf1);<br />
@@ -39,7 +39,7 @@
   <p class="note"><b>REMARQUE</b>: Lorsque vous travaillez avec des surfaces, il est possible qu'elles cessent d'exister à tout moment, car elles sont stockées dans la mémoire des textures. Vous devez <b>TOUJOURS</b> vérifier qu'une surface existe en utilisant <span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span> avant d'y faire référence directement.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">surface_set_target(surface_id);</p>
+  <p class="code"><span data-field="title" data-format="default">surface_set_target</span>(surface_id);</p>
   <table>
     <tbody>
       <tr>

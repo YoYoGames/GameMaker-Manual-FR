@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_play_sound_on</h1>
+  <h1><span data-field="title" data-format="default">audio_play_sound_on</span></h1>
   <p>Avec cette fonction, vous pouvez jouer n'importe quelle ressource sonore par le biais d'un émetteur, les modifications apportées au gain, à la position, à la hauteur ou à la vitesse de l'émetteur affectant la façon dont l'utilisateur entend le son final joué. Vous fournissez l'index de l'émetteur à utiliser, l'index du son à jouer et vous spécifiez ensuite si le son doit être joué en boucle ou non. Ensuite, vous pouvez attribuer une priorité, qui est ensuite utilisée pour déterminer comment les sons sont traités lorsque le nombre de sons joués dépasse la limite fixée par la fonction <a href="../audio_channel_num.htm"><span class="inline">audio_channel_num()</span></a>. Les sons de priorité inférieure seront arrêtés en faveur des sons de priorité supérieure, et la valeur de la priorité peut être n'importe quel nombre réel (la valeur réelle est arbitraire, et peut être comprise entre 0 et 1 ou 0 et 100, car <span data-keyref="GameMaker Name">GameMaker</span> leur attribuera la même priorité). Notez que lorsqu'il s'agit de priorité, plus le nombre est <i>élevé</i>, plus la priorité est <i>élevée</i>, de sorte qu'un son de priorité 100 sera favorisé par rapport à un son de priorité 1.</p>
   <div data-conref="../../../../../assets/snippets/audio_play_sound_last_arguments.hts"> </div>
   <p>Cette fonction renvoie également un numéro d'index unique pour le son en cours de lecture, qui peut ensuite être stocké dans une variable afin que vous puissiez le mettre en pause ou l'arrêter avec les fonctions appropriées. Cela signifie que si vous avez plusieurs instances du même son en cours de lecture à un moment donné, vous pouvez cibler une seule instance de ce son à traiter à l'aide des fonctions audio.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">audio_play_sound_on(emitter, sound, loop, priority, <span>[gain], [offset], [pitch], [listener_mask]</span>);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_play_sound_on</span>(emitter, sound, loop, priority, <span>[gain], [offset], [pitch], [listener_mask]</span>);</p>
   <table>
     <tbody>
       <tr>

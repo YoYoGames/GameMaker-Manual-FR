@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>réseau_send_broadcast</title>
+  <title>network_send_broadcast</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>réseau_send_broadcast</h1>
+  <h1><span data-field="title" data-format="default">network_send_broadcast</span></h1>
   <p>Cette fonction permet de diffuser localement les données d'un <span class="notranslate">buffer</span> vers une plage d'adresses IP (pour plus d'informations sur <span class="notranslate">buffers</span>, voir <a href="../Buffers/Buffers.htm">Référence - Tampons</a>). La plage est limitée à celle du périphérique exécutant le serveur. Ainsi, si le périphérique a une adresse IP de 92.168.11.130, les données seront diffusées sur la plage 92.168.11.*. La fonction renvoie le nombre d'octets de données envoyés, ou un nombre inférieur à 0 si l'envoi a échoué.</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> Cette fonction ne fonctionne que lorsqu'elle est utilisée avec UDP - votre serveur doit être TCP et votre client doit avoir une socket client UDP créée avec <span style="font-size:1px;"><a href="network_create_socket_ext.htm"><span class="inline">network_create_socket_ext()</span></a></span> afin de recevoir les diffusions envoyées par le serveur.</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> Cette fonction ne fonctionnera pas si elle est utilisée dans un projet fonctionnant sur la cible HTML5.</p>
   <div data-conref="../../../assets/snippets/iOS_14_IP_Multicast_Permissions.hts"> </div>
   <h4>Syntaxe :</h4>
-  <p class="code">network_send_broadcast(socket, port, bufferid, size);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_broadcast</span>(socket, port, bufferid, size);</p>
   <table>
     <tbody>
       <tr>

@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_destroy</h1>
+  <h1><span data-field="title" data-format="default">instance_destroy</span></h1>
   <p>Vous appelez cette fonction chaque fois que vous souhaitez &quot;détruire&quot; une instance, en déclenchant normalement un <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">événement Destroy</a> et aussi un <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">événement Clean Up</a>. Cela la supprimera de la room jusqu'à ce que celle-ci soit redémarrée (sauf si la room est persistante). L'appel de la fonction sans argument détruira simplement l'instance qui est actuellement dans le champ d'application et qui exécute le code, mais vous pouvez fournir un argument &quot;id&quot; facultatif et cibler une instance spécifique en utilisant la valeur de l'instance <span class="inline"><a href="Instance_Variables/id.htm">id</a></span>, ou vous pouvez cibler toutes les instances d'un objet particulier en utilisant un argument . <a href="../Objects/object_index.htm"><span class="inline">object_index</span></a>. Par exemple :</p>
   <p class="code">instance_destroy(other);      // destroy the &quot;other&quot; instance in a Collision Event<br />
     instance_destroy(obj_Bullet); // destroy ALL instances of the object &quot;obj_Bullet&quot;</p>
@@ -28,7 +28,7 @@
   <p>La variable &quot;score&quot; sera incrémentée <i>même si la fonction <span class="inline">instance_destroy</span> a été appelée</i>, et l'instance sera finalement retirée de votre jeu à la fin de l'événement. Faites attention à cela, car si vous avez (par exemple) créé une ressource dynamique pour l'instance, comme une structure de données, et que vous avez ensuite détruit cette ressource dans l'événement de destruction, s'il y a des références à cette ressource après que la fonction ou l'action de destruction ait été exécutée, vous obtiendrez une erreur &quot;ressource inconnue&quot;, car l'événement de destruction l'a supprimée du jeu.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">instance_destroy([id, execute_event_flag]);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_destroy</span>([id, execute_event_flag]);</p>
   <table>
     <tbody>
       <tr>

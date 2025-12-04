@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>get_open_filename_ext</h1>
+  <h1><span data-field="title" data-format="default">get_open_filename_ext</span></h1>
   <p>Cette fonction ouvre un dialogue et demande au joueur un nom de fichier à ouvrir avec le filtre donné. Le filtre a la forme &quot;<i>nom1|mask1|nom2|mask2|.</i>.. &quot;, où le masque peut contenir les différentes options avec un point-virgule entre elles et vous pouvez également utiliser un &quot;*&quot; pour signifier n'importe quelle chaîne. Par exemple : &quot;<i>bitmaps|*.bmp;*.wmf</i>&quot;, demanderait à l'utilisateur de sélectionner le nom d'un fichier bitmap du système, mais seulement ceux qui ont les deux extensions spécifiées (<span class="inline">bmp</span> et <span class="inline">png</span>). Cette fonction <b>n'</b> ouvre <b>pas</b> le fichier lui-même ! Elle renvoie seulement une chaîne avec le nom complet et le chemin d'accès du fichier. Si l'utilisateur appuie sur &quot;<b>Annuler</b>&quot;, une chaîne vide &quot;&quot; est renvoyée. Vous pouvez également ajouter un répertoire à partir duquel lancer la recherche, et une légende à afficher en haut de la fenêtre au lieu de la légende par défaut.</p>
   <p>Une chose importante à noter lorsque vous utilisez cette fonction est qu'elle vous accorde certaines autorisations pour ce fichier, pour la durée de votre jeu. Ainsi, une fois que vous avez obtenu le chemin d'accès au fichier de la part de l'utilisateur, vous pouvez l'envoyer à <span class="notranslate">access</span> encore et encore sans avoir à le demander. Cependant, comme cette fonction sert à lire un fichier, les autorisations accordées <i>ne concernent que la lecture</i> et l'enregistrement ne sera pas autorisé par le système d'exploitation. Si vous avez besoin de lire et d'écrire dans le fichier, vous pouvez obtenir la permission en utilisant la fonction <a href="get_save_filename.htm"><span class="inline">get_save_filename()</span></a>.</p>
   <p class="note"><b>NOTE</b>: Cette fonction n'est valable que sur les cibles <span class="notranslate">Windows</span> et <span class="notranslate">macOS</span>.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">get_open_filename_ext(filter, fname, directory, caption);</p>
+  <p class="code"><span data-field="title" data-format="default">get_open_filename_ext</span>(filter, fname, directory, caption);</p>
   <table>
     <tbody>
       <tr>

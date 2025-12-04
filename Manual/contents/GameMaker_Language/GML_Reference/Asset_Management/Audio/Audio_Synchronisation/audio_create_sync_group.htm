@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_create_sync_group</h1>
+  <h1><span data-field="title" data-format="default">audio_create_sync_group</span></h1>
   <p>Crée un groupe de synchronisation et renvoie une valeur d'identification unique pour celui-ci, qui doit ensuite être utilisée dans tous les autres appels de fonction audio pour ce groupe. Si vous souhaitez que le groupe tourne en boucle, passez le paramètre <span class="inline">true</span>, sinon passez le paramètre <span class="inline">false</span>, mais notez que si vous souhaitez qu'il tourne en boucle, <i>toutes les pistes ajoutées ultérieurement doivent avoir la même longueur</i>. Notez que lorsque vous créez un groupe de synchronisation, vous devrez libérer la mémoire et les sons qui lui sont associés lorsqu'ils ne sont pas utilisés à l'aide de la fonction <a href="audio_destroy_sync_group.htm"><span class="inline">audio_destroy_sync_group()</span></a> par exemple, dans les événements <b>Room End</b> ou <b>Destroy</b>.</p>
   <p class="note"><b>REMARQUE</b>: cette fonctionnalité n'est pas disponible pour la plateforme cible HTML5.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">audio_create_sync_group(loop);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_create_sync_group</span>(loop);</p>
   <table>
     <tbody>
       <tr>

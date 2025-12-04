@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_copy_from_vertex_buffer</h1>
+  <h1><span data-field="title" data-format="default">buffer_copy_from_vertex_buffer</span></h1>
   <p>Cette fonction peut être utilisée pour copier une partie (ou l'ensemble) des données de sommet stockées dans un sommet <span class="notranslate">buffer</span> dans un régulier <span class="notranslate">buffer</span> précédemment créé. Lors de la copie d'un sommet <span class="notranslate">buffer</span> dans un régulier <span class="notranslate">buffer</span> avec cette fonction, les deux <span class="notranslate">buffers</span> doivent avoir été créés au préalable (à l'aide des fonctions <a href="../Drawing/Primitives/vertex_create_buffer.htm"><span class="inline">vertex_create_buffer()</span></a> et <a href="buffer_create.htm"><span class="inline">buffer_create()</span></a> par exemple). Vous pouvez spécifier la plage de données de sommet que vous souhaitez copier dans <span class="notranslate">buffer</span>, où le sommet de départ peut être n'importe où entre 0 et le nombre de sommets -1, et vous pouvez donner le nombre de sommets à copier à partir de ce point. Vous pouvez utiliser la fonction <a href="../Drawing/Primitives/vertex_get_number.htm"><span class="inline">vertex_get_number()</span></a> sur le sommet <span class="notranslate">buffer</span> pour obtenir le nombre total de sommets stockés. Enfin, vous indiquez l'index <span class="notranslate">buffer</span> dans lequel copier les données de sommet, ainsi qu'un décalage de données pour définir la position dans laquelle copier les données de sommet dans la destination <span class="notranslate">buffer</span>.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">buffer_copy_from_vertex_buffer(vertex_buffer, start_vertex, num_vertices, dest_buffer, dest_offset);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_copy_from_vertex_buffer</span>(vertex_buffer, start_vertex, num_vertices, dest_buffer, dest_offset);</p>
   <table>
     <tbody>
       <tr>

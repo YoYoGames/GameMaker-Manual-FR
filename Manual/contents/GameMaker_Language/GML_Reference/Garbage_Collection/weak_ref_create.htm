@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>weak_ref_create</h1>
+  <h1><span data-field="title" data-format="default">weak_ref_create</span></h1>
   <p>Avec cette fonction, vous pouvez créer une <a class="glossterm" data-glossterm="faible référence" href="#">référence faible</a> à un <span class="notranslate">struct</span> qui peut ensuite être utilisée pour vérifier si le <span class="notranslate">struct</span> est toujours &quot;vivant&quot; (référencé) ou non dans le jeu. Vous fournissez la référence au <span class="notranslate">struct</span> que vous voulez suivre, et la fonction renverra un autre <span class="notranslate">struct</span> qui est une référence faible à ce <span class="notranslate">struct</span>. Notez que vous pouvez vérifier si une référence est &quot;forte&quot; ou &quot;faible&quot; en utilisant la fonction <span class="inline"><a href="../Variable_Functions/instanceof.htm">instanceof()</a></span>, car une référence forte renverra soit &quot;<span class="inline">struct</span>&quot; ou le nom de la fonction de construction qui a créé le <span class="notranslate">struct</span>, soit &quot;<span class="inline">weakref</span>&quot; si c'est une référence faible. Notez également que la référence faible <span class="notranslate">struct</span> aura une variable &quot;<span class="inline">ref</span>&quot; à laquelle il sera possible d'accéder pour obtenir la référence forte du <span class="notranslate">struct</span> en question, à moins qu'il n'ait été mis au rebut, auquel cas il retournera <span class="inline">undefined</span>.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">weak_ref_create(struct_to_track);</p>
+  <p class="code"><span data-field="title" data-format="default">weak_ref_create</span>(struct_to_track);</p>
   <table>
     <tbody>
       <tr>

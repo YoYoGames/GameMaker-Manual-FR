@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physique_joint_poulies_créer</title>
+  <title>physics_joint_pulley_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physique_joint_poulies_créer</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_pulley_create</span></h1>
   <p>Le joint de poulie est utilisé pour connecter deux instances dans le monde physique de telle sorte que le déplacement de l'une influence directement le mouvement de l'autre. Ces articulations sont d'abord ancrées dans l'espace mondial en deux points, chacun étant connecté à une instance au niveau de son centre de masse. Ceci peut être modifié en réglant les coordonnées x/y de l'ancrage local par rapport à l'origine de l'instance, ce qui signifie que la connexion réelle de l'instance au point d'ancrage du monde physique peut être décalée ailleurs que sur son origine. L'image suivante illustre cela :</p>
   <p><img>Si vous regardez inst2, vous pouvez voir que son point d'ancrage local a été décalé de 20 pixels vers la &quot;gauche&quot; de son origine (Rappelez-vous ! Les points d'ancrage mondiaux sont définis à l'aide des coordonnées de la pièce, tandis que les points d'ancrage locaux sont définis par rapport à l'origine de l'instance). Vous pouvez également spécifier un ratio pour le joint de la poulie, qui indique à un côté ou à l'autre de se déplacer plus rapidement, une valeur inférieure à 1 faisant bouger la première instance plus vite (par exemple 0.5 la fera bouger deux fois plus vite) et une valeur supérieure à 1 faisant bouger la seconde instance plus vite (par exemple 2 la fera bouger deux fois plus vite).</p>
   <p>Comme pour toutes les articulations, si vous définissez la valeur &quot;col&quot; sur <span class="inline">true</span>, les deux instances peuvent interagir et entrer en collision l'une avec l'autre, mais <i>seulement</i> si elles ont des événements de collision. Cependant, si elle est définie sur <span class="inline">false</span>, elles n'entreront pas en collision, quoi qu'il arrive.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">physics_joint_pulley_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, l_anchor1_x, l_anchor1_y, l_anchor2_x, l_anchor2_y, ratio, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_pulley_create</span>(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, l_anchor1_x, l_anchor1_y, l_anchor2_x, l_anchor2_y, ratio, col)</p>
   <table>
     <tbody>
       <tr>

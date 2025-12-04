@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_replace_sprite_ext</h1>
+  <h1><span data-field="title" data-format="default">font_replace_sprite_ext</span></h1>
   <p>Cette fonction remplacera une police <span class="notranslate">sprite</span> que vous avez créée précédemment à l'aide de la fonction <a href="font_add_sprite_ext.htm"><span class="inline">font_add_sprite_ext()</span></a>. Elle utilise une &quot;bande de sprites&quot;, où chaque sous-image est un symbole ou une lettre individuelle, et les images sont mises en correspondance avec les lettres en fonction de l'argument &quot;string_map&quot; de la fonction. Cet argument est une chaîne de caractères que vous pouvez utiliser pour indiquer à <span data-keyref="GameMaker Name">GameMaker</span> l'ordre dans lequel les sous-images de la police <span class="notranslate">sprite</span> sont placées, ce qui permet de les mapper automatiquement lors de l'écriture du texte. Ainsi, par exemple, si vous avez une chaîne de caractères de &quot;AaBbCcDdEeFfGgHh&quot;, votre police <span class="notranslate">sprite</span> <i>doit</i> avoir les sous-images dans cet ordre.</p>
   <p>Vous pouvez également définir l'espacement de la police pour qu'elle soit proportionnelle (<span class="inline">true</span>) ou non (<span class="inline">false</span>). Une police proportionnelle est espacée en fonction de la largeur réelle des lettres (la lettre &quot;i&quot; prend moins de place que la lettre &quot;w&quot;, par exemple), tandis qu'une police non proportionnelle sera espacée en fonction de la largeur de la sous-image, comme une police monospace. Enfin, vous pouvez définir l'espace à laisser entre chaque lettre lors de l'écriture, et il peut s'agir de n'importe quelle valeur entière, 0 correspondant à un espace nul (les lettres se &quot;toucheront&quot; si elles sont proportionnelles). La fonction renvoie une valeur d'<i>index</i> qui doit être stockée dans une variable car elle sera nécessaire dans tous les codes ultérieurs faisant référence à cette police.</p>
   <p>Si la fonction échoue, elle échouera en silence sans remplacer la police <span class="notranslate">sprite</span> donnée.</p>
   <p class="note"><b><span class="note">NOTE</span> </b>Cette fonction nécessite que vous ayez préalablement ajouté une police <span class="notranslate">sprite</span> à l'aide de la commande <span style="font-size:1px;"><a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a></span>car elle la remplacera et ne peut pas être utilisée sur les polices qui font partie des ressources du jeu.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">font_replace_sprite_ext(font, spr, string_map, prop, sep);</p>
+  <p class="code"><span data-field="title" data-format="default">font_replace_sprite_ext</span>(font, spr, string_map, prop, sep);</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>matrice_construction_projection_perspective</title>
+  <title>matrix_build_projection_perspective</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>matrice_construction_projection_perspective</h1>
+  <h1><span data-field="title" data-format="default">matrix_build_projection_perspective</span></h1>
   <p>Cette fonction construit une matrice de projection en perspective basée sur les dimensions du plan de détourage proche, en utilisant les paramètres spécifiés ci-dessous.</p>
   <p>Notez que le champ de vision de la caméra varie en fonction des valeurs <span class="inline">width</span>, <span class="inline">height</span> et <span class="inline">znear</span> spécifiées, car la largeur et la hauteur de la projection sont placées à la position Z spécifiée dans l'argument <span class="inline">znear</span>.</p>
   <p>Par exemple, pour une taille constante de 640x480, le champ de vision sera plus large si <span class="inline">znear</span> est plus proche de la caméra, mais il sera plus étroit si <span class="inline">znear</span> est éloigné de la caméra. Ce comportement est démontré dans le visuel suivant :</p>
   <p><img>Pour cette raison, il est recommandé d'utiliser une valeur de <span class="inline">znear</span> identique à la largeur de la projection, de sorte que le champ de vision soit conforme à une projection orthographique équivalente.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">matrix_build_projection_perspective(width, height, znear, zfar);</p>
+  <p class="code"><span data-field="title" data-format="default">matrix_build_projection_perspective</span>(width, height, znear, zfar);</p>
   <table>
     <tbody>
       <tr>

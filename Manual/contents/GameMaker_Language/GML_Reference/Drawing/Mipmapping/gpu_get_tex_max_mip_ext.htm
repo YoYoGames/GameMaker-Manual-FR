@@ -15,11 +15,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_get_tex_max_mip_ext</h1>
+  <h1><span data-field="title" data-format="default">gpu_get_tex_max_mip_ext</span></h1>
   <p>Cette fonction vous permet d'obtenir le niveau maximum de mipmap actuellement défini qui doit être utilisé pour un échantillonneur <span class="notranslate">shader</span> donné. Vous fournissez la valeur de l'index de l'échantillonneur <span class="notranslate">shader</span> (tel que renvoyé par la fonction <a href="../../Asset_Management/Shaders/shader_get_sampler_index.htm"><span class="inline">shader_get_sampler_index()</span></a>) et la fonction renverra le niveau maximum actuel de mipmap, où une valeur de 0 correspond à la résolution la plus élevée, 1 correspond à l'utilisation de la première mipmap, 2 à la seconde etc... Notez que cela peut être très utile pour éviter les artefacts de saignement lors du rendu des textures, par exemple, en définissant la bordure de la page de texture à 8px et en définissant ensuite le niveau maximum de mipmap à 3, vous serez sûr de ne pas avoir de problèmes de saignement à de plus grandes distances de rendu.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">gpu_get_tex_max_mip_ext(sampler_index);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_get_tex_max_mip_ext</span>(sampler_index);</p>
   <table>
     <tbody>
       <tr>

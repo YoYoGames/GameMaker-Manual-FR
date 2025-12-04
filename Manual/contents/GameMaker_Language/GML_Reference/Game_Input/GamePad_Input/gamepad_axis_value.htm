@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_axis_value</h1>
+  <h1><span data-field="title" data-format="default">gamepad_axis_value</span></h1>
   <p>Vous pouvez utiliser cette fonction pour obtenir la valeur des différents axes d'un slot de gamepad donné. Vous fournissez l'index du slot de la manette à vérifier, ainsi qu'une constante d'index d'axe (telle que listée <a href="Gamepad_Input.htm">ici</a>), ou une valeur entière entre <span class="inline">0</span> et <span class="inline"><a href="gamepad_axis_count.htm">gamepad_axis_count()</a></span><span class="inline">-1</span>. La valeur renvoyée sera comprise entre <span class="inline">-1</span> et <span class="inline">1</span> pour chacun des axes horizontaux et verticaux disponibles.</p>
   <p>Notez que la valeur retournée est normalisée pour prendre en compte la valeur définie pour la zone morte de l'axe (en utilisant la fonction <span class="inline"><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone()</a></span>), et sera donc toujours comprise entre -1 et 0, et 0 et 1. Par exemple, en définissant la zone morte à 0.2 signifie que le fait de pousser le manche vers la droite ne commencera à renvoyer une valeur comprise entre 0 et 1 que lorsque la valeur <em>brute</em> de l'axe sera supérieure à 0,2. Par exemple, lorsque la valeur brute est de 0,2, la valeur renvoyée sera 0, lorsque la valeur brute est de 0,5, la valeur renvoyée sera 0,375, ou si la valeur brute est de 0,9, la valeur renvoyée sera 0,875.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">gamepad_axis_value(device, axisIndex);</p>
+  <p class="code"><span data-field="title" data-format="default">gamepad_axis_value</span>(device, axisIndex);</p>
   <table>
     <tbody>
       <tr>

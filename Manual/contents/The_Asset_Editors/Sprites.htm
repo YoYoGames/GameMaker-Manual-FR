@@ -120,26 +120,26 @@
     <p class="dropspot">La fenêtre d'<strong>aperçu en neuf tranches</strong> vous permet de redimensionner l'image et montre à quoi ressemblera l'image finale, après avoir été mise à l'échelle à l'aide de la technique en neuf tranches. Cet aperçu <span class="notranslate">sprite</span> peut également être pivoté.</p>
     <p class="dropspot">La section <strong>Nine Slice</strong> offre les options suivantes :</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Activer le découpage en neuf tranches :</strong> Cette option contrôle si la mise à l'échelle de Nine Slice est utilisée lorsque le site <span class="notranslate">sprite</span> est mis à l'échelle. Lorsqu'elle est activée, la mise à l'échelle Nine Slice sera utilisée pour le site <span class="notranslate">sprite</span> (et toute instance d'objet utilisant ce site <span class="notranslate">sprite</span>) placé dans une séquence ou un calque de pièce, et pour le site <span class="notranslate">sprites</span> mis à l'échelle à l'aide de <a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_ext.htm">draw_sprite_ext()</a> et d'autres fonctions similaires.<br>
-        <br>
+      <li class="dropspot"><strong>Activer le découpage en neuf tranches :</strong> Cette option contrôle si la mise à l'échelle de Nine Slice est utilisée lorsque le site <span class="notranslate">sprite</span> est mis à l'échelle. Lorsqu'elle est activée, la mise à l'échelle Nine Slice sera utilisée pour le site <span class="notranslate">sprite</span> (et toute instance d'objet utilisant ce site <span class="notranslate">sprite</span>) placé dans une séquence ou un calque de pièce, et pour le site <span class="notranslate">sprites</span> mis à l'échelle à l'aide de <a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_ext.htm">draw_sprite_ext()</a> et d'autres fonctions similaires.<br />
+        <br />
         <span class="expandtext"><span style="font-size:17px;"><strong>REMARQUE</strong>: le découpage en neuf ne fonctionnera pas avec les fonctions qui ne dessinent qu'une partie du site <span class="notranslate">sprite</span> ou le déforment, comme <span class="inline"><a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_part.htm">draw_sprite_part()</a></span> ou <span class="inline"><a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_pos.htm">draw_sprite_pos()</a>.</span></span></span>
       </li>
-      <li class="dropspot"><strong>Guides :</strong> Cette section affiche le décalage de chaque guide sur son axe, et peut être utilisée pour modifier ces décalages. Ces guides peuvent également être déplacés à l'intérieur de la fenêtre <strong>Sprite Preview</strong> en les faisant simplement glisser avec la souris.<br>
-        <br>
-       <span class="dropspotnote"><strong><span class="note">REMARQUE</span></strong></span>Les guides situés sur le même axe ne peuvent pas se croiser, et le fait d'en faire glisser un sur l'autre aura pour effet de pousser le second guide.<br>
-        <br>
-        <img><br>
-        Le décalage de chaque guide est relatif à son bord correspondant. Par exemple, le guide gauche est décalé par rapport au bord gauche, le bord droit est décalé par rapport au bord droit, et ainsi de suite.<br>
-        <br>
-        La couleur et l'alpha de chaque guide peuvent être modifiés en cliquant sur le bouton coloré situé à côté de la position du guide.<br>
+      <li class="dropspot"><strong>Guides :</strong> Cette section affiche le décalage de chaque guide sur son axe, et peut être utilisée pour modifier ces décalages. Ces guides peuvent également être déplacés à l'intérieur de la fenêtre <strong>Sprite Preview</strong> en les faisant simplement glisser avec la souris.<br />
+        <br />
+       <span class="dropspotnote"><strong><span class="note">REMARQUE</span></strong></span>Les guides situés sur le même axe ne peuvent pas se croiser, et le fait d'en faire glisser un sur l'autre aura pour effet de pousser le second guide.<br />
+        <br />
+        <img><br />
+        Le décalage de chaque guide est relatif à son bord correspondant. Par exemple, le guide gauche est décalé par rapport au bord gauche, le bord droit est décalé par rapport au bord droit, et ainsi de suite.<br />
+        <br />
+        La couleur et l'alpha de chaque guide peuvent être modifiés en cliquant sur le bouton coloré situé à côté de la position du guide.<br />
         <img>
       </li>
-      <li class="dropspot"><strong>Mise en évidence</strong>: Cette option affecte la façon dont une tranche sélectionnée apparaît dans la fenêtre de prévisualisation de <span class="notranslate">Sprite</span>. <strong>&quot;Inversé&quot;</strong> met en évidence le site <span class="notranslate">sprite</span> avec une superposition sauf pour la tranche sélectionnée, et <strong>&quot;Superposition&quot;</strong> met en évidence uniquement la tranche sélectionnée avec une superposition.<br>
-        <img><br>
+      <li class="dropspot"><strong>Mise en évidence</strong>: Cette option affecte la façon dont une tranche sélectionnée apparaît dans la fenêtre de prévisualisation de <span class="notranslate">Sprite</span>. <strong>&quot;Inversé&quot;</strong> met en évidence le site <span class="notranslate">sprite</span> avec une superposition sauf pour la tranche sélectionnée, et <strong>&quot;Superposition&quot;</strong> met en évidence uniquement la tranche sélectionnée avec une superposition.<br />
+        <img><br />
         La couleur et l'alpha de la superposition peuvent être modifiés en cliquant sur le bouton coloré à côté du menu déroulant.
       </li>
       <li class="dropspot"><strong>Tranche sélectionnée :</strong> Cette option peut être utilisée pour sélectionner une tranche, en choisissant une parmi les tranches de bord (gauche, haut, droite, bas) et celle du centre. Une tranche peut également être sélectionnée par <img> en faisant un clic gauche sur celle-ci dans la fenêtre <strong>Sprite Preview</strong>, et en cliquant à nouveau dessus pour la désélectionner.</li>
-      <li class="dropspot"><strong>Mode tuile : </strong>Cette option est utilisée conjointement avec l'option <strong>Selected Slice (tranche sélectionnée)</strong>, pour contrôler la façon dont la tranche apparaît lorsque le site <span class="notranslate">sprite</span> est mis à l'échelle. Vous pouvez appliquer l'un des modes de tuiles suivants à chaque tranche :<br>
+      <li class="dropspot"><strong>Mode tuile : </strong>Cette option est utilisée conjointement avec l'option <strong>Selected Slice (tranche sélectionnée)</strong>, pour contrôler la façon dont la tranche apparaît lorsque le site <span class="notranslate">sprite</span> est mis à l'échelle. Vous pouvez appliquer l'un des modes de tuiles suivants à chaque tranche :<br />
         <img>
         <ul>
           <li class="dropspot"><strong>Étirer</strong><strong>:</strong> La tranche sera étirée pour remplir l'espace entre ses coins connectés.</li>

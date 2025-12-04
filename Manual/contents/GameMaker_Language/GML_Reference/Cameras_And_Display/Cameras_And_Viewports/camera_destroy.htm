@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>camera_destroy</h1>
+  <h1><span data-field="title" data-format="default">camera_destroy</span></h1>
   <p>Avec cette fonction, vous pouvez détruire n'importe quelle caméra. Lorsque vous appelez la fonction, vous fournissez la valeur unique de l'ID de la caméra, que vous obtenez à partir des fonctions <span class="inline">camera_create_*</span> ou à partir de la matrice <a href="view_camera.htm"><span class="inline">view_camera</span></a> si vous utilisez l'éditeur de salle pour configurer le port de vue et la vue. Vous <i>ne</i> devez <i>jamais</i> détruire une caméra qui est actuellement assignée à une vue visible, à moins que vous n'assigniez une nouvelle caméra à cette vue au cours de la même étape, et vous devez <i>toujours</i> détruire les caméras que vous avez créées par code lorsqu'elles ne sont plus nécessaires à votre jeu afin d'éviter les fuites de mémoire, et vous pouvez également détruire les caméras par défaut si vous en avez assignées dans l'éditeur de salle, mais vous devez assigner une nouvelle caméra au port de vue (ou la désactiver) sinon vous obtiendrez des résultats étranges.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">camera_destroy(camera_id)</p>
+  <p class="code"><span data-field="title" data-format="default">camera_destroy</span>(camera_id)</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>caméra_créer_vue</title>
+  <title>camera_create_view</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>caméra_créer_vue</h1>
+  <h1><span data-field="title" data-format="default">camera_create_view</span></h1>
   <p>Cette fonction va créer une nouvelle caméra, puis définir sa vue dans la pièce, avant de renvoyer la valeur d'identification unique pour identifier la caméra dans les appels de fonction ultérieurs. La caméra sera créée en utilisant les valeurs que vous avez définies dans cette fonction pour la position, la taille et d'autres détails qui correspondent aux valeurs que vous avez définies dans l'éditeur de pièce (voir <a href="../../../../The_Asset_Editors/Rooms.htm">ici</a>). Notez que cette fonction peut prendre un <i>nombre variable d'arguments</i>, seuls les arguments de position x/y et de largeur/hauteur étant obligatoires. Tous les arguments non fournis utiliseront leurs arguments par défaut.</p>
   <p>Notez que les caméras sont comme toutes les ressources dynamiques et occupent de la mémoire lors de leur création. Cela signifie que vous devez faire attention à ne pas créer inutilement des caméras et à détruire celles dont vous n'avez pas besoin en appelant la fonction <a href="camera_destroy.htm"><span class="inline">camera_destroy()</span></a>. Cela signifie également que les caméras persistent d'une salle à l'autre si elles sont affectées à une variable <span class="inline">global</span> (elles persistent également lorsqu'elles sont affectées à des variables d'instance ou locales, mais vous ne pouvez pas les <span class="notranslate">access</span> après avoir changé de salle, d'où la fuite de mémoire), de sorte que vous pouvez - par exemple - créer une nouvelle caméra, l'affecter à une variable globale, puis au début de chaque salle utiliser les fonctions <span class="inline">camera_set_*</span> pour définir les propriétés avant de l'affecter à un port de vue.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">camera_create_view(room_x, room_y, width, height, [angle, object, x_speed, y_speed, x_border, y_border])</p>
+  <p class="code"><span data-field="title" data-format="default">camera_create_view</span>(room_x, room_y, width, height, [angle, object, x_speed, y_speed, x_border, y_border])</p>
   <table>
     <tbody>
       <tr>

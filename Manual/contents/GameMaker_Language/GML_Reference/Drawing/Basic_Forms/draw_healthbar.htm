@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>dessiner_barre de santé</title>
+  <title>draw_healthbar</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>dessiner_barre de santé</h1>
+  <h1><span data-field="title" data-format="default">draw_healthbar</span></h1>
   <p>Cette fonction vous permet de dessiner une barre de couleur pour afficher une valeur constante. Bien que la fonction utilise le mot &quot;healthbar&quot;, vous pouvez l'utiliser pour afficher tout ce que vous souhaitez tant que la quantité à afficher est un pourcentage compris entre 0 et 100 (un pourcentage de n'importe quelle valeur peut être calculé avec la formule <b>(CURRENT_Value / MAXIMUM_value) * 100</b>), donc, par exemple, vous pouvez l'utiliser pour afficher la puissance, la santé, le mana, le temps ou tout autre élément qui bénéficierait d'un affichage en barre.</p>
   <p>Vous pouvez définir différents éléments qui modifient l'aspect visuel de la barre et ceux-ci sont illustrés dans l'image ci-dessous (notez que les couleurs utilisées ici sont <span class="inline">c_green</span> pour la valeur maximale et <span class="inline">c_red</span> pour la valeur minimale, mais vous pouvez utiliser les couleurs que vous souhaitez) :</p>
   <p><img alt="Healthbar examples" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/draw_healthbar.png" /></p>
   <p class="note"><b>REMARQUE</b>: Si vous souhaitez dessiner une forme à l'aide d'un <span class="notranslate">shader</span>, vous devez savoir que la plupart des <span class="notranslate">shaders</span> attendent les entrées suivantes : vertex, texture, couleur. Cependant, en utilisant cette fonction, seules les données de vertex et de couleur sont transmises, et donc le <span class="notranslate">shader</span> peut ne rien dessiner (ou dessiner quelque chose mais pas correctement). Si vous avez besoin de dessiner des formes de cette manière, le site <span class="notranslate">shader</span> doit être personnalisé en conséquence.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">draw_healthbar(x1, y1, x2, y2, amount, backcol, mincol, maxcol, direction, showback, showborder);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_healthbar</span>(x1, y1, x2, y2, amount, backcol, mincol, maxcol, direction, showback, showborder);</p>
   <table>
     <tbody>
       <tr>

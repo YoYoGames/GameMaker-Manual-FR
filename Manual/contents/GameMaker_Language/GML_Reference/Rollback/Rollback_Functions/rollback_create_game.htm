@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>retour_création_jeu</title>
+  <title>rollback_create_game</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -16,7 +16,7 @@
   <meta name="search-keywords" content="rollback_create_game" />
 </head>
 <body>
-  <h1>retour_création_jeu</h1>
+  <h1><span data-field="title" data-format="default">rollback_create_game</span></h1>
   <p>Cette fonction accueille une nouvelle partie multijoueur. Elle prend le nombre de joueurs qui doivent être connectés pour que la partie commence, et vous permet éventuellement de désactiver le <a data-xref="{text}" href="../Rollback_System.htm#h">test de synchronisation</a>.</p>
   <p>Lorsqu'il est appelé avec le test de synchronisation désactivé, le système attend que le nombre de <span class="inline2">joueurs num_players</span> se joigne au jeu avant de <a href="../Rollback_Events.htm">commencer</a> la partie. Veillez à ne pas créer ou modifier d'instances gérées avant le début de la partie.</p>
   <p class="note"><span class="tip">ASTUCE</span> Vous pouvez optionnellement forcer le jeu à commencer avant que tous les joueurs ne se soient joints, en appelant <a href="rollback_start_game.htm"><span class="inline">rollback_start_game()</span></a>.</p>
@@ -24,7 +24,7 @@
   <p class="note"><span class="warning">AVERTISSEMENT</span> Il n'est pas recommandé de définir une région par défaut dans cette fonction, sauf si vous autorisez le lecteur à la sélectionner dans un menu.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">rollback_create_game(num_players, [enable_sync_test, region]);</p>
+  <p class="code"><span data-field="title" data-format="default">rollback_create_game</span>(num_players, [enable_sync_test, region]);</p>
   <table>
     <colgroup>
       <col />

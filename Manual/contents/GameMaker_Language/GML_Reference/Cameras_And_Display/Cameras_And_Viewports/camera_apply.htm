@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>camera_apply</h1>
+  <h1><span data-field="title" data-format="default">camera_apply</span></h1>
   <p>Cette fonction appliquera les paramètres de caméra donnés à la vue caméra en cours de rendu immédiatement. Bien que vous puissiez définir n'importe quelle vue de caméra à l'aide des fonctions spécifiques de <span class="inline">camera_set_*</span>, les nouveaux paramètres ne seront pas utilisés pour le rendu avant la <i>prochaine</i> image du jeu, mais avec cette fonction, vous pouvez effectuer ces changements immédiatement. Si vous utilisez plusieurs vues, la fonction doit être utilisée dans l'<b>événement Draw</b> et vous pouvez utiliser la variable <a href="view_current.htm"><span class="inline">view_current</span></a> pour appliquer sélectivement la caméra donnée uniquement à la vue de la caméra en cours de rendu. Notez que cela ne modifie PAS la valeur de l'ID de la caméra, mais uniquement les paramètres de cette caméra, et que si vous utilisez cette fonction sur la caméra par défaut (c'est-à-dire la caméra interne que <span data-keyref="GameMaker Name">GameMaker</span> utilise lorsqu'aucune caméra de vue n'est active), les modifications seront écrasées dès la prochaine image de jeu par les paramètres internes de dessin de la pièce.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">camera_apply(camera_id)</p>
+  <p class="code"><span data-field="title" data-format="default">camera_apply</span>(camera_id)</p>
   <table>
     <tbody>
       <tr>

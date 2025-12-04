@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_queue_read</h1>
+  <h1><span data-field="title" data-format="default">ds_queue_read</span></h1>
   <p>Cette fonction vous permet de recréer une file d'attente DS sauvegardée (une file d'attente qui a été précédemment écrite sous forme de chaîne de caractères à l'aide de la commande <a href="ds_queue_write.htm"><span class="inline">ds_queue_write()</span></a>). Vous devez d'abord créer une nouvelle file d'attente DS pour y lire la chaîne. Si la file d'attente DS existe déjà et que des informations y sont stockées, celles-ci seront effacées avant la lecture. Cette fonction est d'une importance vitale lors de la création de mécanismes de sauvegarde/chargement pour votre jeu.</p>
   <p>Notez que si la chaîne DS spécifiée a été écrite par GameMaker : Studio 1.2.x <span class="notranslate">runtime</span> (ou plus ancien), vous devez spécifier l'argument facultatif &quot;legacy&quot;, en lui attribuant la valeur <span class="inline">true</span> car le format de la chaîne a changé après cela.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">ds_queue_read(id, str [, legacy]);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_queue_read</span>(id, str [, legacy]);</p>
   <table>
     <tbody>
       <tr>

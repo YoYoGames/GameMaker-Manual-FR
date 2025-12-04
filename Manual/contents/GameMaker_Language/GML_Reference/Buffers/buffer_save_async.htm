@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_save_async</h1>
+  <h1><span data-field="title" data-format="default">buffer_save_async</span></h1>
   <p>Cette fonction permet de sauvegarder une partie du contenu d'un <span class="notranslate">buffer</span> dans un fichier, prêt à être relu en mémoire à l'aide de la fonction <a href="buffer_load.htm"><span class="inline">buffer_load()</span></a> (ou l'une des autres fonctions de chargement de <span class="notranslate">buffers</span>). Le &quot;décalage&quot; définit la position de départ dans le <span class="notranslate">buffer</span> pour la sauvegarde (en octets), et la &quot;taille&quot; est la taille de la zone du <span class="notranslate">buffer</span> à sauvegarder à partir de ce décalage (également en octets). Cette fonction fonctionne de manière asynchrone, et le jeu continuera donc de tourner pendant la sauvegarde, et tous les fichiers sauvegardés à l'aide de cette fonction seront placés dans un dossier &quot;par défaut&quot;. Ce dossier <i>n'a pas</i> besoin d'être inclus dans le nom du fichier car il est ajouté automatiquement par <span class="notranslate">GameMaker</span>. Par exemple, le chemin du nom de fichier &quot;<span class="inline">Data\Player_Save.sav</span>&quot; sera en fait enregistré dans &quot;<span class="inline">default\Data\Player_Save.sav</span>&quot;. Toutefois, si vous chargez ensuite le fichier à l'aide de la fonction <a href="buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a>vous n'avez pas non plus besoin de fournir la partie &quot;par défaut&quot; du chemin d'accès (mais toute autre fonction de fichier <i>le</i> demandera, sauf sur les consoles Xbox One, PS4 et <span class="notranslate">Nintendo</span> <span class="notranslate">Switch</span>).</p>
   <p class="note"><b>NOTE</b>: En HTML5, &quot;default/&quot; n'est pas ajouté automatiquement et vous devrez peut-être en tenir compte dans votre code.</p>
   <p>La fonction renverra une valeur d'ID unique et déclenchera un <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Save_Load.htm">événement de sauvegarde/chargement asynchrone</a> où vous pourrez utiliser l'ID renvoyé pour vérifier la valeur d'ID de <span class="inline">async_load</span>, comme le montre l'exemple étendu ci-dessous. La carte <a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> dans l'événement aura les deux paires clé/valeur suivantes :</p>
@@ -26,7 +26,7 @@
   <p class="note"><b>REMARQUE</b>: En HTML5, les résultats renvoyés sont enregistrés sous forme de chaînes codées en base64 lorsqu'ils sont enregistrés dans un fichier.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">buffer_save_async(buffer, filename, offset, size);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_save_async</span>(buffer, filename, offset, size);</p>
   <table>
     <tbody>
       <tr>

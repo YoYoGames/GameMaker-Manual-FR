@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>appeler plus tard</title>
+  <title>call_later</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
   <meta name="search-keywords" content="call_later" />
 </head>
 <body>
-  <h1>appeler plus tard</h1>
+  <h1><span data-field="title" data-format="default">call_later</span></h1>
   <p>Cette fonction déclenche une fonction de rappel après le temps spécifié ou après un certain intervalle. Pour ce faire, elle crée une <span data-keyref="Type_Resource_TimeSource">source de temps (</span> voir <a data-xref="{title}" href="Time_Sources.htm">Sources de temps</a>).</p>
   <p>Pour annuler la fonction de rappel, voir <a data-xref="{title}" href="call_cancel.htm">call_cancel</a>.</p>
   <p class="note"><span class="important">IMPORTANT</span> Bien que cette fonction renvoie un ID de source de temps réel, cet ID ne peut pas être utilisé avec les fonctions de source de temps, car les sources de temps utilisées par <a href="call_later.htm">call_later</a> et <a href="call_cancel.htm">call_cancel</a> sont &quot;invisibles&quot; - elles n'apparaîtront pas comme enfants d'une source de temps intégrée et ne peuvent pas être utilisées avec d'autres fonctions de source de temps. Elles sont toutefois incluses dans le compte des sources de temps renvoyé par <a href="../Debugging/debug_event.htm">debug_event(&quot;ResourceCou<span class="inline"></span>nts&quot;)</a>.</p>
@@ -43,7 +43,7 @@
   <p> </p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">call_later(period, unit, callback, [loop=false]);</p>
+  <p class="code"><span data-field="title" data-format="default">call_later</span>(period, unit, callback, [loop=false]);</p>
   <table>
     <colgroup>
       <col />

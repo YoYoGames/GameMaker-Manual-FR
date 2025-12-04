@@ -27,13 +27,13 @@
       l'installateur de Remote Worker de cette façon :</p>
     <p class="dropspot">
       <img> L'installateur s'appellera quelque chose comme &quot;<span class="inline">GameMakerStudio-Remote-Installer-X.X.X.XXX.exe</span>&quot;.
-      et vous devez le copier sur le PC que vous voulez utiliser comme travailleur à distance (il n'est pas nécessaire que <span data-keyref="GameMaker Name">GameMaker</span> soit installé sur le travailleur à distance, seulement ce programme).<br></p>
+      et vous devez le copier sur le PC que vous voulez utiliser comme travailleur à distance (il n'est pas nécessaire que <span data-keyref="GameMaker Name">GameMaker</span> soit installé sur le travailleur à distance, seulement ce programme).<br /></p>
     <p class="dropspot">Une fois que vous l'avez copié sur le PC de base, installez-le en suivant les instructions à l'écran. Lorsque le programme d'installation est terminé, le système d'exploitation peut vous demander d'autoriser <span class="notranslate">access</span> à traverser le pare-feu pour accéder à votre réseau. Une fois que vous aurez accordé <span class="notranslate">access</span>, le programme d'installation ouvrira alors
-      Vous devez noter l'<strong>adresse IP</strong> et le <strong>numéro de port</strong> indiqués sur cette page car vous en aurez besoin pour l'étape suivante.<br></p>
+      Vous devez noter l'<strong>adresse IP</strong> et le <strong>numéro de port</strong> indiqués sur cette page car vous en aurez besoin pour l'étape suivante.<br /></p>
     <p class="dropspot"><img>Vous devez maintenant retourner sur la machine où vous avez installé <span data-keyref="GameMaker Name">GameMaker</span>
       2 installé et cliquer sur le bouton Target Manager <img> pour ouvrir la fenêtre Target Manager,
       puis allez dans la section Worker et cliquez sur le bouton Add Worker <img>. La fenêtre suivante s'ouvrira alors
-      fenêtre suivante :<br></p>
+      fenêtre suivante :<br /></p>
     <p class="dropspot"><img>Ici, vous devez donner un nom à votre travailleur à distance (c'est ce qui sera affiché dans la liste des travailleurs dans le Target Manager).
       Dans la section <strong>Nom de l'hôte</strong>, ajoutez l'adresse et le port de l'ordinateur de l'employé qui vous ont été montrés et notés précédemment.</p>
     <p class="dropspot">Si tout s'est déroulé correctement, vous devriez maintenant recevoir un message indiquant que vous pouvez vous connecter avec succès à la machine du travailleur à distance. Une fois que votre travailleur à distance est installé et connecté à votre ordinateur principal <span class="notranslate">IDE</span>, vous devez configurer les paramètres de construction <strong>locaux</strong> pour chaque plateforme (voir la section ci-dessous) avant de pouvoir compiler votre projet.
@@ -43,22 +43,22 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Paramètres à distance</a></p>
   <div class="droptext" data-targetname="drop-down1">
     <p class="dropspot">La page des <strong>paramètres </strong>montre les différents chemins d'accès et les paramètres de construction pour l'application Remote Worker. En haut des paramètres, vous avez les différents chemins qui seront utilisés par l'application Remote Worker.
-      Avant de faire quoi que ce soit d'autre, il faut les vérifier et définir d'autres chemins si nécessaire (en général, les chemins par défaut devraient convenir). Vous pouvez consulter la page des paramètres du télétravailleur à l'adresse <span class="notranslate">access</span> en utilisant l'une des méthodes suivantes :<br></p>
+      Avant de faire quoi que ce soit d'autre, il faut les vérifier et définir d'autres chemins si nécessaire (en général, les chemins par défaut devraient convenir). Vous pouvez consulter la page des paramètres du télétravailleur à l'adresse <span class="notranslate">access</span> en utilisant l'une des méthodes suivantes :<br /></p>
     <ul class="dropspotlist">
-      <li class="dropspot">Cliquez sur le lien &quot;Paramètres&quot; en haut de la page &quot;Remote Worker&quot; qui s'ouvre dans le navigateur de votre machine distante :<br><img></li>
-      <li class="dropspot">Utilisez le RMB sur l'icône de la zone de notification de Remote Worker pour ouvrir les paramètres dans le navigateur de votre machine distante :<br><img></li>
+      <li class="dropspot">Cliquez sur le lien &quot;Paramètres&quot; en haut de la page &quot;Remote Worker&quot; qui s'ouvre dans le navigateur de votre machine distante :<br /><img></li>
+      <li class="dropspot">Utilisez le RMB sur l'icône de la zone de notification de Remote Worker pour ouvrir les paramètres dans le navigateur de votre machine distante :<br /><img></li>
       <li class="dropspot">Sur votre machine locale, ouvrez le Target Manager et cliquez sur l'icône &quot;cog&quot; pour ouvrir les paramètres du travailleur dans une fenêtre sur votre machine locale :<img></li>
     </ul>
-    <p class="dropspot">Cela affichera la page des paramètres où vous pouvez voir (et définir) les différentes options qui vous permettent de définir les chemins pour construire votre projet :<br></p>
+    <p class="dropspot">Cela affichera la page des paramètres où vous pouvez voir (et définir) les différentes options qui vous permettent de définir les chemins pour construire votre projet :<br /></p>
     <p class="dropspot"><img alt="Build Menu Remote Worker Installer" class="center" src="../assets/Images/IDE Tools/RemoteWorker_Menu.png"/><br /></p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Paramètres de construction locale</a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">Après avoir vérifié les chemins à utiliser pour l'application Remote Worker, vous pouvez ensuite définir (si nécessaire) les différents <strong>paramètres de construction locale</strong>. Les différentes plates-formes nécessitent l'installation de différents outils de compilation sur le PC de compilation.
-      Le travailleur à distance devra être en mesure de les utiliser pour construire vos jeux via la page <strong>Paramètres </strong>. Les premiers paramètres sont les paramètres <strong>généraux </strong>:<br></p>
+      Le travailleur à distance devra être en mesure de les utiliser pour construire vos jeux via la page <strong>Paramètres </strong>. Les premiers paramètres sont les paramètres <strong>généraux </strong>:<br /></p>
     <p class="dropspot"><img>Ici, vous pouvez configurer le <strong>port </strong>pour le
      <strong>serveur d'aide</strong> et le port à utiliser par le <strong>débogueur </strong>. Ces paramètres peuvent être modifiés si vous rencontrez des problèmes de connexion lors de l'utilisation du module de débogage, mais en général, il est préférable de laisser les valeurs par défaut.</p>
-    <p class="dropspot">Vous pouvez maintenant aller de l'avant et configurer les différentes options pour les plateformes pour lesquelles le télétravailleur peut construire :<br></p>
+    <p class="dropspot">Vous pouvez maintenant aller de l'avant et configurer les différentes options pour les plateformes pour lesquelles le télétravailleur peut construire :<br /></p>
     <p class="dropspot"><img>Si vous avez <span class="notranslate">access</span> à la plate-forme cible <span class="notranslate">Windows</span>,
       vous devriez être en mesure de construire en utilisant le travailleur à distance sur le PC <span class="notranslate">Windows</span> immédiatement en utilisant l'option de <a data-glossterm="Machine virtuelle (VM)" class="glossterm" href="#">machine virtuelle (VM</a> ). Cependant, si vous souhaitez utiliser le <a data-glossterm="Compilateur YoYo (YYC)" class="glossterm" href="#">compilateur YoYo (YYC)</a>, vous devrez également définir le chemin d'accès à <span class="notranslate">Visual Studio</span> sur le PC de construction. Pour plus de détails sur la façon de configurer un PC <span class="notranslate">Windows</span> pour compiler vos projets, veuillez consulter l'article suivant du service d'assistance :</p>
     <ul class="dropspotlist">
@@ -76,7 +76,7 @@
     <p class="dropspot">Il convient de noter que ni le bouton Debug <img> ni le bouton Clean <img> ne seront disponibles lorsque vous utilisez un Remote Worker. Notez également que vous ne pouvez actuellement effectuer qu'une seule construction à distance à la fois.</p>
     <p class="dropspot"></p>
   </div>
-  <p><br> Une fois que le Remote Worker est installé et fonctionne sur votre machine distante, il apparaît dans la barre des tâches sous forme d'icône et vous pouvez cliquer dessus avec le bouton droit de la souris pour faire apparaître les options suivantes :</p>
+  <p><br /> Une fois que le Remote Worker est installé et fonctionne sur votre machine distante, il apparaît dans la barre des tâches sous forme d'icône et vous pouvez cliquer dessus avec le bouton droit de la souris pour faire apparaître les options suivantes :</p>
   <p><img alt="Target Manager Remote Worker Installer" src="../assets/Images/IDE Tools/RemoteWorker_TargetEye.png" class="center"/></p>
   <ul class="colour">
     <li><strong>Ouvrez</strong>: Ouvrez l'application Remote Worker dans votre navigateur par défaut.</li>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physique_joint_soudure_créer</title>
+  <title>physics_joint_weld_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physique_joint_soudure_créer</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_weld_create</span></h1>
   <p>Le joint de soudure est conçu pour attacher deux fixations ensemble dans une liaison solide, mais flexible. Le joint de soudure permet la flexion entre les deux appareils joints, mais sans l'étirement associé, par exemple, à un joint à distance, et tente toujours de revenir à l'angle de référence lorsqu'il est soumis à une contrainte ou à une charge. Vous définissez le point de la pièce où le joint doit être créé, ainsi que l'angle que vous souhaitez que le joint essaie de maintenir à tout moment, comme le montre l'image ci-dessous :</p>
   <p><img>Comme vous pouvez le constater, les points d'ancrage sont spécifiés en tant que coordonnées de la pièce. Il faut donc les définir avec précaution, surtout si les instances sont créées en même temps que les joints plutôt que d'être placées dans la pièce via l'éditeur de pièce. Vous devez également savoir que les joints sont créés indépendamment de la taille de l'adresse <span class="notranslate">sprite</span> des instances ou des dispositifs qu'elles ont attachés. Ainsi, si vous créez un joint de soudure ailleurs qu'à l'origine de l'instance, il est toujours valide et contraindra les deux instances par rapport à la position à laquelle il a été créé.</p>
   <p>Étant donné que le joint de soudure est flexible et qu'il se plie et fléchit lorsqu'il est soumis à une contrainte, vous pouvez définir la fréquence d'oscillation (en Hz) ainsi que le taux d'amortissement pour le joint afin d'obtenir différents effets - vous devrez peut-être jouer avec ces valeurs pour les affiner et il est recommandé de commencer par de petites valeurs et de les augmenter jusqu'à ce que vous obteniez l'effet que vous souhaitez.</p>
   <p>Si vous définissez la valeur &quot;col&quot; sur <span class="inline">true</span>, les deux instances peuvent interagir et entrer en collision l'une avec l'autre, mais <i>seulement</i> si elles ont des événements de collision. En revanche, si vous définissez la valeur &quot;col&quot; sur <span class="inline">false</span>, elles n'entreront pas en collision, quoi qu'il arrive.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">physics_joint_weld_create(inst1, inst2, anchor_x, anchor_y, ref_angle, freq_hz, damping_ratio, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_weld_create</span>(inst1, inst2, anchor_x, anchor_y, ref_angle, freq_hz, damping_ratio, col)</p>
   <table>
     <tbody>
       <tr>

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_blendmode_ext</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_blendmode_ext</span></h1>
   <p>Lorsque <span data-keyref="GameMaker Name">GameMaker</span> dessine un pixel, il y a une couleur source (la couleur du pixel que l'on va dessiner) et une couleur de destination (la couleur qui se trouve déjà dans le pixel que l'on dessine). Ainsi, pour déterminer la nouvelle couleur du pixel, les couleurs source et de destination sont calculées en fonction du mode de fusion choisi. Chaque composante des couleurs est stockée sous forme de valeur à virgule flottante comprise entre 0 et 1, et la nouvelle couleur est calculée en multipliant chaque composante de la couleur source par un certain facteur et en multipliant chaque composante de la couleur de destination par un autre facteur, puis en additionnant les résultats composante par composante.</p>
   <p>Cette fonction vous permet de définir les différents composants qui doivent être pris en compte pour créer un mode de fusion personnalisé. La source et la destination ont toutes deux une composante rouge, verte, bleue et alpha, et dans le tableau suivant, les RGBA de la source sont considérés comme (Rs, Gs, Bs, As) tandis que ceux de la destination sont (Rd, Gd, Bd, Ad). Les onze constantes disponibles peuvent être soit la source, soit la destination (ou les deux) lorsqu'elles sont utilisées dans cette fonction.</p>
   <table>
@@ -89,7 +89,7 @@
   </ul>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">gpu_set_blendmode(src, dest);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_blendmode_ext</span>(src, dest);</p>
   <table>
     <tbody>
       <tr>

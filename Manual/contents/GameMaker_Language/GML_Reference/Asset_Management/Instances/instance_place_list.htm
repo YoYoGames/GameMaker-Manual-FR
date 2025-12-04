@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>liste_de_lieux_instances</title>
+  <title>instance_place_list</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>liste_de_lieux_instances</h1>
+  <h1><span data-field="title" data-format="default">instance_place_list</span></h1>
   <p>Avec cette fonction, vous pouvez vérifier la présence d'une collision entre une position et toutes les instances d'un objet en utilisant le masque de collision de l'instance qui exécute le code de vérification. Lorsque vous utilisez cette fonction, vous demandez effectivement à <span data-keyref="GameMaker Name">GameMaker</span> de déplacer l'instance vers la nouvelle position, de vérifier s'il y a une collision, puis de revenir en arrière et de vous dire si une collision a été trouvée ou non. Cela fonctionne pour les collisions précises, mais seulement si l'instance et les instances de l'objet à vérifier ont des masques de collision précis sélectionnés, sinon seules les collisions de la boîte englobante sont appliquées.</p>
   <p>Vous fournissez également une <a href="../../Data_Structures/DS_Lists/DS_Lists.htm">liste de DS</a>, de sorte que les <a href="Instance_Variables/id.htm"><span class="inline">id</span></a> de toutes les instances qui entrent en collision avec l'instance appelante seront ajoutées à la fin de la liste donnée. Vous pouvez <a href="../../Data_Structures/DS_Lists/ds_list_clear.htm">effacer la</a> liste avant d'appeler cette fonction afin qu'elle ne contienne que les résultats de cet appel de fonction. Vous avez également la possibilité d'ordonner la liste en fonction de la distance entre l'origine de l'instance effectuant la vérification et l'origine des instances trouvées en collision.</p>
   <p>Notez que la fonction accepte également le mot clé spécial <a href="../../../GML_Overview/Instance_Keywords.htm"><b><span class="inline">all</span></b></a>dans ce cas, toutes les instances trouvées en collision seront listées. La fonction renvoie le nombre d'instances trouvées, ou 0 si aucune n'est trouvée.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">instance_place_list(x, y, obj, list, ordered);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_place_list</span>(x, y, obj, list, ordered);</p>
   <table>
     <tbody>
       <tr>

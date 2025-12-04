@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_set_speed</h1>
+  <h1><span data-field="title" data-format="default">sprite_set_speed</span></h1>
   <p>Cette fonction peut être utilisée pour définir la vitesse et le type d'animation de base pour la ressource <span class="notranslate">sprite</span>. Ces paramètres sont normalement définis dans l'<a href="../../../../../The_Asset_Editors/Sprites.htm">éditeur de sprites</a>, mais il peut arriver que vous deviez les définir manuellement pour une ressource <span class="notranslate">sprite</span> donnée. Vous devez fournir l'index <span class="notranslate">sprite</span> à définir, la vitesse d'animation et le type de vitesse d'animation à appliquer. Le type de vitesse d'animation peut être l'une des constantes suivantes :</p>
   <table>
     <tbody>
@@ -32,7 +32,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     La sélection du type de vitesse à utiliser pour calculer les animations est très importante car il existe une énorme différence entre les deux options. Les deux exemples suivants illustrent cette différence :</p>
   <ul class="colour">
     <li>Si vous avez une <span class="notranslate">sprite</span> qui dessine 1 image par <i>seconde</i> et que vous réglez la vitesse de l'image sur 0,5, elle dessinera à 0,5 image par seconde. Si la fréquence d'images de votre jeu est de 60 images par seconde, le site <span class="notranslate">sprite</span> affichera une image toutes les 120 images du jeu.</li>
@@ -42,7 +42,7 @@
   <p class="note"><b>IMPORTANT !</b> Cette fonction affectera la <b>ressource</b> <span class="notranslate">sprite</span>. Ainsi, toute modification apportée par cette fonction affectera <b>toutes les</b> instances qui utilisent le site <span class="notranslate">sprite</span> et toutes les instances futures également.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">sprite_set_speed(index, speed, type)</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_set_speed</span>(index, speed, type)</p>
   <table>
     <tbody>
       <tr>

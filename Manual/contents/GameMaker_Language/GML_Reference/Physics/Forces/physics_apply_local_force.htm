@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physique_appliquer_une_force_locale</title>
+  <title>physics_apply_local_force</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physique_appliquer_une_force_locale</h1>
+  <h1><span data-field="title" data-format="default">physics_apply_local_force</span></h1>
   <p>Une autre façon d'utiliser la force dans le monde physique est de l'appliquer <i>localement</i> à une instance. Cela signifie que la force et la direction de la force sont calculées en fonction de l'origine (ou de la position si elle n'a pas de <span class="notranslate">sprite</span>) de l'instance, sans tenir compte de la direction ou de la rotation qu'elle peut avoir dans la salle de jeu ou le monde physique. Il faut noter qu'avec cette fonction, les forces ne sont pas appliquées au centre de masse de l'objet, mais plutôt à un point relatif à l'instance et elles ne seront pas instantanément appliquées car elles dépendent des autres forces qui agissent sur l'objet (comme la gravité). Cette illustration montre comment fonctionne une force locale :</p>
   <p><img>Comme vous pouvez le constater, les coordonnées xlocal et ylocal sont calculées sur la base de la position de l'axe qui est <i>toujours</i> considérée comme l'origine de l'instance (0,0). Ainsi, quel que soit l'endroit de la pièce où se trouve l'objet, xlocal et ylocal seront toujours les mêmes. Vous devez ensuite décider où les composantes vectorielles de la force (xforce et yforce) doivent être positionnées par rapport à la position xlocal/ylocal. La force exacte est définie par le vecteur que nous obtenons à partir des composantes xforce/yforce par rapport à ces coordonnées - ce qui signifie simplement que la force est calculée comme la distance de xlocal/ylocal à xforce/yforce en Newtons, et la direction est l'angle que nous obtenons de xlocal/ylocal à xforce/yforce. Cela peut sembler un peu confus, mais il suffit de regarder l'illustration pour voir comment cela fonctionne, et cela vous évite de faire des calculs compliqués !</p>
   <p class="note"><b>REMARQUE</b>: Le monde physique utilise des mètres pour tous ses calculs, et le ratio de pixels par mètre est défini dans l'éditeur de pièce ou en utilisant la fonction <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">physics_apply_local_force(xlocal, ylocal, xforce, yforce)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_apply_local_force</span>(xlocal, ylocal, xforce, yforce)</p>
   <table>
     <tbody>
       <tr>

@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_sprite_get_id</h1>
+  <h1><span data-field="title" data-format="default">layer_sprite_get_id</span></h1>
   <p>Cette fonction peut être utilisée pour récupérer la valeur d'identification unique d'un élément <span class="notranslate">sprite</span> sur une couche. Vous fournissez l'ID de la couche (que vous obtenez lorsque vous créez la couche à l'aide de la fonction <a href="../General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a> ou lorsque vous utilisez le nom de la couche avec <a href="../General_Layer_Functions/layer_get_id.htm"><span class="inline">layer_get_id()</span></a>) et le nom de l'élément <span class="notranslate">sprite</span> tel que défini dans l'éditeur de salle. La fonction renvoie la valeur de l'ID associée à cet élément <span class="notranslate">sprite</span> sur la couche.</p>
   <p>Notez que cette fonction est spécifiquement conçue pour être utilisée avec <span class="notranslate">sprites</span> qui a été ajouté dans le <span class="notranslate">IDE</span> sur une couche d'actif, et si vous avez ajouté un <span class="notranslate">sprite</span> à une couche par le biais du code utilisant la fonction <a href="layer_sprite_create.htm"><span class="inline">layer_sprite_create()</span></a>Si vous avez ajouté un élément <span class="notranslate">sprite</span> à une couche par le biais d'un code utilisant la fonction , alors l'ID renvoyé par cette fonction doit être utilisé pour toute référence future (car cet élément n'aura pas de nom à transmettre à cette fonction).</p>
   <p>Si la couche spécifiée n'existe pas, ou si l'élément <span class="notranslate">sprite</span> donné est introuvable, la fonction renvoie -1.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">layer_sprite_get_id(layer_id, sprite_element_name)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_sprite_get_id</span>(layer_id, sprite_element_name)</p>
   <table>
     <tbody>
       <tr>

@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_draw_ext</h1>
+  <h1><span data-field="title" data-format="default">physics_particle_draw_ext</span></h1>
   <p>Cette fonction va dessiner un <span class="notranslate">sprite</span> à la position de toutes les particules qui partagent la même valeur de catégorie définie par l'utilisateur, et qui ont <span class="notranslate">flags</span> qui coïncide avec celles définies pour le masque. La valeur du masque est définie de la même manière que vous définissez le <span class="notranslate">flags</span> lors de la création des particules (voir les fonctions <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a> pour un exemple), c'est-à-dire en utilisant le <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>ou</i></a> &quot;|&quot; pour masquer les bits appropriés pour chaque drapeau.</p>
   <p class="note"><b>REMARQUE</b>: Cette fonction dessinera <b>toutes les</b> particules de la simulation physique avec <span class="notranslate">flags</span> qui coïncide avec celles du masque, qu'il s'agisse de particules individuelles ou de groupes, si la catégorie de l'utilisateur est la même.</p>
   <p>La particule dessinée ignorera les valeurs de couleur et d'alpha définies lors de sa création, et sera dessinée en utilisant les paramètres d'échelle, d'angle, de couleur et d'alpha donnés dans cette fonction. Notez que cette fonction sert uniquement à dessiner un <span class="notranslate">sprite</span> à la position de la particule et n'affecte en aucun cas le comportement de la particule.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">physics_particle_draw_ext(typemask, category, sprite, subimg, xscale, yscale, ang, col, alpha)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_particle_draw_ext</span>(typemask, category, sprite, subimg, xscale, yscale, ang, col, alpha)</p>
   <table>
     <tbody>
       <tr>

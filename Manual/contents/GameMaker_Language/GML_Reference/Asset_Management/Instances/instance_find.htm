@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_find</h1>
+  <h1><span data-field="title" data-format="default">instance_find</span></h1>
   <p>Toutes les instances ont un identifiant unique (<a href="Instance_Variables/id.htm"><span class="inline">id</span></a>) qui peut être utilisé pour les modifier et les manipuler pendant le déroulement d'un jeu, mais vous ne savez pas toujours quel est l'identifiant d'une instance spécifique et cette fonction peut vous aider car vous pouvez l'utiliser pour itérer à travers toutes les instances pour trouver ce dont vous avez besoin. Vous spécifiez l'objet dont vous voulez trouver l'instance et un nombre, et s'il y a une instance à cette position dans la liste des instances, la fonction renvoie l'id de cette instance, et sinon elle renvoie le <a href="../../../GML_Overview/Instance_Keywords.htm">mot clé</a> spécial <span class="inline"><b>noone</b></span>. Vous pouvez également utiliser le mot-clé <span class="inline"><b>all</b></span> pour parcourir toutes les instances d'une pièce, ainsi qu'un objet parent pour parcourir toutes les instances qui font partie de cette hiérarchie parent/enfant, et vous pouvez même spécifier une instance (si vous avez son <span class="inline">id</span>) pour vérifier si elle existe réellement dans la pièce actuelle. Veuillez noter qu'étant donné que les instances sont triées de manière <i>arbitraire</i>, il n'y a pas d'ordre spécifique à la manière dont les instances sont vérifiées par cette fonction, et toute instance peut se trouver dans n'importe quelle position.</p>
   <p>La valeur maximale de &quot;n&quot; dans cette fonction serait de</p>
   <ul class="colour">

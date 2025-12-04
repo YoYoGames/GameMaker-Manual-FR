@@ -51,10 +51,10 @@
         <tr>
           <td style=""><span class="inline">/uf=[user_folder]<strong></strong></span></td>
           <td style="">Le dossier utilisateur utilisé pour récupérer les informations sur les licences
-            <br>
-            <br>
+            <br />
+            <br />
             Sur <span class="notranslate">Windows</span>, il s'agit de <span class="inline"><span>%appdata%\GameMaker\&lt;user_name&gt;_&lt;number&gt;</span>
-            <br>
+            <br />
             Sur <span class="notranslate">macOS</span>, ce sera : <span class="inline"><span>~/.config/GameMaker/&lt;user_name&gt;_&lt;number&gt;</span> </td>
         </tr>
         <tr>
@@ -76,8 +76,8 @@
         <tr>
           <td style=""><span class="inline">/of=[output_folder_filename]</span></td>
           <td style="">Le répertoire de sortie où la compilation sera extraite ; ne spécifiez pas seulement un répertoire, car l'entrée de fin est toujours supprimée (par exemple, si vous spécifiez <span class="inline">d:\game\output</span>, les fichiers de jeu seront placés dans <span class="inline">d:\game</span>).
-            <br>
-            <br>
+            <br />
+            <br />
             Si ce paramètre n'est pas spécifié, un répertoire nommé <span class="inline">output</span> sera créé dans le même répertoire que le fichier <span class="inline">.bat</span> (ou à partir duquel la commande est exécutée), contenant les fichiers de compilation extraits. </td>
         </tr>
         <tr>
@@ -279,21 +279,21 @@
         <tr>
           <td style=""><span class="inline">Runtime ListInstalled [directory]</span></td>
           <td style="">Liste les <span class="notranslate">runtimes</span> disponibles dans le dossier actuel (<span class="inline">directory</span>= chemin complet du dossier)
-            <br>
-            <br>
+            <br />
+            <br />
             Vous pouvez spécifier un répertoire dans lequel chercher, mais s'il n'est pas spécifié, la recherche se fera par défaut dans le répertoire courant.
-            <br>
-            <br>
+            <br />
+            <br />
             Cette commande vérifie également s'il existe un fichier <span class="inline">receipt.json</span> et un dossier <span class="inline">manifest</span> dans le répertoire (en s'assurant qu'il s'agit bien d'un <span class="notranslate">runtime</span>). </td>
         </tr>
         <tr>
           <td style=""><span class="inline">Runtime Info [version]</span></td>
           <td style="">Imprime des informations sur le plus récent <span class="notranslate">runtime</span> sur le flux donné ; a également besoin d'un fichier de licence pour afficher des informations sur les modules disponibles pour l'utilisateur.
-            <br>
-            <br>
+            <br />
+            <br />
             <span class="inline">version</span> peut être soit une chaîne utilisée pour rechercher dans les titres des flux (par exemple : <span class="inline">&quot;739&quot;</span> afficherait des informations sur toutes les constructions contenant 739 dans leur numéro de version), soit <span class="inline">all</span> pour afficher des informations sur tous les flux.
-            <br>
-            <br>
+            <br />
+            <br />
             Il énumérera les modules avec les noms de fichiers <span class="inline">.zip</span> pour chaque module </td>
         </tr>
         <tr>
@@ -303,11 +303,11 @@
         <tr>
           <td style=""><span class="inline">Runtime Verify [folder=.]</span></td>
           <td style="">Calcule les sommes de contrôle pour tous les fichiers installés et les compare aux sommes de contrôle écrites dans le manifeste <span class="inline">folder</span>. Vous pouvez spécifier un dossier à vérifier, mais si ce n'est pas le cas, il s'agira par défaut du répertoire courant.
-            <br>
-            <br>
+            <br />
+            <br />
             Cela signalera tous les fichiers où les sommes de contrôle ne correspondent pas, les fichiers manquants et les fichiers qui ne devraient pas être là.
-            <br>
-            <br>
+            <br />
+            <br />
             Notez que les fichiers manifestes eux-mêmes ne sont pas vérifiés et qu'un utilisateur peut modifier les fichiers manifestes pour qu'ils correspondent à ceux qui sont installés. </td>
         </tr>
       </tbody>
@@ -348,8 +348,8 @@
         <tr>
           <td style=""><span class="inline">/target=[list_of_targets]</span></td>
           <td style="">Liste de cibles séparées par des virgules au format <span class="inline">PLATFORM|DEVICE</span>, par exemple : <span class="inline">/target=&quot;Windows|Local,HTML|Firefox&quot;</span>
-            <br>
-            <br>
+            <br />
+            <br />
             Si vous spécifiez <strong>all</strong>, les tests tenteront de s'exécuter pour chaque dispositif du fichier <span class="inline">devices.json</span>. </td>
         </tr>
       </tbody>

@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_tell</h1>
+  <h1><span data-field="title" data-format="default">buffer_tell</span></h1>
   <p>Lorsque vous lisez ou écrivez des données sur un site <span class="notranslate">buffer</span> à l'aide de l'option <a href="buffer_read.htm"><span class="inline">buffer_read()</span></a> ou <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a> la position de recherche actuelle est avancée par les octets écrits ou lus.
     cette fonction vous permet d'obtenir la position de recherche actuelle pour l'utiliser dans d'autres fonctions de <span class="notranslate">buffer</span>. Par exemple, si l'alignement de <span class="notranslate">buffer</span> est fixé à 4 octets et que vous écrivez une seule donnée d'un octet, faites un <span class="inline">buffer_tell()</span>,
     Vous obtiendrez une valeur de retour de 1. Cependant, si vous écrivez un autre morceau de données, également d'un octet, et que vous faites un <span class="inline">buffer_tell()</span>, vous obtiendrez une valeur de retour de 5, car l'alignement a &quot;rembourré&quot; les données à cette position.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">buffer_tell(buffer);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_tell</span>(buffer);</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>séquence_couche_créer</title>
+  <title>layer_sequence_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>séquence_couche_créer</h1>
+  <h1><span data-field="title" data-format="default">layer_sequence_create</span></h1>
   <p>Avec cette fonction, vous pouvez créer une instance d'un actif de séquence sur la couche donnée. Vous fournissez l'ID du calque qui peut être une chaîne de caractères du nom du calque - tel que défini dans l'éditeur de la pièce - ou l'ID unique du calque - tel que retourné par la fonction <a href="../General_Layer_Functions/layer_get_id.htm"><span class="inline">layer_get_id()</span></a>ainsi que la position X et Y dans la pièce pour créer la séquence, et enfin l'ID de la séquence à créer. L'ID de la séquence est la constante de nom que vous avez définie dans l'Asset Browser pour la séquence. La fonction renvoie l'ID unique de l'élément de la séquence, qui peut ensuite être utilisé dans toutes les autres fonctions de calque pour les séquences, ou peut être utilisé pour récupérer l'instance de la séquence <span class="notranslate">struct</span> en utilisant la fonction <a href="layer_sequence_get_sequence.htm"><span class="inline">layer_sequence_get_instance()</span></a>.</p>
   <p>Il convient de noter que si la séquence contient des pistes objets, leurs instances seront créées dès la création de l'élément de séquence lui-même, indépendamment de l'emplacement de leurs clés d'actifs sur le <a href="../../../../../The_Asset_Editors/Sequence_Properties/Using_The_Dope_Sheet.htm">Dope Sheet</a>. Le contrôleur de séquence se contente de basculer la <a href="../../Instances/Instance_Variables/visible.htm">visibilité</a> de l'instance pour la cacher et l'afficher en fonction de la position et de la durée de la clé d'actif de la piste, et <em>ne </em>la crée <em>pas </em>et la détruit de manière répétée. Par conséquent, les instances exécutent leurs événements Create lorsque l'élément de séquence est créé et non lorsque leurs clés d'immobilisation commencent.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">layer_sequence_create(layer_id, x, y, sequence_id)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_sequence_create</span>(layer_id, x, y, sequence_id)</p>
   <table>
     <tbody>
       <tr>

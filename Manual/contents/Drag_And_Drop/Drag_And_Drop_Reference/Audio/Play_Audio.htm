@@ -45,7 +45,7 @@
       </tr>
       <tr>
         <td><span class="notranslate">Offset</span></td>
-        <td>Le temps (en secondes) pour définir le point de départ (par défaut 0). Les valeurs plus longues que la longueur du son donné sont ignorées.<br>
+        <td>Le temps (en secondes) pour définir le point de départ (par défaut 0). Les valeurs plus longues que la longueur du son donné sont ignorées.<br />
           Le décalage de la ressource sonore (position de la piste) est utilisé lorsque ce champ est laissé vide.</td>
       </tr>
       <tr>
@@ -56,10 +56,10 @@
   </table>
   <p> </p>
   <h4>Exemple 1 :</h4>
-  <p><img>Le code du bloc d'action ci-dessus vérifie si un bouton de la souris a été enfoncé et, si c'est le cas, il vérifie ensuite une variable globale pour voir si elle n'est pas <span class="inline">true</span>. Si ce n'est pas <span class="inline">true</span>, un son est joué (et mis en boucle) et la variable globale prend la valeur <span class="inline">true</span>, sinon le son est arrêté et la variable globale prend la valeur <span class="inline">false</span>.<br>
+  <p><img>Le code du bloc d'action ci-dessus vérifie si un bouton de la souris a été enfoncé et, si c'est le cas, il vérifie ensuite une variable globale pour voir si elle n'est pas <span class="inline">true</span>. Si ce n'est pas <span class="inline">true</span>, un son est joué (et mis en boucle) et la variable globale prend la valeur <span class="inline">true</span>, sinon le son est arrêté et la variable globale prend la valeur <span class="inline">false</span>.<br />
     Le son est joué avec les paramètres par défaut : un gain et un multiplicateur de hauteur de 1 et un décalage de 0 (le décalage par défaut de l'actif sonore).</p>
   <h4>Exemple 2 :</h4>
-  <p><img>Le code du bloc d'action ci-dessus définit d'abord la position de la piste de la ressource sonore &quot;snd_MusicBoss&quot; à 20 secondes. Il vérifie ensuite si la variable d'instance &quot;skip_intro&quot; est définie sur <span class="inline">true</span>. Si c'est le cas, il commence la lecture de &quot;snd_MusicBoss&quot; à 20 secondes, la valeur de la position de la piste définie précédemment (car le champ &quot;Offset&quot; est laissé vide et le décalage de l'<strong>actif</strong> est utilisé). Les 20 premières secondes de l'audio sont sautées.<br>
+  <p><img>Le code du bloc d'action ci-dessus définit d'abord la position de la piste de la ressource sonore &quot;snd_MusicBoss&quot; à 20 secondes. Il vérifie ensuite si la variable d'instance &quot;skip_intro&quot; est définie sur <span class="inline">true</span>. Si c'est le cas, il commence la lecture de &quot;snd_MusicBoss&quot; à 20 secondes, la valeur de la position de la piste définie précédemment (car le champ &quot;Offset&quot; est laissé vide et le décalage de l'<strong>actif</strong> est utilisé). Les 20 premières secondes de l'audio sont sautées.<br />
     Si la variable d'instance &quot;skip_intro&quot; est définie sur <span class="inline">false</span>, la lecture de &quot;snd_MusicBoss&quot; commence également, mais comme le champ &quot;Offset&quot; a été défini sur 0, la lecture du son commencera dès le début. La position de la piste de 20 secondes définie précédemment pour la <strong>ressource</strong> sonore est ignorée.</p>
   <p> </p>
   <p> </p>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physique_joint_friction_créer</title>
+  <title>physics_joint_friction_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physique_joint_friction_créer</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_friction_create</span></h1>
   <p>Le joint de friction est un peu différent de tous les autres joints de la simulation physique en ce sens que la connexion créée ne contraindra pas la position ou le mouvement des instances, mais plutôt leur vitesse et leur rotation. Cela fonctionne en prenant les valeurs d'entrée maximales pour la force et le couple et en les appliquant à la seconde fixation pour ramener la vitesse et le moment angulaire aux mêmes valeurs que celles de la première instance. Ainsi, si vous avez une instance stationnaire et une instance mobile et que vous les reliez par un joint de friction, l'instance mobile ralentira progressivement jusqu'à ce qu'elle soit également stationnaire. Si les deux instances étaient en mouvement, la vitesse de déplacement de la seconde instance sera modifiée pour correspondre à celle de la première instance.</p>
   <p><img>Comme pour la plupart des autres joints, vous fournissez les instances à joindre ensemble, ainsi que la position à laquelle le joint doit être créé dans la pièce. Vous fournissez ensuite la force maximale et le couple maximal (friction directionnelle et rotationnelle), et si vous définissez la valeur &quot;col&quot; sur <span class="inline">true</span>, les deux instances peuvent interagir et entrer en collision l'une avec l'autre, mais <i>seulement</i> si elles ont des événements de collision, mais si elle est définie sur <span class="inline">false</span>, elles n'entreront jamais en collision.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">physics_joint_friction_create(inst1, inst2, anchor_x, anchor_y, max_force, max_torque, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_friction_create</span>(inst1, inst2, anchor_x, anchor_y, max_force, max_torque, col)</p>
   <table>
     <tbody>
       <tr>

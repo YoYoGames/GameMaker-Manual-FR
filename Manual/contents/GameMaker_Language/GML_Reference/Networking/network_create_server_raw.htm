@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>réseau_créer_serveur_raw</title>
+  <title>network_create_server_raw</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>réseau_créer_serveur_raw</h1>
+  <h1><span data-field="title" data-format="default">network_create_server_raw</span></h1>
   <p>Cette fonction est utilisée pour créer un nouveau serveur réseau pour votre jeu, en utilisant l'un des protocoles de connexion autorisés (voir les constantes listées ci-dessous). Vous fournissez le type de serveur, puis vous lui donnez un port à utiliser, et enfin le nombre maximum de connexions autorisées à tout moment au serveur (notez que ce nombre est à votre discrétion, mais un trop grand nombre de clients connectés saturera le réseau ou le CPU du périphérique ne sera pas en mesure de gérer le traitement de ce nombre de joueurs, donc à utiliser avec précaution). La fonction renvoie un <i>identifiant</i> unique qui doit être stocké dans une variable et utilisé pour identifier le serveur dans toutes les autres fonctions réseau, ou une valeur inférieure à 0 si la connexion échoue.</p>
   <div data-conref="../../../assets/snippets/network_socket_types.hts"> </div>
   <p>Comme cela crée un serveur &quot;brut&quot;, il n'acceptera ni n'utilisera aucun des en-têtes de données intégrés à <span class="notranslate">GameMaker</span> pour la communication, et vous devrez donc utiliser les fonctions <a href="network_send_raw.htm"><span class="inline">network_send_raw()</span></a> et <a href="network_send_udp_raw.htm"><span class="inline">network_send_udp_raw()</span></a> pour envoyer des données non formatées au serveur créé.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">network_create_server_raw(type, port, max_client);</p>
+  <p class="code"><span data-field="title" data-format="default">network_create_server_raw</span>(type, port, max_client);</p>
   <table>
     <tbody>
       <tr>

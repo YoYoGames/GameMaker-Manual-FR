@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>camera_set_update_script</h1>
+  <h1><span data-field="title" data-format="default">camera_set_update_script</span></h1>
   <p>Cette fonction peut être utilisée pour définir une <a href="../../../GML_Overview/Script_Functions.htm">fonction de script</a> qui sera appelée à chaque image de jeu où la caméra est affectée à un port de vue visible et actif. Vous donnez la valeur unique de l'ID de la caméra (telle que renvoyée par les différentes fonctions de <span class="inline">camera_create</span> ) et l'ID de la fonction à appeler. L'ordre dans lequel les fonctions attachées aux caméras et le rendu réel de la vue de la caméra sont les suivants :</p>
   <ul class="colour">
     <li>Les caméras de tous les ports de vue visibles et actifs ont leur <b>fonction de mise à jour </b>appelée</li>
@@ -30,7 +30,7 @@
   <p>L'application d'une fonction de mise à jour personnalisée à une caméra remplace son comportement de mise à jour par défaut. Par exemple, si vous avez configuré votre caméra pour qu'elle suive un objet (par exemple, <span class="inline2">obj_player</span>) lorsque vous appelez <span class="inline"><a href="camera_create_view.htm">camera_create_view()</a></span>, ou si vous l'avez configuré ainsi dans les propriétés de la pièce, elle cessera de suivre cet objet dès qu'un script de mise à jour personnalisé sera défini.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">camera_set_update_script(camera_id, script)</p>
+  <p class="code"><span data-field="title" data-format="default">camera_set_update_script</span>(camera_id, script)</p>
   <table>
     <tbody>
       <tr>

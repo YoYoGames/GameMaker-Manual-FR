@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>json_parse</h1>
+  <h1><span data-field="title" data-format="default">json_parse</span></h1>
   <p>Cette fonction peut être utilisée pour analyser une chaîne JSON (soit créée précédemment à l'aide de <a href="json_stringify.htm"><span class="notranslate">json_stringify</span></a> ou à partir de toute source valide), et la convertir en une collection de tableaux ou <span class="notranslate">structs</span>, où un tableau est l'équivalent d'un tableau JSON et un <span class="notranslate">struct</span> est l'équivalent d'un objet JSON. Vous fournissez la chaîne à analyser et la fonction renvoie le tableau de premier niveau ou <span class="notranslate">struct</span> qui peut ensuite être utilisé dans votre code. Si vous n'êtes pas sûr du contenu du JSON, vous pouvez utiliser les différentes <a href="../../Variable_Functions/Variable_Functions.htm">fonctions variables</a> (telles que <a href="../../Variable_Functions/typeof.htm"><span class="inline">typeof()</span></a> et <a href="../../Variable_Functions/variable_struct_get_names.htm"><span class="inline">variable_struct_get_names()</span></a> dans le cas d'un <span class="notranslate">struct</span>) pour vérifier le contenu retourné. Notez que si vous essayez d'analyser une valeur invalide (c'est-à-dire qui n'est pas une chaîne de caractères), une exception sera levée.</p>
   <p>Lorsque vous utilisez cette fonction, vous devez tenir compte de certains éléments importants :</p>
   <ul class="colour">
@@ -24,7 +24,7 @@
   </ul>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">json_parse(json)</p>
+  <p class="code"><span data-field="title" data-format="default">json_parse</span>(json)</p>
   <table>
     <tbody>
       <tr>
@@ -48,12 +48,12 @@
     show_debug_message(data);
   </p>
   <p>Le code ci-dessus crée une nouvelle chaîne contenant un objet JSON valide, puis appelle <span class="inline">json_parse()</span> pour convertir cette chaîne en <span class="notranslate">GML</span> <span class="notranslate">struct</span>. Il imprime ensuite le résultat dans le journal de débogage.</p>
-  <p class="note"><span class="note">REMARQUE</span> Vous remarquerez que la chaîne JSON contient une barre oblique inverse<span class="inline2">(\)</span> avant chaque guillemet double (<span class="inline2">&quot;</span>) :<br>
-    <br>
-   <span class="inline2">json = &quot;{ \ <strong>&quot; </strong></span>monObj<br>
-    <br>
-    Cela permet de s'assurer que le guillemet double est lu comme un caractère réel dans la chaîne, au lieu d'être lu comme une partie du code et de fermer la chaîne prématurément. De cette façon, nous utilisons une barre oblique inverse pour &quot;échapper&quot; au guillemet double.<br>
-    <br>
+  <p class="note"><span class="note">REMARQUE</span> Vous remarquerez que la chaîne JSON contient une barre oblique inverse<span class="inline2">(\)</span> avant chaque guillemet double (<span class="inline2">&quot;</span>) :<br />
+    <br />
+   <span class="inline2">json = &quot;{ \ <strong>&quot; </strong></span>monObj<br />
+    <br />
+    Cela permet de s'assurer que le guillemet double est lu comme un caractère réel dans la chaîne, au lieu d'être lu comme une partie du code et de fermer la chaîne prématurément. De cette façon, nous utilisons une barre oblique inverse pour &quot;échapper&quot; au guillemet double.<br />
+    <br />
     Cependant, si vous chargez JSON à partir d'un fichier externe, il n'est pas nécessaire d'échapper aux caractères dans ce fichier, ce qui pourrait entraîner des erreurs lors de l'analyse.
   </p>
   <hr />

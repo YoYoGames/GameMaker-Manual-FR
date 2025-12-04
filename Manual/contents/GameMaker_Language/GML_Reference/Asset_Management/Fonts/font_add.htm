@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_add</h1>
+  <h1><span data-field="title" data-format="default">font_add</span></h1>
   <p>Cette fonction peut être utilisée pour ajouter une police à votre jeu à partir d'un fichier de police présent dans les <a data-xref="{text}" href="../../../../Settings/Included_Files.htm#h">fichiers inclus</a>. Vous pouvez définir la taille de la police (en points), ainsi que si la police doit être <b>en gras</b> ou en <i>italique</i>, et vous pouvez également définir la gamme de caractères à inclure. La fonction renvoie une valeur d'<i>index</i> qui doit être stockée dans une variable car elle sera nécessaire dans tout code ultérieur faisant référence à cette police, ou elle renverra <span class="inline">-1</span> si la fonction échoue pour une raison quelconque.</p>
   <p>Notez que le fichier de police doit être un fichier <span class="inline">*.ttf</span> ou <span class="inline">*.otf</span>, ce qui peut également être utile pour ajouter des polices non standard comme les polices asiatiques ou arabes.</p>
   <p class="note"><b>ATTENTION ! </b>Si vous incluez une telle police dans les fichiers inclus, elle <b>doit faire l'objet d'une licence</b> pour être distribuée avec le jeu.</p>
@@ -25,7 +25,7 @@
   <p class="note"><b><span class="note">NOTE</span> </b>Lorsque vous chargez une police dans <span data-keyref="GameMaker Name">GameMaker</span>, vous devez penser à la supprimer (avec la touche <span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span>) lorsqu'elle n'est plus nécessaire, sinon il y a un risque de fuite de mémoire qui ralentira et finira par faire planter votre jeu.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">font_add(name, size, bold, italic, first, last);</p>
+  <p class="code"><span data-field="title" data-format="default">font_add</span>(name, size, bold, italic, first, last);</p>
   <table>
     <tbody>
       <tr>

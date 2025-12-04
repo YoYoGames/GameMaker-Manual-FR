@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gc_target_frame_time</h1>
+  <h1><span data-field="title" data-format="default">gc_target_frame_time</span></h1>
   <p>Cette fonction permet d'<span>indiquer au ramasseur de déchets qu'il ne doit pas dépasser le temps spécifié pour l'exécution de chaque trame. La fonction prend une valeur de temps <span>spécifiée en microsecondes (où 1 000 000 microsecondes est égal à une seconde) et le temps cible par défaut est de 100 microsecondes.</span></span></p>
   <p><span><span>Veuillez noter qu'il s'agit simplement d'une </span></span><span>car certaines opérations doivent toujours être exécutées en une seule fois et peuvent parfois prendre plus de temps que le temps<em>cible</em>. Notez également que l'<span>augmentation du temps cible rendra le ramasseur de déchets plus réactif aux changements rapides de l'utilisation de la mémoire et entraînera une libération plus rapide de la mémoire, bien qu'en pratique cela ne soit pas nécessaire dans la plupart des cas. Notez également que le fait de définir la durée cible de la trame à 0 <em>n'</em>entraînera <em>pas </em>l'arrêt complet du collecteur - il effectuera toujours une quantité minimale de travail à chaque trame. Pour désactiver complètement le collecteur, utilisez la fonction <span class="inline"><a href="gc_enable.htm">gc_enable()</a></span> </span>. </span></p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">gc_target_frame_time(time);</p>
+  <p class="code"><span data-field="title" data-format="default">gc_target_frame_time</span>(time);</p>
   <table>
     <tbody>
       <tr>

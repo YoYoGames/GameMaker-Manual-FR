@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physique_appliquer_la_force</title>
+  <title>physics_apply_force</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physique_appliquer_la_force</h1>
+  <h1><span data-field="title" data-format="default">physics_apply_force</span></h1>
   <p>Lorsque vous travaillez avec la physique, vous devez appliquer non seulement la gravité aux objets, mais aussi les forces. Une force est toute influence qui entraîne un changement de vitesse, de direction ou de forme d'un objet. Dans le monde physique de <span data-keyref="GameMaker Name">GameMaker</span>, elle est définie de la même manière que la gravité, en obtenant le vecteur des deux composantes xforce/yforce. Il convient de noter que les forces ne sont pas appliquées au centre de masse de l'objet, mais plutôt à un point de la pièce et qu'elles modifieront la direction et la vitesse ainsi que le couple (rotation) en fonction des autres forces qui agissent sur l'objet (comme la gravité). Voici un exemple d'image pour aider à illustrer :</p>
   <p><img>Dans l'exemple ci-dessus, l'objet ressort situé en bas a créé une force sur l'objet boule qui l'a fait bouger dans une direction différente. La force exacte est définie par le vecteur obtenu à partir des composantes xforce/yforce par rapport aux coordonnées xpos/ypos - ce qui signifie simplement que la force est calculée comme la distance entre xpos/ypos et xforce/yforce en newtons (un newton étant défini comme la quantité de force nette nécessaire pour accélérer une masse d'un kilogramme à une vitesse d'un mètre par seconde au carré) et la direction est l'angle obtenu entre xpos/ypos et xforce/yforce. Le code pour une collision comme celle décrite ci-dessus serait placé dans l'événement de collision de l'objet ressort et ressemblerait à l'exemple ci-dessous.</p>
   <p class="note"><b>REMARQUE</b>: Le monde physique utilise des mètres pour tous ses calculs, et le ratio de pixels par mètre est défini dans l'éditeur de pièce ou en utilisant la fonction <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">physics_apply_force(xpos, ypos, xforce, yforce)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_apply_force</span>(xpos, ypos, xforce, yforce)</p>
   <table>
     <tbody>
       <tr>

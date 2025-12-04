@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>argument</h1>
+  <h1><span data-field="title" data-format="default">argument</span></h1>
   <p>Cette variable contient un <a href="../../Arrays.htm">tableau</a> qui est utilisé avec la variable en lecture seule <a href="argument_count.htm"><span class="notranslate">argument_count</span></a> dans les <a href="../../Script_Functions.htm">fonctions</a> ou <a href="../../Method_Variables.htm">méthodes</a> de <a href="../../Script_Functions.htm">script</a>. Chaque position du tableau contient une valeur d'entrée pour la fonction et est spécifiquement utilisée avec les fonctions à arguments <em>variables </em>.</p>
   <p>Notez qu'il existe également une série de variables indépendantes de portée globale qui peuvent également être utilisées dans les fonctions définies par l'utilisateur pour référencer les différents arguments d'entrée : <span class="inline">argument0</span>, <span class="inline">argument1</span>, <span class="inline">argument2</span>, etc... jusqu'à <span><span class="inline">argument15</span></span>.</p>
   <p class="note"><strong>NOTE</strong>: Ceci n'est plus strictement requis et est fourni pour le support de l'héritage plus qu'autre chose. Toutes les fonctions définies par l'utilisateur accepteront des arguments variables, et tout argument passé dans une fonction qui ne fait pas partie des entrées nommées sera initialisé à <span class="inline" style="font-size: 14px">undefined</span> par défaut, ce qui peut être vérifié en utilisant la fonction <a href="../../../GML_Reference/Variable_Functions/is_undefined.htm">is_undefined()</a>.</p>

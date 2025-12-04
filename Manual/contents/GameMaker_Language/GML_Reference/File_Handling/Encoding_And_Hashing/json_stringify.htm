@@ -15,15 +15,15 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>json_stringify</h1>
+  <h1><span data-field="title" data-format="default">json_stringify</span></h1>
   <p>Avec cette fonction, vous pouvez convertir des tableaux et <span class="notranslate">structs</span> simples ou imbriqués en une chaîne JSON valide. Vous fournissez la valeur initiale à utiliser (un index de tableau ou une référence <span class="notranslate">struct</span> ), puis la fonction la &quot;stringifiera&quot;, en la convertissant en une chaîne JSON (en convertissant les tableaux <span class="notranslate">GameMaker</span> en tableaux JSON, et <span class="notranslate">GameMaker</span> <span class="notranslate">structs</span> en objets JSON).</p>
   <p>Lorsque vous utilisez cette fonction, vous devez tenir compte de certains éléments importants :</p>
   <ul class="colour">
     <li>La fonction <em>ne </em> convertira <em>pas </em> les cartes DS, les listes ou toute autre structure de données en JSON, et stockera simplement la valeur de l'index interne de la structure (qui n'est pas d'une grande utilité car l'index changera d'une exécution du jeu à l'autre), et en tant que tel, vous ne devriez pas essayer de stringifier une valeur qui pourrait contenir des références à des structures de données (pour cela vous avez <a href="json_encode.htm"><span class="inline">json_encode()</span></a>).</li>
-    <li>La fonction convertira à peu près n'importe quelle valeur en une chaîne JSON &quot;valide&quot;. Toutefois, les valeurs réelles contenues dans la chaîne peuvent ne pas correspondre exactement à ce que vous attendez en raison du mode de fonctionnement de la norme JSON :<br>
-      <br>
-      &quot;JSON est agnostique quant aux nombres. Dans tout langage de programmation, il peut y avoir une variété de types de nombres de différentes capacités et compléments, fixes ou flottants, binaires ou décimaux. Cela peut rendre difficile l'échange entre différents langages de programmation. Au lieu de cela, JSON offre uniquement la représentation des nombres que les humains utilisent : une séquence de chiffres. Tous les langages de programmation savent comment donner un sens aux séquences de chiffres, même s'ils ne sont pas d'accord sur les représentations internes.&quot;<br>
-      <br>
+    <li>La fonction convertira à peu près n'importe quelle valeur en une chaîne JSON &quot;valide&quot;. Toutefois, les valeurs réelles contenues dans la chaîne peuvent ne pas correspondre exactement à ce que vous attendez en raison du mode de fonctionnement de la norme JSON :<br />
+      <br />
+      &quot;JSON est agnostique quant aux nombres. Dans tout langage de programmation, il peut y avoir une variété de types de nombres de différentes capacités et compléments, fixes ou flottants, binaires ou décimaux. Cela peut rendre difficile l'échange entre différents langages de programmation. Au lieu de cela, JSON offre uniquement la représentation des nombres que les humains utilisent : une séquence de chiffres. Tous les langages de programmation savent comment donner un sens aux séquences de chiffres, même s'ils ne sont pas d'accord sur les représentations internes.&quot;<br />
+      <br />
       Pour plus d'informations, consultez la <a href="http://www.ecma-international.org/publications/standards/Ecma-404.htm">norme JSON de l'ECMA</a>.
     </li>
     <li>Si vous incluez un int64 dans les valeurs à convertir en JSON, il l'écrira comme un <i>int</i> s'il est dans la plage valide pour un int32, comme un <i>double</i> s'il peut le faire sans perdre de précision ou (si aucun de ces cas n'est applicable) comme une <i>chaîne</i> avec un identifiant &quot;<span class="inline">@i64@</span>&quot; avant et &quot;<span class="inline">$i64$</span>&quot; après. Lorsque vous analyserez à nouveau le JSON, <span data-keyref="GameMaker Name">GameMaker</span> récupérera ces identifiants et reconvertira la valeur en int64. Cela signifie que si le JSON est destiné à un serveur ou à une autre cible non GameMaker, ces valeurs ne seront pas appropriées et doivent donc être évitées.</li>
@@ -34,7 +34,7 @@
   <p> </p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">json_stringify(val)</p>
+  <p class="code"><span data-field="title" data-format="default">json_stringify</span>(val)</p>
   <table>
     <tbody>
       <tr>

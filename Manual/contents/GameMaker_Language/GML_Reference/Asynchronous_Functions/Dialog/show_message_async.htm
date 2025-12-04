@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>show_message_async</h1>
+  <h1><span data-field="title" data-format="default">show_message_async</span></h1>
   <p>Cette fonction ouvre une fenêtre et affiche le message que vous avez défini dans la fonction à l'utilisateur. Il s'agit d'une fonction asynchrone, et en tant que telle, <span data-keyref="GameMaker Name">GameMaker</span> <i>ne</i> bloque <i>pas</i> le périphérique sur lequel elle est exécutée en attendant une réponse, mais continue à exécuter les événements normalement. Une fois que l'utilisateur a appuyé sur le bouton &quot;OK&quot;, un événement asynchrone est déclenché. <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm"><b>Dialogue</b></a> est déclenché et, pour la durée de cet événement <i>uniquement</i>, une ds_map sera stockée dans la variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
   <p>Cette carte contiendra les deux clés, &quot;id&quot; et &quot;status&quot;, &quot;id&quot; étant la valeur renvoyée par la fonction lorsqu'elle a été appelée, et &quot;status&quot; étant soit <span class="inline">true</span> si le bouton &quot;Okay&quot; a été pressé, soit <span class="inline">false</span> si le message a été annulé (si disponible, car toutes les plateformes cibles ne permettent pas l'annulation des dialogues).</p>
   <p class="note"><strong><em><span class="note">NOTE</span></em></strong><em> Cette fonction est <span data-keyref="Dialog for debug only"> <strong>réservée à un usage de débogage et de test</strong></span>et ne doit pas être utilisée dans les jeux publiés. Dans ce cas, vous devez créer une interface utilisateur personnalisée pour recevoir les entrées des joueurs, de manière à avoir un contrôle total sur l'apparence et le comportement des boîtes de dialogue.</em></p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">show_message_async(string);</p>
+  <p class="code"><span data-field="title" data-format="default">show_message_async</span>(string);</p>
   <table>
     <tbody>
       <tr>

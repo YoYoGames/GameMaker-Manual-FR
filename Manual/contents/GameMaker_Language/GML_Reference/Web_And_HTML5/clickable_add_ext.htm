@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Ajout d'un texte cliquable</title>
+  <title>clickable_add_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Ajout d'un texte cliquable</h1>
+  <h1><span data-field="title" data-format="default">clickable_add_ext</span></h1>
   <p>Avec cette fonction, vous pouvez créer une icône cliquable personnalisée qui agit comme un &quot;bouton&quot; en dehors du canevas de jeu, mais dans la fenêtre du navigateur elle-même. La fonction renvoie une valeur d'identification qui doit être stockée dans une variable à utiliser dans toutes les autres fonctions de bouton qui font référence au nouveau bouton cliquable. Cette fonction est très utile pour empêcher le navigateur de créer une fenêtre pop-up lorsqu'on clique sur le bouton, car tout est fait par <span data-keyref="GameMaker Name">GameMaker</span> lui-même.</p>
   <p>Cette fonction fonctionne exactement de la même manière que la fonction <a href="clickable_add.htm"><span class="inline">clickable_add()</span></a> où vous devez définir la position par rapport au (0,0) de la fenêtre du navigateur, donner l'entrée de la page de texture pour le <span class="notranslate">sprite</span> que vous souhaitez que l'icône du bouton ait (voir : <a href="../Asset_Management/Sprites/Sprite_Information/sprite_get_tpe.htm"><span class="inline">sprite_get_tpe()</span></a>), spécifier soit une URL à ouvrir, soit un script (du navigateur d'actifs de <span data-keyref="GameMaker Name">GameMaker</span>) à ouvrir ou à exécuter, puis définir la cible et les paramètres à utiliser. Cependant, cette fonction dispose également de deux options supplémentaires qui vous permettent de définir l'alpha de l'icône de 0 (totalement transparent) à 1 (totalement opaque) et l'échelle de l'icône, qui est une valeur multiplicatrice appliquée à l'adresse <span class="notranslate">sprite</span> utilisée. Ainsi, une valeur de 1 correspond à l'échelle par défaut, tandis que (par exemple) 0,5 correspond à la moitié de l'échelle et 2 au double.</p>
   <p>Il convient également de noter que si l'argument URL que vous transmettez est le nom d'une <a href="../../GML_Overview/Script_Functions.htm">fonction de script</a> (c'est-à-dire qu'il ne commence pas par &quot;http://&quot;) ET que le script s'appelle <span class="inline"><b>gmcallback_*</b></span>, vous pouvez obtenir des entrées directes dans un événement html5. Les noms des fonctions de script de <span data-keyref="GameMaker Name">GameMaker</span> <i>ne</i> sont <i>pas</i> obscurcis s'ils commencent par <span class="inline">gmcallback_</span>.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">clickable_add_ext(x, y, tpe, url, target, params, alpha, scale);</p>
+  <p class="code"><span data-field="title" data-format="default">clickable_add_ext</span>(x, y, tpe, url, target, params, alpha, scale);</p>
   <table>
     <tbody>
       <tr>

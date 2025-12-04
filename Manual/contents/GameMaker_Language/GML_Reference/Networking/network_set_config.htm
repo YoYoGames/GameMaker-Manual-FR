@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>réseau_set_config</title>
+  <title>network_set_config</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>réseau_set_config</h1>
+  <h1><span data-field="title" data-format="default">network_set_config</span></h1>
   <p>Cette fonction vous permet de définir différentes configurations de réseau.</p>
   <p class="note"><b>NOTE</b>: Cette fonction ne fonctionnera pas si elle est utilisée dans un projet fonctionnant sur la cible HTML5.</p>
   <p>Ces configurations sont données comme des <b>constantes</b> et le réglage dépendra de la constante que vous avez choisie. Le tableau ci-dessous répertorie les constantes disponibles et leurs paramètres :</p>
@@ -65,7 +65,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     La première option (<span class="inline">network_config_connect_timeout</span>) définit simplement le délai de connexion à un serveur, mais ne modifie pas le comportement de la connexion, à part le temps d'attente. Il est recommandé de ne pas fixer une valeur trop basse et de la maintenir à environ 1000 pour un jeu en réseau local uniquement ou 4000 pour Internet, sinon le jeu risque de ne pas se connecter de manière aléatoire. Si vous souhaitez définir une valeur de délai d'attente pour l'envoi/la réception de paquets, utilisez la fonction <a href="network_set_timeout.htm"><span class="inline">network_set_timeout()</span></a>.</p>
   <p>La deuxième option (<span class="inline">network_config_use_non_blocking_socket</span>) signifie que les fonctions <span class="inline">network_connect_*</span> (non asynchrones) renverront toutes un <span class="inline">socket_id</span> instantanément, <i>mais que vous ne pourrez pas envoyer ou recevoir sur cette socket avant d'avoir reçu un événement réseau asynchrone</i>. L'événement déclenché aura la clé &quot; type &quot; définie sur <span class="inline">network_type_non_blocking_connect</span> (vous pouvez trouver plus de détails dans la page sur l'<a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Networking.htm">événement réseau asynchrone</a>). Il s'agit d'un paramètre <b>global</b> car <span data-keyref="GameMaker Name">GameMaker</span> ne supporte pas un mélange de blocage et de non-blocage dans une même application.</p>
   <p>Les troisième et quatrième options (<span class="inline">network_config_enable_reliable_udp</span>, <span class="inline">network_config_disable_reliable_udp</span>) permettent d'activer ou de désactiver le protocole UDP fiable de <span data-keyref="GameMaker Name">GameMaker</span> et, en tant que tel, <b>ne</b> doivent <b>être utilisées qu'avec des connexions UDP</b>. Dans ce cas, le terme &quot;fiable&quot; signifie que, lorsqu'il est activé aux <i>deux</i> extrémités d'une connexion, <span data-keyref="GameMaker Name">GameMaker</span> tentera de vérifier que vos paquets sont arrivés correctement et renverra ceux qui ne sont pas arrivés (attention, nous ne garantissons pas que vos paquets arriveront dans l'ordre de transmission). Si vous utilisez un type de socket fiable, un en-tête de 12 octets sera ajouté à tous les paquets udp. Cet en-tête contient les informations nécessaires à <span data-keyref="GameMaker Name">GameMaker</span> pour vérifier l'absence d'erreurs dans le paquet et renvoyer les paquets manquants. Les points suivants sont à noter lors de l'utilisation de cette option :</p>
@@ -77,7 +77,7 @@
   <p>La dernière option, <span class="inline">network_config_avoid_time_wait</span>, <strong>ne concerne que les connexions TCP</strong> et peut être utilisée pour définir la valeur de <span class="inline">SO_LINGER</span> à <span class="inline2">0</span><span>afin d'éviter qu'un grand nombre de connexions ne restent dans l'</span><span>état</span><span> <span class="inline">TIME_WAIT</span> </span><span>et n'accaparent toutes les ressources disponibles sur un serveur.</span> Ce changement est permanent tant que la socket est vivante et ne peut être annulé.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">network_set_config(config_value, setting);</p>
+  <p class="code"><span data-field="title" data-format="default">network_set_config</span>(config_value, setting);</p>
   <table>
     <tbody>
       <tr>

@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_rope_create</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_rope_create</span></h1>
   <p>Une articulation à corde est utilisée pour joindre deux instances que vous souhaitez maintenir à une distance constante, quelles que soient les autres forces qui s'exercent sur elles. Avec un joint de distance, vous pouvez obtenir un &quot;étirement du joint&quot; où les deux appareils se séparent et se comportent bizarrement si une trop grande tension est exercée sur le joint, mais le joint de corde ne fait pas cela et ne s'étire pas plus loin que la longueur maximale définie. Lorsque vous créez un joint en corde, les deux instances doivent déjà être créées et un appareil doit leur être attribué, puis vous définissez les deux points d'ancrage en coordonnées de pièce. Le premier point d'ancrage est connecté à l'instance 1, le second point d'ancrage est connecté à l'instance 2 et la distance et l'argument maxlength définissent la contrainte de longueur maximale sur le joint. L'image ci-dessous montre comment cela fonctionne :</p>
   <p><img>Comme vous pouvez le constater, les points d'ancrage sont spécifiés en tant que coordonnées de la pièce. Il faut donc les définir avec précaution, surtout si les instances sont créées en même temps que les joints plutôt que d'être placées dans la pièce via l'éditeur de pièce. Vous devez également savoir que les articulations sont créées indépendamment de la taille de l'adresse <span class="notranslate">sprite</span> des instances ou des dispositifs qu'elles ont attachés. Ainsi, si vous créez un joint de corde ailleurs qu'à l'origine de l'instance, il est toujours valide et contraindra les deux instances par rapport à la position à laquelle il a été créé. Si vous définissez la valeur &quot;col&quot; sur <span class="inline">true</span>, les deux instances peuvent interagir et entrer en collision l'une avec l'autre, mais <i>seulement</i> si elles ont des événements de collision, alors que si elle est définie sur <span class="inline">false</span>, elles n'entreront jamais en collision.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">physics_joint_rope_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, maxlength, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_rope_create</span>(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, maxlength, col)</p>
   <table>
     <tbody>
       <tr>

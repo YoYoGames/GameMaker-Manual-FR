@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_mark_as_map</h1>
+  <h1><span data-field="title" data-format="default">ds_list_mark_as_map</span></h1>
   <p>Cette fonction &quot;marque&quot; (ou &quot;signale&quot;) une position donnée dans une liste DS précédemment créée comme contenant une <a href="../DS_Maps/DS_Maps.htm">carte DS</a>. Cette fonctionnalité est nécessaire lors de l'encodage de chaînes JSON (que vous pouvez créer à l'aide de la fonction <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a>), mais peut également être utile lors de l'imbrication de structures de données, car les éléments marqués de cette manière seront automatiquement récupérés (détruits) lorsque la liste DS parente sera détruite. Cela signifie que vous n'avez pas besoin de parcourir manuellement le contenu de la liste et de détruire les structures de données marquées individuellement avant de détruire la liste &quot;parent&quot;. Toutefois, si vous supprimez la position de la liste individuellement, la structure de données qu'elle contenait <i>ne</i> sera <i>pas</i> récupérée et vous devrez appeler la fonction de destruction de la carte DS appropriée avant de supprimer la position de la liste parent. Notez également que si vous appelez la fonction <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a> sur une liste, tous les éléments marqués comme des cartes seront également détruits lorsque la liste sera effacée.</p>
   <p>Il convient également de noter que si la position qui a été marquée change dans la liste, la &quot;marque&quot; se déplacera avec elle. Ainsi, si vous avez marqué la position 3 dans la liste (par exemple) et que vous insérez ensuite 2 éléments supplémentaires en dessous pour qu'elle passe à la position 5, elle sera <i>toujours</i> marquée comme une carte.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">ds_list_mark_as_map(id, pos);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_mark_as_map</span>(id, pos);</p>
   <table>
     <tbody>
       <tr>

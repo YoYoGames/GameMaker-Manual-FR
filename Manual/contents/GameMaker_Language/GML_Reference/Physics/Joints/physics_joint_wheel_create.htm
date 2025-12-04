@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physique_joint_roue_créer</title>
+  <title>physics_joint_wheel_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physique_joint_roue_créer</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_wheel_create</span></h1>
   <p>Un joint de roue combine simplement un piston et un joint tournant, comme une roue montée sur l'amortisseur d'une voiture. Vous spécifiez le point d'ancrage de l'articulation ainsi que les deux instances activées par la physique pour l'articulation, et la première instance agira comme le &quot;corps&quot; de l'articulation, tandis que la seconde sera la &quot;roue&quot; et pourra se déplacer librement autour de l'axe de l'articulation. Vous pouvez également définir un vecteur d'axe, qui est la ligne imaginaire le long de laquelle le joint agira comme un &quot;ressort&quot; permettant à la roue de rebondir de haut en bas le long de cette ligne lorsqu'elle rencontre des obstacles (tout comme le joint à piston). L'image suivante illustre cela :</p>
   <p><img>Si vous choisissez d'activer un moteur, alors la deuxième instance tournera autour de la position d'ancrage, et vous pouvez définir le couple moteur maximum utilisé pour atteindre la vitesse moteur souhaitée (N/m) ainsi que la vitesse à laquelle le moteur doit tourner. Puisque l'articulation de la roue a également un axe le long duquel elle peut se déplacer, vous pouvez définir la fréquence d'oscillation (en Hz) ainsi que le taux d'amortissement de l'articulation - vous devrez peut-être jouer avec ces valeurs pour les affiner et il est recommandé de commencer avec de petites valeurs et de les augmenter jusqu'à ce que vous obteniez l'effet que vous souhaitez.</p>
   <p>Comme pour toutes les articulations, si vous définissez la valeur &quot;col&quot; sur <span class="inline">true</span>, les deux instances peuvent interagir et entrer en collision l'une avec l'autre, mais <i>seulement</i> si elles ont des événements de collision. Cependant, si elle est définie sur <span class="inline">false</span>, elles n'entreront pas en collision, quoi qu'il arrive.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">physics_joint_wheel_create(inst1, inst2, anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_wheel_create</span>(inst1, inst2, anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p>
   <table>
     <tbody>
       <tr>

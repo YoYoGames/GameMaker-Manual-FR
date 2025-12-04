@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physique_joint_distance_créer</title>
+  <title>physics_joint_distance_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physique_joint_distance_créer</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_distance_create</span></h1>
   <p>L'un des joints les plus simples est le joint de distance, qui stipule que la distance entre deux points sur deux instances doit être constante. Lorsque vous spécifiez un joint de distance, les deux instances doivent déjà être créées et avoir un dispositif de fixation assigné, puis vous définissez les deux points d'ancrage en coordonnées de salle. Le premier point d'ancrage est connecté à l'instance 1, le second point d'ancrage est connecté à l'instance 2 et la distance entre ces points implique la longueur de la contrainte de distance. L'image ci-dessous montre comment cela fonctionne :</p>
   <p><img>Comme vous pouvez le constater, les points d'ancrage sont spécifiés en tant que coordonnées de la pièce. Il faut donc les définir avec précaution, surtout si les instances sont créées en même temps que les joints plutôt que d'être placées dans la pièce via l'éditeur de pièce. Vous devez également savoir que les articulations sont créées indépendamment de la taille de <span class="notranslate">sprite</span> des instances ou des dispositifs qu'elles ont attachés. Ainsi, si vous créez un joint de distance ailleurs qu'à l'origine de l'instance, il est toujours valide et contraindra les deux instances par rapport à la position à laquelle il a été créé. Si vous définissez la valeur &quot;col&quot; sur <span class="inline">true</span>, les deux instances peuvent interagir et entrer en collision l'une avec l'autre, mais <i>seulement</i> si elles ont des événements de collision. Par contre, si vous définissez la valeur &quot;col&quot; sur <span class="inline">false</span>, elles n'entreront jamais en collision.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">physics_joint_distance_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_distance_create</span>(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, col)</p>
   <table>
     <tbody>
       <tr>

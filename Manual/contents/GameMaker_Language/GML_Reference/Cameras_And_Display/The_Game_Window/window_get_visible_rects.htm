@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>fenêtre_get_visible_rect</title>
+  <title>window_get_visible_rects</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>fenêtre_get_visible_rect</h1>
+  <h1><span data-field="title" data-format="default">window_get_visible_rects</span></h1>
   <p>Avec cette fonction, vous pouvez trouver la région de chevauchement du rectangle défini par (x1,y1) à (x2,y2) sur chacun des écrans joints. La fonction renvoie un tableau de 8 valeurs par écran (c'est-à-dire que si vous avez deux écrans, le tableau aura une longueur de 16 indices).
     longueur de 16 indices), où les valeurs [0 ... 3] correspondent aux valeurs overlapx1, overlapy1, overlapx2, overlapy2 - définissant la région de chevauchement sur cet affichage et seront définies à 0,0,0,0 si aucun chevauchement - et les valeurs [4 ... 7] correspondent aux valeurs
     monitorx1, monitory1, monitorx2, monitory2 - les coordonnées de l'affichage dans l'espace d'affichage virtuel. Ceci peut être utilisé pour tester si une position de fenêtre sauvegardée va être visible ou non (l'utilisateur peut avoir déconnecté un moniteur externe ou déplacé la fenêtre hors de l'écran, ce qui a laissé la fenêtre visible).
     déplacé la fenêtre hors de l'écran, ce qui fait que la position de la fenêtre qui a été sauvegardée n'est pas valide), par exemple.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">window_get_visible_rects(x1, y1, x2, y2);</p>
+  <p class="code"><span data-field="title" data-format="default">window_get_visible_rects</span>(x1, y1, x2, y2);</p>
   <table>
     <tbody>
       <tr>

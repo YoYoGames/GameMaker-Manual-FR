@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>instance_désactivation_région</title>
+  <title>instance_deactivate_region</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_désactivation_région</h1>
+  <h1><span data-field="title" data-format="default">instance_deactivate_region</span></h1>
   <p>Cette fonction vous permet de définir une région dans la salle pour désactiver les instances qui ont été précédemment activées. Cette région peut être marquée comme &quot;intérieure&quot; ou &quot;extérieure&quot;, comme le montre l'image suivante :</p>
   <p><img>Vous pouvez voir dans l'image ci-dessus que l'instance &quot;apple&quot; est toujours inactive car, même si le site <span class="notranslate">sprite</span> lui-même ne chevauche pas la région, la bounding box le fait. Ainsi, les instances sont considérées comme étant dans la région spécifiée lorsque leur <i>boîte englobante</i> la recouvre, et l'état du masque de collision (précis ou non) <b>n'</b> est <b>pas</b> pris en considération. Notez que la désactivation n'est pas instantanée, et une instance qui a été désactivée de cette manière ne sera pas considérée comme inactive avant la fin de l'événement dans lequel la fonction a été appelée.</p>
   <p class="note"><b>NOTE</b>: Si vous désactivez une instance au démarrage de la room (c'est-à-dire à partir du code de création de la room, ou à partir d'un événement de création d'une instance dans la room), toutes les instances qui sont placées dans la room à partir de l'éditeur de room <b>exécuteront toujours leur événement de création</b> avant d'être désactivées.</p>
   <p class="note"><b>AVERTISSEMENT</b>: La désactivation des instances dont la physique est activée <b>n'</b> empêchera <b>PAS</b> leurs appareils d'interagir dans la simulation physique. Pour cela, vous devez définir leur variable <a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline"><span style="font-size:14px;">phy_active</span></a> à <span class="inline">true</span> ou <span class="inline">false</span> lorsque vous activez/désactivez les instances.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">instance_deactivate_region(left, top, width, height, inside, notme);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_deactivate_region</span>(left, top, width, height, inside, notme);</p>
   <table>
     <tbody>
       <tr>

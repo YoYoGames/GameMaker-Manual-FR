@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_grid_path</h1>
+  <h1><span data-field="title" data-format="default">mp_grid_path</span></h1>
   <p>Avec cette fonction, vous pouvez créer un chemin qui naviguera d'un point de départ à un point d'arrivée en utilisant une <span class="inline">mp_grid</span> que vous avez préalablement définie, en évitant tout obstacle déjà ajouté dans la grille. Les arguments xstart et ystart indiquent le début du chemin en coordonnées de pièce, tandis que les arguments xgoal, ygoal indiquent la destination. Vous pouvez également sélectionner un mouvement horizontal/vertical uniquement, ou autoriser des mouvements diagonaux complets en spécifiant true dans l'argument allowdiag. La fonction renvoie soit true (elle a réussi à trouver un chemin), soit false (elle a échoué), et définit le chemin choisi. Dans l'image suivante, vous pouvez voir comment tout cela fonctionne ensemble :</p>
   <p><img>Comme vous pouvez le voir, les objets &quot;tuyaux&quot; ont été ajoutés dans la grille, ce qui signifie que tout chemin créé doit les contourner. Deux chemins ont été créés dans l'image, l'un (vert) a été réalisé avec des diagonales autorisées et l'autre (rouge) sans. La différence entre les deux est assez évidente, le chemin vert paraissant beaucoup plus &quot;élégant&quot; et direct, mais tout dépend de l'usage que vous allez en faire et de celui que vous préférez. Notez que le chemin est indépendant de l'instance actuelle - c'est un chemin à travers la grille, pas un chemin pour une instance spécifique, même si une instance spécifique peut avoir la variable qui stocke l'indice du chemin. Vous pouvez également avoir besoin de déboguer ces chemins pour voir comment ils sont créés et interagissent dans l'environnement du jeu, auquel cas vous devriez utiliser la fonction <span class="inline"><a href="../../Drawing/Basic_Forms/draw_path.htm">draw_path()</a></span>.</p>
   <p class="note"><b>NOTE</b>: Le chemin doit avoir été créé précédemment (soit dans le code avec <span style="font-size:1px;"><a href="../../Asset_Management/Paths/Path_Manipulation/path_add.htm"><span class="inline">path_add()</span></a></span> ou comme ressource) et sera remplacé par le chemin généré par cette fonction.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">mp_grid_path(id, path, xstart, ystart, xgoal, ygoal, allowdiag);</p>
+  <p class="code"><span data-field="title" data-format="default">mp_grid_path</span>(id, path, xstart, ystart, xgoal, ygoal, allowdiag);</p>
   <table>
     <tbody>
       <tr>

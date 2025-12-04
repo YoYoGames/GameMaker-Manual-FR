@@ -25,20 +25,20 @@
   <p>Rollback est déterministe. Il ne partage les entrées qu'avec d'autres joueurs, et attend d'eux qu'ils exécutent la même logique sur l'entrée donnée, donnant les mêmes résultats sur tous les clients.</p>
   <p>Une approche différente du multijoueur est la &quot;réplication d'état&quot;, qui synchronise continuellement l'état du jeu entre les clients, en s'assurant qu'ils font toujours la même chose.</p>
   <p>Rollback ne fait pas cela -- il ne fait qu'envoyer des entrées, mais garde également un œil sur l'état afin de pouvoir revenir en arrière en cas de prédiction erronée.</p>
-  <p class="note"><em><strong>Qu'est-ce qu'un client ?</strong></em><br>
-    <br>
+  <p class="note"><em><strong>Qu'est-ce qu'un client ?</strong></em><br />
+    <br />
     Un &quot;client&quot; est un joueur dans votre jeu, et fait référence à sa copie du jeu, qui tourne sur sa machine.
   </p>
   <h2>Comment cela fonctionne-t-il ?</h2>
   <p>Comme nous l'avons mentionné précédemment, Rollback <strong>ne communique les données qu'</strong> entre les joueurs.</p>
   <p>Il y a deux choses principales que Rollback gère :</p>
   <ul class="colour">
-    <li><strong>Entrée</strong>: Les <a href="Rollback_Functions/rollback_define_input.htm">entrées</a> de chaque joueur sont envoyées aux autres joueurs. Si le joueur 0 appuie sur <strong>&quot;feu&quot;</strong> dans son propre client, Rollback s'assurera que les autres clients voient également le joueur 0 appuyer sur <strong>&quot;feu&quot;.</strong><br>
-      <br>
+    <li><strong>Entrée</strong>: Les <a href="Rollback_Functions/rollback_define_input.htm">entrées</a> de chaque joueur sont envoyées aux autres joueurs. Si le joueur 0 appuie sur <strong>&quot;feu&quot;</strong> dans son propre client, Rollback s'assurera que les autres clients voient également le joueur 0 appuyer sur <strong>&quot;feu&quot;.</strong><br />
+      <br />
      <strong>Les prédictions ne sont exécutées que sur les entrées.</strong>
     </li>
-    <li><strong>État</strong>: Cela comprend tous les objets gérés et leurs variables. Celles-ci ne sont PAS synchronisées entre les joueurs : la modification d'une variable dans un client ne la mettra pas automatiquement à jour dans un autre client.<br>
-      <br>
+    <li><strong>État</strong>: Cela comprend tous les objets gérés et leurs variables. Celles-ci ne sont PAS synchronisées entre les joueurs : la modification d'une variable dans un client ne la mettra pas automatiquement à jour dans un autre client.<br />
+      <br />
      <strong>L'état n'est géré que dans le but d'être annulé.</strong>
     </li>
   </ul>
@@ -47,8 +47,8 @@
   <p>Voici un exemple :</p>
   <ul class="colour">
     <li><strong>Entrée</strong>: Le joueur 0 appuie sur <strong>&quot;feu&quot;.</strong></li>
-    <li><strong>Etat</strong>: Parce que le joueur 0 a appuyé sur le feu, un projectile est créé. Ce projectile finit par entrer en collision avec un rocher. Le joueur 0 obtient donc un point.<br>
-      <br>
+    <li><strong>Etat</strong>: Parce que le joueur 0 a appuyé sur le feu, un projectile est créé. Ce projectile finit par entrer en collision avec un rocher. Le joueur 0 obtient donc un point.<br />
+      <br />
       C'est essentiellement votre jeu entier, dépendant entièrement de l'entrée.
     </li>
   </ul>

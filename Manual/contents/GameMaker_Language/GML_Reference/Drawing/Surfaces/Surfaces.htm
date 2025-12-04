@@ -104,18 +104,18 @@
   <p class="note"><b>REMARQUE</b>: La seule chose que vous <b>ne pouvez pas</b> faire avec la surface d'application est de la libérer. Elle existe toujours, même si la valeur de l'indice permettant de la consulter sur <span class="notranslate">access</span> peut changer.</p>
   <p>Lorsque vous exécutez votre jeu, cette surface est créée la première fois que l'<a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">événement draw</a> est appelé dans chaque nouvelle pièce dans laquelle vous entrez, ce qui signifie que rien n'est dessiné jusqu'à ce moment-là. Cependant, vous pouvez toujours obtenir la position de la surface de l'application et la redimensionner dans l'<b>événement Create</b> ou tout autre événement sans obtenir d'erreur et les valeurs utilisées seront pertinentes pour la surface lors de sa création. La séquence réelle des événements pour la création et le dessin de la surface de l'application est la suivante :</p>
   <ul class="colour">
-    <li>Événement avant le tirage au sort<br>
+    <li>Événement avant le tirage au sort<br />
                --- <b>La surface de l'application est créée (si elle n'existe pas) et la cible de rendu est définie</b>.</li>
     <li><b></b>Pour chaque port de vue visible ou, si aucun port de vue n'est actif, une seule fois
       <ul class="colour">
         <li>Événement de début de tirage</li>
         <li>Événement de tirage au sort</li>
-        <li>Événement de fin de tirage<br>
+        <li>Événement de fin de tirage<br />
                   --- <b>La cible de rendu de la surface de l'application est réinitialisée ici</b>.</li>
       </ul>
     </li>
-    <li><b></b>Événement après le tirage au sort<br>
-              --- la <b>surface de l'application est maintenant dessinée dans le <a class="glossterm" data-glossterm="tampon d'affichage" href="#">tampon d'affichage</a> </b> par défaut. <b><br>
+    <li><b></b>Événement après le tirage au sort<br />
+              --- la <b>surface de l'application est maintenant dessinée dans le <a class="glossterm" data-glossterm="tampon d'affichage" href="#">tampon d'affichage</a> </b> par défaut. <b><br />
                          (bien que vous puissiez désactiver cette fonction en utilisant </b> <span class="inline"><a href="application_surface_draw_enable.htm">application_surface_draw_enable()</a></span>)</li>
     <li><b></b>Événement de début du dessin de l'interface graphique</li>
     <li>Événement "Draw GUI</li>

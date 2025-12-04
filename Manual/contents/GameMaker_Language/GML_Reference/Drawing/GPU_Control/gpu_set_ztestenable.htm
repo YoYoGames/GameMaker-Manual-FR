@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_ztestenable</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_ztestenable</span></h1>
   <p>Cette fonction peut être utilisée pour activer ou désactiver le test du z-buffer, ce qui affecte la façon dont les objets seront dessinés (en général, cette fonction n'est utile que pour les projets 3D). Essentiellement, par défaut, lorsque le test du z est désactivé et que vous avez deux objets dessinés dans le même espace,
     les <i>deux</i> objets seront rendus sans tenir compte du fait que l'un surchargera l'autre, ce qui entraînera des appels de dessin inutiles. Si vous l'activez, le z-buffer est testé pour voir si un objet est &quot;visible&quot; et n'est pas dessiné s'il ne l'est pas.
     pas. Notez que c'est le comportement <i>par défaut</i>, mais vous pouvez le modifier en changeant le type de comparaison utilisé pour le test du z-buffer (voir la fonction <a href="gpu_get_zfunc.htm"><span class="inline">gpu_set_zfunc()</span></a>.</p>
   <p>Par défaut, le test du tampon zéro est désactivé (<span class="inline">false</span>).</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">gpu_set_ztestenable(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_ztestenable</span>(enable);</p>
   <table>
     <tbody>
       <tr>

@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_set_target_room</h1>
+  <h1><span data-field="title" data-format="default">layer_set_target_room</span></h1>
   <p>Lorsque vous appelez cette fonction, vous indiquez à <span data-keyref="GameMaker Name">GameMaker</span> que <i>toutes les autres fonctions de calques doivent être appliquées à la pièce donnée</i>. De cette façon, vous pouvez modifier ou générer de manière procédurale des calques et des contenus de calque dans une pièce qui n'est pas la pièce actuelle. Lorsque vous avez fini d'ajouter des calques ou des éléments de calque à une room, appelez la fonction <a href="layer_reset_target_room.htm"><span class="inline">layer_reset_target_room()</span></a> pour réinitialiser la cible de la pièce (ou appelez à nouveau cette fonction avec un argument de pièce de -1). Notez que cette fonction ne peut être utilisée que sur des <i>pièces autres que la pièce actuelle</i>, et qu'elle est conçue pour que vous puissiez ajouter/supprimer des calques et des éléments de calque dans des pièces autres que la pièce en cours d'exécution.</p>
   <p class="note"><b>ATTENTION !</b> Lorsque vous ciblez une autre pièce, vous pouvez utiliser toutes les fonctions normales des calques <b>, sauf que</b> vous ne pouvez pas créer d'instances à l'aide des fonctions <span style="font-size:1px;"><a href="../../Instances/instance_create_layer.htm"><span class="inline">instance_create_layer()</span></a></span> ou <span style="font-size:1px;"><a href="../../Instances/instance_create_depth.htm"><span class="inline">instance_create_depth()</span></a></span>et la fonction de couche <a href="layer_add_instance.htm"><span style="font-size:1px;"><span class="inline">layer_add_instance()</span></span></a> ne sera pas disponible.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">layer_set_target_room(room)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_set_target_room</span>(room)</p>
   <table>
     <tbody>
       <tr>

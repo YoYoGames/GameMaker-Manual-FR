@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ajouts cliquables</title>
+  <title>clickable_add</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ajouts cliquables</h1>
+  <h1><span data-field="title" data-format="default">clickable_add</span></h1>
   <p>Cette fonction vous permet de créer une icône cliquable personnalisée qui agit comme un &quot;bouton&quot; en dehors du canevas de jeu, mais dans la fenêtre du navigateur elle-même. La fonction renvoie une valeur d'identification qui doit être stockée dans une variable à utiliser dans toutes les autres fonctions de bouton qui font référence au nouveau bouton cliquable. Cette fonction est très utile pour empêcher le navigateur de créer une fenêtre pop-up lorsqu'on clique sur le bouton, car tout est fait par <span data-keyref="GameMaker Name">GameMaker</span> lui-même.</p>
   <p>Vous devez d'abord définir la position, qui est relative au (0,0) de la fenêtre du navigateur (coin supérieur gauche), puis donner l'entrée de la page de texture pour le <span class="notranslate">sprite</span> que vous souhaitez que l'icône du bouton ait (voir : <a href="../Asset_Management/Sprites/Sprite_Information/sprite_get_tpe.htm"><span class="inline">sprite_get_tpe()</span></a>). Vous pouvez ensuite spécifier soit une URL à ouvrir, soit un script (du navigateur d'actifs de <span data-keyref="GameMaker Name">GameMaker</span>) à ouvrir ou à exécuter. Le paramètre &quot;target&quot; que vous spécifiez est identique à la valeur &quot;name&quot; standard de JavaScript lorsque vous utilisez la méthode <span class="inline">open()</span> (sachez que tout autre paramètre que &quot;_self&quot; peut entraîner un blocage du navigateur ou demander à l'utilisateur s'il souhaite l'autoriser) et l'argument &quot;params&quot; est identique au paramètre &quot;specs&quot; de JavaScript pour contrôler les propriétés que la nouvelle fenêtre/onglet doit afficher (tous les navigateurs ne prennent pas forcément en charge toutes les fonctionnalités). Si vous utilisez l'icône pour exécuter un script interne, ces deux derniers arguments peuvent être laissés sous forme de chaînes vides &quot;&quot;.</p>
   <p>Les cibles valides sont :</p>
@@ -97,11 +97,11 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Il convient également de noter que si l'argument URL que vous transmettez est le nom d'une <a href="../../GML_Overview/Script_Functions.htm">fonction de script</a> (c'est-à-dire qu'il ne commence pas par &quot;http://&quot;) ET que le script s'appelle <span class="inline"><b>gmcallback_*</b></span>, vous pouvez obtenir des entrées directes dans un événement html5. Les noms des fonctions de script de <span data-keyref="GameMaker Name">GameMaker</span> <i>ne</i> sont <i>pas</i> obscurcis s'ils commencent par <span class="inline">gmcallback_</span>.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">clickable_add(x, y, tpe, url, target, params);</p>
+  <p class="code"><span data-field="title" data-format="default">clickable_add</span>(x, y, tpe, url, target, params);</p>
   <table>
     <tbody>
       <tr>

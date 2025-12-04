@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>external_define</h1>
+  <h1><span data-field="title" data-format="default">external_define</span></h1>
   <p>Cette fonction peut être utilisée pour définir un appel de fonction externe à une dll (pour <span class="notranslate">Windows</span>) ou une dylib (pour Mac) spécifique. Ce fichier peut être soit un fichier inclus, soit une partie d'une extension.</p>
   <p>Vous fournissez le nom (et le chemin) du fichier, puis le nom de la fonction que vous souhaitez définir. Ensuite, vous devez définir la convention d'appel à utiliser (voir la liste des constantes ci-dessous) ainsi que le type de résultat à attendre (également une constante, comme indiqué ci-dessous).</p>
   <p>Enfin, vous devez indiquer le nombre d'arguments que la fonction peut prendre (de 0 à 15) et pour chacun des arguments, vous devez également préciser son type. Veuillez noter que pour les fonctions ayant 4 arguments ou plus, tous les arguments <i>doivent</i> être de type <span class="inline">ty_real</span>.</p>
@@ -67,7 +67,7 @@
   </table>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">external_define(dll, name, calltype, restype, argnumb, argtype[0], argtype[1], ...argtype[10]);</p>
+  <p class="code"><span data-field="title" data-format="default">external_define</span>(dll, name, calltype, restype, argnumb, argtype[0], argtype[1], ...argtype[10]);</p>
   <table>
     <tbody>
       <tr>

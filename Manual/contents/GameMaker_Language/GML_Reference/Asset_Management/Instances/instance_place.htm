@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_place</h1>
+  <h1><span data-field="title" data-format="default">instance_place</span></h1>
   <p>Avec cette fonction, vous pouvez vérifier la présence d'une collision entre une position et une autre instance ou toutes les instances d'un objet en utilisant le masque de collision de l'instance qui exécute le code de vérification. Lorsque vous utilisez cette fonction, vous demandez effectivement à <span data-keyref="GameMaker Name">GameMaker</span> de déplacer l'instance vers la nouvelle position, de vérifier s'il y a une collision, de revenir en arrière et de vous dire si une collision a été trouvée ou non.</p>
   <p>Cela fonctionnera pour les collisions précises, mais seulement si l'instance et l'objet contrôlé ont tous deux des masques de collision précis sélectionnés, sinon seules les collisions de la boîte englobante sont appliquées.</p>
   <p>Cette fonction renvoie l'instance unique <a href="Instance_Variables/id.htm"><span class="inline">id</span></a> de l'objet en collision, mais si cela n'est pas nécessaire, il est légèrement plus rapide d'utiliser la fonction <a href="../../Movement_And_Collisions/Collisions/place_meeting.htm"><span class="inline">place_meeting()</span></a>. Cette fonction accepte également les mots-clés spéciaux <span class="inline"><b>all</b></span> et <span class="inline"><b>other</b></span> et renvoie le <a href="../../../GML_Overview/Instance_Keywords.htm">mot-clé</a> <span class="inline"><b>noone</b></span> si aucune collision ne se produit, ou la valeur de l'ID d'instance unique de l'instance trouvée si une collision se produit.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">instance_place(x, y, obj);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_place</span>(x, y, obj);</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>profondeur</title>
+  <title>depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>profondeur</h1>
+  <h1><span data-field="title" data-format="default">depth</span></h1>
   <p>Lorsque vous créez un objet, vous pouvez lui attribuer une <i>profondeur</i> initiale qui définit la manière dont les instances de cet objet seront dessinées dans la room lorsque le jeu est en cours. Cette variable peut être utilisée pour obtenir et modifier cette valeur de profondeur pendant le déroulement du jeu. Normalement, vous n'avez pas besoin d'utiliser cette variable, car vous devez régler les instances pour qu'elles soient ajoutées à des <a href="layer.htm">couches</a> discrètes, qui à leur tour sont réglées sur une profondeur spécifique, mais il se peut que vous souhaitiez modifier la profondeur d'une instance en utilisant cette valeur, auquel cas une &quot;couche temporaire&quot; sera créée spécifiquement pour l'instance à la profondeur donnée. Notez que si aucune instance ne se trouve à la même profondeur, cette couche temporaire sera supprimée de la mémoire (contrairement aux couches régulières qui resteront même si elles ne contiennent rien).</p>
   <p class="note"><b>IMPORTANT !</b> Lorsque vous modifiez la variable <span class="inline">depth</span> et que <span data-keyref="GameMaker Name">GameMaker</span> gère les calques, la variable intégrée renvoie -1 et non l'ID du calque. <span style="font-size:1px;"><a href="layer.htm"><span class="inline">layer</span></a></span> renverra -1 et non l'ID du calque, puisque les calques gérés ne peuvent pas être manipulés par le code.</p>
   <p>Dans <span data-keyref="GameMaker Name">GameMaker</span>, plus la valeur de profondeur d'une instance est faible, plus cette instance sera dessinée &quot;près de la caméra&quot;, tandis qu'une valeur de profondeur plus élevée signifie que l'instance sera dessinée &quot;plus loin de la caméra&quot;, c'est-à-dire que -1000 est dessiné au-dessus de -100, qui est dessiné au-dessus de 0, et ainsi de suite.</p>
@@ -23,7 +23,7 @@
   <p>Gardez à l'esprit que la modification de la profondeur d'une instance peut changer les <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">filtres et les effets</a> qui lui sont appliqués, car si vous modifiez la profondeur pour qu'elle soit inférieure à celle d'une couche FX, l'effet ne sera plus appliqué à l'instance.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">depth;</p>
+  <p class="code"><span data-field="title" data-format="default">depth</span></p>
   <p> </p>
   <h4>Les retours :</h4>
   <p class="code"><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> (single precision floating point value)</p>

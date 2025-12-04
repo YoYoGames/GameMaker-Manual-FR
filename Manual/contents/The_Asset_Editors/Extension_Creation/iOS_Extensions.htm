@@ -26,8 +26,8 @@
       <ol>
         <li>Assurez-vous que les fichiers source du délégué portent le même nom que la classe du délégué (par exemple, <span class="inline">@interface MyCustomAppDelegate</span> doit être défini dans &quot; <span class="inline">MyCustomAppDelegate.h</span>&quot;).</li>
         <li>Ajoutez la variable d'environnement <span class="inline">${YYExtAppDelegateIncludes}</span> au début du fichier d'en-tête du délégué de votre application. Elle sera remplacée au moment de la compilation par les fichiers inclus pertinents pour la classe de délégué parent.</li>
-        <li>Utilisez la variable d'environnement <span class="inline">${YYExtAppDelegateBaseClass}</span> comme classe de base pour votre délégué d'application personnalisé. Elle sera remplacée au moment de la compilation par la classe de délégué de base correcte.<br>
-          <br>
+        <li>Utilisez la variable d'environnement <span class="inline">${YYExtAppDelegateBaseClass}</span> comme classe de base pour votre délégué d'application personnalisé. Elle sera remplacée au moment de la compilation par la classe de délégué de base correcte.<br />
+          <br />
           Pour garantir que votre extension fonctionne avec toutes les autres extensions qui utilisent des délégués d'applications personnalisées, vous devez appeler toutes les méthodes de la classe de base à partir de méthodes surchargées dans votre classe enfant. Avant d'appeler la méthode de la superclasse, vous devez vous assurer qu'elle est implémentée dans la hiérarchie de la classe pour éviter les erreurs, par ex :
         </li>
       </ol>
@@ -40,17 +40,17 @@
                 return TRUE;<br />
         }</p>
     </li>
-    <li class="dropspot"><strong>Cadres du système</strong>: Vous pouvez ajouter ici n'importe quel <a class="glossterm" data-glossterm="cadre" href="#">cadre de</a>système <span class="notranslate">iOS</span> à votre extension. Vous pouvez les ajouter en cliquant sur le bouton <img> qui ajoutera un cadre de référence, que vous pourrez ensuite modifier en double-cliquant sur <img>. Vous pouvez en savoir plus sur les cadres système disponibles <a href="https://developer.apple.com/documentation/">ici</a>. Pour supprimer un cadre système, il suffit de le sélectionner et de cliquer sur le bouton <img>.<br>
-      <br>
+    <li class="dropspot"><strong>Cadres du système</strong>: Vous pouvez ajouter ici n'importe quel <a class="glossterm" data-glossterm="cadre" href="#">cadre de</a>système <span class="notranslate">iOS</span> à votre extension. Vous pouvez les ajouter en cliquant sur le bouton <img> qui ajoutera un cadre de référence, que vous pourrez ensuite modifier en double-cliquant sur <img>. Vous pouvez en savoir plus sur les cadres système disponibles <a href="https://developer.apple.com/documentation/">ici</a>. Pour supprimer un cadre système, il suffit de le sélectionner et de cliquer sur le bouton <img>.<br />
+      <br />
       <img>Vous pouvez activer la case à cocher d'un framework pour le marquer comme une &quot;<strong>Référence faible</strong>&quot;. Cela l'ajoute à la section &quot;<strong>Build Phases -&gt; Link Binary with Libraries</strong>&quot; de <span class="notranslate">Xcode</span> comme un framework &quot;<strong>Optional</strong>&quot;, par opposition à un framework &quot;<strong>Required</strong>&quot; (qui est le comportement par défaut).
     </li>
-    <li class="dropspot"><strong>Cadres tiers + paquets</strong>: Cette section permet d'ajouter des bundles tiers et SDK. Comme pour les frameworks système, cliquez sur le bouton <img> pour les ajouter, puis double-cliquez sur <img> pour les modifier. En les sélectionnant puis en cliquant sur <img>, vous les supprimerez (consultez la documentation fournie avec le SDK choisi pour obtenir des informations sur le nom du framework).<br>
-      <br>
-      Ici, vous pouvez choisir de <strong>ne pas intégrer</strong> le framework, de l'<strong>intégrer et de</strong> le <strong>signer</strong>, ou de <strong>l'intégrer sans le signer</strong>:<br>
+    <li class="dropspot"><strong>Cadres tiers + paquets</strong>: Cette section permet d'ajouter des bundles tiers et SDK. Comme pour les frameworks système, cliquez sur le bouton <img> pour les ajouter, puis double-cliquez sur <img> pour les modifier. En les sélectionnant puis en cliquant sur <img>, vous les supprimerez (consultez la documentation fournie avec le SDK choisi pour obtenir des informations sur le nom du framework).<br />
+      <br />
+      Ici, vous pouvez choisir de <strong>ne pas intégrer</strong> le framework, de l'<strong>intégrer et de</strong> le <strong>signer</strong>, ou de <strong>l'intégrer sans le signer</strong>:<br />
       <img>Ceci reflète la même option pour un framework ajouté sous &quot;<strong>Frameworks, Libraries and Embedded Content</strong>&quot; dans <span class="notranslate">Xcode</span>.
     </li>
-    <li class="dropspot"><strong>Entrez le chemin du framework sur Mac</strong>: Si vous voulez ajouter un framework à l'extension dont les fichiers sont présents sur le Mac qui est utilisé pour construire votre projet, vous pouvez entrer le chemin vers ce framework (sur la machine de construction) dans ce champ et ensuite cliquer sur le bouton <img> pour l'ajouter.<br>
-      <br>
+    <li class="dropspot"><strong>Entrez le chemin du framework sur Mac</strong>: Si vous voulez ajouter un framework à l'extension dont les fichiers sont présents sur le Mac qui est utilisé pour construire votre projet, vous pouvez entrer le chemin vers ce framework (sur la machine de construction) dans ce champ et ensuite cliquer sur le bouton <img> pour l'ajouter.<br />
+      <br />
       Le chemin d'accès doit pointer vers un fichier <span class="inline">.framework</span> qui sera compressé sous la forme d'un <span class="inline">.zip</span> et placé dans le dossier <span class="inline">iOSSourceFromMac</span> sous le répertoire de votre extension ; vous pouvez facilement l'ouvrir à tout moment en cliquant avec le bouton droit de la souris sur <img> dans l'extension et en sélectionnant <em>Ouvrir dans l'explorateur</em>.
     </li>
     <li class="dropspot"><strong>Ajouter la source</strong>: Vous pouvez l'utiliser pour ajouter les fichiers sources nécessaires au fonctionnement de votre extension. Les fichiers ajoutés seront stockés dans le dossier <span class="inline">iOSSource</span> à l'intérieur du répertoire de votre extension.</li>
@@ -92,28 +92,28 @@
       </tr>
       <tr>
         <td style=""><b>Droits à prestations</b></td>
-        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\\N<br>
+        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\\N<br />
          <span>${YYXCodeProjName}.droits</span>
         </td>
       </tr>
       <tr>
         <td style=""><b>info.plist</b></td>
-        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\\N<br>
+        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\\N<br />
           Fichiers d'accompagnement\${YYXCodeProjName}-Info<span>.plist</span></td>
       </tr>
       <tr>
         <td style=""><strong>infoPlist.strings</strong></td>
-        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\\N<br>
+        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\\N<br />
           fr.lproj\InfoPlist.strings</td>
       </tr>
       <tr>
         <td style=""><strong>projet.pbxproj</strong></td>
-        <td style="">{RUNTIME}\Notre modèle de projet{{YYXCodeProjName}.xcodeproj\N<br>
+        <td style="">{RUNTIME}\Notre modèle de projet{{YYXCodeProjName}.xcodeproj\N<br />
           projet.pbxproj</td>
       </tr>
       <tr>
         <td style=""><strong>xcscheme</strong></td>
-        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}.xcodeproj\\<br>
+        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}.xcodeproj\\<br />
           xcshareddata\xcschemes\${YYXCodeProjName}.xcscheme</td>
       </tr>
     </tbody>

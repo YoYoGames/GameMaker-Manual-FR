@@ -19,11 +19,11 @@
   <p><img>Les erreurs d'exécution sont généralement plus graves que les erreurs de compilation car elles signifient qu'il y a quelque chose de grave dans votre code que ni l'éditeur de code ni le compilateur n'ont pu détecter, et vous devez donc prêter attention à toutes ces erreurs. Lorsque l'une d'entre elles se produit, vous pouvez utiliser le bouton <strong>Copier</strong> de la fenêtre contextuelle pour copier l'erreur dans le presse-papiers, que vous pouvez ensuite coller dans un fichier texte (ou autre) pour référence ultérieure.</p>
   <p>La structure de cette erreur est la suivante :</p>
   <ul class="colour">
-    <li><img><br>
+    <li><img><br />
       Elle indique l'événement dans lequel l'erreur s'est produite ainsi que l'objet (le cas échéant).</li>
-    <li><img><br>
+    <li><img><br />
       Cela montre l'erreur réelle.  Elle indique donc la <em>portée </em>de l'erreur et le type d'erreur dont il s'agit. La première valeur entre parenthèses sera l'ID de l'instance qui exécutait le code - ou ce pourrait être l'une des valeurs spéciales listées dans le tableau ci-dessous - et la seconde est une valeur interne que <span data-keyref="GameMaker Name">GameMaker</span> utilise pour identifier les bugs et qui peut être ignorée. Dans le cas de l'image ci-dessus, cela signifie que la variable <span class="inline">_image</span> n'a pas été définie (c'est-à-dire qu'elle n'existe pas avant d'être accédée) sur l'objet <span class="inline">obj_EA_DEMO_Control</span>.</li>
-    <li><img><br>
+    <li><img><br />
       Il indique le numéro de la ligne sur laquelle l'erreur se produit ainsi qu'un extrait de code indiquant la position. Notez que ce n'est pas toujours précis à 100% en raison de la façon dont le jeu est compilé, mais cela devrait être suffisant pour vous aider à trouver exactement où se situe le problème.</li>
   </ul>
   <p>Comme mentionné ci-dessus, certains messages d'erreur ne seront pas identifiés par une valeur d'ID d'instance, mais plutôt par une valeur <em>négative </em>. Ces valeurs peuvent être utilisées pour identifier la nature exacte de l'erreur et ce à quoi elle se réfère, les valeurs suivantes étant possibles :</p>
@@ -264,7 +264,7 @@
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Impossible d'utiliser global dans l'instruction with</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Avec</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous avez essayé d'utiliser &quot;<span class="inline">global</span>&quot; comme variable dans une déclaration &quot;<span class="inline">with</span>&quot;, c'est-à-dire que vous avez essayé d'utiliser &quot; &quot; comme variable dans une déclaration &quot; &quot; :<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous avez essayé d'utiliser &quot;<span class="inline">global</span>&quot; comme variable dans une déclaration &quot;<span class="inline">with</span>&quot;, c'est-à-dire que vous avez essayé d'utiliser &quot; &quot; comme variable dans une déclaration &quot; &quot; :<br />
           <span class="inline">with (global)<br />
                {<br />
                //do something;<br />
@@ -275,7 +275,7 @@
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Impossible d'utiliser local dans l'instruction with</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Avec</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous avez essayé d'utiliser &quot;<span class="inline">local</span>&quot; comme variable dans une déclaration &quot;<span class="inline">with</span>&quot;, c'est-à-dire que vous avez essayé d'utiliser &quot; &quot; comme variable dans une déclaration &quot; &quot; :<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Vous avez essayé d'utiliser &quot;<span class="inline">local</span>&quot; comme variable dans une déclaration &quot;<span class="inline">with</span>&quot;, c'est-à-dire que vous avez essayé d'utiliser &quot; &quot; comme variable dans une déclaration &quot; &quot; :<br />
           <span class="inline">with (local)<br />
                {<br />
                //do something;<br />

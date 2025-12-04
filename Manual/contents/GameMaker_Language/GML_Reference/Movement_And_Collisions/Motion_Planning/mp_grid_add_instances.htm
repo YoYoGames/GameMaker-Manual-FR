@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_grid_add_instances</h1>
+  <h1><span data-field="title" data-format="default">mp_grid_add_instances</span></h1>
   <p>Cette fonction utilise le masque de collision de l'instance (déterminé par les propriétés de <span class="notranslate">sprite</span> ou l'indice de masque de l'instance appelante) pour marquer les cellules comme interdites ou non dans une grille MP, où les cellules interdites ne peuvent être traversées par aucune des fonctions de pathfinding. Vous pouvez spécifier dans la fonction s'il faut considérer les collisions précises ou non et les cellules interdites marquées changeront en fonction de ce paramètre. Cette image illustre ce comportement :</p>
   <p><img>Les deux instances ci-dessus ont été ajoutées à la grille du MP à l'aide de la fonction <span class="inline">mp_grid_add_instances()</span>, precise étant réglé sur true. Comme vous pouvez le constater, l'instance verte a uniquement marqué les cases de la grille qu'elle &quot;touche&quot; comme étant interdites, car son masque <span class="notranslate">sprite</span> est également défini sur precise. Cependant, la seconde instance a également marqué d'autres cellules qui ne <i>semblent</i> pas se toucher. Cela est dû au fait que le masque <span class="notranslate">sprite</span> <b>n'</b> est <b>pas</b> défini comme précis, ce qui signifie que même si vous utilisez le paramètre précis dans la fonction, seule la boîte englobante de <span class="notranslate">sprite</span> sera prise en compte. C'est également ce qui se produirait si vous donniez la valeur false à l'argument precise de la fonction - même les instances avec un masque <span class="notranslate">sprite</span> précis seront ajoutées dans la grille sur la base de leurs boîtes englobantes.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code">mp_grid_add_instances(id, obj, prec);</p>
+  <p class="code"><span data-field="title" data-format="default">mp_grid_add_instances</span>(id, obj, prec);</p>
   <table>
     <tbody>
       <tr>
