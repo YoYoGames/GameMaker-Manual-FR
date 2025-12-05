@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Expressions et opérateurs</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
   <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -16,12 +16,12 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Expressions et opérateurs</h1>
   <h2>Expressions</h2>
-  <p>Une expression est une phrase mathématique qui peut contenir des nombres ordinaires, des variables, des chaînes de caractères ou des fonctions, ainsi qu'un ou plusieurs <strong>opérateurs </strong>(comme ajouter, soustraire, multiplier, etc...). Les valeurs utilisées dans une expression peuvent être des nombres réels (par exemple <span class="inline">3.4 * 6</span>), des nombres hexadécimaux commençant par le signe <span class="inline">$</span> (par exemple <span class="inline">$00FFAA | $88FFAA</span>), des chaînes de caractères entre guillemets (par exemple <span class="inline">&quot;hello&quot;</span> + <span class="inline">&quot;world&quot;</span>) ou des expressions plus complexes utilisant plusieurs opérateurs et valeurs.</p>
+  <p>Une expression est une phrase mathématique qui peut contenir des nombres ordinaires, des variables, des chaînes de caractères ou des fonctions, ainsi qu&#39;un ou plusieurs <strong>opérateurs </strong>(comme ajouter, soustraire, multiplier, etc...). Les valeurs utilisées dans une expression peuvent être des nombres réels (par exemple <span class="inline">3.4 * 6</span>), des nombres hexadécimaux commençant par le signe <span class="inline">$</span> (par exemple <span class="inline">$00FFAA | $88FFAA</span>), des chaînes de caractères entre guillemets (par exemple <span class="inline">&quot;hello&quot;</span> + <span class="inline">&quot;world&quot;</span>) ou des expressions plus complexes utilisant plusieurs opérateurs et valeurs.</p>
   <h2>Opérateurs</h2>
   <p>Les opérateurs suivants sont fournis pour être utilisés avec les expressions :</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Affectation (=)</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot"><span class="inline2"><b>=</b></span> est utilisé pour attribuer une valeur à une variable. Notez qu'il peut <i>également</i> être utilisé pour comparer des variables dans <span data-keyref="GameMaker Name">GameMaker</span> et vous pouvez le voir dans les exemples et les codes d'autres personnes. Cependant, il s'agit d'un héritage des anciennes versions de <i>GameMaker</i> et vous devriez utiliser les opérateurs <b>==</b> pour comparer et <b>=</b> pour assigner, comme le montrent ces exemples :</p>
+    <p class="dropspot"><span class="inline2"><b>=</b></span> est utilisé pour attribuer une valeur à une variable. Notez qu&#39;il peut <i>également</i> être utilisé pour comparer des variables dans <span data-keyref="GameMaker Name">GameMaker</span> et vous pouvez le voir dans les exemples et les codes d&#39;autres personnes. Cependant, il s&#39;agit d&#39;un héritage des anciennes versions de <i>GameMaker</i> et vous devriez utiliser les opérateurs <b>==</b> pour comparer et <b>=</b> pour assigner, comme le montrent ces exemples :</p>
     <p class="code">a = 12;<br />
       speed = 5;<br />
       val = (old_val + 5);</p>
@@ -29,7 +29,7 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Combinaison (&amp;&amp;, ||, ^^)</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot"><b><span class="inline2">&amp;&amp;</span>, <span class="inline2">||</span>, <span class="inline2">^^</span> (<span class="inline2">and</span>, <span class="inline2">or</span> et <span class="inline2">xor</span></b> ) sont utilisés pour combiner des valeurs booléennes afin d'obtenir soit vrai soit faux. Si l'un des exemples suivants se résout en <span class="inline">true</span>, le code sera exécuté :</p>
+    <p class="dropspot"><b><span class="inline2">&amp;&amp;</span>, <span class="inline2">||</span>, <span class="inline2">^^</span> (<span class="inline2">and</span>, <span class="inline2">or</span> et <span class="inline2">xor</span></b> ) sont utilisés pour combiner des valeurs booléennes afin d&#39;obtenir soit vrai soit faux. Si l&#39;un des exemples suivants se résout en <span class="inline">true</span>, le code sera exécuté :</p>
     <p class="code">if (a == b &amp;&amp; c == d) { do something... }  // and<br />
       if (a == b || c == d) { do something... }  // or<br />
       if (a == b ^^ c == d) { do something... }  // xor</p>
@@ -40,38 +40,38 @@
     <p class="note"><span class="note">NOTE</span> &quot;Nul&quot; fait simplement référence à une valeur égale à <span class="inline2">undefined</span> ou <span class="inline2">pointer_null</span>.</p>
     <p class="dropspot"><span class="inline2">? ?</span> est un opérateur de coalescence nul qui renvoie une expression spécifiée si la valeur donnée est <span class="inline2">indéfinie</span> ou <span class="inline2">pointer_null</span>. Cet opérateur attend la syntaxe suivante :</p>
     <p class="code_plain">(entrée ? ? null_sortie)</p>
-    <p class="dropspot">Si l'<span class="inline2">entrée</span> est <span class="inline2">indéfinie</span> ou <span class="inline2">pointer_null</span>, l'expression retournera la valeur <span class="inline2">null_output</span>; cependant, dans tous les autres cas, elle retournera simplement la valeur d'<span class="inline2">entrée</span>. Ceci peut être utilisé pour définir une valeur &quot;par défaut&quot; pour une variable au cas où la variable elle-même ne contiendrait pas une valeur valide.</p>
-    <p class="dropspot">Prenons l'exemple suivant :</p>
+    <p class="dropspot">Si l&#39;<span class="inline2">entrée</span> est <span class="inline2">indéfinie</span> ou <span class="inline2">pointer_null</span>, l&#39;expression retournera la valeur <span class="inline2">null_output</span>; cependant, dans tous les autres cas, elle retournera simplement la valeur d&#39;<span class="inline2">entrée</span>. Ceci peut être utilisé pour définir une valeur &quot;par défaut&quot; pour une variable au cas où la variable elle-même ne contiendrait pas une valeur valide.</p>
+    <p class="dropspot">Prenons l&#39;exemple suivant :</p>
     <p class="code_plain">username = data.username ? ? &quot;INVALID USERNAME&quot; ;</p>
-    <p class="dropspot">Ici, la variable <span class="inline2">username</span> obtiendra la valeur stockée dans <span class="inline2">data.username</span>, mais si <span class="inline2">data.username</span> est <span class="inline2">indéfini</span> ou <span class="inline2">pointer_null</span>, la variable obtiendra la chaîne <span class="inline2">&quot;INVALID USERNAME&quot;</span> à la place. Cet exemple garantit que tout appel de fonction utilisant la variable <span class="inline2">username</span> ne provoquera pas d'erreur en raison de l'obtention d'une valeur nulle, et que l'utilisateur saura que son nom d'utilisateur n'a pas été renvoyé.</p>
-    <p class="note"><span class="note">NOTE</span> L'expression du côté droit de l'opérateur de coalescence nullish n'est exécutée que lorsque la valeur d'entrée est nullish, ce qui signifie que tout appel de fonction inclus dans l'expression RHS ne sera exécuté que si la valeur d'entrée est nullish.</p>
+    <p class="dropspot">Ici, la variable <span class="inline2">username</span> obtiendra la valeur stockée dans <span class="inline2">data.username</span>, mais si <span class="inline2">data.username</span> est <span class="inline2">indéfini</span> ou <span class="inline2">pointer_null</span>, la variable obtiendra la chaîne <span class="inline2">&quot;INVALID USERNAME&quot;</span> à la place. Cet exemple garantit que tout appel de fonction utilisant la variable <span class="inline2">username</span> ne provoquera pas d&#39;erreur en raison de l&#39;obtention d&#39;une valeur nulle, et que l&#39;utilisateur saura que son nom d&#39;utilisateur n&#39;a pas été renvoyé.</p>
+    <p class="note"><span class="note">NOTE</span> L&#39;expression du côté droit de l&#39;opérateur de coalescence nullish n&#39;est exécutée que lorsque la valeur d&#39;entrée est nullish, ce qui signifie que tout appel de fonction inclus dans l&#39;expression RHS ne sera exécuté que si la valeur d&#39;entrée est nullish.</p>
     <hr />
-    <p class="dropspot"><span class="inline2">??=</span> est similaire à l'opérateur de coalescence nullish décrit ci-dessus mais est utilisé spécifiquement pour les affectations de variables. Cet opérateur attend la syntaxe suivante :</p>
+    <p class="dropspot"><span class="inline2">??=</span> est similaire à l&#39;opérateur de coalescence nullish décrit ci-dessus mais est utilisé spécifiquement pour les affectations de variables. Cet opérateur attend la syntaxe suivante :</p>
     <p class="code">variable ??= null_value</p>
-    <p class="dropspot">Si la <span class="inline2">variable</span> est <span class="inline2">indéfinie</span> ou <span class="inline2">pointer_null</span>, la valeur <span class="inline2">null_value</span> lui sera assignée ; sinon la variable restera inchangée. Ceci peut être utilisé pour assigner une valeur personnalisée &quot;par défaut&quot; à une variable lorsqu'elle contient une valeur nulle.</p>
+    <p class="dropspot">Si la <span class="inline2">variable</span> est <span class="inline2">indéfinie</span> ou <span class="inline2">pointer_null</span>, la valeur <span class="inline2">null_value</span> lui sera assignée ; sinon la variable restera inchangée. Ceci peut être utilisé pour assigner une valeur personnalisée &quot;par défaut&quot; à une variable lorsqu&#39;elle contient une valeur nulle.</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Comparaison (&lt;, &lt;=, ==, !=, &gt;, &gt;=)</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot"><b><span class="inline2">&lt;</span>, <span class="inline2">&lt;=</span>, <span class="inline2">==</span>, <span class="inline2">!=</span>, <span class="inline2">&gt;</span>, <span class="inline2">&gt;=</span></b> sont des comparaisons et ne peuvent donner que le résultat <span class="inline">true</span> ou <span class="inline">false</span> (où vrai peut aussi être interprété comme 1, et faux comme 0). Exemples d'utilisation :</p>
+    <p class="dropspot"><b><span class="inline2">&lt;</span>, <span class="inline2">&lt;=</span>, <span class="inline2">==</span>, <span class="inline2">!=</span>, <span class="inline2">&gt;</span>, <span class="inline2">&gt;=</span></b> sont des comparaisons et ne peuvent donner que le résultat <span class="inline">true</span> ou <span class="inline">false</span> (où vrai peut aussi être interprété comme 1, et faux comme 0). Exemples d&#39;utilisation :</p>
     <p class="code">if (a &lt; b) {do something...}<br />
       if (a != b) {do something...}</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Par bit (|, &amp;, ^, &lt;&lt;, &gt;&gt;)</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot"><b><span class="inline2">|</span>, <span class="inline2">&amp;</span>, <span class="inline2">^</span>, <span class="inline2">&lt;&lt;</span>, <span class="inline2">&gt;&gt;</span> </b>sont utilisés pour effectuer des opérations par bit, où | = par bit ou, &amp; = par bit et, ^ = par bit xor, &lt;&lt; = décalage à gauche, &gt;&gt; = décalage à droite. Exemples d'utilisation :</p>
+    <p class="dropspot"><b><span class="inline2">|</span>, <span class="inline2">&amp;</span>, <span class="inline2">^</span>, <span class="inline2">&lt;&lt;</span>, <span class="inline2">&gt;&gt;</span> </b>sont utilisés pour effectuer des opérations par bit, où | = par bit ou, &amp; = par bit et, ^ = par bit xor, &lt;&lt; = décalage à gauche, &gt;&gt; = décalage à droite. Exemples d&#39;utilisation :</p>
     <p class="code">x = (x &amp; $ffffffe0) + 32;<br />
       if (y ^ $1f) &gt; 0 {do something...};</p>
-    <p class="dropspot">Vous trouverez des informations supplémentaires sur l'utilisation des opérateurs binaires et leurs fonctions dans la section : <a href="../../Additional_Information/Bitwise_Operators.htm">Opérateurs binaires</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Vous trouverez des informations supplémentaires sur l&#39;utilisation des opérateurs binaires et leurs fonctions dans la section : <a href="../../Additional_Information/Bitwise_Operators.htm">Opérateurs binaires</a>.</p>
+    <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Arithmétique (+, -, *, /)</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot"><b><span class="inline2">+</span>, <span class="inline2">-</span>, <span class="inline2">*</span>, <span class="inline2">/</span></b> signifient respectivement ajouter, soustraire, multiplier et diviser. Exemples d'utilisation :</p>
+    <p class="dropspot"><b><span class="inline2">+</span>, <span class="inline2">-</span>, <span class="inline2">*</span>, <span class="inline2">/</span></b> signifient respectivement ajouter, soustraire, multiplier et diviser. Exemples d&#39;utilisation :</p>
     <p class="code">c = a * b;<br />
       str = a + &quot;world&quot;;</p>
-    <p class="note"><span class="note"><b>NOTE</b></span> Les nombres à virgule flottante ne s'arrêtent pas à la division par zéro car ils obtiendront un infini comme réponse. Si A et B sont des entiers (soit int32 ou int64), la division sera effectuée en tant qu'entiers (et la division par 0 sera vérifiée et fera l'objet d'une erreur. Sinon, elle sera effectuée comme une division en virgule flottante (sans vérification de la division par 0).</p>
+    <p class="note"><span class="note"><b>NOTE</b></span> Les nombres à virgule flottante ne s&#39;arrêtent pas à la division par zéro car ils obtiendront un infini comme réponse. Si A et B sont des entiers (soit int32 ou int64), la division sera effectuée en tant qu&#39;entiers (et la division par 0 sera vérifiée et fera l&#39;objet d&#39;une erreur. Sinon, elle sera effectuée comme une division en virgule flottante (sans vérification de la division par 0).</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">Incrémentation/décrémentation (++, --)</a></p>
@@ -79,13 +79,13 @@
     <p class="dropspot"><span class="inline2"><strong>++</strong></span>, <span class="inline2"><strong>--</strong></span> sont utilisés pour ajouter ou soustraire un<span class="inline2">(1</span>) à une valeur. Il convient de noter que le fait de placer ces caractères avant ou après la valeur à ajouter ou à soustraire donnera des résultats légèrement différents. Par exemple :</p>
     <ul class="dropspotlist">
       <li class="dropspot"><span class="inline">++a</span> incrémentera la variable et retournera la valeur incrémentée.</li>
-      <li class="dropspot"><span class="inline">a++</span> incrémentera la variable mais retournera la valeur avant qu'elle ne soit incrémentée.</li>
+      <li class="dropspot"><span class="inline">a++</span> incrémentera la variable mais retournera la valeur avant qu&#39;elle ne soit incrémentée.</li>
     </ul>
     <p class="dropspot">Par conséquent, si vous avez quelque chose comme ça :</p>
     <p class="code">var a = 1;<br />
       show_debug_message(string(a++));<br />
       show_debug_message(string(++a));</p>
-    <p class="dropspot">La sortie de débogage serait 1 et 3. Voici quelques exemples d'utilisation :</p>
+    <p class="dropspot">La sortie de débogage serait 1 et 3. Voici quelques exemples d&#39;utilisation :</p>
     <p class="code">for (var i = 0; i &lt; 10; i++;)<br />
       {<br />
           do something...<br />
@@ -101,7 +101,7 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">Division et modulo (div, %, mod)</a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot"><strong><span class="inline2">div</span>, <span class="inline2">mod</span> (<span class="inline2">%</span></strong> ) sont la division et le modulo, où div vous donne la quantité qu'une valeur peut être divisée en ne produisant qu'un quotient entier, tandis que mod vous donne seulement le reste d'une division. Notez que vous ne pouvez div ou mod qu'en utilisant des valeurs entières. Exemples d'utilisation : </p>
+    <p class="dropspot"><strong><span class="inline2">div</span>, <span class="inline2">mod</span> (<span class="inline2">%</span></strong> ) sont la division et le modulo, où div vous donne la quantité qu&#39;une valeur peut être divisée en ne produisant qu&#39;un quotient entier, tandis que mod vous donne seulement le reste d&#39;une division. Notez que vous ne pouvez div ou mod qu&#39;en utilisant des valeurs entières. Exemples d&#39;utilisation : </p>
     <p class="code">secs = time mod 60;<br />
       secs = time % 60;    // Identical to the above line<br />
       time_str = string(time div 60);</p>
@@ -117,14 +117,14 @@
     </ul>
     <p class="dropspot"> </p>
   </div>
-  <h2>Groupement d'expression</h2>
-  <p><i></i>Comme valeurs dans toutes les expressions, vous pouvez utiliser des nombres, des variables ou des fonctions qui renvoient une valeur, et les sous-expressions peuvent également être placées entre parenthèses. Tous les opérateurs fonctionnent pour des valeurs numériques réelles, mais les <em>comparaisons </em>fonctionnent également pour les chaînes de caractères et l'opérateur &quot;<strong>+</strong>&quot; peut être utilisé pour concaténer des chaînes de caractères.</p>
-  <p>Lorsque vous effectuez plusieurs opérations dans une même expression, il est <b>très important</b> d'utiliser des parenthèses <span class="inline">()</span> pour séparer l'ordre des opérations, car différentes plates-formes peuvent les exécuter différemment si elles ne sont pas explicitement indiquées de cette manière. Par exemple, considérez le code suivant :</p>
+  <h2>Groupement d&#39;expression</h2>
+  <p><i></i>Comme valeurs dans toutes les expressions, vous pouvez utiliser des nombres, des variables ou des fonctions qui renvoient une valeur, et les sous-expressions peuvent également être placées entre parenthèses. Tous les opérateurs fonctionnent pour des valeurs numériques réelles, mais les <em>comparaisons </em>fonctionnent également pour les chaînes de caractères et l&#39;opérateur &quot;<strong>+</strong>&quot; peut être utilisé pour concaténer des chaînes de caractères.</p>
+  <p>Lorsque vous effectuez plusieurs opérations dans une même expression, il est <b>très important</b> d&#39;utiliser des parenthèses <span class="inline">()</span> pour séparer l&#39;ordre des opérations, car différentes plates-formes peuvent les exécuter différemment si elles ne sont pas explicitement indiquées de cette manière. Par exemple, considérez le code suivant :</p>
   <p class="code">a = b == c || d;</p>
-  <p>Les différents compilateurs cibles effectueront les opérations dans des ordres différents puisqu'elles ne sont pas explicitement indiquées, ce qui donnera lieu à des résultats &quot;bizarres&quot; auxquels vous ne vous attendrez peut-être pas lorsque vous jouerez votre jeu. pour éviter cela, utilisez le site <span class="inline">()</span> pour séparer les parties, comme ceci :</p>
+  <p>Les différents compilateurs cibles effectueront les opérations dans des ordres différents puisqu&#39;elles ne sont pas explicitement indiquées, ce qui donnera lieu à des résultats &quot;bizarres&quot; auxquels vous ne vous attendrez peut-être pas lorsque vous jouerez votre jeu. pour éviter cela, utilisez le site <span class="inline">()</span> pour séparer les parties, comme ceci :</p>
   <p class="code">a = (b == c || d);   //better<br />
     a = ((b == c) || d); //best</p>
-  <h2>Groupement d'états</h2>
+  <h2>Groupement d&#39;états</h2>
   <p>Lorsque vous utilisez plusieurs opérations et expressions dans un seul bloc de code, celles-ci doivent également être séparées. Par exemple, ce qui suit <em>ressemble</em> à du code valide :</p>
   <p class="code">if my_var == your_var ++their_var;</p>
   <p>Cependant, le compilateur pourrait interpréter cela de deux façons :</p>
@@ -134,12 +134,12 @@
     <br />
     if my_var == your_var then <strong>++</strong>their_var;
   </p>
-  <p>Maintenant, vous pouvez dire en regardant le code que l'un d'entre eux est un peu stupide, mais c'est parce que nous savons ce que nous voulons réaliser et ce que nous voulons qu'il se passe, mais le compilateur ne le sait pas. Tout ce qu'il voit, c'est deux variables avec l'opérateur ++ entre elles, et il doit choisir à laquelle l'appliquer. Par conséquent, vous devez <strong>toujours mettre explicitement entre parenthèses les expressions, les opérations et les instructions</strong>. La version correcte du code ci-dessus devrait être :</p>
+  <p>Maintenant, vous pouvez dire en regardant le code que l&#39;un d&#39;entre eux est un peu stupide, mais c&#39;est parce que nous savons ce que nous voulons réaliser et ce que nous voulons qu&#39;il se passe, mais le compilateur ne le sait pas. Tout ce qu&#39;il voit, c&#39;est deux variables avec l&#39;opérateur ++ entre elles, et il doit choisir à laquelle l&#39;appliquer. Par conséquent, vous devez <strong>toujours mettre explicitement entre parenthèses les expressions, les opérations et les instructions</strong>. La version correcte du code ci-dessus devrait être :</p>
   <p class="code">if (my_var == your_var)<br />
     {<br />
         ++their_var;<br />
     }</p>
-  <p>Cela peut sembler plus verbeux, mais il n'y a aucune ambiguïté sur les opérations effectuées et cela compilera et se comportera de manière cohérente sur toutes les plateformes. Notez également que, bien que vous puissiez enchaîner des expressions et des instructions sans utiliser de parenthèses pour le moment, il s'agit d'une fonctionnalité héritée du passé qui pourrait être dépréciée et supprimée de <span class="notranslate">GML</span>. L'utilisation de parenthèses de manière appropriée dès maintenant permettra de &quot;préparer l'avenir&quot; de votre code (et constitue généralement une bonne pratique).</p>
+  <p>Cela peut sembler plus verbeux, mais il n&#39;y a aucune ambiguïté sur les opérations effectuées et cela compilera et se comportera de manière cohérente sur toutes les plateformes. Notez également que, bien que vous puissiez enchaîner des expressions et des instructions sans utiliser de parenthèses pour le moment, il s&#39;agit d&#39;une fonctionnalité héritée du passé qui pourrait être dépréciée et supprimée de <span class="notranslate">GML</span>. L&#39;utilisation de parenthèses de manière appropriée dès maintenant permettra de &quot;préparer l&#39;avenir&quot; de votre code (et constitue généralement une bonne pratique).</p>
   <p>Voici quelques exemples finaux des différentes expressions :</p>
   <p class="code">{<br />
         x = 23 div 2;<br />
@@ -151,13 +151,13 @@
         x = 23 * ((2 + 4) / sin(y));<br />
         b = (x &lt; 5) &amp;&amp; !((x == 2) || (x == 4));<br />
     }</p>
-  <p>Enfin, il convient de noter qu'il existe également des &quot;raccourcis&quot; d'expression appelés &quot; <b>accesseurs&quot;</b> à utiliser avec certaines <a href="../GML_Reference/Data_Structures/Data_Structures.htm">structures de données</a> et certains <a href="Arrays.htm">tableaux</a>. Ils vous permettent d'ajouter ou de remplacer des données dans ces formats rapidement et facilement, sans avoir recours à des appels de fonction. Pour plus de détails, veuillez consulter la page suivante</p>
+  <p>Enfin, il convient de noter qu&#39;il existe également des &quot;raccourcis&quot; d&#39;expression appelés &quot; <b>accesseurs&quot;</b> à utiliser avec certaines <a href="../GML_Reference/Data_Structures/Data_Structures.htm">structures de données</a> et certains <a href="Arrays.htm">tableaux</a>. Ils vous permettent d&#39;ajouter ou de remplacer des données dans ces formats rapidement et facilement, sans avoir recours à des appels de fonction. Pour plus de détails, veuillez consulter la page suivante</p>
   <ul class="colour">
     <li><a href="Accessors.htm">Accesseurs</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -165,7 +165,7 @@
         <div style="float:right">Suivant : <a data-xref="{title}" href="Script_Functions.htm">Fonctions et variables de script</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 div
