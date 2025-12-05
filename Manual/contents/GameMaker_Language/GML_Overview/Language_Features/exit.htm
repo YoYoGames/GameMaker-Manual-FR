@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>quitter</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>exit</title>
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -14,16 +14,16 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>quitter</h1>
-  <p>L'instruction <span class="inline">exit</span> a la syntaxe suivante :</p>
+  <h1><span data-field="title" data-format="default">exit</span></h1>
+  <p>L&#39;instruction <span class="inline">exit</span> a la syntaxe suivante:</p>
   <p class="code">exit;</p>
-  <p><span class="inline">exit</span> termine simplement l'exécution de la <a href="../Script_Functions.htm">fonction du script</a> en cours, <a href="../Method_Variables.htm"><span class="notranslate">method</span></a>ou <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm"><span class="notranslate">event</span></a>. Notez qu'il existe une légère différence d'utilisation en fonction de la portée :</p>
+  <p><span class="inline">exit</span> termine simplement l&#39;exécution de la <a href="../Script_Functions.htm">fonction du script</a> en cours, <span class="notranslate"><a href="../Method_Variables.htm">méthode</a> </span>ou <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm"><span class="notranslate">event</span></a>. Notez qu&#39;il existe une légère différence d&#39;utilisation en fonction de la portée :</p>
   <ul class="colour">
     <li>Si vous utilisez <span class="inline">exit</span> dans une fonction ou une méthode de script, il quittera simplement la fonction et retournera au code qui a appelé la fonction.</li>
-    <li>Si vous utilisez <span class="inline">exit</span> dans un bloc de code à l'intérieur de l'événement d'un objet, il quittera l'<i>événement entier</i>, même s'il y a plusieurs blocs de code distincts après l'appel de <span class="inline">exit</span>.</li>
-    <li>Si vous utilisez <span class="inline">exit</span> dans un événement parent et appelez cet événement en utilisant <a href="../../GML_Reference/Asset_Management/Objects/Object_Events/event_inherited.htm"><span class="inline">event_inherited()</span></a> dans un objet enfant, seul l'événement parent se terminera et l'événement enfant (qui a appelé <span class="inline">event_inherited()</span>) continuera.</li>
+    <li>Si vous utilisez <span class="inline">exit</span> dans un bloc de code à l&#39;intérieur de l&#39;événement d&#39;un objet, il quittera l&#39;<i>événement entier</i>, même s&#39;il y a plusieurs blocs de code distincts après l&#39;appel de <span class="inline">exit</span>.</li>
+    <li>Si vous utilisez <span class="inline">exit</span> dans un événement parent et appelez cet événement en utilisant <a href="../../GML_Reference/Asset_Management/Objects/Object_Events/event_inherited.htm"><span class="inline">event_inherited()</span></a> dans un objet enfant, seul l&#39;événement parent se terminera et l&#39;événement enfant (qui a appelé <span class="inline">event_inherited()</span>) continuera.</li>
   </ul>
-  <p>Lorsqu'il est utilisé dans un événement, <span class="inline">exit</span> est généralement utilisé pour éviter qu'une instance n'exécute d'autres codes lorsqu'une condition spécifique a été remplie (ou non). Le code ci-dessous donne un exemple d'utilisation, dans ce cas dans un événement de collision, bien qu'il puisse être utilisé dans n'importe quel événement.</p>
+  <p>Lorsqu&#39;il est utilisé dans un événement, <span class="inline">exit</span> est généralement utilisé pour éviter qu&#39;une instance n&#39;exécute d&#39;autres codes lorsqu&#39;une condition spécifique a été remplie (ou non). Le code ci-dessous donne un exemple d&#39;utilisation, dans ce cas dans un événement de collision, bien qu&#39;il puisse être utilisé dans n&#39;importe quel événement.</p>
   <p class="code">if (!visible)<br />
     {<br />
         exit;<br />
@@ -33,11 +33,11 @@
     other.coins -= 4;<br />
     coins += 4;
   </p>
-  <p>Le code ci-dessus vérifie si l'instance courante n'est pas visible, dans ce cas il sort du bloc de code, sinon il continue et exécute le reste du code.</p>
-  <p class="note"><b>NOTE</b>: Elle ne met pas fin à l'exécution du jeu. Pour cela, vous devez utiliser la fonction <span style="font-size:1px;"><a href="../../GML_Reference/General_Game_Control/game_end.htm"><span class="inline">game_end()</span></a></span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus vérifie si l&#39;instance courante n&#39;est pas visible, dans ce cas il sort du bloc de code, sinon il continue et exécute le reste du code.</p>
+  <p class="note"><b>NOTE</b>: Elle ne met pas fin à l&#39;exécution du jeu. Pour cela, vous devez utiliser la fonction <span style="font-size:1px;"><a href="../../GML_Reference/General_Game_Control/game_end.htm"><span class="inline">game_end()</span></a></span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -45,7 +45,7 @@
         <div style="float:right">Suivant : <a href="with.htm"><span class="notranslate">with</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 exit

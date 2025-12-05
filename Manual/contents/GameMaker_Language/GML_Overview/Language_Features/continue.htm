@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>continuer</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>continue</title>
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>continuer</h1>
-  <p>L'instruction <span class="inline">continue</span> a la syntaxe de base suivante :</p>
+  <h1><span data-field="title" data-format="default">continue</span></h1>
+  <p>L&#39;instruction <span class="inline">continue</span> a la syntaxe de base suivante :</p>
   <p class="code">continue;</p>
-  <p>Si elle est utilisée à l'intérieur d'une instruction qui forme une boucle (<a href="for.htm"><span class="inline">for</span></a>, <a href="repeat.htm"><span class="inline">repeat</span></a>, <a href="while.htm"><span class="inline">while</span></a> ou <a href="do___until.htm"><span class="inline">do / until</span></a>), elle mettra immédiatement fin à l'<a class="glossterm" data-glossterm="itération" href="#">itération</a> en cours et reviendra au début de la boucle en commençant une nouvelle itération et en omettant tout le code qui suit <span class="inline">continue</span> dans la boucle. Il peut également être utilisé dans l'instruction <a href="with.htm"><span class="inline">with</span></a> où il fera en sorte que le code passe à l'instance suivante et s'exécute à nouveau. Notez que si <span class="inline">continue</span> est utilisé en dehors de l'un de ces contextes, une erreur sera générée.</p>
-  <p>Vous trouverez ci-dessous un exemple d'utilisation dans une boucle <span class="inline">for</span>:</p>
+  <p>Si elle est utilisée à l&#39;intérieur d&#39;une instruction qui forme une boucle (<a href="for.htm"><span class="inline">for</span></a>, <a href="repeat.htm"><span class="inline">repeat</span></a>, <a href="while.htm"><span class="inline">while</span></a> ou <a href="do___until.htm"><span class="inline">do / until</span></a>), elle mettra immédiatement fin à l&#39;<a class="glossterm" data-glossterm="itération" href="#">itération</a> en cours et reviendra au début de la boucle en commençant une nouvelle itération et en omettant tout le code qui suit <span class="inline">continue</span> dans la boucle. Il peut également être utilisé dans l&#39;instruction <a href="with.htm"><span class="inline">with</span></a> où il fera en sorte que le code passe à l&#39;instance suivante et s&#39;exécute à nouveau. Notez que si <span class="inline">continue</span> est utilisé en dehors de l&#39;un de ces contextes, une erreur sera générée.</p>
+  <p>Vous trouverez ci-dessous un exemple d&#39;utilisation dans une boucle <span class="inline">for</span>:</p>
   <p class="code">var _val = 0;<br />
     <br />
     for (var i = 0; i &lt; 10; i += 1)<br />
@@ -32,7 +32,7 @@
     <br />
     draw_text(32, 32, &quot;Positive Values Total = &quot; + string(_val));
   </p>
-  <p>Vous trouverez ci-dessous un exemple d'utilisation dans une boucle <span class="inline">while</span>:</p>
+  <p>Vous trouverez ci-dessous un exemple d&#39;utilisation dans une boucle <span class="inline">while</span>:</p>
   <p class="code">var file = file_text_open_read(&quot;Game_Data.txt&quot;);<br />
     var _num = 0;<br />
     <br />
@@ -48,7 +48,7 @@
     <br />
     file_text_close(file);
   </p>
-  <p>Vous trouverez ci-dessous un exemple d'utilisation dans une boucle <span class="inline">do / until</span>:</p>
+  <p>Vous trouverez ci-dessous un exemple d&#39;utilisation dans une boucle <span class="inline">do / until</span>:</p>
   <p class="code">do<br />
     {<br />
         var _x = random(room_width);<br />
@@ -63,7 +63,7 @@
     }<br />
     until (instance_count(obj_Enemy) &gt;= 10);
   </p>
-  <p>Vous trouverez ci-dessous un exemple d'utilisation dans une boucle <span class="inline">repeat</span>:</p>
+  <p>Vous trouverez ci-dessous un exemple d&#39;utilisation dans une boucle <span class="inline">repeat</span>:</p>
   <p class="code">repeat(10)<br />
     {   <br />
         var _x = random(room_width);<br />
@@ -77,7 +77,7 @@
         instance_create_layer(_x, _y, &quot;Instances&quot;, obj_Enemy);<br />
     }
   </p>
-  <p>Enfin, un exemple d'utilisation dans une déclaration <span class="inline">with</span>:</p>
+  <p>Enfin, un exemple d&#39;utilisation dans une déclaration <span class="inline">with</span>:</p>
   <p class="code">with (obj_Enemy_Parent)<br />
     {<br />
         if (object_index == obj_Enemy_InDestructible)<br />
@@ -93,9 +93,9 @@
         }<br />
     }
   </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -103,7 +103,7 @@
         <div style="float:right">Suivant : <a href="exit.htm"><span class="notranslate">exit</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 continue

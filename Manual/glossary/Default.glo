@@ -107,6 +107,9 @@
 <glossentry id="Default_exception">
 <glossterm>exception</glossterm>
 <glossdef>Une condition spéciale, inattendue et anormale rencontrée pendant l'exécution d'un programme est connue sous le nom d'exception. Elle peut également être qualifiée d'erreur ou de condition qui modifie le chemin du programme ou du microprocesseur vers un chemin différent. Un exemple d'exception peut être le cas où un programme tente d'accéder à une variable, mais que celle-ci n'existe pas. Les exceptions doivent être traitées et éradiquées dans le code du programme pour éviter toute erreur fatale, un processus appelé débogage.</glossdef></glossentry>
+<glossentry id="Default_expression">
+<glossterm>expression</glossterm>
+<glossdef>Une expression est une combinaison d'une ou plusieurs constantes, variables, opérateurs, et/ou fonctions qui sont interprétées par des règles particulières de précédence et association afin de retourner une autre valeur. Une expression simple serait (5 + 5), qui retourne 10.</glossdef></glossentry>
 <glossentry id="Default_executable_package">
 <glossterm>paquet exécutable</glossterm>
 <glossdef>Un ensemble de fichiers qui sont utilisés pour exécuter un programme. Dans GameMaker Studio, il peut s'agir d'un fichier unique - comme un programme d'installation pour Windows - ou de plusieurs fichiers - comme la sortie HTML5.</glossdef></glossentry>
