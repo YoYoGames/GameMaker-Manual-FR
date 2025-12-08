@@ -802,7 +802,7 @@
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_bbox_top.htm" format="html" processing-role="normal"></page>
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_bbox_mode.htm" format="html" processing-role="normal"></page>
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_convex_hull.htm" format="html" processing-role="normal"></page>
-            <page navtitle="sprite_get_nineslice" href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_nineslice.htm" format="html" processing-role="normal"></page>
+            <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_nineslice.htm" format="html" processing-role="normal"></page>
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_tpe.htm" format="html" processing-role="normal"></page>
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm" format="html" processing-role="normal"></page>
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_uvs.htm" format="html" processing-role="normal"></page>
@@ -818,8 +818,8 @@
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_create_from_surface.htm" format="html" processing-role="normal"></page>
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_add_from_surface.htm" format="html" processing-role="normal"></page>
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_collision_mask.htm" format="html" processing-role="normal"></page>
-            <page navtitle="sprite_nineslice_create" href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_nineslice_create.htm" format="html" processing-role="normal"></page>
-            <page navtitle="sprite_set_nineslice" href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_set_nineslice.htm" format="html" processing-role="normal"></page>
+            <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_nineslice_create.htm" format="html" processing-role="normal"></page>
+            <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_set_nineslice.htm" format="html" processing-role="normal"></page>
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_set_offset.htm" format="html" processing-role="normal"></page>
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_set_bbox_mode.htm" format="html" processing-role="normal"></page>
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_set_bbox.htm" format="html" processing-role="normal"></page>
@@ -1449,7 +1449,7 @@
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/fx_set_parameters.htm" format="html" processing-role="normal"></page>
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/fx_set_single_layer.htm" format="html" processing-role="normal"></page>
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/layer_set_fx.htm" format="html" processing-role="normal"></page>
-            <page navtitle="couche_get_fx" href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/layer_get_fx.htm" format="html" processing-role="normal"></page>
+            <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/layer_get_fx.htm" format="html" processing-role="normal"></page>
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/layer_clear_fx.htm" format="html" processing-role="normal"></page>
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/layer_enable_fx.htm" format="html" processing-role="normal"></page>
             <page href="../contents/GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/layer_fx_is_enabled.htm" format="html" processing-role="normal"></page>
