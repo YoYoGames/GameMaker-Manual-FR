@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Constantes de l'ombrage</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Constantes Shader</title>
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -14,9 +14,9 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Constantes de l'ombrage</h1>
-  <p>Outre les fonctions et constantes <span class="notranslate">shader</span> définies dans les <a href="http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf" target="_blank">pages de référence du</a> langage d'ombrage OpenGL ES (GLSL ES), vous disposez également d'un certain nombre de constantes <span class="notranslate">shader</span> qui sont propres à <span data-keyref="GameMaker Name">GameMaker</span>.</p>
-  <p>Les constantes de matrice d'affichage suivantes peuvent être utilisées comme indices de tableau lors de l'utilisation de la constante de tableau <span class="notranslate">shader</span> <span class="inline">gm_Matrices</span> :</p>
+  <h1><span data-field="title" data-format="default">Constantes Shader</span></h1>
+  <p>Outre les fonctions et constantes <span class="notranslate">shader</span> définies dans les <a href="http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf" target="_blank">pages de référence du</a> langage d&#39;ombrage OpenGL ES (GLSL ES), vous disposez également d&#39;un certain nombre de constantes <span class="notranslate">shader</span> qui sont propres à <span data-keyref="GameMaker Name">GameMaker</span>.</p>
+  <p>Les constantes de matrice d&#39;affichage suivantes peuvent être utilisées comme indices de tableau lors de l&#39;utilisation de la constante de tableau <span class="notranslate">shader</span> <span class="inline">gm_Matrices</span> :</p>
   <table>
     <tbody>
       <tr>
@@ -24,37 +24,37 @@
         <th>Description</th>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">MATRIX_VIEW</span></td>
-        <td>Cette constante d'index de tableau contient l'index de la matrice de vue actuelle. L'index renvoyé sera utilisé comme valeur de tableau lors de l'appel de la constante <span class="inline">gm_Matrices</span> dans le code <span class="notranslate">shader</span>.</td>
+        <td><span class="inline">MATRIX_VIEW</span></td>
+        <td>Cette constante d&#39;index de tableau contient l&#39;index de la matrice de vue actuelle. L&#39;index renvoyé sera utilisé comme valeur de tableau lors de l&#39;appel de la constante <span class="inline">gm_Matrices</span> dans le code <span class="notranslate">shader</span>.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">MATRIX_PROJECTION</span></td>
-        <td>Cette constante d'index de tableau contient l'index de la matrice de projection actuelle. L'index renvoyé sera utilisé comme une valeur de tableau lors de l'appel de la constante <span class="inline">gm_Matrices</span> dans le code <span class="notranslate">shader</span>.</td>
+        <td><span class="inline">MATRIX_PROJECTION</span></td>
+        <td>Cette constante d&#39;index de tableau contient l&#39;index de la matrice de projection actuelle. L&#39;index renvoyé sera utilisé comme une valeur de tableau lors de l&#39;appel de la constante <span class="inline">gm_Matrices</span> dans le code <span class="notranslate">shader</span>.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">MATRIX_WORLD</span></td>
-        <td>Cette constante d'index de tableau contient l'index de la matrice du monde actuel. Cela peut être utilisé pour des choses comme l'éclairage si vous avez des informations sur la lumière dans l'espace monde. L'index renvoyé sera utilisé comme une valeur de tableau lors de l'appel de la constante <span class="inline">gm_Matrices</span> dans le code <span class="notranslate">shader</span>.</td>
+        <td><span class="inline">MATRIX_WORLD</span></td>
+        <td>Cette constante d&#39;index de tableau contient l&#39;index de la matrice du monde actuel. Cela peut être utilisé pour des choses comme l&#39;éclairage si vous avez des informations sur la lumière dans l&#39;espace monde. L&#39;index renvoyé sera utilisé comme une valeur de tableau lors de l&#39;appel de la constante <span class="inline">gm_Matrices</span> dans le code <span class="notranslate">shader</span>.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">MATRIX_WORLD_VIEW</span></td>
-        <td>Cette constante d'index de tableau contient l'index du résultat des matrices de monde et de vue multipliées ensemble. Elle est souvent utilisée pour des choses comme le brouillard. L'index renvoyé est utilisé comme une valeur de tableau lors de l'appel de la constante <span class="inline">gm_Matrices</span> dans le code <span class="notranslate">shader</span>.</td>
+        <td><span class="inline">MATRIX_WORLD_VIEW</span></td>
+        <td>Cette constante d&#39;index de tableau contient l&#39;index du résultat des matrices de monde et de vue multipliées ensemble. Elle est souvent utilisée pour des choses comme le brouillard. L&#39;index renvoyé est utilisé comme une valeur de tableau lors de l&#39;appel de la constante <span class="inline">gm_Matrices</span> dans le code <span class="notranslate">shader</span>.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">MATRIX_WORLD_VIEW_PROJECTION</span></td>
-        <td>Cette constante d'index de tableau contient l'index du résultat des matrices de monde, de vue et de projection multipliées ensemble. Il s'agit de la matrice de transformation normale utilisée pour les positions des sommets. L'index renvoyé sera utilisé comme une valeur de tableau lors de l'appel de la constante <span class="inline">gm_Matrices</span> dans le code <span class="notranslate">shader</span>.</td>
+        <td><span class="inline">MATRIX_WORLD_VIEW_PROJECTION</span></td>
+        <td>Cette constante d&#39;index de tableau contient l&#39;index du résultat des matrices de monde, de vue et de projection multipliées ensemble. Il s&#39;agit de la matrice de transformation normale utilisée pour les positions des sommets. L&#39;index renvoyé sera utilisé comme une valeur de tableau lors de l&#39;appel de la constante <span class="inline">gm_Matrices</span> dans le code <span class="notranslate">shader</span>.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">MATRIX_MAX</span></td>
-        <td>Il ne s'agit pas d'un indice de tableau, mais plutôt de la taille du tableau de la matrice dans le sommet <span class="notranslate">shader</span>.</td>
+        <td><span class="inline">MATRIX_MAX</span></td>
+        <td>Il ne s&#39;agit pas d&#39;un indice de tableau, mais plutôt de la taille du tableau de la matrice dans le sommet <span class="notranslate">shader</span>.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">MAX_VS_LIGHTS</span></td>
-        <td>Il ne s'agit pas d'un index de tableau mais plutôt du nombre de lumières dans le vertex <span class="notranslate">shader</span>.</td>
+        <td><span class="inline">MAX_VS_LIGHTS</span></td>
+        <td>Il ne s&#39;agit pas d&#39;un index de tableau mais plutôt du nombre de lumières dans le vertex <span class="notranslate">shader</span>.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p>La constante suivante est également disponible pour l'éclairage :</p>
+  <p> </p>
+  <p>La constante suivante est également disponible pour l&#39;éclairage :</p>
   <table>
     <tbody>
       <tr>
@@ -62,12 +62,12 @@
         <th>Description</th>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">MAX_VS_LIGHTS</span></td>
+        <td><span class="inline">MAX_VS_LIGHTS</span></td>
         <td>Le nombre maximum de lumières ponctuelles et directionnelles disponibles dans le shader.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <p>Les uniformes et constantes de matrice prédéfinis suivants peuvent être utilisés dans votre <span class="notranslate">shader</span> pour <span class="notranslate">access</span> des valeurs spécifiques à <span data-keyref="GameMaker Name">GameMaker</span>:</p>
   <table>
     <colgroup>
@@ -82,58 +82,58 @@
         <th>Description</th>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">gm_Matrices[matrix]</span></td>
-        <td>Cette constante de tableau renvoie une matrice de transformation et est l'un des uniformes prédéfinis disponibles que <span data-keyref="GameMaker Name">GameMaker</span> crée pour que vous puissiez l'utiliser dans l'éditeur de code <span class="notranslate">shader</span>. L'index du tableau est choisi parmi l'une des constantes listées ci-dessus.</td>
+        <td><span class="inline">gm_Matrices[matrix]</span></td>
+        <td>Cette constante de tableau renvoie une matrice de transformation et est l&#39;un des uniformes prédéfinis disponibles que <span data-keyref="GameMaker Name">GameMaker</span> crée pour que vous puissiez l&#39;utiliser dans l&#39;éditeur de code <span class="notranslate">shader</span>. L&#39;index du tableau est choisi parmi l&#39;une des constantes listées ci-dessus.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">gm_BaseTexture</span></td>
-        <td>Il s'agit d'une constante d'échantillonneur 2D qui renvoie la texture de l'objet actuel, telle que définie par <span data-keyref="GameMaker Name">GameMaker</span>. Il s'agit donc de la texture actuelle <span class="notranslate">sprite</span>, de la surface ou de la texture qui serait normalement utilisée lors du dessin sans que le site <span class="notranslate">shader</span> soit appelé.</td>
+        <td><span class="inline">gm_BaseTexture</span></td>
+        <td>Il s&#39;agit d&#39;une constante d&#39;échantillonneur 2D qui renvoie la texture de l&#39;objet actuel, telle que définie par <span data-keyref="GameMaker Name">GameMaker</span>. Il s&#39;agit donc de la texture actuelle <span class="notranslate">sprite</span>, de la surface ou de la texture qui serait normalement utilisée lors du dessin sans que le site <span class="notranslate">shader</span> soit appelé.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">gm_LightingEnabled</span></td>
-        <td>Ce paramètre peut être utilisé pour obtenir ou définir l'éclairage de <span data-keyref="GameMaker Name">GameMaker</span> lors de l'utilisation de la 3D.</td>
+        <td><span class="inline">gm_LightingEnabled</span></td>
+        <td>Ce paramètre peut être utilisé pour obtenir ou définir l&#39;éclairage de <span data-keyref="GameMaker Name">GameMaker</span> lors de l&#39;utilisation de la 3D.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">gm_FogStart</span></td>
+        <td><span class="inline">gm_FogStart</span></td>
         <td>Ceci peut être utilisé pour obtenir la distance à laquelle les polygones commencent à être mélangés avec la couleur du brouillard.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">gm_RcpFogRange</span></td>
-        <td>Cela peut être utilisé pour obtenir la distance à laquelle le brouillard est maximal et où l'on ne peut plus rien voir.</td>
+        <td><span class="inline">gm_RcpFogRange</span></td>
+        <td>Cela peut être utilisé pour obtenir la distance à laquelle le brouillard est maximal et où l&#39;on ne peut plus rien voir.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">gm_PS_FogEnabled</span></td>
+        <td><span class="inline">gm_PS_FogEnabled</span></td>
         <td>Ceci retournera <span class="inline">true</span> ou <span class="inline">false</span> si le brouillard de pixels est activé ou non sur le GPU.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">gm_FogColour</span></td>
+        <td><span class="inline">gm_FogColour</span></td>
         <td>Ceci peut être utilisé pour obtenir la couleur du brouillard utilisé par <span data-keyref="GameMaker Name">GameMaker</span>.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">gm_VS_FogEnabled</span></td>
+        <td><span class="inline">gm_VS_FogEnabled</span></td>
         <td>Ceci retournera <span class="inline">true</span> ou <span class="inline">false</span> si le brouillard de vertex est activé ou non sur le GPU.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">gm_AlphaTestEnabled</span></td>
-        <td>Ceci peut être utilisé pour obtenir un test alpha dans le <span class="notranslate">shader</span>. Voir <a href="../../Drawing/GPU_Control/gpu_set_alphatestenable.htm"><span class="inline">gpu_set_alphatestenable()</span></a> pour plus d'informations sur les tests alpha.</td>
+        <td><span class="inline">gm_AlphaTestEnabled</span></td>
+        <td>Ceci peut être utilisé pour obtenir un test alpha dans le <span class="notranslate">shader</span>. Voir <a href="../../Drawing/GPU_Control/gpu_set_alphatestenable.htm"><span class="inline">gpu_set_alphatestenable()</span></a> pour plus d&#39;informations sur les tests alpha.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">gm_AlphaRefValue</span></td>
-        <td>Ceci peut être utilisé pour obtenir la valeur de référence actuelle du test alpha. Voir <a href="../../Drawing/GPU_Control/gpu_set_alphatestref.htm"><span class="inline">gpu_set_alphatestref()</span></a> pour plus d'informations sur la référence du test alpha.</td>
+        <td><span class="inline">gm_AlphaRefValue</span></td>
+        <td>Ceci peut être utilisé pour obtenir la valeur de référence actuelle du test alpha. Voir <a href="../../Drawing/GPU_Control/gpu_set_alphatestref.htm"><span class="inline">gpu_set_alphatestref()</span></a> pour plus d&#39;informations sur la référence du test alpha.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
         <div style="float:left">Retour : <a href="Shaders.htm">Shaders</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Shader Constants

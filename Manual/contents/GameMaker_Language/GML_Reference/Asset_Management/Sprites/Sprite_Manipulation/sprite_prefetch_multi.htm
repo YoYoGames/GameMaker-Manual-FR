@@ -19,7 +19,7 @@
   <p class="note"><b>NOTE</b>: Il y a un impact sur les performances lorsque la texture est téléchargée dans la mémoire de texture sur la plupart des périphériques, il est donc recommandé d'appeler <span style="font-size:1px;"><span class="inline">sprite_prefetch_multi()</span></span> sur tout graphique requis au début d'un niveau pour éviter tout blocage.</p>
   <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code"><span data-field="title" data-format="default">sprite_prefetch_multi</span>
+  <p class="code"><span data-field="title" data-format="default">sprite_prefetch_multi</span>(array)</p>
   <table>
     <tbody>
       <tr>
@@ -28,9 +28,9 @@
         <th>Description</th>
       </tr>
       <tr>
-        <td><span class="notranslate">array</span></td>
+        <td>array</td>
         <td><span data-keyref="Type_Array">Tableau</span> d'<span data-keyref="Type_Asset_Sprite">actifs de sprites</span></td>
-        <td><span class="notranslate">Array with the sprite indices to fetch</span></td>
+        <td>Array with the sprite indices to fetch</td>
       </tr>
     </tbody>
   </table>
