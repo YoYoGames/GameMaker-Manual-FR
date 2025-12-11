@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>faire / jusqu'à ce que</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>do / until</title>
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -14,8 +14,8 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>faire / jusqu'à ce que</h1>
-  <p>Une fonction <span class="inline">do</span> est une autre façon d'itérer sur une ou plusieurs<span class="glossextra">déclarations</span> plusieurs fois, et est en fait une déclaration &quot;<span class="inline">do... until</span>&quot; car vous ne pouvez pas avoir l'une sans l'autre puisque vous demandez à <span data-keyref="GameMaker Name">GameMaker</span> de faire quelque chose jusqu'à ce qu'une <a class="glossterm" data-glossterm="expression" href="#">expression</a> spécifique renvoie <span class="inline">true</span>. Elle se présente sous la forme suivante :</p>
+  <h1><span data-field="title" data-format="default">do / until</span></h1>
+  <p>Une fonction <span class="inline">do</span> est une autre façon d&#39;itérer sur une ou plusieurs <span class="glossextra">déclarations</span> plusieurs fois, et est en fait une déclaration &quot;<span class="inline">do... until</span>&quot; car vous ne pouvez pas avoir l&#39;une sans l&#39;autre puisque vous demandez à <span data-keyref="GameMaker Name">GameMaker</span> de faire quelque chose jusqu&#39;à ce qu&#39;une <a class="glossterm" data-glossterm="expression" href="#">expression</a> spécifique renvoie <span class="inline">true</span>. Elle se présente sous la forme suivante:</p>
   <p class="code">do<br />
     {<br />
         &lt;statement&gt;;<br />
@@ -23,16 +23,16 @@
         ...<br />
     }<br />
     until (&lt;expression&gt;);</p>
-  <p>L'instruction (qui peut être un bloc de code composé de plusieurs instructions entre crochets <span class="inline">{}</span>) est exécutée jusqu'à ce que l'on trouve l'expression <span class="inline">true</span>, et l'instruction initiale est <strong>toujours exécutée au moins une fois</strong>. Vous trouverez ci-dessous un exemple d'utilisation typique de <span class="inline">do... until</span>:</p>
+  <p>L&#39;instruction (qui peut être un bloc de code composé de plusieurs instructions entre crochets <span class="inline">{}</span>) est exécutée jusqu&#39;à ce que l&#39;on trouve l&#39;expression <span class="inline">true</span>, et l&#39;instruction initiale est <strong>toujours exécutée au moins une fois</strong>. Vous trouverez ci-dessous un exemple d&#39;utilisation typique de <span class="inline">do... until</span>:</p>
   <p class="code">do<br />
     {<br />
         x = random(room_width);<br />
         y = random(room_height);<br />
     }<br />
     until (place_free(x, y));</p>
-  <p>Le code ci-dessus tente de placer l'objet actuel à une position libre et définit les variables x/y au moins une fois, puis effectue autant d'<a class="glossterm" data-glossterm="itération" href="#">itérations</a>que nécessaire jusqu'à ce que l'expression <span class="inline">place_free()</span> renvoie <span class="inline">true</span>.</p>
+  <p>Le code ci-dessus tente de placer l&#39;objet actuel à une position libre et définit les variables x/y au moins une fois, puis effectue autant d&#39;<a class="glossterm" data-glossterm="itération" href="#">itérations</a>que nécessaire jusqu&#39;à ce que l&#39;expression <span class="inline">place_free()</span> renvoie <span class="inline">true</span>.</p>
   <p><strong>Quand faut-il utiliser une boucle <span class="inline">do</span> / <span class="inline">until</span>?</strong> Elle doit être utilisée chaque fois que vous voulez répéter une ou plusieurs instructions, mais que vous ne savez pas combien de fois elles doivent être répétées et que vous voulez vous assurer que les instructions sont exécutées <em>au moins une fois</em> avant la fin de la boucle.</p>
-  <p>Vous pouvez également utiliser les <a href="break.htm"><span class="inline">break</span></a> et <a href="continue.htm"><span class="inline">continue</span></a> dans vos boucles <span class="inline">do</span>. L'utilisation de <span class="inline">break</span> permet de sortir immédiatement de la boucle et de passer à tout code se trouvant dans l'événement ou la fonction après que la boucle ait dû se terminer, par ex :</p>
+  <p>Vous pouvez également utiliser les <a href="break.htm"><span class="inline">break</span></a> et <a href="continue.htm"><span class="inline">continue</span></a> dans vos boucles <span class="inline">do</span>. L&#39;utilisation de <span class="inline">break</span> permet de sortir immédiatement de la boucle et de passer à tout code se trouvant dans l&#39;événement ou la fonction après que la boucle ait dû se terminer, par ex :</p>
   <p class="code">var _id = noone;<br />
     do<br />
     {<br />
@@ -47,8 +47,8 @@
     <br />
     target = _id;
   </p>
-  <p>Dans le code ci-dessus, nous créons une variable locale et la définissons pour contenir le mot-clé <a href="../Instance_Keywords.htm"><span class="notranslate">noone</span></a>. Nous effectuons ensuite une boucle <span class="inline">do / until</span> en vérifiant la première position d'une liste DS pour voir si elle contient un ID d'instance valide. Si c'est le cas, nous poursuivons la boucle <span class="inline">break</span>, sinon la valeur de la position de la liste est supprimée. Une fois la boucle terminée (soit par <span class="inline">break</span> soit parce que la liste est vide), la valeur de la variable locale est alors affectée à la variable d'instance <span class="inline">target</span>.</p>
-  <p>Voici un exemple d'utilisation de continue dans une boucle <span class="inline">do / until</span>:</p>
+  <p>Dans le code ci-dessus, nous créons une variable locale et la définissons pour contenir le mot-clé <a href="../Instance_Keywords.htm"><span class="notranslate">noone</span></a>. Nous effectuons ensuite une boucle <span class="inline">do / until</span> en vérifiant la première position d&#39;une liste DS pour voir si elle contient un ID d&#39;instance valide. Si c&#39;est le cas, nous poursuivons la boucle <span class="inline">break</span>, sinon la valeur de la position de la liste est supprimée. Une fois la boucle terminée (soit par <span class="inline">break</span> soit parce que la liste est vide), la valeur de la variable locale est alors affectée à la variable d&#39;instance <span class="inline">target</span>.</p>
+  <p>Voici un exemple d&#39;utilisation de continue dans une boucle <span class="inline">do / until</span>:</p>
   <p class="code">do<br />
     {<br />
         var _x = random(room_width);<br />
@@ -61,13 +61,14 @@
     <br />
         instance_create_layer(_x, _y, &quot;Instances&quot;, obj_Enemy);<br />
     }<br />
-    until (instance_count(obj_Enemy) &gt;= 10);</p>
-  <p>Ce code va générer une position de pièce aléatoire puis vérifier si une instance de l'objet <span class="inline">obj_Enemy</span> existe à cette position. Si c'est le cas, l'itération actuelle de la boucle est terminée à l'aide de <span class="inline">continue</span> et une nouvelle itération est lancée. Si ce n'est pas le cas, une instance de l'objet <span class="inline">obj_Enemy</span> est créée à la position aléatoire. La boucle ne se termine que lorsqu'il y a 10 instances ou plus de l'objet dans la pièce.</p>
-  <p>Une dernière remarque : faites attention à vos boucles <span class="inline">do</span>, car vous pouvez facilement les faire tourner en boucle à l'infini, auquel cas votre jeu se bloquera et ne réagira plus à aucune entrée de l'utilisateur, qui devra le fermer de force.</p>
-  <p>Pour plus d'exemples de mots-clés de boucle, veuillez consulter les sections sur <a href="repeat.htm"><span class="inline">repeat</span></a>, <a href="while.htm"><span class="inline">while</span></a>, et <a href="for.htm"><span class="inline">for</span></a>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+    until (instance_count(obj_Enemy) &gt;= 10);
+  </p>
+  <p>Ce code va générer une position de pièce aléatoire puis vérifier si une instance de l&#39;objet <span class="inline">obj_Enemy</span> existe à cette position. Si c&#39;est le cas, l&#39;itération actuelle de la boucle est terminée à l&#39;aide de <span class="inline">continue</span> et une nouvelle itération est lancée. Si ce n&#39;est pas le cas, une instance de l&#39;objet <span class="inline">obj_Enemy</span> est créée à la position aléatoire. La boucle ne se termine que lorsqu&#39;il y a 10 instances ou plus de l&#39;objet dans la pièce.</p>
+  <p>Une dernière remarque : faites attention à vos boucles <span class="inline">do</span>, car vous pouvez facilement les faire tourner en boucle à l&#39;infini, auquel cas votre jeu se bloquera et ne réagira plus à aucune entrée de l&#39;utilisateur, qui devra le fermer de force.</p>
+  <p>Pour plus d&#39;exemples de mots-clés de boucle, veuillez consulter les sections sur <a href="repeat.htm"><span class="inline">repeat</span></a>, <a href="while.htm"><span class="inline">while</span></a>, et <a href="for.htm"><span class="inline">for</span></a>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -75,7 +76,7 @@
         <div style="float:right">Suivant : <a href="for.htm"><span class="notranslate">for</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 do

@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>screen_save_part</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -15,53 +15,59 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">screen_save_part</span></h1>
-  <p>Cette fonction vous permet d'enregistrer une capture d'écran d'une partie du jeu telle qu'elle apparaît actuellement dans l'affichage du jeu. Les coordonnées de sélection sont basées sur la taille <i>absolue</i> de l'écran (ou de la fenêtre s'il ne s'agit pas d'un écran complet), donc (0,0) est toujours le coin supérieur gauche de l'écran (ou de la fenêtre). L'image ci-dessous illustre le fonctionnement de cette fonction :</p>
-  <p><img>Le fichier sera enregistré dans le <a href="../File_Handling/File_Directories/working_directory.htm">répertoire de travail</a> du jeu. Il est important de noter que la fonction est conçue pour être appelée dans l'<b>événement Draw GUI End Event</b>, qui devrait donner des résultats cohérents sur toutes les plateformes. L'utiliser dans un autre événement peut ne pas fonctionner comme prévu et donner des résultats différents selon les cibles et même les appareils.</p>
+  <p>Cette fonction vous permet d&#39;enregistrer une capture d&#39;écran d&#39;une partie du jeu telle qu&#39;elle apparaît actuellement dans l&#39;affichage du jeu. Les coordonnées de sélection sont basées sur la taille <i>absolue</i> de l&#39;écran (ou de la fenêtre s&#39;il ne s&#39;agit pas d&#39;un écran complet), donc (0,0) est toujours le coin supérieur gauche de l&#39;écran (ou de la fenêtre). L&#39;image ci-dessous illustre le fonctionnement de cette fonction :</p>
+  <p><img alt="Saving part of the screen example" class="center" src="../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/screen_save.png" />Le fichier sera enregistré dans le <a href="../File_Handling/File_Directories/working_directory.htm">répertoire de travail</a> du jeu. Il est important de noter que la fonction est conçue pour être appelée dans l&#39;<b>événement Draw GUI End Event</b>, qui devrait donner des résultats cohérents sur toutes les plateformes. L&#39;utiliser dans un autre événement peut ne pas fonctionner comme prévu et donner des résultats différents selon les cibles et même les appareils.</p>
   <p class="note"><b><span class="note">NOTE</span> </b>Cette fonction ne fonctionne pas sur la cible HTML5.</p>
-  <p> </p>
+  <p> </p>
   <h4>Syntaxe :</h4>
-  <p class="code"><span data-field="title" data-format="default">screen_save_part</span>(fname,x,y,w,h);</p>
+  <p class="code"><span data-field="title" data-format="default">screen_save_part</span>(fname, x, y, w, h);</p>
   <table>
     <tbody>
       <tr>
-        <th>Arguments</th><th>Type</th>
+        <th>Arguments</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td><span class="notranslate">fname</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">fname</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
         <td><span class="notranslate">The filename for the screenshot to save</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">x</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">x</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The x coordinate of the top left corner of the area of the screen to capture</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">y</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">y</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The y coordinate of the top left corner of the area of the screen to capture</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">w</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">w</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The width of the area of the screen to capture</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">h</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">h</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The height of the area of the screen to capture</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <h4>Les retours :</h4>
-  <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
+  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
+  <p> </p>
   <h4>Exemple :</h4>
   <p class="code">if keyboard_check_pressed(ord(&quot;S&quot;))<br />
     {<br />
         screen_save_part(&quot;Screens\Screen_&quot; + string(num++) + &quot;.png&quot;, 0, 0, 100, 100);<br />
     }</p>
-  <p>Le code ci-dessus prend une capture d'écran d'une partie de l'écran du jeu qui fait 100 pixels carrés lorsque l'utilisateur appuie sur la touche &quot;S&quot;. Cette capture d'écran est enregistrée dans un dossier spécifique et numérotée à l'aide d'une variable qui est ensuite incrémentée.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus prend une capture d&#39;écran d&#39;une partie de l&#39;écran du jeu qui fait 100 pixels carrés lorsque l&#39;utilisateur appuie sur la touche &quot;S&quot;. Cette capture d&#39;écran est enregistrée dans un dossier spécifique et numérotée à l&#39;aide d&#39;une variable qui est ensuite incrémentée.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -69,7 +75,7 @@
         <div style="float:right">Suivant : <a href="gif_open.htm"><span class="notranslate">gif_open</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 screen_save_part

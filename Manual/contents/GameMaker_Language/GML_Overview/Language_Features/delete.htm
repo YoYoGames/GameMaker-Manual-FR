@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>supprimer</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>delete</title>
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -13,24 +14,24 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>supprimer</h1>
-  <p>L'opérateur <span class="inline">delete</span> est utilisé pour <strong>déréférencer</strong> une <a href="../Structs.htm">structure</a>, et a la syntaxe suivante :</p>
+  <h1><span data-field="title" data-format="default">delete</span></h1>
+  <p>L&#39;opérateur <span class="inline">delete</span> est utilisé pour <strong>déréférencer</strong> une <a href="../Structs.htm">structure</a>, et a la syntaxe suivante :</p>
   <p class="code">delete &lt;variable&gt;;</p>
-  <p>Cela signifie que vous appelez l'opérateur delete avec la variable qui contient un <span class="notranslate">struct</span> et qu'il supprimera la <em>référence </em>spécifique au <span class="notranslate">struct</span> stocké dans la variable donnée (une référence est simplement une valeur qui pointe vers la zone de mémoire qui stocke le et son contenu).
-    qui stocke le <span class="notranslate">struct</span> et son contenu). Si cette référence était la dernière référence à <span class="notranslate">struct</span> dans votre jeu, le <a class="glossterm" data-glossterm="éboueur" href="#">ramasseur d'ordures</a> supprimera <span class="notranslate">struct</span> de la mémoire lors de l'itération suivante, généralement à la fin de l'année.
-    une <a class="glossterm" data-glossterm="itération" href="#">itération</a> suivante, généralement au tout début de l'étape suivante.</p>
-  <p class="note"><strong>REMARQUE</strong>: <span class="inline">delete</span> ne peut être utilisé qu'avec des variables et <i>non</i> des expressions.</p>
-  <p>Par défaut, <span class="notranslate">structs</span>, qui n'est plus référencé dans le code, sera automatiquement ramassé dans les étapes qui suivent son utilisation, mais il est bon d'utiliser cet opérateur pour le signaler explicitement afin que le ramasseur d'ordures le retire de la mémoire au tout début de l'étape suivante.
-    au tout début de l'étape suivante, libérant ainsi la mémoire plus rapidement et plus efficacement.</p>
-  <p>L'exemple suivant montre la création d'une <span class="notranslate">struct</span> - par exemple dans l'événement de création d'une instance :</p>
-  <p class="code">mystruct =<br/> {
-    <br/>     a : 0,<br/>     b : 100,<br/>     c : &quot;Hello World&quot;<br/> }
-  </p>
-  <p>Ce site <span class="notranslate">struct</span> sera ensuite utilisé dans les événements d'instance comme d'habitude, avant d'être finalement marqué pour la collecte des déchets dans l'événement de <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">nettoyage</a>, comme ceci :</p>
+  <p>Cela signifie que vous appelez l&#39;opérateur delete avec la variable qui contient un <span class="notranslate">struct</span> et qu&#39;il supprimera la <em>référence </em>spécifique au <span class="notranslate">struct</span> stocké dans la variable donnée (une référence est simplement une valeur qui pointe vers la zone de mémoire qui stocke le et son contenu). qui stocke le <span class="notranslate">struct</span> et son contenu). Si cette référence était la dernière référence à <span class="notranslate">struct</span> dans votre jeu, le <a class="glossterm" data-glossterm="éboueur" href="#">ramasseur d&#39;ordures</a> supprimera <span class="notranslate">struct</span> de la mémoire lors de l&#39;itération suivante, généralement à la fin de l&#39;année. une <a class="glossterm" data-glossterm="itération" href="#">itération</a> suivante, généralement au tout début de l&#39;étape suivante.</p>
+  <p class="note"><strong>REMARQUE</strong>: <span class="inline">delete</span> ne peut être utilisé qu&#39;avec des variables et <i>non</i> des expressions.</p>
+  <p>Par défaut, <span class="notranslate">structs</span>, qui n&#39;est plus référencé dans le code, sera automatiquement ramassé dans les étapes qui suivent son utilisation, mais il est bon d&#39;utiliser cet opérateur pour le signaler explicitement afin que le ramasseur d&#39;ordures le retire de la mémoire au tout début de l&#39;étape suivante. au tout début de l&#39;étape suivante, libérant ainsi la mémoire plus rapidement et plus efficacement.</p>
+  <p>L&#39;exemple suivant montre la création d&#39;une <span class="notranslate">struct</span> - par exemple dans l&#39;événement de création d&#39;une instance :</p>
+  <p class="code">mystruct =<br />
+    {<br />
+        a : 0,<br />
+        b : 100,<br />
+        c : &quot;Hello World&quot;<br />
+    }</p>
+  <p>Ce site <span class="notranslate">struct</span> sera ensuite utilisé dans les événements d&#39;instance comme d&#39;habitude, avant d&#39;être finalement marqué pour la collecte des déchets dans l&#39;événement de <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">nettoyage</a>, comme ceci :</p>
   <p class="code">delete mystruct;</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -38,7 +39,7 @@
         <div style="float:right">Suivant : <a href="If_Else_and_Conditional_Operators.htm">if / else et les opérateurs conditionnels</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Tous droits réservés</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 delete
@@ -46,5 +47,5 @@ delete
   <!-- TAGS
 delete
 -->
-
-</body></html>
+</body>
+</html>

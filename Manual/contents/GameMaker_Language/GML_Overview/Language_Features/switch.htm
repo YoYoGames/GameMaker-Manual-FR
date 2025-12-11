@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>commutateur</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>switch</title>
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -14,9 +14,9 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>commutateur</h1>
-  <p>Dans un certain nombre de situations, vous souhaitez que vos instances effectuent différentes actions en fonction d'une valeur particulière. Vous pouvez le faire en utilisant un certain nombre d'instructions consécutives <a href="If_Else_and_Conditional_Operators.htm"><span class="inline">if / else</span></a> mais lorsque le nombre de choix possibles dépasse deux ou trois, il est généralement plus facile d'utiliser l'instruction <span class="inline">switch</span>.</p>
-  <p>Une déclaration <span class="inline">switch</span> a la syntaxe suivante :</p>
+  <h1><span data-field="title" data-format="default">switch</span></h1>
+  <p>Dans un certain nombre de situations, vous souhaitez que vos instances effectuent différentes actions en fonction d&#39;une valeur particulière. Vous pouvez le faire en utilisant un certain nombre d&#39;instructions consécutives <a href="If_Else_and_Conditional_Operators.htm"><span class="inline">if / else</span></a> mais lorsque le nombre de choix possibles dépasse deux ou trois, il est généralement plus facile d&#39;utiliser l&#39;instruction <span class="inline">switch</span>.</p>
+  <p>Une déclaration <span class="inline">switch</span> a la syntaxe suivante:</p>
   <p class="code">switch (&lt;expression&gt;)<br />
     {<br />
         case &lt;constant1&gt;:<br />
@@ -35,13 +35,13 @@
   </p>
   <p>Cela fonctionne comme suit :</p>
   <ul class="colour">
-    <li>L'<a class="glossterm" data-glossterm="expression" href="#">expression</a> est d'abord exécutée.</li>
-    <li>Ensuite, son résultat est comparé aux différentes constantes après chacune des<span class="glossextra">déclarations de</span> <span class="inline">case</span>. Lorsque nous disons &quot;constante&quot;, ce que nous voulons dire, c'est que la valeur dans le cas ne peut pas être une expression variable et doit être une valeur fixe de n'importe quel <a href="../Data_Types.htm">type de données</a>, comme <span class="inline2">&quot;combat&quot;</span> ou <span class="inline2">3</span> ou le mot clé <span class="inline2"><span class="inline"><a href="../Instance_Keywords.htm">noone</a></span></span>. </li>
-    <li>L'exécution commence à partir de la première déclaration <span class="inline">case</span> avec la valeur correspondante, <i>jusqu'à ce qu'une déclaration <a href="break.htm"><span class="notranslate">break</span></a> soit rencontrée</i>.</li>
-    <li>Si aucune instruction <span class="inline">case</span> n'a la valeur correspondante, alors l'instruction <span class="inline">default</span> sera exécutée. Il n'est pas nécessaire d'avoir une instruction <span class="inline">default</span>, et si aucune n'est fournie, aucune action ne sera entreprise s'il n'y a pas de cas correspondant. L'instruction <span class="inline">default</span> peut être placée n'importe où dans un bloc de commutation, mais elle est traditionnellement placée en bas, après tous les cas.</li>
+    <li>L&#39;<a class="glossterm" data-glossterm="expression" href="#">expression</a> est d&#39;abord exécutée.</li>
+    <li>Ensuite, son résultat est comparé aux différentes constantes après chacune des<span class="glossextra">déclarations de</span> <span class="inline">case</span>. Lorsque nous disons &quot;constante&quot;, ce que nous voulons dire, c&#39;est que la valeur dans le cas ne peut pas être une expression variable et doit être une valeur fixe de n&#39;importe quel <a href="../Data_Types.htm">type de données</a>, comme <span class="inline2">&quot;combat&quot;</span> ou <span class="inline2">3</span> ou le mot clé <span class="inline2"><span class="inline"><a href="../Instance_Keywords.htm">noone</a></span></span>.</li>
+    <li>L&#39;exécution commence à partir de la première déclaration <span class="inline">case</span> avec la valeur correspondante, <i>jusqu&#39;à ce qu&#39;une déclaration <a href="break.htm"><span class="notranslate">break</span></a> soit rencontrée</i>.</li>
+    <li>Si aucune instruction <span class="inline">case</span> n&#39;a la valeur correspondante, alors l&#39;instruction <span class="inline">default</span> sera exécutée. Il n&#39;est pas nécessaire d&#39;avoir une instruction <span class="inline">default</span>, et si aucune n&#39;est fournie, aucune action ne sera entreprise s&#39;il n&#39;y a pas de cas correspondant. L&#39;instruction <span class="inline">default</span> peut être placée n&#39;importe où dans un bloc de commutation, mais elle est traditionnellement placée en bas, après tous les cas.</li>
   </ul>
-  <p class="note"><span class="note">REMARQUE</span> L'instruction switch continuera à exécuter du code dans une section <span class="inline">case</span>, jusqu'à ce que vous rencontriez une section <span class="inline">break</span>. Si vous n'utilisez pas <span class="inline">break</span>s à la fin de vos cas, le commutateur &quot;fuira&quot; vers la prochaine <span class="inline">case</span>, et même vers une section <span class="inline">default</span>, s'il n'y a pas de <span class="inline">break</span>s dans le chemin. Cela peut provoquer un comportement involontaire, car l'exécution d'un <span class="inline">case</span> peut entraîner l'exécution de plusieurs <span class="inline">case</span>s. Veillez donc à utiliser <span class="inline">break</span> le cas échéant.</p>
-  <p>Un exemple simple d'utilisation d'une instruction de commutation serait quelque chose comme ceci :</p>
+  <p class="note"><span class="note">REMARQUE</span> L&#39;instruction switch continuera à exécuter du code dans une section <span class="inline">case</span>, jusqu&#39;à ce que vous rencontriez une section <span class="inline">break</span>. Si vous n&#39;utilisez pas <span class="inline">break</span>s à la fin de vos cas, le commutateur &quot;fuira&quot; vers la prochaine <span class="inline">case</span>, et même vers une section <span class="inline">default</span>, s&#39;il n&#39;y a pas de <span class="inline">break</span>s dans le chemin. Cela peut provoquer un comportement involontaire, car l&#39;exécution d&#39;un <span class="inline">case</span> peut entraîner l&#39;exécution de plusieurs <span class="inline">case</span>s. Veillez donc à utiliser <span class="inline">break</span> le cas échéant.</p>
+  <p>Un exemple simple d&#39;utilisation d&#39;une instruction de commutation serait quelque chose comme ceci :</p>
   <p class="code">switch (player_lives)<br />
     {<br />
         case 3:<br />
@@ -61,7 +61,7 @@
         break;<br />
     }
   </p>
-  <p>Notez que plusieurs instructions <span class="inline">case</span> peuvent être utilisées pour exécuter la même instruction, car l'instruction <span class="inline">break</span> n'est pas toujours nécessaire pour chaque <span class="inline">case</span>. S'il n'y a pas d'instruction <span class="inline">break</span> pour un <span class="inline">case</span> particulier, l'exécution continue simplement avec le code pour le cas suivant, par ex :</p>
+  <p>Notez que plusieurs instructions <span class="inline">case</span> peuvent être utilisées pour exécuter la même instruction, car l&#39;instruction <span class="inline">break</span> n&#39;est pas toujours nécessaire pour chaque <span class="inline">case</span>. S&#39;il n&#39;y a pas d&#39;instruction <span class="inline">break</span> pour un <span class="inline">case</span> particulier, l&#39;exécution continue simplement avec le code pour le cas suivant, par ex :</p>
   <p class="code">switch (keyboard_key)<br />
     {<br />
         case vk_left:<br />
@@ -85,11 +85,11 @@
         break;<br />
     }
   </p>
-  <p>Le code ci-dessus utilise <span class="inline">switch</span> pour vérifier la présence d'un événement clavier et le compare ensuite à chaque <span class="inline">case</span> listé. S'il correspond à l'une des valeurs requises, le code correspondant est exécuté. Notez comment <span class="inline">switch</span> peut vérifier plusieurs <span class="inline">cases</span> et exécuter le code jusqu'au prochain <span class="inline">break</span>, afin de permettre l'utilisation de plusieurs touches pour obtenir le même résultat.</p>
-  <p>Chaque <span class="inline">case</span> peut avoir son propre code, de sorte que vous pouvez mettre en place une sorte de système &quot;d'héritage&quot; où un cas exécute son propre code et ensuite le code du cas suivant également.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Le code ci-dessus utilise <span class="inline">switch</span> pour vérifier la présence d&#39;un événement clavier et le compare ensuite à chaque <span class="inline">case</span> listé. S&#39;il correspond à l&#39;une des valeurs requises, le code correspondant est exécuté. Notez comment <span class="inline">switch</span> peut vérifier plusieurs <span class="inline">cases</span> et exécuter le code jusqu&#39;au prochain <span class="inline">break</span>, afin de permettre l&#39;utilisation de plusieurs touches pour obtenir le même résultat.</p>
+  <p>Chaque <span class="inline">case</span> peut avoir son propre code, de sorte que vous pouvez mettre en place une sorte de système &quot;d&#39;héritage&quot; où un cas exécute son propre code et ensuite le code du cas suivant également.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -97,7 +97,7 @@
         <div style="float:right">Suivant : <a href="break.htm"><span class="notranslate">break</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 switch

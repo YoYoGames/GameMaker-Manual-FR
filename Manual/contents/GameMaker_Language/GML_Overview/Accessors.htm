@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Accesseurs</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
   <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -14,22 +14,22 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Accesseurs</h1>
-  <p>Le site <span class="notranslate">GameMaker Language</span> (<span class="notranslate">GML</span>) vous permet également d'accéder à <span class="notranslate">access</span> certaines <a href="../GML_Reference/Data_Structures/Data_Structures.htm">structures de données</a> et <a href="Arrays.htm">tableaux</a> grâce à des expressions logiques appelées <b>accesseurs</b>. La structure est similaire à celle d'un tableau, sauf que nous utilisons un <em>symbole d'identification</em> avant le premier argument pour indiquer à <span data-keyref="GameMaker Name">GameMaker</span> que vous travaillez sur une structure de données (précédemment créée) ou sur le littéral d'un tableau.</p>
-  <p> </p>
+  <h1><span data-field="title" data-format="default">Accesseurs</span></h1>
+  <p>Le site <span class="notranslate">GameMaker Language</span> (<span class="notranslate">GML</span>) vous permet également d&#39;accéder à <span class="notranslate">access</span> certaines <a href="../GML_Reference/Data_Structures/Data_Structures.htm">structures de données</a> et <a href="Arrays.htm">tableaux</a> grâce à des expressions logiques appelées <b>accesseurs</b>. La structure est similaire à celle d&#39;un tableau, sauf que nous utilisons un <em>symbole d&#39;identification</em> avant le premier argument pour indiquer à <span data-keyref="GameMaker Name">GameMaker</span> que vous travaillez sur une structure de données (précédemment créée) ou sur le littéral d&#39;un tableau.</p>
+  <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">Listes de DS [| ]</a></p>
   <div class="droptext" data-targetname="drop-down10">
     <p class="dropspot">La syntaxe des <a href="../GML_Reference/Data_Structures/DS_Lists/DS_Lists.htm">listes DS</a> est la suivante :</p>
     <p class="code">list_index[| index]</p>
-    <p class="dropspot">Ainsi, lorsque vous avez utilisé <span class="inline">ds_list_create()</span> pour créer votre liste, vous utilisez l'index de la liste (que vous avez stocké dans une variable) pour la référencer, la valeur &quot;index&quot; étant la position dans la liste à définir ou à ajouter. Par exemple, le code suivant crée une liste et ajoute ensuite 10 entrées, en définissant chaque entrée comme un nombre aléatoire de 0 à 9 :</p>
+    <p class="dropspot">Ainsi, lorsque vous avez utilisé <span class="inline">ds_list_create()</span> pour créer votre liste, vous utilisez l&#39;index de la liste (que vous avez stocké dans une variable) pour la référencer, la valeur &quot;index&quot; étant la position dans la liste à définir ou à ajouter. Par exemple, le code suivant crée une liste et ajoute ensuite 10 entrées, en définissant chaque entrée comme un nombre aléatoire de 0 à 9 :</p>
     <p class="code">ds = ds_list_create();<br />
       var _index = 0;<br />
       repeat(10)<br />
       {<br />
           ds[| _index++] = irandom(9);<br />
       }</p>
-    <p class="dropspot">Notez que si vous utilisez une expression pour ajouter une référence à un index qui a déjà une valeur, la valeur précédente sera remplacée plutôt que d'avoir un autre index ajouté à la liste. Pour ajouter des entrées supplémentaires, vous devrez connaître la taille de ds_list et les ajouter à la fin. Il est également intéressant de noter que vous pouvez définir un index de liste qui est <i>plus grand</i> que la taille de la liste référencée, et ceci définira cette valeur, développant la liste en même temps et initialisant toutes les positions dans la liste jusqu'à l'index donné comme 0.</p>
-    <p class="dropspot">Une fois que vous avez créé votre structure de liste et que vous l'avez remplie de données, pour obtenir des valeurs à partir de la liste, il vous faut quelque chose du genre :</p>
+    <p class="dropspot">Notez que si vous utilisez une expression pour ajouter une référence à un index qui a déjà une valeur, la valeur précédente sera remplacée plutôt que d&#39;avoir un autre index ajouté à la liste. Pour ajouter des entrées supplémentaires, vous devrez connaître la taille de ds_list et les ajouter à la fin. Il est également intéressant de noter que vous pouvez définir un index de liste qui est <i>plus grand</i> que la taille de la liste référencée, et ceci définira cette valeur, développant la liste en même temps et initialisant toutes les positions dans la liste jusqu&#39;à l&#39;index donné comme 0.</p>
+    <p class="dropspot">Une fois que vous avez créé votre structure de liste et que vous l&#39;avez remplie de données, pour obtenir des valeurs à partir de la liste, il vous faut quelque chose du genre :</p>
     <p class="code">value = ds[| 5];</p>
     <p class="dropspot">La fonction ci-dessus récupère la valeur de la position 5 (le sixième indice, puisque les listes commencent à 0) et la stocke dans une variable. Si vous fournissez une position qui est en dehors de la taille de la liste, la valeur <span class="inline">undefined</span> sera retournée, ce que vous pouvez vérifier en utilisant la fonction <a href="../GML_Reference/Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>.</p>
     <p class="dropspot"> </p>
@@ -38,22 +38,22 @@
   <div class="droptext" data-targetname="drop-down13">
     <p class="dropspot">La syntaxe des <a href="../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">cartes DS</a> est la suivante :</p>
     <p class="code">map_index[? key]</p>
-    <p class="dropspot">Après avoir créé votre carte avec <span class="inline">ds_map_create()</span>, vous utiliserez l'index de la carte que vous avez stocké dans une variable pour la référencer, la valeur &quot;key&quot; étant la clé de la carte à définir ou à obtenir. Par exemple, le code suivant crée une carte et y ajoute quelques entrées en utilisant cette syntaxe :</p>
+    <p class="dropspot">Après avoir créé votre carte avec <span class="inline">ds_map_create()</span>, vous utiliserez l&#39;index de la carte que vous avez stocké dans une variable pour la référencer, la valeur &quot;key&quot; étant la clé de la carte à définir ou à obtenir. Par exemple, le code suivant crée une carte et y ajoute quelques entrées en utilisant cette syntaxe :</p>
     <p class="code">ds = ds_map_create();<br />
       ds[? &quot;Name&quot;] = &quot;Hamish&quot;;<br />
       ds[? &quot;Company&quot;] = &quot;MacSeweeny Games&quot;;<br />
       ds[? &quot;Game&quot;] = &quot;Catch The Haggis&quot;;</p>
-    <p class="dropspot">Notez que si la carte contient déjà la même valeur de clé que celle que vous essayez d'ajouter, elle ne créera pas de clé en double avec la nouvelle valeur, mais la valeur précédente sera remplacée.</p>
-    <p class="dropspot">Une fois que vous avez créé votre structure de carte et que vous l'avez remplie de données, pour obtenir des valeurs à partir d'une clé de carte spécifique, vous auriez quelque chose comme ceci :</p>
+    <p class="dropspot">Notez que si la carte contient déjà la même valeur de clé que celle que vous essayez d&#39;ajouter, elle ne créera pas de clé en double avec la nouvelle valeur, mais la valeur précédente sera remplacée.</p>
+    <p class="dropspot">Une fois que vous avez créé votre structure de carte et que vous l&#39;avez remplie de données, pour obtenir des valeurs à partir d&#39;une clé de carte spécifique, vous auriez quelque chose comme ceci :</p>
     <p class="code">value = ds[? &quot;Name&quot;];</p>
-    <p class="dropspot">La fonction ci-dessus récupère la valeur de la clé &quot;Name&quot; et la stocke dans une variable, mais il faut savoir que si la clé donnée n'existe pas dans la carte DS, la valeur renvoyée sera <span class="inline">undefined</span>. Ceci peut être vérifié à l'aide de la fonction <a href="../GML_Reference/Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>.</p>
+    <p class="dropspot">La fonction ci-dessus récupère la valeur de la clé &quot;Name&quot; et la stocke dans une variable, mais il faut savoir que si la clé donnée n&#39;existe pas dans la carte DS, la valeur renvoyée sera <span class="inline">undefined</span>. Ceci peut être vérifié à l&#39;aide de la fonction <a href="../GML_Reference/Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>.</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">Grilles DS [#]</a></p>
   <div class="droptext" data-targetname="drop-down14">
     <p class="dropspot">La syntaxe de la <a href="../GML_Reference/Data_Structures/DS_Grids/DS_Grids.htm">grille DS</a> est :</p>
     <p class="code">grid_index[# xpos, ypos]</p>
-    <p class="dropspot">Après avoir créé votre grille à l'aide de la fonction <span class="inline">ds_grid_create()</span>, vous utiliserez l'index de la grille que vous avez stocké dans une variable pour la référencer, les &quot;xpos&quot; et &quot;ypos&quot; étant la position dans la grille pour obtenir ou définir une valeur. Par exemple, le code suivant crée une grille, la remet à 0, puis y ajoute quelques entrées :</p>
+    <p class="dropspot">Après avoir créé votre grille à l&#39;aide de la fonction <span class="inline">ds_grid_create()</span>, vous utiliserez l&#39;index de la grille que vous avez stocké dans une variable pour la référencer, les &quot;xpos&quot; et &quot;ypos&quot; étant la position dans la grille pour obtenir ou définir une valeur. Par exemple, le code suivant crée une grille, la remet à 0, puis y ajoute quelques entrées :</p>
     <p class="code">ds = ds_grid_create();<br />
       ds_grid_clear(ds, 0);<br />
       var _gw = ds_grid_width(ds) - 1;<br />
@@ -67,18 +67,18 @@
               ds[# _xx, _yy] = 1;<br />
           }<br />
       }</p>
-    <p class="dropspot">Une fois que vous avez créé votre structure de grille et que vous l'avez remplie de données, pour obtenir des valeurs à partir d'une position spécifique de la grille, il vous faudrait quelque chose du genre :</p>
+    <p class="dropspot">Une fois que vous avez créé votre structure de grille et que vous l&#39;avez remplie de données, pour obtenir des valeurs à partir d&#39;une position spécifique de la grille, il vous faudrait quelque chose du genre :</p>
     <p class="code">value = ds[# mouse_x div 16, mouse_y div 16];</p>
-    <p class="dropspot">La fonction ci-dessus obtiendra la valeur de la ds_grid donnée en fonction de la position de la souris (divisée par la largeur de la &quot;cellule&quot; dans la pièce pour obtenir l'emplacement correct). Si vous fournissez une position qui est en dehors des limites de la grille, la valeur <span class="inline">undefined</span> sera retournée, ce que vous pouvez vérifier en utilisant la fonction <a href="../GML_Reference/Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>.</p>
+    <p class="dropspot">La fonction ci-dessus obtiendra la valeur de la ds_grid donnée en fonction de la position de la souris (divisée par la largeur de la &quot;cellule&quot; dans la pièce pour obtenir l&#39;emplacement correct). Si vous fournissez une position qui est en dehors des limites de la grille, la valeur <span class="inline">undefined</span> sera retournée, ce que vous pouvez vérifier en utilisant la fonction <a href="../GML_Reference/Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>.</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down15" href="#">Tableaux [@]</a></p>
   <div class="droptext" data-targetname="drop-down15">
-    <p class="dropspot">Cet accesseur n'est utilisé que lorsque l'<a href="../../Settings/Game_Options.htm">option Copie en écriture</a> est activée.</p>
-    <p class="dropspot">Les tableaux ont également leurs propres accesseurs qui fonctionnent de manière similaire à ceux énumérés ci-dessus pour les structures de données. Cependant, les accesseurs de tableaux ont une propriété intéressante qui est de vous permettre de modifier un tableau à partir d'une <a href="Script_Functions.htm">fonction de script</a> ou de la fonction <a href="Method_Variables.htm"><span class="notranslate">method</span></a> sans avoir à le copier. Lorsque vous passez un tableau dans une fonction, il est <strong>passé par référence</strong>, ce qui signifie que le tableau lui-même n'est pas donné dans le script mais qu'il est simplement référencé pour obtenir les données. Normalement, si vous avez besoin de modifier le tableau, il doit être <em>copié </em>dans le script et vous devez ensuite renvoyer le tableau copié pour que le tableau original soit mis à jour. Cela peut avoir des coûts de traitement élevés, et vous pouvez donc utiliser l'accesseur à la place, car il modifiera <em>directement </em>le tableau d'origine sans qu'il soit nécessaire de le copier. Vous pouvez voir comment cela fonctionne dans les exemples ci-dessous.</p>
-    <p class="dropspot">La syntaxe pour les tableaux, en utilisant l'accesseur <span class="inline">@</span>, est la suivante :</p>
+    <p class="dropspot">Cet accesseur n&#39;est utilisé que lorsque l&#39;<a href="../../Settings/Game_Options.htm">option Copie en écriture</a> est activée.</p>
+    <p class="dropspot">Les tableaux ont également leurs propres accesseurs qui fonctionnent de manière similaire à ceux énumérés ci-dessus pour les structures de données. Cependant, les accesseurs de tableaux ont une propriété intéressante qui est de vous permettre de modifier un tableau à partir d&#39;une <a href="Script_Functions.htm">fonction de script</a> ou de la fonction <a href="Method_Variables.htm"><span class="notranslate">method</span></a> sans avoir à le copier. Lorsque vous passez un tableau dans une fonction, il est <strong>passé par référence</strong>, ce qui signifie que le tableau lui-même n&#39;est pas donné dans le script mais qu&#39;il est simplement référencé pour obtenir les données. Normalement, si vous avez besoin de modifier le tableau, il doit être <em>copié </em>dans le script et vous devez ensuite renvoyer le tableau copié pour que le tableau original soit mis à jour. Cela peut avoir des coûts de traitement élevés, et vous pouvez donc utiliser l&#39;accesseur à la place, car il modifiera <em>directement </em>le tableau d&#39;origine sans qu&#39;il soit nécessaire de le copier. Vous pouvez voir comment cela fonctionne dans les exemples ci-dessous.</p>
+    <p class="dropspot">La syntaxe pour les tableaux, en utilisant l&#39;accesseur <span class="inline">@</span>, est la suivante :</p>
     <p class="code">array[@ i]</p>
-    <p class="dropspot">Après avoir créé votre tableau dans une instance, vous pouvez ensuite le passer à un script par référence et utiliser l'accesseur <span class="inline">@</span> pour le modifier directement. Par exemple, vous pouvez créer le tableau et appeler la fonction de la manière suivante :</p>
+    <p class="dropspot">Après avoir créé votre tableau dans une instance, vous pouvez ensuite le passer à un script par référence et utiliser l&#39;accesseur <span class="inline">@</span> pour le modifier directement. Par exemple, vous pouvez créer le tableau et appeler la fonction de la manière suivante :</p>
     <p class="code">array[99] = 0;<br />
       array_populate(array);</p>
     <p class="dropspot">La fonction elle-même aurait quelque chose comme ceci :</p>
@@ -96,8 +96,8 @@
           }<br />
       }</p>
     <p class="dropspot">Tout ce que fait cette fonction est de sélectionner 25 positions aléatoires dans le tableau et de fixer la valeur de la position choisie du tableau à 100.</p>
-    <p class="dropspot">Bien entendu, l'accesseur <span class="inline">@</span> n'est pas nécessaire lorsque la <strong>copie en écriture</strong> est désactivée.</p>
-    <p class="note"><span class="note">NOTE</span> Vous ne pouvez pas utiliser l'accesseur de tableau <span class="inline">@</span> lorsque vous travaillez avec le tableau <span class="inline">argument[n]</span> dans des fonctions de script.</p>
+    <p class="dropspot">Bien entendu, l&#39;accesseur <span class="inline">@</span> n&#39;est pas nécessaire lorsque la <strong>copie en écriture</strong> est désactivée.</p>
+    <p class="note"><span class="note">NOTE</span> Vous ne pouvez pas utiliser l&#39;accesseur de tableau <span class="inline">@</span> lorsque vous travaillez avec le tableau <span class="inline">argument[n]</span> dans des fonctions de script.</p>
     <p class="dropspot"> </p>
     <p class="dropspot"> </p>
   </div>
@@ -105,16 +105,16 @@
   <div class="droptext" data-targetname="drop-down16">
     <p class="dropspot"><span>La syntaxe des <a href="Structs.htm">structs</a> est la suivante</span></p>
     <p class="code">struct[$ &quot;name&quot;]</p>
-    <p class="dropspot">Cet accesseur est essentiellement une enveloppe pour les fonctions <span><a href="../GML_Reference/Variable_Functions/variable_struct_get.htm"><span class="inline">variable_struct_get()</span></a> et <a href="../GML_Reference/Variable_Functions/variable_struct_set.htm"><span class="inline">variable_struct_set()</span></a>, et vous l'utiliserez comme l'accesseur d'une carte DS. Par exemple, si vous avez créé une <span class="notranslate">struct</span> et que vous voulez récupérer une valeur d'une variable appelée &quot;ma_santé&quot;, vous pouvez le faire :</span></p>
+    <p class="dropspot">Cet accesseur est essentiellement une enveloppe pour les fonctions <span><a href="../GML_Reference/Variable_Functions/variable_struct_get.htm"><span class="inline">variable_struct_get()</span></a> et <a href="../GML_Reference/Variable_Functions/variable_struct_set.htm"><span class="inline">variable_struct_set()</span></a>, et vous l&#39;utiliserez comme l&#39;accesseur d&#39;une carte DS. Par exemple, si vous avez créé une <span class="notranslate">struct</span> et que vous voulez récupérer une valeur d&#39;une variable appelée &quot;ma_santé&quot;, vous pouvez le faire :</span></p>
     <p class="code">var _hp = struct[$ &quot;my_health&quot;];</p>
-    <p class="dropspot">Comme vous pouvez le voir, vous ne fournissez pas la variable elle-même, mais plutôt une <em>chaîne de caractères</em> avec la variable. Notez que si le site <span class="notranslate">struct</span> ne possède pas de variable portant le nom donné, l'accesseur renverra <span class="inline">undefined</span> comme valeur.</p>
+    <p class="dropspot">Comme vous pouvez le voir, vous ne fournissez pas la variable elle-même, mais plutôt une <em>chaîne de caractères</em> avec la variable. Notez que si le site <span class="notranslate">struct</span> ne possède pas de variable portant le nom donné, l&#39;accesseur renverra <span class="inline">undefined</span> comme valeur.</p>
     <p class="dropspot">Pour définir une variable dans un <span class="notranslate">struct</span>, vous devez procéder comme suit</p>
     <p class="code">struct[$ &quot;my_score&quot;] = 100;</p>
-    <p class="dropspot">Comme pour l'obtention d'une valeur, vous devez fournir le nom de la variable à définir sous la forme d'une chaîne de caractères, et elle sera définie à la valeur indiquée. Si le nom de la variable utilisée n'existe pas sur le site <span class="notranslate">struct</span>, elle sera créée et définie par la valeur indiquée.</p>
+    <p class="dropspot">Comme pour l&#39;obtention d&#39;une valeur, vous devez fournir le nom de la variable à définir sous la forme d&#39;une chaîne de caractères, et elle sera définie à la valeur indiquée. Si le nom de la variable utilisée n&#39;existe pas sur le site <span class="notranslate">struct</span>, elle sera créée et définie par la valeur indiquée.</p>
     <p class="dropspot"> </p>
   </div>
-  <p> </p>
-  <p>Une caractéristique importante des accesseurs est le fait qu'ils peuvent être <i>enchaînés</i>. Cela signifie que si vous avez plusieurs structures de données et/ou tableaux imbriqués, il n'est plus nécessaire d'utiliser une variété de fonctions pour obtenir <span class="notranslate">access</span> à une valeur qui est profonde dans la structure imbriquée. Par exemple, disons que vous avez un tableau, et que chaque élément du tableau est une liste DS, comme ceci :</p>
+  <p> </p>
+  <p>Une caractéristique importante des accesseurs est le fait qu&#39;ils peuvent être <i>enchaînés</i>. Cela signifie que si vous avez plusieurs structures de données et/ou tableaux imbriqués, il n&#39;est plus nécessaire d&#39;utiliser une variété de fonctions pour obtenir <span class="notranslate">access</span> à une valeur qui est profonde dans la structure imbriquée. Par exemple, disons que vous avez un tableau, et que chaque élément du tableau est une liste DS, comme ceci :</p>
   <p class="code">array = array_create(3);<br />
     for (var i = 0; i &lt; 3; ++i)<br />
     {<br />
@@ -135,12 +135,12 @@
         }<br />
     }
   </p>
-  <p>Dans le code ci-dessus, nous avons créé un tableau de 3 éléments et assigné une liste DS à chacun d'eux, puis nous avons rempli les différentes listes avec les ID d'instance de divers objets du jeu. Maintenant, pour <span class="notranslate">access</span> un ID dans l'une des listes, nous pouvons faire ce qui suit :</p>
+  <p>Dans le code ci-dessus, nous avons créé un tableau de 3 éléments et assigné une liste DS à chacun d&#39;eux, puis nous avons rempli les différentes listes avec les ID d&#39;instance de divers objets du jeu. Maintenant, pour <span class="notranslate">access</span> un ID dans l&#39;une des listes, nous pouvons faire ce qui suit :</p>
   <p class="code">var _list = array[0];<br />
     var _id = ds_list_find_value(_list, 0);</p>
-  <p>Cependant, vous pouvez faire la même chose en utilisant des accesseurs enchaînés d'une manière beaucoup plus propre et en utilisant moins de code :</p>
+  <p>Cependant, vous pouvez faire la même chose en utilisant des accesseurs enchaînés d&#39;une manière beaucoup plus propre et en utilisant moins de code :</p>
   <p class="code">var _id = array[0][| 0];</p>
-  <p>Vous pouvez enchaîner plusieurs accesseurs de cette manière et ils peuvent être de plusieurs types pour obtenir <span class="notranslate">access</span> aux informations stockées dans chaque partie de la structure imbriquée. Voici d'autres exemples :</p>
+  <p>Vous pouvez enchaîner plusieurs accesseurs de cette manière et ils peuvent être de plusieurs types pour obtenir <span class="notranslate">access</span> aux informations stockées dans chaque partie de la structure imbriquée. Voici d&#39;autres exemples :</p>
   <p class="code">// Access a grid that has been added to a list that is part of a map:<br />
     var _a = data[? &quot;lists&quot;][| 0][# 0, 0];<br />
     <br />
@@ -150,25 +150,25 @@
     // Access a map nested in a grid nested in a list nested in an array:<br />
     data[0][| 10][# 3, 4][? &quot;key&quot;] = &quot;hello world&quot;;
   </p>
-  <p>L'utilisation d'accesseurs chaînés ne signifie pas seulement que vous pouvez écrire un code plus compact, mais aussi que vous pourrez utiliser l'itération (par exemple, en utilisant une boucle <a href="Language_Features/for.htm"><span class="inline">for</span></a> loop) et d'autres techniques pour <span class="notranslate">access</span> vos données d'une manière plus propre et plus intuitive.</p>
-  <p>Il convient de noter que lorsque vous utilisez les accesseurs de cette manière, vous devez toujours utiliser l'accesseur <span class="inline">@</span> pour les tableaux, car sinon vous ajouterez des frais supplémentaires à toutes les actions effectuées. Comme mentionné ci-dessus, par défaut, les tableaux sont transmis par référence dans les fonctions et utilisent ensuite le comportement &quot;copy on write&quot; lorsqu'ils sont modifiés. Toutefois, si le tableau fait partie d'une chaîne, l'élément précédent de la chaîne sera mis à jour avec le tableau copié et l'&quot;original&quot; sera supprimé. Par exemple, en faisant quelque chose comme ceci :</p>
+  <p>L&#39;utilisation d&#39;accesseurs chaînés ne signifie pas seulement que vous pouvez écrire un code plus compact, mais aussi que vous pourrez utiliser l&#39;itération (par exemple, en utilisant une boucle <a href="Language_Features/for.htm"><span class="inline">for</span></a> loop) et d&#39;autres techniques pour <span class="notranslate">access</span> vos données d&#39;une manière plus propre et plus intuitive.</p>
+  <p>Il convient de noter que lorsque vous utilisez les accesseurs de cette manière, vous devez toujours utiliser l&#39;accesseur <span class="inline">@</span> pour les tableaux, car sinon vous ajouterez des frais supplémentaires à toutes les actions effectuées. Comme mentionné ci-dessus, par défaut, les tableaux sont transmis par référence dans les fonctions et utilisent ensuite le comportement &quot;copy on write&quot; lorsqu&#39;ils sont modifiés. Toutefois, si le tableau fait partie d&#39;une chaîne, l&#39;élément précédent de la chaîne sera mis à jour avec le tableau copié et l&#39;&quot;original&quot; sera supprimé. Par exemple, en faisant quelque chose comme ceci :</p>
   <p class="code">// In an object event<br />
     data[| 0][0] = 100;<br />
     <br />
     // In a function<br />
     data[| 0][0] = 200;
   </p>
-  <p>permet d'obtenir les mêmes résultats que cette méthode :</p>
+  <p>permet d&#39;obtenir les mêmes résultats que cette méthode :</p>
   <p class="code">// In an object event<br />
     data[| 0][0] = 100;<br />
     <br />
     // In a function<br />
     data[| 0][@ 0] = 200;
   </p>
-  <p>Cependant, le deuxième exemple est meilleur car il fonctionne sans la surcharge inutile de copier d'abord le tableau entier.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Cependant, le deuxième exemple est meilleur car il fonctionne sans la surcharge inutile de copier d&#39;abord le tableau entier.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -176,7 +176,7 @@
         <div style="float:right">Suivant : <a data-xref="{title}" href="Language_Features.htm">Caractéristiques de la langue</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Tous droits réservés</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 accessors
